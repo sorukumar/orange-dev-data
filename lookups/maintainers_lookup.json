@@ -1,0 +1,425 @@
+{
+  "_comment": "Bitcoin Core maintainer whitelist. Sources: StackExchange #176, BitcoinCore.org, and Git Merges. This file mapping names to all known email aliases is critical for data accuracy.",
+  "_last_updated": "2026-02-09",
+  "maintainers": [
+    {
+      "id": "satoshi",
+      "name": "Satoshi Nakamoto",
+      "emails": [
+        "satoshin@gmx.com",
+        "satoshi@vistomail.com",
+        "none@satoshi.com"
+      ],
+      "github": "satoshi",
+      "status": "historical",
+      "role": {
+        "title": "Project Founder / Lead Maintainer",
+        "primary_area": "Initial Implementation",
+        "appointed": "2009-01-03",
+        "stepped_down": "2011-09-13"
+      },
+      "merge_authority": true,
+      "evidence": "Creator, first Lead Maintainer. SourceForge era. Managed code via rar files before SVN."
+    },
+    {
+      "id": "sirius",
+      "name": "Martti Malmi",
+      "emails": [
+        "sirius@siriusm.fi",
+        "martti@malmi.com",
+        "sirius-m@1a98c847-1fd6-4fd8-948a-caf3550aa51b"
+      ],
+      "github": "siriusm",
+      "status": "historical",
+      "role": {
+        "title": "Core Maintainer",
+        "primary_area": "Infrastructure / SVN",
+        "appointed": "2009-08-30",
+        "stepped_down": "2011-09-13"
+      },
+      "merge_authority": true,
+      "evidence": "Creator of first SVN repo on SourceForge."
+    },
+    {
+      "id": "laszloh",
+      "name": "Laszlo Hanyecz",
+      "emails": [
+        "laszloh@gmail.com",
+        "laszloh@1a98c847-1fd6-4fd8-948a-caf3550aa51b"
+      ],
+      "github": "laszloh",
+      "status": "historical",
+      "role": {
+        "title": "Build Maintainer (OSX)",
+        "primary_area": "Build System / OSX",
+        "appointed": "2010-08-04",
+        "stepped_down": "2011-09-13"
+      },
+      "merge_authority": true,
+      "evidence": "Original OSX Builds and support."
+    },
+    {
+      "id": "gavinandresen",
+      "name": "Gavin Andresen",
+      "emails": [
+        "gavinandresen@gmail.com"
+      ],
+      "github": "gavinandresen",
+      "status": "historical",
+      "role": {
+        "title": "Lead Maintainer",
+        "primary_area": "General",
+        "appointed": "2010-10-11",
+        "stepped_down": "2016-05-02"
+      },
+      "merge_authority": true,
+      "evidence": "Frequent contributor; later Lead Maintainer."
+    },
+    {
+      "id": "dooglus",
+      "name": "Chris Moore",
+      "emails": [
+        "chris@moore.cx",
+        "dooglus@gmail.com"
+      ],
+      "github": "dooglus",
+      "status": "historical",
+      "role": {
+        "title": "Core Maintainer",
+        "primary_area": "General",
+        "appointed": "2011-01-21",
+        "stepped_down": "2011-03-31"
+      },
+      "merge_authority": true,
+      "evidence": "Frequent contributor for some time; Still contributes occasionally."
+    },
+    {
+      "id": "sipa",
+      "name": "Pieter Wuille",
+      "emails": [
+        "pieter.wuille@gmail.com",
+        "pieter@wuille.net",
+        "sipa@ulyssis.org"
+      ],
+      "github": "sipa",
+      "status": "emeritus",
+      "role": {
+        "title": "Core Maintainer",
+        "primary_area": "Consensus / Cryptography",
+        "appointed": "2011-05-01",
+        "stepped_down": "2022-07-07"
+      },
+      "merge_authority": true,
+      "evidence": "Only remaining maintainer with 'grandfathered' commit access from the pre-nominations era."
+    },
+    {
+      "id": "jgarzik",
+      "name": "Jeff Garzik",
+      "emails": [
+        "jgarzik@pobox.com",
+        "jgarzik@exmulti.com",
+        "jgarzik@bitpay.com",
+        "jgarzik@redhat.com",
+        "jeff@bloq.com"
+      ],
+      "github": "jgarzik",
+      "status": "historical",
+      "role": {
+        "title": "Core Maintainer",
+        "primary_area": "General",
+        "appointed": "2011-05-06",
+        "stepped_down": "2016-08-01"
+      },
+      "merge_authority": true,
+      "evidence": "Frequent Contributor; removed after inactivity in 2016."
+    },
+    {
+      "id": "laanwj",
+      "name": "Wladimir J. van der Laan",
+      "emails": [
+        "laanwj@gmail.com",
+        "laanwj@protonmail.com",
+        "126646+laanwj@users.noreply.github.com"
+      ],
+      "github": "laanwj",
+      "status": "emeritus",
+      "role": {
+        "title": "Lead Maintainer",
+        "primary_area": "General / Release",
+        "appointed": "2011-06-05",
+        "stepped_down": "2023-02-07"
+      },
+      "merge_authority": true,
+      "evidence": "Long-time Lead Maintainer; stepped down for personal reasons."
+    },
+    {
+      "id": "tcatm",
+      "name": "Nils Schneider",
+      "emails": [
+        "nils@nilsschneider.net",
+        "nils@nils.to",
+        "nils.schneider@gmail.com",
+        "tcatm@gawab.com"
+      ],
+      "github": "tcatm",
+      "status": "historical",
+      "role": {
+        "title": "Core Maintainer",
+        "primary_area": "General",
+        "appointed": "2011-09-19",
+        "stepped_down": "2012-05-31"
+      },
+      "merge_authority": true,
+      "evidence": "Frequent contributor for some time (2011-2012)."
+    },
+    {
+      "id": "gmaxwell",
+      "name": "Gregory Maxwell",
+      "emails": [
+        "gmaxwell@gmail.com",
+        "greg@xiph.org"
+      ],
+      "github": "gmaxwell",
+      "status": "historical",
+      "role": {
+        "title": "Core Maintainer",
+        "primary_area": "Consensus / Cryptography",
+        "appointed": "2012-02-11",
+        "stepped_down": "2015-12-17"
+      },
+      "merge_authority": true,
+      "evidence": "Gave up commit access due to toxicity and drama from the community."
+    },
+    {
+      "id": "theuni",
+      "name": "Cory Fields",
+      "emails": [
+        "cfields@gmail.com",
+        "cory-nospam-@coryfields.com",
+        "theuni-nospam-@xoom.com"
+      ],
+      "github": "theuni",
+      "status": "emeritus",
+      "role": {
+        "title": "Build / Security Maintainer",
+        "primary_area": "Build System / Guix",
+        "appointed": "2014-04-01",
+        "stepped_down": "2023-01-01"
+      },
+      "segments": [
+        {
+          "type": "strategic",
+          "start": "2014-04-01",
+          "end": "2025-12-31"
+        }
+      ],
+      "merge_authority": false,
+      "gpg_fingerprint": "BFCC45037985C96444D3334D17565732E08E5E41",
+      "evidence": "Strategic Build/Security Maintainer. Key holder for official release signing and Guix (deterministic builds), but did not perform merges into master."
+    },
+    {
+      "id": "jonasschnelli",
+      "name": "Jonas Schnelli",
+      "emails": [
+        "dev@jonasschnelli.ch",
+        "jonas.schnelli@include7.ch"
+      ],
+      "github": "jonasschnelli",
+      "status": "emeritus",
+      "role": {
+        "title": "GUI Maintainer",
+        "primary_area": "GUI / Core",
+        "appointed": "2015-11-13",
+        "stepped_down": "2021-10-21"
+      },
+      "merge_authority": true,
+      "evidence": "GUI Maintainer; stepped down for personal reasons."
+    },
+    {
+      "id": "luke-jr",
+      "name": "Luke Dashjr",
+      "emails": [
+        "luke@dashjr.org",
+        "luke-jr+git@utopios.org",
+        "luke-jr@dashjr.org"
+      ],
+      "github": "luke-jr",
+      "status": "emeritus",
+      "role": {
+        "title": "Core Maintainer",
+        "primary_area": "General",
+        "appointed": "2011-05-01"
+      },
+      "merge_authority": true,
+      "evidence": "Frequent long-time contributor and committer."
+    },
+    {
+      "id": "MarcoFalke",
+      "name": "Marco Falke",
+      "emails": [
+        "falke.marco@gmail.com",
+        "*~=`'#}+{/-|&$^_@721217.xyz",
+        "90386131+bitcoin-core-merge-script@users.noreply.github.com"
+      ],
+      "github": "MarcoFalke",
+      "status": "emeritus",
+      "role": {
+        "title": "QA / Testing Maintainer",
+        "primary_area": "QA / Testing / CI",
+        "appointed": "2016-04-13",
+        "stepped_down": "2023-02-21"
+      },
+      "merge_authority": true,
+      "evidence": "Given access after becoming QA/Testing Maintainer. Uses multiple merge-script aliases."
+    },
+    {
+      "id": "meshcollider",
+      "name": "Samuel Dobson",
+      "emails": [
+        "samuel@dobson.id.au",
+        "dobsonsa68@gmail.com"
+      ],
+      "github": "meshcollider",
+      "status": "emeritus",
+      "role": {
+        "title": "Wallet Maintainer",
+        "primary_area": "Wallet",
+        "appointed": "2018-12-06",
+        "stepped_down": "2021-12-09"
+      },
+      "merge_authority": true,
+      "evidence": "Former Wallet Maintainer; stepped down to focus on PhD."
+    },
+    {
+      "id": "fanquake",
+      "name": "Michael Ford",
+      "emails": [
+        "fanquake@gmail.com"
+      ],
+      "github": "fanquake",
+      "status": "active",
+      "role": {
+        "title": "Lead Maintainer",
+        "primary_area": "General / Release / Build",
+        "appointed": "2019-06-08"
+      },
+      "merge_authority": true,
+      "evidence": "Build System and Lead Maintainer; nominated by contributors in Amsterdam."
+    },
+    {
+      "id": "hebasto",
+      "name": "Hennadii Stepanov",
+      "emails": [
+        "hebasto@gmail.com",
+        "32963518+hebasto@users.noreply.github.com"
+      ],
+      "github": "hebasto",
+      "status": "active",
+      "role": {
+        "title": "GUI Maintainer",
+        "primary_area": "GUI / Qt",
+        "appointed": "2021-04-19"
+      },
+      "merge_authority": true,
+      "evidence": "Volunteered to help maintain the GUI. Uses modern merge-script alias."
+    },
+    {
+      "id": "achow101",
+      "name": "Andrew Chow",
+      "emails": [
+        "achow101@gmail.com",
+        "github@achow101.com",
+        "achow101-github@achow101.com"
+      ],
+      "github": "achow101",
+      "status": "active",
+      "role": {
+        "title": "Wallet Maintainer",
+        "primary_area": "Wallet / PSBT",
+        "appointed": "2021-12-20"
+      },
+      "merge_authority": true,
+      "evidence": "Volunteered to be the wallet maintainer after meshcollider stepped down. Merges under github@ handle."
+    },
+    {
+      "id": "glozow",
+      "name": "Gloria Zhao",
+      "emails": [
+        "gloriajzhao@gmail.com"
+      ],
+      "github": "glozow",
+      "status": "emeritus",
+      "role": {
+        "title": "Mempool / Policy Maintainer",
+        "primary_area": "Mempool & Policy",
+        "appointed": "2022-07-07",
+        "stepped_down": "2026-02-05"
+      },
+      "merge_authority": true,
+      "evidence": "Mempool and policy maintainer; stepped down for personal reasons."
+    },
+    {
+      "id": "ryanofsky",
+      "name": "Ryan Ofsky",
+      "emails": [
+        "ryan@ofsky.org"
+      ],
+      "github": "ryanofsky",
+      "status": "active",
+      "role": {
+        "title": "Process / Interface Maintainer",
+        "primary_area": "Multi-process / Interfaces",
+        "appointed": "2023-05-10"
+      },
+      "merge_authority": true,
+      "evidence": "Nominated by multiple maintainers to aid in multiprocess/interfaces."
+    },
+    {
+      "id": "thecharlatan",
+      "name": "Sebastian Kung",
+      "emails": [
+        "seb.kung@gmail.com"
+      ],
+      "github": "thecharlatan",
+      "status": "active",
+      "role": {
+        "title": "Build / Security Maintainer",
+        "primary_area": "Build System / Security / Kernel",
+        "appointed": "2019-11-10"
+      },
+      "segments": [
+        {
+          "type": "strategic",
+          "start": "2019-11-10",
+          "end": "2026-01-08"
+        },
+        {
+          "type": "committer",
+          "start": "2026-01-09"
+        }
+      ],
+      "merge_authority": true,
+      "evidence": "Strategic Build/Security Maintainer since 2019. Promoted to Merge Authority in 2026."
+    },
+    {
+      "id": "carldong",
+      "name": "Carl Dong",
+      "emails": [
+        "contact@carldong.me"
+      ],
+      "github": "carldong",
+      "status": "emeritus",
+      "role": {
+        "title": "Build / Security Maintainer",
+        "primary_area": "Build System / Guix",
+        "appointed": "2018-09-04",
+        "stepped_down": "2024-02-14"
+      },
+      "segments": [
+        { "type": "strategic", "start": "2018-09-04", "end": "2024-02-14" }
+      ],
+      "merge_authority": false,
+      "evidence": "Strategic Maintainer focused on Guix and deterministic builds. Stepped down in early 2024."
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+# Performance Patch: Stop the AI from indexing massive data files
+data/
+raw_data/
+*.parquet
+*.json
+.env
