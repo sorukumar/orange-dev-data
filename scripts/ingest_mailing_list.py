@@ -101,7 +101,12 @@ def parse_email_content(content):
 
 def get_available_shards():
     shards = []
-    for i in range(10):  # Check up to shard 9, assuming sequential
+    # Always check for local shard 0
+    if os.path.exists("raw_data/mailing_list/.git"):
+        shards.append("0")
+
+    # Try to find remote shards
+    for i in range(1, 10):  # Check up to shard 9, assuming sequential
         url = f"https://lore.kernel.org/bitcoindev/{i}.git"
         cmd = ["git", "ls-remote", url, "HEAD"]
         result = subprocess.run(cmd, capture_output=True, text=True)
@@ -197,6 +202,19 @@ def main():
         
         # Update state
         state.setdefault("mailing_list", {})[shard] = latest_commit
+
+    # Save all new records to parquet
+    if all_records:
+        df_new = pd.DataFrame(all_records)
+        if os.path.exists(OUTPUT_PARQUET):
+            df_old = pd.read_parquet(OUTPUT_PARQUET)
+            df_all = pd.concat([df_old, df_new], ignore_index=True).drop_duplicates(subset=['message_id'])
+        else:
+            df_all = df_new
+        
+        os.makedirs(os.path.dirname(OUTPUT_PARQUET), exist_ok=True)
+        df_all.to_parquet(OUTPUT_PARQUET, index=False)
+        print(f"Saved {len(df_all)} total messages to {OUTPUT_PARQUET}")
     
     # Post-processing to update human-readable state
     if os.path.exists(OUTPUT_PARQUET):
