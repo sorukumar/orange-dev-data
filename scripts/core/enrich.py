@@ -144,14 +144,23 @@ class Enricher:
         
         # Load Whitelists once
         maintainers = []
-        if os.path.exists("data/cache/maintainers_lookup.json"):
-            with open("data/cache/maintainers_lookup.json", "r") as f:
+        if os.path.exists(Config.MAINTAINERS_FILE):
+            with open(Config.MAINTAINERS_FILE, "r") as f:
                 maintainers = json.load(f).get("maintainers", [])
         
         sponsored = []
-        if os.path.exists("data/cache/sponsors_lookup.json"):
-            with open("data/cache/sponsors_lookup.json", "r") as f:
+        if os.path.exists(Config.SPONSORS_FILE):
+            with open(Config.SPONSORS_FILE, "r") as f:
                 sponsored = json.load(f).get("sponsored_developers", [])
+
+        # Load Manual Identified Locations
+        manual_locations = {}
+        if os.path.exists("lookups/identified_locations.json"):
+            with open("lookups/identified_locations.json", "r") as f:
+                loc_data = json.load(f).get("identified_locations", [])
+                for item in loc_data:
+                    if item.get("name") and item.get("found_location"):
+                        manual_locations[item["name"].lower()] = item["found_location"]
 
         for cid in sorted_ids:
             group = grouped.get_group(cid)
@@ -194,6 +203,11 @@ class Enricher:
                 if s.get("canonical_name") == canonical_name or any(e in c_emails for e in s.get("emails", [])):
                     entry["login"] = entry["login"] or s.get("github")
                     entry["is_enriched"] = True
+
+            # --- STRATEGY 2.5: MANUAL IDENTIFIED LOCATIONS ---
+            if canonical_name.lower() in manual_locations:
+                entry["location"] = entry["location"] or manual_locations[canonical_name.lower()]
+                entry["is_enriched"] = True
 
             # --- STRATEGY 3: MANUAL OVERRIDES ---
             MANUAL_OVERRIDES = {

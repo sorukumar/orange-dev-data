@@ -49,6 +49,7 @@ def main():
     # PHASE 1: Bitcoin Core Analysis
     print("\n--- PHASE 1: Bitcoin Core Analysis ---")
     run("python3 scripts/core/ingest.py", cwd=root_dir)
+    run("python3 scripts/core/social.py", cwd=root_dir)
     run("python3 scripts/core/enrich.py", cwd=root_dir) # Incremental (uses cache)
     run("python3 scripts/extract_reviewers.py", cwd=root_dir)
     run("python3 scripts/core/process.py", cwd=root_dir)
