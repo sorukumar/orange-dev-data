@@ -25,6 +25,37 @@ The project is split into a **Data Engine** and multiple **Stateless Frontends**
 
 ---
 
+## ⚙️ Processing Scripts (`scripts/`)
+
+These scripts orchestrate the data pipeline. They transform raw source data (Git, API, Mail) into the JSON files consumed by the UI.
+
+| Script | Purpose | Output / Visualization |
+| :--- | :--- | :--- |
+| `rebuild.py` | **Master Orchestrator**. Runs the entire pipeline from ingestion to UI artifact generation. | All Data |
+| `scripts/core/ingest.py` | Extracts raw commit data from the Bitcoin Core Git repository. | `data/core/commits.parquet` |
+| `scripts/core/process.py` | Calculates engineering metrics: Churn, Net Change, and Retention. | `stats_churn.json`, `stats_retention.json` |
+| `scripts/ingest_mailing_list.py` | Parses 15+ years of Mailing List Git archives into structured data. | `social_mailing_list.parquet` |
+| `scripts/ingest_delving.py` | Fetches the latest research threads from Delving Bitcoin via API. | `social_delving.parquet` |
+| `scripts/categorize_threads.py`| Uses keywords and NLP to tag social threads with technical themes (Mempool, L2, etc). | `social_combined_categorized.parquet` |
+| `scripts/influence_hubs.py` | Calculates PageRank influence and build the social-technical graph. | **Technical Influence Graph** (Network) |
+| `scripts/generate_ui_artifacts.py`| Converts large Parquet files into lightweight, optimized JSON for the browser. | Dashboard KPI Cards |
+
+---
+
+## 🔍 Lookup Tables & Data Intelligence (`lookups/`)
+
+The pipeline relies on curated lookup tables to resolve identities and enrich raw data. These are the "Intelligence" layer of the system.
+
+| File | Purpose | Creation Method | Usage |
+| :--- | :--- | :--- | :--- |
+| `identity_mappings.json` | **Identity Resolution**. Maps aliases, emails, and handles to a Canonical Name. | Manual research + LLM deduplication. | Unifies IDs in all ingestion scripts. |
+| `maintainers_lookup.json`| Defines official maintainer roles and tenure. | Researching repo docs and GitHub permissions. | Identifies "Maintenance" vs "Authored" work. |
+| `identified_locations.json`| Maps contributor profiles to geographic regions (Country/Continent). | GitHub API scraping + manual geo-tagging. | Powers geographic evolution charts. |
+| `sponsors_lookup.json` | Maps developers to funding entities (Blockstream, Chaincode, etc). | Deep internet research (Linkedin, bios). | Used for Corporate Independence analysis. |
+| `enrichment_cache.json` | Caches GitHub API responses (PRs, reviews, labels). | Automated via `scripts/core/enrich.py`. | Prevents API rate-limiting during rebuilds. |
+
+---
+
 ## 📊 Core Data Inventory (`data/core/`)
 
 These files power the **Orange Dev Tracker** dashboards.
@@ -67,15 +98,3 @@ Used only by the processing scripts to maintain state and preserve API rate limi
 *   **`identified_locations.json`**: Maps location strings (e.g., "SF, CA") to standard region/country names.
 *   **`sponsors_lookup.json`**: Working cache of entity-to-developer funding relationships.
 *   **`contributors_missing_location.json`**: A tracking list of developers who need manual geolocation research.
-
----
-
-## ⚙️ Processing Scripts (`scripts/`)
-
-| Script | Purpose |
-| :--- | :--- |
-| `rebuild.py` | Runs the entire pipeline from end-to-end. |
-| `scripts/core/process.py` | The main engine for calculating all `data/core/` metrics. |
-| `scripts/influence_hubs.py` | Generates the social-technical **Technical Influence Graph**. |
-| `scripts/categorize_threads.py`| Tags mailing list and Delving Bitcoin threads with technical themes. |
-| `scripts/generate_ui_artifacts.py`| Packages massive Parquet files into lightweight JSON for the UI. |
