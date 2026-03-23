@@ -54,5 +54,23 @@ The frontend repositories use a `DATA_PATH_PREFIX` (defined in `utils.js` or dir
 ### Local Development
 When iterating on the data pipeline, the `data/` folder should be pushed to GitHub to update the dashboards globally. 
 
-### Lab Mode
-For exploratory work (e.g., Gloria Zhao's Spotlight), the frontend fetches from its own **relative local path** (e.g., `fetch('data/lab/...')`). Once the numbers are validated, the ingestion logic is moved to `orange-dev-data/scripts` and the data is served from the central engine.
+Once the numbers are validated, the ingestion logic is moved to `orange-dev-data/scripts` and the data is served from the central engine.
+
+---
+
+## 🔍 Lookup Tables & Data Intelligence (`lookups/`)
+
+The pipeline relies on curated lookup tables to resolve identities and enrich raw data. These are the "Intelligence" layer of the system.
+
+| File | Purpose | Creation Method | Usage |
+| :--- | :--- | :--- | :--- |
+| `identity_mappings.json` | **Identity Resolution**. Maps aliases, emails, and handles to a Canonical Name. | Manual research + LLM deduplication. | Unifies IDs in all ingestion scripts. |
+| `maintainers_lookup.json`| Defines official maintainer roles and tenure. | Researching repo docs and GitHub permissions. | Identifies "Maintenance" vs "Authored" work. |
+| `identified_locations.json`| Maps contributor profiles to geographic regions (Country/Continent). | GitHub API scraping + manual geo-tagging. | Powers geographic evolution charts. |
+| `sponsors_lookup.json` | Maps developers to funding entities (Blockstream, Chaincode, etc). | Deep internet research (Linkedin, bios). | Used for Corporate Independence analysis. |
+| `enrichment_cache.json` | Caches GitHub API responses (PRs, reviews, labels). | Automated via `scripts/core/enrich.py`. | Prevents API rate-limiting during rebuilds. |
+
+### How Lookups are Used
+*   **Ingestion Phase**: `identity_mappings.json` is loaded first to ensure that when a developer posts on a mailing list and commits to GitHub, they are counted as the same person.
+*   **Processing Phase**: Maintainer and Sponsor lookups are applied to categorize the *intent* and *independence* of the work.
+*   **Enrichment Phase**: Location lookups are used to aggregate technical trends by global region.
