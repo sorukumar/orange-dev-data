@@ -189,7 +189,12 @@ def extract_network():
             "top_category": cat_counts.most_common(1)[0][0] if cat_counts else "other",
             "expertise": top_3_cats,
             "bips": bips,
-            "last_active": node_metadata[node]["last_active"].isoformat()
+            "last_active": node_metadata[node]["last_active"].isoformat(),
+            "dominant_source": src_counts.most_common(1)[0][0] if src_counts else "unknown",
+            "source_breakdown": dict(src_counts),
+            "threads_started": node_metadata[node]["threads_started"],
+            "replies_sent": node_metadata[node]["replies_sent"],
+            "replies_received": G_all.in_degree(node)
         })
 
     # Export top 600 nodes for visualization
