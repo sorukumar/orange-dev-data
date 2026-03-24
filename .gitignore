@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.env
+
+# Data Pipeline
+data/raw/
+data/work/
+data/cache/
+data/state/
+*.parquet
+
+# IDEs
+.vscode/
+.idea/
+.DS_Store
+
+# Include curated output by default
+!output/**
+!metadata/**

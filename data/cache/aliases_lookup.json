@@ -2,7 +2,7 @@
   "_meta": {
     "description": "Manual identity aliases for Bitcoin Core contributors",
     "last_updated": "2025-01-27",
-    "note": "Future Enhancement: Consider GitHub API to auto-resolve username->name mapping. See: https://api.github.com/users/{username}"
+    "note": "Strategy Update: Moving towards platform-aware mapping (Github/Delving/Mailing List) to handle 1,700+ authors. Current structure is legacy and should be migrated to a platform-indexed schema."
   },
   "aliases": [
     {
@@ -21,7 +21,8 @@
       "canonical_name": "Pieter Wuille",
       "aliases": [
         "sipa",
-        "Pieter"
+        "Pieter",
+        "Peter Wuille"
       ],
       "emails": [
         "pieter.wuille@gmail.com",
@@ -124,7 +125,8 @@
         "Jorge Timon"
       ],
       "emails": [
-        "jtimon@jtimon.cc"
+        "jtimon@jtimon.cc",
+        "=?ISO-8859-1?Q?Jorge_Tim=F3n?="
       ]
     },
     {
@@ -243,7 +245,8 @@
       ],
       "emails": [
         "darosior@protonmail.com",
-        "antoine@revault.dev"
+        "antoine@revault.dev",
+        "'Antoine Poinsot' via Bitcoin Development Mailing List"
       ]
     },
     {
@@ -312,7 +315,8 @@
     {
       "canonical_name": "Jeremy Rubin",
       "aliases": [
-        "JeremyRubin"
+        "JeremyRubin",
+        "Jeremy"
       ],
       "emails": [
         "j@rubin.io",
@@ -423,6 +427,637 @@
         "--author=Satoshi Nakamoto",
         "Satoshi nakamato",
         "Satoshi"
+      ],
+      "emails": []
+    },
+    {
+      "canonical_name": "Peter Todd",
+      "aliases": [
+        "petertodd"
+      ],
+      "emails": [
+        "pete@petertodd.org"
+      ]
+    },
+    {
+      "canonical_name": "Mike Hearn",
+      "aliases": [
+        "mikehearn"
+      ],
+      "emails": [
+        "mike@plan99.net"
+      ]
+    },
+    {
+      "canonical_name": "ZmnSCPxj",
+      "aliases": [
+        "ZmnSCPxj"
+      ],
+      "emails": [
+        "ZmnSCPxj@protonmail.com"
+      ]
+    },
+    {
+      "canonical_name": "Anthony Towns",
+      "aliases": [
+        "ajtowns",
+        "aj"
+      ],
+      "emails": [
+        "aj@erisian.com.au"
+      ]
+    },
+    {
+      "canonical_name": "Eric Voskuil",
+      "aliases": [
+        "evoskuil"
+      ],
+      "emails": [
+        "eric@voskuil.org"
+      ]
+    },
+    {
+      "canonical_name": "Mark Friedenbach",
+      "aliases": [
+        "maaku",
+        "mfreidenbach"
+      ],
+      "emails": [
+        "mark@friedenbach.org"
+      ]
+    },
+    {
+      "canonical_name": "Andrew Poelstra",
+      "aliases": [
+        "andytoshi"
+      ],
+      "emails": [
+        "apoelstra@wpsoftware.net"
+      ]
+    },
+    {
+      "canonical_name": "Johnson Lau",
+      "aliases": [
+        "johnsonlau"
+      ],
+      "emails": [
+        "jl2012@xbt.hk"
+      ]
+    },
+    {
+      "canonical_name": "Jameson Lopp",
+      "aliases": [
+        "lopp",
+        "James Jameson Lopp"
+      ],
+      "emails": [
+        "jameson@lopp.net"
+      ]
+    },
+    {
+      "canonical_name": "Paul Sztorc",
+      "aliases": [
+        "truthcoin"
+      ],
+      "emails": []
+    },
+    {
+      "canonical_name": "Ethan Heilman",
+      "aliases": [
+        "EthanHeilman"
+      ],
+      "emails": []
+    },
+    {
+      "canonical_name": "Ruben Somsen",
+      "aliases": [
+        "rubensomsen"
+      ],
+      "emails": []
+    },
+    {
+      "canonical_name": "Bram Cohen",
+      "aliases": [
+        "bramc"
+      ],
+      "emails": [
+        "bram@bittorrent.com"
+      ]
+    },
+    {
+      "canonical_name": "Rusty Russell",
+      "aliases": [
+        "rustyrussell"
+      ],
+      "emails": [
+        "rusty@rustcorp.com.au"
+      ]
+    },
+    {
+      "canonical_name": "James O'Beirne",
+      "aliases": [
+        "jamesob"
+      ],
+      "emails": [
+        "james.obeirne@gmail.com"
+      ]
+    },
+    {
+      "canonical_name": "Eric Lombrozo",
+      "aliases": [
+        "elombrozo"
+      ],
+      "emails": [
+        "elombrozo@gmail.com"
+      ]
+    },
+    {
+      "canonical_name": "Amir Taaki",
+      "aliases": [
+        "genjix"
+      ],
+      "emails": [
+        "genjix@riseup.net"
+      ]
+    },
+    {
+      "canonical_name": "Erik Aronesty",
+      "aliases": [
+        "earonesty"
+      ],
+      "emails": [
+        "erik@q32.com"
+      ]
+    },
+    {
+      "canonical_name": "alicexbt",
+      "aliases": [
+        "alicexbt"
+      ],
+      "emails": []
+    },
+    {
+      "canonical_name": "Olaoluwa Osuntokun",
+      "aliases": [
+        "roasbeef"
+      ],
+      "emails": [
+        "laolu32@gmail.com"
+      ]
+    },
+    {
+      "canonical_name": "Chris Belcher",
+      "aliases": [
+        "belcher"
+      ],
+      "emails": []
+    },
+    {
+      "canonical_name": "Tim Ruffing",
+      "aliases": [
+        "real-or-random"
+      ],
+      "emails": [
+        "crypto@timruffing.de"
+      ]
+    },
+    {
+      "canonical_name": "Thomas Zander",
+      "aliases": [
+        "thomaszander",
+        "Tom Zander"
+      ],
+      "emails": []
+    },
+    {
+      "canonical_name": "David A. Harding",
+      "aliases": [
+        "daveharding",
+        "/dev/fd0",
+        "/dev /fd0"
+      ],
+      "emails": [
+        "dave@harding.rocks"
+      ]
+    },
+    {
+      "canonical_name": "Mark Erhardt",
+      "aliases": [
+        "murch"
+      ],
+      "emails": [
+        "murch@murch.one"
+      ]
+    },
+    {
+      "canonical_name": "Greg Sanders",
+      "aliases": [
+        "instagibbs"
+      ],
+      "emails": [
+        "gsanders87@gmail.com"
+      ]
+    },
+    {
+      "canonical_name": "Adam Gibson",
+      "aliases": [
+        "waxwing",
+        "AdamISZ",
+        "waxwing/ AdamISZ"
+      ],
+      "emails": []
+    },
+    {
+      "canonical_name": "Loki",
+      "aliases": [
+        "moonsettler"
+      ],
+      "emails": []
+    },
+    {
+      "canonical_name": "Christian Decker",
+      "aliases": [
+        "decker.christian"
+      ],
+      "emails": [
+        "decker.christian@gmail.com"
+      ]
+    },
+    {
+      "canonical_name": "Bryan Bishop",
+      "aliases": [
+        "kanzure"
+      ],
+      "emails": [
+        "kanzure@gmail.com"
+      ]
+    },
+    {
+      "canonical_name": "Tamas Blummer",
+      "aliases": [
+        "tamasblummer"
+      ],
+      "emails": [
+        "tamas.blummer@gmail.com"
+      ]
+    },
+    {
+      "canonical_name": "Drak",
+      "aliases": [
+        "Btc Drak",
+        "btcdrak",
+        "Drak"
+      ],
+      "emails": []
+    },
+    {
+      "canonical_name": "Michael Folkson",
+      "aliases": [
+        "michaelfolkson"
+      ],
+      "emails": []
+    },
+    {
+      "canonical_name": "Bastien Teinturier",
+      "aliases": [
+        "t-bast"
+      ],
+      "emails": []
+    },
+    {
+      "canonical_name": "Jonas Nick",
+      "aliases": [
+        "jonasnick"
+      ],
+      "emails": []
+    },
+    {
+      "canonical_name": "Billy Tetrud",
+      "aliases": [
+        "billytetrud",
+        "Billy Tetrud"
+      ],
+      "emails": []
+    },
+    {
+      "canonical_name": "Adam Back",
+      "aliases": [
+        "adam3us",
+        "Adam"
+      ],
+      "emails": [
+        "adam@cypherspace.org"
+      ]
+    },
+    {
+      "canonical_name": "Tier Nolan",
+      "aliases": [
+        "tiernolan"
+      ],
+      "emails": [
+        "tier.nolan@gmail.com"
+      ]
+    },
+    {
+      "canonical_name": "Russell O'Connor",
+      "aliases": [
+        "roconnor"
+      ],
+      "emails": [
+        "roconnor@theorem.ca"
+      ]
+    },
+    {
+      "canonical_name": "Andreas Schildbach",
+      "aliases": [
+        "aschildbach"
+      ],
+      "emails": [
+        "andreas@schildbach.de"
+      ]
+    },
+    {
+      "canonical_name": "Tom Harding",
+      "aliases": [
+        "tomharding"
+      ],
+      "emails": []
+    },
+    {
+      "canonical_name": "Alan Reiner",
+      "aliases": [
+        "alanreiner"
+      ],
+      "emails": []
+    },
+    {
+      "canonical_name": "Justus Ranvier",
+      "aliases": [
+        "justusranvier"
+      ],
+      "emails": []
+    },
+    {
+      "canonical_name": "Aymeric Vitte",
+      "aliases": [
+        "aymericvitte"
+      ],
+      "emails": []
+    },
+    {
+      "canonical_name": "Matt Whitlock",
+      "aliases": [
+        "mattwhitlock"
+      ],
+      "emails": [
+        "bips@mattwhitlock.name"
+      ]
+    },
+    {
+      "canonical_name": "Melvin Carvalho",
+      "aliases": [
+        "melvincarvalho"
+      ],
+      "emails": [
+        "melvincarvalho@gmail.com"
+      ]
+    },
+    {
+      "canonical_name": "Pavol Rusnak",
+      "aliases": [
+        "stick"
+      ],
+      "emails": [
+        "stick@satoshilabs.com"
+      ]
+    },
+    {
+      "canonical_name": "Chris Stewart",
+      "aliases": [
+        "cstewart"
+      ],
+      "emails": [
+        "chris@suredbits.com"
+      ]
+    },
+    {
+      "canonical_name": "Natanael",
+      "aliases": [
+        "natanael"
+      ],
+      "emails": []
+    },
+    {
+      "canonical_name": "Milly Bitcoin",
+      "aliases": [
+        "millybitcoin"
+      ],
+      "emails": []
+    },
+    {
+      "canonical_name": "Sergio Demian Lerner",
+      "aliases": [
+        "sergiolerner"
+      ],
+      "emails": [
+        "sergio.d.lerner@gmail.com"
+      ]
+    },
+    {
+      "canonical_name": "odinn",
+      "aliases": [
+        "odinn"
+      ],
+      "emails": []
+    },
+    {
+      "canonical_name": "Marek Palatinus",
+      "aliases": [
+        "slush"
+      ],
+      "emails": [
+        "slush@satoshilabs.com"
+      ]
+    },
+    {
+      "canonical_name": "Prayank",
+      "aliases": [
+        "prayank"
+      ],
+      "emails": []
+    },
+    {
+      "canonical_name": "Thomas Voegtlin",
+      "aliases": [
+        "ecdsa"
+      ],
+      "emails": [
+        "thomasv@electrum.org"
+      ]
+    },
+    {
+      "canonical_name": "Andy Parkins",
+      "aliases": [
+        "andyparkins"
+      ],
+      "emails": []
+    },
+    {
+      "canonical_name": "Aaron Voisine",
+      "aliases": [
+        "voisine"
+      ],
+      "emails": [
+        "aaron@voisine.org"
+      ]
+    },
+    {
+      "canonical_name": "Dave Scotese",
+      "aliases": [
+        "dscotese"
+      ],
+      "emails": []
+    },
+    {
+      "canonical_name": "Troy Benjegerdes",
+      "aliases": [
+        "hoover"
+      ],
+      "emails": [
+        "hoover@mail.org"
+      ]
+    },
+    {
+      "canonical_name": "Brandon Black",
+      "aliases": [
+        "realtreit"
+      ],
+      "emails": []
+    },
+    {
+      "canonical_name": "Zawy",
+      "aliases": [
+        "zawy"
+      ],
+      "emails": []
+    },
+    {
+      "canonical_name": "Michael Gronager",
+      "aliases": [
+        "gronager"
+      ],
+      "emails": []
+    },
+    {
+      "canonical_name": "Roy Badami",
+      "aliases": [
+        "roybadami"
+      ],
+      "emails": []
+    },
+    {
+      "canonical_name": "John Smith",
+      "aliases": [
+        "johnsmith"
+      ],
+      "emails": []
+    },
+    {
+      "canonical_name": "Warren Togami Jr.",
+      "aliases": [
+        "wtogami"
+      ],
+      "emails": []
+    },
+    {
+      "canonical_name": "Bob McElrath",
+      "aliases": [
+        "mcelrath"
+      ],
+      "emails": []
+    },
+    {
+      "canonical_name": "Jeremy Spilman",
+      "aliases": [
+        "jspilman"
+      ],
+      "emails": []
+    },
+    {
+      "canonical_name": "Steven Roose",
+      "aliases": [
+        "stevenroose"
+      ],
+      "emails": []
+    },
+    {
+      "canonical_name": "Ali Sherief",
+      "aliases": [
+        "alisherief"
+      ],
+      "emails": []
+    },
+    {
+      "canonical_name": "Jean-Paul Kogelman",
+      "aliases": [
+        "jpk"
+      ],
+      "emails": []
+    },
+    {
+      "canonical_name": "Alex Mizrahi",
+      "aliases": [
+        "killerstorm"
+      ],
+      "emails": []
+    },
+    {
+      "canonical_name": "Lloyd Fournier",
+      "aliases": [
+        "clarkmoody",
+        "fournierlloyd"
+      ],
+      "emails": []
+    },
+    {
+      "canonical_name": "0xB10C",
+      "aliases": [
+        "0xb10c"
+      ],
+      "emails": []
+    },
+    {
+      "canonical_name": "Alex Morcos",
+      "aliases": [
+        "morcos"
+      ],
+      "emails": []
+    },
+    {
+      "canonical_name": "Keagan McClelland",
+      "aliases": [
+        "keagan"
+      ],
+      "emails": []
+    },
+    {
+      "canonical_name": "James Hilliard",
+      "aliases": [
+        "jameshilliard"
+      ],
+      "emails": []
+    },
+    {
+      "canonical_name": "Boris Nagaev",
+      "aliases": [
+        "Nagaev Boris"
+      ],
+      "emails": []
+    },
+    {
+      "canonical_name": "Rijndael",
+      "aliases": [
+        "rot13maxi"
       ],
       "emails": []
     }

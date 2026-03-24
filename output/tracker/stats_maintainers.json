@@ -1,0 +1,249 @@
+{
+  "gavinandresen": {
+    "name": "Gavin Andresen",
+    "status": "historical",
+    "top_areas": {
+      "src/qt": 33.5,
+      "root": 23.6,
+      "contrib": 10.3,
+      "src/test": 9.5,
+      "src/main.cpp": 9.0,
+      "doc": 5.4,
+      "src/init.cpp": 4.4,
+      "src/main.h": 4.4
+    }
+  },
+  "dooglus": {
+    "name": "Chris Moore",
+    "status": "historical",
+    "top_areas": {
+      "root": 100.0
+    }
+  },
+  "sipa": {
+    "name": "Pieter Wuille",
+    "status": "emeritus",
+    "top_areas": {
+      "src/test": 28.7,
+      "src/qt": 14.2,
+      "src/util": 10.2,
+      "src/netaddress.h": 6.8,
+      "src/interfaces": 6.8,
+      "src/init.cpp": 6.5,
+      "src/leveldb": 6.4,
+      "src/wallet": 3.8,
+      "src/main.cpp": 3.7,
+      "src/secp256k1": 3.6,
+      "root": 3.4,
+      "src/net_processing.h": 3.4,
+      "src/script": 2.3
+    }
+  },
+  "jgarzik": {
+    "name": "Jeff Garzik",
+    "status": "historical",
+    "top_areas": {
+      "src/main.h": 17.0,
+      "qa": 15.5,
+      "locale": 9.1,
+      "src/main.cpp": 9.1,
+      "root": 7.3,
+      "src/init.cpp": 6.5,
+      "src/test": 4.3,
+      "src/qt": 3.6,
+      "contrib": 3.6,
+      "src/db.cpp": 3.5,
+      "src/db.h": 3.5,
+      "doc": 3.2,
+      "src/net.cpp": 2.9,
+      "src/bitcoinrpc.cpp": 1.7,
+      "src/walletdb.cpp": 1.7,
+      "src/irc.cpp": 1.7,
+      "src/irc.h": 1.7,
+      "src/Makefile.am": 1.0,
+      "src/rpc.cpp": 1.0,
+      "src/wallet.h": 1.0,
+      "src/json": 0.9
+    }
+  },
+  "laanwj": {
+    "name": "Wladimir J. van der Laan",
+    "status": "emeritus",
+    "top_areas": {
+      "src/qt": 19.8,
+      "test": 18.5,
+      "src/test": 16.4,
+      "src/wallet": 10.6,
+      "contrib": 9.9,
+      "doc": 7.7,
+      "src/rpc": 5.6,
+      "depends": 4.1,
+      "src/util": 2.9,
+      "qa": 2.5,
+      "src/leveldb": 2.1
+    }
+  },
+  "tcatm": {
+    "name": "Nils Schneider",
+    "status": "historical",
+    "top_areas": {
+      "root": 50.0,
+      "src/qt": 27.8,
+      "doc": 5.6,
+      "src/bitcoinrpc.cpp": 5.6,
+      "src/main.cpp": 5.6,
+      "src/net.h": 5.6
+    }
+  },
+  "gmaxwell": {
+    "name": "Gregory Maxwell",
+    "status": "historical",
+    "top_areas": {
+      "src/qt": 35.9,
+      "src/test": 15.2,
+      "src/main.cpp": 12.2,
+      "qa": 6.1,
+      "src/init.cpp": 5.9,
+      "src/net.cpp": 4.4,
+      "src/main.h": 3.7,
+      "root": 3.7,
+      "contrib": 2.9,
+      "src/bitcoinrpc.cpp": 2.9,
+      "src/rpcrawtransaction.cpp": 2.6,
+      "doc": 2.3,
+      "src/wallet": 2.0
+    }
+  },
+  "jonasschnelli": {
+    "name": "Jonas Schnelli",
+    "status": "emeritus",
+    "top_areas": {
+      "src/qt": 67.0,
+      "test": 10.5,
+      "src/wallet": 8.1,
+      "src/interfaces": 3.4,
+      "src/test": 3.2,
+      "doc": 3.0,
+      "src/rpc": 2.8,
+      "root": 2.0
+    }
+  },
+  "MarcoFalke": {
+    "name": "Marco Falke",
+    "status": "emeritus",
+    "top_areas": {
+      "test": 58.2,
+      "src/test": 12.4,
+      "src/wallet": 6.5,
+      "src/qt": 5.8,
+      "ci": 4.7,
+      "src/rpc": 4.5,
+      "src/util": 2.4,
+      "root": 2.3,
+      "src/bench": 1.5,
+      "doc": 1.1,
+      "contrib": 0.3,
+      "src/bitcoin-cli.cpp": 0.3
+    }
+  },
+  "meshcollider": {
+    "name": "Samuel Dobson",
+    "status": "emeritus",
+    "top_areas": {
+      "src/wallet": 48.8,
+      "test": 18.8,
+      "src/qt": 8.0,
+      "src/rpc": 6.0,
+      "src/script": 5.6,
+      "doc": 5.0,
+      "src/interfaces": 4.7,
+      "src/test": 2.9
+    }
+  },
+  "fanquake": {
+    "name": "Michael Ford",
+    "status": "active",
+    "top_areas": {
+      "test": 22.8,
+      "src/test": 18.8,
+      "src/qt": 15.4,
+      "src/wallet": 10.4,
+      "src/secp256k1": 8.5,
+      "depends": 8.4,
+      "contrib": 8.1,
+      "ci": 7.6
+    }
+  },
+  "hebasto": {
+    "name": "Hennadii Stepanov",
+    "status": "active",
+    "top_areas": {
+      "src/qt": 84.1,
+      "ci": 3.5,
+      "src/wallet": 2.5,
+      ".github": 2.3,
+      "src/crypto": 2.3,
+      "depends": 1.8,
+      "test": 1.8,
+      "doc": 1.7
+    }
+  },
+  "achow101": {
+    "name": "Andrew Chow",
+    "status": "active",
+    "top_areas": {
+      "src/wallet": 38.3,
+      "test": 26.9,
+      "src/test": 11.5,
+      "doc": 5.1,
+      "src/qt": 4.2,
+      "src/bench": 3.8,
+      "src/script": 3.7,
+      "src/rpc": 3.0,
+      "src/node": 2.4,
+      "src/interfaces": 1.1
+    }
+  },
+  "glozow": {
+    "name": "Gloria Zhao",
+    "status": "emeritus",
+    "top_areas": {
+      "test": 46.1,
+      "src/test": 21.9,
+      "src/wallet": 9.3,
+      "src/node": 6.2,
+      "src/rpc": 5.2,
+      "doc": 4.0,
+      "src/policy": 3.8,
+      "src/secp256k1": 3.5
+    }
+  },
+  "ryanofsky": {
+    "name": "Ryan Ofsky",
+    "status": "active",
+    "top_areas": {
+      "src/test": 34.4,
+      "test": 17.4,
+      "src/wallet": 14.0,
+      "src/node": 13.8,
+      "src/rpc": 9.9,
+      "doc": 4.0,
+      "src/validation.cpp": 3.3,
+      "src/util": 3.2
+    }
+  },
+  "thecharlatan": {
+    "name": "Sebastian Kung",
+    "status": "active",
+    "top_areas": {
+      "src/test": 28.6,
+      "test": 20.8,
+      "src/wallet": 14.5,
+      "src/util": 11.4,
+      "src/node": 6.7,
+      "ci": 6.3,
+      "src/kernel": 6.3,
+      "contrib": 5.5
+    }
+  }
+}
