@@ -208,7 +208,15 @@ def extract_network():
 
     os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
     with open(OUTPUT_PATH, 'w') as f:
-        json.dump({"nodes": visible_nodes, "links": links_data}, f, indent=2)
+        payload = {
+            "nodes": visible_nodes, 
+            "links": links_data,
+            "metadata": {
+                "total_population": int(total_population),
+                "generated_at": datetime.now().isoformat()
+            }
+        }
+        json.dump(payload, f, indent=2)
     
     print(f"Exported richer network to {OUTPUT_PATH}")
 
