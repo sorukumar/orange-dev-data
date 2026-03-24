@@ -45,7 +45,7 @@ def load_identity_resolver():
     return resolve
 
 def extract_network():
-    print("--- Network Influence Analysis (New Architecture) ---")
+    print("--- Network Influence Analysis (Source Parity Version) ---")
     resolve = load_identity_resolver()
     
     if not os.path.exists(INPUT_DATA_PATH):
@@ -61,12 +61,10 @@ def extract_network():
     df = df[~df['canonical_id'].str.lower().isin(['system', 'unknown', 'admin'])]
     df = df[df['canonical_id'].notna()]
     
-    # Define historical eras
     now = df['date'].max()
     post_2016_start = datetime(2016, 1, 1)
     modern_start = now - timedelta(days=3 * 365) 
     
-    # Message ID -> Author lookup for edge recreation
     df['msg_id_clean'] = df['message_id'].str.strip('<>')
     msg_to_author = df.dropna(subset=['msg_id_clean']).set_index('msg_id_clean')['canonical_id'].to_dict()
     
@@ -89,13 +87,8 @@ def extract_network():
         
         if author not in node_metadata:
             node_metadata[author] = {
-                "sources": Counter(), 
-                "categories": Counter(), 
-                "bip_refs": Counter(),
-                "last_active": date,
-                "msg_count": 0,
-                "threads_started": 0,
-                "replies_sent": 0
+                "sources": Counter(), "categories": Counter(), "bip_refs": Counter(),
+                "last_active": date, "msg_count": 0, "threads_started": 0, "replies_sent": 0
             }
         
         node_metadata[author]["sources"][source] += 1
@@ -127,25 +120,18 @@ def extract_network():
         recipient = msg_to_author.get(target_mid)
         
         if recipient and recipient != author:
-            # 1. All-time graph
             if G_all.has_edge(author, recipient):
                 G_all[author][recipient]['weight'] += 1
             else:
                 G_all.add_edge(author, recipient, weight=1, category=primary_cat, source=source)
             
-            # 2. Post-2016 graph
             if date >= post_2016_start:
-                if G_post2016.has_edge(author, recipient):
-                    G_post2016[author][recipient]['weight'] += 1
-                else:
-                    G_post2016.add_edge(author, recipient, weight=1)
+                if G_post2016.has_edge(author, recipient): G_post2016[author][recipient]['weight'] += 1
+                else: G_post2016.add_edge(author, recipient, weight=1)
 
-            # 3. Modern graph (Last 3 years)
             if date >= modern_start:
-                if G_modern.has_edge(author, recipient):
-                    G_modern[author][recipient]['weight'] += 1
-                else:
-                    G_modern.add_edge(author, recipient, weight=1)
+                if G_modern.has_edge(author, recipient): G_modern[author][recipient]['weight'] += 1
+                else: G_modern.add_edge(author, recipient, weight=1)
 
     print("Dampening message counts for PageRank...")
     for G in [G_all, G_post2016, G_modern]:
@@ -165,20 +151,17 @@ def extract_network():
     rank_modern = {node: i+1 for i, node in enumerate(sorted(G_all.nodes(), key=lambda n: pagerank_modern.get(n, 0), reverse=True))}
     
     for i, node in enumerate(sorted_nodes):
-        score_all = pagerank_all.get(node, 0)
-        score_p2016 = pagerank_post2016.get(node, 0)
-        score_modern = pagerank_modern.get(node, 0)
+        score_all = pagerank_all.get(node, 0); score_p2016 = pagerank_post2016.get(node, 0); score_modern = pagerank_modern.get(node, 0)
         growth = (score_modern / score_p2016) if score_p2016 > 0 else 0
-        
         cat_counts = node_metadata[node]["categories"]
         total_cat_weight = sum(cat_counts.values())
-        top_3_cats = []
-        if total_cat_weight > 0:
-            top_3_cats = [{"topic": c, "share": round(count/total_cat_weight, 2)} 
-                         for c, count in cat_counts.most_common(3)]
-        
+        top_3_cats = [{"topic": c, "share": round(count/total_cat_weight, 2)} for c, count in cat_counts.most_common(3)] if total_cat_weight > 0 else []
         bips = [b for b, count in node_metadata[node]["bip_refs"].most_common(5)]
+        
         src_counts = node_metadata[node]["sources"]
+        dominant_source = "Mixed"
+        if src_counts["delving"] > src_counts.get("mailing_list", 0) * 2: dominant_source = "delving"
+        elif src_counts.get("mailing_list", 0) > src_counts["delving"] * 2: dominant_source = "mailing_list"
         
         nodes_data.append({
             "id": node,
@@ -189,39 +172,39 @@ def extract_network():
             "top_category": cat_counts.most_common(1)[0][0] if cat_counts else "other",
             "expertise": top_3_cats,
             "bips": bips,
-            "last_active": node_metadata[node]["last_active"].isoformat(),
-            "dominant_source": src_counts.most_common(1)[0][0] if src_counts else "unknown",
+            "dominant_source": dominant_source,
             "source_breakdown": dict(src_counts),
             "threads_started": node_metadata[node]["threads_started"],
             "replies_sent": node_metadata[node]["replies_sent"],
-            "replies_received": G_all.in_degree(node)
+            "replies_received": int(G_all.in_degree(node, weight='weight')),
+            "last_active": node_metadata[node]["last_active"].isoformat()
         })
 
-    # Export top 600 nodes for visualization
-    visible_nodes = nodes_data[:600]
+    # Take top 500 for visualization (Signal over Noise)
+    visible_nodes = nodes_data[:500]
     visible_ids = {n['id'] for n in visible_nodes}
     
     links_data = []
     for u, v, data in G_all.edges(data=True):
         if u in visible_ids and v in visible_ids:
             links_data.append({
-                "source": u,
-                "target": v,
-                "weight": int(data['weight']),
+                "source": u, "target": v, "weight": int(data['weight']),
+                "source_plat": data.get('source', 'unknown'),
                 "category": data.get('category', 'other')
             })
 
     os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
     with open(OUTPUT_PATH, 'w') as f:
-        payload = {
+        json.dump({
             "nodes": visible_nodes, 
             "links": links_data,
             "metadata": {
-                "total_population": int(total_population),
-                "generated_at": datetime.now().isoformat()
+                "generated_at": datetime.now().isoformat(),
+                "total_population": total_population,
+                "visible_count": len(visible_nodes),
+                "link_count": len(links_data)
             }
-        }
-        json.dump(payload, f, indent=2)
+        }, f, indent=2)
     
     print(f"Exported richer network to {OUTPUT_PATH}")
 
