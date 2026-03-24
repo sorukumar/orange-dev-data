@@ -126,18 +126,35 @@ class MetricGenerators:
 
     @staticmethod
     def generate_engagement_pyramid(commits):
-        print("Generating Engagement Pyramid...")
-        author_counts = commits.groupby('canonical_id')['hash'].nunique()
-        tiers = [
-            {"name": "One-Time", "min": 1, "max": 1, "color_idx": 13},
-            {"name": "Scouts", "min": 2, "max": 10, "color_idx": 12},
-            {"name": "Explorers", "min": 11, "max": 100, "color_idx": 11},
-            {"name": "Sustainers", "min": 101, "max": 1000, "color_idx": 4},
-            {"name": "The Core", "min": 1001, "max": 1000000, "color_idx": 2}
-        ]
-        res = [{"name": t["name"], "value": int(author_counts[(author_counts >= t["min"]) & (author_counts <= t["max"])].sum()), "count": int(len(author_counts[(author_counts >= t["min"]) & (author_counts <= t["max"])])), "color_idx": t["color_idx"]} for t in tiers]
+        print("Generating Engagement Pyramid (3-Tier Model)...")
+        
+        def calculate_tiers(counts):
+            n = len(counts)
+            if n == 0: return []
+            
+            # Legacy 3-Tier Model: Top 1%, Next 20%, Remaining 80%
+            counts = counts.sort_values(ascending=False)
+            i1 = int(np.ceil(n * 0.01))
+            i20 = int(np.ceil(n * 0.20))
+            
+            g1 = counts.iloc[0:i1]
+            g2 = counts.iloc[i1:i20]
+            g3 = counts.iloc[i20:]
+            
+            return [
+                {"name": "👑 The Core (Top 1%)", "value": int(g1.sum()), "count": int(len(g1)), "color_idx": 4},
+                {"name": "⭐ The Contributors (Top 20%)", "value": int(g2.sum()), "count": int(len(g2)), "color_idx": 5},
+                {"name": "🌱 The Prospects (Bottom 80%)", "value": int(g3.sum()), "count": int(len(g3)), "color_idx": 12}
+            ]
+
+        author_counts_total = commits.groupby('canonical_id')['hash'].nunique()
+        authored_counts = commits[commits['category'] != 'Merge'].groupby('canonical_id')['hash'].nunique()
+
+        res_total = calculate_tiers(author_counts_total)
+        res_authored = calculate_tiers(authored_counts)
+
         with open(os.path.join(OUTPUT_DIR, "stats_engagement_tiers.json"), "w") as f:
-            json.dump({"total": res, "authored": res}, f, indent=2)
+            json.dump({"total": res_total, "authored": res_authored}, f, indent=2)
 
     @staticmethod
     def generate_social_proof():
