@@ -142,6 +142,7 @@ class MetricGenerators:
     @staticmethod
     def generate_social_proof():
         print("Generating Social Proof...")
+        xAxis, stars, forks = [], [], []
         if os.path.exists(SOCIAL_PROOF_FILE):
             df = pd.read_parquet(SOCIAL_PROOF_FILE)
             df['year_month'] = pd.to_datetime(df['date']).dt.strftime('%Y-%m')
@@ -149,8 +150,10 @@ class MetricGenerators:
             xAxis = sorted(monthly.keys())
             stars = [int(monthly[x]) for x in xAxis]
             forks = [int(s * 0.3) for s in stars]
-            with open(os.path.join(OUTPUT_DIR, "stats_social_proof.json"), "w") as f:
-                json.dump({"xAxis": xAxis, "stars": stars, "forks": forks}, f, indent=2)
+        
+        # Ensure file exists even if empty to prevent 404s
+        with open(os.path.join(OUTPUT_DIR, "stats_social_proof.json"), "w") as f:
+            json.dump({"xAxis": xAxis, "stars": stars, "forks": forks}, f, indent=2)
 
     @staticmethod
     def generate_temporal_stats(commits):
