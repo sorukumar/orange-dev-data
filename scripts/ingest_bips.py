@@ -8,7 +8,7 @@ import sys
 
 # --- Configuration ---
 BIPS_REPO_URL = "https://github.com/bitcoin/bips"
-BIPS_REPO_PATH = "data/raw_archives/bips"
+BIPS_REPO_PATH = "raw_data/bips_repo"
 OUTPUT_PARQUET = "data/raw/bips.parquet"
 ALIASES_PATH = "lookups/identity_mappings.json"
 STATE_PATH = "data/state.json"

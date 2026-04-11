@@ -34,7 +34,7 @@ jobs:
       - name: Pull Raw Source Repositories
         run: |
           git clone --bare --depth 1000 https://github.com/bitcoin/bitcoin.git raw_data/bitcoin
-          git clone --bare --depth 1000 https://github.com/bitcoin/bips.git raw_data/bips_repo
+          git clone --depth 1000 https://github.com/bitcoin/bips.git raw_data/bips_repo
           git clone --depth 1000 https://github.com/jamesob/delving-bitcoin-archive.git raw_data/delving
 
       - name: Run Data Pipeline
