@@ -1,0 +1,75 @@
+import os
+import subprocess
+import sys
+
+def load_env():
+    """Load environment variables from .env file"""
+    env_path = os.path.join(os.path.dirname(__file__), "..", ".env")
+    if os.path.exists(env_path):
+        with open(env_path, "r") as f:
+            for line in f:
+                if "=" in line and not line.startswith("#"):
+                    key, value = line.strip().split("=", 1)
+                    os.environ[key] = value
+        print("✅ Loaded .env file")
+
+def run(command, cwd=None):
+    """Execute a system command and check for errors"""
+    print(f"\n--- Running: {command} ---")
+    result = subprocess.run(command, shell=True, cwd=cwd)
+    if result.returncode != 0:
+        # We don't want a git pull failure to stop the whole pipeline if we already have data
+        if "git pull" in command:
+             print("⚠️  Git pull failed (maybe no internet?). Continuing with current local data.")
+             return True
+        print(f"⚠️  Command failed with exit code {result.returncode}")
+        return False
+    return True
+
+def main():
+    print("🚀 Starting DAILY Automated Pipeline (Fast/Incremental)...")
+    
+    # Initialization
+    load_env()
+    root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+    
+    # Ensure folders exist
+    for folder in ["core", "viz", "governance", "cache", "network", "raw"]:
+        os.makedirs(os.path.join(root_dir, "data", folder), exist_ok=True)
+
+    # PHASE 0: Fresh Sync (Update all raw source repositories)
+    print("\n--- PHASE 0: Raw Data Sync ---")
+    run("git -C raw_data/bitcoin pull origin master", cwd=root_dir)
+    run("git -C raw_data/bips_repo pull origin master", cwd=root_dir)
+    run("git -C raw_data/delving pull origin master", cwd=root_dir)
+
+    # PHASE 1: Bitcoin Core Analysis (Fast scripts only)
+    print("\n--- PHASE 1: Fast Core Analysis ---")
+    run("python3 scripts/core/ingest.py", cwd=root_dir)
+    run("python3 scripts/core/social.py", cwd=root_dir)
+    run("python3 scripts/core/enrich.py", cwd=root_dir) # Incremental cache
+    run("python3 scripts/extract_reviewers.py", cwd=root_dir)
+    run("python3 scripts/core/process.py", cwd=root_dir)
+
+    # PHASE 2: Social & Governance Ingestion
+    print("\n--- PHASE 2: Fast Social Updates ---")
+    run("python3 scripts/ingest_bips.py", cwd=root_dir)
+    run("python3 scripts/ingest_delving.py", cwd=root_dir)
+    # Skipped ingest_mailing_list.py to keep daily runs fast
+    
+    # PHASE 2.5: Merging & Enrichment
+    print("\n--- PHASE 2.5: Merging ---")
+    run("python3 scripts/enrich_governance.py", cwd=root_dir) 
+    run("python3 scripts/merge_data.py", cwd=root_dir)
+
+    # PHASE 3: Skipped
+    print("\n--- PHASE 3: SKIPPED (Heavy NLP/Graphs reserved for monthly) ---")
+
+    # PHASE 4: UI Artifact Generation
+    print("\n--- PHASE 4: Generating UI JSONs ---")
+    run("python3 scripts/generate_ui_artifacts.py", cwd=root_dir)
+    
+    print("\n✨ DAILY PIPELINE COMPLETE!")
+
+if __name__ == "__main__":
+    main()

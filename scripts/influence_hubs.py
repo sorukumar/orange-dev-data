@@ -8,7 +8,7 @@ from datetime import datetime, timedelta
 import math
 
 # --- Configuration & Identity Resolution ---
-IDENTITY_MAP_PATH = 'lookups/identity_mappings.json'
+IDENTITY_MAP_PATH = 'metadata/identities/identities.json'
 INPUT_DATA_PATH = 'data/raw/social_combined_categorized.parquet'
 OUTPUT_DIR = 'data/viz'
 

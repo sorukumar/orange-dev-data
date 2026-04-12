@@ -155,8 +155,8 @@ class Enricher:
 
         # Load Manual Identified Locations
         manual_locations = {}
-        if os.path.exists("lookups/identified_locations.json"):
-            with open("lookups/identified_locations.json", "r") as f:
+        if os.path.exists("metadata/context/locations.json"):
+            with open("metadata/context/locations.json", "r") as f:
                 loc_data = json.load(f).get("identified_locations", [])
                 for item in loc_data:
                     if item.get("name") and item.get("found_location"):

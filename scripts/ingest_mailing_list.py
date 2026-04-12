@@ -10,7 +10,7 @@ from datetime import datetime
 # --- Configuration ---
 MAILING_LIST_PATH = "raw_data/mailing_list" # Full local archive
 OUTPUT_PARQUET = "data/raw/social_mailing_list.parquet"
-ALIASES_PATH = "lookups/identity_mappings.json"
+ALIASES_PATH = "metadata/identities/identities.json"
 STATE_PATH = "data/state.json"
 
 def load_aliases():

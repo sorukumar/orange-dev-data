@@ -3,7 +3,7 @@ import json
 import os
 
 def find_unmapped():
-    mapping_path = 'lookups/identity_mappings.json'
+    mapping_path = 'metadata/identities/identities.json'
     social_path = 'data/raw/social_combined.parquet'
     output_path = 'research/unmapped_authors.txt'
     

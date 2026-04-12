@@ -2,10 +2,11 @@
 
 The data pipeline in `orange-dev-data` is an automated workflow designed to ingest raw data from multiple Bitcoin-related sources, process and enrich it with metadata, and output lightweight JSON artifacts for consumption by frontend dashboards (like `orange-dev-tracker` and `orange-dev-network`).
 
-The entire pipeline is orchestrated by a single master script: `scripts/rebuild.py`.
+The pipeline is orchestrated by two primary scripts: `scripts/rebuild_daily.py` and `scripts/rebuild_monthly.py`.
 
-## 1. Master Orchestrator: `rebuild.py`
-The `rebuild.py` script executes the pipeline in distinct phases. It ensures that data directories exist, syncs raw data sources via `git pull`, and sequentially triggers the Python scripts needed to generate the final data representations.
+## 1. Master Orchestrators: Daily vs Monthly
+- **`rebuild_daily.py` (Fast/Automated):** Invoked by GitHub Actions, this script ensures data directories exist, syncs raw data sources via `git pull`, and sequentially triggers the *lightweight* Python scripts needed to instantly generate UI metrics, skipping heavy algorithms.
+- **`rebuild_monthly.py` (Local/Comprehensive):** Executed locally, this script runs the exact same first half, but extends the pipeline to trigger heavy PageRank math, NLP categorizations, and legacy mailing list ingestion.
 
 ## 2. The Four Data Sources and Ingestion
 The pipeline tracks four distinct data sources. During the ingestion phase, raw text or API responses are transformed into structured `.parquet` files for standardized processing.
@@ -34,7 +35,7 @@ The pipeline tracks four distinct data sources. During the ingestion phase, raw 
 Once the raw parquets are generated, a series of scripts cleans, merges, and enriches them:
 
 - **Entity & Location Enrichment:** 
-  - `scripts/core/enrich.py` and `scripts/enrich_governance.py` map raw git/social handles to canonical identities and pull geolocation attributes using data in the `lookups/` folder.
+  - `scripts/core/enrich.py` and `scripts/enrich_governance.py` map raw git/social handles to canonical identities and pull geolocation attributes using data in the `metadata/` folder.
 - **Metric Calculations:** 
   - `scripts/core/process.py` calculates engineering metrics like churn vs. net change, and cohort retention.
   - `scripts/core/social.py` analyzes GitHub connections and reviewer relationships.

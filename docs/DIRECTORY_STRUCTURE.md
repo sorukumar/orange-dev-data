@@ -21,10 +21,9 @@ This folder contains the Python execution layer. No data is stored here. For a d
 
 ---
 
-## 3. `lookups/`
+## 3. `metadata/` (formerly `lookups/`)
 The "brain" or "intelligence layer" of the project. These static JSON files are manually curated or partially machine-generated to handle resolving real-world chaos (like developers having 5 different email addresses). 
-- *Files include:* `identity_mappings.json`, `maintainers_lookup.json`, `sponsors_lookup.json`, `identified_locations.json`.
-- *(See `LOOKUPS_AND_INTELLIGENCE.md` for deep details into this folder).*
+- *Files include:* `identities/identities.json`, `context/maintainers.json`, `context/sponsors.json`, `context/locations.json`.
 
 ---
 

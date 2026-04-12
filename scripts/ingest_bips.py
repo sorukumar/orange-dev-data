@@ -10,7 +10,7 @@ import sys
 BIPS_REPO_URL = "https://github.com/bitcoin/bips"
 BIPS_REPO_PATH = "data/raw_archives/bips"
 OUTPUT_PARQUET = "data/raw/bips.parquet"
-ALIASES_PATH = "lookups/identity_mappings.json"
+ALIASES_PATH = "metadata/identities/identities.json"
 STATE_PATH = "data/state.json"
 
 def load_state():

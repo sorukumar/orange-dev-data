@@ -16,7 +16,7 @@ def summarize_social():
     
     # Check how many are not mapped to a 'known' canonical name
     # We can load the mappings to check
-    mapping_path = "lookups/identity_mappings.json"
+    mapping_path = "metadata/identities/identities.json"
     with open(mapping_path, 'r') as f:
         mapping_data = json.load(f)
     

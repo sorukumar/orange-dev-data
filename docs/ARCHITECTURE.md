@@ -31,7 +31,8 @@ These scripts orchestrate the data pipeline. They transform raw source data (Git
 
 | Script | Purpose | Output / Visualization |
 | :--- | :--- | :--- |
-| `rebuild.py` | **Master Orchestrator**. Runs the entire pipeline from ingestion to UI artifact generation. | All Data |
+| `rebuild_daily.py` | **Fast Orchestrator**. Automates daily git pulls and lightweight JSON generations (via Github APIs). | UI Data |
+| `rebuild_monthly.py` | **Heavy Orchestrator**. Runs locally to parse mailing lists, NLP, and PageRank network topologies. | UI + Network Data |
 | `scripts/core/ingest.py` | Extracts raw commit data from the Bitcoin Core Git repository. | `data/core/commits.parquet` |
 | `scripts/core/process.py` | Calculates engineering metrics: Churn, Net Change, and Retention. | `stats_churn.json`, `stats_retention.json` |
 | `scripts/ingest_mailing_list.py` | Parses 15+ years of Mailing List Git archives into structured data. | `social_mailing_list.parquet` |
@@ -42,16 +43,16 @@ These scripts orchestrate the data pipeline. They transform raw source data (Git
 
 ---
 
-## 🔍 Lookup Tables & Data Intelligence (`lookups/`)
+## 🔍 Intelligence Layer (`metadata/`)
 
-The pipeline relies on curated lookup tables to resolve identities and enrich raw data. These are the "Intelligence" layer of the system.
+The pipeline relies on exhaustively curated lookup tables to resolve identities and map real world facts.
 
 | File | Purpose | Creation Method | Usage |
 | :--- | :--- | :--- | :--- |
-| `identity_mappings.json` | **Identity Resolution**. Maps aliases, emails, and handles to a Canonical Name. | Manual research + LLM deduplication. | Unifies IDs in all ingestion scripts. |
-| `maintainers_lookup.json`| Defines official maintainer roles and tenure. | Researching repo docs and GitHub permissions. | Identifies "Maintenance" vs "Authored" work. |
-| `identified_locations.json`| Maps contributor profiles to geographic regions (Country/Continent). | GitHub API scraping + manual geo-tagging. | Powers geographic evolution charts. |
-| `sponsors_lookup.json` | Maps developers to funding entities (Blockstream, Chaincode, etc). | Deep internet research (Linkedin, bios). | Used for Corporate Independence analysis. |
+| `identities/identities.json` | **Identity Resolution**. Maps aliases, emails, and handles to a Canonical Name. | Manual research + LLM deduplication. | Unifies 1700+ IDs in all ingestion scripts. |
+| `context/maintainers.json`| Defines official maintainer roles and tenure. | Researching repo docs and GitHub permissions. | Identifies "Maintenance" vs "Authored" work. |
+| `context/locations.json`| Maps contributor profiles to geographic regions (Country/Continent). | GitHub API scraping + manual geo-tagging. | Powers geographic evolution charts. |
+| `context/sponsors.json` | Maps developers to funding entities (Blockstream, Chaincode, etc). | Deep internet research (Linkedin, bios). | Used for Corporate Independence analysis. |
 | `enrichment_cache.json` | Caches GitHub API responses (PRs, reviews, labels). | Automated via `scripts/core/enrich.py`. | Prevents API rate-limiting during rebuilds. |
 
 ---
@@ -59,6 +60,14 @@ The pipeline relies on curated lookup tables to resolve identities and enrich ra
 ## 📊 Core Data Inventory (`data/core/`)
 
 These files power the **Orange Dev Tracker** dashboards.
+
+### 0. Raw & Intermediate Data (Parquets)
+Before JSON artifacts are generated, Python scripts manage high-fidelity data in Parquet files. You can safely write custom scripts to query these without breaking the UI.
+*   **`commits.parquet`**: Base commit history (SHA, lines changed, date, author).
+*   **`commit_messages.parquet`**: Full string text of every commit message.
+*   **`reviews.parquet`**: Mapped relationships parsed from "Reviewed-by/Tested-by" tags.
+*   **`social_history.parquet`**: General social graph interactions across issues/PRs.
+*   **`contributors_enriched.parquet`**: The authoritative index of every contributor with their geographic assignments.
 
 ### 1. Dashboard & KPIs
 *   **`dashboard_vital_signs.json`**: Top-level metrics (Commits, Stars, Total Contributors).

@@ -20,8 +20,8 @@ class Config:
     METADATA_FILE = f"{DATA_DIR}/social_metadata.json"
     ENRICHED_FILE = f"{DATA_DIR}/contributors_enriched.parquet"
     
-    MAINTAINERS_FILE = "lookups/maintainers_lookup.json"
-    SPONSORS_FILE = "lookups/sponsors_lookup.json"
+    MAINTAINERS_FILE = "metadata/context/maintainers.json"
+    SPONSORS_FILE = "metadata/context/sponsors.json"
 
     # Map output filenames
     FILES = {

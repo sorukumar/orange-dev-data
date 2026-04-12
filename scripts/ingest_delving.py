@@ -10,7 +10,7 @@ import time
 ARCHIVE_REPO_URL = "https://github.com/jamesob/delving-bitcoin-archive"
 ARCHIVE_PATH = "raw_data/delving"
 OUTPUT_PARQUET = "data/raw/social_delving.parquet"
-ALIASES_PATH = "lookups/identity_mappings.json"
+ALIASES_PATH = "metadata/identities/identities.json"
 
 def setup_archive():
     """Clones or pulls the Delving Bitcoin archive repository."""

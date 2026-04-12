@@ -4,7 +4,7 @@ import os
 
 # --- Configuration ---
 BIPS_PATH = "data/governance/bips_enriched.parquet"
-ALIASES_PATH = "lookups/identity_mappings.json"
+ALIASES_PATH = "metadata/identities/identities.json"
 SOCIAL_PATH = "data/raw/social_combined_categorized.parquet"
 COMMITS_PATH = "data/core/commits.parquet"
 OUTPUT_EXPERTISE_JSON = "data/governance/expertise.json"

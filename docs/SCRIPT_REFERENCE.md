@@ -3,8 +3,9 @@
 This document serves as an index of the Python scripts found in the `scripts/` directory.
 
 ### Orchestration
-- **`rebuild.py`**: The master runner. Automatically updates Git repositories, runs all other scripts in sequence, handles errors gracefully, and manages the end-to-end flow.
-- **`run_all.py`**: Legacy or alternative wrapper for executing the pipeline (usually superseded by `rebuild.py`).
+- **`rebuild_daily.py`**: The computationally lightweight daily master runner. Invoked automatically by GitHub Actions, it updates raw repositories and runs rapid, incremental extraction scripts (bypassing heavy NLP or graph topology scripts) to quickly generate dashboard KPIs.
+- **`rebuild_monthly.py`**: The comprehensive master runner. Designed for local execution, it runs exactly the same as the daily script but includes heavy processing like full mailing list ingestion, NLP topic categorization, geographic tracking, and PageRank network topology calculations.
+- **`legacy/rebuild.py`**: Deprecated full pipeline runner from before the daily/monthly execution split.
 
 ### Data Ingestion
 *These scripts pull data from the outside world into local `.parquet` formats.*
