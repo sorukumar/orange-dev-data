@@ -15,12 +15,14 @@ def load_env():
 
 def run(command, cwd=None):
     """Execute a system command and check for errors"""
+    if command.startswith("python3 "):
+        command = command.replace("python3 ", f'"{sys.executable}" ', 1)
+        
     print(f"\n--- Running: {command} ---")
     result = subprocess.run(command, shell=True, cwd=cwd)
     if result.returncode != 0:
-        # We don't want a git pull failure to stop the whole pipeline if we already have data
         if "git pull" in command:
-             print("⚠️  Git pull failed (maybe no internet?). Continuing with current local data.")
+             print("⚠️  Git pull failed. Continuing with current local data.")
              return True
         print(f"⚠️  Command failed with exit code {result.returncode}")
         return False
@@ -29,49 +31,45 @@ def run(command, cwd=None):
 def main():
     print("🚀 Starting MONTHLY Automated Pipeline (Deep Analytics)...")
     
-    # Initialization
     load_env()
     root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
     
-    # Ensure folders exist
-    for folder in ["core", "viz", "governance", "cache", "network", "raw"]:
+    for folder in ["enriched", "cache", "network", "raw", "sources"]:
         os.makedirs(os.path.join(root_dir, "data", folder), exist_ok=True)
 
-    # PHASE 0: Fresh Sync (Update all raw source repositories)
+    # PHASE 0: Fresh Sync
     print("\n--- PHASE 0: Raw Data Sync ---")
-    run("git -C raw_data/bitcoin pull origin master", cwd=root_dir)
-    run("git -C raw_data/bips_repo pull origin master", cwd=root_dir)
-    run("git -C raw_data/delving pull origin master", cwd=root_dir)
+    run("git -C data/sources/bitcoin pull origin master", cwd=root_dir)
+    run("git -C data/sources/bips pull origin master", cwd=root_dir)
+    run("git -C data/sources/delving pull origin master", cwd=root_dir)
 
-    # PHASE 1: Bitcoin Core Analysis
-    print("\n--- PHASE 1: Bitcoin Core Analysis ---")
-    run("python3 scripts/core/ingest.py", cwd=root_dir)
-    run("python3 scripts/core/social.py", cwd=root_dir)
-    run("python3 scripts/core/enrich.py", cwd=root_dir)
-    run("python3 scripts/extract_reviewers.py", cwd=root_dir)
-    run("python3 scripts/core/process.py", cwd=root_dir)
-    run("python3 scripts/generate_regional_evolution.py", cwd=root_dir)
+    # PHASE 1: Extraction (Source -> Raw)
+    print("\n--- PHASE 1: Extraction (Raw Staging) ---")
+    run("python3 scripts/01_ingest/core.py", cwd=root_dir)
+    run("python3 scripts/01_ingest/bips.py", cwd=root_dir)
+    run("python3 scripts/01_ingest/delving.py", cwd=root_dir)
+    run("python3 scripts/01_ingest/mailing_list.py", cwd=root_dir)
 
-    # PHASE 2: Social & Governance Ingestion
-    print("\n--- PHASE 2: Social & Governance Analysis ---")
-    run("python3 scripts/ingest_bips.py", cwd=root_dir)
-    run("python3 scripts/ingest_delving.py", cwd=root_dir)
-    run("python3 scripts/ingest_mailing_list.py", cwd=root_dir) # Heavy, included in monthly
+    # PHASE 2: Convergence (Raw -> Enriched)
+    print("\n--- PHASE 2: Convergence (Enrichment) ---")
+    run("python3 scripts/02_process/enrich_identity.py", cwd=root_dir)
+    run("python3 scripts/02_process/reviews.py", cwd=root_dir)
+    run("python3 scripts/02_process/github_social.py", cwd=root_dir)
+    run("python3 scripts/02_process/core.py", cwd=root_dir)
+    run("python3 scripts/02_process/merge_social.py", cwd=root_dir)
+    run("python3 scripts/02_process/governance.py", cwd=root_dir)
     
-    # PHASE 2.5: Merging & Enrichment
-    print("\n--- PHASE 2.5: Merging & Enrichment ---")
-    run("python3 scripts/enrich_governance.py", cwd=root_dir) 
-    run("python3 scripts/merge_data.py", cwd=root_dir)
+    # PHASE 3: Intelligence (Heavy Analytics & Graphs)
+    print("\n--- PHASE 3: Intelligence (NLP & Graphs) ---")
+    run("python3 scripts/02_process/categorize.py", cwd=root_dir)
+    run("python3 scripts/03_analyze/influence.py", cwd=root_dir)
+    run("python3 scripts/03_analyze/expertise.py", cwd=root_dir)
 
-    # PHASE 3: Advanced Network Intelligence
-    print("\n--- PHASE 3: Network Graph & Expertise Mapping (Heavy) ---")
-    run("python3 scripts/categorize_threads.py", cwd=root_dir)
-    run("python3 scripts/influence_hubs.py", cwd=root_dir)
-    run("python3 scripts/map_expertise.py", cwd=root_dir)
-
-    # PHASE 4: UI Artifact Generation
-    print("\n--- PHASE 4: Generating UI JSONs ---")
-    run("python3 scripts/generate_ui_artifacts.py", cwd=root_dir)
+    # PHASE 4: Delivery (Enriched -> Output)
+    print("\n--- PHASE 4: Artifact Generation ---")
+    run("python3 scripts/04_deliver/regional_evolution.py", cwd=root_dir)
+    run("python3 scripts/04_deliver/registry.py", cwd=root_dir)
+    run("python3 scripts/04_deliver/ui_artifacts.py", cwd=root_dir)
     
     print("\n✨ MONTHLY PIPELINE COMPLETE!")
     print("Everything is up to date and all NLP/Graphs have been recalculated.")

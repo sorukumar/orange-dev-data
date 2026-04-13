@@ -1,0 +1,15 @@
+# Global Rules for AI Assistants in this Workspace
+
+## Python Execution
+- ALWAYS use the Anaconda Python binary: `/opt/anaconda3/bin/python3`
+- You can also use the shell alias `py` which is mapped to this binary.
+- NEVER use the system default `python` or `python3`.
+
+## Data Architecture
+- Respect the Numbered Chain: `01_ingest` -> `02_process` -> `03_analyze` -> `04_deliver`.
+- All processed data must land in `data/raw/` or `data/enriched/`.
+- All public UI data must land in `output/`.
+
+## Identity Resolution
+- All contributor metrics must be resolved through `metadata/identities.json`. 
+- Do not use raw names or emails from Git/Social logs in final artifacts.

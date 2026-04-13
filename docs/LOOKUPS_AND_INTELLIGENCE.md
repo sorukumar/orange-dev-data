@@ -1,37 +1,43 @@
 # Lookups and Intelligence
 
-The pipeline heavily relies on static JSON files stored in the `lookups/` directory. Because data from GitHub commits, mailing lists, and Delving Bitcoin APIs is notoriously chaotic and disconnected, the `lookups` directory serves as the definitive source of truth to stitch fragmented developer personas and metadata together.
+The pipeline's predictive power and accuracy come from the **Intelligence Layer** stored in `metadata/`. This directory serves as the "Sovereign Context" of the project—it resolves the chaos of raw GitHub and forum handles into a human-auditable registry of the Bitcoin ecosystem.
 
-## The Resolvers
+---
 
-### 1. `identity_mappings.json`
-**Purpose:** Maps scattered aliases, emails, and handles across different platforms into a single canonical identity.
-- **Why it's needed:** A developer might commit code as `Real Name <email@example.com>`, post on the mailing list as `cypherpunk99`, and review code as `real_name_dev`. If not resolved, the dashboard would overcount developers and fail to build accurate expertise graphs.
-- **Usage:** Ingestion scripts run alias checks against this mapping dictionary before writing `.parquet` rows.
+## 🏗️ The Sovereign Context (`metadata/`)
 
-### 2. `maintainers_lookup.json`
-**Purpose:** Defines official repository maintainers, including custom start/end dates for their tenure.
-- **Why it's needed:** Maintainers act as gatekeepers rather than just prolific authors. Their activity needs distinct categorization (Review/Merge activity vs Authorship).
-- **Usage:** Used by scripts like `scripts/core/process.py` to bucket commit authors and reviewers, surfacing "Maintainer Independence" and "Maintainer Workload" charts.
+### 1. `identities.json` (The Canonical Resolver)
+**Purpose**: Maps scattered aliases, emails, and platform-specific handles to a single, unique **Canonical Name**.
+- **The Problem**: A contributor might be `Pieter Wuille` in Git, `sipa` on GitHub, and `pieter.wuille@gmail.com` on the mailing list.
+- **The Solution**: Every pipeline script uses this file to resolve raw IDs before any analytics are performed. This prevents data fragmentation and ensures PageRank scores are consolidated.
 
-### 3. `identified_locations.json`
-**Purpose:** Resolves arbitrary geographic strings into structured Continent/Country groupings.
-- **Why it's needed:** GitHub's location field is free-text. Developers write "London", "UK", "Earth", or "Berlin".
-- **Usage:** Used by the enrichment scripts to assign standard geospatial coordinates or macro-regions to contributors, powering mapping functionality and "Regional Evolution" metrics.
+### 2. `contributors.json` (The Master Registry)
+**Purpose**: The central database of all ~2,300 tracked humans.
+- **Contents**: Stores badges, roles (Maintainer, Sponsor), expertise areas, and high-level engagement scores.
+- **Automation**: This file is updated by `scripts/sync_registry.py` at the end of every pipeline run, merging manually assigned roles with automatically discovered engagement metrics.
 
-### 4. `sponsors_lookup.json` & `sponsors_evidence.json`
-**Purpose:** Maps developers to funding entities or corporate sponsors (e.g., Chaincode, Brink, Blockstream, Spiral).
-- **Why it's needed:** Helps track the corporate decentralization of the codebase.
-- **Usage:** This mapping is manually curated via open-source investigation. The pipeline reads this to categorize the corporate footprint of commits.
+### 3. `sponsors.json` (The Funding Graph)
+**Purpose**: Tracks developer-to-funder relationships (e.g., Chaincode, Brink, Blockstream).
+- **Goal**: Powers the "Funding Diversity" metrics which measure the corporate decentralization of the Bitcoin Core maintenance layer.
 
-## The Caches
+### 4. `locations.json` (Geospatial Mapping)
+**Purpose**: Resolves arbitrary profile strings (e.g., "London", "SF", "Earth") into standard Continent/Country regions.
+- **Usage**: Feeds the "Regional Evolution" dashboard, tracking the geographic shift of Bitcoin R&D over time.
 
-While not manually curated, the pipeline generates dynamic intelligence files to preserve internet bandwidth and bypass API rate constraints.
+---
 
-### `enrichment_cache.json` / `enrichment_cache_remote.json`
-**Purpose:** Stores responses from the GitHub API. 
-- During `scripts/core/enrich.py`, the pipeline asks GitHub about PR sizes, labels, and developer profile information. By saving this here, future `rebuild.py` runs take seconds instead of hours and don't get IP-blocked by GitHub.
+## 💾 Behavioral Cache (`data/cache/`)
 
-### `contributors_missing_location.json`
-**Purpose:** An automated ledger. If the script cannot geo-locate a top developer automatically, it writes their name here.
-- **Usage:** A human maintainer can periodically check this file, manually investigate the identity, and add the result to `identified_locations.json`.
+To preserve API rate limits and ensure fast rebuilds, the pipeline maintains a "memory" of expensive API lookups.
+- **`enrichment_cache.json`**: Stores GitHub PR metadata, labels, and profile results.
+- **`aliases_lookup.json`**: An optimized, flattened index of the registry used for ultra-fast name resolution during heavy ingestions.
+
+---
+
+## 🛠️ The Intelligence Workflow
+1. **Discovery**: Ingestion scripts find a new name/email in a mirror.
+2. **Resolution**: The script asks `identities.json`: "Do I know this person?"
+3. **Tracking**: 
+    - If **Yes**: History is added to the canonical profile.
+    - If **No**: The person is recorded in `data/enriched/social_stats.json` for manual review in the next Registry Sync.
+4. **Promotion**: High-impact new contributors are eventually graduated to the Master Registry for rich tracking.
