@@ -4710,7 +4710,7 @@
       "last_active": "2013-08-05T10:37:44"
     },
     {
-      "id": "'conduition' via Bitcoin Development Mailing List",
+      "id": "Conduition",
       "ranks": {
         "all": 107,
         "p2016": 65,
@@ -4727,28 +4727,31 @@
       "expertise": [
         {
           "topic": "quantum",
-          "share": 0.64
+          "share": 0.48
         },
         {
           "topic": "covenants",
-          "share": 0.12
+          "share": 0.1
         },
         {
-          "topic": "script-opcodes",
-          "share": 0.04
+          "topic": "taproot",
+          "share": 0.07
         }
       ],
       "bips": [
+        "360",
+        "32",
         "39"
       ],
-      "dominant_source": "mailing_list",
+      "dominant_source": "Mixed",
       "source_breakdown": {
+        "delving": 25,
         "mailing_list": 39
       },
-      "threads_started": 1,
-      "replies_sent": 38,
+      "threads_started": 12,
+      "replies_sent": 52,
       "replies_received": 19,
-      "last_active": "2026-01-27T10:39:07"
+      "last_active": "2026-04-06T15:14:17.790000"
     },
     {
       "id": "Rick Wesson",
@@ -6547,34 +6550,37 @@
       },
       "val": 4.224193617771958,
       "growth": 1.5830862308118738,
-      "top_category": "data-structures",
+      "top_category": "wallet-keys",
       "expertise": [
         {
-          "topic": "data-structures",
-          "share": 0.24
-        },
-        {
           "topic": "wallet-keys",
-          "share": 0.23
+          "share": 0.17
         },
         {
-          "topic": "script-opcodes",
-          "share": 0.16
+          "topic": "covenants",
+          "share": 0.14
+        },
+        {
+          "topic": "taproot",
+          "share": 0.11
         }
       ],
       "bips": [
-        "370",
-        "174",
-        "375"
+        "338",
+        "85",
+        "341",
+        "352",
+        "327"
       ],
-      "dominant_source": "mailing_list",
+      "dominant_source": "Mixed",
       "source_breakdown": {
+        "delving": 50,
         "mailing_list": 26
       },
-      "threads_started": 5,
-      "replies_sent": 21,
+      "threads_started": 18,
+      "replies_sent": 58,
       "replies_received": 20,
-      "last_active": "2025-01-17T07:02:50"
+      "last_active": "2026-03-21T08:42:31.126000"
     },
     {
       "id": "Patrick Strateman",
@@ -6888,15 +6894,15 @@
       "expertise": [
         {
           "topic": "covenants",
-          "share": 0.22
+          "share": 0.18
         },
         {
-          "topic": "taproot",
+          "topic": "ordinals-inscriptions",
           "share": 0.14
         },
         {
-          "topic": "script-opcodes",
-          "share": 0.09
+          "topic": "taproot",
+          "share": 0.12
         }
       ],
       "bips": [
@@ -6906,13 +6912,12 @@
       ],
       "dominant_source": "mailing_list",
       "source_breakdown": {
-        "delving": 8,
         "mailing_list": 19
       },
-      "threads_started": 2,
-      "replies_sent": 25,
+      "threads_started": 0,
+      "replies_sent": 19,
       "replies_received": 13,
-      "last_active": "2025-11-06T00:37:18.328000"
+      "last_active": "2025-07-09T15:05:41"
     },
     {
       "id": "dathonohm via Bitcoin Development Mailing List",
@@ -20423,7 +20428,7 @@
     },
     {
       "source": "Ethan Heilman",
-      "target": "'conduition' via Bitcoin Development Mailing List",
+      "target": "Conduition",
       "weight": 1,
       "source_plat": "mailing_list",
       "category": "segwit"
@@ -21361,7 +21366,7 @@
     },
     {
       "source": "Jonas Nick",
-      "target": "'conduition' via Bitcoin Development Mailing List",
+      "target": "Conduition",
       "weight": 2,
       "source_plat": "mailing_list",
       "category": "quantum"
@@ -22390,7 +22395,7 @@
     },
     {
       "source": "Antoine Riard",
-      "target": "'conduition' via Bitcoin Development Mailing List",
+      "target": "Conduition",
       "weight": 1,
       "source_plat": "mailing_list",
       "category": "quantum"
@@ -22865,154 +22870,154 @@
       "category": "other"
     },
     {
-      "source": "'conduition' via Bitcoin Development Mailing List",
+      "source": "Conduition",
       "target": "Giulio Golinelli",
       "weight": 2,
       "source_plat": "mailing_list",
       "category": "quantum"
     },
     {
-      "source": "'conduition' via Bitcoin Development Mailing List",
+      "source": "Conduition",
       "target": "Adam Gibson",
       "weight": 2,
       "source_plat": "mailing_list",
       "category": "quantum"
     },
     {
-      "source": "'conduition' via Bitcoin Development Mailing List",
+      "source": "Conduition",
       "target": "Jonas Nick",
       "weight": 2,
       "source_plat": "mailing_list",
       "category": "quantum"
     },
     {
-      "source": "'conduition' via Bitcoin Development Mailing List",
+      "source": "Conduition",
       "target": "Erik Aronesty",
       "weight": 2,
       "source_plat": "mailing_list",
       "category": "quantum"
     },
     {
-      "source": "'conduition' via Bitcoin Development Mailing List",
+      "source": "Conduition",
       "target": "'Mikhail Kudinov' via Bitcoin Development Mailing List",
       "weight": 1,
       "source_plat": "mailing_list",
       "category": "quantum"
     },
     {
-      "source": "'conduition' via Bitcoin Development Mailing List",
+      "source": "Conduition",
       "target": "Gregory Maxwell",
       "weight": 1,
       "source_plat": "mailing_list",
       "category": "quantum"
     },
     {
-      "source": "'conduition' via Bitcoin Development Mailing List",
+      "source": "Conduition",
       "target": "adiabat",
       "weight": 1,
       "source_plat": "mailing_list",
       "category": "quantum"
     },
     {
-      "source": "'conduition' via Bitcoin Development Mailing List",
+      "source": "Conduition",
       "target": "Tadge Dryja",
       "weight": 2,
       "source_plat": "mailing_list",
       "category": "quantum"
     },
     {
-      "source": "'conduition' via Bitcoin Development Mailing List",
+      "source": "Conduition",
       "target": "'James T' via Bitcoin Development Mailing List",
       "weight": 2,
       "source_plat": "mailing_list",
       "category": "quantum"
     },
     {
-      "source": "'conduition' via Bitcoin Development Mailing List",
+      "source": "Conduition",
       "target": "Saint Wenhao",
       "weight": 2,
       "source_plat": "mailing_list",
       "category": "quantum"
     },
     {
-      "source": "'conduition' via Bitcoin Development Mailing List",
+      "source": "Conduition",
       "target": "'Bitcoin Foundation' via Bitcoin Development Mailing List",
       "weight": 1,
       "source_plat": "mailing_list",
       "category": "quantum"
     },
     {
-      "source": "'conduition' via Bitcoin Development Mailing List",
+      "source": "Conduition",
       "target": "Josh Doman",
       "weight": 1,
       "source_plat": "mailing_list",
       "category": "covenants"
     },
     {
-      "source": "'conduition' via Bitcoin Development Mailing List",
+      "source": "Conduition",
       "target": "Peter Todd",
       "weight": 1,
       "source_plat": "mailing_list",
       "category": "quantum"
     },
     {
-      "source": "'conduition' via Bitcoin Development Mailing List",
+      "source": "Conduition",
       "target": "Boris Nagaev",
       "weight": 2,
       "source_plat": "mailing_list",
       "category": "quantum"
     },
     {
-      "source": "'conduition' via Bitcoin Development Mailing List",
+      "source": "Conduition",
       "target": "Ethan Heilman",
       "weight": 1,
       "source_plat": "mailing_list",
       "category": "segwit"
     },
     {
-      "source": "'conduition' via Bitcoin Development Mailing List",
+      "source": "Conduition",
       "target": "Jameson Lopp",
       "weight": 1,
       "source_plat": "mailing_list",
       "category": "quantum"
     },
     {
-      "source": "'conduition' via Bitcoin Development Mailing List",
+      "source": "Conduition",
       "target": "Anthony Towns",
       "weight": 1,
       "source_plat": "mailing_list",
       "category": "covenants"
     },
     {
-      "source": "'conduition' via Bitcoin Development Mailing List",
+      "source": "Conduition",
       "target": "Leo Wandersleb",
       "weight": 2,
       "source_plat": "mailing_list",
       "category": "quantum"
     },
     {
-      "source": "'conduition' via Bitcoin Development Mailing List",
+      "source": "Conduition",
       "target": "Jonathan Voss",
       "weight": 1,
       "source_plat": "mailing_list",
       "category": "quantum"
     },
     {
-      "source": "'conduition' via Bitcoin Development Mailing List",
+      "source": "Conduition",
       "target": "Agustin Cruz",
       "weight": 1,
       "source_plat": "mailing_list",
       "category": "quantum"
     },
     {
-      "source": "'conduition' via Bitcoin Development Mailing List",
+      "source": "Conduition",
       "target": "Lloyd Fournier",
       "weight": 1,
       "source_plat": "mailing_list",
       "category": "quantum"
     },
     {
-      "source": "'conduition' via Bitcoin Development Mailing List",
+      "source": "Conduition",
       "target": "David A. Harding",
       "weight": 1,
       "source_plat": "mailing_list",
@@ -23027,7 +23032,7 @@
     },
     {
       "source": "Giulio Golinelli",
-      "target": "'conduition' via Bitcoin Development Mailing List",
+      "target": "Conduition",
       "weight": 1,
       "source_plat": "mailing_list",
       "category": "quantum"
@@ -23342,7 +23347,7 @@
     },
     {
       "source": "Saint Wenhao",
-      "target": "'conduition' via Bitcoin Development Mailing List",
+      "target": "Conduition",
       "weight": 1,
       "source_plat": "mailing_list",
       "category": "quantum"
@@ -25001,7 +25006,7 @@
     },
     {
       "source": "David A. Harding",
-      "target": "'conduition' via Bitcoin Development Mailing List",
+      "target": "Conduition",
       "weight": 1,
       "source_plat": "mailing_list",
       "category": "ecash"
@@ -27038,7 +27043,7 @@
     },
     {
       "source": "Josh Doman",
-      "target": "'conduition' via Bitcoin Development Mailing List",
+      "target": "Conduition",
       "weight": 1,
       "source_plat": "mailing_list",
       "category": "quantum"
@@ -27080,7 +27085,7 @@
     },
     {
       "source": "Boris Nagaev",
-      "target": "'conduition' via Bitcoin Development Mailing List",
+      "target": "Conduition",
       "weight": 3,
       "source_plat": "mailing_list",
       "category": "quantum"
@@ -30741,7 +30746,7 @@
     },
     {
       "source": "Olaoluwa Osuntokun",
-      "target": "'conduition' via Bitcoin Development Mailing List",
+      "target": "Conduition",
       "weight": 1,
       "source_plat": "mailing_list",
       "category": "quantum"
@@ -33534,7 +33539,7 @@
     },
     {
       "source": "Anthony Towns",
-      "target": "'conduition' via Bitcoin Development Mailing List",
+      "target": "Conduition",
       "weight": 1,
       "source_plat": "mailing_list",
       "category": "quantum"
@@ -35025,7 +35030,7 @@
     },
     {
       "source": "'James T' via Bitcoin Development Mailing List",
-      "target": "'conduition' via Bitcoin Development Mailing List",
+      "target": "Conduition",
       "weight": 1,
       "source_plat": "mailing_list",
       "category": "quantum"
@@ -35095,7 +35100,7 @@
     },
     {
       "source": "'Bitcoin Foundation' via Bitcoin Development Mailing List",
-      "target": "'conduition' via Bitcoin Development Mailing List",
+      "target": "Conduition",
       "weight": 1,
       "source_plat": "mailing_list",
       "category": "quantum"
@@ -36271,7 +36276,7 @@
     },
     {
       "source": "Leo Wandersleb",
-      "target": "'conduition' via Bitcoin Development Mailing List",
+      "target": "Conduition",
       "weight": 2,
       "source_plat": "mailing_list",
       "category": "quantum"
@@ -36628,7 +36633,7 @@
     },
     {
       "source": "Dustin Ray",
-      "target": "'conduition' via Bitcoin Development Mailing List",
+      "target": "Conduition",
       "weight": 1,
       "source_plat": "mailing_list",
       "category": "quantum"
@@ -68891,8 +68896,8 @@
     }
   ],
   "metadata": {
-    "generated_at": "2026-04-12T19:50:03.811863",
-    "total_population": 1783,
+    "generated_at": "2026-04-12T19:57:33.778663",
+    "total_population": 1781,
     "visible_count": 500,
     "link_count": 6928
   }
