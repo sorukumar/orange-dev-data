@@ -58,15 +58,17 @@ def main():
     # Skipped ingest_mailing_list.py to keep daily runs fast
     
     # PHASE 2.5: Merging & Enrichment
-    print("\n--- PHASE 2.5: Merging ---")
+    print("\n--- PHASE 2.5: Merging & Enrichment ---")
     run("python3 scripts/enrich_governance.py", cwd=root_dir) 
     run("python3 scripts/merge_data.py", cwd=root_dir)
+    run("python3 scripts/categorize_threads.py", cwd=root_dir)
 
     # PHASE 3: Skipped
     print("\n--- PHASE 3: SKIPPED (Heavy NLP/Graphs reserved for monthly) ---")
 
     # PHASE 4: UI Artifact Generation
     print("\n--- PHASE 4: Generating UI JSONs ---")
+    run("python3 scripts/influence_hubs.py", cwd=root_dir)
     run("python3 scripts/generate_ui_artifacts.py", cwd=root_dir)
     
     print("\n✨ DAILY PIPELINE COMPLETE!")
