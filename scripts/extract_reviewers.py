@@ -25,9 +25,9 @@ import os
 from collections import defaultdict
 
 # --- Configuration ---
-MESSAGES_INPUT = "data/core/commit_messages.parquet"
-REVIEWS_OUTPUT = "data/core/reviews.parquet"
-REVIEWERS_SUMMARY_OUTPUT = "data/core/reviewers_summary.json"
+MESSAGES_INPUT = "data/raw/commit_messages.parquet"
+REVIEWS_OUTPUT = "data/raw/reviews.parquet"
+REVIEWERS_SUMMARY_OUTPUT = "output/tracker/reviewers_summary.json"
 
 # --- ACK Pattern Matching ---
 # Bitcoin Core ACK patterns (case insensitive)

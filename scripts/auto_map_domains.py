@@ -3,9 +3,9 @@ import json
 import os
 
 # Paths
-commits_path = "/Users/saurabhkumar/Desktop/Work/github/orange-dev-tracker/data/core/commits.parquet"
+commits_path = "/Users/saurabhkumar/Desktop/Work/github/orange-dev-tracker/data/raw/commits.parquet"
 sponsors_path = "/Users/saurabhkumar/Desktop/Work/github/orange-dev-tracker/data/cache/sponsors_lookup.json"
-rich_path = "/Users/saurabhkumar/Desktop/Work/github/orange-dev-tracker/data/core/contributors_rich.json"
+rich_path = "/Users/saurabhkumar/Desktop/Work/github/orange-dev-tracker/output/tracker/contributors_rich.json"
 
 def auto_map_sponsorship():
     # 1. Load Sponsor Data to get domains

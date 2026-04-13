@@ -6,7 +6,7 @@ import os
 # --- Configuration ---
 BIPS_ENRICHED_PATH = "data/governance/bips_enriched.parquet"
 SOCIAL_PATH = "data/governance/social.parquet"
-OUTPUT_DIR = "data/governance"
+OUTPUT_DIR = "output/tracker"
 
 def main():
     if not os.path.exists(BIPS_ENRICHED_PATH):
@@ -68,7 +68,7 @@ def main():
     with open(os.path.join(OUTPUT_DIR, "bips_ui.json"), 'w') as f:
         json.dump(bips_ui, f, indent=2)
 
-    print("UI artifacts generated successfully in data/governance/")
+    print("UI artifacts generated successfully in output/tracker/")
 
 if __name__ == "__main__":
     main()

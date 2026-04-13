@@ -99,4 +99,4 @@ def run_footprint_analysis(repo_path, maintainers_file, output_file):
 
 if __name__ == "__main__":
     # Allow standalone execution if needed
-    run_footprint_analysis("raw_data/bitcoin", "data/cache/maintainers_lookup.json", "data/core/maintainer_footprints.json")
+    run_footprint_analysis("raw_data/bitcoin", "data/cache/maintainers_lookup.json", "output/tracker/maintainer_footprints.json")

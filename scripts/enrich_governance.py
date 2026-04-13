@@ -8,8 +8,8 @@ from datetime import datetime
 # --- Configuration ---
 BIPS_PATH = "data/raw/bips.parquet"
 SOCIAL_PATH = "data/raw/social_combined.parquet"
-COMMITS_PATH = "data/core/commits.parquet"
-COMMIT_MSGS_PATH = "data/core/commit_messages.parquet"
+COMMITS_PATH = "data/raw/commits.parquet"
+COMMIT_MSGS_PATH = "data/raw/commit_messages.parquet"
 OUTPUT_BIPS_ENRICHED = "data/governance/bips_enriched.parquet"
 OUTPUT_THEMES_JSON = "data/governance/themes.json"
 

@@ -10,7 +10,7 @@ import math
 # --- Configuration & Identity Resolution ---
 IDENTITY_MAP_PATH = 'metadata/identities/identities.json'
 INPUT_DATA_PATH = 'data/raw/social_combined_categorized.parquet'
-OUTPUT_DIR = 'data/viz'
+OUTPUT_DIR = 'output/network'
 
 def load_identity_resolver():
     if not os.path.exists(IDENTITY_MAP_PATH):

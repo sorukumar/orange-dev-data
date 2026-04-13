@@ -34,8 +34,8 @@ def main():
     root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
     
     # Ensure folders exist
-    for folder in ["core", "viz", "governance", "cache", "network", "raw"]:
-        os.makedirs(os.path.join(root_dir, "data", folder), exist_ok=True)
+    for folder in ["data/core", "data/viz", "data/governance", "data/cache", "data/raw", "output/tracker", "output/network"]:
+        os.makedirs(os.path.join(root_dir, folder), exist_ok=True)
 
     # PHASE 0: Fresh Sync (Update all raw source repositories)
     print("\n--- PHASE 0: Raw Data Sync ---")

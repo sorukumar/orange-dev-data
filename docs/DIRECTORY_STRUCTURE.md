@@ -27,27 +27,27 @@ The "brain" or "intelligence layer" of the project. These static JSON files are 
 
 ---
 
+---
+
 ## 4. `data/`
-The persistent storage layer. This directory holds everything from intermediate binary files to the final `.json` artifacts deployed to the dashboards.
+The persistent storage layer for **internal processing**. This directory holds heavy data like Parquets and caches. Frontends should **never** point directly to this folder.
 
 ### `data/raw/`
-The immediate output from the ingestion scripts. Usually stored as `.parquet` files. These files represent exact extracts before any heavy logic or identity merging is performed.
-
-### `data/cache/`
-To prevent excessive API calls to GitHub or Delving Bitcoin, temporary responses and state variables are saved here.
-- `enrichment_cache.json`
+Immediate output from ingestion scripts (Parquet).
 
 ### `data/core/`
-This is the **primary deliverable** for the `orange-dev-tracker` frontend.
-Contains lightweight JSON statistical summaries.
-- `dashboard_vital_signs.json` (High level KPIs)
-- `stats_engagement_tiers.json`
-- `stats_churn.json`
-- `contributors_rich.json` (Profiles for the individual tracking scatter plots)
+Internal consolidated data (Parquets) used for advanced processing and metric calculation.
 
-### `data/governance/`
-Artifacts specifically related to BIPs, mailing lists, and specialized thematic discussions.
-- `bips.parquet`
+### `data/cache/`
+Temporary responses and state variables (e.g., `enrichment_cache.json`).
 
-### `data/network/` or `data/viz/`
-Specialized topological artifacts designed to be loaded by complex networking visualizations (`orange-dev-network`). Contains structure defining nodes (developers) and links (interactions or co-authorships).
+---
+
+## 5. `output/`
+The **Public Deliverable Layer**. This folder contains lightweight JSON artifacts optimized for frontend applications.
+
+### `output/tracker/`
+Primary artifacts for the Core Dashboard (`orange-dev-tracker`).
+
+### `output/network/`
+Topological graph data for the influence visualization (`orange-dev-network`).

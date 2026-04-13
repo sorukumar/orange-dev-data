@@ -61,7 +61,7 @@
     "theme": "Other",
     "maturity_score": 0.37,
     "social_mention_count": 107,
-    "revision_count": 102,
+    "revision_count": 101,
     "code_mention_count": 20,
     "authors": "Ava Chow"
   },
@@ -302,7 +302,7 @@
     "status": "Draft",
     "theme": "Other",
     "maturity_score": 0.12,
-    "social_mention_count": 18,
+    "social_mention_count": 19,
     "revision_count": 44,
     "code_mention_count": 0,
     "authors": "Shaolin Fry, Luke Dashjr"
@@ -401,7 +401,7 @@
     "status": "Draft",
     "theme": "Consensus & Soft Forks",
     "maturity_score": 0.1,
-    "social_mention_count": 14,
+    "social_mention_count": 13,
     "revision_count": 38,
     "code_mention_count": 0,
     "authors": "Paul Sztorc, CryptAxe"
@@ -1694,15 +1694,15 @@
     "authors": "Ava Chow"
   },
   {
-    "bip_id": "86",
-    "title": "Key Derivation for Single Key P2TR Outputs",
+    "bip_id": "133",
+    "title": "feefilter message",
     "status": "Deployed",
-    "theme": "Privacy",
+    "theme": "Mining",
     "maturity_score": 0.02,
     "social_mention_count": 0,
-    "revision_count": 8,
-    "code_mention_count": 4,
-    "authors": "Ava Chow"
+    "revision_count": 12,
+    "code_mention_count": 3,
+    "authors": "Alex Morcos"
   },
   {
     "bip_id": "127",
@@ -1738,6 +1738,17 @@
     "authors": "Chris Belcher"
   },
   {
+    "bip_id": "110",
+    "title": "Reduced Data Temporary Softfork",
+    "status": "Draft",
+    "theme": "Consensus & Soft Forks",
+    "maturity_score": 0.02,
+    "social_mention_count": 9,
+    "revision_count": 3,
+    "code_mention_count": 0,
+    "authors": "Dathon Ohm"
+  },
+  {
     "bip_id": "103",
     "title": "Block size following technological growth",
     "status": "Closed",
@@ -1771,6 +1782,17 @@
     "authors": "Suhas Daftuar"
   },
   {
+    "bip_id": "86",
+    "title": "Key Derivation for Single Key P2TR Outputs",
+    "status": "Deployed",
+    "theme": "Privacy",
+    "maturity_score": 0.02,
+    "social_mention_count": 0,
+    "revision_count": 8,
+    "code_mention_count": 4,
+    "authors": "Ava Chow"
+  },
+  {
     "bip_id": "84",
     "title": "Derivation scheme for P2WPKH based accounts",
     "status": "Deployed",
@@ -1780,17 +1802,6 @@
     "revision_count": 12,
     "code_mention_count": 0,
     "authors": "Pavol Rusnak"
-  },
-  {
-    "bip_id": "133",
-    "title": "feefilter message",
-    "status": "Deployed",
-    "theme": "Mining",
-    "maturity_score": 0.02,
-    "social_mention_count": 0,
-    "revision_count": 12,
-    "code_mention_count": 3,
-    "authors": "Alex Morcos"
   },
   {
     "bip_id": "83",
@@ -1892,6 +1903,17 @@
     "authors": "Matthew Black, Tony Cai"
   },
   {
+    "bip_id": "199",
+    "title": "Hashed Time-Locked Contract transactions",
+    "status": "Closed",
+    "theme": "Other",
+    "maturity_score": 0.02,
+    "social_mention_count": 0,
+    "revision_count": 9,
+    "code_mention_count": 0,
+    "authors": "Sean Bowe, Daira Hopwood"
+  },
+  {
     "bip_id": "146",
     "title": "Dealing with signature encoding malleability",
     "status": "Closed",
@@ -1945,17 +1967,6 @@
     "revision_count": 10,
     "code_mention_count": 0,
     "authors": "Pavel Moravec, Jan \u010capek"
-  },
-  {
-    "bip_id": "199",
-    "title": "Hashed Time-Locked Contract transactions",
-    "status": "Closed",
-    "theme": "Other",
-    "maturity_score": 0.02,
-    "social_mention_count": 0,
-    "revision_count": 9,
-    "code_mention_count": 0,
-    "authors": "Sean Bowe, Daira Hopwood"
   },
   {
     "bip_id": "180",
@@ -2090,17 +2101,6 @@
     "authors": "Jimmy Song"
   },
   {
-    "bip_id": "110",
-    "title": "Reduced Data Temporary Softfork",
-    "status": "Draft",
-    "theme": "Consensus & Soft Forks",
-    "maturity_score": 0.01,
-    "social_mention_count": 0,
-    "revision_count": 3,
-    "code_mention_count": 0,
-    "authors": "Dathon Ohm"
-  },
-  {
     "bip_id": "172",
     "title": "Define Bitcoin Subunits as Satoshis",
     "status": "Draft",
@@ -2110,6 +2110,17 @@
     "revision_count": 3,
     "code_mention_count": 0,
     "authors": "OceanSlim"
+  },
+  {
+    "bip_id": "128",
+    "title": "Timelock-Recovery Storage Format",
+    "status": "Draft",
+    "theme": "Privacy",
+    "maturity_score": 0.0,
+    "social_mention_count": 0,
+    "revision_count": 2,
+    "code_mention_count": 0,
+    "authors": "Oren Z"
   },
   {
     "bip_id": "89",
@@ -2123,17 +2134,6 @@
     "authors": "Jesse Posner, Jurvis Tan"
   },
   {
-    "bip_id": "346",
-    "title": "OP_TXHASH",
-    "status": "Draft",
-    "theme": "Consensus & Soft Forks",
-    "maturity_score": 0.0,
-    "social_mention_count": 0,
-    "revision_count": 2,
-    "code_mention_count": 0,
-    "authors": "Steven Roose, Brandon Black"
-  },
-  {
     "bip_id": "392",
     "title": "Silent Payment Output Script Descriptors",
     "status": "Draft",
@@ -2145,6 +2145,17 @@
     "authors": "Craig Raw"
   },
   {
+    "bip_id": "346",
+    "title": "OP_TXHASH",
+    "status": "Draft",
+    "theme": "Consensus & Soft Forks",
+    "maturity_score": 0.0,
+    "social_mention_count": 0,
+    "revision_count": 2,
+    "code_mention_count": 0,
+    "authors": "Steven Roose, Brandon Black"
+  },
+  {
     "bip_id": "442",
     "title": "OP_PAIRCOMMIT",
     "status": "Draft",
@@ -2154,17 +2165,6 @@
     "revision_count": 1,
     "code_mention_count": 0,
     "authors": "moonsettler, Brandon Black"
-  },
-  {
-    "bip_id": "128",
-    "title": "Timelock-Recovery Storage Format",
-    "status": "Draft",
-    "theme": "Privacy",
-    "maturity_score": 0.0,
-    "social_mention_count": 0,
-    "revision_count": 2,
-    "code_mention_count": 0,
-    "authors": "Oren Z"
   },
   {
     "bip_id": "446",

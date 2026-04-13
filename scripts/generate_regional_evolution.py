@@ -2,7 +2,7 @@
 import json
 from collections import defaultdict
 
-with open('data/core/contributors_rich.json', 'r') as f:
+with open('output/tracker/contributors_rich.json', 'r') as f:
     contributors = json.load(f)
 
 # Consolidated categories
@@ -124,7 +124,7 @@ for r in regions:
         "data": data
     })
 
-with open('data/core/stats_regional_evolution.json', 'w') as f:
+with open('output/tracker/stats_regional_evolution.json', 'w') as f:
     json.dump(output, f, indent=2)
 
-print("Generated data/core/stats_regional_evolution.json with consolidated categories")
+print("Generated output/tracker/stats_regional_evolution.json with consolidated categories")

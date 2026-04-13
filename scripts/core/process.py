@@ -13,7 +13,7 @@ import footprint
 class Config:
     DATA_DIR = "data/core"
     CACHE_DIR = "data/cache"
-    OUTPUT_DIR = "data/core"
+    OUTPUT_DIR = "output/tracker"
     
     COMMITS_FILE = f"{DATA_DIR}/commits.parquet"
     SOCIAL_FILE = f"{DATA_DIR}/social_history.parquet"

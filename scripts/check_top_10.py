@@ -1,6 +1,6 @@
 import json
 
-with open('data/viz/network_graph.json', 'r') as f:
+with open('output/network/network_graph.json', 'r') as f:
     data = json.load(f)
 
 nodes = data['nodes']

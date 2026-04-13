@@ -6,8 +6,8 @@ from datetime import datetime
 
 # --- Config ---
 REPO = "bitcoin/bitcoin"
-OUTPUT_PATH = "data/core/social_history.parquet"
-METADATA_PATH = "data/core/social_metadata.json"
+OUTPUT_PATH = "data/raw/social_history.parquet"
+METADATA_PATH = "output/tracker/social_metadata.json"
 # Use provided token or env var
 TOKEN = os.environ.get("GITHUB_TOKEN")
 

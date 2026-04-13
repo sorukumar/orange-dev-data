@@ -76,8 +76,8 @@ class GitHubAPI:
         return None
 
 class Enricher:
-    LEGACY_FILE = "data/core/bitcoin_contributors_data.parquet"
-    OUTPUT_FILE = "data/core/contributors_enriched.parquet"
+    LEGACY_FILE = "data/raw/bitcoin_contributors_data.parquet"
+    OUTPUT_FILE = "data/raw/contributors_enriched.parquet"
 
     @staticmethod
     def load_legacy():

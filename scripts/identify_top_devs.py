@@ -3,8 +3,8 @@ import pandas as pd
 import os
 
 # Paths
-rich_path = "/Users/saurabhkumar/Desktop/Work/github/orange-dev-tracker/data/core/contributors_rich.json"
-enriched_path = "/Users/saurabhkumar/Desktop/Work/github/orange-dev-tracker/data/core/contributors_enriched.parquet"
+rich_path = "/Users/saurabhkumar/Desktop/Work/github/orange-dev-tracker/output/tracker/contributors_rich.json"
+enriched_path = "/Users/saurabhkumar/Desktop/Work/github/orange-dev-tracker/data/raw/contributors_enriched.parquet"
 sponsors_path = "/Users/saurabhkumar/Desktop/Work/github/orange-dev-tracker/data/cache/sponsors_lookup.json"
 
 def identify_targets():
