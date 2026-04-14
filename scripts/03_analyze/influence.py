@@ -154,9 +154,18 @@ def extract_network():
     pagerank_post2016 = nx.pagerank(G_post2016, weight='weight') if len(G_post2016) > 0 else {}
     pagerank_modern = nx.pagerank(G_modern, weight='weight') if len(G_modern) > 0 else {}
     
-    # Calculate total population size for accurate percentages
+    # Try to load total population from Master Registry first for accurate "Overall" stats
     total_population = df['canonical_id'].nunique()
-    
+    REGISTRY_PATH = 'metadata/contributors.json'
+    if os.path.exists(REGISTRY_PATH):
+        try:
+            with open(REGISTRY_PATH, 'r') as f:
+                registry = json.load(f)
+                total_population = len(registry.get('contributors', []))
+                print(f"  Using Master Registry population count: {total_population}")
+        except Exception as e:
+            print(f"  Warning: Could not load registry for population count: {e}")
+
     print(f"Exporting enriched network data for {total_population} total contributors (interactive + observers)...")
     nodes_data = []
     
@@ -214,15 +223,101 @@ def extract_network():
             "last_active": node_metadata[node]["last_active"].isoformat()
         })
 
-    # Save FULL list for Registry Sync (Everything in nodes_data)
+    # Create a lookup for social nodes
+    social_node_lookup = {n['id']: n for n in nodes_data}
+    
+    # Process the entire registry to include code-only contributors
+    print(f"Enriching all {total_population} contributors with archetypes and hybrid weighting...")
+    RICH_CODE_STATS = 'output/tracker/contributors_rich.json'
+    code_stats_data = {}
+    if os.path.exists(RICH_CODE_STATS):
+        try:
+            with open(RICH_CODE_STATS, 'r') as f:
+                for c in json.load(f):
+                    code_stats_data[c['name']] = c
+        except: pass
+
+    all_enriched_nodes = []
+    registry_contributors = registry.get('contributors', []) if 'registry' in locals() else []
+    
+    for reg_entry in registry_contributors:
+        cid = reg_entry['id']
+        social_data = social_node_lookup.get(cid, {})
+        c_stats = code_stats_data.get(cid, {})
+        
+        # 1. Base Metrics
+        commits = c_stats.get('total_commits', 0)
+        impact = c_stats.get('impact', 0)
+        is_bip_author = reg_entry.get('badges', {}).get('is_bip_author', False)
+        social_score = social_data.get('scores', {}).get('all', 0)
+        
+        # 2. Hybrid Influence Weight calculation
+        # Normalized factors
+        commit_factor = math.log(commits + 1, 2) / 10.0 # log2(1024) = 10 -> factor 1.0
+        social_factor = social_score * 100 
+        
+        hybrid_score = (social_factor * 0.4) + (commit_factor * 0.45) 
+        if is_bip_author: hybrid_score += 1.5
+        if c_stats.get('is_maintainer'): hybrid_score += 2.0
+        
+        # 3. Archetype Logic
+        if is_bip_author and commits > 50 and social_score > 0.005:
+            dev_type = "Protocol Architect"
+        elif commits > 100:
+            dev_type = "Core Engineer"
+        elif social_score > 0.01:
+            dev_type = "Social Researcher"
+        elif is_bip_author:
+            dev_type = "BIP Author"
+        elif commits > 0 and social_score == 0:
+            dev_type = "Silent Contributor"
+        elif social_data.get('expertise') and social_data['expertise'][0]['share'] > 0.6:
+            dev_type = "Specialist"
+        else:
+            dev_type = "Protocol Participant"
+
+        # Combine data
+        node_obj = social_data.copy() if social_data else {
+            "id": cid,
+            "ranks": {"all": 9999, "p2016": 9999, "modern": 9999},
+            "scores": {"all": 0, "p2016": 0, "modern": 0},
+            "val": 2, # Base size
+            "growth": 0,
+            "top_category": "code",
+            "expertise": [],
+            "bips": reg_entry.get('badges', {}).get('bips', []),
+            "dominant_source": "github",
+            "source_breakdown": {"github": 1},
+            "threads_started": 0,
+            "replies_sent": 0,
+            "replies_received": 0,
+            "last_active": datetime.now().isoformat() # Placeholder for code-only
+        }
+        
+        node_obj.update({
+            "dev_type": dev_type,
+            "hybrid_score": round(hybrid_score, 4),
+            "val": (hybrid_score * 10) + 2, # Scale node size by hybrid influence
+            "code_stats": {
+                "commits": commits,
+                "impact": impact,
+                "is_maintainer": c_stats.get('is_maintainer', False)
+            }
+        })
+        all_enriched_nodes.append(node_obj)
+
+    # Sort ALL contributors by hybrid influence
+    all_enriched_nodes.sort(key=lambda x: x['hybrid_score'], reverse=True)
+    
+    # Save FULL list for Registry Sync
     SOCIAL_STATS_PATH = 'data/enriched/social_stats.json'
     os.makedirs(os.path.dirname(SOCIAL_STATS_PATH), exist_ok=True)
     with open(SOCIAL_STATS_PATH, 'w') as f:
-        json.dump({"contributors": nodes_data}, f, indent=2)
-    print(f"Exported full social dataset ({len(nodes_data)} people) to {SOCIAL_STATS_PATH}")
+        json.dump({"contributors": all_enriched_nodes}, f, indent=2)
+    print(f"Exported comprehensive contributor dataset ({len(all_enriched_nodes)} people) to {SOCIAL_STATS_PATH}")
 
     # Take top 500 for visualization (Signal over Noise)
-    visible_nodes = nodes_data[:500]
+    visible_nodes = all_enriched_nodes[:500]
     visible_ids = {n['id'] for n in visible_nodes}
     
     links_data = []
@@ -235,6 +330,7 @@ def extract_network():
                 "source_plat": data.get('source', 'unknown'),
                 "category": data.get('category', 'other')
             })
+
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     with open(os.path.join(OUTPUT_DIR, 'network_graph.json'), 'w') as f:
