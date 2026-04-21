@@ -2,6 +2,10 @@ import pandas as pd
 import json
 import os
 import subprocess
+import sys
+
+# Add project root to path so we can import from scripts.utils
+sys.path.append(os.path.join(os.path.dirname(__file__), "..", ".."))
 
 def get_dir_distribution(repo_path, email):
     """Uses git directly for granular directory analysis of a maintainer's merges."""
@@ -19,21 +23,20 @@ def get_dir_distribution(repo_path, email):
         ]
         result = subprocess.run(cmd, cwd=repo_path, capture_output=True, text=True, check=True)
         
-        # Filter and count directories
+        # Filter and count subsystems
         files = [line for line in result.stdout.split('\n') if line.strip()]
         if not files:
             return {}
             
-        granular_dirs = []
+        from scripts.utils.subsystem import get_subsystem_by_path
+        subsystems = []
         for f in files:
-            parts = f.split('/')
-            if parts[0] == 'src' and len(parts) > 1:
-                # Use src/subfolder for more granularity
-                granular_dirs.append(f"src/{parts[1]}")
-            else:
-                granular_dirs.append(parts[0] if '/' in f else 'root')
+            sub_id = get_subsystem_by_path(f)
+            # We want to exclude 'other' (or root) from top areas if possible, 
+            # but for consistency with previous logic we'll include it.
+            subsystems.append(sub_id)
                 
-        df = pd.Series(granular_dirs).value_counts(normalize=True) * 100
+        df = pd.Series(subsystems).value_counts(normalize=True) * 100
         return df.head(8).to_dict()
     except Exception as e:
         print(f"Error analyzing {email}: {e}")
@@ -99,4 +102,4 @@ def run_footprint_analysis(repo_path, maintainers_file, output_file):
 
 if __name__ == "__main__":
     # Allow standalone execution if needed
-    run_footprint_analysis("raw_data/bitcoin", "data/cache/maintainers_lookup.json", "output/tracker/maintainer_footprints.json")
+    run_footprint_analysis("data/sources/bitcoin", "data/cache/maintainers_lookup.json", "data/enriched/maintainer_footprints.json")

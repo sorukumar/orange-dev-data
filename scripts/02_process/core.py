@@ -7,6 +7,9 @@ import re
 from datetime import datetime, timedelta
 import clean
 import footprint
+import sys
+sys.path.append(os.getcwd())
+from scripts.utils.identity import resolver
 
 
 # --- Configuration ---
@@ -19,6 +22,7 @@ class Config:
     ENRICHED_FILE = "data/enriched/core_contributors.parquet"
     SOCIAL_FILE = "data/enriched/social_threads.parquet"
     METADATA_FILE = "data/enriched/social_metadata.json"
+    EFFICIENCY_PARQUET = "data/enriched/contributor_review_metrics.parquet"
     
     MAINTAINERS_FILE = "metadata/maintainers.json"
     SPONSORS_FILE = "metadata/sponsors.json"
@@ -212,13 +216,20 @@ class DataFactory:
             if 'date' in social.columns:
                  social['date'] = pd.to_datetime(social['date'])
         except:
-            social = pd.DataFrame(columns=["date", "type"])
+            social = pd.DataFrame(columns=["date"])
             
         return commits, social
 
     @staticmethod
     def normalize_data(commits):
-        return clean.Consolidator.normalize(commits)
+        print("Normalizing identities using master resolver...")
+        def map_identity(row):
+            return resolver.resolve_git(str(row.get('author_name', '')), str(row.get('author_email', '')))
+        
+        commits['canonical_id'] = commits.apply(map_identity, axis=1)
+        # For compatibility with legacy column names if needed
+        commits['canonical_name'] = commits['author_name'] 
+        return commits
 
 
 # --- Helpers ---
@@ -347,7 +358,7 @@ class MetricGenerators:
              except: pass
         
         # Fallback if 0 (and history exists)
-        if stars == 0 and not social.empty:
+        if stars == 0 and not social.empty and 'type' in social.columns:
             social_counts = social['type'].value_counts()
             stars = int(social_counts.get('star', 0))
             forks = int(social_counts.get('fork', 0))
@@ -592,18 +603,17 @@ class MetricGenerators:
         else:
              enrich_map = {}
         
-        # Group by Author
-        # metrics: start_year, end_year, active_years_count, total_commits, total_lines_added, primary_cat
-        
-        # 1. Basic Stats
-        # We need a custom aggregation
-        
-        # Flatten categories per author for "Focus Areas"
-        # We can't do this easily with just the primary_category column unless we trust it.
-        # "Focus Areas: % breakdown of commits by Category"
-        # Yes, we can aggregate the primary_category column for each author.
-        
-        # Group 1: Time & Volume
+        # 0. Load Reviewer/Efficiency Population
+        efficiency_path = Config.EFFICIENCY_PARQUET
+        df_eff_pop = pd.DataFrame()
+        if os.path.exists(efficiency_path):
+            try:
+                df_eff_pop = pd.read_parquet(efficiency_path)
+                # Ensure we have the required columns for dummy logic if needed
+                if 'canonical_id' not in df_eff_pop.columns: df_eff_pop = pd.DataFrame()
+            except: pass
+
+        # 1. Basic Stats (Commits)
         g1 = commits.groupby('canonical_id').agg({
             'year': ['min', 'max', 'nunique'], # Start, End, Tenure (Active Years)
             'additions': 'sum', # Impact
@@ -611,6 +621,34 @@ class MetricGenerators:
             'canonical_name': 'first' # Name
         })
         g1.columns = ['start_year', 'end_year', 'tenure', 'lines_added', 'total_commits', 'name']
+
+        # 2. Merge Efficiency Metrics (includes Reviewers)
+        if not df_eff_pop.empty:
+            # Aggregate efficiency to unique canonical_id
+            df_eff_agg = df_eff_pop.groupby('canonical_id').agg({
+                'reviews_count': 'max',
+                'prs_authored': 'max',
+                'avg_review_latency_days': 'first'
+            })
+            
+            # Identify reviewers NOT in the commits group
+            reviewers_only = df_eff_agg[~df_eff_agg.index.isin(g1.index)].copy()
+            if not reviewers_only.empty:
+                print(f"Adding {len(reviewers_only)} pure reviewers to the landscape population...")
+                # Create dummy commit records for them
+                reviewers_only['start_year'] = 2024 # Conservative default
+                reviewers_only['end_year'] = 2025
+                reviewers_only['tenure'] = 1
+                reviewers_only['lines_added'] = 0
+                reviewers_only['total_commits'] = 0
+                # Resolve names from resolver for placeholders
+                reviewers_only['name'] = reviewers_only.index 
+                
+                # Combine
+                g1 = pd.concat([g1, reviewers_only[['start_year', 'end_year', 'tenure', 'lines_added', 'total_commits', 'name']]])
+
+        # Continue with stats...
+        df = g1.copy()
         
         # Add Authored vs Merge breakdown
         g1['merge_commits'] = commits[commits['category'] == 'Merge'].groupby('canonical_id')['hash'].nunique()
@@ -896,8 +934,16 @@ class MetricGenerators:
         if social.empty: return
         
         social = social.set_index('date').sort_index()
-        stars = social[social['type'] == 'star'].resample('M').size().cumsum()
-        forks = social[social['type'] == 'fork'].resample('M').size().cumsum()
+        
+        # 8. Social Proof (Growth over time)
+        # We handle case where 'type' column doesn't exist in current social data
+        if 'type' in social.columns and not social.empty:
+            stars = social[social['type'] == 'star'].resample('M').size().cumsum()
+            forks = social[social['type'] == 'fork'].resample('M').size().cumsum()
+        else:
+            # Fallback to empty series with correct indices
+            stars = pd.Series(dtype=int)
+            forks = pd.Series(dtype=int)
         
         # Load Real Metadata Totals to project the curve
         total_stars = 0
@@ -1054,7 +1100,7 @@ class MetricGenerators:
         # Run Footprint Analysis (Modular approach)
         print("Running Maintainer Footprint Analysis...")
         try:
-             footprints = footprint.run_footprint_analysis("raw_data/bitcoin", Config.MAINTAINERS_FILE, "data/core/maintainer_footprints.json")
+             footprints = footprint.run_footprint_analysis("data/sources/bitcoin", Config.MAINTAINERS_FILE, "data/enriched/maintainer_footprints.json")
         except Exception as e:
              print(f"  Warning: Footprint analysis failed: {e}")
              footprints = {}

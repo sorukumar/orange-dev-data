@@ -47,25 +47,35 @@ def main():
     print("\n--- PHASE 1: Extraction (Raw Staging) ---")
     run("python3 scripts/01_ingest/core.py", cwd=root_dir)
     run("python3 scripts/01_ingest/bips.py", cwd=root_dir)
+    run("python3 scripts/01_ingest/bips_metadata.py", cwd=root_dir)  # BIPs GitHub PR + review events
     run("python3 scripts/01_ingest/delving.py", cwd=root_dir)
+    run("python3 scripts/01_ingest/github_metadata.py", cwd=root_dir)
 
     # PHASE 2: Convergence (Raw -> Enriched)
     print("\n--- PHASE 2: Convergence (Enrichment) ---")
-    run("python3 scripts/02_process/enrich_identity.py", cwd=root_dir)
+    run("python3 scripts/identity/build_identities.py", cwd=root_dir)
+    run("python3 scripts/identity/restamp_social_ids.py", cwd=root_dir)
     run("python3 scripts/02_process/reviews.py", cwd=root_dir)
     run("python3 scripts/02_process/github_social.py", cwd=root_dir)
     run("python3 scripts/02_process/core.py", cwd=root_dir)
     run("python3 scripts/02_process/merge_social.py", cwd=root_dir)
     run("python3 scripts/02_process/governance.py", cwd=root_dir)
     
+    # registry.py must run before Phase 3 — influence.py and unify_contributors.py both read metadata/contributors.json
+    run("python3 scripts/04_deliver/registry.py", cwd=root_dir)
+
     # PHASE 3: Intelligence (Skipped in daily, except lightweight influence)
     print("\n--- PHASE 3: Intelligence (Light) ---")
+    run("python3 scripts/03_analyze/review_metrics.py", cwd=root_dir)
     run("python3 scripts/03_analyze/expertise.py", cwd=root_dir)
+    run("python3 scripts/03_analyze/influence.py", cwd=root_dir)
+    run("python3 scripts/02_process/unify_contributors.py", cwd=root_dir)
 
     # PHASE 4: Delivery (Enriched -> Output)
     print("\n--- PHASE 4: Artifact Generation ---")
     run("python3 scripts/04_deliver/registry.py", cwd=root_dir)
     run("python3 scripts/04_deliver/ui_artifacts.py", cwd=root_dir)
+    run("python3 scripts/04_deliver/ecosystem_summary.py", cwd=root_dir)
     
     print("\n✨ DAILY PIPELINE COMPLETE!")
 

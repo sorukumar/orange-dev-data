@@ -111,505 +111,559 @@
   "sponsored_developers": [
     {
       "canonical_name": "Gloria Zhao",
+      "sponsor_id": "brink",
+      "status": "active",
+      "notes": "Mempool/P2P focus",
       "github": "glozow",
       "emails": [
         "gloriajzhao@gmail.com"
-      ],
-      "sponsor_id": "brink",
-      "status": "active",
-      "notes": "Mempool/P2P focus"
+      ]
     },
     {
       "canonical_name": "Ava Chow",
-      "github": "achow101",
-      "emails": [
-        "github@achow101.com",
-        "achow101-github@achow101.com"
-      ],
       "sponsor_id": "brink",
       "past_sponsor_ids": [
         "blockstream"
       ],
       "status": "active",
-      "notes": "Wallet maintainer"
+      "notes": "Wallet maintainer",
+      "github": "achow101",
+      "emails": [
+        "achow101-github@achow101.com",
+        "achow101-hierarchical@google.com",
+        "achow101@gmail.com",
+        "andrew@achow101.com",
+        "github@achow101.com",
+        "me@achow101.com"
+      ]
     },
     {
       "canonical_name": "Pieter Wuille",
+      "sponsor_id": "chaincode",
+      "status": "active",
+      "notes": "Consensus, cryptography",
       "github": "sipa",
       "emails": [
         "pieter.wuille@gmail.com",
-        "pieter@wuille.net"
-      ],
-      "sponsor_id": "chaincode",
-      "status": "active",
-      "notes": "Consensus, cryptography"
+        "pieter@wuille.net",
+        "sipa@ulyssis.org",
+        "sipa@wuille.net"
+      ]
     },
     {
       "canonical_name": "Suhas Daftuar",
-      "github": "sdaftuar",
-      "emails": [
-        "sdaftuar@gmail.com",
-        "sdaftuar@chaincode.com"
-      ],
       "sponsor_id": "chaincode",
       "status": "active",
-      "notes": "P2P, mempool"
+      "notes": "P2P, mempool",
+      "github": "sdaftuar",
+      "emails": [
+        "sdaftuar@chaincode.com",
+        "sdaftuar@gmail.com"
+      ]
     },
     {
       "canonical_name": "John Newbery",
+      "sponsor_id": "brink",
+      "status": "active",
+      "notes": "Brink co-founder",
       "github": "jnewbery",
       "emails": [
         "john@johnnewbery.com"
-      ],
-      "sponsor_id": "brink",
-      "status": "active",
-      "notes": "Brink co-founder"
+      ]
     },
     {
       "canonical_name": "Marco Falke",
-      "github": "MarcoFalke",
-      "emails": [
-        "falke.marco@gmail.com",
-        "*~=`'#}+{/-|&$^_@721217.xyz"
-      ],
       "sponsor_id": "chaincode",
       "status": "emeritus",
-      "notes": "Former testing maintainer"
+      "notes": "Former testing maintainer",
+      "github": "MarcoFalke",
+      "emails": [
+        "*~=`'#}+{/-|&$^_@721217.xyz",
+        "90386131+bitcoin-core-merge-script@users.noreply.github.com",
+        "falke.marco@gmail.com",
+        "marco.falke@tum.de"
+      ]
     },
     {
       "canonical_name": "Wladimir van der Laan",
-      "github": "laanwj",
-      "emails": [
-        "laanwj@gmail.com",
-        "laanwj@protonmail.com"
-      ],
       "sponsor_id": "mit_dci",
       "status": "emeritus",
       "notes": "Former lead maintainer"
     },
     {
       "canonical_name": "Cory Fields",
-      "github": "theuni",
-      "emails": [
-        "cory-nospam-@coryfields.com"
-      ],
       "sponsor_id": "mit_dci",
       "status": "emeritus",
-      "notes": "Build system"
+      "notes": "Build system",
+      "github": "theuni",
+      "emails": [
+        "cfields@gmail.com",
+        "cory-nospam-@coryfields.com",
+        "cory@coryfields.com",
+        "theuni-nospam-@xoom.com",
+        "theuni-nospam@xbmc.org"
+      ]
     },
     {
       "canonical_name": "Matt Corallo",
-      "github": "TheBlueMatt",
-      "emails": [
-        "matt@bluematt.me",
-        "bitcoindev@bluematt.me"
-      ],
       "sponsor_id": "spiral",
       "status": "active",
-      "notes": "LDK, formerly Core"
+      "notes": "LDK, formerly Core",
+      "github": "TheBlueMatt",
+      "emails": [
+        "bitcoindev@bluematt.me",
+        "git@bluematt.me",
+        "matt@bluematt.me"
+      ]
     },
     {
       "canonical_name": "Michael Ford",
-      "github": "fanquake",
-      "emails": [
-        "fanquake@gmail.com"
-      ],
       "sponsor_id": "brink",
       "status": "active",
-      "notes": "Build/release maintainer"
+      "notes": "Build/release maintainer",
+      "github": "fanquake",
+      "emails": [
+        "fanquake@gmail.com",
+        "fanquake@users.noreply.github.com"
+      ]
     },
     {
       "canonical_name": "Hennadii Stepanov",
+      "sponsor_id": "brink",
+      "status": "active",
+      "notes": "GUI, build system",
       "github": "hebasto",
       "emails": [
         "32963518+hebasto@users.noreply.github.com",
         "hebasto@gmail.com"
-      ],
-      "sponsor_id": "brink",
-      "status": "active",
-      "notes": "GUI, build system"
+      ]
     },
     {
       "canonical_name": "Ryan Ofsky",
-      "github": "ryanofsky",
-      "emails": [
-        "ryan@ofsky.org"
-      ],
       "sponsor_id": "chaincode",
       "status": "active",
-      "notes": "Multiprocess"
+      "notes": "Multiprocess",
+      "github": "ryanofsky",
+      "emails": [
+        "russ@chaincode.com",
+        "russ@yanofsky.org",
+        "ryan@ofsky.org"
+      ]
     },
     {
       "canonical_name": "Sjors Provoost",
+      "sponsor_id": "spiral",
+      "status": "active",
+      "notes": "Wallet, Stratum v2",
       "github": "Sjors",
       "emails": [
         "sjors@sprovoost.nl"
-      ],
-      "sponsor_id": "spiral",
-      "status": "active",
-      "notes": "Wallet, Stratum v2"
+      ]
     },
     {
       "canonical_name": "Antoine Poinsot",
-      "github": "darosior",
-      "emails": [
-        "darosior@protonmail.com"
-      ],
       "sponsor_id": "chaincode",
       "status": "active",
-      "notes": "Miniscript"
+      "notes": "Miniscript",
+      "github": "darosior",
+      "emails": [
+        "'Antoine Poinsot' via Bitcoin Development Mailing List",
+        "antoine@revault.dev",
+        "darosior@protonmail.com",
+        "mail@antoinep.com"
+      ]
     },
     {
       "canonical_name": "Sebastian Falbesoner",
+      "sponsor_id": "brink",
+      "status": "active",
+      "notes": "Various contributions",
       "github": "theStack",
       "emails": [
         "sebastian.falbesoner@gmail.com"
-      ],
-      "sponsor_id": "brink",
-      "status": "active",
-      "notes": "Various contributions"
+      ]
     },
     {
       "canonical_name": "Fabian Jahr",
+      "sponsor_id": "brink",
+      "status": "active",
+      "notes": "Coinstats, UTXO",
       "github": "fjahr",
       "emails": [
         "fjahr@protonmail.com"
-      ],
-      "sponsor_id": "brink",
-      "status": "active",
-      "notes": "Coinstats, UTXO"
+      ]
     },
     {
       "canonical_name": "Jon Atack",
+      "sponsor_id": "opensats",
+      "status": "active",
+      "notes": "Review, P2P",
       "github": "jonatack",
       "emails": [
         "jon@atack.com"
-      ],
-      "sponsor_id": "opensats",
-      "status": "active",
-      "notes": "Review, P2P"
+      ]
     },
     {
       "canonical_name": "Antoine Riard",
-      "github": "ariard",
-      "emails": [
-        "antoine.riard@gmail.com"
-      ],
       "sponsor_id": "chaincode",
       "status": "emeritus",
-      "notes": "Lightning, mempool"
+      "notes": "Lightning, mempool",
+      "github": "ariard",
+      "emails": [
+        "antoine.riard@gmail.com",
+        "ariard@student.42.fr"
+      ]
     },
     {
       "canonical_name": "Greg Sanders",
-      "github": "instagibbs",
-      "emails": [
-        "gsanders87@gmail.com"
-      ],
       "sponsor_id": "spiral",
       "status": "active",
       "notes": "Mempool, wallet"
     },
     {
       "canonical_name": "Sebastian Kung",
+      "sponsor_id": "spiral",
+      "status": "active",
+      "notes": "Build system, kernel",
       "github": "thecharlatan",
       "emails": [
         "seb.kung@gmail.com"
-      ],
-      "sponsor_id": "spiral",
-      "status": "active",
-      "notes": "Build system, kernel"
+      ]
     },
     {
       "canonical_name": "Carl Dong",
-      "github": "carldong",
-      "emails": [
-        "contact@carldong.me"
-      ],
       "sponsor_id": "spiral",
       "status": "emeritus",
-      "notes": "Former build maintainer"
+      "notes": "Former build maintainer",
+      "github": "carldong",
+      "emails": [
+        "accounts@carldong.me",
+        "contact@carldong.me"
+      ]
     },
     {
       "canonical_name": "Luke Dashjr",
-      "github": "luke-jr",
-      "emails": [
-        "luke@dashjr.org",
-        "luke-jr+git@utopios.org",
-        "luke-jr@dashjr.org"
-      ],
       "sponsor_id": "opensats",
       "status": "active",
-      "notes": "LTS Grantee"
+      "notes": "LTS Grantee",
+      "github": "luke-jr",
+      "emails": [
+        "luke-jr+git@utopios.org",
+        "luke-jr@dashjr.org",
+        "luke@dashjr.org"
+      ]
     },
     {
       "canonical_name": "Vasil Dimov",
-      "github": "vasild",
-      "emails": [
-        "vd@datasoft.bg",
-        "vasil.dimov@gmail.com"
-      ],
       "sponsor_id": "brink",
       "status": "active",
-      "notes": "P2P focus"
+      "notes": "P2P focus",
+      "github": "vasild",
+      "emails": [
+        "vasil.dimov@gmail.com",
+        "vd@FreeBSD.org",
+        "vd@datasoft.bg",
+        "vd@freebsd.org"
+      ]
     },
     {
       "canonical_name": "Matias Furszyfer",
+      "sponsor_id": "chaincode",
+      "status": "active",
+      "notes": "Wallet, Core engineer",
       "github": "furszy",
       "emails": [
         "furszyfer@gmail.com"
-      ],
-      "sponsor_id": "chaincode",
-      "status": "active",
-      "notes": "Wallet, Core engineer"
+      ]
     },
     {
       "canonical_name": "Martin Zumsande",
+      "sponsor_id": "brink",
+      "status": "active",
+      "notes": "P2P, testing",
       "github": "mzumsande",
       "emails": [
         "mzumsande@gmail.com"
-      ],
-      "sponsor_id": "brink",
-      "status": "active",
-      "notes": "P2P, testing"
+      ]
     },
     {
       "canonical_name": "Sergi Delgado Segura",
-      "github": "sr-gi",
-      "emails": [
-        "sergideldados@gmail.com"
-      ],
       "sponsor_id": "2140",
       "past_sponsor_ids": [
         "chaincode",
         "spiral"
       ],
       "status": "active",
-      "notes": "P2P, package manager"
+      "notes": "P2P, package manager",
+      "github": "sr-gi",
+      "emails": [
+        "sergi.delgado.s@gmail.com",
+        "sergideldados@gmail.com"
+      ]
     },
     {
       "canonical_name": "Bruno Garcia",
-      "github": "brunoerg",
-      "emails": [
-        "bruno.garcia@gmail.com"
-      ],
       "sponsor_id": "opensats",
       "status": "active",
-      "notes": "LTS Grantee"
+      "notes": "LTS Grantee",
+      "github": "brunoerg",
+      "emails": [
+        "bruno.garcia@gmail.com",
+        "brunoely.gc@gmail.com"
+      ]
     },
     {
       "canonical_name": "Andrew Toth",
-      "github": "andrewtoth",
-      "emails": [
-        "andrew@andrewtoth.me"
-      ],
       "sponsor_id": "opensats",
       "status": "active",
-      "notes": "LTS Grantee"
+      "notes": "LTS Grantee",
+      "github": "andrewtoth",
+      "emails": [
+        "andrew@andrewtoth.me",
+        "andrewstoth@gmail.com"
+      ]
     },
     {
       "canonical_name": "Brad Stachurski",
+      "sponsor_id": "opensats",
+      "status": "active",
+      "notes": "LTS Grantee",
       "github": "bstachur",
       "emails": [
         "brad.stachurski@gmail.com"
-      ],
-      "sponsor_id": "opensats",
-      "status": "active",
-      "notes": "LTS Grantee"
+      ]
     },
     {
       "canonical_name": "Anthony Towns",
+      "sponsor_id": "spiral",
+      "status": "active",
+      "notes": "Consensus R&D",
       "github": "ajtowns",
       "emails": [
         "aj@erisian.com.au"
-      ],
-      "sponsor_id": "spiral",
-      "status": "active",
-      "notes": "Consensus R&D"
+      ]
     },
     {
       "canonical_name": "am-sq",
-      "emails": [
-        "amangla@squareup.com"
-      ],
       "sponsor_id": "spiral",
       "status": "active",
-      "notes": "Auto-detected via domain @squareup.com"
+      "notes": "Auto-detected via domain @squareup.com",
+      "github": null,
+      "emails": [
+        "amangla@squareup.com"
+      ]
     },
     {
       "canonical_name": "roconnor-blockstream",
-      "emails": [
-        "roconnor@blockstream.com"
-      ],
       "sponsor_id": "blockstream",
       "status": "active",
-      "notes": "Auto-detected via domain @blockstream.com"
+      "notes": "Auto-detected via domain @blockstream.com",
+      "github": null,
+      "emails": [
+        "roconnor@blockstream.com"
+      ]
     },
     {
       "canonical_name": "Russell O'Connor",
-      "emails": [
-        "roconnor@blockstream.io"
-      ],
       "sponsor_id": "blockstream",
       "status": "active",
-      "notes": "Auto-detected via domain @blockstream.io"
+      "notes": "Auto-detected via domain @blockstream.io",
+      "github": null,
+      "emails": [
+        "roconnor@blockstream.io",
+        "roconnor@theorem.ca"
+      ]
     },
     {
       "canonical_name": "Adam Jonas",
-      "emails": [
-        "jonas@chaincode.com"
-      ],
       "sponsor_id": "chaincode",
       "status": "active",
-      "notes": "Auto-detected via domain @chaincode.com"
+      "notes": "Auto-detected via domain @chaincode.com",
+      "github": null,
+      "emails": [
+        "jonas@chaincode.com"
+      ]
     },
     {
       "canonical_name": "James O'Beirne",
-      "emails": [
-        "james@chaincode.com"
-      ],
       "sponsor_id": "chaincode",
       "status": "active",
-      "notes": "Auto-detected via domain @chaincode.com"
+      "notes": "Auto-detected via domain @chaincode.com",
+      "github": "jamesob",
+      "emails": [
+        "james.obeirne@gmail.com",
+        "james.obeirne@pm.me",
+        "james@chaincode.com"
+      ]
     },
     {
       "canonical_name": "Arvid Norberg",
-      "emails": [
-        "arvid@blockstream.io"
-      ],
       "sponsor_id": "blockstream",
       "status": "active",
-      "notes": "Auto-detected via domain @blockstream.io"
+      "notes": "Auto-detected via domain @blockstream.io",
+      "github": null,
+      "emails": [
+        "arvid@blockstream.io"
+      ]
     },
     {
       "canonical_name": "Jeff Frontz",
-      "emails": [
-        "jhf@blockstream.io"
-      ],
       "sponsor_id": "blockstream",
       "status": "active",
-      "notes": "Auto-detected via domain @blockstream.io"
+      "notes": "Auto-detected via domain @blockstream.io",
+      "github": null,
+      "emails": [
+        "jhf@blockstream.io"
+      ]
     },
     {
       "canonical_name": "Alex Morcos",
-      "emails": [
-        "morcos@chaincode.com"
-      ],
       "sponsor_id": "chaincode",
       "status": "active",
-      "notes": "Auto-detected via domain @chaincode.com"
+      "notes": "Auto-detected via domain @chaincode.com",
+      "github": "morcos",
+      "emails": [
+        "morcos@chaincode.com"
+      ]
     },
     {
       "canonical_name": "Russell Yanofsky",
-      "emails": [
-        "russ@chaincode.com"
-      ],
       "sponsor_id": "chaincode",
       "status": "active",
       "notes": "Auto-detected via domain @chaincode.com"
     },
     {
       "canonical_name": "Leviathn",
-      "emails": [
-        "johnny@blockstream.io"
-      ],
       "sponsor_id": "blockstream",
       "status": "active",
-      "notes": "Auto-detected via domain @blockstream.io"
+      "notes": "Auto-detected via domain @blockstream.io",
+      "github": null,
+      "emails": [
+        "johnny@blockstream.io"
+      ]
     },
     {
       "canonical_name": "jtimon",
-      "emails": [
-        "jtimon@blockstream.io"
-      ],
       "sponsor_id": "blockstream",
       "status": "active",
       "notes": "Auto-detected via domain @blockstream.io"
     },
     {
       "canonical_name": "Mark Friedenbach",
-      "emails": [
-        "mark@blockstream.io"
-      ],
       "sponsor_id": "blockstream",
       "status": "active",
-      "notes": "Auto-detected via domain @blockstream.io"
+      "notes": "Auto-detected via domain @blockstream.io",
+      "github": null,
+      "emails": [
+        "mark@blockstream.io",
+        "mark@friedenbach.org"
+      ]
     },
     {
-      "canonical_name": "Niklas Gögge",
-      "github": "dergoegge",
+      "canonical_name": "Niklas G\u00f6gge",
       "sponsor_id": "brink",
       "status": "active",
-      "notes": "P2P and Fuzzing focus (Brink Grantee)"
+      "notes": "P2P and Fuzzing focus (Brink Grantee)",
+      "github": "dergoegge",
+      "emails": [
+        "n.goeggi@gmail.com"
+      ]
     },
     {
       "canonical_name": "Stefan Hanreich",
-      "github": "stickies-v",
       "sponsor_id": "brink",
       "status": "active",
-      "notes": "Testing and review (Brink Grantee)"
+      "notes": "Testing and review (Brink Grantee)",
+      "github": "stickies-v",
+      "emails": []
     },
     {
       "canonical_name": "0xb10c",
-      "github": "0xb10c",
       "sponsor_id": "brink",
       "status": "active",
-      "notes": "Network monitoring and data analysis (Brink Grantee)"
+      "notes": "Network monitoring and data analysis (Brink Grantee)",
+      "github": "0xb10c",
+      "emails": [
+        "b10c@b10c.me"
+      ]
     },
     {
       "canonical_name": "Larry Ruane",
-      "github": "LarryRuane",
       "sponsor_id": "brink",
       "status": "active",
-      "notes": "Review and testing (Brink Grantee)"
+      "notes": "Review and testing (Brink Grantee)",
+      "github": "LarryRuane",
+      "emails": [
+        "larryruane@gmail.com"
+      ]
     },
     {
       "canonical_name": "Yuvraj Chiplunkar",
-      "github": "w0xlt",
       "sponsor_id": "brink",
       "status": "active",
-      "notes": "Bitcoin Core contributor (Brink Grantee)"
+      "notes": "Bitcoin Core contributor (Brink Grantee)",
+      "github": "w0xlt",
+      "emails": []
     },
     {
       "canonical_name": "Josiah Baker",
-      "github": "josibake",
       "sponsor_id": "spiral",
       "status": "active",
-      "notes": "FROST and consensus R&D (Spiral Grantee)"
+      "notes": "FROST and consensus R&D (Spiral Grantee)",
+      "github": "josibake",
+      "emails": []
     },
     {
       "canonical_name": "Daniela Brozzoni",
-      "github": "danielabrozzoni",
       "sponsor_id": "spiral",
       "status": "active",
-      "notes": "Spiral Grantee"
+      "notes": "Spiral Grantee",
+      "github": "danielabrozzoni",
+      "emails": [
+        "danielabrozzoni@protonmail.com"
+      ]
     },
     {
       "canonical_name": "Mark Erhardt",
-      "github": "murchandamus",
       "sponsor_id": "chaincode",
       "status": "active",
-      "notes": "Wallet logic and coin selection (Chaincode Labs Engineer)"
+      "notes": "Wallet logic and coin selection (Chaincode Labs Engineer)",
+      "github": "murchandamus",
+      "emails": [
+        "mark@bitgo.com",
+        "murch@murch.one"
+      ]
     },
     {
       "canonical_name": "Will Clark",
-      "github": "willcl-ark",
       "sponsor_id": "opensats",
       "status": "active",
-      "notes": "Bitcoin Core PM and contributor (OpenSats LTS Grantee)"
+      "notes": "Bitcoin Core PM and contributor (OpenSats LTS Grantee)",
+      "github": null,
+      "emails": [
+        "will8clark@gmail.com"
+      ]
     },
     {
       "canonical_name": "Brandon Odiwuor",
-      "github": "BrandonOdiwuor",
       "sponsor_id": "btrust",
       "status": "active",
-      "notes": "Btrust Africa Grantee (2025)"
+      "notes": "Btrust Africa Grantee (2025)",
+      "github": "BrandonOdiwuor",
+      "emails": [
+        "brandon.odiwuor@gmail.com"
+      ]
     },
     {
       "canonical_name": "Sergi Delgado Segura",
-      "github": "sr-gi",
       "sponsor_id": "2140",
       "status": "active",
-      "notes": "Formerly Chaincode/Spiral, currently with 2140.dev"
+      "notes": "Formerly Chaincode/Spiral, currently with 2140.dev",
+      "github": "sr-gi",
+      "emails": [
+        "sergi.delgado.s@gmail.com",
+        "sergideldados@gmail.com"
+      ]
     }
   ],
   "classification_rules": {

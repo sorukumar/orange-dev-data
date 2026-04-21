@@ -5,12 +5,15 @@ import json
 import re
 from datetime import datetime
 import time
+import sys
+
+sys.path.append(os.getcwd())
+from scripts.utils.identity import resolver
 
 # --- Configuration ---
 ARCHIVE_REPO_URL = "https://github.com/jamesob/delving-bitcoin-archive"
 ARCHIVE_PATH = "data/sources/delving"
 OUTPUT_PARQUET = "data/raw/social_delving.parquet"
-ALIASES_PATH = "metadata/identities.json"
 
 def setup_archive():
     """Clones or pulls the Delving Bitcoin archive repository."""
@@ -22,32 +25,12 @@ def setup_archive():
         print(f"Updating Delving archive in {ARCHIVE_PATH}...")
         subprocess.run(["git", "-C", ARCHIVE_PATH, "pull"], check=True)
 
-def load_aliases():
-    if not os.path.exists(ALIASES_PATH):
-        return {}
-    with open(ALIASES_PATH, 'r') as f:
-        data = json.load(f)
-    lookup = {}
-    for entry in data.get("aliases", []):
-        canonical = entry["canonical_name"]
-        lookup[canonical.lower()] = canonical
-        for alias in entry.get("aliases", []):
-            lookup[alias.lower()] = canonical
-        for email in entry.get("emails", []):
-            lookup[email.lower()] = canonical
-    return lookup
-
-def map_author(name, username, lookup):
-    if name and name.lower() in lookup:
-        return lookup[name.lower()]
-    if username and username.lower() in lookup:
-        return lookup[username.lower()]
-    return name or username
+def map_author(username):
+    return resolver.resolve_delving(username)
 
 def process_archive():
     print("Processing Delving archive files...")
     all_records = []
-    lookup = load_aliases()
     posts_root = os.path.join(ARCHIVE_PATH, "archive", "posts")
     
     if not os.path.exists(posts_root):
@@ -75,7 +58,7 @@ def process_archive():
                     author_name = post.get("name") or post.get("username")
                     author_username = post.get("username")
                     
-                    canonical_id = map_author(author_name, author_username, lookup)
+                    canonical_id = map_author(author_username)
                     
                     # Clean snippet
                     body_snippet = re.sub(r'<[^>]+>', '', cooked)[:200].strip()
@@ -85,6 +68,7 @@ def process_archive():
                         "message_id": f"post_{post_id}",
                         "date": pd.to_datetime(created_at).tz_localize(None),
                         "author_name": author_name,
+                        "author_username": author_username,
                         "author_email": None,
                         "canonical_id": canonical_id,
                         "subject": topic_title if post_number == 1 else f"Re: {topic_title}",

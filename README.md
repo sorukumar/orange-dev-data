@@ -34,7 +34,9 @@ The scripts are organized by functional stage to maintain a clean **Sources → 
 
 ## 📂 Documentation
 For detailed architectural maps, reference the `/docs` folder:
-- [**Architecture**](docs/ARCHITECTURE.md): Separation of Concerns & Storage Strategy.
-- [**Script Reference**](docs/SCRIPT_REFERENCE.md): Index of all 20+ pipeline scripts.
-- [**Data Pipeline**](docs/DATA_PIPELINE.md): The Four Stages of Manufacturing.
+- [**Architecture**](docs/ARCHITECTURE.md): Three-tier system overview, data lifecycle, shared utilities.
+- [**Pipeline Walkthrough**](docs/PIPELINE_WALKTHROUGH.md): Step-by-step script reference — inputs, outputs, counts, daily vs monthly diff.
+- [**Identity Resolution**](docs/IDENTITY_RESOLUTION.md): 4-level resolution hierarchy, `build_identities.py` mechanics, curation workflow, audit procedures.
+- [**Metadata Reference**](docs/METADATA_REFERENCE.md): Schema and ownership of every file in `metadata/`.
+- [**Script Reference**](docs/SCRIPT_REFERENCE.md): Index of all pipeline scripts with folder, cadence, and one-line purpose.
 - [**Environment**](docs/ENVIRONMENT.md): Python & Anaconda configuration.

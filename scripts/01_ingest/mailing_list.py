@@ -6,27 +6,15 @@ from email.utils import parseaddr, parsedate_to_datetime
 import re
 import json
 from datetime import datetime
+import sys
+
+sys.path.append(os.getcwd())
+from scripts.utils.identity import resolver
 
 # --- Configuration ---
 MAILING_LIST_PATH = "data/sources/mailing_list" # Full local archive
 OUTPUT_PARQUET = "data/raw/social_mailing_list.parquet"
-ALIASES_PATH = "metadata/identities.json"
 STATE_PATH = "data/state.json"
-
-def load_aliases():
-    if not os.path.exists(ALIASES_PATH):
-        return {}
-    with open(ALIASES_PATH, 'r') as f:
-        data = json.load(f)
-    lookup = {}
-    for entry in data.get("aliases", []):
-        canonical = entry["canonical_name"]
-        lookup[canonical.lower()] = canonical
-        for alias in entry.get("aliases", []):
-            lookup[alias.lower()] = canonical
-        for email_addr in entry.get("emails", []):
-            lookup[email_addr.lower()] = canonical
-    return lookup
 
 def load_state():
     if os.path.exists(STATE_PATH):
@@ -39,12 +27,8 @@ def save_state(state):
     with open(STATE_PATH, 'w') as f:
         json.dump(state, f, indent=2)
 
-def map_author(name, email_addr, lookup):
-    if email_addr and email_addr.lower() in lookup:
-        return lookup[email_addr.lower()]
-    if name and name.lower() in lookup:
-        return lookup[name.lower()]
-    return name or email_addr
+def map_author(name, email_addr):
+    return resolver.resolve_git(name, email_addr)
 
 def parse_email_content(content):
     try:
@@ -100,27 +84,13 @@ def parse_email_content(content):
         return None
 
 def get_available_shards():
-    shards = []
-    # Always check for local shard 0
-    if os.path.exists("data/sources/mailing_list/.git"):
-        shards.append("0")
-
-    # Try to find remote shards
-    for i in range(1, 10):  # Check up to shard 9, assuming sequential
-        url = f"https://lore.kernel.org/bitcoindev/{i}.git"
-        cmd = ["git", "ls-remote", url, "HEAD"]
-        result = subprocess.run(cmd, capture_output=True, text=True)
-        if result.returncode == 0:
-            shards.append(str(i))
-        else:
-            break  # Stop at first missing shard
-    return shards
+    return ["0"]
 
 def main():
     state = load_state()
     SHARDS = get_available_shards()
     all_records = []
-    lookup = load_aliases()
+    all_records = []
     
     existing_ids = set()
     if os.path.exists(OUTPUT_PARQUET):
@@ -128,13 +98,11 @@ def main():
         existing_ids = set(existing_df['message_id'].dropna())
     
     for shard in SHARDS:
-        if shard == '0':
-            path = "data/sources/mailing_list"
-        else:
-            path = f"data/raw_archives/bitcoindev{shard}.git"
+        path = f"data/sources/mailing_list/shard_{shard}"
         if not os.path.exists(path):
             print(f"Cloning shard {shard}...")
-            subprocess.run(["git", "clone", "--bare", f"https://lore.kernel.org/bitcoindev/{shard}.git", path], check=True)
+            clone_url = "https://gnusha.org/pi/bitcoindev/"
+            subprocess.run(["git", "clone", "--bare", clone_url, path], check=True)
         
         print(f"Ingesting mailing list from Git repo (Shard {shard}): {path}...")
         
@@ -188,7 +156,7 @@ def main():
             
             res = parse_email_content(content)
             if res and res['message_id'] not in existing_ids:
-                res["canonical_id"] = map_author(res["author_name"], res["author_email"], lookup)
+                res["canonical_id"] = map_author(res["author_name"], res["author_email"])
                 all_records.append(res)
                 processed += 1
                 

@@ -1,7 +1,7 @@
 # Global Rules for AI Assistants in this Workspace
 
 ## Python Execution
-- ALWAYS use the Anaconda Python binary: `/opt/anaconda3/bin/python3`
+- ALWAYS use the Anaconda Python binary: ``/opt/anaconda3/bin/python3
 - You can also use the shell alias `py` which is mapped to this binary.
 - NEVER use the system default `python` or `python3`.
 

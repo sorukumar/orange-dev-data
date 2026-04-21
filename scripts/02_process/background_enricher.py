@@ -33,7 +33,7 @@ def run_rebuild():
 def get_repo_hash():
     try:
         # Check the HEAD of the bitcoin repo
-        res = subprocess.run(["git", "-C", "raw_data/bitcoin", "rev-parse", "HEAD"], 
+        res = subprocess.run(["git", "-C", "data/sources/bitcoin", "rev-parse", "HEAD"], 
                              capture_output=True, text=True)
         return res.stdout.strip()
     except:

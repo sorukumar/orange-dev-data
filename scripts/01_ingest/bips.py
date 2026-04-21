@@ -6,11 +6,13 @@ import json
 from datetime import datetime
 import sys
 
+sys.path.append(os.getcwd())
+from scripts.utils.identity import resolver
+
 # --- Configuration ---
 BIPS_REPO_URL = "https://github.com/bitcoin/bips"
 BIPS_REPO_PATH = "data/sources/bips"
 OUTPUT_PARQUET = "data/raw/bips.parquet"
-ALIASES_PATH = "metadata/identities.json"
 STATE_PATH = "data/state.json"
 
 def load_state():
@@ -46,41 +48,11 @@ def setup_repo():
         else:
             print("BIPs repo exists and is full.")
 
-def load_aliases():
-    """Loads and flattens the aliases lookup for rapid searching."""
-    if not os.path.exists(ALIASES_PATH):
-        print(f"Warning: Aliases file not found at {ALIASES_PATH}")
-        return {}
-    
-    with open(ALIASES_PATH, 'r') as f:
-        data = json.load(f)
-    
-    lookup = {}
-    for entry in data.get("aliases", []):
-        canonical = entry["canonical_name"]
-        # Map canonical name (lowercase) to itself
-        lookup[canonical.lower()] = canonical
-        # Map aliases
-        for alias in entry.get("aliases", []):
-            lookup[alias.lower()] = canonical
-        # Map emails
-        for email in entry.get("emails", []):
-            lookup[email.lower()] = canonical
-            
-    return lookup
+def map_author(name, email=None):
+    """Maps a name or email to a canonical UUID using the IdentityResolver."""
+    return resolver.resolve_git(name, email)
 
-def map_author(name_or_email, lookup):
-    """Maps a name or email to a canonical ID (name) using the lookup table."""
-    if not name_or_email:
-        return None
-    clean = name_or_email.strip().lower()
-    # Simple direct lookup
-    if clean in lookup:
-        return lookup[clean]
-    
-    return name_or_email.strip()
-
-def parse_authors(author_str, lookup):
+def parse_authors(author_str):
     """
     Parses BIP Author strings like:
     Eric Lombrozo <elombrozo@gmail.com>
@@ -107,13 +79,7 @@ def parse_authors(author_str, lookup):
             
             email = match.group(2).strip() if match.group(2) else None
             
-            canonical_id = name
-            if email:
-                canonical_id = map_author(email, lookup)
-            
-            # If email didn't map, try mapping the name
-            if canonical_id == name:
-                canonical_id = map_author(name, lookup)
+            canonical_id = map_author(name, email)
                 
             authors.append({
                 "name": name,
@@ -123,7 +89,7 @@ def parse_authors(author_str, lookup):
         else:
             # Fallback for just name
             clean_p = re.sub(r"^Authors?\s*:\s*", "", p, flags=re.IGNORECASE).strip()
-            canonical_id = map_author(clean_p, lookup)
+            canonical_id = map_author(clean_p)
             authors.append({
                 "name": clean_p,
                 "email": None,
@@ -156,7 +122,7 @@ def extract_header_text(content):
         
     return content[:2000]
 
-def parse_bip_header(content, lookup):
+def parse_bip_header(content):
     """Extracts metadata from the header of a BIP file."""
     header_text = extract_header_text(content)
         
@@ -176,7 +142,7 @@ def parse_bip_header(content, lookup):
             
     bip_id = metadata.get("bip", "Unknown")
     author_raw = metadata.get("authors") or metadata.get("author") or "Unknown"
-    authors_parsed = parse_authors(author_raw, lookup)
+    authors_parsed = parse_authors(author_raw)
     created_date = metadata.get("created") or metadata.get("assigned") or "Unknown"
     
     return {
@@ -229,12 +195,19 @@ def main():
     state = load_state()
     
     last_processed_commit = state.get("bips", {}).get("latest_commit", "")
-    if last_processed_commit == latest_commit and os.path.exists(OUTPUT_PARQUET):
+    # Also track identities.json hash — if identity graph changed, BIP author
+    # canonical_ids must be recomputed even if the BIPs repo commit is unchanged.
+    import hashlib
+    _id_path = "metadata/identities.json"
+    _id_hash = ""
+    if os.path.exists(_id_path):
+        with open(_id_path, "rb") as _f:
+            _id_hash = hashlib.md5(_f.read()).hexdigest()[:12]
+    last_id_hash = state.get("bips", {}).get("identities_hash", "")
+    if last_processed_commit == latest_commit and _id_hash == last_id_hash and os.path.exists(OUTPUT_PARQUET):
         print(f"BIPs repo is up to date at commit {latest_commit}. Skipping re-parsing.")
         return
 
-    lookup = load_aliases()
-    
     # Find all mediawiki and markdown files
     all_files = os.listdir(BIPS_REPO_PATH)
     bip_files = [f for f in all_files if f.startswith("bip-") and (f.endswith(".mediawiki") or f.endswith(".md"))]
@@ -252,7 +225,7 @@ def main():
             with open(path, 'r', encoding='utf-8', errors='replace') as f:
                 content = f.read()
                 
-            meta = parse_bip_header(content, lookup)
+            meta = parse_bip_header(content)
             history = get_git_history(filename)
             
             canonical_ids = list(set(a["canonical_id"] for a in meta["authors_parsed"] if a["canonical_id"]))
@@ -297,6 +270,8 @@ def main():
     # Update state
     state.setdefault("bips", {})["latest_commit"] = latest_commit
     state["bips"]["total_bips"] = len(df)
+    if _id_hash:
+        state["bips"]["identities_hash"] = _id_hash
     if "git_updated_at" in df and not df["git_updated_at"].isna().all():
         state["bips"]["latest_update"] = df["git_updated_at"].max().isoformat()
     
