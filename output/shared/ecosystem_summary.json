@@ -1,0 +1,135 @@
+{
+  "generated_at": "2026-04-20T17:49:49.067993",
+  "groups": {
+    "committers": 1133,
+    "reviewers": 6019,
+    "research": 1575,
+    "standards": 151,
+    "total_active": 7271,
+    "total_registry": 7284
+  },
+  "venn_4": {
+    "0001": 13,
+    "0010": 1110,
+    "0011": 21,
+    "0100": 4804,
+    "0101": 5,
+    "0110": 147,
+    "0111": 38,
+    "1000": 97,
+    "1001": 1,
+    "1010": 9,
+    "1011": 1,
+    "1100": 774,
+    "1101": 2,
+    "1110": 179,
+    "1111": 70
+  },
+  "venn_summary": {
+    "code_only": 97,
+    "review_only": 4804,
+    "research_only": 1110,
+    "standards_only": 13,
+    "all_four": 70,
+    "code_review": 774,
+    "review_research": 147,
+    "research_standards": 21
+  },
+  "rd_focus": {
+    "Tests (QA)": 15.4,
+    "covenants": 1.7,
+    "Build & CI (DevOps)": 6.9,
+    "Core Libs": 25.1,
+    "Documentation": 14.1,
+    "security": 0.3,
+    "Consensus (Domain Logic)": 4.8,
+    "Utilities (Shared Libs)": 0.7,
+    "P2P Network (Infrastructure)": 2.2,
+    "signatures-sighash": 0.2,
+    "mempool-fees": 2.2,
+    "Node & RPC (App/Interface)": 4.5,
+    "Wallet (Client App)": 2.8,
+    "GUI (Presentation Layer)": 4.8,
+    "privacy": 0.9,
+    "core-dev": 0.1,
+    "lightning": 2.6,
+    "quantum": 0.8,
+    "multisig-threshold": 0.1,
+    "silent-payments": 0.3,
+    "Cryptography (Primitives)": 0.2,
+    "taproot": 0.5,
+    "l2-bridges": 0.2,
+    "utxo-sync": 0.7,
+    "mining": 1.5,
+    "script-opcodes": 0.5,
+    "testing-devtools": 0.8,
+    "vaults": 0.4,
+    "soft-fork-activation": 0.5,
+    "p2p-network": 0.5,
+    "ordinals-inscriptions": 0.1,
+    "bitvm": 0.2,
+    "spam-filtering": 0.4,
+    "bip-process": 0.2,
+    "wallet-keys": 0.5,
+    "ecash": 0.3,
+    "sidechains-drivechain": 0.4,
+    "hard-fork-block-size": 0.4,
+    "Merge": 0.5,
+    "segwit": 0.1,
+    "Database (Persistence)": 0.2,
+    "payment-protocol": 0.2,
+    "tokens-runes": 0.2
+  },
+  "hotspot": {
+    "title": "Trending BIP Discussions",
+    "value": "BIP 70"
+  },
+  "onboarding": {
+    "new_coders_90d": 13,
+    "new_discussants_90d": 66,
+    "window_days": 90
+  },
+  "discussion_pulse": {
+    "topics": [
+      {
+        "category": "quantum",
+        "label": "Quantum Resistance",
+        "count": 124,
+        "share": 20.2
+      },
+      {
+        "category": "testing-devtools",
+        "label": "Dev Tooling",
+        "count": 60,
+        "share": 9.8
+      },
+      {
+        "category": "covenants",
+        "label": "Covenants & Vaults",
+        "count": 55,
+        "share": 9.0
+      }
+    ],
+    "top_bips": [
+      {
+        "bip_id": "70",
+        "title": "Payment Protocol",
+        "mentions": 390,
+        "theme": "P2P Network"
+      },
+      {
+        "bip_id": "32",
+        "title": "Hierarchical Deterministic Wallets",
+        "mentions": 270,
+        "theme": "Wallet & Keys"
+      },
+      {
+        "bip_id": "39",
+        "title": "Mnemonic code for generating deterministic keys",
+        "mentions": 213,
+        "theme": "Wallet & Keys"
+      }
+    ],
+    "window_days": 90
+  }
+}
