@@ -26,46 +26,34 @@ def extract_network():
     print(f"Loading enriched social data from {INPUT_DATA_PATH}...")
     df = pd.read_parquet(INPUT_DATA_PATH)
     df['date'] = pd.to_datetime(df['date'])
-    
-    # Re-resolve mailing_list canonical_ids using real sender emails from the raw parquet.
-    # social_threads.parquet carries the list delivery address (bitcoindev@googlegroups.com)
-    # but the raw parquet has actual sender emails which the Phase 2 identity graph was built
-    # from. Using those emails via resolver.resolve_git() maps every row to the authoritative
-    # Phase 2 UUID, collapsing any stale Phase 1 auto_ IDs that were merged during build_identities.
+
+    # canonical_ids in social_threads.parquet are already correct Phase 2 UUIDs.
+    # restamp_social_ids.py and restamp_delving_ids.py re-stamp both raw parquets
+    # after build_identities.py runs, so no re-resolution is needed here.
+    # This safety net only catches rows where canonical_id is genuinely absent
+    # (e.g. a brand-new source that hasn't been through restamp yet).
     if 'canonical_id' not in df.columns:
         df['canonical_id'] = None
 
-    RAW_ML_PATH = 'data/raw/social_mailing_list.parquet'
-    if os.path.exists(RAW_ML_PATH):
-        print(f"  Re-resolving mailing_list canonical_ids via real sender emails ...")
-        raw_ml = pd.read_parquet(RAW_ML_PATH, columns=['message_id', 'author_name', 'author_email'])
-        raw_ml['canonical_id_fresh'] = raw_ml.apply(
-            lambda r: resolver.resolve_git(str(r['author_name'] or ''), str(r['author_email'] or '')), axis=1
-        )
-        remap = raw_ml.dropna(subset=['message_id']).set_index('message_id')['canonical_id_fresh'].to_dict()
-        ml_mask = df['source'] == 'mailing_list'
-        df.loc[ml_mask, 'canonical_id'] = df.loc[ml_mask, 'message_id'].map(remap).fillna(df.loc[ml_mask, 'canonical_id'])
-        print(f"    {ml_mask.sum():,} mailing_list rows → {df.loc[ml_mask, 'canonical_id'].nunique():,} unique IDs after remap")
-
-    # Re-resolve delving rows and any remaining rows with missing canonical_ids.
-    print(f"  Re-resolving delving rows and filling any remaining gaps...")
     def resolve_row(row):
-        val = str(row.get('author_name') or '')
         src = row.get('source')
         if src == 'delving':
-            return resolver.resolve_delving(val)
-        return resolver.resolve_git(val, str(row.get('author_email') or ''))
+            username = str(row.get('author_username') or row.get('author_name') or '')
+            return resolver.resolve_delving(username)
+        return resolver.resolve_git(
+            str(row.get('author_name') or ''),
+            str(row.get('author_email') or ''),
+        )
 
     needs_resolve = (
-        df['source'].eq('delving') |
         df['canonical_id'].isna() |
         (df['canonical_id'].astype(str).str.strip() == '') |
         (df['canonical_id'].astype(str).str.lower() == 'unknown')
     )
     if needs_resolve.any():
-        print(f"    Re-resolving {needs_resolve.sum()} rows (delving + missing)...")
+        print(f"  Safety-net: resolving {needs_resolve.sum()} rows with missing canonical_id...")
         df.loc[needs_resolve, 'canonical_id'] = df[needs_resolve].apply(resolve_row, axis=1)
-    
+
     # Filter out system, unknown, and admin early
     df = df[~df['canonical_id'].str.lower().isin(['system', 'unknown', 'admin'])]
     df = df[df['canonical_id'].notna()]

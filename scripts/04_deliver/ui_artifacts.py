@@ -21,14 +21,22 @@ def deliver():
     
     # Pre-process columns to handle numpy/datetime objects not serializable by default json
     def clean_object(obj):
+        if obj is None:
+            return None
+        if obj is pd.NaT or isinstance(obj, type(pd.NaT)):
+            return None
+        if isinstance(obj, str) and obj == 'NaT':
+            return None
+        if isinstance(obj, np.ndarray):
+            return obj.tolist()
         if isinstance(obj, (pd.Timestamp, datetime)):
             return obj.isoformat()
         if isinstance(obj, np.integer):
             return int(obj)
         if isinstance(obj, (float, np.floating)):
-            return float(obj) if not pd.isna(obj) else None
-        if isinstance(obj, np.ndarray):
-            return obj.tolist()
+            return float(obj) if not np.isnan(obj) else None
+        if pd.isna(obj):
+            return None
         if isinstance(obj, dict):
             return {k: clean_object(v) for k, v in obj.items()}
         if isinstance(obj, (list, tuple)):

@@ -207,9 +207,10 @@ def main():
     print("\n--- PHASE 2: Convergence (Enrichment) ---")
     run("python3 scripts/identity/build_github_id_map.py", cwd=root_dir)  # pre-compute github_id → email anchors
     run("python3 scripts/identity/build_identities.py", cwd=root_dir)
-    # Re-stamp mailing list canonical_ids against the freshly rebuilt identities.json.
-    # Must run after build_identities.py and before merge_social.py.
+    # Re-stamp raw social parquets against the freshly rebuilt identities.json.
+    # Both must run after build_identities.py and before merge_social.py.
     run("python3 scripts/identity/restamp_social_ids.py", cwd=root_dir)
+    run("python3 scripts/identity/restamp_delving_ids.py", cwd=root_dir)
     # Audit report: only run on demand (--audit flag) — it writes metadata/audit_potential_matches.json
     # for human curation review but is not consumed by any downstream pipeline step.
     if run_audit:

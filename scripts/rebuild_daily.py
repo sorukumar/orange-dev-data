@@ -55,6 +55,7 @@ def main():
     print("\n--- PHASE 2: Convergence (Enrichment) ---")
     run("python3 scripts/identity/build_identities.py", cwd=root_dir)
     run("python3 scripts/identity/restamp_social_ids.py", cwd=root_dir)
+    run("python3 scripts/identity/restamp_delving_ids.py", cwd=root_dir)
     run("python3 scripts/02_process/reviews.py", cwd=root_dir)
     run("python3 scripts/02_process/github_social.py", cwd=root_dir)
     run("python3 scripts/02_process/core.py", cwd=root_dir)
