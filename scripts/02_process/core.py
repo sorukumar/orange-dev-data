@@ -19,9 +19,13 @@ class Config:
     OUTPUT_DIR = "output/tracker"
     
     COMMITS_FILE = "data/raw/core_commits.parquet"
-    ENRICHED_FILE = "data/enriched/core_contributors.parquet"
+    ENRICHED_FILE = "data/enriched/core_contributors.parquet"  # legacy; kept for reference
+    UNIFIED_FILE  = "data/enriched/contributors_unified.parquet"  # authoritative enriched source
+    # TODO: Social proof growth chart (stars/forks over time) needs a proper ingestion pipeline.
+    # Requires fetching stargazer/fork history from GitHub API (see orange-dev-tracker/code/core/social.py
+    # for the original approach). social_threads.parquet has no 'type' col so the chart stays blank.
     SOCIAL_FILE = "data/enriched/social_threads.parquet"
-    METADATA_FILE = "data/enriched/social_metadata.json"
+    METADATA_FILE = "output/tracker/social_metadata.json"  # written by github_social.py
     EFFICIENCY_PARQUET = "data/enriched/contributor_review_metrics.parquet"
     
     MAINTAINERS_FILE = "metadata/maintainers.json"
@@ -390,7 +394,7 @@ class MetricGenerators:
         # We assume 'commits' has one row per (hash, category) where applicable.
         
         # Load Static Metadata (Files, LOC)
-        meta_path = os.path.join(Config.DATA_DIR, "category_metadata.json")
+        meta_path = os.path.join(Config.DATA_DIR, "core_metadata.json")
         static_meta = {}
         if os.path.exists(meta_path):
              with open(meta_path, "r") as f:
@@ -596,10 +600,10 @@ class MetricGenerators:
         """
         print("Generating Contributor Landscape...")
         
-        if os.path.exists(Config.ENRICHED_FILE):
-             enriched_df = pd.read_parquet(Config.ENRICHED_FILE)
-             # Map canonical_id -> Enriched Data
-             enrich_map = enriched_df.set_index('canonical_id').to_dict(orient='index')
+        if os.path.exists(Config.UNIFIED_FILE):
+             enriched_df = pd.read_parquet(Config.UNIFIED_FILE)
+             # Map uuid -> profile enrichment fields (location, company, login, etc.)
+             enrich_map = enriched_df.set_index('uuid').to_dict(orient='index')
         else:
              enrich_map = {}
         
@@ -818,9 +822,9 @@ class MetricGenerators:
              
              # Enrichment
              enrich_data = enrich_map.get(cid, {})
-             login = enrich_data.get('login')
-             company = enrich_data.get('company')
-             location = enrich_data.get('location')
+             login = enrich_data.get('github_login_final')
+             company = enrich_data.get('github_company')
+             location = enrich_data.get('github_location')
              
              # Metrics
              contribution_pct = (row['total_commits'] / total_project_commits) * 100
@@ -936,7 +940,6 @@ class MetricGenerators:
         social = social.set_index('date').sort_index()
         
         # 8. Social Proof (Growth over time)
-        # We handle case where 'type' column doesn't exist in current social data
         if 'type' in social.columns and not social.empty:
             stars = social[social['type'] == 'star'].resample('M').size().cumsum()
             forks = social[social['type'] == 'fork'].resample('M').size().cumsum()
@@ -1029,9 +1032,9 @@ class MetricGenerators:
         
         # Load Enriched Data for Company/Email info
         enrich_map = {}
-        if os.path.exists(Config.ENRICHED_FILE):
-             enriched_df = pd.read_parquet(Config.ENRICHED_FILE)
-             enrich_map = enriched_df.set_index('canonical_id').to_dict(orient='index')
+        if os.path.exists(Config.UNIFIED_FILE):
+             enriched_df = pd.read_parquet(Config.UNIFIED_FILE)
+             enrich_map = enriched_df.set_index('uuid').to_dict(orient='index')
         
         commits['year'] = commits['date_utc'].dt.year
         maintainer_commits = commits[commits['is_maintainer_action'] == True]
@@ -1047,7 +1050,7 @@ class MetricGenerators:
         for _, row in authors.iterrows():
             cid = row['canonical_id']
             email = row['author_email']
-            enrich_company = enrich_map.get(cid, {}).get('company')
+            enrich_company = enrich_map.get(cid, {}).get('github_company')
             classification = SponsorLookup.classify(email, enrich_company=enrich_company)
             
             # Map Sponsored -> Corporate for the chart (simpler 2-way split)
@@ -1228,11 +1231,11 @@ class MetricGenerators:
         print("Generating Geography...")
         
         # Load Enriched Data
-        if not os.path.exists(Config.ENRICHED_FILE):
-            print("  Skipping Geography (No enriched data)")
+        if not os.path.exists(Config.UNIFIED_FILE):
+            print("  Skipping Geography (No unified contributor data)")
             return
 
-        enriched_df = pd.read_parquet(Config.ENRICHED_FILE)
+        enriched_df = pd.read_parquet(Config.UNIFIED_FILE)
         
         # We want simple counts of contributors per location
         # Raw location strings are messy ("Berlin", "Berlin, DE", "Germany").
@@ -1259,7 +1262,7 @@ class MetricGenerators:
             if "russia" in loc: return "Russia"
             return None 
             
-        locations = enriched_df['location'].apply(clean_loc).dropna()
+        locations = enriched_df['github_location'].apply(clean_loc).dropna()
         counts = locations.value_counts().head(15).reset_index()
         counts.columns = ['name', 'value']
         
@@ -1271,7 +1274,7 @@ class MetricGenerators:
         print("Generating Codebase Stats...")
 
         # --- 1. Snapshots (from Metadata) ---
-        meta_path = os.path.join(Config.DATA_DIR, "category_metadata.json")
+        meta_path = os.path.join(Config.DATA_DIR, "core_metadata.json")
         if not os.path.exists(meta_path):
              print("Missing metadata for snapshots.")
              return
@@ -1390,7 +1393,7 @@ class MetricGenerators:
         # series: one per lang
         
         # SCALING LOGIC: Normalize to match Static Scan Total (Shared Logic, could be refactored)
-        meta_path = os.path.join(Config.DATA_DIR, "category_metadata.json")
+        meta_path = os.path.join(Config.DATA_DIR, "core_metadata.json")
         target_loc = 0
         if os.path.exists(meta_path):
              try:
@@ -1532,7 +1535,7 @@ class MetricGenerators:
                 history.append(snapshot)
 
         # SCALING LOGIC: Normalize to match Static Scan Total
-        meta_path = os.path.join(Config.DATA_DIR, "category_metadata.json")
+        meta_path = os.path.join(Config.DATA_DIR, "core_metadata.json")
         target_loc = 0
         if os.path.exists(meta_path):
              try:
@@ -1666,7 +1669,7 @@ class MetricGenerators:
     @staticmethod
     def generate_reviewer_metrics():
         print("Generating Reviewer Metrics...")
-        REVIEWS_FILE = "data/reviews.parquet"
+        REVIEWS_FILE = "data/raw/core_reviews.parquet"
         ALIASES_FILE = "data/aliases_lookup.json"
         
         if not os.path.exists(REVIEWS_FILE): return
@@ -1693,9 +1696,9 @@ class MetricGenerators:
         df['canonical_name'] = df.apply(lambda row: canonicalize(row['reviewer_name'], row['reviewer_email']), axis=1)
         
         # Whitelist Filter (Only known contributors)
-        if os.path.exists("data/contributors_enriched.parquet"):
-            c_df = pd.read_parquet("data/contributors_enriched.parquet")
-            whitelist = set(c_df['name'].str.lower().tolist())
+        if os.path.exists(Config.UNIFIED_FILE):
+            c_df = pd.read_parquet(Config.UNIFIED_FILE)
+            whitelist = set(c_df['display_name'].dropna().str.lower().tolist())
             df = df[df['canonical_name'].str.lower().isin(whitelist)]
 
         # Scoring
