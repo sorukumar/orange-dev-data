@@ -49,7 +49,181 @@
   "dev_type": "Protocol Designer",
   "global_first_active": "2019-03-01T16:06:27",
   "global_last_active": "2026-05-05T11:52:08",
-  "is_top_50": true,
+  "github_location": null,
+  "github_company": "@chaincodelabs",
+  "github_bio": "590B 7292 695A FFA5 B672  CBB2 E13F C145 CD3F 4304 <darosior@protonmail.com>",
+  "github_twitter": "darosior",
+  "github_blog": "https://antoinep.com/",
+  "github_followers": 575.0,
+  "is_top_50": false,
   "github_url": "https://github.com/darosior",
-  "delving_url": "https://delvingbitcoin.org/u/antoinep"
+  "delving_url": "https://delvingbitcoin.org/u/antoinep",
+  "commit_history": {
+    "2019": {
+      "Consensus (Domain Logic)": 1.0,
+      "Core Libs": 1.0,
+      "Documentation": 2.0,
+      "Node & RPC (App/Interface)": 4.0,
+      "Tests (QA)": 3.5,
+      "Wallet (Client App)": 0.5
+    },
+    "2020": {
+      "Consensus (Domain Logic)": 5.33,
+      "Node & RPC (App/Interface)": 2.83,
+      "Tests (QA)": 2.33,
+      "Wallet (Client App)": 0.5
+    },
+    "2021": {
+      "Build & CI (DevOps)": 0.5,
+      "Consensus (Domain Logic)": 9.0,
+      "Core Libs": 1.0,
+      "Documentation": 5.0,
+      "Node & RPC (App/Interface)": 1.5,
+      "Tests (QA)": 18.0,
+      "Wallet (Client App)": 1.0
+    },
+    "2022": {
+      "Build & CI (DevOps)": 0.5,
+      "Consensus (Domain Logic)": 16.0,
+      "Core Libs": 2.5,
+      "Documentation": 2.0,
+      "Node & RPC (App/Interface)": 0.33,
+      "Tests (QA)": 11.33,
+      "Wallet (Client App)": 6.33
+    },
+    "2023": {
+      "Build & CI (DevOps)": 0.5,
+      "Consensus (Domain Logic)": 19.83,
+      "Core Libs": 2.67,
+      "Documentation": 1.0,
+      "Node & RPC (App/Interface)": 0.33,
+      "Tests (QA)": 25.17,
+      "Wallet (Client App)": 0.5
+    },
+    "2024": {
+      "Build & CI (DevOps)": 2.0,
+      "Consensus (Domain Logic)": 1.5,
+      "Core Libs": 11.33,
+      "Documentation": 2.0,
+      "GUI (Presentation Layer)": 0.75,
+      "Node & RPC (App/Interface)": 2.83,
+      "P2P Network (Infrastructure)": 3.25,
+      "Tests (QA)": 6.75,
+      "Wallet (Client App)": 0.58
+    },
+    "2025": {
+      "Consensus (Domain Logic)": 5.17,
+      "Core Libs": 4.33,
+      "Documentation": 4.0,
+      "Node & RPC (App/Interface)": 2.33,
+      "Tests (QA)": 22.17,
+      "Utilities (Shared Libs)": 2.0
+    },
+    "2026": {
+      "Consensus (Domain Logic)": 2.33,
+      "Core Libs": 0.33,
+      "Documentation": 1.0,
+      "Tests (QA)": 1.33
+    }
+  },
+  "bip_list": [
+    {
+      "number": 54,
+      "title": "Consensus Cleanup",
+      "status": "Draft",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0054.mediawiki"
+    },
+    {
+      "number": 379,
+      "title": "Miniscript",
+      "status": "Draft",
+      "theme": "Wallet & Keys",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0379.mediawiki"
+    },
+    {
+      "number": 446,
+      "title": "OP_TEMPLATEHASH",
+      "status": "Draft",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0446.mediawiki"
+    },
+    {
+      "number": 448,
+      "title": "Taproot-native (Re)bindable Transactions",
+      "status": "Draft",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0448.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "[bitcoin-dev] Revault: a multi-party vault architecture",
+    "date": "2020-04-24",
+    "link": "https://gnusha.org/pi/bitcoindev/Dc8XgZU3_W8pUwgCBfL4uo9wLWlZOWBG9Q8iBUTcq9V4DRzItDzlEB5nNq8a6U64k2wVD4gPWrsYmnv3I2DEB7pXydGToN32UHUnrL5faa0=@protonmail.com"
+  },
+  "last_message": {
+    "source": "delving",
+    "subject": "Re: Great Consensus Cleanup Revival",
+    "date": "2026-04-27",
+    "link": "https://delvingbitcoin.org/t/great-consensus-cleanup-revival/710/94"
+  },
+  "social_history": {
+    "2020": {
+      "mempool-fees": 2,
+      "other": 2
+    },
+    "2021": {
+      "covenants": 1,
+      "other": 12,
+      "mempool-fees": 7,
+      "mining": 3,
+      "script-opcodes": 1,
+      "security": 1
+    },
+    "2022": {
+      "covenants": 11,
+      "other": 10,
+      "mempool-fees": 5,
+      "mining": 2,
+      "script-opcodes": 1
+    },
+    "2023": {
+      "covenants": 3,
+      "other": 18,
+      "script-opcodes": 7
+    },
+    "2024": {
+      "other": 23,
+      "consensus-cleanup": 24,
+      "mempool-fees": 5,
+      "mining": 25,
+      "script-opcodes": 28,
+      "security": 25,
+      "testing-devtools": 24,
+      "utxo-sync": 21
+    },
+    "2025": {
+      "other": 61,
+      "consensus-cleanup": 18,
+      "covenants": 16,
+      "mempool-fees": 10,
+      "mining": 37,
+      "script-opcodes": 26,
+      "security": 19,
+      "testing-devtools": 23,
+      "utxo-sync": 13
+    },
+    "2026": {
+      "consensus-cleanup": 17,
+      "other": 19,
+      "covenants": 4,
+      "mempool-fees": 16,
+      "mining": 11,
+      "script-opcodes": 8,
+      "security": 5,
+      "testing-devtools": 18,
+      "utxo-sync": 17
+    }
+  }
 }

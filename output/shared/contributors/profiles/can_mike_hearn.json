@@ -49,6 +49,130 @@
   "dev_type": "Protocol Designer",
   "global_first_active": "2011-06-14T11:44:41",
   "global_last_active": "2015-10-28T05:26:56",
-  "is_top_50": true,
-  "github_url": "https://github.com/mikehearn"
+  "github_location": "Switzerland",
+  "github_company": "@hydraulic-software ",
+  "github_bio": "Making developer tools at Hydraulic. Former contributor to Bitcoin, Wine, Corda, GNOME, Google and various other software projects. ",
+  "github_twitter": null,
+  "github_blog": "http://plan99.net/~mike",
+  "github_followers": 906.0,
+  "is_top_50": false,
+  "github_url": "https://github.com/mikehearn",
+  "commit_history": {
+    "2012": {
+      "Build & CI (DevOps)": 0.2,
+      "Core Libs": 0.2,
+      "Database (Persistence)": 0.2,
+      "Documentation": 0.2,
+      "Tests (QA)": 0.2
+    },
+    "2013": {
+      "Build & CI (DevOps)": 0.14,
+      "Consensus (Domain Logic)": 0.14,
+      "Core Libs": 4.14,
+      "GUI (Presentation Layer)": 0.14,
+      "Node & RPC (App/Interface)": 1.14,
+      "P2P Network (Infrastructure)": 0.64,
+      "Tests (QA)": 0.64
+    },
+    "2014": {
+      "Core Libs": 1.5,
+      "P2P Network (Infrastructure)": 0.5
+    },
+    "2015": {
+      "GUI (Presentation Layer)": 0.5,
+      "P2P Network (Infrastructure)": 0.5
+    }
+  },
+  "bip_list": [
+    {
+      "number": 31,
+      "title": "Pong message",
+      "status": "Deployed",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0031.mediawiki"
+    },
+    {
+      "number": 37,
+      "title": "Connection Bloom filtering",
+      "status": "Deployed",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0037.mediawiki"
+    },
+    {
+      "number": 64,
+      "title": "getutxo message",
+      "status": "Closed",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0064.mediawiki"
+    },
+    {
+      "number": 70,
+      "title": "Payment Protocol",
+      "status": "Deployed",
+      "theme": "P2P Network",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0070.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "[Bitcoin-development] Bumping up against flood control limits again?",
+    "date": "2011-06-14",
+    "link": "https://gnusha.org/pi/bitcoindev/BANLkTinuEayfr5S9NEcW+cTLpv2r8iwRgDXYniOAHgQ43zwGqQ@mail.gmail.com"
+  },
+  "last_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoin-dev] Mailing List Moderation Now Active.",
+    "date": "2015-10-28",
+    "link": "https://gnusha.org/pi/bitcoindev/CA+w+GKRcR2jL_39NuS-Yvu1xLc4y6A4tU5dxDN9+5Z2jUc_mrg@mail.gmail.com"
+  },
+  "social_history": {
+    "2011": {
+      "other": 48,
+      "hard-fork-block-size": 1,
+      "mining": 1,
+      "p2p-network": 8,
+      "payment-protocol": 1,
+      "script-opcodes": 5,
+      "security": 3
+    },
+    "2012": {
+      "other": 62,
+      "mempool-fees": 9,
+      "mining": 8,
+      "p2p-network": 17,
+      "payment-protocol": 24,
+      "script-opcodes": 1,
+      "security": 2
+    },
+    "2013": {
+      "other": 167,
+      "hard-fork-block-size": 2,
+      "mempool-fees": 10,
+      "mining": 21,
+      "p2p-network": 18,
+      "payment-protocol": 34,
+      "script-opcodes": 2,
+      "security": 3
+    },
+    "2014": {
+      "other": 195,
+      "hard-fork-block-size": 2,
+      "mempool-fees": 27,
+      "mining": 38,
+      "p2p-network": 15,
+      "payment-protocol": 126,
+      "script-opcodes": 17,
+      "security": 39
+    },
+    "2015": {
+      "other": 126,
+      "hard-fork-block-size": 59,
+      "mempool-fees": 19,
+      "mining": 36,
+      "p2p-network": 13,
+      "payment-protocol": 42,
+      "script-opcodes": 34,
+      "security": 8
+    }
+  }
 }

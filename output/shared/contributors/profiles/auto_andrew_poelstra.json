@@ -49,6 +49,121 @@
   "dev_type": "Builder",
   "global_first_active": "2013-02-14T19:49:12",
   "global_last_active": "2025-10-03T09:59:32",
-  "is_top_50": true,
-  "github_url": "https://github.com/apoelstra"
+  "github_location": "Austin, TX, USA",
+  "github_company": "@Blockstream ",
+  "github_bio": null,
+  "github_twitter": null,
+  "github_blog": "https://www.wpsoftware.net/andrew",
+  "github_followers": 1193.0,
+  "is_top_50": false,
+  "github_url": "https://github.com/apoelstra",
+  "commit_history": {
+    "2013": {
+      "Core Libs": 1.0
+    },
+    "2014": {
+      "Core Libs": 0.5,
+      "Node & RPC (App/Interface)": 0.5
+    },
+    "2020": {
+      "Build & CI (DevOps)": 1.0
+    },
+    "2021": {
+      "Tests (QA)": 2.0
+    }
+  },
+  "bip_list": [
+    {
+      "number": 93,
+      "title": "codex32: Checksummed SSSS-aware BIP32 seeds",
+      "status": "Draft",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0093.mediawiki"
+    },
+    {
+      "number": 379,
+      "title": "Miniscript",
+      "status": "Draft",
+      "theme": "Wallet & Keys",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0379.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "Re: [Bitcoin-development] Possible attack: Keeping unconfirmed\n transactions",
+    "date": "2014-06-06",
+    "link": "https://gnusha.org/pi/bitcoindev/20140606225325.GF26152@shavo.dd-wrt"
+  },
+  "last_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoindev] Re: [BIP Proposal] Limit ScriptPubkey Size >= 520\n Bytes Consensus.",
+    "date": "2025-10-03",
+    "link": "https://gnusha.org/pi/bitcoindev/aN_k1EAXZ0schWDs@mail.wpsoftware.net"
+  },
+  "social_history": {
+    "2014": {
+      "other": 2
+    },
+    "2015": {
+      "script-opcodes": 1,
+      "other": 3
+    },
+    "2017": {
+      "mempool-fees": 1,
+      "other": 3,
+      "taproot": 1
+    },
+    "2018": {
+      "other": 4,
+      "multisig-threshold": 4,
+      "script-opcodes": 2,
+      "taproot": 8,
+      "wallet-keys": 1
+    },
+    "2019": {
+      "covenants": 1,
+      "other": 2,
+      "wallet-keys": 1
+    },
+    "2020": {
+      "mempool-fees": 1,
+      "other": 3,
+      "wallet-keys": 2
+    },
+    "2021": {
+      "multisig-threshold": 1,
+      "other": 1,
+      "quantum": 3,
+      "script-opcodes": 2,
+      "taproot": 3
+    },
+    "2022": {
+      "other": 2,
+      "wallet-keys": 1
+    },
+    "2023": {
+      "other": 21,
+      "covenants": 4,
+      "mempool-fees": 1,
+      "multisig-threshold": 2,
+      "script-opcodes": 8,
+      "taproot": 8,
+      "wallet-keys": 3
+    },
+    "2024": {
+      "other": 9,
+      "covenants": 2,
+      "quantum": 5,
+      "script-opcodes": 3,
+      "taproot": 2,
+      "wallet-keys": 5
+    },
+    "2025": {
+      "other": 5,
+      "covenants": 3,
+      "mempool-fees": 3,
+      "script-opcodes": 4,
+      "taproot": 1
+    }
+  }
 }

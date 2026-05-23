@@ -49,6 +49,107 @@
   "dev_type": "Protocol Designer",
   "global_first_active": "2011-06-16T13:24:01",
   "global_last_active": "2022-07-04T02:53:48",
-  "is_top_50": true,
-  "github_url": "https://github.com/genjix"
+  "github_location": null,
+  "github_company": null,
+  "github_bio": null,
+  "github_twitter": null,
+  "github_blog": null,
+  "github_followers": 266.0,
+  "is_top_50": false,
+  "github_url": "https://github.com/genjix",
+  "commit_history": {
+    "2013": {
+      "Core Libs": 1.0
+    },
+    "2014": {
+      "P2P Network (Infrastructure)": 1.0
+    }
+  },
+  "bip_list": [
+    {
+      "number": 1,
+      "title": "BIP Purpose and Guidelines",
+      "status": "Closed",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0001.mediawiki"
+    },
+    {
+      "number": 14,
+      "title": "Protocol Version and User Agent",
+      "status": "Deployed",
+      "theme": "P2P Network",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0014.mediawiki"
+    },
+    {
+      "number": 15,
+      "title": "Aliases",
+      "status": "Closed",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0015.mediawiki"
+    },
+    {
+      "number": 33,
+      "title": "Stratized Nodes",
+      "status": "Closed",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0033.mediawiki"
+    },
+    {
+      "number": 60,
+      "title": "Fixed Length \"version\" Message (Relay-Transactions Field)",
+      "status": "Closed",
+      "theme": "P2P Network",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0060.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "Re: [Bitcoin-development] Development priorities",
+    "date": "2011-06-16",
+    "link": "https://gnusha.org/pi/bitcoindev/4DFA4A41.70104@covertinferno.org"
+  },
+  "last_message": {
+    "source": "mailing_list",
+    "subject": "[bitcoin-dev] addr/getaddr behaviour",
+    "date": "2022-07-04",
+    "link": "https://gnusha.org/pi/bitcoindev/5ccaa7d4-dc64-6bf0-c4e6-3667c986466b@dyne.org"
+  },
+  "social_history": {
+    "2011": {
+      "bip-process": 1,
+      "other": 31,
+      "p2p-network": 2,
+      "payment-protocol": 1
+    },
+    "2012": {
+      "bip-process": 2,
+      "other": 45,
+      "mempool-fees": 5,
+      "mining": 3,
+      "p2p-network": 8,
+      "payment-protocol": 8,
+      "scaling": 3,
+      "script-opcodes": 12
+    },
+    "2013": {
+      "other": 2
+    },
+    "2016": {
+      "other": 1,
+      "payment-protocol": 1
+    },
+    "2017": {
+      "mempool-fees": 1,
+      "other": 1
+    },
+    "2019": {
+      "other": 1
+    },
+    "2021": {
+      "bip-process": 1
+    },
+    "2022": {
+      "other": 1
+    }
+  }
 }

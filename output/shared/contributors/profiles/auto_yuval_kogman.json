@@ -1,0 +1,135 @@
+{
+  "display_name": "Yuval Kogman",
+  "github_login_final": "nothingmuch",
+  "delving_username_final": "nothingmuch",
+  "uuid": "auto_yuval_kogman",
+  "badges": {
+    "is_bip_author": true,
+    "is_core_committer": null,
+    "is_core_contributor": true,
+    "is_maintainer": null,
+    "is_social_contributor": true,
+    "is_sponsored": null,
+    "maintainer_status": null,
+    "social_source": "mailing_list",
+    "sponsor_id": null
+  },
+  "roles": [
+    "BIP Author",
+    "Researcher"
+  ],
+  "first_seen": "2026-04-17T00:00:00",
+  "last_seen": "2026-05-18T00:00:00",
+  "technical_focus": "Consensus (Domain Logic)",
+  "total_commits": 1.0,
+  "authored_commits": 1.0,
+  "merge_commits": 0.0,
+  "total_additions": 12.0,
+  "total_deletions": 3.0,
+  "first_commit": "2020-02-07T19:10:31",
+  "last_commit": "2020-02-07T19:10:31",
+  "bips_authored": 1.0,
+  "avg_review_latency_days": 2749.3173518518515,
+  "reviews_count": 13.0,
+  "avg_approval_latency_days": 4666.402083333333,
+  "approvals_count": 1.0,
+  "prs_authored": 4.0,
+  "avg_pr_ack_velocity_days": 0.011944444444444445,
+  "avg_concept_lead_time_days": 170.01446759259258,
+  "review_reciprocity": 3.25,
+  "hybrid_score": 0.5196,
+  "threads_started": 7.0,
+  "replies_sent": 24.0,
+  "ml_threads": 4.0,
+  "delving_threads": 3.0,
+  "ml_responses": 22.0,
+  "delving_responses": 2.0,
+  "first_active": "2018-11-06T09:50:38",
+  "last_active": "2026-04-15T01:18:36.415000",
+  "dev_type": "Builder",
+  "global_first_active": "2018-11-06T09:50:38",
+  "global_last_active": "2026-04-15T01:18:36.415000064",
+  "github_location": null,
+  "github_company": "spiral",
+  "github_bio": null,
+  "github_twitter": null,
+  "github_blog": null,
+  "github_followers": 0.0,
+  "is_top_50": false,
+  "github_url": "https://github.com/nothingmuch",
+  "delving_url": "https://delvingbitcoin.org/u/nothingmuch",
+  "commit_history": {
+    "2020": {
+      "Consensus (Domain Logic)": 1.0
+    }
+  },
+  "bip_list": [
+    {
+      "number": 77,
+      "title": "Async Payjoin",
+      "status": "Draft",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0077.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "[bitcoin-dev] draft proposal: change forwarding (improved\n fungibility through wallet interoperability)",
+    "date": "2018-11-06",
+    "link": "https://gnusha.org/pi/bitcoindev/CAAQdECAGuScCLoG_62g6G__yiyN8KRiPDBGYJ2pDBwxRCNFtZQ@mail.gmail.com"
+  },
+  "last_message": {
+    "source": "delving",
+    "subject": "Re: Onion Message Jamming in the Lightning Network",
+    "date": "2026-04-15",
+    "link": "https://delvingbitcoin.org/t/onion-message-jamming-in-the-lightning-network/2414/5"
+  },
+  "social_history": {
+    "2018": {
+      "privacy": 2,
+      "other": 1
+    },
+    "2019": {
+      "other": 3,
+      "mempool-fees": 1,
+      "privacy": 3
+    },
+    "2020": {
+      "mining": 1,
+      "privacy": 1
+    },
+    "2021": {
+      "utxo-sync": 2
+    },
+    "2022": {
+      "mempool-fees": 1,
+      "other": 1
+    },
+    "2023": {
+      "other": 1,
+      "privacy": 1,
+      "script-opcodes": 1,
+      "signatures-sighash": 1,
+      "taproot": 2
+    },
+    "2024": {
+      "other": 2,
+      "mining": 1,
+      "privacy": 1
+    },
+    "2025": {
+      "mempool-fees": 1,
+      "privacy": 10,
+      "other": 1
+    },
+    "2026": {
+      "other": 1,
+      "mempool-fees": 4,
+      "privacy": 4,
+      "script-opcodes": 4,
+      "signatures-sighash": 4,
+      "taproot": 1,
+      "testing-devtools": 4
+    }
+  }
+}

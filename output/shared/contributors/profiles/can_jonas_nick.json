@@ -49,7 +49,121 @@
   "dev_type": "Protocol Designer",
   "global_first_active": "2015-06-14T12:45:48",
   "global_last_active": "2026-04-06T08:30:15.751000064",
-  "is_top_50": true,
+  "github_location": null,
+  "github_company": null,
+  "github_bio": "GPG 36C7 1A37 C9D9 88BD E825  08D9 B1A7 0E4F 8DCD 0366",
+  "github_twitter": null,
+  "github_blog": "https://nickler.ninja",
+  "github_followers": 523.0,
+  "is_top_50": false,
   "github_url": "https://github.com/jonasnick",
-  "delving_url": "https://delvingbitcoin.org/u/jonasnick"
+  "delving_url": "https://delvingbitcoin.org/u/jonasnick",
+  "commit_history": {
+    "2016": {
+      "Core Libs": 0.5,
+      "Node & RPC (App/Interface)": 1.0,
+      "Tests (QA)": 0.5
+    },
+    "2017": {
+      "Node & RPC (App/Interface)": 1.0
+    }
+  },
+  "bip_list": [
+    {
+      "number": 327,
+      "title": "MuSig2 for BIP340-compatible Multi-Signatures",
+      "status": "Deployed",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0327.mediawiki"
+    },
+    {
+      "number": 340,
+      "title": "Schnorr Signatures for secp256k1",
+      "status": "Deployed",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0340.mediawiki"
+    },
+    {
+      "number": 341,
+      "title": "Taproot: SegWit version 1 spending rules",
+      "status": "Deployed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki"
+    },
+    {
+      "number": 342,
+      "title": "Validation of Taproot Scripts",
+      "status": "Deployed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0342.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "Re: [Bitcoin-development] Mining centralization pressure from\n non-uniform propagation speed",
+    "date": "2015-06-14",
+    "link": "https://gnusha.org/pi/bitcoindev/557DBDCC.5040106@student.ethz.ch"
+  },
+  "last_message": {
+    "source": "delving",
+    "subject": "Re: SHRIMPS: 2.5 KB post-quantum signatures across multiple stateful devices",
+    "date": "2026-04-06",
+    "link": "https://delvingbitcoin.org/t/shrimps-2-5-kb-post-quantum-signatures-across-multiple-stateful-devices/2355/5"
+  },
+  "social_history": {
+    "2015": {
+      "mining": 1
+    },
+    "2018": {
+      "mining": 1,
+      "multisig-threshold": 1,
+      "signatures-sighash": 2,
+      "taproot": 2
+    },
+    "2019": {
+      "other": 3,
+      "script-opcodes": 1
+    },
+    "2020": {
+      "mining": 1,
+      "other": 2,
+      "signatures-sighash": 3,
+      "taproot": 3
+    },
+    "2022": {
+      "covenants": 1,
+      "other": 3,
+      "multisig-threshold": 8,
+      "script-opcodes": 1,
+      "signatures-sighash": 4,
+      "taproot": 4
+    },
+    "2023": {
+      "other": 4,
+      "mining": 1,
+      "multisig-threshold": 7,
+      "taproot": 2
+    },
+    "2024": {
+      "other": 5,
+      "covenants": 1,
+      "multisig-threshold": 2
+    },
+    "2025": {
+      "other": 7,
+      "covenants": 5,
+      "mining": 1,
+      "multisig-threshold": 2,
+      "quantum": 11,
+      "script-opcodes": 5,
+      "taproot": 3
+    },
+    "2026": {
+      "other": 2,
+      "covenants": 3,
+      "quantum": 7,
+      "script-opcodes": 3,
+      "taproot": 3
+    }
+  }
 }

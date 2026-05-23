@@ -1,0 +1,125 @@
+{
+  "display_name": "James Hilliard",
+  "github_login_final": "jameshilliard",
+  "delving_username_final": null,
+  "uuid": "can_james_hilliard",
+  "badges": {
+    "is_bip_author": true,
+    "is_core_committer": null,
+    "is_core_contributor": true,
+    "is_maintainer": null,
+    "is_social_contributor": true,
+    "is_sponsored": null,
+    "maintainer_status": null,
+    "social_source": "mailing_list",
+    "sponsor_id": null
+  },
+  "roles": [
+    "BIP Author",
+    "Researcher"
+  ],
+  "first_seen": "2026-04-17T00:00:00",
+  "last_seen": "2026-05-18T00:00:00",
+  "technical_focus": "Build & CI (DevOps)",
+  "total_commits": 6.0,
+  "authored_commits": 6.0,
+  "merge_commits": 0.0,
+  "total_additions": 54.0,
+  "total_deletions": 14.0,
+  "first_commit": "2017-07-27T12:34:09",
+  "last_commit": "2019-09-12T11:07:53",
+  "bips_authored": 1.0,
+  "avg_review_latency_days": 252.6926293751212,
+  "reviews_count": 45.0,
+  "avg_approval_latency_days": 16.0171148989899,
+  "approvals_count": 11.0,
+  "prs_authored": 20.0,
+  "avg_pr_ack_velocity_days": 5.484348544973544,
+  "avg_concept_lead_time_days": 0.10553819444444446,
+  "review_reciprocity": 2.25,
+  "hybrid_score": 0.6605,
+  "threads_started": 4.0,
+  "replies_sent": 43.0,
+  "ml_threads": 4.0,
+  "delving_threads": 0.0,
+  "ml_responses": 43.0,
+  "delving_responses": 0.0,
+  "first_active": "2015-08-31T20:16:31",
+  "last_active": "2021-06-28T06:28:13",
+  "dev_type": "Builder",
+  "global_first_active": "2015-08-31T20:16:31",
+  "global_last_active": "2021-06-28T06:28:13",
+  "github_location": null,
+  "github_company": null,
+  "github_bio": null,
+  "github_twitter": null,
+  "github_blog": null,
+  "github_followers": 162.0,
+  "is_top_50": false,
+  "github_url": "https://github.com/jameshilliard",
+  "commit_history": {
+    "2017": {
+      "Build & CI (DevOps)": 0.5,
+      "Core Libs": 0.5
+    },
+    "2018": {
+      "Build & CI (DevOps)": 2.0,
+      "GUI (Presentation Layer)": 1.0
+    },
+    "2019": {
+      "GUI (Presentation Layer)": 1.0
+    }
+  },
+  "bip_list": [
+    {
+      "number": 91,
+      "title": "Reduced threshold Segwit MASF",
+      "status": "Deployed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0091.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoin-dev] AT&T has effectively banned Bitcoin nodes by\n closing port 8333 via a hidden firewall in the cable box",
+    "date": "2015-08-31",
+    "link": "https://gnusha.org/pi/bitcoindev/CADvTj4rRVf89zU8dLROhyGopJNg2vLDg-9oviOLye_VcvuAy7A@mail.gmail.com"
+  },
+  "last_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoin-dev] Boost Bitcoin circulation,\n Million Transactions Per Second with stronger privacy",
+    "date": "2021-06-28",
+    "link": "https://gnusha.org/pi/bitcoindev/CADvTj4qQ=xcpCZRigkXGm2CzduO=AXc22GjghSe6RA37XjrPzA@mail.gmail.com"
+  },
+  "social_history": {
+    "2015": {
+      "mempool-fees": 1,
+      "mining": 1,
+      "other": 1
+    },
+    "2016": {
+      "hard-fork-block-size": 4,
+      "mining": 4,
+      "scaling": 1,
+      "soft-fork-activation": 1
+    },
+    "2017": {
+      "bip-process": 1,
+      "hard-fork-block-size": 2,
+      "mempool-fees": 3,
+      "mining": 12,
+      "scaling": 1,
+      "other": 5,
+      "segwit": 18,
+      "soft-fork-activation": 21
+    },
+    "2018": {
+      "other": 1
+    },
+    "2021": {
+      "other": 1,
+      "mining": 2,
+      "privacy": 3
+    }
+  }
+}

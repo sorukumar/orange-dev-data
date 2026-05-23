@@ -49,7 +49,7 @@ The **Consolidated Intelligence Layer**. This is the "Gold" layer where all dive
 Lightweight JSON optimized for browser loading. 
 - **`output/tracker/`**: Metric cards, contributor footprints, and tables.
 - **`output/network/`**: Influence graphs and PageRank rankings.
-- **`output/shared/contributors/`**: **Universal Profile Layer**. Sharded JSON profiles for all elite contributors including GitHub and Delving cross-links.
+- **`output/shared/contributors/`**: **Universal Profile Layer**. Sharded JSON profiles for all **301 high-signal contributors** (`authored_commits >= 10` OR `bips_authored > 0`) including commit history by year/category, BIP authorship, first/last social message, and social activity by topic.
 
 ---
 

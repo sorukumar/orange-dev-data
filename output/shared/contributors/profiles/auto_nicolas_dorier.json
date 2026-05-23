@@ -48,6 +48,88 @@
   "dev_type": "Builder",
   "global_first_active": "2015-01-28T06:45:29",
   "global_last_active": "2020-05-16T14:46:35",
-  "is_top_50": true,
-  "github_url": "https://github.com/NicolasDorier"
+  "github_location": "Tokyo",
+  "github_company": "DG Lab",
+  "github_bio": null,
+  "github_twitter": "NicolasDorier",
+  "github_blog": "https://blog.nicolas-dorier.com/",
+  "github_followers": 1131.0,
+  "is_top_50": false,
+  "github_url": "https://github.com/NicolasDorier",
+  "commit_history": {
+    "2016": {
+      "Consensus (Domain Logic)": 2.67,
+      "Core Libs": 3.67,
+      "Node & RPC (App/Interface)": 0.67,
+      "Tests (QA)": 2.0
+    },
+    "2017": {
+      "Core Libs": 1.5,
+      "Database (Persistence)": 0.5,
+      "Node & RPC (App/Interface)": 0.5,
+      "Tests (QA)": 3.5,
+      "Wallet (Client App)": 5.0
+    },
+    "2019": {
+      "Build & CI (DevOps)": 4.25,
+      "Consensus (Domain Logic)": 0.33,
+      "Core Libs": 1.5,
+      "GUI (Presentation Layer)": 0.33,
+      "Node & RPC (App/Interface)": 1.58,
+      "P2P Network (Infrastructure)": 2.92,
+      "Tests (QA)": 4.08
+    }
+  },
+  "bip_list": [
+    {
+      "number": 68,
+      "title": "Relative lock-time using consensus-enforced sequence numbers",
+      "status": "Deployed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0068.mediawiki"
+    },
+    {
+      "number": 78,
+      "title": "A Simple Payjoin Proposal",
+      "status": "Draft",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0078.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "Re: [Bitcoin-development] BIP70: why Google Protocol Buffers for\n\tencoding?",
+    "date": "2015-01-28",
+    "link": "https://gnusha.org/pi/bitcoindev/CALYO6Xt-jTYwpywUaH-s4YPYyGUp1_BLSEswscnwX+Vu166Lcw@mail.gmail.com"
+  },
+  "last_message": {
+    "source": "mailing_list",
+    "subject": "[bitcoin-dev] BIP Number request for a simple payjoin proposal",
+    "date": "2020-05-16",
+    "link": "https://gnusha.org/pi/bitcoindev/CA+1nnrkq2zq_PFoUyNadE7KMncbv30M=Kr-Ek4nDfnJvgDHrfQ@mail.gmail.com"
+  },
+  "social_history": {
+    "2015": {
+      "core-dev": 1,
+      "hard-fork-block-size": 3,
+      "mining": 5,
+      "payment-protocol": 6,
+      "script-opcodes": 1
+    },
+    "2016": {
+      "core-dev": 1,
+      "other": 3,
+      "p2p-network": 1,
+      "script-opcodes": 1
+    },
+    "2017": {
+      "other": 2
+    },
+    "2019": {
+      "other": 1
+    },
+    "2020": {
+      "privacy": 1
+    }
+  }
 }

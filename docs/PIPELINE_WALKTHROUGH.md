@@ -327,8 +327,13 @@ Refreshes `metadata/contributors.json` with the latest unified data (reads from
 **Writes:**
 - `output/shared/contributors/registry_index.json` — flat table of all 7,549 rows
   with selected columns for the directory view
-- `output/shared/contributors/profiles/shard_*.json` — deep profiles for top 50
-  high-signal contributors
+- `output/shared/contributors/profiles/{uuid}.json` — deep profiles for **301
+  high-signal contributors** (`authored_commits >= 10` OR `bips_authored > 0`).
+  Each shard is the registry entry plus four embedded enriched datasets loaded at
+  startup: per-year commit breakdown by codebase category (`commit_history`),
+  BIP authorship list with title/status/theme/link (`bip_list`), first and last
+  indexed social message (`first_message` / `last_message`), and per-year social
+  activity count by topic (`social_history`).
 
 ### `ecosystem_summary.py`
 
@@ -417,7 +422,7 @@ identities.json (base)
                 ↓
         registry.py (final) → metadata/contributors.json refreshed
                 ↓
-        ui_artifacts.py → registry_index.json + top-50 profile shards
+        ui_artifacts.py → registry_index.json + 301 high-signal profile shards ({uuid}.json)
                 ↓
         ecosystem_summary.py → ecosystem_summary.json
                 ↓

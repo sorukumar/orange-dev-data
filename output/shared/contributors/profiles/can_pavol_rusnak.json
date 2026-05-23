@@ -49,6 +49,150 @@
   "dev_type": "Protocol Designer",
   "global_first_active": "2013-09-10T16:34:01",
   "global_last_active": "2024-01-13T10:31:35",
-  "is_top_50": true,
-  "github_url": "https://github.com/prusnak"
+  "github_location": "\u20bf pavol@rusnak.io",
+  "github_company": "Co-Founder @SatoshiLabs",
+  "github_bio": "\u270a Strengthening individual power and independence via open-source software and hardware projects \u2022 @Bitcoin @Trezor @NixOS @TropicSquare",
+  "github_twitter": "pavolrusnak",
+  "github_blog": "https://rusnak.io",
+  "github_followers": 1168.0,
+  "is_top_50": false,
+  "github_url": "https://github.com/prusnak",
+  "commit_history": {
+    "2015": {
+      "Core Libs": 0.83,
+      "Node & RPC (App/Interface)": 0.33,
+      "P2P Network (Infrastructure)": 0.83
+    },
+    "2017": {
+      "Core Libs": 1.0
+    },
+    "2020": {
+      "Node & RPC (App/Interface)": 1.0
+    },
+    "2021": {
+      "GUI (Presentation Layer)": 1.0
+    },
+    "2022": {
+      "Build & CI (DevOps)": 2.33,
+      "Core Libs": 3.67,
+      "Cryptography (Primitives)": 2.0,
+      "Documentation": 2.33,
+      "Node & RPC (App/Interface)": 0.33,
+      "Tests (QA)": 0.33
+    }
+  },
+  "bip_list": [
+    {
+      "number": 39,
+      "title": "Mnemonic code for generating deterministic keys",
+      "status": "Deployed",
+      "theme": "Wallet & Keys",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki"
+    },
+    {
+      "number": 43,
+      "title": "Purpose Field for Deterministic Wallets",
+      "status": "Deployed",
+      "theme": "Wallet & Keys",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0043.mediawiki"
+    },
+    {
+      "number": 44,
+      "title": "Multi-Account Hierarchy for Deterministic Wallets",
+      "status": "Deployed",
+      "theme": "Wallet & Keys",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki"
+    },
+    {
+      "number": 84,
+      "title": "Derivation scheme for P2WPKH based accounts",
+      "status": "Deployed",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0084.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "Re: [Bitcoin-development] BIP0039 Mnemonic code for generating\n deterministic keys",
+    "date": "2013-09-10",
+    "link": "https://gnusha.org/pi/bitcoindev/522F9049.3020703@gk2.sk"
+  },
+  "last_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoin-dev] Introducing a version field to BIP39 mnemonic\n\tphrases",
+    "date": "2024-01-13",
+    "link": "https://gnusha.org/pi/bitcoindev/CAF90Av=HqhdOfLpY1Pz8J2N7f_A+L_LDcni2Rx59Z5rNpsLksQ@mail.gmail.com"
+  },
+  "social_history": {
+    "2013": {
+      "wallet-keys": 7
+    },
+    "2014": {
+      "mempool-fees": 21,
+      "mining": 3,
+      "multisig-threshold": 1,
+      "other": 9,
+      "script-opcodes": 1,
+      "segwit": 1,
+      "wallet-keys": 29
+    },
+    "2015": {
+      "other": 1,
+      "multisig-threshold": 1,
+      "script-opcodes": 1,
+      "wallet-keys": 10
+    },
+    "2016": {
+      "other": 2,
+      "script-opcodes": 6,
+      "segwit": 2,
+      "wallet-keys": 9
+    },
+    "2017": {
+      "other": 3,
+      "script-opcodes": 1,
+      "segwit": 5,
+      "wallet-keys": 9
+    },
+    "2018": {
+      "mining": 6,
+      "other": 1,
+      "taproot": 2,
+      "wallet-keys": 3
+    },
+    "2019": {
+      "mining": 1,
+      "other": 1,
+      "segwit": 1,
+      "taproot": 1,
+      "wallet-keys": 3
+    },
+    "2020": {
+      "mempool-fees": 1,
+      "multisig-threshold": 1,
+      "other": 1,
+      "taproot": 1,
+      "wallet-keys": 3
+    },
+    "2021": {
+      "mining": 2,
+      "multisig-threshold": 1,
+      "other": 2,
+      "taproot": 1,
+      "wallet-keys": 1
+    },
+    "2022": {
+      "taproot": 1,
+      "wallet-keys": 5
+    },
+    "2023": {
+      "script-opcodes": 1,
+      "segwit": 1,
+      "taproot": 1,
+      "wallet-keys": 2
+    },
+    "2024": {
+      "wallet-keys": 2
+    }
+  }
 }

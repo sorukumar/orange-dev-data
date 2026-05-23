@@ -1,0 +1,124 @@
+{
+  "display_name": "Salvatore Ingala",
+  "github_login_final": "bigspider",
+  "delving_username_final": null,
+  "uuid": "auto_salvatore_ingala",
+  "badges": {
+    "is_bip_author": true,
+    "is_core_committer": null,
+    "is_core_contributor": true,
+    "is_maintainer": null,
+    "is_social_contributor": true,
+    "is_sponsored": null,
+    "maintainer_status": null,
+    "social_source": "mailing_list",
+    "sponsor_id": null
+  },
+  "roles": [
+    "BIP Author",
+    "Researcher"
+  ],
+  "first_seen": "2026-04-17T00:00:00",
+  "last_seen": "2026-05-18T00:00:00",
+  "technical_focus": "Documentation",
+  "total_commits": 1.0,
+  "authored_commits": 1.0,
+  "merge_commits": 0.0,
+  "total_additions": 20.0,
+  "total_deletions": 20.0,
+  "first_commit": "2025-07-01T07:20:36",
+  "last_commit": "2025-07-01T07:20:36",
+  "bips_authored": 2.0,
+  "avg_review_latency_days": 1857.8392598968142,
+  "reviews_count": 32.0,
+  "avg_approval_latency_days": 1755.761199202675,
+  "approvals_count": 9.0,
+  "prs_authored": 12.0,
+  "avg_pr_ack_velocity_days": 8.723671875,
+  "avg_concept_lead_time_days": 0.06405092592592593,
+  "review_reciprocity": 2.6666666666666665,
+  "hybrid_score": 0.7636,
+  "threads_started": 5.0,
+  "replies_sent": 21.0,
+  "ml_threads": 5.0,
+  "delving_threads": 0.0,
+  "ml_responses": 21.0,
+  "delving_responses": 0.0,
+  "first_active": "2020-06-08T04:28:28",
+  "last_active": "2025-01-17T07:02:50",
+  "dev_type": "Builder",
+  "global_first_active": "2020-06-08T04:28:28",
+  "global_last_active": "2025-07-01T07:20:36",
+  "github_location": null,
+  "github_company": null,
+  "github_bio": "\u20bfitcoin",
+  "github_twitter": "salvatoshi",
+  "github_blog": "https://salvatoshi.com",
+  "github_followers": 154.0,
+  "is_top_50": false,
+  "github_url": "https://github.com/bigspider",
+  "commit_history": {
+    "2025": {
+      "Documentation": 1.0
+    }
+  },
+  "bip_list": [
+    {
+      "number": 388,
+      "title": "Wallet Policies for Descriptor Wallets",
+      "status": "Complete",
+      "theme": "Privacy",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0388.mediawiki"
+    },
+    {
+      "number": 443,
+      "title": "OP_CHECKCONTRACTVERIFY",
+      "status": "Draft",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0443.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "[bitcoin-dev] Hash-based accumulators with quick insertion",
+    "date": "2020-06-08",
+    "link": "https://gnusha.org/pi/bitcoindev/CAMhCMoELX-=9N08KE499yjPNzH6xPqBB+gAKgQMTxbnsWQuV1w@mail.gmail.com"
+  },
+  "last_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoindev] Who uses or wants to use PSBTv2 (BIP370)",
+    "date": "2025-01-17",
+    "link": "https://gnusha.org/pi/bitcoindev/CAMhCMoGArSJ1_x2yhqUuedVpBZt1iPwioujJCH2eLVPEy9_QNA@mail.gmail.com"
+  },
+  "social_history": {
+    "2020": {
+      "data-structures": 1,
+      "mempool-fees": 1
+    },
+    "2021": {
+      "multisig-threshold": 1,
+      "taproot": 2,
+      "wallet-keys": 2
+    },
+    "2022": {
+      "covenants": 2,
+      "data-structures": 4,
+      "script-opcodes": 3,
+      "wallet-keys": 4
+    },
+    "2023": {
+      "covenants": 1,
+      "data-structures": 6,
+      "mempool-fees": 1,
+      "other": 5,
+      "multisig-threshold": 1,
+      "scaling": 2,
+      "script-opcodes": 7,
+      "wallet-keys": 2
+    },
+    "2025": {
+      "other": 1,
+      "wallet-keys": 2
+    }
+  }
+}

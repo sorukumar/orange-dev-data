@@ -48,7 +48,126 @@
   "dev_type": "Builder",
   "global_first_active": "2014-09-13T00:09:18",
   "global_last_active": "2026-04-14T17:39:38",
-  "is_top_50": true,
+  "github_location": null,
+  "github_company": null,
+  "github_bio": null,
+  "github_twitter": null,
+  "github_blog": null,
+  "github_followers": null,
+  "is_top_50": false,
   "github_url": "https://github.com/murchandamus",
-  "delving_url": "https://delvingbitcoin.org/u/murch"
+  "delving_url": "https://delvingbitcoin.org/u/murch",
+  "commit_history": {
+    "2014": {
+      "Wallet (Client App)": 1.0
+    },
+    "2015": {
+      "Tests (QA)": 0.5,
+      "Wallet (Client App)": 2.5
+    },
+    "2017": {
+      "Consensus (Domain Logic)": 1.0
+    },
+    "2019": {
+      "Node & RPC (App/Interface)": 1.0
+    },
+    "2022": {
+      "Consensus (Domain Logic)": 1.0,
+      "Documentation": 0.25,
+      "Node & RPC (App/Interface)": 0.25,
+      "Tests (QA)": 1.25,
+      "Wallet (Client App)": 5.25
+    },
+    "2023": {
+      "Consensus (Domain Logic)": 0.5,
+      "Node & RPC (App/Interface)": 3.0,
+      "Tests (QA)": 7.0,
+      "Wallet (Client App)": 4.5
+    },
+    "2024": {
+      "Tests (QA)": 13.5,
+      "Wallet (Client App)": 6.5
+    },
+    "2025": {
+      "Tests (QA)": 4.0
+    },
+    "2026": {
+      "Tests (QA)": 5.0
+    }
+  },
+  "bip_list": [
+    {
+      "number": 3,
+      "title": "Updated BIP Process",
+      "status": "Deployed",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0003.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "[bitcoin-dev] On-going work: Coin Selection Simulation",
+    "date": "2016-09-21",
+    "link": "https://gnusha.org/pi/bitcoindev/358752cc-48f6-eef8-ae9a-e17a0651ed52@murch.one"
+  },
+  "last_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoindev] [BIP Draft] Dust UTXO Disposal Protocol",
+    "date": "2026-04-14",
+    "link": "https://gnusha.org/pi/bitcoindev/4c3bb222-c492-4eb2-af98-68bee09ec5cd@murch.one"
+  },
+  "social_history": {
+    "2016": {
+      "other": 5,
+      "taproot": 1
+    },
+    "2021": {
+      "mempool-fees": 1,
+      "mining": 1
+    },
+    "2022": {
+      "bip-process": 1,
+      "mempool-fees": 1,
+      "other": 1
+    },
+    "2023": {
+      "mempool-fees": 5,
+      "mining": 2,
+      "other": 6,
+      "taproot": 4
+    },
+    "2024": {
+      "bip-process": 8,
+      "consensus-cleanup": 10,
+      "other": 35,
+      "hard-fork-block-size": 10,
+      "mempool-fees": 17,
+      "mining": 14,
+      "security": 11,
+      "soft-fork-activation": 5,
+      "taproot": 3
+    },
+    "2025": {
+      "bip-process": 10,
+      "other": 19,
+      "consensus-cleanup": 1,
+      "hard-fork-block-size": 1,
+      "mempool-fees": 5,
+      "mining": 3,
+      "security": 2,
+      "soft-fork-activation": 5,
+      "taproot": 3
+    },
+    "2026": {
+      "bip-process": 3,
+      "consensus-cleanup": 2,
+      "other": 20,
+      "hard-fork-block-size": 1,
+      "mempool-fees": 3,
+      "mining": 3,
+      "security": 1,
+      "soft-fork-activation": 3,
+      "taproot": 2
+    }
+  }
 }

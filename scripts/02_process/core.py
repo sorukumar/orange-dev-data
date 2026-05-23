@@ -862,6 +862,15 @@ class MetricGenerators:
         with open(Config.FILES["contributors_rich"], "w") as f:
             json.dump(output_list, f)
 
+        # Also export history_map as a standalone shared enriched file so that
+        # ui_artifacts.py (network profiles) can consume it without depending on
+        # the tracker-targeted contributors_rich.json format.
+        commit_history_path = "data/enriched/contributor_commit_history.json"
+        os.makedirs(os.path.dirname(commit_history_path), exist_ok=True)
+        with open(commit_history_path, "w") as f:
+            json.dump(history_map, f)
+        print(f"Exported contributor commit history to {commit_history_path}")
+
     @staticmethod
     def generate_common_metrics(commits):
         # Maintainers, Heatmap, Weekend

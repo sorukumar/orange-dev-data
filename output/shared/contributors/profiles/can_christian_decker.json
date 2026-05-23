@@ -49,7 +49,145 @@
   "dev_type": "Builder",
   "global_first_active": "2011-06-13T03:55:04",
   "global_last_active": "2026-04-13T10:57:41.510000128",
-  "is_top_50": true,
+  "github_location": "Zurich, Switzerland",
+  "github_company": "@Blockstream ",
+  "github_bio": null,
+  "github_twitter": "Snyke",
+  "github_blog": "http://snyke.net",
+  "github_followers": 619.0,
+  "is_top_50": false,
   "github_url": "https://github.com/cdecker",
-  "delving_url": "https://delvingbitcoin.org/u/cdecker"
+  "delving_url": "https://delvingbitcoin.org/u/cdecker",
+  "commit_history": {
+    "2014": {
+      "Consensus (Domain Logic)": 1.0
+    },
+    "2015": {
+      "Core Libs": 1.0
+    },
+    "2016": {
+      "Consensus (Domain Logic)": 1.0
+    },
+    "2021": {
+      "Documentation": 1.0,
+      "Node & RPC (App/Interface)": 2.0,
+      "Tests (QA)": 1.0
+    }
+  },
+  "bip_list": [
+    {
+      "number": 118,
+      "title": "SIGHASH_ANYPREVOUT for Taproot Scripts",
+      "status": "Draft",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0118.mediawiki"
+    },
+    {
+      "number": 140,
+      "title": "Normalized TXID",
+      "status": "Closed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0140.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "[Bitcoin-development] Bootstrapping via BitTorrent trackers",
+    "date": "2011-06-13",
+    "link": "https://gnusha.org/pi/bitcoindev/BANLkTin_qs4bDabnu+b3K1hTzLzr4JKHsg@mail.gmail.com"
+  },
+  "last_message": {
+    "source": "delving",
+    "subject": "Re: Eltoo State Chain on Signet: Three Rounds, Six Transactions (APO + CTV)",
+    "date": "2026-04-13",
+    "link": "https://delvingbitcoin.org/t/eltoo-state-chain-on-signet-three-rounds-six-transactions-apo-ctv/2413/2"
+  },
+  "social_history": {
+    "2011": {
+      "other": 23,
+      "mempool-fees": 1,
+      "mining": 4,
+      "p2p-network": 4
+    },
+    "2012": {
+      "other": 2,
+      "mining": 1
+    },
+    "2013": {
+      "other": 6
+    },
+    "2014": {
+      "other": 3,
+      "p2p-network": 2
+    },
+    "2015": {
+      "other": 25,
+      "mining": 1,
+      "script-opcodes": 3,
+      "signatures-sighash": 1
+    },
+    "2016": {
+      "other": 4
+    },
+    "2017": {
+      "other": 3,
+      "mempool-fees": 1,
+      "mining": 1,
+      "p2p-network": 1
+    },
+    "2018": {
+      "other": 11,
+      "covenants": 4,
+      "lightning": 12,
+      "mempool-fees": 3,
+      "p2p-network": 2,
+      "script-opcodes": 3,
+      "signatures-sighash": 16
+    },
+    "2019": {
+      "covenants": 8,
+      "lightning": 9,
+      "mining": 1,
+      "other": 5,
+      "script-opcodes": 2,
+      "signatures-sighash": 5
+    },
+    "2020": {
+      "covenants": 2,
+      "other": 1,
+      "lightning": 1,
+      "mining": 1,
+      "signatures-sighash": 2
+    },
+    "2022": {
+      "covenants": 1,
+      "lightning": 1,
+      "mempool-fees": 1,
+      "script-opcodes": 3,
+      "other": 5
+    },
+    "2023": {
+      "lightning": 1,
+      "other": 1
+    },
+    "2024": {
+      "other": 3,
+      "lightning": 2,
+      "mempool-fees": 2,
+      "p2p-network": 1
+    },
+    "2025": {
+      "lightning": 2,
+      "mempool-fees": 2,
+      "mining": 2,
+      "other": 4,
+      "script-opcodes": 2
+    },
+    "2026": {
+      "covenants": 1,
+      "lightning": 1,
+      "signatures-sighash": 1,
+      "other": 1
+    }
+  }
 }

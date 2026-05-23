@@ -46,7 +46,310 @@
   "dev_type": "Protocol Designer",
   "global_first_active": "2011-03-05T14:32:32",
   "global_last_active": "2026-04-16T06:17:22",
-  "is_top_50": true,
+  "github_location": null,
+  "github_company": null,
+  "github_bio": "Many repos moved, see https://git.bitcoin.ninja.",
+  "github_twitter": null,
+  "github_blog": "https://git.bitcoin.ninja",
+  "github_followers": 0.0,
+  "is_top_50": false,
   "github_url": "https://github.com/TheBlueMatt",
-  "delving_url": "https://delvingbitcoin.org/u/mattcorallo"
+  "delving_url": "https://delvingbitcoin.org/u/mattcorallo",
+  "commit_history": {
+    "2011": {
+      "Build & CI (DevOps)": 14.58,
+      "Core Libs": 65.25,
+      "Documentation": 8.83,
+      "GUI (Presentation Layer)": 2.58,
+      "Node & RPC (App/Interface)": 3.92,
+      "P2P Network (Infrastructure)": 7.83,
+      "Tests (QA)": 2.0
+    },
+    "2012": {
+      "Build & CI (DevOps)": 9.5,
+      "Core Libs": 32.17,
+      "Documentation": 3.0,
+      "GUI (Presentation Layer)": 5.33,
+      "Node & RPC (App/Interface)": 1.33,
+      "P2P Network (Infrastructure)": 10.33,
+      "Tests (QA)": 9.33
+    },
+    "2013": {
+      "Build & CI (DevOps)": 2.2,
+      "Core Libs": 29.2,
+      "Documentation": 0.2,
+      "Node & RPC (App/Interface)": 0.7,
+      "P2P Network (Infrastructure)": 2.2,
+      "Tests (QA)": 3.5
+    },
+    "2014": {
+      "Build & CI (DevOps)": 1.25,
+      "Consensus (Domain Logic)": 0.75,
+      "Core Libs": 15.25,
+      "Documentation": 1.0,
+      "Node & RPC (App/Interface)": 4.5,
+      "P2P Network (Infrastructure)": 1.0,
+      "Tests (QA)": 1.25
+    },
+    "2015": {
+      "Consensus (Domain Logic)": 2.5,
+      "Core Libs": 31.33,
+      "GUI (Presentation Layer)": 1.83,
+      "Node & RPC (App/Interface)": 7.83,
+      "P2P Network (Infrastructure)": 0.83,
+      "Tests (QA)": 1.67,
+      "Wallet (Client App)": 8.0
+    },
+    "2016": {
+      "Build & CI (DevOps)": 2.29,
+      "Consensus (Domain Logic)": 10.88,
+      "Core Libs": 52.04,
+      "Documentation": 1.0,
+      "GUI (Presentation Layer)": 0.96,
+      "Node & RPC (App/Interface)": 9.96,
+      "P2P Network (Infrastructure)": 16.21,
+      "Tests (QA)": 6.46,
+      "Wallet (Client App)": 1.21
+    },
+    "2017": {
+      "Build & CI (DevOps)": 2.33,
+      "Consensus (Domain Logic)": 37.95,
+      "Core Libs": 60.62,
+      "Documentation": 2.75,
+      "GUI (Presentation Layer)": 2.83,
+      "Node & RPC (App/Interface)": 25.7,
+      "P2P Network (Infrastructure)": 45.7,
+      "Tests (QA)": 13.33,
+      "Wallet (Client App)": 21.78
+    },
+    "2018": {
+      "Consensus (Domain Logic)": 8.75,
+      "Core Libs": 3.33,
+      "Documentation": 2.0,
+      "GUI (Presentation Layer)": 0.75,
+      "Node & RPC (App/Interface)": 2.08,
+      "P2P Network (Infrastructure)": 1.75,
+      "Tests (QA)": 1.83,
+      "Utilities (Shared Libs)": 1.0,
+      "Wallet (Client App)": 0.5
+    },
+    "2019": {
+      "Consensus (Domain Logic)": 9.58,
+      "Core Libs": 1.83,
+      "Documentation": 2.08,
+      "Node & RPC (App/Interface)": 0.75,
+      "P2P Network (Infrastructure)": 4.83,
+      "Tests (QA)": 4.92
+    },
+    "2021": {
+      "Documentation": 1.0
+    },
+    "2024": {
+      "Consensus (Domain Logic)": 1.0
+    },
+    "2025": {
+      "Consensus (Domain Logic)": 0.5,
+      "Tests (QA)": 0.5
+    }
+  },
+  "bip_list": [
+    {
+      "number": 21,
+      "title": "URI Scheme",
+      "status": "Closed",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0021.mediawiki"
+    },
+    {
+      "number": 37,
+      "title": "Connection Bloom filtering",
+      "status": "Deployed",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0037.mediawiki"
+    },
+    {
+      "number": 54,
+      "title": "Consensus Cleanup",
+      "status": "Draft",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0054.mediawiki"
+    },
+    {
+      "number": 111,
+      "title": "NODE_BLOOM service bit",
+      "status": "Deployed",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0111.mediawiki"
+    },
+    {
+      "number": 152,
+      "title": "Compact Block Relay",
+      "status": "Deployed",
+      "theme": "Scaling & Lightning",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0152.mediawiki"
+    },
+    {
+      "number": 321,
+      "title": "URI Scheme",
+      "status": "Complete",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0321.mediawiki"
+    },
+    {
+      "number": 323,
+      "title": "24 nVersion bits for general purpose use",
+      "status": "Draft",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0323.mediawiki"
+    },
+    {
+      "number": 353,
+      "title": "DNS Payment Instructions",
+      "status": "Complete",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0353.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "[Bitcoin-development] [PULL] Wallet Private Key Encryption Take 3",
+    "date": "2011-06-26",
+    "link": "https://gnusha.org/pi/bitcoindev/1309137623.3689.4.camel@Desktop666"
+  },
+  "last_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoindev] PQC - What is our Goal, Even?",
+    "date": "2026-04-16",
+    "link": "https://gnusha.org/pi/bitcoindev/c495b375-ebf5-4d9d-a9f6-a9d9922fd3dc@mattcorallo.com"
+  },
+  "social_history": {
+    "2011": {
+      "other": 62,
+      "mempool-fees": 3,
+      "mining": 3,
+      "p2p-network": 2,
+      "taproot": 2
+    },
+    "2012": {
+      "other": 29,
+      "mempool-fees": 3,
+      "mining": 3,
+      "p2p-network": 7
+    },
+    "2013": {
+      "lightning": 1,
+      "mempool-fees": 3,
+      "mining": 1,
+      "other": 10,
+      "p2p-network": 3,
+      "taproot": 2
+    },
+    "2014": {
+      "other": 14,
+      "lightning": 1,
+      "mempool-fees": 2,
+      "mining": 2,
+      "p2p-network": 4,
+      "soft-fork-activation": 1
+    },
+    "2015": {
+      "other": 57,
+      "mempool-fees": 3,
+      "mining": 10,
+      "p2p-network": 3,
+      "segwit": 3,
+      "taproot": 1
+    },
+    "2016": {
+      "other": 13,
+      "mining": 7,
+      "p2p-network": 5,
+      "segwit": 8,
+      "soft-fork-activation": 3
+    },
+    "2017": {
+      "other": 31,
+      "mempool-fees": 2,
+      "mining": 3,
+      "p2p-network": 5,
+      "segwit": 15,
+      "soft-fork-activation": 8,
+      "taproot": 1
+    },
+    "2018": {
+      "lightning": 2,
+      "mempool-fees": 4,
+      "mining": 4,
+      "other": 12,
+      "p2p-network": 3,
+      "segwit": 1,
+      "taproot": 5
+    },
+    "2019": {
+      "other": 29,
+      "lightning": 4,
+      "mempool-fees": 5,
+      "mining": 2,
+      "p2p-network": 5,
+      "segwit": 4,
+      "taproot": 2
+    },
+    "2020": {
+      "other": 21,
+      "lightning": 9,
+      "mempool-fees": 10,
+      "mining": 6,
+      "p2p-network": 3,
+      "soft-fork-activation": 5,
+      "taproot": 2
+    },
+    "2021": {
+      "other": 25,
+      "lightning": 1,
+      "mempool-fees": 2,
+      "mining": 5,
+      "p2p-network": 2,
+      "segwit": 2,
+      "soft-fork-activation": 25,
+      "taproot": 28
+    },
+    "2022": {
+      "other": 8,
+      "lightning": 1,
+      "mempool-fees": 1,
+      "mining": 1,
+      "soft-fork-activation": 8
+    },
+    "2023": {
+      "other": 13,
+      "lightning": 3,
+      "mempool-fees": 8,
+      "mining": 1,
+      "soft-fork-activation": 1,
+      "taproot": 1
+    },
+    "2024": {
+      "other": 70,
+      "lightning": 22,
+      "mempool-fees": 5,
+      "mining": 17,
+      "segwit": 8,
+      "soft-fork-activation": 9,
+      "taproot": 12
+    },
+    "2025": {
+      "other": 51,
+      "lightning": 10,
+      "mempool-fees": 2,
+      "mining": 3,
+      "p2p-network": 2,
+      "taproot": 5
+    },
+    "2026": {
+      "other": 31,
+      "mining": 4,
+      "soft-fork-activation": 1,
+      "taproot": 5
+    }
+  }
 }

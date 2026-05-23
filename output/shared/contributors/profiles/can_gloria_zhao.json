@@ -46,7 +46,145 @@
   "dev_type": "Protocol Designer",
   "global_first_active": "2020-03-04T22:01:31",
   "global_last_active": "2026-01-13T23:35:38",
-  "is_top_50": true,
+  "github_location": null,
+  "github_company": null,
+  "github_bio": null,
+  "github_twitter": null,
+  "github_blog": null,
+  "github_followers": null,
+  "is_top_50": false,
   "github_url": "https://github.com/glozow",
-  "delving_url": "https://delvingbitcoin.org/u/glozow"
+  "delving_url": "https://delvingbitcoin.org/u/glozow",
+  "commit_history": {
+    "2020": {
+      "Build & CI (DevOps)": 0.5,
+      "Consensus (Domain Logic)": 1.33,
+      "Documentation": 1.0,
+      "Node & RPC (App/Interface)": 3.33,
+      "P2P Network (Infrastructure)": 2.5,
+      "Tests (QA)": 19.83,
+      "Utilities (Shared Libs)": 0.5,
+      "Wallet (Client App)": 1.0
+    },
+    "2021": {
+      "Build & CI (DevOps)": 2.0,
+      "Consensus (Domain Logic)": 51.25,
+      "Documentation": 4.5,
+      "Node & RPC (App/Interface)": 23.58,
+      "P2P Network (Infrastructure)": 1.75,
+      "Tests (QA)": 41.08,
+      "Utilities (Shared Libs)": 2.83,
+      "Wallet (Client App)": 3.0
+    },
+    "2022": {
+      "Build & CI (DevOps)": 1.33,
+      "Consensus (Domain Logic)": 13.2,
+      "Core Libs": 1.0,
+      "Documentation": 7.53,
+      "GUI (Presentation Layer)": 0.33,
+      "Merge": 27.0,
+      "Node & RPC (App/Interface)": 9.2,
+      "P2P Network (Infrastructure)": 0.83,
+      "Tests (QA)": 27.7,
+      "Wallet (Client App)": 4.87
+    },
+    "2023": {
+      "Build & CI (DevOps)": 2.08,
+      "Consensus (Domain Logic)": 18.33,
+      "Core Libs": 5.92,
+      "Documentation": 1.67,
+      "Merge": 41.0,
+      "Node & RPC (App/Interface)": 14.92,
+      "P2P Network (Infrastructure)": 6.25,
+      "Tests (QA)": 30.83
+    },
+    "2024": {
+      "Build & CI (DevOps)": 1.33,
+      "Consensus (Domain Logic)": 9.33,
+      "Core Libs": 6.67,
+      "Documentation": 7.92,
+      "Merge": 93.0,
+      "Node & RPC (App/Interface)": 17.17,
+      "P2P Network (Infrastructure)": 29.42,
+      "Tests (QA)": 34.17
+    },
+    "2025": {
+      "Build & CI (DevOps)": 1.2,
+      "Consensus (Domain Logic)": 7.0,
+      "Core Libs": 9.03,
+      "Documentation": 7.5,
+      "Merge": 119.0,
+      "Node & RPC (App/Interface)": 21.7,
+      "P2P Network (Infrastructure)": 1.87,
+      "Tests (QA)": 41.2,
+      "Wallet (Client App)": 2.5
+    },
+    "2026": {
+      "Merge": 10.0,
+      "Node & RPC (App/Interface)": 1.0
+    }
+  },
+  "bip_list": [
+    {
+      "number": 331,
+      "title": "Ancestor Package Relay",
+      "status": "Draft",
+      "theme": "Privacy",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0331.mediawiki"
+    },
+    {
+      "number": 431,
+      "title": "Topology Restrictions for Pinning",
+      "status": "Draft",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0431.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoin-dev] L2s Onchain Support IRC Workshop",
+    "date": "2021-04-26",
+    "link": "https://gnusha.org/pi/bitcoindev/CAFXO6=J-3kF4nOqrHLRzN2t+=iCrCDTJh9nD3tY45ihZOAZ8ug@mail.gmail.com"
+  },
+  "last_message": {
+    "source": "delving",
+    "subject": "Bitcoin Core v29.2 Released",
+    "date": "2025-10-14",
+    "link": "https://delvingbitcoin.org/t/bitcoin-core-v29-2-released/2061/1"
+  },
+  "social_history": {
+    "2021": {
+      "mempool-fees": 10,
+      "mining": 1,
+      "other": 1
+    },
+    "2022": {
+      "mempool-fees": 15,
+      "mining": 2,
+      "other": 2,
+      "spam-filtering": 1
+    },
+    "2023": {
+      "mempool-fees": 2
+    },
+    "2024": {
+      "other": 2,
+      "core-dev": 3,
+      "lightning": 4,
+      "mempool-fees": 10,
+      "mining": 1,
+      "script-opcodes": 1,
+      "taproot": 4
+    },
+    "2025": {
+      "core-dev": 12,
+      "other": 3,
+      "mempool-fees": 5,
+      "mining": 4,
+      "script-opcodes": 4,
+      "segwit": 4,
+      "spam-filtering": 5,
+      "taproot": 1
+    }
+  }
 }

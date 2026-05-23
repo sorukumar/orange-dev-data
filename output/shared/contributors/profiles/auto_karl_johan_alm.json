@@ -48,6 +48,178 @@
   "dev_type": "Protocol Designer",
   "global_first_active": "2016-11-25T08:17:57",
   "global_last_active": "2024-01-18T20:33:25",
-  "is_top_50": true,
-  "github_url": "https://github.com/sosochain"
+  "github_location": null,
+  "github_company": null,
+  "github_bio": null,
+  "github_twitter": null,
+  "github_blog": null,
+  "github_followers": 0.0,
+  "is_top_50": false,
+  "github_url": "https://github.com/sosochain",
+  "commit_history": {
+    "2016": {
+      "Build & CI (DevOps)": 1.17,
+      "Consensus (Domain Logic)": 0.2,
+      "Core Libs": 1.7,
+      "GUI (Presentation Layer)": 0.2,
+      "Node & RPC (App/Interface)": 1.5,
+      "P2P Network (Infrastructure)": 0.2,
+      "Tests (QA)": 1.87,
+      "Utilities (Shared Libs)": 1.17
+    },
+    "2017": {
+      "Build & CI (DevOps)": 2.0,
+      "Consensus (Domain Logic)": 4.75,
+      "Core Libs": 4.25,
+      "Documentation": 2.0,
+      "GUI (Presentation Layer)": 0.33,
+      "Node & RPC (App/Interface)": 5.75,
+      "P2P Network (Infrastructure)": 0.25,
+      "Tests (QA)": 5.33,
+      "Utilities (Shared Libs)": 1.0,
+      "Wallet (Client App)": 7.33
+    },
+    "2018": {
+      "Build & CI (DevOps)": 2.5,
+      "Consensus (Domain Logic)": 4.42,
+      "Core Libs": 8.33,
+      "Documentation": 8.0,
+      "GUI (Presentation Layer)": 0.25,
+      "Node & RPC (App/Interface)": 7.42,
+      "P2P Network (Infrastructure)": 0.25,
+      "Tests (QA)": 12.58,
+      "Utilities (Shared Libs)": 0.5,
+      "Wallet (Client App)": 16.75
+    },
+    "2019": {
+      "Build & CI (DevOps)": 0.67,
+      "Consensus (Domain Logic)": 2.67,
+      "Core Libs": 0.67,
+      "Documentation": 1.0,
+      "GUI (Presentation Layer)": 1.0,
+      "Node & RPC (App/Interface)": 4.33,
+      "P2P Network (Infrastructure)": 0.33,
+      "Tests (QA)": 3.67,
+      "Utilities (Shared Libs)": 0.83,
+      "Wallet (Client App)": 6.83
+    },
+    "2020": {
+      "Consensus (Domain Logic)": 5.67,
+      "Core Libs": 1.0,
+      "Documentation": 2.0,
+      "Node & RPC (App/Interface)": 0.5,
+      "Tests (QA)": 3.83,
+      "Utilities (Shared Libs)": 1.67,
+      "Wallet (Client App)": 14.33
+    },
+    "2021": {
+      "Node & RPC (App/Interface)": 4.83,
+      "Tests (QA)": 1.83,
+      "Wallet (Client App)": 5.33
+    }
+  },
+  "bip_list": [
+    {
+      "number": 98,
+      "title": "Fast Merkle Trees",
+      "status": "Draft",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0098.mediawiki"
+    },
+    {
+      "number": 116,
+      "title": "MERKLEBRANCHVERIFY",
+      "status": "Draft",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0116.mediawiki"
+    },
+    {
+      "number": 117,
+      "title": "Tail Call Execution Semantics",
+      "status": "Draft",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0117.mediawiki"
+    },
+    {
+      "number": 154,
+      "title": "Rate Limiting via peer specified challenges",
+      "status": "Closed",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0154.mediawiki"
+    },
+    {
+      "number": 178,
+      "title": "Version Extended WIF",
+      "status": "Draft",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0178.mediawiki"
+    },
+    {
+      "number": 322,
+      "title": "Generic Signed Message Format",
+      "status": "Complete",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0322.mediawiki"
+    },
+    {
+      "number": 325,
+      "title": "Signet",
+      "status": "Complete",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0325.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoin-dev] Currency/exchange rate information API",
+    "date": "2017-03-04",
+    "link": "https://gnusha.org/pi/bitcoindev/CALJw2w49N273-sJ2cGjX=DncEYDh703S6F_7zupqmDJRsz+QZQ@mail.gmail.com"
+  },
+  "last_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoin-dev] BIP process friction",
+    "date": "2024-01-18",
+    "link": "https://gnusha.org/pi/bitcoindev/CALJw2w5SAo65nA1Qc7GinCkgZdhO2C6XQfznAk0Qez37Q1ru2w@mail.gmail.com"
+  },
+  "social_history": {
+    "2017": {
+      "bip-process": 1,
+      "other": 8,
+      "mining": 3,
+      "p2p-network": 3,
+      "segwit": 2,
+      "soft-fork-activation": 3,
+      "taproot": 2,
+      "testing-devtools": 1
+    },
+    "2018": {
+      "other": 19,
+      "mining": 2,
+      "p2p-network": 2,
+      "segwit": 2,
+      "soft-fork-activation": 1,
+      "testing-devtools": 1
+    },
+    "2019": {
+      "mining": 2,
+      "other": 3,
+      "segwit": 1,
+      "taproot": 1,
+      "testing-devtools": 8
+    },
+    "2020": {
+      "bip-process": 2,
+      "other": 6,
+      "taproot": 3,
+      "testing-devtools": 4
+    },
+    "2021": {
+      "bip-process": 1,
+      "other": 2,
+      "taproot": 1
+    },
+    "2024": {
+      "bip-process": 1
+    }
+  }
 }

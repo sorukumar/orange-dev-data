@@ -174,6 +174,90 @@ def main():
 
     print("\nDone.")
 
+    # ── Shared enriched exports for network profile shards ───────────────────
+    # These two files are consumed by scripts/04_deliver/ui_artifacts.py and
+    # must be recomputed here since social_threads.parquet is the source.
+
+    # 1. First & last message bookmarks per contributor
+    # We want the earliest and latest message (by date) for each canonical_id
+    # that has a real link (excludes null/empty links).
+    print("\nComputing contributor message bookmarks...")
+    df_linked = df[df['link'].notna() & (df['link'] != '')]
+    df_linked = df_linked[df_linked['canonical_id'].notna() & (df_linked['canonical_id'] != '')]
+
+    bookmarks: dict = {}
+    if not df_linked.empty:
+        df_linked = df_linked.copy()
+        df_linked['date'] = pd.to_datetime(df_linked['date'], errors='coerce')
+        df_valid = df_linked.dropna(subset=['date'])
+
+        # First message per contributor
+        idx_first = df_valid.groupby('canonical_id')['date'].idxmin()
+        df_first = df_valid.loc[idx_first][['canonical_id', 'source', 'subject', 'date', 'link']].copy()
+
+        # Last message per contributor
+        idx_last = df_valid.groupby('canonical_id')['date'].idxmax()
+        df_last  = df_valid.loc[idx_last][['canonical_id', 'source', 'subject', 'date', 'link']].copy()
+
+        for row in df_first.itertuples(index=False):
+            cid = str(row.canonical_id)
+            bookmarks.setdefault(cid, {})['first_message'] = {
+                'source': str(row.source),
+                'subject': str(row.subject or ''),
+                'date': row.date.date().isoformat(),
+                'link': str(row.link),
+            }
+        for row in df_last.itertuples(index=False):
+            cid = str(row.canonical_id)
+            bookmarks.setdefault(cid, {})['last_message'] = {
+                'source': str(row.source),
+                'subject': str(row.subject or ''),
+                'date': row.date.date().isoformat(),
+                'link': str(row.link),
+            }
+
+    BOOKMARKS_PATH = "data/enriched/contributor_message_bookmarks.json"
+    with open(BOOKMARKS_PATH, 'w') as f:
+        json.dump(bookmarks, f, indent=2)
+    print(f"  Saved → {BOOKMARKS_PATH} ({len(bookmarks)} contributors)")
+
+    # 2. Social history by topic per contributor (year → topic → count)
+    # Explode multi-label categories, then count by (canonical_id, year, topic).
+    # We keep each contributor's top-8 topics by total volume; everything else
+    # rolls into an "other" bucket.
+    print("Computing contributor social history by topic...")
+    df_social = df[df['canonical_id'].notna() & (df['canonical_id'] != '')].copy()
+    df_social['date'] = pd.to_datetime(df_social['date'], errors='coerce')
+    df_social = df_social.dropna(subset=['date'])
+    df_social['year'] = df_social['date'].dt.year.astype(int)
+
+    # Explode list column (categories) into one row per tag
+    df_exploded = df_social.explode('categories')
+    df_exploded = df_exploded[df_exploded['categories'].notna() & (df_exploded['categories'] != '')]
+
+    # Count (canonical_id, year, topic)
+    counts = df_exploded.groupby(['canonical_id', 'year', 'categories']).size().reset_index(name='count')
+
+    # Build per-contributor top-8 topic set
+    topic_totals = counts.groupby(['canonical_id', 'categories'])['count'].sum().reset_index()
+    top_topics: dict = {}
+    for cid, grp in topic_totals.groupby('canonical_id'):
+        top8 = grp.nlargest(8, 'count')['categories'].tolist()
+        top_topics[str(cid)] = set(top8)
+
+    social_history: dict = {}
+    for row in counts.itertuples(index=False):
+        cid = str(row.canonical_id)
+        year = str(row.year)
+        topic = row.categories if row.categories in top_topics.get(cid, set()) else 'other'
+        social_history.setdefault(cid, {}).setdefault(year, {})
+        social_history[cid][year][topic] = social_history[cid][year].get(topic, 0) + row.count
+
+    SOCIAL_HISTORY_PATH = "data/enriched/contributor_social_history.json"
+    with open(SOCIAL_HISTORY_PATH, 'w') as f:
+        json.dump(social_history, f, indent=2)
+    print(f"  Saved → {SOCIAL_HISTORY_PATH} ({len(social_history)} contributors)")
+
 
 if __name__ == "__main__":
     main()

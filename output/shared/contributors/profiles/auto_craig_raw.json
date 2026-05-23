@@ -1,0 +1,122 @@
+{
+  "display_name": "Craig Raw",
+  "github_login_final": "craigraw",
+  "delving_username_final": "craigraw",
+  "uuid": "auto_craig_raw",
+  "badges": {
+    "is_bip_author": true,
+    "is_core_committer": null,
+    "is_core_contributor": true,
+    "is_maintainer": null,
+    "is_social_contributor": true,
+    "is_sponsored": null,
+    "maintainer_status": null,
+    "social_source": "mailing_list",
+    "sponsor_id": null
+  },
+  "roles": [
+    "Researcher",
+    "BIP Author"
+  ],
+  "first_seen": "2026-04-17T00:00:00",
+  "last_seen": "2026-05-18T00:00:00",
+  "technical_focus": "None",
+  "total_commits": 0.0,
+  "authored_commits": 0.0,
+  "merge_commits": 0.0,
+  "total_additions": null,
+  "total_deletions": null,
+  "first_commit": null,
+  "last_commit": null,
+  "bips_authored": 3.0,
+  "avg_review_latency_days": 1376.9402494643405,
+  "reviews_count": 26.0,
+  "avg_approval_latency_days": 148.73193055555555,
+  "approvals_count": 4.0,
+  "prs_authored": 6.0,
+  "avg_pr_ack_velocity_days": 44.95344328703704,
+  "avg_concept_lead_time_days": 89.69445601851852,
+  "review_reciprocity": 4.333333333333333,
+  "hybrid_score": 0.8635,
+  "threads_started": 5.0,
+  "replies_sent": 19.0,
+  "ml_threads": 3.0,
+  "delving_threads": 2.0,
+  "ml_responses": 19.0,
+  "delving_responses": 0.0,
+  "first_active": "2021-01-16T00:15:27",
+  "last_active": "2026-04-14T01:27:16",
+  "dev_type": "Reviewer",
+  "global_first_active": "2021-01-16T00:15:27",
+  "global_last_active": "2026-04-14T01:27:16",
+  "github_location": null,
+  "github_company": null,
+  "github_bio": null,
+  "github_twitter": null,
+  "github_blog": null,
+  "github_followers": 305.0,
+  "is_top_50": false,
+  "github_url": "https://github.com/craigraw",
+  "delving_url": "https://delvingbitcoin.org/u/craigraw",
+  "bip_list": [
+    {
+      "number": 329,
+      "title": "Wallet Labels Export Format",
+      "status": "Draft",
+      "theme": "Wallet & Keys",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0329.mediawiki"
+    },
+    {
+      "number": 392,
+      "title": "Silent Payment Output Script Descriptors",
+      "status": "Draft",
+      "theme": "Privacy",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0392.mediawiki"
+    },
+    {
+      "number": 393,
+      "title": "Output Script Descriptor Annotations",
+      "status": "Draft",
+      "theme": "Privacy",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0393.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoin-dev] PayJoin adoption",
+    "date": "2021-01-16",
+    "link": "https://gnusha.org/pi/bitcoindev/CAPR5oBPJPs1g32K3XDnNyV3bKCq58fti3mNd-ooFhKNMVxCf9g@mail.gmail.com"
+  },
+  "last_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoindev] [BIP Draft] Blind Relay: Stateless Encrypted\n WebSocket Coordination for PSBTs",
+    "date": "2026-04-14",
+    "link": "https://gnusha.org/pi/bitcoindev/CAPR5oBPQQGvanjTFm_RsLiVTtrympkuXkFY3eN-wHeqjnggcbw@mail.gmail.com"
+  },
+  "social_history": {
+    "2021": {
+      "mining": 1,
+      "multisig-threshold": 4,
+      "privacy": 1,
+      "taproot": 1,
+      "other": 1,
+      "wallet-keys": 6
+    },
+    "2022": {
+      "other": 1,
+      "wallet-keys": 6
+    },
+    "2025": {
+      "silent-payments": 5,
+      "soft-fork-activation": 1,
+      "taproot": 1,
+      "wallet-keys": 5
+    },
+    "2026": {
+      "multisig-threshold": 1,
+      "privacy": 1,
+      "silent-payments": 1,
+      "wallet-keys": 2
+    }
+  }
+}

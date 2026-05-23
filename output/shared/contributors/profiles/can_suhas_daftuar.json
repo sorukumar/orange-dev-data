@@ -49,7 +49,196 @@
   "dev_type": "Protocol Designer",
   "global_first_active": "2014-09-08T17:29:14",
   "global_last_active": "2025-11-29T19:07:23",
-  "is_top_50": true,
+  "github_location": null,
+  "github_company": null,
+  "github_bio": null,
+  "github_twitter": null,
+  "github_blog": null,
+  "github_followers": 538.0,
+  "is_top_50": false,
   "github_url": "https://github.com/sdaftuar",
-  "delving_url": "https://delvingbitcoin.org/u/sdaftuar"
+  "delving_url": "https://delvingbitcoin.org/u/sdaftuar",
+  "commit_history": {
+    "2014": {
+      "Consensus (Domain Logic)": 0.33,
+      "Core Libs": 3.83,
+      "Node & RPC (App/Interface)": 0.5,
+      "P2P Network (Infrastructure)": 0.33
+    },
+    "2015": {
+      "Build & CI (DevOps)": 0.25,
+      "Consensus (Domain Logic)": 0.58,
+      "Core Libs": 49.75,
+      "Node & RPC (App/Interface)": 7.33,
+      "Tests (QA)": 4.5,
+      "Wallet (Client App)": 0.58
+    },
+    "2016": {
+      "Consensus (Domain Logic)": 2.58,
+      "Core Libs": 50.75,
+      "Documentation": 1.0,
+      "Node & RPC (App/Interface)": 9.25,
+      "P2P Network (Infrastructure)": 3.5,
+      "Tests (QA)": 6.67,
+      "Wallet (Client App)": 2.25
+    },
+    "2017": {
+      "Consensus (Domain Logic)": 7.7,
+      "Core Libs": 10.45,
+      "Documentation": 1.0,
+      "GUI (Presentation Layer)": 0.25,
+      "Node & RPC (App/Interface)": 5.78,
+      "P2P Network (Infrastructure)": 10.28,
+      "Tests (QA)": 19.53,
+      "Wallet (Client App)": 4.0
+    },
+    "2018": {
+      "Consensus (Domain Logic)": 3.5,
+      "Core Libs": 0.5,
+      "Node & RPC (App/Interface)": 5.5,
+      "Tests (QA)": 12.0,
+      "Wallet (Client App)": 2.5
+    },
+    "2019": {
+      "Consensus (Domain Logic)": 5.33,
+      "Documentation": 0.33,
+      "Node & RPC (App/Interface)": 0.33,
+      "P2P Network (Infrastructure)": 18.83,
+      "Tests (QA)": 7.17
+    },
+    "2020": {
+      "Consensus (Domain Logic)": 1.0,
+      "Core Libs": 0.5,
+      "Node & RPC (App/Interface)": 1.67,
+      "P2P Network (Infrastructure)": 25.17,
+      "Tests (QA)": 1.67
+    },
+    "2021": {
+      "P2P Network (Infrastructure)": 1.0
+    },
+    "2022": {
+      "Build & CI (DevOps)": 0.7,
+      "Consensus (Domain Logic)": 1.9,
+      "Core Libs": 1.65,
+      "Node & RPC (App/Interface)": 0.45,
+      "P2P Network (Infrastructure)": 14.65,
+      "Tests (QA)": 9.65
+    },
+    "2023": {
+      "Consensus (Domain Logic)": 12.33,
+      "Node & RPC (App/Interface)": 18.17,
+      "P2P Network (Infrastructure)": 1.83,
+      "Tests (QA)": 10.67
+    },
+    "2024": {
+      "Consensus (Domain Logic)": 8.33,
+      "Documentation": 1.0,
+      "Node & RPC (App/Interface)": 12.33,
+      "Tests (QA)": 9.33
+    },
+    "2025": {
+      "Build & CI (DevOps)": 0.25,
+      "Consensus (Domain Logic)": 10.92,
+      "Documentation": 3.33,
+      "Node & RPC (App/Interface)": 22.25,
+      "Tests (QA)": 12.25,
+      "Utilities (Shared Libs)": 2.0,
+      "Wallet (Client App)": 1.0
+    }
+  },
+  "bip_list": [
+    {
+      "number": 90,
+      "title": "Buried Deployments",
+      "status": "Deployed",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0090.mediawiki"
+    },
+    {
+      "number": 130,
+      "title": "sendheaders message",
+      "status": "Deployed",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0130.mediawiki"
+    },
+    {
+      "number": 338,
+      "title": "Disable transaction relay message",
+      "status": "Closed",
+      "theme": "P2P Network",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0338.mediawiki"
+    },
+    {
+      "number": 339,
+      "title": "WTXID-based transaction relay",
+      "status": "Deployed",
+      "theme": "P2P Network",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0339.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoin-dev] Block size following technological growth",
+    "date": "2015-07-30",
+    "link": "https://gnusha.org/pi/bitcoindev/CAFp6fsExyinUm8uUiOY_xEDkYKcq09XZU3uy+YAcCyTEdeE6rA@mail.gmail.com"
+  },
+  "last_message": {
+    "source": "delving",
+    "subject": "Re: Generalizing RBF under Cluster Mempool",
+    "date": "2025-11-19",
+    "link": "https://delvingbitcoin.org/t/generalizing-rbf-under-cluster-mempool/2115/2"
+  },
+  "social_history": {
+    "2015": {
+      "other": 2,
+      "p2p-network": 3
+    },
+    "2016": {
+      "other": 2,
+      "script-opcodes": 1
+    },
+    "2017": {
+      "mempool-fees": 1,
+      "mining": 1,
+      "other": 4,
+      "script-opcodes": 1,
+      "soft-fork-activation": 1
+    },
+    "2018": {
+      "script-opcodes": 1,
+      "other": 1
+    },
+    "2019": {
+      "other": 3
+    },
+    "2020": {
+      "mempool-fees": 1,
+      "other": 1,
+      "p2p-network": 2,
+      "transaction-format": 4
+    },
+    "2021": {
+      "other": 1,
+      "p2p-network": 1
+    },
+    "2022": {
+      "mempool-fees": 4,
+      "other": 1
+    },
+    "2023": {
+      "mempool-fees": 7
+    },
+    "2024": {
+      "other": 12,
+      "mempool-fees": 24,
+      "mining": 15,
+      "privacy": 9,
+      "script-opcodes": 3,
+      "soft-fork-activation": 3,
+      "transaction-format": 3
+    },
+    "2025": {
+      "mempool-fees": 1
+    }
+  }
 }

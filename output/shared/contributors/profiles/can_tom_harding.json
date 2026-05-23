@@ -1,0 +1,142 @@
+{
+  "display_name": "Tom Harding",
+  "github_login_final": "dgenr8",
+  "delving_username_final": null,
+  "uuid": "can_tom_harding",
+  "badges": {
+    "is_bip_author": true,
+    "is_core_committer": null,
+    "is_core_contributor": true,
+    "is_maintainer": null,
+    "is_social_contributor": true,
+    "is_sponsored": null,
+    "maintainer_status": null,
+    "social_source": "mailing_list",
+    "sponsor_id": null
+  },
+  "roles": [
+    "BIP Author",
+    "Researcher"
+  ],
+  "first_seen": "2026-04-17T00:00:00",
+  "last_seen": "2026-05-18T00:00:00",
+  "technical_focus": "Core Libs",
+  "total_commits": 28.0,
+  "authored_commits": 28.0,
+  "merge_commits": 0.0,
+  "total_additions": 667.0,
+  "total_deletions": 188.0,
+  "first_commit": "2014-06-25T23:21:29",
+  "last_commit": "2020-05-15T19:19:10",
+  "bips_authored": 1.0,
+  "avg_review_latency_days": 217.63410535247672,
+  "reviews_count": 128.0,
+  "avg_approval_latency_days": 59.52156828703704,
+  "approvals_count": 10.0,
+  "prs_authored": 17.0,
+  "avg_pr_ack_velocity_days": 16.65670762108262,
+  "avg_concept_lead_time_days": 15.150736882716052,
+  "review_reciprocity": 7.529411764705882,
+  "hybrid_score": 0.8352,
+  "threads_started": 9.0,
+  "replies_sent": 128.0,
+  "ml_threads": 9.0,
+  "delving_threads": 0.0,
+  "ml_responses": 128.0,
+  "delving_responses": 0.0,
+  "first_active": "2014-04-07T09:45:33",
+  "last_active": "2025-10-30T11:10:55",
+  "dev_type": "Builder",
+  "global_first_active": "2014-04-07T09:45:33",
+  "global_last_active": "2025-10-30T11:10:55",
+  "github_location": "California, US",
+  "github_company": null,
+  "github_bio": "Let's fix money.",
+  "github_twitter": null,
+  "github_blog": null,
+  "github_followers": 38.0,
+  "is_top_50": false,
+  "github_url": "https://github.com/dgenr8",
+  "commit_history": {
+    "2014": {
+      "Core Libs": 5.33,
+      "Documentation": 1.33,
+      "GUI (Presentation Layer)": 0.83,
+      "Node & RPC (App/Interface)": 1.5,
+      "Tests (QA)": 1.0
+    },
+    "2015": {
+      "Consensus (Domain Logic)": 0.5,
+      "Core Libs": 6.0,
+      "Wallet (Client App)": 1.5
+    },
+    "2020": {
+      "Consensus (Domain Logic)": 1.0
+    }
+  },
+  "bip_list": [
+    {
+      "number": 100,
+      "title": "Dynamic maximum block size by miner vote",
+      "status": "Closed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0100.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "Re: [Bitcoin-development] Why are we bleeding nodes?",
+    "date": "2014-04-07",
+    "link": "https://gnusha.org/pi/bitcoindev/5342BA0D.7010800@thinlink.com"
+  },
+  "last_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoindev] Re: [BIP Proposal] Limit ScriptPubkey Size >= 520\n Bytes Consensus.",
+    "date": "2025-10-30",
+    "link": "https://gnusha.org/pi/bitcoindev/793073a7-84b2-4b42-a531-e03e30f89ddcn@googlegroups.com"
+  },
+  "social_history": {
+    "2014": {
+      "mempool-fees": 3,
+      "mining": 7,
+      "other": 11,
+      "script-opcodes": 2,
+      "security": 10,
+      "spam-filtering": 1
+    },
+    "2015": {
+      "other": 41,
+      "hard-fork-block-size": 29,
+      "lightning": 6,
+      "mempool-fees": 17,
+      "mining": 21,
+      "script-opcodes": 6,
+      "security": 4,
+      "spam-filtering": 5
+    },
+    "2016": {
+      "hard-fork-block-size": 1,
+      "mining": 4,
+      "other": 5
+    },
+    "2017": {
+      "other": 11,
+      "mining": 2
+    },
+    "2019": {
+      "other": 3
+    },
+    "2022": {
+      "other": 1
+    },
+    "2023": {
+      "mempool-fees": 2,
+      "mining": 1,
+      "spam-filtering": 3,
+      "other": 2
+    },
+    "2025": {
+      "other": 1
+    }
+  }
+}

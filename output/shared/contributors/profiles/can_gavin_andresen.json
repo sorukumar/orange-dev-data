@@ -50,6 +50,232 @@
   "dev_type": "Protocol Designer",
   "global_first_active": "2010-07-14T15:54:31",
   "global_last_active": "2017-01-26T11:21:37",
-  "is_top_50": true,
-  "github_url": "https://github.com/gavinandresen"
+  "github_location": null,
+  "github_company": null,
+  "github_bio": null,
+  "github_twitter": null,
+  "github_blog": null,
+  "github_followers": null,
+  "is_top_50": false,
+  "github_url": "https://github.com/gavinandresen",
+  "commit_history": {
+    "2010": {
+      "Build & CI (DevOps)": 2.83,
+      "Core Libs": 28.33,
+      "Documentation": 4.83,
+      "Merge": 42.0
+    },
+    "2011": {
+      "Build & CI (DevOps)": 10.25,
+      "Core Libs": 102.42,
+      "Documentation": 19.0,
+      "GUI (Presentation Layer)": 1.33,
+      "Merge": 141.0,
+      "Node & RPC (App/Interface)": 3.25,
+      "P2P Network (Infrastructure)": 6.75,
+      "Tests (QA)": 9.0
+    },
+    "2012": {
+      "Build & CI (DevOps)": 14.67,
+      "Core Libs": 81.2,
+      "Database (Persistence)": 0.33,
+      "Documentation": 8.03,
+      "GUI (Presentation Layer)": 4.87,
+      "Merge": 157.0,
+      "Node & RPC (App/Interface)": 12.28,
+      "P2P Network (Infrastructure)": 2.53,
+      "Tests (QA)": 15.08
+    },
+    "2013": {
+      "Build & CI (DevOps)": 7.5,
+      "Consensus (Domain Logic)": 1.08,
+      "Core Libs": 64.53,
+      "Documentation": 4.83,
+      "GUI (Presentation Layer)": 10.62,
+      "Merge": 209.0,
+      "Node & RPC (App/Interface)": 6.37,
+      "P2P Network (Infrastructure)": 5.62,
+      "Tests (QA)": 11.45
+    },
+    "2014": {
+      "Build & CI (DevOps)": 1.0,
+      "Consensus (Domain Logic)": 1.0,
+      "Core Libs": 32.5,
+      "Documentation": 5.83,
+      "GUI (Presentation Layer)": 1.67,
+      "Merge": 64.0,
+      "Node & RPC (App/Interface)": 2.5,
+      "Tests (QA)": 2.5
+    },
+    "2015": {
+      "Build & CI (DevOps)": 3.83,
+      "Core Libs": 5.0,
+      "GUI (Presentation Layer)": 0.5,
+      "Merge": 3.0,
+      "Node & RPC (App/Interface)": 2.33,
+      "P2P Network (Infrastructure)": 0.83,
+      "Tests (QA)": 4.0,
+      "Wallet (Client App)": 0.5
+    },
+    "2016": {
+      "Tests (QA)": 1.0
+    }
+  },
+  "bip_list": [
+    {
+      "number": 11,
+      "title": "M-of-N Standard Transactions",
+      "status": "Deployed",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0011.mediawiki"
+    },
+    {
+      "number": 12,
+      "title": "OP_EVAL",
+      "status": "Closed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0012.mediawiki"
+    },
+    {
+      "number": 13,
+      "title": "Address Format for pay-to-script-hash",
+      "status": "Deployed",
+      "theme": "Script & Smart Contracts",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0013.mediawiki"
+    },
+    {
+      "number": 16,
+      "title": "Pay to Script Hash",
+      "status": "Deployed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0016.mediawiki"
+    },
+    {
+      "number": 34,
+      "title": "Block v2, Height in Coinbase",
+      "status": "Deployed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0034.mediawiki"
+    },
+    {
+      "number": 50,
+      "title": "March 2013 Chain Fork Post-Mortem",
+      "status": "Deployed",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0050.mediawiki"
+    },
+    {
+      "number": 61,
+      "title": "Reject P2P message",
+      "status": "Deployed",
+      "theme": "P2P Network",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0061.mediawiki"
+    },
+    {
+      "number": 70,
+      "title": "Payment Protocol",
+      "status": "Deployed",
+      "theme": "P2P Network",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0070.mediawiki"
+    },
+    {
+      "number": 71,
+      "title": "Payment Protocol MIME types",
+      "status": "Deployed",
+      "theme": "P2P Network",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0071.mediawiki"
+    },
+    {
+      "number": 72,
+      "title": "bitcoin: uri extensions for Payment Protocol",
+      "status": "Deployed",
+      "theme": "P2P Network",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0072.mediawiki"
+    },
+    {
+      "number": 101,
+      "title": "Increase maximum block size",
+      "status": "Closed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0101.mediawiki"
+    },
+    {
+      "number": 109,
+      "title": "Two million byte size limit with sigop and sighash limits",
+      "status": "Closed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0109.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "Re: [Bitcoin-development] Bootstrapping via BitTorrent trackers",
+    "date": "2011-06-13",
+    "link": "https://gnusha.org/pi/bitcoindev/329684AF-0A85-4116-A191-72562ADB9BE7@gmail.com"
+  },
+  "last_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoin-dev] Anti-transaction replay in a hardfork",
+    "date": "2017-01-26",
+    "link": "https://gnusha.org/pi/bitcoindev/CABsx9T0PcbMxjfBJZYveQayhTUb1C3YNZCEMA1T=f9mAfxHypg@mail.gmail.com"
+  },
+  "social_history": {
+    "2011": {
+      "other": 63,
+      "core-dev": 10,
+      "mining": 7,
+      "multisig-threshold": 11,
+      "payment-protocol": 1,
+      "script-opcodes": 10,
+      "security": 5
+    },
+    "2012": {
+      "other": 35,
+      "core-dev": 7,
+      "mining": 7,
+      "multisig-threshold": 2,
+      "payment-protocol": 19,
+      "script-opcodes": 14,
+      "security": 5
+    },
+    "2013": {
+      "other": 46,
+      "core-dev": 6,
+      "hard-fork-block-size": 2,
+      "mining": 5,
+      "payment-protocol": 16,
+      "script-opcodes": 1,
+      "security": 1
+    },
+    "2014": {
+      "other": 25,
+      "core-dev": 4,
+      "mining": 3,
+      "multisig-threshold": 5,
+      "payment-protocol": 15,
+      "script-opcodes": 11,
+      "security": 1
+    },
+    "2015": {
+      "other": 55,
+      "core-dev": 1,
+      "hard-fork-block-size": 64,
+      "mining": 32,
+      "multisig-threshold": 1,
+      "payment-protocol": 2,
+      "script-opcodes": 9,
+      "security": 8
+    },
+    "2016": {
+      "other": 25,
+      "core-dev": 1,
+      "hard-fork-block-size": 8,
+      "mining": 1,
+      "multisig-threshold": 1,
+      "script-opcodes": 1
+    },
+    "2017": {
+      "other": 1
+    }
+  }
 }

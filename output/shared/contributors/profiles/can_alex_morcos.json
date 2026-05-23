@@ -49,6 +49,106 @@
   "dev_type": "Builder",
   "global_first_active": "2014-02-12T18:39:11",
   "global_last_active": "2022-01-13T13:25:48",
-  "is_top_50": true,
-  "github_url": "https://github.com/morcos"
+  "github_location": null,
+  "github_company": "Chaincode Labs",
+  "github_bio": null,
+  "github_twitter": null,
+  "github_blog": null,
+  "github_followers": 528.0,
+  "is_top_50": false,
+  "github_url": "https://github.com/morcos",
+  "commit_history": {
+    "2014": {
+      "Build & CI (DevOps)": 0.2,
+      "Consensus (Domain Logic)": 0.2,
+      "Core Libs": 0.7,
+      "Node & RPC (App/Interface)": 3.7,
+      "Tests (QA)": 0.2
+    },
+    "2015": {
+      "Consensus (Domain Logic)": 4.33,
+      "Core Libs": 21.17,
+      "GUI (Presentation Layer)": 0.5,
+      "Node & RPC (App/Interface)": 8.17,
+      "P2P Network (Infrastructure)": 1.0,
+      "Tests (QA)": 9.33,
+      "Wallet (Client App)": 1.5
+    },
+    "2016": {
+      "Build & CI (DevOps)": 0.5,
+      "Consensus (Domain Logic)": 14.95,
+      "Core Libs": 16.5,
+      "Documentation": 2.0,
+      "GUI (Presentation Layer)": 3.03,
+      "Node & RPC (App/Interface)": 6.78,
+      "P2P Network (Infrastructure)": 2.17,
+      "Tests (QA)": 3.62,
+      "Wallet (Client App)": 8.45
+    },
+    "2017": {
+      "Consensus (Domain Logic)": 36.85,
+      "Core Libs": 5.78,
+      "Documentation": 2.0,
+      "GUI (Presentation Layer)": 5.37,
+      "Node & RPC (App/Interface)": 19.52,
+      "P2P Network (Infrastructure)": 1.4,
+      "Tests (QA)": 6.32,
+      "Wallet (Client App)": 22.77
+    }
+  },
+  "bip_list": [
+    {
+      "number": 133,
+      "title": "feefilter message",
+      "status": "Deployed",
+      "theme": "Mining",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0133.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "Re: [Bitcoin-development] [RFC] [BIP proposal] Dealing with\n\tmalleability",
+    "date": "2014-02-12",
+    "link": "https://gnusha.org/pi/bitcoindev/CAPWm=eV9YP3wAbCFt1JcSqJ6Jc3kY_546MVk3cHT+X8seC8vRw@mail.gmail.com"
+  },
+  "last_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoin-dev] Bitcoin Legal Defense Fund",
+    "date": "2022-01-13",
+    "link": "https://gnusha.org/pi/bitcoindev/CANvRQdVbKdFETiehfLOiaj=BkmHLvxxZm1-5+fzfXYoKxk15vw@mail.gmail.com"
+  },
+  "social_history": {
+    "2014": {
+      "other": 7
+    },
+    "2015": {
+      "other": 14,
+      "core-dev": 2,
+      "hard-fork-block-size": 5,
+      "mempool-fees": 7,
+      "mining": 3,
+      "script-opcodes": 5,
+      "soft-fork-activation": 2
+    },
+    "2016": {
+      "consensus-cleanup": 2,
+      "hard-fork-block-size": 1,
+      "mining": 2,
+      "other": 3,
+      "script-opcodes": 1,
+      "soft-fork-activation": 2
+    },
+    "2017": {
+      "mempool-fees": 1,
+      "mining": 3,
+      "other": 2,
+      "soft-fork-activation": 1
+    },
+    "2018": {
+      "mempool-fees": 1
+    },
+    "2022": {
+      "other": 1
+    }
+  }
 }

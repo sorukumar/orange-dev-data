@@ -1,0 +1,119 @@
+{
+  "display_name": "Ben Carman",
+  "github_login_final": "benthecarman",
+  "delving_username_final": "benthecarman",
+  "uuid": "auto_ben_carman",
+  "badges": {
+    "is_bip_author": null,
+    "is_core_committer": null,
+    "is_core_contributor": true,
+    "is_maintainer": null,
+    "is_social_contributor": true,
+    "is_sponsored": null,
+    "maintainer_status": null,
+    "social_source": "Mixed",
+    "sponsor_id": null
+  },
+  "roles": [
+    "Researcher"
+  ],
+  "first_seen": "2026-04-17T00:00:00",
+  "last_seen": "2026-05-18T00:00:00",
+  "technical_focus": "Documentation",
+  "total_commits": 19.0,
+  "authored_commits": 19.0,
+  "merge_commits": 0.0,
+  "total_additions": 102.0,
+  "total_deletions": 19.0,
+  "first_commit": "2018-12-17T12:12:05",
+  "last_commit": "2025-05-23T22:28:26",
+  "bips_authored": 0.0,
+  "avg_review_latency_days": 360.9048628057575,
+  "reviews_count": 157.0,
+  "avg_approval_latency_days": 334.71717253839205,
+  "approvals_count": 93.0,
+  "prs_authored": 35.0,
+  "avg_pr_ack_velocity_days": 10.806071127946128,
+  "avg_concept_lead_time_days": 19.056106288580246,
+  "review_reciprocity": 4.485714285714286,
+  "hybrid_score": 0.3671,
+  "threads_started": 4.0,
+  "replies_sent": 4.0,
+  "ml_threads": 1.0,
+  "delving_threads": 3.0,
+  "ml_responses": 3.0,
+  "delving_responses": 1.0,
+  "first_active": "2021-06-28T05:55:30",
+  "last_active": "2024-10-17T23:37:44.518000",
+  "dev_type": "Builder",
+  "global_first_active": "2018-12-17T12:12:05",
+  "global_last_active": "2025-05-23T22:28:26",
+  "github_location": "Austin, TX",
+  "github_company": "@spiralxyz",
+  "github_bio": "Bitcoin dev\r\n",
+  "github_twitter": "benthecarman",
+  "github_blog": "https://benthecarman.com/",
+  "github_followers": 566.0,
+  "is_top_50": false,
+  "github_url": "https://github.com/benthecarman",
+  "delving_url": "https://delvingbitcoin.org/u/benthecarman",
+  "commit_history": {
+    "2018": {
+      "Documentation": 1.0,
+      "Node & RPC (App/Interface)": 1.0
+    },
+    "2019": {
+      "Documentation": 1.0,
+      "GUI (Presentation Layer)": 4.0,
+      "Node & RPC (App/Interface)": 1.5,
+      "Tests (QA)": 2.5
+    },
+    "2020": {
+      "Documentation": 0.5,
+      "Node & RPC (App/Interface)": 1.5
+    },
+    "2021": {
+      "Documentation": 2.0,
+      "Wallet (Client App)": 1.0
+    },
+    "2025": {
+      "Wallet (Client App)": 1.0
+    }
+  },
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoin-dev] BIP proposal: Anti-fee-sniping protection with\n nSequence in taproot transactions to improve privacy for off-chain\n protocols",
+    "date": "2021-06-28",
+    "link": "https://gnusha.org/pi/bitcoindev/SJ0PR10MB4719291762199CECE5798AF1A1039@SJ0PR10MB4719.namprd10.prod.outlook.com"
+  },
+  "last_message": {
+    "source": "delving",
+    "subject": "Re: LN Summit 2024 Notes & Summary/Commentary",
+    "date": "2024-10-17",
+    "link": "https://delvingbitcoin.org/t/ln-summit-2024-notes-summary-commentary/1198/5"
+  },
+  "social_history": {
+    "2021": {
+      "dlc": 1,
+      "lightning": 1,
+      "privacy": 1,
+      "taproot": 1
+    },
+    "2023": {
+      "covenants": 1,
+      "dlc": 1,
+      "privacy": 1,
+      "signatures-sighash": 1,
+      "other": 2
+    },
+    "2024": {
+      "consensus-cleanup": 1,
+      "covenants": 3,
+      "lightning": 1,
+      "other": 7,
+      "script-opcodes": 3,
+      "signatures-sighash": 1,
+      "taproot": 3
+    }
+  }
+}

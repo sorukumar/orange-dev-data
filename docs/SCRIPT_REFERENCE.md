@@ -68,14 +68,22 @@ Reads from `data/raw/`, writes to `data/enriched/` and `output/tracker/`.
   `data/enriched/github_social_stats.parquet`.
 - **`core.py`** **[daily] [monthly]**: Resolves commit authors to UUIDs, computes
   LOC/churn metrics → `data/enriched/core_contributors.parquet`,
-  `output/tracker/contributors_rich.json`.
+  `output/tracker/contributors_rich.json`,
+  `data/enriched/contributor_commit_history.json` (per-UUID yearly commit breakdown
+  by codebase category — consumed by `ui_artifacts.py` to populate profile shards).
 - **`merge_social.py`** **[daily] [monthly]**: Concatenates mailing list + Delving into
   one flat file → `data/raw/social_combined.parquet`.
 - **`governance.py`** **[daily] [monthly]**: Links BIPs to social discussion and commit
-  mentions → `data/enriched/bips_refined.parquet`, `data/enriched/bips_themes.json`.
+  mentions → `data/enriched/bips_refined.parquet`, `data/enriched/bips_themes.json`,
+  `data/enriched/contributor_bips.json` (per-UUID BIP authorship list with title,
+  status, theme, and link — consumed by `ui_artifacts.py` to populate profile shards).
 - **`categorize.py`** **[monthly only]**: NLP categorization of social threads into
-  technical themes → `data/enriched/social_threads.parquet`. Skipped in daily runs;
-  `influence.py` and `expertise.py` read the last monthly output on daily runs.
+  technical themes → `data/enriched/social_threads.parquet`,
+  `data/enriched/contributor_message_bookmarks.json` (first and last indexed social
+  message per UUID — source, date, subject, link),
+  `data/enriched/contributor_social_history.json` (per-UUID yearly social activity
+  count by topic — consumed by `ui_artifacts.py` to populate profile shards).
+  Skipped in daily runs; `influence.py` and `expertise.py` read the last monthly output.
 - **`unify_contributors.py`** **[daily] [monthly]**: The "Grand Join." Merges all
   per-UUID signals (commits, reviews, social, BIPs) into one row per developer →
   `data/enriched/contributors_unified.parquet`.
@@ -112,8 +120,12 @@ Reads from `data/enriched/`, writes lightweight JSON to `output/`.
   `metadata/contributors.json`. Runs **twice** per pipeline: Phase 2 bootstrap (before
   Phase 3 analytics) and Phase 4 final (after the grand join).
 - **`ui_artifacts.py`** **[daily] [monthly]**: Produces `output/shared/contributors/registry_index.json`
-  (full registry table) and `output/shared/contributors/profiles/shard_*.json` (top-50
-  deep profiles).
+  (full registry table) and `output/shared/contributors/profiles/{uuid}.json` (deep
+  profiles for all **301 high-signal contributors** — those with
+  `authored_commits >= 10` OR `bips_authored > 0`). At startup the script loads four
+  enriched files and embeds their data into each shard: `contributor_commit_history.json`,
+  `contributor_bips.json`, `contributor_message_bookmarks.json`, and
+  `contributor_social_history.json`.
 - **`ecosystem_summary.py`** **[daily] [monthly]**: Computes headline numbers from the
   registry index → `output/shared/ecosystem_summary.json`.
 - **`generate_regional_evolution.py`** **[monthly only]**: Formats geospatial time-series

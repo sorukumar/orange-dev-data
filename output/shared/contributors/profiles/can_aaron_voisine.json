@@ -48,6 +48,76 @@
   "dev_type": "Reviewer",
   "global_first_active": "2014-04-25T16:58:07",
   "global_last_active": "2017-01-06T01:07:34",
-  "is_top_50": true,
-  "github_url": "https://github.com/voisine"
+  "github_location": null,
+  "github_company": null,
+  "github_bio": null,
+  "github_twitter": null,
+  "github_blog": null,
+  "github_followers": 255.0,
+  "is_top_50": false,
+  "github_url": "https://github.com/voisine",
+  "bip_list": [
+    {
+      "number": 38,
+      "title": "Passphrase-protected private key",
+      "status": "Draft (Some confusion applies: The announcements for this never made it to the list, so it hasn't had public discussion)",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0038.mediawiki"
+    },
+    {
+      "number": 39,
+      "title": "Mnemonic code for generating deterministic keys",
+      "status": "Deployed",
+      "theme": "Wallet & Keys",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki"
+    },
+    {
+      "number": 75,
+      "title": "Out of Band Address Exchange using Payment Protocol Encryption",
+      "status": "Deployed",
+      "theme": "P2P Network",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0075.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "Re: [Bitcoin-development] BIP32 \"wallet structure\" in use? Remove\n\tit?",
+    "date": "2014-04-25",
+    "link": "https://gnusha.org/pi/bitcoindev/CACq0ZD64RAw+p+HH=OvHzURg+pJrpRXfJ8jZ3q9v-MF99=mP6Q@mail.gmail.com"
+  },
+  "last_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoin-dev] Committed bloom filters for improved wallet\n performance and SPV security",
+    "date": "2017-01-06",
+    "link": "https://gnusha.org/pi/bitcoindev/CACq0ZD45zP=6VmTcPs=DW_bkT=KB3scAWhK3jBOVPQp_h0hb9w@mail.gmail.com"
+  },
+  "social_history": {
+    "2014": {
+      "mining": 3,
+      "other": 14,
+      "payment-protocol": 2,
+      "script-opcodes": 4,
+      "wallet-keys": 3
+    },
+    "2015": {
+      "hard-fork-block-size": 13,
+      "other": 18,
+      "mempool-fees": 6,
+      "mining": 9,
+      "p2p-network": 3,
+      "payment-protocol": 2,
+      "script-opcodes": 1,
+      "wallet-keys": 1
+    },
+    "2016": {
+      "payment-protocol": 1,
+      "script-opcodes": 6,
+      "other": 2,
+      "wallet-keys": 5
+    },
+    "2017": {
+      "mempool-fees": 1,
+      "p2p-network": 5
+    }
+  }
 }

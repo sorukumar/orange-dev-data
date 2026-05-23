@@ -50,6 +50,144 @@
   "dev_type": "Protocol Designer",
   "global_first_active": "2011-03-09T03:40:50",
   "global_last_active": "2015-12-20T21:39:52",
-  "is_top_50": true,
-  "github_url": "https://github.com/jgarzik"
+  "github_location": null,
+  "github_company": null,
+  "github_bio": null,
+  "github_twitter": null,
+  "github_blog": null,
+  "github_followers": null,
+  "is_top_50": false,
+  "github_url": "https://github.com/jgarzik",
+  "commit_history": {
+    "2011": {
+      "Build & CI (DevOps)": 3.5,
+      "Core Libs": 26.5,
+      "Documentation": 6.0,
+      "Merge": 93.0,
+      "Node & RPC (App/Interface)": 1.0,
+      "P2P Network (Infrastructure)": 1.0
+    },
+    "2012": {
+      "Build & CI (DevOps)": 4.75,
+      "Core Libs": 78.42,
+      "Documentation": 3.0,
+      "GUI (Presentation Layer)": 0.75,
+      "Merge": 101.0,
+      "Node & RPC (App/Interface)": 6.42,
+      "P2P Network (Infrastructure)": 11.17,
+      "Tests (QA)": 1.5
+    },
+    "2013": {
+      "Build & CI (DevOps)": 3.25,
+      "Consensus (Domain Logic)": 0.5,
+      "Core Libs": 20.08,
+      "Documentation": 0.5,
+      "GUI (Presentation Layer)": 0.33,
+      "Merge": 57.0,
+      "Node & RPC (App/Interface)": 5.75,
+      "P2P Network (Infrastructure)": 1.5,
+      "Tests (QA)": 3.08
+    },
+    "2014": {
+      "Build & CI (DevOps)": 3.39,
+      "Core Libs": 23.23,
+      "Documentation": 3.75,
+      "GUI (Presentation Layer)": 1.64,
+      "Merge": 36.0,
+      "Node & RPC (App/Interface)": 3.89,
+      "P2P Network (Infrastructure)": 1.5,
+      "Tests (QA)": 5.31,
+      "Utilities (Shared Libs)": 5.14,
+      "Wallet (Client App)": 0.14
+    },
+    "2015": {
+      "Build & CI (DevOps)": 1.33,
+      "Core Libs": 4.83,
+      "Merge": 12.0,
+      "Tests (QA)": 0.83
+    }
+  },
+  "bip_list": [
+    {
+      "number": 35,
+      "title": "mempool message",
+      "status": "Deployed",
+      "theme": "P2P Network",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0035.mediawiki"
+    },
+    {
+      "number": 100,
+      "title": "Dynamic maximum block size by miner vote",
+      "status": "Closed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0100.mediawiki"
+    },
+    {
+      "number": 102,
+      "title": "Block size increase to 2MB",
+      "status": "Closed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0102.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "[Bitcoin-development] Preparing 0.3.23-rc1 release",
+    "date": "2011-06-11",
+    "link": "https://gnusha.org/pi/bitcoindev/BANLkTi=2VOhGTgX4HA_en00DATFbeWGVtg@mail.gmail.com"
+  },
+  "last_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoin-dev] Increasing the blocksize as a (generalized)\n\tsoftfork.",
+    "date": "2015-12-20",
+    "link": "https://gnusha.org/pi/bitcoindev/CADm_WcYXU6VXG034j=mD8zkmqNLB96sjvBc6qo8Sx2NepHJk8A@mail.gmail.com"
+  },
+  "social_history": {
+    "2011": {
+      "core-dev": 7,
+      "hard-fork-block-size": 1,
+      "mempool-fees": 1,
+      "mining": 1,
+      "other": 47,
+      "p2p-network": 1
+    },
+    "2012": {
+      "core-dev": 2,
+      "other": 37,
+      "hard-fork-block-size": 1,
+      "mempool-fees": 8,
+      "mining": 6,
+      "p2p-network": 16,
+      "payment-protocol": 7,
+      "script-opcodes": 4
+    },
+    "2013": {
+      "other": 72,
+      "core-dev": 4,
+      "mempool-fees": 2,
+      "mining": 16,
+      "p2p-network": 11,
+      "payment-protocol": 9,
+      "script-opcodes": 4
+    },
+    "2014": {
+      "core-dev": 6,
+      "other": 121,
+      "mempool-fees": 15,
+      "mining": 15,
+      "p2p-network": 5,
+      "payment-protocol": 31,
+      "script-opcodes": 18
+    },
+    "2015": {
+      "other": 81,
+      "core-dev": 9,
+      "hard-fork-block-size": 58,
+      "mempool-fees": 18,
+      "mining": 25,
+      "p2p-network": 1,
+      "payment-protocol": 7,
+      "script-opcodes": 14
+    }
+  }
 }

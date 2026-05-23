@@ -46,6 +46,124 @@
   "dev_type": "Protocol Designer",
   "global_first_active": "2011-12-17T01:41:56",
   "global_last_active": "2017-06-01T16:00:02",
-  "is_top_50": true,
-  "github_url": "https://github.com/CodeShark"
+  "github_location": null,
+  "github_company": null,
+  "github_bio": null,
+  "github_twitter": null,
+  "github_blog": null,
+  "github_followers": 218.0,
+  "is_top_50": false,
+  "github_url": "https://github.com/CodeShark",
+  "commit_history": {
+    "2013": {
+      "Build & CI (DevOps)": 0.5,
+      "Core Libs": 19.42,
+      "Documentation": 0.33,
+      "GUI (Presentation Layer)": 0.58,
+      "Node & RPC (App/Interface)": 3.08,
+      "P2P Network (Infrastructure)": 2.33,
+      "Tests (QA)": 0.75
+    },
+    "2014": {
+      "Core Libs": 0.5,
+      "Node & RPC (App/Interface)": 0.5
+    },
+    "2015": {
+      "Consensus (Domain Logic)": 1.0,
+      "Core Libs": 1.0,
+      "Tests (QA)": 2.0
+    }
+  },
+  "bip_list": [
+    {
+      "number": 83,
+      "title": "Dynamic Hierarchical Deterministic Key Trees",
+      "status": "Closed",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0083.mediawiki"
+    },
+    {
+      "number": 112,
+      "title": "CHECKSEQUENCEVERIFY",
+      "status": "Deployed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0112.mediawiki"
+    },
+    {
+      "number": 123,
+      "title": "BIP Classification",
+      "status": "Deployed",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0123.mediawiki"
+    },
+    {
+      "number": 124,
+      "title": "Hierarchical Deterministic Script Templates",
+      "status": "Closed",
+      "theme": "Script & Smart Contracts",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0124.mediawiki"
+    },
+    {
+      "number": 141,
+      "title": "Segregated Witness (Consensus layer)",
+      "status": "Deployed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0141.mediawiki"
+    },
+    {
+      "number": 144,
+      "title": "Segregated Witness (Peer Services)",
+      "status": "Deployed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0144.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "[Bitcoin-development] Protocol extensions",
+    "date": "2011-12-17",
+    "link": "https://gnusha.org/pi/bitcoindev/CABr1YTebhitO4g-SarZ7H=aoG9a8zW1wd0rfR32o8i0vODbLJw@mail.gmail.com"
+  },
+  "last_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoin-dev] BIP Proposal: Compact Client Side Filtering for\n Light Clients",
+    "date": "2017-06-01",
+    "link": "https://gnusha.org/pi/bitcoindev/CABr1YTdQy9=XiCQOuSnLq_y1PDWg7mC=Wquv9YEFDW832J2NhQ@mail.gmail.com"
+  },
+  "social_history": {
+    "2011": {
+      "other": 3,
+      "scaling": 1
+    },
+    "2012": {
+      "other": 6
+    },
+    "2013": {
+      "other": 3
+    },
+    "2014": {
+      "other": 10
+    },
+    "2015": {
+      "other": 91,
+      "hard-fork-block-size": 42,
+      "mempool-fees": 25,
+      "mining": 23,
+      "scaling": 14,
+      "script-opcodes": 17,
+      "soft-fork-activation": 13,
+      "spam-filtering": 17
+    },
+    "2016": {
+      "other": 11,
+      "mining": 1,
+      "script-opcodes": 1,
+      "soft-fork-activation": 1
+    },
+    "2017": {
+      "other": 4,
+      "hard-fork-block-size": 2,
+      "soft-fork-activation": 2
+    }
+  }
 }

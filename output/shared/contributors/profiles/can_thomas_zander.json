@@ -1,0 +1,122 @@
+{
+  "display_name": "Thomas Zander",
+  "github_login_final": "zander",
+  "delving_username_final": null,
+  "uuid": "can_thomas_zander",
+  "badges": {
+    "is_bip_author": null,
+    "is_core_committer": null,
+    "is_core_contributor": true,
+    "is_maintainer": null,
+    "is_social_contributor": true,
+    "is_sponsored": null,
+    "maintainer_status": null,
+    "social_source": "mailing_list",
+    "sponsor_id": null
+  },
+  "roles": [
+    "Researcher"
+  ],
+  "first_seen": "2026-04-17T00:00:00",
+  "last_seen": "2026-05-18T00:00:00",
+  "technical_focus": "GUI (Presentation Layer)",
+  "total_commits": 4.0,
+  "authored_commits": 4.0,
+  "merge_commits": 0.0,
+  "total_additions": 97.0,
+  "total_deletions": 29.0,
+  "first_commit": "2014-03-13T17:15:51",
+  "last_commit": "2014-12-28T23:25:18",
+  "bips_authored": 1.0,
+  "avg_review_latency_days": 281.075195129108,
+  "reviews_count": 21.0,
+  "avg_approval_latency_days": 3.528263888888889,
+  "approvals_count": 3.0,
+  "prs_authored": 11.0,
+  "avg_pr_ack_velocity_days": 0.46619984567901224,
+  "avg_concept_lead_time_days": 0.018796296296296297,
+  "review_reciprocity": 1.9090909090909092,
+  "hybrid_score": 0.7593,
+  "threads_started": 5.0,
+  "replies_sent": 173.0,
+  "ml_threads": 5.0,
+  "delving_threads": 0.0,
+  "ml_responses": 173.0,
+  "delving_responses": 0.0,
+  "first_active": "2014-09-15T02:23:02",
+  "last_active": "2017-09-02T16:13:57",
+  "dev_type": "Builder",
+  "global_first_active": "2014-03-13T17:15:51",
+  "global_last_active": "2017-09-02T16:13:57",
+  "github_location": null,
+  "github_company": null,
+  "github_bio": null,
+  "github_twitter": null,
+  "github_blog": null,
+  "github_followers": 65.0,
+  "is_top_50": false,
+  "github_url": "https://github.com/zander",
+  "commit_history": {
+    "2014": {
+      "Core Libs": 1.0,
+      "Documentation": 1.0,
+      "GUI (Presentation Layer)": 2.0
+    }
+  },
+  "bip_list": [
+    {
+      "number": 134,
+      "title": "Flexible Transactions",
+      "status": "Closed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0134.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "Re: [Bitcoin-development] Does anyone have anything at all signed\n\tby Satoshi's PGP key?",
+    "date": "2014-09-15",
+    "link": "https://gnusha.org/pi/bitcoindev/201409150923.02817.thomas@thomaszander.se"
+  },
+  "last_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoin-dev] Horizontal scaling of blockchain",
+    "date": "2017-09-02",
+    "link": "https://gnusha.org/pi/bitcoindev/3416963.LpSpYe5DLS@strawberry"
+  },
+  "social_history": {
+    "2014": {
+      "bip-process": 3,
+      "mining": 3,
+      "other": 10,
+      "segwit": 1,
+      "spam-filtering": 1
+    },
+    "2015": {
+      "bip-process": 1,
+      "hard-fork-block-size": 19,
+      "other": 35,
+      "mining": 8,
+      "spam-filtering": 15
+    },
+    "2016": {
+      "bip-process": 7,
+      "hard-fork-block-size": 5,
+      "other": 18,
+      "mining": 5,
+      "segwit": 9,
+      "soft-fork-activation": 4,
+      "spam-filtering": 1,
+      "transaction-format": 14
+    },
+    "2017": {
+      "hard-fork-block-size": 14,
+      "mining": 12,
+      "other": 32,
+      "segwit": 13,
+      "soft-fork-activation": 11,
+      "spam-filtering": 3,
+      "transaction-format": 1
+    }
+  }
+}

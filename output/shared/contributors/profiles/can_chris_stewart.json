@@ -1,0 +1,158 @@
+{
+  "display_name": "Chris Stewart",
+  "github_login_final": "Christewart",
+  "delving_username_final": "chris_stewart_5",
+  "uuid": "can_chris_stewart",
+  "badges": {
+    "is_bip_author": true,
+    "is_core_committer": null,
+    "is_core_contributor": true,
+    "is_maintainer": null,
+    "is_social_contributor": true,
+    "is_sponsored": null,
+    "maintainer_status": null,
+    "social_source": "Mixed",
+    "sponsor_id": null
+  },
+  "roles": [
+    "BIP Author",
+    "Researcher"
+  ],
+  "first_seen": "2026-04-17T00:00:00",
+  "last_seen": "2026-05-18T00:00:00",
+  "technical_focus": "Tests (QA)",
+  "total_commits": 14.0,
+  "authored_commits": 14.0,
+  "merge_commits": 0.0,
+  "total_additions": 273.0,
+  "total_deletions": 19.0,
+  "first_commit": "2016-04-25T16:08:10",
+  "last_commit": "2025-08-01T21:33:13",
+  "bips_authored": 1.0,
+  "avg_review_latency_days": 1841.797010083714,
+  "reviews_count": 65.0,
+  "avg_approval_latency_days": 513.314119130291,
+  "approvals_count": 25.0,
+  "prs_authored": 32.0,
+  "avg_pr_ack_velocity_days": 34.872457561728396,
+  "avg_concept_lead_time_days": 93.17467206790123,
+  "review_reciprocity": 2.03125,
+  "hybrid_score": 0.7142,
+  "threads_started": 35.0,
+  "replies_sent": 58.0,
+  "ml_threads": 9.0,
+  "delving_threads": 26.0,
+  "ml_responses": 34.0,
+  "delving_responses": 24.0,
+  "first_active": "2017-03-18T10:23:16",
+  "last_active": "2026-01-08T14:40:59",
+  "dev_type": "Builder",
+  "global_first_active": "2016-04-25T16:08:10",
+  "global_last_active": "2026-01-08T14:40:59",
+  "github_location": null,
+  "github_company": null,
+  "github_bio": null,
+  "github_twitter": null,
+  "github_blog": null,
+  "github_followers": 106.0,
+  "is_top_50": false,
+  "github_url": "https://github.com/Christewart",
+  "delving_url": "https://delvingbitcoin.org/u/chris_stewart_5",
+  "commit_history": {
+    "2016": {
+      "Tests (QA)": 5.0
+    },
+    "2017": {
+      "Core Libs": 1.0
+    },
+    "2018": {
+      "Build & CI (DevOps)": 0.5,
+      "Tests (QA)": 1.5
+    },
+    "2024": {
+      "Documentation": 1.0,
+      "Tests (QA)": 1.0
+    },
+    "2025": {
+      "Node & RPC (App/Interface)": 0.5,
+      "Tests (QA)": 1.5
+    }
+  },
+  "bip_list": [
+    {
+      "number": 53,
+      "title": "Disallow 64-byte transactions",
+      "status": "Draft",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0053.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "[bitcoin-dev] Requirement for pseudonymous BIP submissions",
+    "date": "2017-03-18",
+    "link": "https://gnusha.org/pi/bitcoindev/CAGL6+mEnGNdAggHZs=ZM_QHbts63exE1ydstK+w-gUnm=4JLTA@mail.gmail.com"
+  },
+  "last_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoindev] Follow-up regarding Motion to Activate BIP 3",
+    "date": "2026-01-08",
+    "link": "https://gnusha.org/pi/bitcoindev/CAGL6+mHiDBzcBp-2Bos33iKYNEN+RbgLKuD9+MF=GxPDETnz7w@mail.gmail.com"
+  },
+  "social_history": {
+    "2017": {
+      "other": 9,
+      "lightning": 1,
+      "mining": 3,
+      "script-opcodes": 6,
+      "sidechains-drivechain": 14,
+      "soft-fork-activation": 2
+    },
+    "2018": {
+      "other": 1
+    },
+    "2019": {
+      "covenants": 2,
+      "lightning": 2,
+      "other": 2
+    },
+    "2020": {
+      "other": 3,
+      "taproot": 1
+    },
+    "2021": {
+      "other": 2
+    },
+    "2022": {
+      "other": 6,
+      "lightning": 4
+    },
+    "2023": {
+      "other": 1
+    },
+    "2024": {
+      "bip-process": 19,
+      "covenants": 21,
+      "lightning": 1,
+      "other": 16,
+      "mining": 8,
+      "script-opcodes": 25,
+      "soft-fork-activation": 5,
+      "taproot": 20
+    },
+    "2025": {
+      "other": 35,
+      "covenants": 14,
+      "lightning": 4,
+      "mining": 4,
+      "script-opcodes": 11,
+      "soft-fork-activation": 2,
+      "taproot": 4
+    },
+    "2026": {
+      "bip-process": 1,
+      "other": 1,
+      "soft-fork-activation": 1
+    }
+  }
+}

@@ -49,7 +49,185 @@
   "dev_type": "Protocol Designer",
   "global_first_active": "2014-07-16T12:56:54",
   "global_last_active": "2026-05-02T17:14:48.542000128",
-  "is_top_50": true,
+  "github_location": "behind u",
+  "github_company": null,
+  "github_bio": null,
+  "github_twitter": "jeremyrubin",
+  "github_blog": "rubin.io",
+  "github_followers": 697.0,
+  "is_top_50": false,
   "github_url": "https://github.com/JeremyRubin",
-  "delving_url": "https://delvingbitcoin.org/u/jeremyrubin"
+  "delving_url": "https://delvingbitcoin.org/u/jeremyrubin",
+  "commit_history": {
+    "2016": {
+      "Build & CI (DevOps)": 0.5,
+      "Consensus (Domain Logic)": 0.25,
+      "Core Libs": 2.5,
+      "Node & RPC (App/Interface)": 0.5,
+      "P2P Network (Infrastructure)": 1.25,
+      "Tests (QA)": 2.75,
+      "Wallet (Client App)": 0.25
+    },
+    "2017": {
+      "Build & CI (DevOps)": 1.5,
+      "Consensus (Domain Logic)": 2.0,
+      "Core Libs": 11.5,
+      "Node & RPC (App/Interface)": 0.5,
+      "P2P Network (Infrastructure)": 2.0,
+      "Tests (QA)": 6.0,
+      "Wallet (Client App)": 0.5
+    },
+    "2018": {
+      "Build & CI (DevOps)": 0.5,
+      "Consensus (Domain Logic)": 1.0,
+      "Core Libs": 0.5,
+      "Node & RPC (App/Interface)": 0.5,
+      "Tests (QA)": 0.5
+    },
+    "2019": {
+      "Build & CI (DevOps)": 1.0,
+      "Core Libs": 2.0,
+      "Documentation": 1.0,
+      "Tests (QA)": 4.0,
+      "Wallet (Client App)": 6.0
+    },
+    "2020": {
+      "Consensus (Domain Logic)": 1.0,
+      "Core Libs": 1.33,
+      "Node & RPC (App/Interface)": 3.33,
+      "P2P Network (Infrastructure)": 0.33
+    },
+    "2021": {
+      "Consensus (Domain Logic)": 0.5,
+      "Core Libs": 1.0,
+      "Node & RPC (App/Interface)": 0.5,
+      "Tests (QA)": 1.0
+    },
+    "2022": {
+      "Consensus (Domain Logic)": 0.5,
+      "Core Libs": 1.0,
+      "Tests (QA)": 0.5
+    }
+  },
+  "bip_list": [
+    {
+      "number": 119,
+      "title": "CHECKTEMPLATEVERIFY",
+      "status": "Draft",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0119.mediawiki"
+    },
+    {
+      "number": 348,
+      "title": "CHECKSIGFROMSTACK",
+      "status": "Draft",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0348.mediawiki"
+    },
+    {
+      "number": 349,
+      "title": "OP_INTERNALKEY",
+      "status": "Draft",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0349.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "[Bitcoin-development] Pay to MultiScript hash:",
+    "date": "2014-07-16",
+    "link": "https://gnusha.org/pi/bitcoindev/CAD5xwhgyCOdJwnXw+YchptfXjtshDi_VVEGOjR-hG2qV=u6m2g@mail.gmail.com"
+  },
+  "last_message": {
+    "source": "delving",
+    "subject": "Re: Commit-Reveal for PQ Migration",
+    "date": "2026-05-02",
+    "link": "https://delvingbitcoin.org/t/commit-reveal-for-pq-migration/2419/5"
+  },
+  "social_history": {
+    "2014": {
+      "other": 3,
+      "script-opcodes": 2
+    },
+    "2015": {
+      "other": 11,
+      "script-opcodes": 1,
+      "soft-fork-activation": 1
+    },
+    "2016": {
+      "covenants": 1,
+      "other": 1,
+      "script-opcodes": 1
+    },
+    "2017": {
+      "covenants": 1,
+      "other": 4,
+      "script-opcodes": 1
+    },
+    "2018": {
+      "mempool-fees": 2,
+      "taproot": 2
+    },
+    "2019": {
+      "covenants": 13,
+      "lightning": 1,
+      "mempool-fees": 1,
+      "mining": 1,
+      "other": 8,
+      "script-opcodes": 17,
+      "taproot": 3
+    },
+    "2020": {
+      "covenants": 10,
+      "lightning": 1,
+      "mempool-fees": 9,
+      "mining": 3,
+      "other": 26,
+      "script-opcodes": 6,
+      "soft-fork-activation": 1,
+      "taproot": 4
+    },
+    "2021": {
+      "other": 67,
+      "covenants": 26,
+      "lightning": 12,
+      "mempool-fees": 14,
+      "mining": 18,
+      "script-opcodes": 15,
+      "soft-fork-activation": 23,
+      "taproot": 25
+    },
+    "2022": {
+      "covenants": 31,
+      "other": 52,
+      "lightning": 6,
+      "mempool-fees": 18,
+      "mining": 6,
+      "script-opcodes": 8,
+      "soft-fork-activation": 12,
+      "taproot": 12
+    },
+    "2024": {
+      "other": 20,
+      "covenants": 15,
+      "lightning": 1,
+      "mempool-fees": 3,
+      "mining": 2,
+      "script-opcodes": 3,
+      "soft-fork-activation": 8
+    },
+    "2025": {
+      "other": 14,
+      "covenants": 15,
+      "lightning": 1,
+      "mempool-fees": 4,
+      "mining": 3,
+      "script-opcodes": 15,
+      "soft-fork-activation": 3,
+      "taproot": 4
+    },
+    "2026": {
+      "other": 5
+    }
+  }
 }

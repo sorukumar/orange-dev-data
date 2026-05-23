@@ -1,0 +1,140 @@
+{
+  "display_name": "Marek Palatinus",
+  "github_login_final": null,
+  "delving_username_final": null,
+  "uuid": "can_marek_palatinus",
+  "badges": {
+    "is_bip_author": null,
+    "is_core_committer": null,
+    "is_core_contributor": null,
+    "is_maintainer": null,
+    "is_social_contributor": true,
+    "is_sponsored": null,
+    "maintainer_status": null,
+    "social_source": "mailing_list",
+    "sponsor_id": null
+  },
+  "roles": [
+    "Researcher"
+  ],
+  "first_seen": "2026-04-17T00:00:00",
+  "last_seen": "2026-05-18T00:00:00",
+  "technical_focus": "wallet-keys",
+  "total_commits": 0.0,
+  "authored_commits": 0.0,
+  "merge_commits": 0.0,
+  "total_additions": null,
+  "total_deletions": null,
+  "first_commit": null,
+  "last_commit": null,
+  "bips_authored": 3.0,
+  "avg_review_latency_days": null,
+  "reviews_count": null,
+  "avg_approval_latency_days": null,
+  "approvals_count": null,
+  "prs_authored": null,
+  "avg_pr_ack_velocity_days": null,
+  "avg_concept_lead_time_days": null,
+  "review_reciprocity": null,
+  "hybrid_score": 0.8351,
+  "threads_started": 5.0,
+  "replies_sent": 87.0,
+  "ml_threads": 5.0,
+  "delving_threads": 0.0,
+  "ml_responses": 87.0,
+  "delving_responses": 0.0,
+  "first_active": "2011-12-15T18:07:58",
+  "last_active": "2021-08-31T03:47:26",
+  "dev_type": "Participant",
+  "global_first_active": "2011-12-15T18:07:58",
+  "global_last_active": "2021-08-31T03:47:26",
+  "github_location": null,
+  "github_company": null,
+  "github_bio": null,
+  "github_twitter": null,
+  "github_blog": null,
+  "github_followers": null,
+  "is_top_50": false,
+  "bip_list": [
+    {
+      "number": 39,
+      "title": "Mnemonic code for generating deterministic keys",
+      "status": "Deployed",
+      "theme": "Wallet & Keys",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki"
+    },
+    {
+      "number": 43,
+      "title": "Purpose Field for Deterministic Wallets",
+      "status": "Deployed",
+      "theme": "Wallet & Keys",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0043.mediawiki"
+    },
+    {
+      "number": 44,
+      "title": "Multi-Account Hierarchy for Deterministic Wallets",
+      "status": "Deployed",
+      "theme": "Wallet & Keys",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "Re: [Bitcoin-development] Fwd: [BIP 15] Aliases",
+    "date": "2011-12-15",
+    "link": "https://gnusha.org/pi/bitcoindev/CAJna-HiR0qrOp2sG0hb=5bJ2H60y7QwC8BiHDVR9=kiV20W0vA@mail.gmail.com"
+  },
+  "last_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoin-dev] Human readable checksum (verification code) to\n avoid errors on BTC public addresses",
+    "date": "2021-08-31",
+    "link": "https://gnusha.org/pi/bitcoindev/CAJna-Hhtr0v_uEE-4ET4FPNnGnPv8sW2JXkVka0XDkphy_YmSg@mail.gmail.com"
+  },
+  "social_history": {
+    "2011": {
+      "other": 7
+    },
+    "2012": {
+      "mining": 1,
+      "other": 3,
+      "payment-protocol": 2,
+      "script-opcodes": 2,
+      "wallet-keys": 1
+    },
+    "2013": {
+      "other": 5,
+      "mining": 1,
+      "payment-protocol": 2,
+      "signatures-sighash": 1,
+      "wallet-keys": 15
+    },
+    "2014": {
+      "mempool-fees": 12,
+      "mining": 7,
+      "other": 11,
+      "payment-protocol": 3,
+      "wallet-keys": 16
+    },
+    "2015": {
+      "hard-fork-block-size": 2,
+      "mining": 2,
+      "signatures-sighash": 7,
+      "other": 1,
+      "wallet-keys": 1
+    },
+    "2016": {
+      "mempool-fees": 1,
+      "mining": 2,
+      "other": 5,
+      "payment-protocol": 1,
+      "wallet-keys": 3
+    },
+    "2018": {
+      "other": 1,
+      "wallet-keys": 1
+    },
+    "2021": {
+      "payment-protocol": 1
+    }
+  }
+}

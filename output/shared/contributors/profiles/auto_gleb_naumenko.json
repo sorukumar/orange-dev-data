@@ -1,0 +1,131 @@
+{
+  "display_name": "Gleb Naumenko",
+  "github_login_final": "naumenkogs",
+  "delving_username_final": null,
+  "uuid": "auto_gleb_naumenko",
+  "badges": {
+    "is_bip_author": true,
+    "is_core_committer": null,
+    "is_core_contributor": true,
+    "is_maintainer": null,
+    "is_social_contributor": true,
+    "is_sponsored": null,
+    "maintainer_status": null,
+    "social_source": "mailing_list",
+    "sponsor_id": null
+  },
+  "roles": [
+    "BIP Author",
+    "Researcher"
+  ],
+  "first_seen": "2026-04-17T00:00:00",
+  "last_seen": "2026-05-18T00:00:00",
+  "technical_focus": "P2P Network (Infrastructure)",
+  "total_commits": 68.0,
+  "authored_commits": 68.0,
+  "merge_commits": 0.0,
+  "total_additions": 2155.0,
+  "total_deletions": 561.0,
+  "first_commit": "2018-05-21T19:02:40",
+  "last_commit": "2022-11-14T09:45:52",
+  "bips_authored": 1.0,
+  "avg_review_latency_days": 227.42235864813276,
+  "reviews_count": 334.0,
+  "avg_approval_latency_days": 110.65005456745713,
+  "approvals_count": 266.0,
+  "prs_authored": 29.0,
+  "avg_pr_ack_velocity_days": 27.0624751984127,
+  "avg_concept_lead_time_days": 42.84460099902534,
+  "review_reciprocity": 11.517241379310345,
+  "hybrid_score": 0.7927,
+  "threads_started": 2.0,
+  "replies_sent": 7.0,
+  "ml_threads": 2.0,
+  "delving_threads": 0.0,
+  "ml_responses": 7.0,
+  "delving_responses": 0.0,
+  "first_active": "2018-04-02T17:18:07",
+  "last_active": "2023-02-02T02:40:04",
+  "dev_type": "Builder",
+  "global_first_active": "2018-04-02T17:18:07",
+  "global_last_active": "2023-02-02T02:40:04",
+  "github_location": null,
+  "github_company": null,
+  "github_bio": null,
+  "github_twitter": "ffstls",
+  "github_blog": "thelab31.xyz",
+  "github_followers": 371.0,
+  "is_top_50": false,
+  "github_url": "https://github.com/naumenkogs",
+  "commit_history": {
+    "2018": {
+      "Consensus (Domain Logic)": 0.5,
+      "P2P Network (Infrastructure)": 0.5
+    },
+    "2019": {
+      "Build & CI (DevOps)": 0.75,
+      "Core Libs": 0.5,
+      "Node & RPC (App/Interface)": 0.75,
+      "P2P Network (Infrastructure)": 3.58,
+      "Tests (QA)": 0.58,
+      "Utilities (Shared Libs)": 0.83
+    },
+    "2020": {
+      "Build & CI (DevOps)": 0.25,
+      "Core Libs": 0.25,
+      "Documentation": 0.25,
+      "P2P Network (Infrastructure)": 10.5,
+      "Tests (QA)": 3.75
+    },
+    "2021": {
+      "Build & CI (DevOps)": 0.5,
+      "Node & RPC (App/Interface)": 1.0,
+      "P2P Network (Infrastructure)": 4.0,
+      "Tests (QA)": 0.5
+    },
+    "2022": {
+      "Build & CI (DevOps)": 0.25,
+      "Core Libs": 1.0,
+      "Node & RPC (App/Interface)": 2.42,
+      "P2P Network (Infrastructure)": 1.92,
+      "Tests (QA)": 7.42
+    }
+  },
+  "bip_list": [
+    {
+      "number": 330,
+      "title": "Transaction announcements reconciliation",
+      "status": "Draft",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0330.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "[bitcoin-dev] Low-bandwidth transaction relay",
+    "date": "2018-04-02",
+    "link": "https://gnusha.org/pi/bitcoindev/9ab6e32e-db51-4ce4-8f3c-3a77f7b1f9bd@Spark"
+  },
+  "last_message": {
+    "source": "mailing_list",
+    "subject": "[bitcoin-dev] Costless bribes against time-sensitive protocols",
+    "date": "2023-02-02",
+    "link": "https://gnusha.org/pi/bitcoindev/f594c2f8-d712-48e4-a010-778dd4d0cadb@Spark"
+  },
+  "social_history": {
+    "2018": {
+      "mining": 1,
+      "other": 3
+    },
+    "2019": {
+      "p2p-network": 3,
+      "soft-fork-activation": 1
+    },
+    "2020": {
+      "lightning": 1
+    },
+    "2023": {
+      "other": 1
+    }
+  }
+}

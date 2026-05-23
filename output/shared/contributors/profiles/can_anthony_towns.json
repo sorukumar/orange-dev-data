@@ -49,7 +49,270 @@
   "dev_type": "Protocol Designer",
   "global_first_active": "2015-08-02T17:35:45",
   "global_last_active": "2026-04-22T04:02:11.739000064",
-  "is_top_50": true,
+  "github_location": "Brisbane, Australia",
+  "github_company": null,
+  "github_bio": "Donation address: 1E9nGC81XmryvyrUJkxibUWUtudwLxFMZp",
+  "github_twitter": "ajtowns",
+  "github_blog": "www.erisian.com.au/wordpress",
+  "github_followers": 248.0,
+  "is_top_50": false,
   "github_url": "https://github.com/ajtowns",
-  "delving_url": "https://delvingbitcoin.org/u/ajtowns"
+  "delving_url": "https://delvingbitcoin.org/u/ajtowns",
+  "commit_history": {
+    "2016": {
+      "Build & CI (DevOps)": 0.5,
+      "Core Libs": 0.5
+    },
+    "2017": {
+      "Consensus (Domain Logic)": 1.5,
+      "Tests (QA)": 5.5
+    },
+    "2018": {
+      "Build & CI (DevOps)": 0.83,
+      "Consensus (Domain Logic)": 0.75,
+      "Core Libs": 8.92,
+      "Documentation": 1.0,
+      "GUI (Presentation Layer)": 0.25,
+      "Node & RPC (App/Interface)": 3.42,
+      "P2P Network (Infrastructure)": 0.33,
+      "Tests (QA)": 21.67,
+      "Wallet (Client App)": 1.83
+    },
+    "2019": {
+      "Consensus (Domain Logic)": 2.0,
+      "Core Libs": 1.0,
+      "Node & RPC (App/Interface)": 3.0,
+      "P2P Network (Infrastructure)": 2.0,
+      "Tests (QA)": 1.0,
+      "Wallet (Client App)": 1.0
+    },
+    "2020": {
+      "Build & CI (DevOps)": 2.98,
+      "Consensus (Domain Logic)": 1.57,
+      "Core Libs": 7.15,
+      "Documentation": 1.25,
+      "Node & RPC (App/Interface)": 5.48,
+      "P2P Network (Infrastructure)": 21.03,
+      "Tests (QA)": 13.62,
+      "Utilities (Shared Libs)": 1.33,
+      "Wallet (Client App)": 1.58
+    },
+    "2021": {
+      "Build & CI (DevOps)": 0.95,
+      "Consensus (Domain Logic)": 7.33,
+      "Core Libs": 17.37,
+      "Documentation": 2.5,
+      "Node & RPC (App/Interface)": 5.7,
+      "P2P Network (Infrastructure)": 10.53,
+      "Tests (QA)": 14.62
+    },
+    "2022": {
+      "Build & CI (DevOps)": 0.33,
+      "Consensus (Domain Logic)": 8.62,
+      "Core Libs": 17.7,
+      "Documentation": 2.0,
+      "GUI (Presentation Layer)": 1.58,
+      "Node & RPC (App/Interface)": 7.87,
+      "P2P Network (Infrastructure)": 17.45,
+      "Tests (QA)": 9.78,
+      "Utilities (Shared Libs)": 1.5,
+      "Wallet (Client App)": 1.17
+    },
+    "2023": {
+      "Consensus (Domain Logic)": 5.18,
+      "Core Libs": 20.84,
+      "Documentation": 1.67,
+      "GUI (Presentation Layer)": 0.14,
+      "Node & RPC (App/Interface)": 6.18,
+      "P2P Network (Infrastructure)": 7.64,
+      "Tests (QA)": 14.84,
+      "Utilities (Shared Libs)": 1.0,
+      "Wallet (Client App)": 0.51
+    },
+    "2024": {
+      "Core Libs": 6.5,
+      "Tests (QA)": 0.5,
+      "Wallet (Client App)": 1.0
+    },
+    "2025": {
+      "Consensus (Domain Logic)": 5.17,
+      "Core Libs": 3.0,
+      "Documentation": 1.0,
+      "GUI (Presentation Layer)": 0.5,
+      "Node & RPC (App/Interface)": 1.5,
+      "P2P Network (Infrastructure)": 2.5,
+      "Tests (QA)": 13.5,
+      "Utilities (Shared Libs)": 0.33,
+      "Wallet (Client App)": 1.5
+    },
+    "2026": {
+      "Core Libs": 3.25,
+      "Node & RPC (App/Interface)": 0.58,
+      "Tests (QA)": 0.58,
+      "Utilities (Shared Libs)": 1.0,
+      "Wallet (Client App)": 0.58
+    }
+  },
+  "bip_list": [
+    {
+      "number": 118,
+      "title": "SIGHASH_ANYPREVOUT for Taproot Scripts",
+      "status": "Draft",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0118.mediawiki"
+    },
+    {
+      "number": 325,
+      "title": "Signet",
+      "status": "Complete",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0325.mediawiki"
+    },
+    {
+      "number": 341,
+      "title": "Taproot: SegWit version 1 spending rules",
+      "status": "Deployed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki"
+    },
+    {
+      "number": 342,
+      "title": "Validation of Taproot Scripts",
+      "status": "Deployed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0342.mediawiki"
+    },
+    {
+      "number": 434,
+      "title": "Peer Feature Negotiation",
+      "status": "Draft",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0434.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoin-dev] Block size following technological growth",
+    "date": "2015-08-02",
+    "link": "https://gnusha.org/pi/bitcoindev/20150802223545.GA14286@navy"
+  },
+  "last_message": {
+    "source": "delving",
+    "subject": "Re: The future of the Bitcoin Core GUI",
+    "date": "2026-04-22",
+    "link": "https://delvingbitcoin.org/t/the-future-of-the-bitcoin-core-gui/2253/26"
+  },
+  "social_history": {
+    "2015": {
+      "other": 22,
+      "lightning": 4,
+      "mempool-fees": 1,
+      "mining": 6,
+      "script-opcodes": 8,
+      "soft-fork-activation": 5,
+      "testing-devtools": 1
+    },
+    "2016": {
+      "other": 17,
+      "mining": 1,
+      "soft-fork-activation": 1
+    },
+    "2017": {
+      "mining": 3,
+      "other": 16,
+      "script-opcodes": 2,
+      "soft-fork-activation": 3
+    },
+    "2018": {
+      "covenants": 2,
+      "lightning": 2,
+      "mempool-fees": 1,
+      "other": 27,
+      "script-opcodes": 4,
+      "taproot": 13
+    },
+    "2019": {
+      "covenants": 7,
+      "lightning": 7,
+      "mempool-fees": 1,
+      "other": 13,
+      "script-opcodes": 5,
+      "taproot": 7,
+      "testing-devtools": 1
+    },
+    "2020": {
+      "covenants": 2,
+      "mining": 1,
+      "other": 9,
+      "script-opcodes": 1,
+      "soft-fork-activation": 4,
+      "taproot": 4
+    },
+    "2021": {
+      "other": 14,
+      "covenants": 11,
+      "lightning": 4,
+      "mempool-fees": 3,
+      "mining": 5,
+      "script-opcodes": 1,
+      "soft-fork-activation": 15,
+      "taproot": 15,
+      "testing-devtools": 5
+    },
+    "2022": {
+      "other": 35,
+      "covenants": 20,
+      "lightning": 2,
+      "mempool-fees": 25,
+      "mining": 6,
+      "script-opcodes": 7,
+      "soft-fork-activation": 18,
+      "taproot": 4,
+      "testing-devtools": 12
+    },
+    "2023": {
+      "other": 68,
+      "covenants": 30,
+      "lightning": 12,
+      "mempool-fees": 27,
+      "mining": 5,
+      "script-opcodes": 20,
+      "soft-fork-activation": 2,
+      "taproot": 11,
+      "testing-devtools": 4
+    },
+    "2024": {
+      "other": 128,
+      "covenants": 36,
+      "lightning": 30,
+      "mempool-fees": 59,
+      "mining": 51,
+      "script-opcodes": 43,
+      "soft-fork-activation": 12,
+      "taproot": 21,
+      "testing-devtools": 34
+    },
+    "2025": {
+      "other": 157,
+      "covenants": 33,
+      "lightning": 23,
+      "mempool-fees": 49,
+      "mining": 43,
+      "script-opcodes": 29,
+      "soft-fork-activation": 4,
+      "taproot": 27,
+      "testing-devtools": 17
+    },
+    "2026": {
+      "other": 23,
+      "covenants": 2,
+      "lightning": 2,
+      "mempool-fees": 9,
+      "mining": 6,
+      "script-opcodes": 7,
+      "soft-fork-activation": 2,
+      "taproot": 3,
+      "testing-devtools": 4
+    }
+  }
 }

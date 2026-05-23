@@ -1,0 +1,140 @@
+{
+  "display_name": "Jim Posen",
+  "github_login_final": "jimpo",
+  "delving_username_final": null,
+  "uuid": "can_jim_posen",
+  "badges": {
+    "is_bip_author": true,
+    "is_core_committer": null,
+    "is_core_contributor": true,
+    "is_maintainer": null,
+    "is_social_contributor": true,
+    "is_sponsored": null,
+    "maintainer_status": null,
+    "social_source": "mailing_list",
+    "sponsor_id": null
+  },
+  "roles": [
+    "BIP Author",
+    "Researcher"
+  ],
+  "first_seen": "2026-04-17T00:00:00",
+  "last_seen": "2026-05-18T00:00:00",
+  "technical_focus": "Core Libs",
+  "total_commits": 160.0,
+  "authored_commits": 160.0,
+  "merge_commits": 0.0,
+  "total_additions": 7181.0,
+  "total_deletions": 2301.0,
+  "first_commit": "2017-08-16T00:55:26",
+  "last_commit": "2020-05-04T23:47:26",
+  "bips_authored": 1.0,
+  "avg_review_latency_days": 298.42405866678575,
+  "reviews_count": 104.0,
+  "avg_approval_latency_days": 47.0832931183302,
+  "approvals_count": 49.0,
+  "prs_authored": 29.0,
+  "avg_pr_ack_velocity_days": 12.9543359375,
+  "avg_concept_lead_time_days": 9.54938425925926,
+  "review_reciprocity": 3.586206896551724,
+  "hybrid_score": 0.836,
+  "threads_started": 4.0,
+  "replies_sent": 31.0,
+  "ml_threads": 4.0,
+  "delving_threads": 0.0,
+  "ml_responses": 31.0,
+  "delving_responses": 0.0,
+  "first_active": "2017-12-11T14:40:00",
+  "last_active": "2019-04-04T00:59:32",
+  "dev_type": "Builder",
+  "global_first_active": "2017-08-16T00:55:26",
+  "global_last_active": "2020-05-04T23:47:26",
+  "github_location": "Berlin",
+  "github_company": null,
+  "github_bio": "The truth is in the code",
+  "github_twitter": "jimpo_potamus",
+  "github_blog": null,
+  "github_followers": 179.0,
+  "is_top_50": false,
+  "github_url": "https://github.com/jimpo",
+  "commit_history": {
+    "2017": {
+      "Build & CI (DevOps)": 1.5,
+      "Consensus (Domain Logic)": 3.0,
+      "Core Libs": 3.0,
+      "Database (Persistence)": 0.5,
+      "Node & RPC (App/Interface)": 4.5,
+      "P2P Network (Infrastructure)": 1.0,
+      "Tests (QA)": 2.5
+    },
+    "2018": {
+      "Build & CI (DevOps)": 5.09,
+      "Consensus (Domain Logic)": 1.42,
+      "Core Libs": 16.75,
+      "Cryptography (Primitives)": 0.14,
+      "Database (Persistence)": 0.11,
+      "Documentation": 2.0,
+      "GUI (Presentation Layer)": 0.11,
+      "Node & RPC (App/Interface)": 11.25,
+      "P2P Network (Infrastructure)": 0.25,
+      "Tests (QA)": 11.75,
+      "Utilities (Shared Libs)": 0.67,
+      "Wallet (Client App)": 0.44
+    },
+    "2019": {
+      "Build & CI (DevOps)": 0.75,
+      "Consensus (Domain Logic)": 2.58,
+      "Core Libs": 5.08,
+      "Node & RPC (App/Interface)": 1.58,
+      "P2P Network (Infrastructure)": 2.0,
+      "Tests (QA)": 1.5,
+      "Utilities (Shared Libs)": 0.5
+    },
+    "2020": {
+      "Node & RPC (App/Interface)": 2.0,
+      "P2P Network (Infrastructure)": 2.0,
+      "Tests (QA)": 4.0
+    }
+  },
+  "bip_list": [
+    {
+      "number": 157,
+      "title": "Client Side Block Filtering",
+      "status": "Deployed",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0157.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "[bitcoin-dev] \"Compressed\" headers stream",
+    "date": "2017-12-11",
+    "link": "https://gnusha.org/pi/bitcoindev/CADZtCShywq_s9ZK3oBBTUdCgjrTxbyeb-p7QrhJJ3mwRAECCMA@mail.gmail.com"
+  },
+  "last_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoin-dev] assumeutxo and UTXO snapshots",
+    "date": "2019-04-04",
+    "link": "https://gnusha.org/pi/bitcoindev/CADZtCSi394PPwEJg3bcjLDE7jkuyFoEtcKPos4NQxBM+OJPv_Q@mail.gmail.com"
+  },
+  "social_history": {
+    "2017": {
+      "other": 2,
+      "signatures-sighash": 1
+    },
+    "2018": {
+      "other": 12,
+      "lightning": 5,
+      "mempool-fees": 2,
+      "p2p-network": 10,
+      "script-opcodes": 2,
+      "segwit": 2,
+      "signatures-sighash": 2,
+      "utxo-sync": 2
+    },
+    "2019": {
+      "p2p-network": 1,
+      "utxo-sync": 2
+    }
+  }
+}

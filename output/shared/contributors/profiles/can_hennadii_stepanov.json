@@ -49,7 +49,159 @@
   "dev_type": "Builder",
   "global_first_active": "2018-08-01T22:16:41",
   "global_last_active": "2026-05-10T08:01:15",
-  "is_top_50": true,
+  "github_location": null,
+  "github_company": null,
+  "github_bio": null,
+  "github_twitter": null,
+  "github_blog": null,
+  "github_followers": null,
+  "is_top_50": false,
   "github_url": "https://github.com/hebasto",
-  "delving_url": "https://delvingbitcoin.org/u/hebasto"
+  "delving_url": "https://delvingbitcoin.org/u/hebasto",
+  "commit_history": {
+    "2018": {
+      "Build & CI (DevOps)": 1.0,
+      "Consensus (Domain Logic)": 2.83,
+      "Core Libs": 2.5,
+      "Documentation": 3.0,
+      "GUI (Presentation Layer)": 24.83,
+      "Node & RPC (App/Interface)": 3.0,
+      "Tests (QA)": 3.5,
+      "Utilities (Shared Libs)": 0.5,
+      "Wallet (Client App)": 0.83
+    },
+    "2019": {
+      "Build & CI (DevOps)": 9.28,
+      "Consensus (Domain Logic)": 3.02,
+      "Core Libs": 25.64,
+      "Cryptography (Primitives)": 0.25,
+      "Database (Persistence)": 0.5,
+      "Documentation": 12.0,
+      "GUI (Presentation Layer)": 43.77,
+      "Node & RPC (App/Interface)": 5.47,
+      "P2P Network (Infrastructure)": 2.9,
+      "Tests (QA)": 13.39,
+      "Utilities (Shared Libs)": 14.06,
+      "Wallet (Client App)": 4.72
+    },
+    "2020": {
+      "Build & CI (DevOps)": 44.62,
+      "Consensus (Domain Logic)": 7.95,
+      "Core Libs": 70.47,
+      "Database (Persistence)": 1.0,
+      "Documentation": 11.0,
+      "GUI (Presentation Layer)": 76.13,
+      "Node & RPC (App/Interface)": 19.38,
+      "P2P Network (Infrastructure)": 22.12,
+      "Tests (QA)": 48.73,
+      "Utilities (Shared Libs)": 5.83,
+      "Wallet (Client App)": 8.77
+    },
+    "2021": {
+      "Build & CI (DevOps)": 83.42,
+      "Consensus (Domain Logic)": 4.26,
+      "Core Libs": 65.92,
+      "Cryptography (Primitives)": 0.09,
+      "Database (Persistence)": 0.09,
+      "Documentation": 16.83,
+      "GUI (Presentation Layer)": 129.26,
+      "Merge": 71.0,
+      "Node & RPC (App/Interface)": 5.84,
+      "P2P Network (Infrastructure)": 16.76,
+      "Tests (QA)": 33.51,
+      "Utilities (Shared Libs)": 2.76,
+      "Wallet (Client App)": 6.26
+    },
+    "2022": {
+      "Build & CI (DevOps)": 73.1,
+      "Consensus (Domain Logic)": 1.71,
+      "Core Libs": 65.46,
+      "Cryptography (Primitives)": 2.09,
+      "Database (Persistence)": 0.59,
+      "Documentation": 10.17,
+      "GUI (Presentation Layer)": 64.46,
+      "Merge": 61.0,
+      "Node & RPC (App/Interface)": 6.66,
+      "P2P Network (Infrastructure)": 6.41,
+      "Tests (QA)": 41.27,
+      "Utilities (Shared Libs)": 10.21,
+      "Wallet (Client App)": 7.88
+    },
+    "2023": {
+      "Build & CI (DevOps)": 47.5,
+      "Consensus (Domain Logic)": 8.03,
+      "Core Libs": 29.44,
+      "Cryptography (Primitives)": 2.62,
+      "Database (Persistence)": 0.12,
+      "Documentation": 3.95,
+      "GUI (Presentation Layer)": 15.83,
+      "Merge": 36.0,
+      "Node & RPC (App/Interface)": 4.11,
+      "P2P Network (Infrastructure)": 1.0,
+      "Tests (QA)": 37.02,
+      "Utilities (Shared Libs)": 2.29,
+      "Wallet (Client App)": 1.07
+    },
+    "2024": {
+      "Build & CI (DevOps)": 114.32,
+      "Consensus (Domain Logic)": 0.46,
+      "Core Libs": 59.94,
+      "Cryptography (Primitives)": 0.5,
+      "Documentation": 17.23,
+      "GUI (Presentation Layer)": 13.57,
+      "Merge": 40.0,
+      "Node & RPC (App/Interface)": 0.62,
+      "P2P Network (Infrastructure)": 0.12,
+      "Tests (QA)": 53.11,
+      "Utilities (Shared Libs)": 8.66,
+      "Wallet (Client App)": 0.46
+    },
+    "2025": {
+      "Build & CI (DevOps)": 71.37,
+      "Consensus (Domain Logic)": 0.95,
+      "Core Libs": 43.65,
+      "Cryptography (Primitives)": 2.08,
+      "Documentation": 15.03,
+      "GUI (Presentation Layer)": 15.48,
+      "Merge": 80.0,
+      "Node & RPC (App/Interface)": 1.7,
+      "P2P Network (Infrastructure)": 0.33,
+      "Tests (QA)": 29.57,
+      "Utilities (Shared Libs)": 7.08,
+      "Wallet (Client App)": 1.75
+    },
+    "2026": {
+      "Build & CI (DevOps)": 21.0,
+      "Consensus (Domain Logic)": 3.5,
+      "Core Libs": 13.5,
+      "Cryptography (Primitives)": 0.33,
+      "Documentation": 3.33,
+      "GUI (Presentation Layer)": 5.17,
+      "Merge": 33.0,
+      "Node & RPC (App/Interface)": 2.33,
+      "P2P Network (Infrastructure)": 0.17,
+      "Tests (QA)": 13.25,
+      "Utilities (Shared Libs)": 8.42,
+      "Wallet (Client App)": 1.0
+    }
+  },
+  "first_message": {
+    "source": "delving",
+    "subject": "Re: An overview of the cluster mempool proposal",
+    "date": "2024-02-18",
+    "link": "https://delvingbitcoin.org/t/an-overview-of-the-cluster-mempool-proposal/393/17"
+  },
+  "last_message": {
+    "source": "delving",
+    "subject": "Re: How to linearize your cluster",
+    "date": "2024-02-22",
+    "link": "https://delvingbitcoin.org/t/how-to-linearize-your-cluster/303/2"
+  },
+  "social_history": {
+    "2024": {
+      "mempool-fees": 4,
+      "mining": 4,
+      "privacy": 3
+    }
+  }
 }

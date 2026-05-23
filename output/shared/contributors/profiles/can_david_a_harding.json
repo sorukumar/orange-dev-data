@@ -1,0 +1,196 @@
+{
+  "display_name": "David A. Harding",
+  "github_login_final": "harding",
+  "delving_username_final": "harding",
+  "uuid": "can_david_a_harding",
+  "badges": {
+    "is_bip_author": true,
+    "is_core_committer": null,
+    "is_core_contributor": true,
+    "is_maintainer": null,
+    "is_social_contributor": true,
+    "is_sponsored": null,
+    "maintainer_status": null,
+    "social_source": "Mixed",
+    "sponsor_id": null
+  },
+  "roles": [
+    "BIP Author",
+    "Researcher"
+  ],
+  "first_seen": "2026-04-17T00:00:00",
+  "last_seen": "2026-05-18T00:00:00",
+  "technical_focus": "Documentation",
+  "total_commits": 17.0,
+  "authored_commits": 17.0,
+  "merge_commits": 0.0,
+  "total_additions": 746.0,
+  "total_deletions": 430.0,
+  "first_commit": "2014-04-29T18:34:41",
+  "last_commit": "2019-08-22T19:22:52",
+  "bips_authored": 1.0,
+  "avg_review_latency_days": 518.4888634998522,
+  "reviews_count": 158.0,
+  "avg_approval_latency_days": 689.9485959545856,
+  "approvals_count": 30.0,
+  "prs_authored": 24.0,
+  "avg_pr_ack_velocity_days": 8.296097709551658,
+  "avg_concept_lead_time_days": 0.613275462962963,
+  "review_reciprocity": 6.583333333333333,
+  "hybrid_score": 0.9297,
+  "threads_started": 50.0,
+  "replies_sent": 194.0,
+  "ml_threads": 6.0,
+  "delving_threads": 44.0,
+  "ml_responses": 153.0,
+  "delving_responses": 41.0,
+  "first_active": "2014-05-21T15:25:02",
+  "last_active": "2025-11-19T00:25:27",
+  "dev_type": "Builder",
+  "global_first_active": "2014-04-29T18:34:41",
+  "global_last_active": "2025-11-19T00:25:27",
+  "github_location": "Hilo, HI, USA",
+  "github_company": null,
+  "github_bio": "PGP: 19E929169F3D1E6443AD315D0A3F3DCAD0DE98BD",
+  "github_twitter": "hrdng",
+  "github_blog": "http://dtrt.org",
+  "github_followers": 771.0,
+  "is_top_50": false,
+  "github_url": "https://github.com/harding",
+  "delving_url": "https://delvingbitcoin.org/u/harding",
+  "commit_history": {
+    "2014": {
+      "Core Libs": 1.0
+    },
+    "2015": {
+      "Documentation": 1.0
+    },
+    "2018": {
+      "Documentation": 2.0,
+      "Node & RPC (App/Interface)": 1.0
+    },
+    "2019": {
+      "Documentation": 8.0,
+      "Node & RPC (App/Interface)": 2.0,
+      "Wallet (Client App)": 2.0
+    }
+  },
+  "bip_list": [
+    {
+      "number": 125,
+      "title": "Opt-in Full Replace-by-Fee Signaling",
+      "status": "Deployed",
+      "theme": "Mining",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0125.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "Re: [Bitcoin-development] PSA: Please sign your git commits",
+    "date": "2014-05-21",
+    "link": "https://gnusha.org/pi/bitcoindev/20140521202502.GA439@localhost.localdomain"
+  },
+  "last_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoindev] Motion to Activate BIP 3",
+    "date": "2025-11-19",
+    "link": "https://gnusha.org/pi/bitcoindev/d0eb41a70b2ef94c2645b3f0a4b12c30@dtrt.org"
+  },
+  "social_history": {
+    "2014": {
+      "mining": 1,
+      "other": 2
+    },
+    "2015": {
+      "mempool-fees": 1,
+      "mining": 2,
+      "other": 2,
+      "script-opcodes": 2,
+      "soft-fork-activation": 1,
+      "taproot": 1
+    },
+    "2016": {
+      "other": 4,
+      "mempool-fees": 1,
+      "mining": 1,
+      "soft-fork-activation": 1
+    },
+    "2017": {
+      "mempool-fees": 1
+    },
+    "2018": {
+      "other": 5,
+      "mempool-fees": 2,
+      "mining": 1
+    },
+    "2019": {
+      "other": 11,
+      "covenants": 1,
+      "lightning": 2,
+      "mempool-fees": 4,
+      "mining": 1,
+      "script-opcodes": 1,
+      "security": 2,
+      "soft-fork-activation": 1,
+      "taproot": 2
+    },
+    "2020": {
+      "other": 18,
+      "lightning": 8,
+      "mempool-fees": 11,
+      "mining": 3,
+      "script-opcodes": 1,
+      "taproot": 3
+    },
+    "2021": {
+      "other": 21,
+      "covenants": 5,
+      "lightning": 3,
+      "mempool-fees": 4,
+      "mining": 3,
+      "script-opcodes": 5,
+      "soft-fork-activation": 6,
+      "taproot": 8
+    },
+    "2022": {
+      "other": 5,
+      "covenants": 5,
+      "lightning": 3,
+      "mempool-fees": 7,
+      "mining": 2,
+      "soft-fork-activation": 5
+    },
+    "2023": {
+      "covenants": 5,
+      "other": 35,
+      "lightning": 3,
+      "mempool-fees": 11,
+      "mining": 4,
+      "script-opcodes": 3,
+      "security": 5,
+      "taproot": 5
+    },
+    "2024": {
+      "other": 101,
+      "covenants": 14,
+      "lightning": 19,
+      "mempool-fees": 36,
+      "mining": 28,
+      "script-opcodes": 19,
+      "security": 16,
+      "soft-fork-activation": 11,
+      "taproot": 11
+    },
+    "2025": {
+      "other": 38,
+      "covenants": 6,
+      "lightning": 13,
+      "mempool-fees": 7,
+      "mining": 10,
+      "script-opcodes": 4,
+      "security": 6,
+      "soft-fork-activation": 6,
+      "taproot": 3
+    }
+  }
+}

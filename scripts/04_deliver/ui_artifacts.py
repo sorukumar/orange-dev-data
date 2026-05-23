@@ -11,6 +11,12 @@ OUTPUT_DIR = "output/shared/contributors" # Shared Source of Truth for all apps
 REGISTRY_FILE = os.path.join(OUTPUT_DIR, "registry_index.json")
 PROFILES_DIR = os.path.join(OUTPUT_DIR, "profiles")
 
+# Enriched files produced by 02_process/ scripts — consumed here for profile shards
+COMMIT_HISTORY_PATH    = "data/enriched/contributor_commit_history.json"
+CONTRIBUTOR_BIPS_PATH  = "data/enriched/contributor_bips.json"
+BOOKMARKS_PATH         = "data/enriched/contributor_message_bookmarks.json"
+SOCIAL_HISTORY_PATH    = "data/enriched/contributor_social_history.json"
+
 def deliver():
     print("Delivering UI artifacts...")
     if not os.path.exists(UNIFIED_INPUT):
@@ -52,10 +58,46 @@ def deliver():
         for col in df.columns:
             rec[col] = clean_object(row[col])
         records.append(rec)
-    
+
+    # --- Load enriched per-contributor data ---
+    print("Loading enriched per-contributor data files...")
+
+    commit_history: dict = {}
+    if os.path.exists(COMMIT_HISTORY_PATH):
+        with open(COMMIT_HISTORY_PATH) as f:
+            commit_history = json.load(f)
+        print(f"  commit_history loaded for {len(commit_history)} contributors")
+    else:
+        print(f"  WARNING: {COMMIT_HISTORY_PATH} not found — commit_history will be omitted from shards")
+
+    contributor_bips: dict = {}
+    if os.path.exists(CONTRIBUTOR_BIPS_PATH):
+        with open(CONTRIBUTOR_BIPS_PATH) as f:
+            contributor_bips = json.load(f)
+        print(f"  contributor_bips loaded for {len(contributor_bips)} contributors")
+    else:
+        print(f"  WARNING: {CONTRIBUTOR_BIPS_PATH} not found — bip_list will be omitted from shards")
+
+    bookmarks: dict = {}
+    if os.path.exists(BOOKMARKS_PATH):
+        with open(BOOKMARKS_PATH) as f:
+            bookmarks = json.load(f)
+        print(f"  message_bookmarks loaded for {len(bookmarks)} contributors")
+    else:
+        print(f"  WARNING: {BOOKMARKS_PATH} not found — message bookmarks will be omitted from shards")
+
+    social_history: dict = {}
+    if os.path.exists(SOCIAL_HISTORY_PATH):
+        with open(SOCIAL_HISTORY_PATH) as f:
+            social_history = json.load(f)
+        print(f"  social_history loaded for {len(social_history)} contributors")
+    else:
+        print(f"  WARNING: {SOCIAL_HISTORY_PATH} not found — social_history will be omitted from shards")
+
     # 1. Prepare Sharded Profiles (Deep Dive) first to know who gets a file
-    # FILTER: ONLY HIGH-SIGNAL CONTRIBUTORS (Elite Criteria)
-    # Criteria: commits >= 10 OR bips > 0 OR threads >= 3 OR replies > 100 OR hybrid_score > 0.1
+    # FILTER: authored_commits >= 10 OR bips_authored > 0
+    # This covers all meaningful code contributors and all BIP authors regardless
+    # of their hybrid_score rank.
     print("Cleaning profiles directory...")
     if os.path.exists(PROFILES_DIR):
         shutil.rmtree(PROFILES_DIR)
@@ -64,18 +106,27 @@ def deliver():
     print("Generating profiles and tracking filenames...")
     sharded_count = 0
     id_to_filename = {}
-    
-    import hashlib
 
-    # NEW TOP 50 LOGIC
-    # Sort records by hybrid_score descending
-    records_sorted = sorted(records, key=lambda x: x.get('hybrid_score', 0), reverse=True)
-    top_50_records = records_sorted[:50]
+    def qualifies_for_shard(rec: dict) -> bool:
+        authored = rec.get('authored_commits') or 0
+        bips = rec.get('bips_authored') or 0
+        try:
+            authored = float(authored)
+        except (TypeError, ValueError):
+            authored = 0
+        try:
+            bips = float(bips)
+        except (TypeError, ValueError):
+            bips = 0
+        return authored >= 10 or bips > 0
 
-    for rec in top_50_records:
-        rec['is_top_50'] = True
+    for rec in records:
+        if not qualifies_for_shard(rec):
+            continue
 
-        # Add links to record (will be saved in profile)
+        rec['is_top_50'] = False  # legacy field kept for compatibility
+
+        # Add links to record
         login = rec.get('github_login_final') or (rec.get('github', {}).get('login') if isinstance(rec.get('github'), dict) else None)
         if login:
             rec['github_url'] = f"https://github.com/{login}"
@@ -83,6 +134,21 @@ def deliver():
         delving_user = rec.get('delving_username_final') or rec.get('delving_username')
         if delving_user:
             rec['delving_url'] = f"https://delvingbitcoin.org/u/{delving_user}"
+
+        # Attach enriched profile data (keyed by canonical_id / uuid)
+        cid = rec.get('uuid') or ''
+        if cid and cid in commit_history:
+            rec['commit_history'] = commit_history[cid]
+        if cid and cid in contributor_bips:
+            rec['bip_list'] = contributor_bips[cid]
+        if cid and cid in bookmarks:
+            bm = bookmarks[cid]
+            if 'first_message' in bm:
+                rec['first_message'] = bm['first_message']
+            if 'last_message' in bm:
+                rec['last_message'] = bm['last_message']
+        if cid and cid in social_history:
+            rec['social_history'] = social_history[cid]
 
         # UUID is present in unified
         file_id = rec.get('uuid', str(rec.get('id')))

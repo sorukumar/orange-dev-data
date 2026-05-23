@@ -50,6 +50,62 @@
   "dev_type": "Builder",
   "global_first_active": "2011-01-31T15:42:28",
   "global_last_active": "2012-07-09T12:33:46",
-  "is_top_50": true,
-  "github_url": "https://github.com/tcatm"
+  "github_location": null,
+  "github_company": null,
+  "github_bio": null,
+  "github_twitter": null,
+  "github_blog": null,
+  "github_followers": null,
+  "is_top_50": false,
+  "github_url": "https://github.com/tcatm",
+  "commit_history": {
+    "2011": {
+      "Build & CI (DevOps)": 0.25,
+      "Core Libs": 17.75,
+      "Documentation": 1.25,
+      "GUI (Presentation Layer)": 8.0,
+      "Merge": 10.0,
+      "Node & RPC (App/Interface)": 1.0,
+      "P2P Network (Infrastructure)": 1.5,
+      "Tests (QA)": 0.25
+    },
+    "2012": {
+      "Documentation": 1.0,
+      "GUI (Presentation Layer)": 2.5,
+      "Merge": 4.0,
+      "Node & RPC (App/Interface)": 0.5
+    }
+  },
+  "bip_list": [
+    {
+      "number": 21,
+      "title": "URI Scheme",
+      "status": "Closed",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0021.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "Re: [Bitcoin-development] BitCoin and MinorFs/AppArmor",
+    "date": "2011-09-02",
+    "link": "https://gnusha.org/pi/bitcoindev/4E61531E.3050109@nilsschneider.net"
+  },
+  "last_message": {
+    "source": "mailing_list",
+    "subject": "Re: [Bitcoin-development] Random order for clients page",
+    "date": "2012-07-09",
+    "link": "https://gnusha.org/pi/bitcoindev/4FFB15FA.4090705@nilsschneider.net"
+  },
+  "social_history": {
+    "2011": {
+      "bip-process": 1,
+      "core-dev": 1,
+      "mining": 1,
+      "other": 4
+    },
+    "2012": {
+      "other": 1
+    }
+  }
 }

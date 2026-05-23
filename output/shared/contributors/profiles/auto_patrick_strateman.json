@@ -1,0 +1,145 @@
+{
+  "display_name": "Patrick Strateman",
+  "github_login_final": "pstratem",
+  "delving_username_final": null,
+  "uuid": "auto_patrick_strateman",
+  "badges": {
+    "is_bip_author": true,
+    "is_core_committer": null,
+    "is_core_contributor": true,
+    "is_maintainer": null,
+    "is_social_contributor": true,
+    "is_sponsored": null,
+    "maintainer_status": null,
+    "social_source": "mailing_list",
+    "sponsor_id": null
+  },
+  "roles": [
+    "BIP Author",
+    "Researcher"
+  ],
+  "first_seen": "2026-04-17T00:00:00",
+  "last_seen": "2026-05-18T00:00:00",
+  "technical_focus": "P2P Network (Infrastructure)",
+  "total_commits": 112.0,
+  "authored_commits": 112.0,
+  "merge_commits": 0.0,
+  "total_additions": 2029.0,
+  "total_deletions": 1366.0,
+  "first_commit": "2013-08-29T06:53:26",
+  "last_commit": "2020-12-20T23:19:43",
+  "bips_authored": 1.0,
+  "avg_review_latency_days": 57.65347887115839,
+  "reviews_count": 155.0,
+  "avg_approval_latency_days": 12.73262111441799,
+  "approvals_count": 47.0,
+  "prs_authored": 92.0,
+  "avg_pr_ack_velocity_days": 5.0146055480884115,
+  "avg_concept_lead_time_days": 6.917857434640522,
+  "review_reciprocity": 1.684782608695652,
+  "hybrid_score": 0.8478,
+  "threads_started": 0.0,
+  "replies_sent": 28.0,
+  "ml_threads": 0.0,
+  "delving_threads": 0.0,
+  "ml_responses": 28.0,
+  "delving_responses": 0.0,
+  "first_active": "2013-06-05T20:17:30",
+  "last_active": "2016-02-07T13:03:54",
+  "dev_type": "Builder",
+  "global_first_active": "2013-06-05T20:17:30",
+  "global_last_active": "2020-12-20T23:19:43",
+  "github_location": "San Francisco",
+  "github_company": null,
+  "github_bio": null,
+  "github_twitter": null,
+  "github_blog": "https://strateman.ninja/",
+  "github_followers": 80.0,
+  "is_top_50": false,
+  "github_url": "https://github.com/pstratem",
+  "commit_history": {
+    "2013": {
+      "Core Libs": 2.5,
+      "P2P Network (Infrastructure)": 0.5
+    },
+    "2015": {
+      "Core Libs": 8.83,
+      "Documentation": 1.0,
+      "Node & RPC (App/Interface)": 4.83,
+      "P2P Network (Infrastructure)": 19.33
+    },
+    "2016": {
+      "Build & CI (DevOps)": 0.83,
+      "Consensus (Domain Logic)": 3.0,
+      "Core Libs": 3.0,
+      "Documentation": 0.33,
+      "GUI (Presentation Layer)": 0.5,
+      "Node & RPC (App/Interface)": 2.67,
+      "P2P Network (Infrastructure)": 2.33,
+      "Tests (QA)": 4.33,
+      "Wallet (Client App)": 14.0
+    },
+    "2017": {
+      "Core Libs": 1.0,
+      "Wallet (Client App)": 1.0
+    },
+    "2018": {
+      "Core Libs": 0.5,
+      "Node & RPC (App/Interface)": 1.0,
+      "P2P Network (Infrastructure)": 9.5
+    },
+    "2019": {
+      "Node & RPC (App/Interface)": 1.0,
+      "P2P Network (Infrastructure)": 1.0
+    },
+    "2020": {
+      "Core Libs": 0.5,
+      "Node & RPC (App/Interface)": 0.5,
+      "Tests (QA)": 3.0
+    }
+  },
+  "bip_list": [
+    {
+      "number": 14,
+      "title": "Protocol Version and User Agent",
+      "status": "Deployed",
+      "theme": "P2P Network",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0014.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "Re: [Bitcoin-development] Blockchain alternative storage",
+    "date": "2013-06-05",
+    "link": "https://gnusha.org/pi/bitcoindev/51AFE32A.2020301@intersango.com"
+  },
+  "last_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoin-dev] BIP proposal: Increase block size limit to 2\n megabytes",
+    "date": "2016-02-07",
+    "link": "https://gnusha.org/pi/bitcoindev/56B7951A.2090800@gmail.com"
+  },
+  "social_history": {
+    "2013": {
+      "mining": 1,
+      "other": 3
+    },
+    "2014": {
+      "mining": 1,
+      "other": 2
+    },
+    "2015": {
+      "bitvm": 1,
+      "data-structures": 1,
+      "hard-fork-block-size": 5,
+      "lightning": 6,
+      "mempool-fees": 1,
+      "mining": 3,
+      "other": 7,
+      "scaling": 2
+    },
+    "2016": {
+      "hard-fork-block-size": 1
+    }
+  }
+}

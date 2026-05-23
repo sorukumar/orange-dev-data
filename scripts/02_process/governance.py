@@ -152,5 +152,45 @@ def main():
     print("\nTop BIPs by Maturity Score:")
     print(df_bips.sort_values('maturity_score', ascending=False)[['bip_id', 'title', 'theme', 'maturity_score']].head(10))
 
+    # 8. Write per-contributor BIP index for network profile shards.
+    #    Keyed by canonical_id → list of {number, title, status, theme, link}.
+    OUTPUT_CONTRIBUTOR_BIPS = "data/enriched/contributor_bips.json"
+    contributor_bips: dict = {}
+    for _, row in df_bips.iterrows():
+        raw_ids = row.get('author_canonical_ids')
+        if raw_ids is None:
+            canonical_ids = []
+        else:
+            canonical_ids = list(raw_ids) if hasattr(raw_ids, '__iter__') and not isinstance(raw_ids, str) else [raw_ids]
+        try:
+            bip_num = int(row['bip_id'])
+        except (ValueError, TypeError):
+            bip_num = None
+        bip_link = (
+            f"https://github.com/bitcoin/bips/blob/master/bip-{bip_num:04d}.mediawiki"
+            if bip_num is not None else None
+        )
+        bip_entry = {
+            "number": bip_num,
+            "title": str(row.get('title') or ''),
+            "status": str(row.get('status') or ''),
+            "theme": str(row.get('theme') or ''),
+            "link": bip_link,
+        }
+        for cid in canonical_ids:
+            cid = str(cid)
+            if not cid or cid in ('nan', 'None'):
+                continue
+            contributor_bips.setdefault(cid, []).append(bip_entry)
+
+    # Sort each contributor's BIPs by number
+    for cid in contributor_bips:
+        contributor_bips[cid].sort(key=lambda b: b['number'] or 9999)
+
+    os.makedirs(os.path.dirname(OUTPUT_CONTRIBUTOR_BIPS) or '.', exist_ok=True)
+    with open(OUTPUT_CONTRIBUTOR_BIPS, 'w') as f:
+        json.dump(contributor_bips, f, indent=2)
+    print(f"Exported per-contributor BIP index to {OUTPUT_CONTRIBUTOR_BIPS} ({len(contributor_bips)} contributors)")
+
 if __name__ == "__main__":
     main()

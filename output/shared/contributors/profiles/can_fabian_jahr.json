@@ -1,0 +1,177 @@
+{
+  "display_name": "Fabian Jahr",
+  "github_login_final": "fjahr",
+  "delving_username_final": "fjahr",
+  "uuid": "can_fabian_jahr",
+  "badges": {
+    "is_bip_author": true,
+    "is_core_committer": null,
+    "is_core_contributor": true,
+    "is_maintainer": null,
+    "is_social_contributor": true,
+    "is_sponsored": true,
+    "maintainer_status": null,
+    "social_source": "delving",
+    "sponsor_id": "brink"
+  },
+  "roles": [
+    "BIP Author",
+    "Researcher"
+  ],
+  "first_seen": "2026-04-17T00:00:00",
+  "last_seen": "2026-05-18T00:00:00",
+  "technical_focus": "Tests (QA)",
+  "total_commits": 411.0,
+  "authored_commits": 411.0,
+  "merge_commits": 0.0,
+  "total_additions": 8650.0,
+  "total_deletions": 3481.0,
+  "first_commit": "2019-07-10T19:44:26",
+  "last_commit": "2026-04-21T11:37:47",
+  "bips_authored": 1.0,
+  "avg_review_latency_days": 302.8787620115391,
+  "reviews_count": 630.0,
+  "avg_approval_latency_days": 104.50854928861789,
+  "approvals_count": 475.0,
+  "prs_authored": 157.0,
+  "avg_pr_ack_velocity_days": 12.6440988372093,
+  "avg_concept_lead_time_days": 27.34062605218855,
+  "review_reciprocity": 4.012738853503185,
+  "hybrid_score": 0.9229,
+  "threads_started": 9.0,
+  "replies_sent": 8.0,
+  "ml_threads": 1.0,
+  "delving_threads": 8.0,
+  "ml_responses": 4.0,
+  "delving_responses": 4.0,
+  "first_active": "2023-01-14T14:34:38",
+  "last_active": "2025-12-30T13:23:39.118000",
+  "dev_type": "Builder",
+  "global_first_active": "2019-07-10T19:44:26",
+  "global_last_active": "2026-04-21T11:37:47",
+  "github_location": "Berlin",
+  "github_company": "Freelancer",
+  "github_bio": "B45A B6D2 0861 AC21 D276  B826 F13D 1E9D 8907 98CD",
+  "github_twitter": null,
+  "github_blog": "fjahr.com",
+  "github_followers": 173.0,
+  "is_top_50": false,
+  "github_url": "https://github.com/fjahr",
+  "delving_url": "https://delvingbitcoin.org/u/fjahr",
+  "commit_history": {
+    "2019": {
+      "Build & CI (DevOps)": 1.0,
+      "Consensus (Domain Logic)": 0.2,
+      "Documentation": 0.2,
+      "GUI (Presentation Layer)": 1.2,
+      "Node & RPC (App/Interface)": 1.2,
+      "Tests (QA)": 6.5,
+      "Utilities (Shared Libs)": 0.2,
+      "Wallet (Client App)": 4.5
+    },
+    "2020": {
+      "Build & CI (DevOps)": 3.5,
+      "Consensus (Domain Logic)": 1.0,
+      "Core Libs": 0.67,
+      "Cryptography (Primitives)": 1.5,
+      "Documentation": 3.0,
+      "Node & RPC (App/Interface)": 12.0,
+      "P2P Network (Infrastructure)": 0.17,
+      "Tests (QA)": 26.0,
+      "Wallet (Client App)": 4.17
+    },
+    "2021": {
+      "Consensus (Domain Logic)": 1.17,
+      "Core Libs": 1.0,
+      "Cryptography (Primitives)": 2.0,
+      "Node & RPC (App/Interface)": 15.17,
+      "Tests (QA)": 14.67
+    },
+    "2022": {
+      "Core Libs": 0.5,
+      "Node & RPC (App/Interface)": 2.5,
+      "Tests (QA)": 9.5,
+      "Wallet (Client App)": 3.5
+    },
+    "2023": {
+      "Build & CI (DevOps)": 1.0,
+      "Consensus (Domain Logic)": 5.92,
+      "Core Libs": 3.67,
+      "Cryptography (Primitives)": 0.33,
+      "Documentation": 2.0,
+      "Node & RPC (App/Interface)": 5.75,
+      "P2P Network (Infrastructure)": 2.08,
+      "Tests (QA)": 14.25
+    },
+    "2024": {
+      "Build & CI (DevOps)": 2.17,
+      "Consensus (Domain Logic)": 12.64,
+      "Core Libs": 4.39,
+      "Documentation": 6.14,
+      "GUI (Presentation Layer)": 0.31,
+      "Node & RPC (App/Interface)": 16.31,
+      "P2P Network (Infrastructure)": 0.5,
+      "Tests (QA)": 30.23,
+      "Utilities (Shared Libs)": 1.73,
+      "Wallet (Client App)": 3.58
+    },
+    "2025": {
+      "Consensus (Domain Logic)": 2.25,
+      "Core Libs": 7.5,
+      "Documentation": 2.25,
+      "Node & RPC (App/Interface)": 7.58,
+      "P2P Network (Infrastructure)": 0.83,
+      "Tests (QA)": 13.75,
+      "Utilities (Shared Libs)": 2.83
+    },
+    "2026": {
+      "Core Libs": 0.5,
+      "Documentation": 2.0,
+      "Node & RPC (App/Interface)": 4.0,
+      "Tests (QA)": 8.5
+    }
+  },
+  "bip_list": [
+    {
+      "number": 94,
+      "title": "Testnet 4",
+      "status": "Deployed",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0094.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoin-dev] [Lightning-dev] A new Bitcoin implementation\n\tintegrated with Core Lightning",
+    "date": "2023-01-14",
+    "link": "https://gnusha.org/pi/bitcoindev/MP0sjW-onVrtLWZxABUP2ywxGEXWAqm-UEZbHVG4nTt9fkdiz9qrCW7mXj1Rwhug_U0aQIeRPGnlYO15ZWH4SKHiv2w-Or-fHbtrR8vJjAo=@protonmail.com"
+  },
+  "last_message": {
+    "source": "delving",
+    "subject": "Re: OP_CC: A simple introspection opcode to enable cheaper consolidations",
+    "date": "2025-12-30",
+    "link": "https://delvingbitcoin.org/t/op-cc-a-simple-introspection-opcode-to-enable-cheaper-consolidations/2177/2"
+  },
+  "social_history": {
+    "2023": {
+      "lightning": 1,
+      "mempool-fees": 1,
+      "other": 4,
+      "utxo-sync": 2
+    },
+    "2024": {
+      "core-dev": 4,
+      "mining": 2
+    },
+    "2025": {
+      "core-dev": 1,
+      "other": 13,
+      "lightning": 1,
+      "mempool-fees": 2,
+      "mining": 2,
+      "p2p-network": 3,
+      "quantum": 2,
+      "utxo-sync": 1
+    }
+  }
+}

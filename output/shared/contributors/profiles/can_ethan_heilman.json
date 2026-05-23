@@ -49,7 +49,131 @@
   "dev_type": "Builder",
   "global_first_active": "2014-06-03T06:51:45",
   "global_last_active": "2026-04-15T11:26:08",
-  "is_top_50": true,
+  "github_location": null,
+  "github_company": "@cloudflare",
+  "github_bio": "Network Security/Crypto Researcher looking at Bitcoin and the RPKI.",
+  "github_twitter": null,
+  "github_blog": "https://ethanheilman.com",
+  "github_followers": 274.0,
+  "is_top_50": false,
   "github_url": "https://github.com/EthanHeilman",
-  "delving_url": "https://delvingbitcoin.org/u/ethanheilman"
+  "delving_url": "https://delvingbitcoin.org/u/ethanheilman",
+  "commit_history": {
+    "2015": {
+      "Build & CI (DevOps)": 0.33,
+      "P2P Network (Infrastructure)": 0.83,
+      "Tests (QA)": 0.83
+    },
+    "2016": {
+      "Build & CI (DevOps)": 0.33,
+      "Core Libs": 0.33,
+      "P2P Network (Infrastructure)": 1.17,
+      "Tests (QA)": 3.17
+    },
+    "2018": {
+      "P2P Network (Infrastructure)": 1.0
+    },
+    "2020": {
+      "Core Libs": 1.0
+    },
+    "2021": {
+      "Build & CI (DevOps)": 1.0
+    },
+    "2023": {
+      "Build & CI (DevOps)": 1.0
+    },
+    "2025": {
+      "Tests (QA)": 2.0
+    }
+  },
+  "bip_list": [
+    {
+      "number": 347,
+      "title": "OP_CAT in Tapscript",
+      "status": "Complete",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0347.mediawiki"
+    },
+    {
+      "number": 360,
+      "title": "Pay-to-Merkle-Root (P2MR)",
+      "status": "Draft",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0360.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "Re: [Bitcoin-development] Lets discuss what to do if SHA256d is\n actually broken",
+    "date": "2014-06-03",
+    "link": "https://gnusha.org/pi/bitcoindev/CAEM=y+WFofZV-DbqEhkMT477jKdV35daoc+f3RWpCk=Vgy8ONA@mail.gmail.com"
+  },
+  "last_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoindev] In defense of a PQ output type",
+    "date": "2026-04-15",
+    "link": "https://gnusha.org/pi/bitcoindev/CAEM=y+UeV-dO2TT2Sg4rXqVuTauObJwF3K+2LmxTWFWE8ePcNg@mail.gmail.com"
+  },
+  "social_history": {
+    "2014": {
+      "mining": 1
+    },
+    "2015": {
+      "other": 2,
+      "mining": 2
+    },
+    "2016": {
+      "other": 7,
+      "segwit": 1
+    },
+    "2017": {
+      "covenants": 2,
+      "other": 4,
+      "script-opcodes": 2
+    },
+    "2019": {
+      "bitvm": 3,
+      "covenants": 3,
+      "other": 3,
+      "mining": 4,
+      "segwit": 1
+    },
+    "2021": {
+      "covenants": 2,
+      "other": 1,
+      "quantum": 2,
+      "script-opcodes": 1
+    },
+    "2023": {
+      "covenants": 3,
+      "other": 2,
+      "script-opcodes": 3,
+      "taproot": 2
+    },
+    "2024": {
+      "other": 9,
+      "covenants": 14,
+      "mining": 1,
+      "quantum": 7,
+      "script-opcodes": 11,
+      "taproot": 5
+    },
+    "2025": {
+      "bitvm": 3,
+      "covenants": 3,
+      "other": 9,
+      "mining": 2,
+      "quantum": 19,
+      "segwit": 4,
+      "taproot": 10
+    },
+    "2026": {
+      "covenants": 4,
+      "mining": 2,
+      "other": 5,
+      "quantum": 14,
+      "script-opcodes": 3,
+      "taproot": 5
+    }
+  }
 }

@@ -48,7 +48,103 @@
   "dev_type": "Reviewer",
   "global_first_active": "2018-09-06T15:32:44",
   "global_last_active": "2026-04-26T00:04:06.695000064",
-  "is_top_50": true,
+  "github_location": "Seattle",
+  "github_company": null,
+  "github_bio": "Freedom fighter, stoic, software engineer, thinker. I regret to admit that NodeJS is awesome. Study Bitcoin.",
+  "github_twitter": null,
+  "github_blog": null,
+  "github_followers": 66.0,
+  "is_top_50": false,
   "github_url": "https://github.com/reardencode",
-  "delving_url": "https://delvingbitcoin.org/u/reardencode"
+  "delving_url": "https://delvingbitcoin.org/u/reardencode",
+  "bip_list": [
+    {
+      "number": 346,
+      "title": "OP_TXHASH",
+      "status": "Draft",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0346.mediawiki"
+    },
+    {
+      "number": 348,
+      "title": "CHECKSIGFROMSTACK",
+      "status": "Draft",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0348.mediawiki"
+    },
+    {
+      "number": 349,
+      "title": "OP_INTERNALKEY",
+      "status": "Draft",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0349.mediawiki"
+    },
+    {
+      "number": 442,
+      "title": "OP_PAIRCOMMIT",
+      "status": "Draft",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0442.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoin-dev] A BIP proposal for transactions that are\n 'cancellable'",
+    "date": "2018-09-06",
+    "link": "https://gnusha.org/pi/bitcoindev/20180906203244.GQ62902@hank.reardencode.com"
+  },
+  "last_message": {
+    "source": "delving",
+    "subject": "Re: Commit-Reveal for PQ Migration",
+    "date": "2026-04-26",
+    "link": "https://delvingbitcoin.org/t/commit-reveal-for-pq-migration/2419/2"
+  },
+  "social_history": {
+    "2018": {
+      "other": 2
+    },
+    "2020": {
+      "mining": 1
+    },
+    "2022": {
+      "covenants": 1,
+      "mining": 1,
+      "other": 2,
+      "script-opcodes": 1,
+      "taproot": 1
+    },
+    "2023": {
+      "covenants": 19,
+      "mining": 1,
+      "script-opcodes": 12,
+      "signatures-sighash": 4,
+      "other": 4,
+      "taproot": 6
+    },
+    "2024": {
+      "bip-process": 7,
+      "other": 28,
+      "covenants": 21,
+      "hard-fork-block-size": 6,
+      "mining": 11,
+      "script-opcodes": 13,
+      "signatures-sighash": 5,
+      "soft-fork-activation": 8,
+      "taproot": 16
+    },
+    "2025": {
+      "bip-process": 1,
+      "other": 37,
+      "covenants": 10,
+      "hard-fork-block-size": 2,
+      "mining": 1,
+      "script-opcodes": 5,
+      "soft-fork-activation": 2,
+      "taproot": 9
+    },
+    "2026": {
+      "covenants": 1,
+      "other": 3
+    }
+  }
 }

@@ -50,6 +50,210 @@
   "dev_type": "Protocol Designer",
   "global_first_active": "2013-04-02T11:00:51",
   "global_last_active": "2024-01-18T03:24:02",
-  "is_top_50": true,
-  "github_url": "https://github.com/jonasschnelli"
+  "github_location": null,
+  "github_company": null,
+  "github_bio": null,
+  "github_twitter": null,
+  "github_blog": null,
+  "github_followers": null,
+  "is_top_50": false,
+  "github_url": "https://github.com/jonasschnelli",
+  "commit_history": {
+    "2013": {
+      "Build & CI (DevOps)": 1.0,
+      "Core Libs": 3.33,
+      "Documentation": 6.33,
+      "GUI (Presentation Layer)": 11.33,
+      "Merge": 2.0
+    },
+    "2014": {
+      "Build & CI (DevOps)": 0.87,
+      "Core Libs": 14.7,
+      "Documentation": 7.17,
+      "GUI (Presentation Layer)": 12.37,
+      "Node & RPC (App/Interface)": 0.7,
+      "Tests (QA)": 0.2
+    },
+    "2015": {
+      "Build & CI (DevOps)": 7.22,
+      "Consensus (Domain Logic)": 1.33,
+      "Core Libs": 62.73,
+      "Documentation": 10.12,
+      "GUI (Presentation Layer)": 41.83,
+      "Merge": 11.0,
+      "Node & RPC (App/Interface)": 13.06,
+      "P2P Network (Infrastructure)": 8.33,
+      "Tests (QA)": 13.72,
+      "Utilities (Shared Libs)": 2.96,
+      "Wallet (Client App)": 8.69
+    },
+    "2016": {
+      "Build & CI (DevOps)": 5.95,
+      "Consensus (Domain Logic)": 2.5,
+      "Core Libs": 19.98,
+      "Documentation": 3.33,
+      "GUI (Presentation Layer)": 31.62,
+      "Merge": 50.0,
+      "Node & RPC (App/Interface)": 7.9,
+      "P2P Network (Infrastructure)": 2.0,
+      "Tests (QA)": 2.57,
+      "Wallet (Client App)": 31.15
+    },
+    "2017": {
+      "Build & CI (DevOps)": 3.5,
+      "Consensus (Domain Logic)": 2.33,
+      "Core Libs": 9.0,
+      "Documentation": 2.0,
+      "GUI (Presentation Layer)": 26.0,
+      "Merge": 49.0,
+      "Node & RPC (App/Interface)": 2.5,
+      "P2P Network (Infrastructure)": 6.0,
+      "Tests (QA)": 11.33,
+      "Wallet (Client App)": 41.33
+    },
+    "2018": {
+      "Build & CI (DevOps)": 0.5,
+      "Consensus (Domain Logic)": 0.92,
+      "Core Libs": 4.08,
+      "Cryptography (Primitives)": 0.5,
+      "Documentation": 1.0,
+      "GUI (Presentation Layer)": 9.58,
+      "Merge": 42.0,
+      "Node & RPC (App/Interface)": 8.08,
+      "P2P Network (Infrastructure)": 1.0,
+      "Tests (QA)": 9.5,
+      "Wallet (Client App)": 3.83
+    },
+    "2019": {
+      "Build & CI (DevOps)": 2.33,
+      "Consensus (Domain Logic)": 2.0,
+      "Core Libs": 0.33,
+      "Cryptography (Primitives)": 1.17,
+      "Documentation": 0.5,
+      "GUI (Presentation Layer)": 3.5,
+      "Merge": 36.0,
+      "Node & RPC (App/Interface)": 2.0,
+      "P2P Network (Infrastructure)": 4.5,
+      "Tests (QA)": 7.67,
+      "Wallet (Client App)": 2.0
+    },
+    "2020": {
+      "Build & CI (DevOps)": 4.0,
+      "Consensus (Domain Logic)": 1.5,
+      "Core Libs": 1.0,
+      "GUI (Presentation Layer)": 3.5,
+      "Merge": 50.0,
+      "Node & RPC (App/Interface)": 2.5,
+      "Tests (QA)": 4.5,
+      "Wallet (Client App)": 3.0
+    },
+    "2021": {
+      "Merge": 9.0,
+      "Node & RPC (App/Interface)": 1.0,
+      "Tests (QA)": 2.0
+    }
+  },
+  "bip_list": [
+    {
+      "number": 136,
+      "title": "Bech32 Encoded Tx Position References",
+      "status": "Draft",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0136.mediawiki"
+    },
+    {
+      "number": 150,
+      "title": "Peer Authentication",
+      "status": "Closed",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0150.mediawiki"
+    },
+    {
+      "number": 151,
+      "title": "Peer-to-Peer Communication Encryption",
+      "status": "Closed",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0151.mediawiki"
+    },
+    {
+      "number": 159,
+      "title": "NODE_NETWORK_LIMITED service bit",
+      "status": "Deployed",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0159.mediawiki"
+    },
+    {
+      "number": 324,
+      "title": "Version 2 P2P Encrypted Transport Protocol",
+      "status": "Deployed",
+      "theme": "P2P Network",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0324.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "[Bitcoin-development] MacWallet - another wallet app for mac",
+    "date": "2013-10-08",
+    "link": "https://gnusha.org/pi/bitcoindev/AA2AE1E2-D0FF-4036-878C-2DDDD9080F6F@include7.ch"
+  },
+  "last_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoin-dev] Compressed Bitcoin Transactions",
+    "date": "2024-01-18",
+    "link": "https://gnusha.org/pi/bitcoindev/A1A794D6-E465-4F45-BF67-EB24B2CB9773@jonasschnelli.ch"
+  },
+  "social_history": {
+    "2013": {
+      "other": 1
+    },
+    "2015": {
+      "mempool-fees": 1,
+      "multisig-threshold": 1,
+      "other": 10,
+      "privacy": 2,
+      "wallet-keys": 2
+    },
+    "2016": {
+      "other": 22,
+      "mempool-fees": 8,
+      "multisig-threshold": 5,
+      "p2p-network": 21,
+      "privacy": 2,
+      "segwit": 2,
+      "wallet-keys": 9
+    },
+    "2017": {
+      "other": 17,
+      "mempool-fees": 4,
+      "mining": 2,
+      "multisig-threshold": 1,
+      "p2p-network": 11,
+      "privacy": 4,
+      "segwit": 2,
+      "wallet-keys": 1
+    },
+    "2018": {
+      "mining": 1,
+      "other": 4,
+      "p2p-network": 4,
+      "segwit": 4,
+      "wallet-keys": 5
+    },
+    "2019": {
+      "mempool-fees": 2,
+      "mining": 2,
+      "p2p-network": 5,
+      "privacy": 1,
+      "other": 1
+    },
+    "2022": {
+      "p2p-network": 1
+    },
+    "2023": {
+      "other": 1
+    },
+    "2024": {
+      "other": 1
+    }
+  }
 }

@@ -49,6 +49,167 @@
   "dev_type": "Protocol Designer",
   "global_first_active": "2012-06-17T20:27:39",
   "global_last_active": "2024-04-30T17:20:16",
-  "is_top_50": true,
-  "github_url": "https://github.com/maaku"
+  "github_location": "San Jos\u00e9, CA",
+  "github_company": null,
+  "github_bio": null,
+  "github_twitter": null,
+  "github_blog": null,
+  "github_followers": 161.0,
+  "is_top_50": false,
+  "github_url": "https://github.com/maaku",
+  "commit_history": {
+    "2012": {
+      "Core Libs": 1.0
+    },
+    "2013": {
+      "Core Libs": 1.0,
+      "Documentation": 1.0
+    },
+    "2014": {
+      "Build & CI (DevOps)": 0.17,
+      "Consensus (Domain Logic)": 0.17,
+      "Core Libs": 2.67,
+      "GUI (Presentation Layer)": 0.67,
+      "Node & RPC (App/Interface)": 0.17,
+      "Tests (QA)": 0.17
+    },
+    "2015": {
+      "Consensus (Domain Logic)": 3.0,
+      "Core Libs": 1.5,
+      "Tests (QA)": 2.5
+    },
+    "2017": {
+      "Consensus (Domain Logic)": 1.0,
+      "Core Libs": 0.5,
+      "Tests (QA)": 0.5
+    },
+    "2018": {
+      "Consensus (Domain Logic)": 0.5,
+      "Tests (QA)": 0.5
+    },
+    "2022": {
+      "Build & CI (DevOps)": 0.5,
+      "Tests (QA)": 0.5
+    },
+    "2023": {
+      "Consensus (Domain Logic)": 1.0,
+      "Core Libs": 1.0
+    }
+  },
+  "bip_list": [
+    {
+      "number": 68,
+      "title": "Relative lock-time using consensus-enforced sequence numbers",
+      "status": "Deployed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0068.mediawiki"
+    },
+    {
+      "number": 98,
+      "title": "Fast Merkle Trees",
+      "status": "Draft",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0098.mediawiki"
+    },
+    {
+      "number": 112,
+      "title": "CHECKSEQUENCEVERIFY",
+      "status": "Deployed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0112.mediawiki"
+    },
+    {
+      "number": 113,
+      "title": "Median time-past as endpoint for lock-time calculations",
+      "status": "Deployed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0113.mediawiki"
+    },
+    {
+      "number": 116,
+      "title": "MERKLEBRANCHVERIFY",
+      "status": "Draft",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0116.mediawiki"
+    },
+    {
+      "number": 117,
+      "title": "Tail Call Execution Semantics",
+      "status": "Draft",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0117.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "Re: [Bitcoin-development] Proposed new P2P command and response:\n getcmds, cmdlist",
+    "date": "2012-06-17",
+    "link": "https://gnusha.org/pi/bitcoindev/CACh7GpHDnndEij5B24WVALKm1Ye+WXqVNx=2us1UhO5O4SBtYQ@mail.gmail.com"
+  },
+  "last_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoindev] Re: Great Consensus Cleanup Revival",
+    "date": "2024-04-30",
+    "link": "https://gnusha.org/pi/bitcoindev/67ec72f6-b89f-4f8d-8629-0ebc8bdb7acfn@googlegroups.com"
+  },
+  "social_history": {
+    "2012": {
+      "other": 6,
+      "mempool-fees": 1,
+      "mining": 2
+    },
+    "2013": {
+      "other": 30,
+      "hard-fork-block-size": 3,
+      "mempool-fees": 2,
+      "mining": 6,
+      "script-opcodes": 2,
+      "segwit": 1,
+      "taproot": 1
+    },
+    "2014": {
+      "other": 59,
+      "mempool-fees": 8,
+      "mining": 11,
+      "script-opcodes": 5,
+      "segwit": 1
+    },
+    "2015": {
+      "other": 64,
+      "hard-fork-block-size": 34,
+      "mempool-fees": 13,
+      "mining": 13,
+      "script-opcodes": 23,
+      "segwit": 6,
+      "soft-fork-activation": 4,
+      "taproot": 1
+    },
+    "2016": {
+      "segwit": 1
+    },
+    "2017": {
+      "other": 34,
+      "hard-fork-block-size": 4,
+      "mempool-fees": 5,
+      "mining": 7,
+      "script-opcodes": 12,
+      "segwit": 24,
+      "soft-fork-activation": 12,
+      "taproot": 14
+    },
+    "2018": {
+      "mining": 1,
+      "other": 2,
+      "script-opcodes": 3,
+      "segwit": 2,
+      "soft-fork-activation": 2,
+      "taproot": 2
+    },
+    "2022": {
+      "other": 1
+    },
+    "2024": {
+      "other": 3
+    }
+  }
 }

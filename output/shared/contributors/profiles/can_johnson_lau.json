@@ -49,6 +49,139 @@
   "dev_type": "Protocol Designer",
   "global_first_active": "2015-07-22T12:00:41",
   "global_last_active": "2020-09-11T21:34:02",
-  "is_top_50": true,
-  "github_url": "https://github.com/jl2012"
+  "github_location": null,
+  "github_company": null,
+  "github_bio": null,
+  "github_twitter": null,
+  "github_blog": null,
+  "github_followers": 295.0,
+  "is_top_50": false,
+  "github_url": "https://github.com/jl2012",
+  "commit_history": {
+    "2016": {
+      "Consensus (Domain Logic)": 4.5,
+      "Core Libs": 8.5,
+      "Documentation": 0.5,
+      "Node & RPC (App/Interface)": 3.0,
+      "Tests (QA)": 2.5
+    },
+    "2017": {
+      "Consensus (Domain Logic)": 2.5,
+      "Core Libs": 1.0,
+      "Tests (QA)": 2.5
+    },
+    "2018": {
+      "Consensus (Domain Logic)": 1.83,
+      "P2P Network (Infrastructure)": 0.33,
+      "Tests (QA)": 0.5,
+      "Wallet (Client App)": 0.33
+    },
+    "2020": {
+      "Consensus (Domain Logic)": 2.0
+    }
+  },
+  "bip_list": [
+    {
+      "number": 114,
+      "title": "Merkelized Abstract Syntax Tree",
+      "status": "Closed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0114.mediawiki"
+    },
+    {
+      "number": 141,
+      "title": "Segregated Witness (Consensus layer)",
+      "status": "Deployed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0141.mediawiki"
+    },
+    {
+      "number": 142,
+      "title": "Address Format for Segregated Witness",
+      "status": "Closed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0142.mediawiki"
+    },
+    {
+      "number": 143,
+      "title": "Transaction Signature Verification for Version 0 Witness Program",
+      "status": "Deployed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0143.mediawiki"
+    },
+    {
+      "number": 146,
+      "title": "Dealing with signature encoding malleability",
+      "status": "Closed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0146.mediawiki"
+    },
+    {
+      "number": 147,
+      "title": "Dealing with dummy stack element malleability",
+      "status": "Deployed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0147.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoin-dev] BIP 102 - kick the can down the road to 2MB",
+    "date": "2015-07-22",
+    "link": "https://gnusha.org/pi/bitcoindev/20150722170041.Horde.N2psXR0k1XYN4_s0phBwGg1@server47.web-hosting.com"
+  },
+  "last_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoin-dev] Two questions about segwit implementation",
+    "date": "2019-05-26",
+    "link": "https://gnusha.org/pi/bitcoindev/DD2C67C8-0DF6-4140-8427-19B7F28FA22C@xbt.hk"
+  },
+  "social_history": {
+    "2015": {
+      "other": 32,
+      "hard-fork-block-size": 32,
+      "mining": 22,
+      "script-opcodes": 23,
+      "segwit": 13,
+      "signatures-sighash": 3,
+      "soft-fork-activation": 13,
+      "taproot": 5
+    },
+    "2016": {
+      "other": 29,
+      "hard-fork-block-size": 6,
+      "mining": 9,
+      "script-opcodes": 12,
+      "segwit": 27,
+      "signatures-sighash": 6,
+      "soft-fork-activation": 14,
+      "taproot": 3
+    },
+    "2017": {
+      "other": 39,
+      "hard-fork-block-size": 4,
+      "mining": 6,
+      "script-opcodes": 4,
+      "segwit": 10,
+      "signatures-sighash": 1,
+      "soft-fork-activation": 10,
+      "taproot": 7
+    },
+    "2018": {
+      "other": 21,
+      "hard-fork-block-size": 4,
+      "script-opcodes": 12,
+      "segwit": 8,
+      "signatures-sighash": 23,
+      "soft-fork-activation": 1,
+      "taproot": 8
+    },
+    "2019": {
+      "other": 10,
+      "mining": 2,
+      "script-opcodes": 4,
+      "segwit": 3,
+      "taproot": 3
+    }
+  }
 }

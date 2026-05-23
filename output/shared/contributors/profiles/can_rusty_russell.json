@@ -49,7 +49,146 @@
   "dev_type": "Protocol Designer",
   "global_first_active": "2014-06-03T07:45:23",
   "global_last_active": "2026-03-12T16:01:00",
-  "is_top_50": true,
+  "github_location": null,
+  "github_company": "Blockstream",
+  "github_bio": "GPG: 15EE 8D6C AB0E 7F0C F999  BFCB D920 0E6C D1AD B8F1\r\n\r\nRusty Russell <rusty@rustcorp.com.au>\r\n\r\nnpub179e9tp4yqtqx4myp35283fz64gxuzmr6n3yxnktux5pnd5t03eps0el",
+  "github_twitter": null,
+  "github_blog": "http://rusty.ozlabs.org",
+  "github_followers": 1025.0,
+  "is_top_50": false,
   "github_url": "https://github.com/rustyrussell",
-  "delving_url": "https://delvingbitcoin.org/u/rustyrussell"
+  "delving_url": "https://delvingbitcoin.org/u/rustyrussell",
+  "commit_history": {
+    "2016": {
+      "Core Libs": 1.5,
+      "Node & RPC (App/Interface)": 0.5
+    }
+  },
+  "bip_list": [
+    {
+      "number": 9,
+      "title": "Version bits with timeout and delay",
+      "status": "Deployed",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0009.mediawiki"
+    },
+    {
+      "number": 440,
+      "title": "Varops Budget For Script Runtime Constraint",
+      "status": "Draft",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0440.mediawiki"
+    },
+    {
+      "number": 441,
+      "title": "Restoration of disabled script (Tapleaf 0xC2)",
+      "status": "Draft",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0441.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "Re: [Bitcoin-development] Lets discuss what to do if SHA256d is\n\tactually broken",
+    "date": "2014-06-03",
+    "link": "https://gnusha.org/pi/bitcoindev/87iooi40ws.fsf@rustcorp.com.au"
+  },
+  "last_message": {
+    "source": "mailing_list",
+    "subject": "[bitcoindev] Submission of varops budget and tapscript leaf 0xc2 BIPS\n (aka \"Script Restoration\") for BIP numbers.",
+    "date": "2026-03-12",
+    "link": "https://gnusha.org/pi/bitcoindev/87ms0cu5ir.fsf@rustcorp.com.au"
+  },
+  "social_history": {
+    "2014": {
+      "mining": 1,
+      "other": 3
+    },
+    "2015": {
+      "other": 22,
+      "mempool-fees": 1,
+      "mining": 6,
+      "script-opcodes": 18,
+      "segwit": 3,
+      "signatures-sighash": 2,
+      "soft-fork-activation": 15
+    },
+    "2016": {
+      "lightning": 1,
+      "mempool-fees": 1,
+      "other": 13,
+      "script-opcodes": 3,
+      "segwit": 2,
+      "signatures-sighash": 2
+    },
+    "2017": {
+      "covenants": 1,
+      "lightning": 1,
+      "other": 2,
+      "segwit": 3,
+      "soft-fork-activation": 3
+    },
+    "2018": {
+      "covenants": 1,
+      "lightning": 6,
+      "mempool-fees": 4,
+      "other": 2,
+      "script-opcodes": 12,
+      "segwit": 2,
+      "signatures-sighash": 13
+    },
+    "2019": {
+      "covenants": 2,
+      "lightning": 2,
+      "mempool-fees": 7,
+      "mining": 1,
+      "other": 2,
+      "signatures-sighash": 2
+    },
+    "2020": {
+      "mempool-fees": 1,
+      "segwit": 7,
+      "other": 1
+    },
+    "2021": {
+      "segwit": 1,
+      "soft-fork-activation": 3,
+      "other": 4
+    },
+    "2022": {
+      "covenants": 4,
+      "script-opcodes": 1,
+      "other": 1
+    },
+    "2023": {
+      "covenants": 5,
+      "lightning": 1,
+      "mempool-fees": 1,
+      "mining": 4,
+      "other": 7,
+      "script-opcodes": 5,
+      "soft-fork-activation": 1
+    },
+    "2024": {
+      "other": 9,
+      "covenants": 4,
+      "lightning": 4,
+      "mempool-fees": 17,
+      "mining": 17,
+      "script-opcodes": 2
+    },
+    "2025": {
+      "covenants": 1,
+      "lightning": 7,
+      "other": 9,
+      "script-opcodes": 4,
+      "segwit": 2
+    },
+    "2026": {
+      "covenants": 1,
+      "other": 3,
+      "script-opcodes": 1,
+      "signatures-sighash": 1
+    }
+  }
 }

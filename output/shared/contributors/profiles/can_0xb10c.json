@@ -1,0 +1,166 @@
+{
+  "display_name": "0xB10C",
+  "github_login_final": "0xB10C",
+  "delving_username_final": "0xb10c",
+  "uuid": "can_0xb10c",
+  "badges": {
+    "is_bip_author": null,
+    "is_core_committer": null,
+    "is_core_contributor": true,
+    "is_maintainer": null,
+    "is_social_contributor": true,
+    "is_sponsored": true,
+    "maintainer_status": null,
+    "social_source": "delving",
+    "sponsor_id": "brink"
+  },
+  "roles": [
+    "Researcher"
+  ],
+  "first_seen": "2026-04-17T00:00:00",
+  "last_seen": "2026-05-18T00:00:00",
+  "technical_focus": "Tests (QA)",
+  "total_commits": 96.0,
+  "authored_commits": 96.0,
+  "merge_commits": 0.0,
+  "total_additions": 3816.0,
+  "total_deletions": 366.0,
+  "first_commit": "2020-02-17T23:28:06",
+  "last_commit": "2026-05-11T17:04:01",
+  "bips_authored": 0.0,
+  "avg_review_latency_days": 114.76210677687547,
+  "reviews_count": 314.0,
+  "avg_approval_latency_days": 58.93336865767501,
+  "approvals_count": 147.0,
+  "prs_authored": 34.0,
+  "avg_pr_ack_velocity_days": 1.9146200510855684,
+  "avg_concept_lead_time_days": 15.921902913943354,
+  "review_reciprocity": 9.235294117647058,
+  "hybrid_score": 0.4539,
+  "threads_started": 42.0,
+  "replies_sent": 21.0,
+  "ml_threads": 1.0,
+  "delving_threads": 41.0,
+  "ml_responses": 7.0,
+  "delving_responses": 14.0,
+  "first_active": "2021-09-07T11:07:47",
+  "last_active": "2026-05-18T15:38:08.645000",
+  "dev_type": "Builder",
+  "global_first_active": "2020-02-17T23:28:06",
+  "global_last_active": "2026-05-18T15:38:08.644999936",
+  "github_location": "Zurich, CH",
+  "github_company": "@bitcoin-noc",
+  "github_bio": "Bitcoin developer and observer | gpg\r\n982A193E3CE0EED535E09023188CBB2648416AD5 | donate bc1qls5zwwputhasm4y77kalacac70 yzaek2ukxrf9",
+  "github_twitter": "0xB10C",
+  "github_blog": "https://b10c.me",
+  "github_followers": 455.0,
+  "is_top_50": false,
+  "github_url": "https://github.com/0xB10C",
+  "delving_url": "https://delvingbitcoin.org/u/0xb10c",
+  "commit_history": {
+    "2020": {
+      "Tests (QA)": 1.0
+    },
+    "2021": {
+      "Build & CI (DevOps)": 1.5,
+      "Consensus (Domain Logic)": 0.67,
+      "Core Libs": 1.5,
+      "Documentation": 4.0,
+      "P2P Network (Infrastructure)": 0.33
+    },
+    "2022": {
+      "Build & CI (DevOps)": 0.5,
+      "Core Libs": 1.5,
+      "Documentation": 3.67,
+      "P2P Network (Infrastructure)": 1.67,
+      "Tests (QA)": 9.67
+    },
+    "2023": {
+      "Consensus (Domain Logic)": 0.27,
+      "Core Libs": 1.12,
+      "Documentation": 0.27,
+      "Node & RPC (App/Interface)": 1.1,
+      "P2P Network (Infrastructure)": 1.6,
+      "Tests (QA)": 2.1,
+      "Utilities (Shared Libs)": 0.27,
+      "Wallet (Client App)": 0.27
+    },
+    "2024": {
+      "Consensus (Domain Logic)": 0.58,
+      "Core Libs": 1.25,
+      "Documentation": 1.58,
+      "Node & RPC (App/Interface)": 1.0,
+      "Tests (QA)": 4.58
+    },
+    "2025": {
+      "Core Libs": 2.0,
+      "Node & RPC (App/Interface)": 1.0,
+      "P2P Network (Infrastructure)": 1.5,
+      "Tests (QA)": 3.5
+    },
+    "2026": {
+      "Tests (QA)": 1.0
+    }
+  },
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "[bitcoin-dev] Reorgs on SigNet - Looking for feedback on approach\n\tand parameters",
+    "date": "2021-09-07",
+    "link": "https://gnusha.org/pi/bitcoindev/83272afb-ed87-15b6-e02c-16bb1102beb4@gmail.com"
+  },
+  "last_message": {
+    "source": "delving",
+    "subject": "Re: Public archive for Delving Bitcoin",
+    "date": "2026-05-18",
+    "link": "https://delvingbitcoin.org/t/public-archive-for-delving-bitcoin/87/8"
+  },
+  "social_history": {
+    "2021": {
+      "mempool-fees": 1,
+      "other": 1,
+      "taproot": 1,
+      "testing-devtools": 1
+    },
+    "2022": {
+      "mempool-fees": 2,
+      "mining": 2
+    },
+    "2023": {
+      "mempool-fees": 1,
+      "mining": 1,
+      "other": 3,
+      "p2p-network": 1
+    },
+    "2024": {
+      "other": 7,
+      "core-dev": 4,
+      "hard-fork-block-size": 3,
+      "mempool-fees": 5,
+      "p2p-network": 5,
+      "spam-filtering": 3,
+      "taproot": 3,
+      "testing-devtools": 4
+    },
+    "2025": {
+      "core-dev": 1,
+      "hard-fork-block-size": 12,
+      "mempool-fees": 12,
+      "mining": 10,
+      "other": 4,
+      "p2p-network": 17,
+      "spam-filtering": 9,
+      "taproot": 9
+    },
+    "2026": {
+      "other": 15,
+      "core-dev": 10,
+      "hard-fork-block-size": 1,
+      "mempool-fees": 9,
+      "mining": 4,
+      "p2p-network": 3,
+      "spam-filtering": 1,
+      "taproot": 1,
+      "testing-devtools": 7
+    }
+  }
+}

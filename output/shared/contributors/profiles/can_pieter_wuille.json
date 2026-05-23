@@ -50,7 +50,539 @@
   "dev_type": "Protocol Designer",
   "global_first_active": "2011-03-17T21:51:59",
   "global_last_active": "2026-05-15T10:45:08.347000064",
-  "is_top_50": true,
+  "github_location": null,
+  "github_company": null,
+  "github_bio": null,
+  "github_twitter": null,
+  "github_blog": null,
+  "github_followers": null,
+  "is_top_50": false,
   "github_url": "https://github.com/sipa",
-  "delving_url": "https://delvingbitcoin.org/u/sipa"
+  "delving_url": "https://delvingbitcoin.org/u/sipa",
+  "commit_history": {
+    "2011": {
+      "Build & CI (DevOps)": 2.5,
+      "Core Libs": 40.5,
+      "Merge": 23.0,
+      "Node & RPC (App/Interface)": 2.5,
+      "P2P Network (Infrastructure)": 4.5,
+      "Tests (QA)": 1.0
+    },
+    "2012": {
+      "Build & CI (DevOps)": 6.07,
+      "Core Libs": 122.43,
+      "Database (Persistence)": 5.75,
+      "Documentation": 3.53,
+      "GUI (Presentation Layer)": 11.18,
+      "Merge": 116.0,
+      "Node & RPC (App/Interface)": 24.73,
+      "P2P Network (Infrastructure)": 38.23,
+      "Tests (QA)": 15.07
+    },
+    "2013": {
+      "Build & CI (DevOps)": 2.03,
+      "Consensus (Domain Logic)": 1.53,
+      "Core Libs": 73.48,
+      "Database (Persistence)": 3.0,
+      "Documentation": 2.83,
+      "GUI (Presentation Layer)": 2.37,
+      "Merge": 66.0,
+      "Node & RPC (App/Interface)": 10.98,
+      "P2P Network (Infrastructure)": 9.48,
+      "Tests (QA)": 5.28
+    },
+    "2014": {
+      "Build & CI (DevOps)": 13.78,
+      "Consensus (Domain Logic)": 14.62,
+      "Core Libs": 89.78,
+      "Cryptography (Primitives)": 4.78,
+      "Documentation": 3.83,
+      "GUI (Presentation Layer)": 2.58,
+      "Merge": 85.0,
+      "Node & RPC (App/Interface)": 7.83,
+      "P2P Network (Infrastructure)": 6.25,
+      "Tests (QA)": 26.03,
+      "Utilities (Shared Libs)": 0.5
+    },
+    "2015": {
+      "Build & CI (DevOps)": 4.95,
+      "Consensus (Domain Logic)": 11.29,
+      "Core Libs": 34.04,
+      "Documentation": 3.53,
+      "GUI (Presentation Layer)": 0.56,
+      "Merge": 32.0,
+      "Node & RPC (App/Interface)": 8.26,
+      "P2P Network (Infrastructure)": 12.56,
+      "Tests (QA)": 11.96,
+      "Wallet (Client App)": 1.84
+    },
+    "2016": {
+      "Build & CI (DevOps)": 3.12,
+      "Consensus (Domain Logic)": 15.83,
+      "Core Libs": 63.05,
+      "Cryptography (Primitives)": 0.33,
+      "Database (Persistence)": 2.2,
+      "Documentation": 4.33,
+      "GUI (Presentation Layer)": 1.67,
+      "Merge": 87.0,
+      "Node & RPC (App/Interface)": 21.22,
+      "P2P Network (Infrastructure)": 13.57,
+      "Tests (QA)": 23.83,
+      "Wallet (Client App)": 6.85
+    },
+    "2017": {
+      "Build & CI (DevOps)": 6.12,
+      "Consensus (Domain Logic)": 30.42,
+      "Core Libs": 47.87,
+      "Cryptography (Primitives)": 6.87,
+      "Database (Persistence)": 2.2,
+      "Documentation": 4.87,
+      "GUI (Presentation Layer)": 2.45,
+      "Merge": 114.0,
+      "Node & RPC (App/Interface)": 10.42,
+      "P2P Network (Infrastructure)": 2.03,
+      "Tests (QA)": 37.08,
+      "Wallet (Client App)": 8.68
+    },
+    "2018": {
+      "Build & CI (DevOps)": 3.0,
+      "Consensus (Domain Logic)": 35.7,
+      "Core Libs": 19.12,
+      "Cryptography (Primitives)": 6.0,
+      "Documentation": 8.5,
+      "Merge": 42.0,
+      "Node & RPC (App/Interface)": 5.78,
+      "P2P Network (Infrastructure)": 5.75,
+      "Tests (QA)": 21.03,
+      "Wallet (Client App)": 11.12
+    },
+    "2019": {
+      "Build & CI (DevOps)": 3.17,
+      "Consensus (Domain Logic)": 19.58,
+      "Core Libs": 21.5,
+      "Cryptography (Primitives)": 1.75,
+      "Documentation": 4.0,
+      "GUI (Presentation Layer)": 1.0,
+      "Merge": 3.0,
+      "Node & RPC (App/Interface)": 10.17,
+      "P2P Network (Infrastructure)": 7.5,
+      "Tests (QA)": 11.83,
+      "Utilities (Shared Libs)": 2.33,
+      "Wallet (Client App)": 3.17
+    },
+    "2020": {
+      "Build & CI (DevOps)": 10.67,
+      "Consensus (Domain Logic)": 12.87,
+      "Core Libs": 43.48,
+      "Cryptography (Primitives)": 3.33,
+      "Documentation": 5.53,
+      "GUI (Presentation Layer)": 1.37,
+      "Merge": 7.0,
+      "Node & RPC (App/Interface)": 2.43,
+      "P2P Network (Infrastructure)": 34.6,
+      "Tests (QA)": 32.52,
+      "Utilities (Shared Libs)": 6.53,
+      "Wallet (Client App)": 1.67
+    },
+    "2021": {
+      "Build & CI (DevOps)": 8.92,
+      "Consensus (Domain Logic)": 28.78,
+      "Core Libs": 18.12,
+      "Cryptography (Primitives)": 0.5,
+      "Documentation": 3.25,
+      "Merge": 3.0,
+      "Node & RPC (App/Interface)": 1.42,
+      "P2P Network (Infrastructure)": 4.87,
+      "Tests (QA)": 28.03,
+      "Utilities (Shared Libs)": 1.0,
+      "Wallet (Client App)": 2.12
+    },
+    "2022": {
+      "Build & CI (DevOps)": 2.17,
+      "Consensus (Domain Logic)": 10.92,
+      "Core Libs": 8.98,
+      "Cryptography (Primitives)": 5.83,
+      "Documentation": 2.83,
+      "GUI (Presentation Layer)": 1.65,
+      "Merge": 1.0,
+      "Node & RPC (App/Interface)": 0.5,
+      "P2P Network (Infrastructure)": 2.73,
+      "Tests (QA)": 12.9,
+      "Utilities (Shared Libs)": 8.23,
+      "Wallet (Client App)": 0.25
+    },
+    "2023": {
+      "Build & CI (DevOps)": 3.67,
+      "Consensus (Domain Logic)": 7.67,
+      "Core Libs": 7.92,
+      "Cryptography (Primitives)": 6.33,
+      "Documentation": 2.33,
+      "Merge": 4.0,
+      "Node & RPC (App/Interface)": 1.83,
+      "P2P Network (Infrastructure)": 15.92,
+      "Tests (QA)": 38.75,
+      "Utilities (Shared Libs)": 0.58
+    },
+    "2024": {
+      "Build & CI (DevOps)": 4.67,
+      "Consensus (Domain Logic)": 5.95,
+      "Core Libs": 47.15,
+      "Documentation": 0.7,
+      "Node & RPC (App/Interface)": 2.4,
+      "P2P Network (Infrastructure)": 7.87,
+      "Tests (QA)": 53.73,
+      "Utilities (Shared Libs)": 4.33,
+      "Wallet (Client App)": 0.2
+    },
+    "2025": {
+      "Build & CI (DevOps)": 0.5,
+      "Consensus (Domain Logic)": 4.0,
+      "Core Libs": 50.5,
+      "Documentation": 3.0,
+      "Node & RPC (App/Interface)": 2.0,
+      "Tests (QA)": 33.5,
+      "Utilities (Shared Libs)": 1.5
+    },
+    "2026": {
+      "Consensus (Domain Logic)": 0.7,
+      "Core Libs": 16.37,
+      "Documentation": 2.0,
+      "Node & RPC (App/Interface)": 1.37,
+      "Tests (QA)": 6.37,
+      "Utilities (Shared Libs)": 0.2
+    }
+  },
+  "bip_list": [
+    {
+      "number": 9,
+      "title": "Version bits with timeout and delay",
+      "status": "Deployed",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0009.mediawiki"
+    },
+    {
+      "number": 30,
+      "title": "Duplicate transactions",
+      "status": "Deployed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0030.mediawiki"
+    },
+    {
+      "number": 32,
+      "title": "Hierarchical Deterministic Wallets",
+      "status": "Deployed",
+      "theme": "Wallet & Keys",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki"
+    },
+    {
+      "number": 42,
+      "title": "A finite monetary supply for Bitcoin",
+      "status": "Deployed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0042.mediawiki"
+    },
+    {
+      "number": 62,
+      "title": "Dealing with malleability",
+      "status": "Closed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0062.mediawiki"
+    },
+    {
+      "number": 66,
+      "title": "Strict DER signatures",
+      "status": "Deployed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0066.mediawiki"
+    },
+    {
+      "number": 103,
+      "title": "Block size following technological growth",
+      "status": "Closed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0103.mediawiki"
+    },
+    {
+      "number": 141,
+      "title": "Segregated Witness (Consensus layer)",
+      "status": "Deployed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0141.mediawiki"
+    },
+    {
+      "number": 143,
+      "title": "Transaction Signature Verification for Version 0 Witness Program",
+      "status": "Deployed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0143.mediawiki"
+    },
+    {
+      "number": 144,
+      "title": "Segregated Witness (Peer Services)",
+      "status": "Deployed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0144.mediawiki"
+    },
+    {
+      "number": 146,
+      "title": "Dealing with signature encoding malleability",
+      "status": "Closed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0146.mediawiki"
+    },
+    {
+      "number": 173,
+      "title": "Base32 address format for native v0-16 witness outputs",
+      "status": "Deployed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0173.mediawiki"
+    },
+    {
+      "number": 324,
+      "title": "Version 2 P2P Encrypted Transport Protocol",
+      "status": "Deployed",
+      "theme": "P2P Network",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0324.mediawiki"
+    },
+    {
+      "number": 330,
+      "title": "Transaction announcements reconciliation",
+      "status": "Draft",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0330.mediawiki"
+    },
+    {
+      "number": 340,
+      "title": "Schnorr Signatures for secp256k1",
+      "status": "Deployed",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0340.mediawiki"
+    },
+    {
+      "number": 341,
+      "title": "Taproot: SegWit version 1 spending rules",
+      "status": "Deployed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki"
+    },
+    {
+      "number": 342,
+      "title": "Validation of Taproot Scripts",
+      "status": "Deployed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0342.mediawiki"
+    },
+    {
+      "number": 350,
+      "title": "Bech32m format for v1+ witness addresses",
+      "status": "Deployed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0350.mediawiki"
+    },
+    {
+      "number": 379,
+      "title": "Miniscript",
+      "status": "Draft",
+      "theme": "Wallet & Keys",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0379.mediawiki"
+    },
+    {
+      "number": 380,
+      "title": "Output Script Descriptors General Operation",
+      "status": "Deployed",
+      "theme": "Privacy",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0380.mediawiki"
+    },
+    {
+      "number": 381,
+      "title": "Non-Segwit Output Script Descriptors",
+      "status": "Deployed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0381.mediawiki"
+    },
+    {
+      "number": 382,
+      "title": "Segwit Output Script Descriptors",
+      "status": "Deployed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0382.mediawiki"
+    },
+    {
+      "number": 383,
+      "title": "Multisig Output Script Descriptors",
+      "status": "Deployed",
+      "theme": "Privacy",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0383.mediawiki"
+    },
+    {
+      "number": 384,
+      "title": "combo() Output Script Descriptors",
+      "status": "Deployed",
+      "theme": "Privacy",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0384.mediawiki"
+    },
+    {
+      "number": 385,
+      "title": "raw() and addr() Output Script Descriptors",
+      "status": "Deployed",
+      "theme": "Privacy",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0385.mediawiki"
+    },
+    {
+      "number": 386,
+      "title": "tr() Output Script Descriptors",
+      "status": "Deployed",
+      "theme": "Privacy",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0386.mediawiki"
+    },
+    {
+      "number": 387,
+      "title": "Tapscript Multisig Output Script Descriptors",
+      "status": "Deployed",
+      "theme": "Privacy",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0387.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "Re: [Bitcoin-development] Roadmap for autotools / Qt gui merge",
+    "date": "2011-06-17",
+    "link": "https://gnusha.org/pi/bitcoindev/20110617103124.GA7177@ulyssis.org"
+  },
+  "last_message": {
+    "source": "delving",
+    "subject": "Re: TCP hole punching for Bitcoin nodes behind home NATs?",
+    "date": "2026-05-15",
+    "link": "https://delvingbitcoin.org/t/tcp-hole-punching-for-bitcoin-nodes-behind-home-nats/2497/16"
+  },
+  "social_history": {
+    "2011": {
+      "other": 33,
+      "mempool-fees": 2,
+      "mining": 1,
+      "script-opcodes": 4
+    },
+    "2012": {
+      "other": 44,
+      "mempool-fees": 2,
+      "mining": 11,
+      "p2p-network": 11,
+      "script-opcodes": 4,
+      "segwit": 1
+    },
+    "2013": {
+      "other": 47,
+      "hard-fork-block-size": 4,
+      "mempool-fees": 3,
+      "mining": 6,
+      "p2p-network": 4,
+      "script-opcodes": 2,
+      "taproot": 2
+    },
+    "2014": {
+      "other": 64,
+      "mempool-fees": 12,
+      "mining": 5,
+      "p2p-network": 1,
+      "script-opcodes": 19,
+      "segwit": 9,
+      "taproot": 1
+    },
+    "2015": {
+      "other": 85,
+      "hard-fork-block-size": 40,
+      "mempool-fees": 4,
+      "mining": 29,
+      "script-opcodes": 13,
+      "segwit": 6,
+      "taproot": 1
+    },
+    "2016": {
+      "other": 15,
+      "hard-fork-block-size": 1,
+      "mempool-fees": 2,
+      "p2p-network": 5,
+      "script-opcodes": 4,
+      "segwit": 5,
+      "taproot": 1
+    },
+    "2017": {
+      "other": 16,
+      "hard-fork-block-size": 1,
+      "mining": 1,
+      "p2p-network": 2,
+      "segwit": 6,
+      "taproot": 1
+    },
+    "2018": {
+      "other": 28,
+      "mempool-fees": 2,
+      "p2p-network": 3,
+      "script-opcodes": 1,
+      "segwit": 3,
+      "taproot": 7
+    },
+    "2019": {
+      "mining": 1,
+      "other": 5,
+      "p2p-network": 1,
+      "script-opcodes": 5,
+      "segwit": 8,
+      "taproot": 11
+    },
+    "2020": {
+      "mining": 2,
+      "other": 11,
+      "segwit": 8,
+      "taproot": 7
+    },
+    "2021": {
+      "other": 17,
+      "mempool-fees": 3,
+      "mining": 1,
+      "p2p-network": 3,
+      "segwit": 8,
+      "taproot": 7
+    },
+    "2022": {
+      "other": 5,
+      "mempool-fees": 2,
+      "p2p-network": 3,
+      "taproot": 2
+    },
+    "2023": {
+      "other": 14,
+      "mempool-fees": 24,
+      "mining": 1,
+      "p2p-network": 3,
+      "script-opcodes": 6,
+      "taproot": 6
+    },
+    "2024": {
+      "other": 40,
+      "hard-fork-block-size": 4,
+      "mempool-fees": 25,
+      "mining": 14,
+      "p2p-network": 5,
+      "script-opcodes": 7,
+      "segwit": 1,
+      "taproot": 4
+    },
+    "2025": {
+      "other": 79,
+      "hard-fork-block-size": 9,
+      "mempool-fees": 61,
+      "mining": 67,
+      "p2p-network": 6,
+      "script-opcodes": 10,
+      "taproot": 11
+    },
+    "2026": {
+      "other": 23,
+      "mempool-fees": 4,
+      "mining": 2,
+      "script-opcodes": 8,
+      "taproot": 3
+    }
+  }
 }

@@ -1,0 +1,122 @@
+{
+  "display_name": "James MacWhyte",
+  "github_login_final": "jmacwhyte",
+  "delving_username_final": null,
+  "uuid": "auto_james_macwhyte",
+  "badges": {
+    "is_bip_author": true,
+    "is_core_committer": null,
+    "is_core_contributor": true,
+    "is_maintainer": null,
+    "is_social_contributor": true,
+    "is_sponsored": null,
+    "maintainer_status": null,
+    "social_source": "mailing_list",
+    "sponsor_id": null
+  },
+  "roles": [
+    "BIP Author",
+    "Researcher"
+  ],
+  "first_seen": "2026-04-17T00:00:00",
+  "last_seen": "2026-05-18T00:00:00",
+  "technical_focus": "Core Libs",
+  "total_commits": 1.0,
+  "authored_commits": 1.0,
+  "merge_commits": 0.0,
+  "total_additions": 1.0,
+  "total_deletions": 1.0,
+  "first_commit": "2016-02-12T02:02:46",
+  "last_commit": "2016-02-12T02:02:46",
+  "bips_authored": 1.0,
+  "avg_review_latency_days": 523.9626597222222,
+  "reviews_count": 4.0,
+  "avg_approval_latency_days": null,
+  "approvals_count": 0.0,
+  "prs_authored": 1.0,
+  "avg_pr_ack_velocity_days": 13.218171296296296,
+  "avg_concept_lead_time_days": null,
+  "review_reciprocity": 4.0,
+  "hybrid_score": 0.5231,
+  "threads_started": 3.0,
+  "replies_sent": 46.0,
+  "ml_threads": 3.0,
+  "delving_threads": 0.0,
+  "ml_responses": 46.0,
+  "delving_responses": 0.0,
+  "first_active": "2016-03-08T17:07:03",
+  "last_active": "2022-07-11T19:01:09",
+  "dev_type": "Builder",
+  "global_first_active": "2016-02-12T02:02:46",
+  "global_last_active": "2022-07-11T19:01:09",
+  "github_location": null,
+  "github_company": null,
+  "github_bio": "Ex-CPO of BRD.\r\nLongtime cryptohead.",
+  "github_twitter": null,
+  "github_blog": null,
+  "github_followers": 33.0,
+  "is_top_50": false,
+  "github_url": "https://github.com/jmacwhyte",
+  "commit_history": {
+    "2016": {
+      "Core Libs": 1.0
+    }
+  },
+  "bip_list": [
+    {
+      "number": 75,
+      "title": "Out of Band Address Exchange using Payment Protocol Encryption",
+      "status": "Deployed",
+      "theme": "P2P Network",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0075.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoin-dev] Proposed BIP extension to BIP 0070",
+    "date": "2016-03-08",
+    "link": "https://gnusha.org/pi/bitcoindev/CAH+Axy77qm0Ls3vNFxhbqfaG=PvraX92RqFPKZs7je=qNuSA6Q@mail.gmail.com"
+  },
+  "last_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoin-dev] Security problems with relying on transaction\n fees for security",
+    "date": "2022-07-11",
+    "link": "https://gnusha.org/pi/bitcoindev/CAH+Axy46g=BDwgDMcs6afWqHiOEBCGo1VXUedC7qQYdJBBx8jQ@mail.gmail.com"
+  },
+  "social_history": {
+    "2016": {
+      "hard-fork-block-size": 1,
+      "mining": 4,
+      "multisig-threshold": 1,
+      "other": 11,
+      "payment-protocol": 11,
+      "script-opcodes": 1,
+      "wallet-keys": 1
+    },
+    "2017": {
+      "hard-fork-block-size": 1,
+      "other": 3
+    },
+    "2018": {
+      "multisig-threshold": 1,
+      "other": 2,
+      "payment-protocol": 1,
+      "privacy": 1,
+      "wallet-keys": 4
+    },
+    "2019": {
+      "other": 3,
+      "privacy": 3,
+      "wallet-keys": 1
+    },
+    "2021": {
+      "other": 2,
+      "script-opcodes": 2
+    },
+    "2022": {
+      "mining": 1,
+      "other": 1,
+      "wallet-keys": 2
+    }
+  }
+}

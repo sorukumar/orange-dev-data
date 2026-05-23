@@ -49,6 +49,209 @@
   "dev_type": "Protocol Designer",
   "global_first_active": "2012-04-26T10:49:28",
   "global_last_active": "2025-12-10T07:57:55",
-  "is_top_50": true,
-  "github_url": "https://github.com/petertodd"
+  "github_location": "Toronto",
+  "github_company": null,
+  "github_bio": "Applied Cryptography Consultant (what the cool kids call 'blockchain tech')",
+  "github_twitter": null,
+  "github_blog": "https://petertodd.org",
+  "github_followers": 2188.0,
+  "is_top_50": false,
+  "github_url": "https://github.com/petertodd",
+  "commit_history": {
+    "2012": {
+      "Core Libs": 1.0,
+      "Documentation": 1.0
+    },
+    "2013": {
+      "Core Libs": 10.0,
+      "Documentation": 1.0,
+      "GUI (Presentation Layer)": 1.0,
+      "P2P Network (Infrastructure)": 1.0,
+      "Tests (QA)": 5.0
+    },
+    "2014": {
+      "Consensus (Domain Logic)": 8.5,
+      "Core Libs": 14.33,
+      "Documentation": 1.0,
+      "GUI (Presentation Layer)": 0.33,
+      "P2P Network (Infrastructure)": 1.0,
+      "Tests (QA)": 12.83
+    },
+    "2015": {
+      "Consensus (Domain Logic)": 1.0,
+      "Core Libs": 21.08,
+      "Documentation": 3.5,
+      "GUI (Presentation Layer)": 0.25,
+      "P2P Network (Infrastructure)": 0.83,
+      "Tests (QA)": 1.08,
+      "Wallet (Client App)": 5.25
+    },
+    "2016": {
+      "Consensus (Domain Logic)": 1.0,
+      "Core Libs": 6.0,
+      "Documentation": 2.0
+    },
+    "2017": {
+      "Consensus (Domain Logic)": 1.0,
+      "Core Libs": 1.0
+    },
+    "2023": {
+      "Consensus (Domain Logic)": 1.5,
+      "Tests (QA)": 0.5
+    },
+    "2024": {
+      "Documentation": 1.0
+    },
+    "2025": {
+      "Tests (QA)": 1.0
+    }
+  },
+  "bip_list": [
+    {
+      "number": 9,
+      "title": "Version bits with timeout and delay",
+      "status": "Deployed",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0009.mediawiki"
+    },
+    {
+      "number": 65,
+      "title": "OP_CHECKLOCKTIMEVERIFY",
+      "status": "Deployed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0065.mediawiki"
+    },
+    {
+      "number": 111,
+      "title": "NODE_BLOOM service bit",
+      "status": "Deployed",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0111.mediawiki"
+    },
+    {
+      "number": 125,
+      "title": "Opt-in Full Replace-by-Fee Signaling",
+      "status": "Deployed",
+      "theme": "Mining",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0125.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "[Bitcoin-development] Trusted identities",
+    "date": "2012-04-26",
+    "link": "https://gnusha.org/pi/bitcoindev/20120426154928.GA13737@savin.lan"
+  },
+  "last_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoindev] A safe way to remove objectionable content from the blockchain",
+    "date": "2025-12-10",
+    "link": "https://gnusha.org/pi/bitcoindev/aTl8Y7p4qtYAsHbP@petertodd.org"
+  },
+  "social_history": {
+    "2012": {
+      "other": 7,
+      "payment-protocol": 2
+    },
+    "2013": {
+      "other": 128,
+      "hard-fork-block-size": 16,
+      "mempool-fees": 19,
+      "mining": 54,
+      "payment-protocol": 11,
+      "script-opcodes": 19,
+      "security": 10,
+      "spam-filtering": 11
+    },
+    "2014": {
+      "other": 178,
+      "mempool-fees": 11,
+      "mining": 23,
+      "payment-protocol": 20,
+      "script-opcodes": 33,
+      "security": 12,
+      "spam-filtering": 3
+    },
+    "2015": {
+      "other": 138,
+      "hard-fork-block-size": 97,
+      "mempool-fees": 50,
+      "mining": 60,
+      "payment-protocol": 3,
+      "script-opcodes": 38,
+      "security": 13,
+      "spam-filtering": 13
+    },
+    "2016": {
+      "other": 81,
+      "hard-fork-block-size": 9,
+      "mempool-fees": 2,
+      "mining": 15,
+      "payment-protocol": 15,
+      "script-opcodes": 14,
+      "security": 1,
+      "spam-filtering": 6
+    },
+    "2017": {
+      "other": 79,
+      "hard-fork-block-size": 2,
+      "mempool-fees": 8,
+      "mining": 9,
+      "payment-protocol": 7,
+      "script-opcodes": 3,
+      "security": 3
+    },
+    "2018": {
+      "other": 28,
+      "mempool-fees": 14,
+      "mining": 6,
+      "script-opcodes": 5,
+      "security": 1,
+      "spam-filtering": 4
+    },
+    "2019": {
+      "other": 22,
+      "mempool-fees": 1,
+      "mining": 1
+    },
+    "2021": {
+      "other": 6,
+      "mempool-fees": 2,
+      "mining": 1,
+      "script-opcodes": 4
+    },
+    "2022": {
+      "other": 55,
+      "mempool-fees": 55,
+      "mining": 21,
+      "script-opcodes": 3,
+      "security": 2
+    },
+    "2023": {
+      "other": 72,
+      "mempool-fees": 40,
+      "mining": 5,
+      "payment-protocol": 2,
+      "script-opcodes": 20,
+      "security": 19,
+      "spam-filtering": 8
+    },
+    "2024": {
+      "other": 30,
+      "hard-fork-block-size": 2,
+      "mempool-fees": 48,
+      "mining": 9,
+      "script-opcodes": 2,
+      "security": 16,
+      "spam-filtering": 1
+    },
+    "2025": {
+      "other": 34,
+      "mempool-fees": 10,
+      "mining": 6,
+      "script-opcodes": 11,
+      "security": 1,
+      "spam-filtering": 13
+    }
+  }
 }

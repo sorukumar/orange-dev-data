@@ -49,7 +49,151 @@
   "dev_type": "Builder",
   "global_first_active": "2019-08-28T16:25:00",
   "global_last_active": "2026-04-14T21:55:59",
-  "is_top_50": true,
+  "github_location": "Austria",
+  "github_company": null,
+  "github_bio": null,
+  "github_twitter": "theStack",
+  "github_blog": "http://happyvimming.blogspot.com",
+  "github_followers": 152.0,
+  "is_top_50": false,
   "github_url": "https://github.com/theStack",
-  "delving_url": "https://delvingbitcoin.org/u/thestack"
+  "delving_url": "https://delvingbitcoin.org/u/thestack",
+  "commit_history": {
+    "2019": {
+      "Build & CI (DevOps)": 0.5,
+      "Core Libs": 0.5,
+      "Documentation": 1.0,
+      "P2P Network (Infrastructure)": 1.0,
+      "Tests (QA)": 17.0,
+      "Wallet (Client App)": 2.0
+    },
+    "2020": {
+      "Consensus (Domain Logic)": 1.5,
+      "Core Libs": 8.08,
+      "Documentation": 3.83,
+      "GUI (Presentation Layer)": 0.67,
+      "Node & RPC (App/Interface)": 8.08,
+      "P2P Network (Infrastructure)": 5.33,
+      "Tests (QA)": 49.92,
+      "Utilities (Shared Libs)": 1.67,
+      "Wallet (Client App)": 4.92
+    },
+    "2021": {
+      "Build & CI (DevOps)": 2.83,
+      "Consensus (Domain Logic)": 2.83,
+      "Core Libs": 9.17,
+      "Documentation": 3.5,
+      "Node & RPC (App/Interface)": 6.5,
+      "P2P Network (Infrastructure)": 6.83,
+      "Tests (QA)": 100.67,
+      "Utilities (Shared Libs)": 1.5,
+      "Wallet (Client App)": 14.17
+    },
+    "2022": {
+      "Build & CI (DevOps)": 1.0,
+      "Consensus (Domain Logic)": 1.83,
+      "Core Libs": 15.83,
+      "Database (Persistence)": 1.33,
+      "Documentation": 9.5,
+      "Node & RPC (App/Interface)": 3.5,
+      "P2P Network (Infrastructure)": 5.0,
+      "Tests (QA)": 73.0,
+      "Wallet (Client App)": 17.0
+    },
+    "2023": {
+      "Build & CI (DevOps)": 1.75,
+      "Consensus (Domain Logic)": 1.0,
+      "Core Libs": 3.03,
+      "Cryptography (Primitives)": 0.2,
+      "Documentation": 4.5,
+      "GUI (Presentation Layer)": 3.5,
+      "Node & RPC (App/Interface)": 3.33,
+      "P2P Network (Infrastructure)": 2.45,
+      "Tests (QA)": 67.53,
+      "Utilities (Shared Libs)": 0.45,
+      "Wallet (Client App)": 4.25
+    },
+    "2024": {
+      "Build & CI (DevOps)": 3.43,
+      "Consensus (Domain Logic)": 2.1,
+      "Core Libs": 5.6,
+      "Cryptography (Primitives)": 0.1,
+      "Documentation": 2.0,
+      "GUI (Presentation Layer)": 2.43,
+      "Node & RPC (App/Interface)": 2.93,
+      "P2P Network (Infrastructure)": 1.93,
+      "Tests (QA)": 55.27,
+      "Utilities (Shared Libs)": 12.6,
+      "Wallet (Client App)": 5.6
+    },
+    "2025": {
+      "Build & CI (DevOps)": 5.0,
+      "Core Libs": 3.5,
+      "Documentation": 3.83,
+      "Node & RPC (App/Interface)": 4.33,
+      "Tests (QA)": 34.33,
+      "Wallet (Client App)": 5.0
+    },
+    "2026": {
+      "Build & CI (DevOps)": 1.0,
+      "Consensus (Domain Logic)": 3.0,
+      "Core Libs": 1.0,
+      "Documentation": 2.58,
+      "Node & RPC (App/Interface)": 1.08,
+      "P2P Network (Infrastructure)": 1.75,
+      "Tests (QA)": 6.58,
+      "Wallet (Client App)": 1.0
+    }
+  },
+  "bip_list": [
+    {
+      "number": 352,
+      "title": "Silent Payments",
+      "status": "Complete",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0352.mediawiki"
+    },
+    {
+      "number": 374,
+      "title": "Discrete Log Equality Proofs",
+      "status": "Draft",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0374.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "[bitcoin-dev] BIP37: 'getdata' request for filtered blocks is\n answered with 'merkleblock's even if no filter is set",
+    "date": "2020-04-02",
+    "link": "https://gnusha.org/pi/bitcoindev/CACi0ghtvniaA4sVty4ZuYk84F1PG-O4QvixS3sbp_RidB0K2dQ@mail.gmail.com"
+  },
+  "last_message": {
+    "source": "mailing_list",
+    "subject": "[bitcoindev] Re: BIP-352: Limiting the number of per-group recipients (K_max)",
+    "date": "2026-03-31",
+    "link": "https://gnusha.org/pi/bitcoindev/cf64109b-4d78-4515-a68e-d427243a105cn@googlegroups.com"
+  },
+  "social_history": {
+    "2020": {
+      "p2p-network": 1
+    },
+    "2024": {
+      "p2p-network": 8,
+      "privacy": 8,
+      "testing-devtools": 8,
+      "utxo-sync": 8
+    },
+    "2025": {
+      "signatures-sighash": 3,
+      "silent-payments": 1,
+      "utxo-sync": 2,
+      "other": 1
+    },
+    "2026": {
+      "mempool-fees": 1,
+      "silent-payments": 4,
+      "taproot": 1,
+      "testing-devtools": 1
+    }
+  }
 }

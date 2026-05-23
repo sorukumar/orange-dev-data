@@ -1,0 +1,112 @@
+{
+  "display_name": "Shaolin Fry",
+  "github_login_final": "shaolinfry",
+  "delving_username_final": null,
+  "uuid": "can_shaolin_fry",
+  "badges": {
+    "is_bip_author": true,
+    "is_core_committer": null,
+    "is_core_contributor": true,
+    "is_maintainer": null,
+    "is_social_contributor": true,
+    "is_sponsored": null,
+    "maintainer_status": null,
+    "social_source": "mailing_list",
+    "sponsor_id": null
+  },
+  "roles": [
+    "BIP Author",
+    "Researcher"
+  ],
+  "first_seen": "2026-04-17T00:00:00",
+  "last_seen": "2026-05-18T00:00:00",
+  "technical_focus": "Consensus (Domain Logic)",
+  "total_commits": 3.0,
+  "authored_commits": 3.0,
+  "merge_commits": 0.0,
+  "total_additions": 16.0,
+  "total_deletions": 17.0,
+  "first_commit": "2017-05-05T03:21:34",
+  "last_commit": "2017-05-05T03:21:34",
+  "bips_authored": 3.0,
+  "avg_review_latency_days": 913.56113250969,
+  "reviews_count": 18.0,
+  "avg_approval_latency_days": 1045.2599638310185,
+  "approvals_count": 3.0,
+  "prs_authored": 14.0,
+  "avg_pr_ack_velocity_days": 0.022291666666666668,
+  "avg_concept_lead_time_days": null,
+  "review_reciprocity": 1.2857142857142858,
+  "hybrid_score": 0.8866,
+  "threads_started": 6.0,
+  "replies_sent": 10.0,
+  "ml_threads": 6.0,
+  "delving_threads": 0.0,
+  "ml_responses": 10.0,
+  "delving_responses": 0.0,
+  "first_active": "2017-02-25T17:55:51",
+  "last_active": "2017-07-07T00:52:13",
+  "dev_type": "Builder",
+  "global_first_active": "2017-02-25T17:55:51",
+  "global_last_active": "2017-07-07T00:52:13",
+  "github_location": null,
+  "github_company": null,
+  "github_bio": "BTC: 1225p4Uv9dZpSZ8gt6q3WRUBZ3PUtXQYie",
+  "github_twitter": null,
+  "github_blog": null,
+  "github_followers": 120.0,
+  "is_top_50": false,
+  "github_url": "https://github.com/shaolinfry",
+  "commit_history": {
+    "2017": {
+      "Consensus (Domain Logic)": 0.33,
+      "Node & RPC (App/Interface)": 0.33,
+      "Tests (QA)": 0.33
+    }
+  },
+  "bip_list": [
+    {
+      "number": 8,
+      "title": "Version bits with lock-in by height",
+      "status": "Draft",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0008.mediawiki"
+    },
+    {
+      "number": 148,
+      "title": "Mandatory activation of segwit deployment",
+      "status": "Deployed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0148.mediawiki"
+    },
+    {
+      "number": 149,
+      "title": "Segregated Witness (second deployment)",
+      "status": "Closed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0149.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "[bitcoin-dev] Moving towards user activated soft fork activation",
+    "date": "2017-02-25",
+    "link": "https://gnusha.org/pi/bitcoindev/jo5-7HCZX7tgdMpIQgK85HCPP14FWxvOIbjV_oerIfc-HOP1GbK3SxFX82Ls23yU1L7y95QsFFggddMNdo5Sxy7YhTJhRFN1f8d6PaA8b7s=@protonmail.ch"
+  },
+  "last_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoin-dev] Height based vs block time based thresholds",
+    "date": "2017-07-07",
+    "link": "https://gnusha.org/pi/bitcoindev/q2ezd-tOTBF_3zLOedB36jYCuszrKYS-9BHS_Unle1NipWFTWX-aDwsfy5XrAB2D02SwojA4C_vDIyZa-VEh9IlQalF27HYG5C5KAP9096o=@protonmail.ch"
+  },
+  "social_history": {
+    "2017": {
+      "mining": 6,
+      "p2p-network": 1,
+      "script-opcodes": 1,
+      "segwit": 9,
+      "soft-fork-activation": 15,
+      "spam-filtering": 1
+    }
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "display_name": "Loki",
+  "github_login_final": "moonsettler",
+  "delving_username_final": "moonsettler",
+  "uuid": "can_loki",
+  "badges": {
+    "is_bip_author": null,
+    "is_core_committer": null,
+    "is_core_contributor": true,
+    "is_maintainer": null,
+    "is_social_contributor": true,
+    "is_sponsored": null,
+    "maintainer_status": null,
+    "social_source": "delving",
+    "sponsor_id": null
+  },
+  "roles": [
+    "Researcher"
+  ],
+  "first_seen": "2026-04-17T00:00:00",
+  "last_seen": "2026-05-18T00:00:00",
+  "technical_focus": "None",
+  "total_commits": 0.0,
+  "authored_commits": 0.0,
+  "merge_commits": 0.0,
+  "total_additions": null,
+  "total_deletions": null,
+  "first_commit": null,
+  "last_commit": null,
+  "bips_authored": 1.0,
+  "avg_review_latency_days": 2760.0645775079715,
+  "reviews_count": 19.0,
+  "avg_approval_latency_days": 452.46621317340066,
+  "approvals_count": 11.0,
+  "prs_authored": 2.0,
+  "avg_pr_ack_velocity_days": null,
+  "avg_concept_lead_time_days": null,
+  "review_reciprocity": 9.5,
+  "hybrid_score": 0.4724,
+  "threads_started": 33.0,
+  "replies_sent": 63.0,
+  "ml_threads": 1.0,
+  "delving_threads": 32.0,
+  "ml_responses": 3.0,
+  "delving_responses": 60.0,
+  "first_active": "2023-06-11T04:19:18",
+  "last_active": "2025-12-16T22:23:18.752000",
+  "dev_type": "Reviewer",
+  "global_first_active": "2023-06-11T04:19:18",
+  "global_last_active": "2025-12-16T22:23:18.752000",
+  "github_location": null,
+  "github_company": null,
+  "github_bio": null,
+  "github_twitter": null,
+  "github_blog": null,
+  "github_followers": 33.0,
+  "is_top_50": false,
+  "github_url": "https://github.com/moonsettler",
+  "delving_url": "https://delvingbitcoin.org/u/moonsettler",
+  "bip_list": [
+    {
+      "number": 442,
+      "title": "OP_PAIRCOMMIT",
+      "status": "Draft",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0442.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "[bitcoin-dev] Ark: An Alternative Privacy-preserving Second Layer\n\tSolution",
+    "date": "2023-06-11",
+    "link": "https://gnusha.org/pi/bitcoindev/mZy1LRBcpmxS4m217WThcZnHLH1gq8hrDaSfgqIfwxEqcodVPvcOKWHamj-6obEFXTVVAraN_ACPCDejaH_VY8wBF6cYGwwiKZyC0UGv238=@protonmail.com"
+  },
+  "last_message": {
+    "source": "delving",
+    "subject": "Re: SHRINCS: 324-byte stateful post-quantum signatures with static backups",
+    "date": "2025-12-16",
+    "link": "https://delvingbitcoin.org/t/shrincs-324-byte-stateful-post-quantum-signatures-with-static-backups/2158/6"
+  },
+  "social_history": {
+    "2023": {
+      "covenants": 8,
+      "other": 11,
+      "mining": 1,
+      "quantum": 6,
+      "script-opcodes": 6,
+      "spam-filtering": 1,
+      "taproot": 7
+    },
+    "2024": {
+      "other": 79,
+      "covenants": 29,
+      "lightning": 15,
+      "mempool-fees": 15,
+      "mining": 19,
+      "quantum": 7,
+      "script-opcodes": 12,
+      "spam-filtering": 12,
+      "taproot": 19
+    },
+    "2025": {
+      "other": 35,
+      "covenants": 19,
+      "lightning": 8,
+      "mempool-fees": 7,
+      "mining": 4,
+      "quantum": 4,
+      "script-opcodes": 5,
+      "spam-filtering": 6,
+      "taproot": 10
+    }
+  }
+}

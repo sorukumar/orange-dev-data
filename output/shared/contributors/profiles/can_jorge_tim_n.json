@@ -1,0 +1,204 @@
+{
+  "display_name": "Jorge Tim\u00f3n",
+  "github_login_final": "jtimon",
+  "delving_username_final": null,
+  "uuid": "can_jorge_tim_n",
+  "badges": null,
+  "roles": null,
+  "first_seen": null,
+  "last_seen": null,
+  "technical_focus": null,
+  "total_commits": 387.0,
+  "authored_commits": 387.0,
+  "merge_commits": 0.0,
+  "total_additions": 8341.0,
+  "total_deletions": 7343.0,
+  "first_commit": "2014-03-08T01:59:30",
+  "last_commit": "2019-10-29T19:27:30",
+  "bips_authored": 1.0,
+  "avg_review_latency_days": null,
+  "reviews_count": null,
+  "avg_approval_latency_days": null,
+  "approvals_count": null,
+  "prs_authored": null,
+  "avg_pr_ack_velocity_days": null,
+  "avg_concept_lead_time_days": null,
+  "review_reciprocity": null,
+  "hybrid_score": 0.7,
+  "threads_started": 21.0,
+  "replies_sent": 499.0,
+  "ml_threads": 21.0,
+  "delving_threads": 0.0,
+  "ml_responses": 499.0,
+  "delving_responses": 0.0,
+  "first_active": "2011-11-23T05:25:43",
+  "last_active": "2022-06-08T04:22:41",
+  "dev_type": "Protocol Designer",
+  "global_first_active": "2011-11-23T05:25:43",
+  "global_last_active": "2022-06-08T04:22:41",
+  "github_location": null,
+  "github_company": null,
+  "github_bio": null,
+  "github_twitter": null,
+  "github_blog": null,
+  "github_followers": 526.0,
+  "is_top_50": false,
+  "github_url": "https://github.com/jtimon",
+  "commit_history": {
+    "2014": {
+      "Build & CI (DevOps)": 5.34,
+      "Consensus (Domain Logic)": 20.18,
+      "Core Libs": 30.51,
+      "GUI (Presentation Layer)": 3.68,
+      "Node & RPC (App/Interface)": 3.89,
+      "P2P Network (Infrastructure)": 1.48,
+      "Tests (QA)": 6.93
+    },
+    "2015": {
+      "Build & CI (DevOps)": 5.33,
+      "Consensus (Domain Logic)": 10.0,
+      "Core Libs": 13.45,
+      "GUI (Presentation Layer)": 2.53,
+      "Node & RPC (App/Interface)": 3.45,
+      "P2P Network (Infrastructure)": 0.17,
+      "Tests (QA)": 4.28,
+      "Wallet (Client App)": 2.78
+    },
+    "2016": {
+      "Build & CI (DevOps)": 0.31,
+      "Consensus (Domain Logic)": 3.14,
+      "Core Libs": 8.01,
+      "Database (Persistence)": 0.2,
+      "Documentation": 0.33,
+      "GUI (Presentation Layer)": 1.33,
+      "Node & RPC (App/Interface)": 4.34,
+      "P2P Network (Infrastructure)": 0.14,
+      "Tests (QA)": 2.18,
+      "Utilities (Shared Libs)": 0.17,
+      "Wallet (Client App)": 0.84
+    },
+    "2017": {
+      "Build & CI (DevOps)": 0.17,
+      "Consensus (Domain Logic)": 5.52,
+      "Core Libs": 8.19,
+      "GUI (Presentation Layer)": 1.65,
+      "Node & RPC (App/Interface)": 6.69,
+      "P2P Network (Infrastructure)": 4.82,
+      "Tests (QA)": 4.32,
+      "Wallet (Client App)": 0.65
+    },
+    "2018": {
+      "Build & CI (DevOps)": 0.33,
+      "Consensus (Domain Logic)": 0.83,
+      "Core Libs": 0.33,
+      "Node & RPC (App/Interface)": 1.17,
+      "Tests (QA)": 0.33
+    },
+    "2019": {
+      "Consensus (Domain Logic)": 1.0,
+      "Documentation": 0.33,
+      "Tests (QA)": 1.33,
+      "Wallet (Client App)": 0.33
+    }
+  },
+  "bip_list": [
+    {
+      "number": 99,
+      "title": "Motivation and deployment of consensus rule changes ([soft/hard]forks)",
+      "status": "Closed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0099.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "Re: [Bitcoin-development] Addressing rapid changes in mining power",
+    "date": "2011-11-23",
+    "link": "https://gnusha.org/pi/bitcoindev/CAGQP0AEXrp3=j8WkQkUzJRhZYF6VxCsFz_ADXE8uz+d2YLfNcw@mail.gmail.com"
+  },
+  "last_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoin-dev] Bitcoin covenants are inevitable",
+    "date": "2022-06-08",
+    "link": "https://gnusha.org/pi/bitcoindev/CABm2gDr6QyVUPFODRBBvWY-sukX+k9-kLKpjPnwwaQqejQL88w@mail.gmail.com"
+  },
+  "social_history": {
+    "2011": {
+      "other": 18,
+      "mining": 4
+    },
+    "2012": {
+      "mempool-fees": 1,
+      "mining": 2,
+      "other": 8
+    },
+    "2013": {
+      "other": 6,
+      "mining": 6,
+      "script-opcodes": 1
+    },
+    "2014": {
+      "other": 40,
+      "mempool-fees": 7,
+      "mining": 18,
+      "script-opcodes": 4,
+      "soft-fork-activation": 1
+    },
+    "2015": {
+      "other": 120,
+      "core-dev": 14,
+      "hard-fork-block-size": 115,
+      "mempool-fees": 10,
+      "mining": 59,
+      "script-opcodes": 35,
+      "segwit": 6,
+      "soft-fork-activation": 21
+    },
+    "2016": {
+      "other": 22,
+      "hard-fork-block-size": 4,
+      "mining": 6,
+      "script-opcodes": 1,
+      "segwit": 2,
+      "soft-fork-activation": 5
+    },
+    "2017": {
+      "other": 12,
+      "hard-fork-block-size": 11,
+      "mining": 7,
+      "script-opcodes": 1,
+      "segwit": 26,
+      "soft-fork-activation": 13
+    },
+    "2018": {
+      "other": 6,
+      "core-dev": 1,
+      "hard-fork-block-size": 1,
+      "mempool-fees": 1,
+      "mining": 1,
+      "script-opcodes": 4,
+      "soft-fork-activation": 2
+    },
+    "2019": {
+      "mining": 1,
+      "script-opcodes": 1
+    },
+    "2020": {
+      "mining": 1,
+      "soft-fork-activation": 2
+    },
+    "2021": {
+      "other": 6,
+      "mempool-fees": 2,
+      "mining": 7,
+      "segwit": 1,
+      "soft-fork-activation": 12
+    },
+    "2022": {
+      "other": 15,
+      "mining": 3,
+      "script-opcodes": 2,
+      "soft-fork-activation": 21
+    }
+  }
+}

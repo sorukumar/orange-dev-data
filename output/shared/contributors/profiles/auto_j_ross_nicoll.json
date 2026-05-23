@@ -1,0 +1,104 @@
+{
+  "display_name": "J Ross Nicoll",
+  "github_login_final": "rnicoll",
+  "delving_username_final": null,
+  "uuid": "auto_j_ross_nicoll",
+  "badges": {
+    "is_bip_author": null,
+    "is_core_committer": null,
+    "is_core_contributor": true,
+    "is_maintainer": null,
+    "is_social_contributor": true,
+    "is_sponsored": null,
+    "maintainer_status": null,
+    "social_source": "mailing_list",
+    "sponsor_id": null
+  },
+  "roles": [
+    "Researcher"
+  ],
+  "first_seen": "2026-04-17T00:00:00",
+  "last_seen": "2026-05-18T00:00:00",
+  "technical_focus": "Core Libs",
+  "total_commits": 15.0,
+  "authored_commits": 15.0,
+  "merge_commits": 0.0,
+  "total_additions": 172.0,
+  "total_deletions": 62.0,
+  "first_commit": "2014-06-02T21:05:35",
+  "last_commit": "2015-10-18T16:27:41",
+  "bips_authored": 0.0,
+  "avg_review_latency_days": 251.42621258244546,
+  "reviews_count": 32.0,
+  "avg_approval_latency_days": 5.039907407407408,
+  "approvals_count": 3.0,
+  "prs_authored": 14.0,
+  "avg_pr_ack_velocity_days": 4.268248456790123,
+  "avg_concept_lead_time_days": 3.7428163580246916,
+  "review_reciprocity": 2.2857142857142856,
+  "hybrid_score": 0.3032,
+  "threads_started": 5.0,
+  "replies_sent": 28.0,
+  "ml_threads": 5.0,
+  "delving_threads": 0.0,
+  "ml_responses": 28.0,
+  "delving_responses": 0.0,
+  "first_active": "2014-04-25T14:54:05",
+  "last_active": "2015-08-10T14:19:36",
+  "dev_type": "Builder",
+  "global_first_active": "2014-04-25T14:54:05",
+  "global_last_active": "2015-10-18T16:27:41",
+  "github_location": "London",
+  "github_company": null,
+  "github_bio": "Software Engineering Lead",
+  "github_twitter": null,
+  "github_blog": "https://www.linkedin.com/in/jrossnicoll/",
+  "github_followers": 471.0,
+  "is_top_50": false,
+  "github_url": "https://github.com/rnicoll",
+  "commit_history": {
+    "2014": {
+      "Consensus (Domain Logic)": 0.33,
+      "Core Libs": 1.33,
+      "GUI (Presentation Layer)": 2.33
+    },
+    "2015": {
+      "Build & CI (DevOps)": 0.33,
+      "Consensus (Domain Logic)": 0.33,
+      "Core Libs": 1.33,
+      "Node & RPC (App/Interface)": 0.33,
+      "P2P Network (Infrastructure)": 1.0,
+      "Tests (QA)": 1.33,
+      "Wallet (Client App)": 0.33
+    }
+  },
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "[Bitcoin-development] Error handling in payment protocol (BIP-0070\n\tand BIP-0072)",
+    "date": "2014-04-25",
+    "link": "https://gnusha.org/pi/bitcoindev/535ABD5D.7070509@jrn.me.uk"
+  },
+  "last_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoin-dev] Alternative chain support for payment protocol",
+    "date": "2015-08-10",
+    "link": "https://gnusha.org/pi/bitcoindev/55C8F948.3070705@jrn.me.uk"
+  },
+  "social_history": {
+    "2014": {
+      "mining": 1,
+      "other": 1,
+      "payment-protocol": 4
+    },
+    "2015": {
+      "atomic-swaps": 2,
+      "other": 8,
+      "core-dev": 4,
+      "hard-fork-block-size": 11,
+      "mempool-fees": 2,
+      "mining": 1,
+      "payment-protocol": 5,
+      "testing-devtools": 2
+    }
+  }
+}

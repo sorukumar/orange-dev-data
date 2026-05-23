@@ -49,7 +49,127 @@
   "dev_type": "Builder",
   "global_first_active": "2018-12-01T18:00:00",
   "global_last_active": "2026-04-08T15:38:12.011000064",
-  "is_top_50": true,
+  "github_location": "Toronto",
+  "github_company": null,
+  "github_bio": null,
+  "github_twitter": null,
+  "github_blog": null,
+  "github_followers": 109.0,
+  "is_top_50": false,
   "github_url": "https://github.com/andrewtoth",
-  "delving_url": "https://delvingbitcoin.org/u/andrewtoth"
+  "delving_url": "https://delvingbitcoin.org/u/andrewtoth",
+  "commit_history": {
+    "2018": {
+      "Tests (QA)": 1.0,
+      "Wallet (Client App)": 1.0
+    },
+    "2019": {
+      "Core Libs": 1.0,
+      "Node & RPC (App/Interface)": 1.0,
+      "Wallet (Client App)": 2.0
+    },
+    "2020": {
+      "Core Libs": 0.5,
+      "Documentation": 1.0,
+      "Node & RPC (App/Interface)": 0.5,
+      "Tests (QA)": 1.0,
+      "Wallet (Client App)": 1.0
+    },
+    "2021": {
+      "Documentation": 1.0,
+      "Node & RPC (App/Interface)": 0.5,
+      "Tests (QA)": 1.0,
+      "Wallet (Client App)": 0.5
+    },
+    "2022": {
+      "Consensus (Domain Logic)": 0.5,
+      "Core Libs": 2.0,
+      "Documentation": 1.0,
+      "Node & RPC (App/Interface)": 6.5,
+      "Tests (QA)": 2.0
+    },
+    "2023": {
+      "Build & CI (DevOps)": 0.5,
+      "Consensus (Domain Logic)": 2.0,
+      "Tests (QA)": 1.5
+    },
+    "2024": {
+      "Build & CI (DevOps)": 0.5,
+      "Consensus (Domain Logic)": 12.17,
+      "Core Libs": 1.67,
+      "Documentation": 1.0,
+      "Node & RPC (App/Interface)": 3.0,
+      "P2P Network (Infrastructure)": 2.0,
+      "Tests (QA)": 5.67
+    },
+    "2025": {
+      "Consensus (Domain Logic)": 2.5,
+      "Node & RPC (App/Interface)": 2.5,
+      "Tests (QA)": 4.0
+    },
+    "2026": {
+      "Consensus (Domain Logic)": 6.0,
+      "Core Libs": 0.83,
+      "Documentation": 3.0,
+      "GUI (Presentation Layer)": 1.0,
+      "Node & RPC (App/Interface)": 1.67,
+      "P2P Network (Infrastructure)": 1.0,
+      "Tests (QA)": 10.0,
+      "Utilities (Shared Libs)": 0.5
+    }
+  },
+  "bip_list": [
+    {
+      "number": 374,
+      "title": "Discrete Log Equality Proofs",
+      "status": "Draft",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0374.mediawiki"
+    },
+    {
+      "number": 375,
+      "title": "Sending Silent Payments with PSBTs",
+      "status": "Draft",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0375.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "delving",
+    "subject": "Re: BIP352: PSBT support",
+    "date": "2024-05-20",
+    "link": "https://delvingbitcoin.org/t/bip352-psbt-support/877/4"
+  },
+  "last_message": {
+    "source": "delving",
+    "subject": "Re: Consensus Cleanup: demo of slow blocks on Signet",
+    "date": "2026-04-08",
+    "link": "https://delvingbitcoin.org/t/consensus-cleanup-demo-of-slow-blocks-on-signet/2367/24"
+  },
+  "social_history": {
+    "2024": {
+      "ecash": 15,
+      "multisig-threshold": 15,
+      "p2p-network": 8,
+      "script-opcodes": 12,
+      "silent-payments": 21,
+      "taproot": 4,
+      "utxo-sync": 8,
+      "wallet-keys": 21
+    },
+    "2025": {
+      "other": 8,
+      "p2p-network": 2,
+      "script-opcodes": 2,
+      "silent-payments": 2,
+      "taproot": 4,
+      "utxo-sync": 1,
+      "wallet-keys": 3
+    },
+    "2026": {
+      "other": 12,
+      "script-opcodes": 2,
+      "utxo-sync": 1
+    }
+  }
 }

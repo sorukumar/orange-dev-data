@@ -1,0 +1,134 @@
+{
+  "display_name": "Dmitry Petukhov",
+  "github_login_final": "dgpv",
+  "delving_username_final": "dgpv",
+  "uuid": "auto_dmitry_petukhov",
+  "badges": {
+    "is_bip_author": true,
+    "is_core_committer": null,
+    "is_core_contributor": true,
+    "is_maintainer": null,
+    "is_social_contributor": true,
+    "is_sponsored": null,
+    "maintainer_status": null,
+    "social_source": "Mixed",
+    "sponsor_id": null
+  },
+  "roles": [
+    "BIP Author",
+    "Researcher"
+  ],
+  "first_seen": "2026-04-17T00:00:00",
+  "last_seen": "2026-05-18T00:00:00",
+  "technical_focus": "Documentation",
+  "total_commits": 2.0,
+  "authored_commits": 2.0,
+  "merge_commits": 0.0,
+  "total_additions": 17.0,
+  "total_deletions": 7.0,
+  "first_commit": "2020-10-26T17:03:41",
+  "last_commit": "2020-11-06T09:16:15",
+  "bips_authored": 1.0,
+  "avg_review_latency_days": 1632.1381183449073,
+  "reviews_count": 22.0,
+  "avg_approval_latency_days": 1649.8122974537036,
+  "approvals_count": 1.0,
+  "prs_authored": 9.0,
+  "avg_pr_ack_velocity_days": 8.588278356481482,
+  "avg_concept_lead_time_days": null,
+  "review_reciprocity": 2.4444444444444446,
+  "hybrid_score": 0.5906,
+  "threads_started": 26.0,
+  "replies_sent": 53.0,
+  "ml_threads": 4.0,
+  "delving_threads": 22.0,
+  "ml_responses": 41.0,
+  "delving_responses": 12.0,
+  "first_active": "2018-11-08T02:11:30",
+  "last_active": "2024-09-09T10:54:41.079000",
+  "dev_type": "Builder",
+  "global_first_active": "2018-11-08T02:11:30",
+  "global_last_active": "2024-09-09T10:54:41.079000064",
+  "github_location": null,
+  "github_company": null,
+  "github_bio": null,
+  "github_twitter": null,
+  "github_blog": null,
+  "github_followers": 47.0,
+  "is_top_50": false,
+  "github_url": "https://github.com/dgpv",
+  "delving_url": "https://delvingbitcoin.org/u/dgpv",
+  "commit_history": {
+    "2020": {
+      "Documentation": 1.0,
+      "Tests (QA)": 1.0
+    }
+  },
+  "bip_list": [
+    {
+      "number": 88,
+      "title": "Hierarchical Deterministic Path Templates",
+      "status": "Complete",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0088.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoin-dev] BIP Proposal - Address Paste Improvement",
+    "date": "2018-11-08",
+    "link": "https://gnusha.org/pi/bitcoindev/20181108131130.134b2d43@simplexum.com"
+  },
+  "last_message": {
+    "source": "delving",
+    "subject": "BSST v0.1.4: license change to AGPLv3 (no other changes)",
+    "date": "2024-09-09",
+    "link": "https://delvingbitcoin.org/t/bsst-v0-1-4-license-change-to-agplv3-no-other-changes/1122/1"
+  },
+  "social_history": {
+    "2018": {
+      "other": 2
+    },
+    "2019": {
+      "covenants": 1,
+      "mining": 2,
+      "other": 8,
+      "script-opcodes": 2,
+      "taproot": 1,
+      "wallet-keys": 8
+    },
+    "2020": {
+      "other": 7,
+      "covenants": 4,
+      "mempool-fees": 2,
+      "mining": 1,
+      "script-opcodes": 5,
+      "wallet-keys": 6
+    },
+    "2021": {
+      "mining": 2,
+      "other": 6,
+      "taproot": 1,
+      "wallet-keys": 2
+    },
+    "2022": {
+      "wallet-keys": 2
+    },
+    "2023": {
+      "covenants": 5,
+      "mempool-fees": 2,
+      "other": 5,
+      "script-opcodes": 4,
+      "wallet-keys": 2
+    },
+    "2024": {
+      "other": 15,
+      "covenants": 22,
+      "mempool-fees": 13,
+      "mining": 13,
+      "script-opcodes": 21,
+      "taproot": 22,
+      "vaults": 13
+    }
+  }
+}

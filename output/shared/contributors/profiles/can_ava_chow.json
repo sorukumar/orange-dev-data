@@ -46,7 +46,335 @@
   "dev_type": "Protocol Designer",
   "global_first_active": "2015-05-07T06:15:57",
   "global_last_active": "2026-05-15T23:59:46",
-  "is_top_50": true,
+  "github_location": null,
+  "github_company": null,
+  "github_bio": null,
+  "github_twitter": null,
+  "github_blog": null,
+  "github_followers": null,
+  "is_top_50": false,
   "github_url": "https://github.com/achow101",
-  "delving_url": "https://delvingbitcoin.org/u/achow101"
+  "delving_url": "https://delvingbitcoin.org/u/achow101",
+  "commit_history": {
+    "2016": {
+      "Core Libs": 7.5,
+      "Documentation": 1.5,
+      "GUI (Presentation Layer)": 5.0,
+      "Node & RPC (App/Interface)": 2.0
+    },
+    "2017": {
+      "Build & CI (DevOps)": 2.65,
+      "Consensus (Domain Logic)": 2.0,
+      "Core Libs": 3.2,
+      "Documentation": 0.5,
+      "GUI (Presentation Layer)": 4.2,
+      "Node & RPC (App/Interface)": 8.15,
+      "Tests (QA)": 12.65,
+      "Wallet (Client App)": 4.65
+    },
+    "2018": {
+      "Build & CI (DevOps)": 3.67,
+      "Consensus (Domain Logic)": 13.0,
+      "Core Libs": 9.37,
+      "Documentation": 1.33,
+      "GUI (Presentation Layer)": 1.2,
+      "Node & RPC (App/Interface)": 4.2,
+      "Tests (QA)": 21.12,
+      "Utilities (Shared Libs)": 0.17,
+      "Wallet (Client App)": 27.95
+    },
+    "2019": {
+      "Build & CI (DevOps)": 2.7,
+      "Consensus (Domain Logic)": 6.58,
+      "Core Libs": 12.23,
+      "Documentation": 4.48,
+      "GUI (Presentation Layer)": 11.73,
+      "Node & RPC (App/Interface)": 9.32,
+      "Tests (QA)": 30.52,
+      "Utilities (Shared Libs)": 1.5,
+      "Wallet (Client App)": 122.93
+    },
+    "2020": {
+      "Build & CI (DevOps)": 6.53,
+      "Consensus (Domain Logic)": 9.0,
+      "Core Libs": 5.12,
+      "Documentation": 5.45,
+      "GUI (Presentation Layer)": 7.37,
+      "Node & RPC (App/Interface)": 3.33,
+      "Tests (QA)": 66.95,
+      "Utilities (Shared Libs)": 0.33,
+      "Wallet (Client App)": 108.92
+    },
+    "2021": {
+      "Consensus (Domain Logic)": 14.78,
+      "Core Libs": 21.7,
+      "Documentation": 2.0,
+      "GUI (Presentation Layer)": 3.25,
+      "Merge": 2.0,
+      "Node & RPC (App/Interface)": 3.87,
+      "Tests (QA)": 45.78,
+      "Utilities (Shared Libs)": 1.0,
+      "Wallet (Client App)": 57.62
+    },
+    "2022": {
+      "Build & CI (DevOps)": 2.5,
+      "Consensus (Domain Logic)": 5.0,
+      "Core Libs": 11.33,
+      "Documentation": 5.0,
+      "GUI (Presentation Layer)": 3.0,
+      "Merge": 133.0,
+      "Node & RPC (App/Interface)": 1.5,
+      "Tests (QA)": 56.83,
+      "Wallet (Client App)": 69.83
+    },
+    "2023": {
+      "Build & CI (DevOps)": 2.34,
+      "Consensus (Domain Logic)": 6.74,
+      "Core Libs": 13.9,
+      "Documentation": 5.0,
+      "GUI (Presentation Layer)": 5.48,
+      "Merge": 249.0,
+      "Node & RPC (App/Interface)": 3.29,
+      "Tests (QA)": 42.57,
+      "Utilities (Shared Libs)": 1.54,
+      "Wallet (Client App)": 27.15
+    },
+    "2024": {
+      "Build & CI (DevOps)": 5.37,
+      "Consensus (Domain Logic)": 28.0,
+      "Core Libs": 35.37,
+      "Documentation": 14.2,
+      "GUI (Presentation Layer)": 3.58,
+      "Merge": 345.0,
+      "Node & RPC (App/Interface)": 8.5,
+      "Tests (QA)": 48.37,
+      "Wallet (Client App)": 53.62
+    },
+    "2025": {
+      "Build & CI (DevOps)": 4.0,
+      "Consensus (Domain Logic)": 10.5,
+      "Core Libs": 6.92,
+      "Documentation": 4.0,
+      "GUI (Presentation Layer)": 7.67,
+      "Merge": 227.0,
+      "Node & RPC (App/Interface)": 1.92,
+      "Tests (QA)": 39.17,
+      "Utilities (Shared Libs)": 0.75,
+      "Wallet (Client App)": 30.08
+    },
+    "2026": {
+      "Build & CI (DevOps)": 1.0,
+      "Consensus (Domain Logic)": 5.5,
+      "Core Libs": 7.43,
+      "Documentation": 2.5,
+      "GUI (Presentation Layer)": 2.4,
+      "Merge": 119.0,
+      "Node & RPC (App/Interface)": 1.43,
+      "Tests (QA)": 16.93,
+      "Utilities (Shared Libs)": 0.2,
+      "Wallet (Client App)": 6.6
+    }
+  },
+  "bip_list": [
+    {
+      "number": 86,
+      "title": "Key Derivation for Single Key P2TR Outputs",
+      "status": "Deployed",
+      "theme": "Privacy",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0086.mediawiki"
+    },
+    {
+      "number": 174,
+      "title": "Partially Signed Bitcoin Transaction Format",
+      "status": "Deployed",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0174.mediawiki"
+    },
+    {
+      "number": 328,
+      "title": "Derivation Scheme for MuSig2 Aggregate Keys",
+      "status": "Complete",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0328.mediawiki"
+    },
+    {
+      "number": 370,
+      "title": "PSBT Version 2",
+      "status": "Deployed",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0370.mediawiki"
+    },
+    {
+      "number": 371,
+      "title": "Taproot Fields for PSBT",
+      "status": "Deployed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0371.mediawiki"
+    },
+    {
+      "number": 373,
+      "title": "MuSig2 PSBT Fields",
+      "status": "Complete",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0373.mediawiki"
+    },
+    {
+      "number": 375,
+      "title": "Sending Silent Payments with PSBTs",
+      "status": "Draft",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0375.mediawiki"
+    },
+    {
+      "number": 379,
+      "title": "Miniscript",
+      "status": "Draft",
+      "theme": "Wallet & Keys",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0379.mediawiki"
+    },
+    {
+      "number": 380,
+      "title": "Output Script Descriptors General Operation",
+      "status": "Deployed",
+      "theme": "Privacy",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0380.mediawiki"
+    },
+    {
+      "number": 381,
+      "title": "Non-Segwit Output Script Descriptors",
+      "status": "Deployed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0381.mediawiki"
+    },
+    {
+      "number": 382,
+      "title": "Segwit Output Script Descriptors",
+      "status": "Deployed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0382.mediawiki"
+    },
+    {
+      "number": 383,
+      "title": "Multisig Output Script Descriptors",
+      "status": "Deployed",
+      "theme": "Privacy",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0383.mediawiki"
+    },
+    {
+      "number": 384,
+      "title": "combo() Output Script Descriptors",
+      "status": "Deployed",
+      "theme": "Privacy",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0384.mediawiki"
+    },
+    {
+      "number": 385,
+      "title": "raw() and addr() Output Script Descriptors",
+      "status": "Deployed",
+      "theme": "Privacy",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0385.mediawiki"
+    },
+    {
+      "number": 386,
+      "title": "tr() Output Script Descriptors",
+      "status": "Deployed",
+      "theme": "Privacy",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0386.mediawiki"
+    },
+    {
+      "number": 387,
+      "title": "Tapscript Multisig Output Script Descriptors",
+      "status": "Deployed",
+      "theme": "Privacy",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0387.mediawiki"
+    },
+    {
+      "number": 389,
+      "title": "Multipath Descriptor Key Expressions",
+      "status": "Draft",
+      "theme": "Privacy",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0389.mediawiki"
+    },
+    {
+      "number": 390,
+      "title": "musig() Descriptor Key Expression",
+      "status": "Draft",
+      "theme": "Privacy",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0390.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "Re: [Bitcoin-development] Block Size Increase",
+    "date": "2015-05-07",
+    "link": "https://gnusha.org/pi/bitcoindev/CAL8tG==YbM8Lv4+iW3PVO34Dcs_kJ7CMbw9koOSr7GpOYmbE=Q@mail.gmail.com"
+  },
+  "last_message": {
+    "source": "delving",
+    "subject": "Re: BIP352: PSBT support",
+    "date": "2024-06-14",
+    "link": "https://delvingbitcoin.org/t/bip352-psbt-support/877/15"
+  },
+  "social_history": {
+    "2015": {
+      "hard-fork-block-size": 9,
+      "mining": 2,
+      "scaling": 10,
+      "segwit": 1,
+      "other": 4,
+      "soft-fork-activation": 1
+    },
+    "2016": {
+      "other": 7,
+      "multisig-threshold": 1,
+      "segwit": 2,
+      "soft-fork-activation": 3
+    },
+    "2017": {
+      "hard-fork-block-size": 4,
+      "other": 7,
+      "mining": 2,
+      "multisig-threshold": 1,
+      "scaling": 1,
+      "segwit": 3,
+      "soft-fork-activation": 3,
+      "wallet-keys": 1
+    },
+    "2018": {
+      "other": 6,
+      "mining": 6,
+      "segwit": 1,
+      "wallet-keys": 11
+    },
+    "2019": {
+      "multisig-threshold": 2,
+      "other": 3,
+      "segwit": 1,
+      "wallet-keys": 9
+    },
+    "2020": {
+      "other": 2,
+      "wallet-keys": 7
+    },
+    "2021": {
+      "other": 13,
+      "segwit": 1,
+      "soft-fork-activation": 2,
+      "wallet-keys": 13
+    },
+    "2022": {
+      "other": 1,
+      "wallet-keys": 4
+    },
+    "2023": {
+      "other": 13,
+      "multisig-threshold": 3,
+      "wallet-keys": 3
+    },
+    "2024": {
+      "other": 4,
+      "multisig-threshold": 3,
+      "wallet-keys": 3
+    }
+  }
 }

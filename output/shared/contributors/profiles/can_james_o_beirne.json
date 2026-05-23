@@ -49,7 +49,154 @@
   "dev_type": "Builder",
   "global_first_active": "2015-09-07T22:22:23",
   "global_last_active": "2025-07-11T17:59:18",
-  "is_top_50": true,
+  "github_location": null,
+  "github_company": null,
+  "github_bio": null,
+  "github_twitter": null,
+  "github_blog": null,
+  "github_followers": 811.0,
+  "is_top_50": false,
   "github_url": "https://github.com/jamesob",
-  "delving_url": "https://delvingbitcoin.org/u/jamesob"
+  "delving_url": "https://delvingbitcoin.org/u/jamesob",
+  "commit_history": {
+    "2015": {
+      "Build & CI (DevOps)": 0.33,
+      "Core Libs": 6.33,
+      "Tests (QA)": 1.33
+    },
+    "2017": {
+      "Build & CI (DevOps)": 1.33,
+      "Core Libs": 1.33,
+      "Documentation": 2.33,
+      "Tests (QA)": 1.0
+    },
+    "2018": {
+      "Build & CI (DevOps)": 3.48,
+      "Consensus (Domain Logic)": 4.14,
+      "Core Libs": 2.98,
+      "Documentation": 0.33,
+      "GUI (Presentation Layer)": 1.98,
+      "Node & RPC (App/Interface)": 1.98,
+      "P2P Network (Infrastructure)": 2.0,
+      "Tests (QA)": 18.48,
+      "Utilities (Shared Libs)": 0.14,
+      "Wallet (Client App)": 0.5
+    },
+    "2019": {
+      "Build & CI (DevOps)": 2.5,
+      "Consensus (Domain Logic)": 21.58,
+      "Core Libs": 6.5,
+      "Documentation": 2.0,
+      "Node & RPC (App/Interface)": 10.92,
+      "P2P Network (Infrastructure)": 1.75,
+      "Tests (QA)": 11.17,
+      "Utilities (Shared Libs)": 0.33,
+      "Wallet (Client App)": 1.25
+    },
+    "2020": {
+      "Build & CI (DevOps)": 0.5,
+      "Consensus (Domain Logic)": 0.83,
+      "Core Libs": 1.0,
+      "Node & RPC (App/Interface)": 1.33,
+      "Tests (QA)": 3.33
+    },
+    "2021": {
+      "Build & CI (DevOps)": 0.5,
+      "Consensus (Domain Logic)": 17.42,
+      "Core Libs": 3.25,
+      "Documentation": 2.5,
+      "Node & RPC (App/Interface)": 5.42,
+      "Tests (QA)": 20.42,
+      "Utilities (Shared Libs)": 0.5
+    },
+    "2022": {
+      "Build & CI (DevOps)": 0.2,
+      "Consensus (Domain Logic)": 10.23,
+      "Core Libs": 2.4,
+      "Database (Persistence)": 0.5,
+      "Documentation": 3.2,
+      "Node & RPC (App/Interface)": 5.23,
+      "P2P Network (Infrastructure)": 1.0,
+      "Tests (QA)": 10.23,
+      "Wallet (Client App)": 2.0
+    },
+    "2023": {
+      "Build & CI (DevOps)": 1.5,
+      "Consensus (Domain Logic)": 8.83,
+      "Core Libs": 0.5,
+      "Node & RPC (App/Interface)": 1.5,
+      "P2P Network (Infrastructure)": 1.0,
+      "Tests (QA)": 5.33,
+      "Utilities (Shared Libs)": 0.33
+    },
+    "2024": {
+      "Core Libs": 0.25,
+      "Documentation": 1.25,
+      "Node & RPC (App/Interface)": 1.25,
+      "Tests (QA)": 1.25
+    }
+  },
+  "bip_list": [
+    {
+      "number": 345,
+      "title": "OP_VAULT",
+      "status": "Closed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0345.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoin-dev] The new obfuscation patch & GetStats",
+    "date": "2015-10-07",
+    "link": "https://gnusha.org/pi/bitcoindev/CAPfvXfLw25J_mXn6b9QO_VDTU3EoVP9zxt7bbN0RF+2coYAdJA@mail.gmail.com"
+  },
+  "last_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoindev] A Taproot-native (re-)bindable transaction bundle proposal",
+    "date": "2025-07-11",
+    "link": "https://gnusha.org/pi/bitcoindev/CAPfvXfL59wF-sfrnwkK0NUeGCphsJ1VJzGmbTUDHgNFncx2VSw@mail.gmail.com"
+  },
+  "social_history": {
+    "2015": {
+      "other": 2
+    },
+    "2019": {
+      "other": 4
+    },
+    "2021": {
+      "other": 1
+    },
+    "2022": {
+      "covenants": 7,
+      "lightning": 1,
+      "other": 18,
+      "vaults": 3
+    },
+    "2023": {
+      "other": 11,
+      "covenants": 24,
+      "lightning": 1,
+      "script-opcodes": 10,
+      "taproot": 2,
+      "vaults": 23
+    },
+    "2024": {
+      "other": 3,
+      "covenants": 1,
+      "script-opcodes": 2,
+      "taproot": 1
+    },
+    "2025": {
+      "bitvm": 12,
+      "covenants": 31,
+      "lightning": 18,
+      "other": 9,
+      "script-opcodes": 1,
+      "segwit": 13,
+      "taproot": 14,
+      "testing-devtools": 12,
+      "vaults": 5
+    }
+  }
 }

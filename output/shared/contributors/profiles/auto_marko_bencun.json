@@ -1,0 +1,102 @@
+{
+  "display_name": "Marko Bencun",
+  "github_login_final": "benma",
+  "delving_username_final": null,
+  "uuid": "auto_marko_bencun",
+  "badges": {
+    "is_bip_author": true,
+    "is_core_committer": null,
+    "is_core_contributor": true,
+    "is_maintainer": null,
+    "is_social_contributor": true,
+    "is_sponsored": null,
+    "maintainer_status": null,
+    "social_source": "mailing_list",
+    "sponsor_id": null
+  },
+  "roles": [
+    "BIP Author",
+    "Researcher"
+  ],
+  "first_seen": "2026-04-17T00:00:00",
+  "last_seen": "2026-05-18T00:00:00",
+  "technical_focus": "Node & RPC (App/Interface)",
+  "total_commits": 39.0,
+  "authored_commits": 39.0,
+  "merge_commits": 0.0,
+  "total_additions": 586.0,
+  "total_deletions": 645.0,
+  "first_commit": "2017-02-21T08:16:25",
+  "last_commit": "2017-09-11T14:13:52",
+  "bips_authored": 1.0,
+  "avg_review_latency_days": 751.2624602102102,
+  "reviews_count": 40.0,
+  "avg_approval_latency_days": 245.97767403978054,
+  "approvals_count": 18.0,
+  "prs_authored": 18.0,
+  "avg_pr_ack_velocity_days": 3.803017618312757,
+  "avg_concept_lead_time_days": 3.930528067129629,
+  "review_reciprocity": 2.2222222222222223,
+  "hybrid_score": 0.6674,
+  "threads_started": 0.0,
+  "replies_sent": 3.0,
+  "ml_threads": 0.0,
+  "delving_threads": 0.0,
+  "ml_responses": 3.0,
+  "delving_responses": 0.0,
+  "first_active": "2020-02-28T11:42:15",
+  "last_active": "2020-03-21T15:29:26",
+  "dev_type": "Builder",
+  "global_first_active": "2017-02-21T08:16:25",
+  "global_last_active": "2020-03-21T15:29:26",
+  "github_location": null,
+  "github_company": null,
+  "github_bio": null,
+  "github_twitter": null,
+  "github_blog": null,
+  "github_followers": 146.0,
+  "is_top_50": false,
+  "github_url": "https://github.com/benma",
+  "commit_history": {
+    "2017": {
+      "Consensus (Domain Logic)": 0.46,
+      "Core Libs": 2.33,
+      "Database (Persistence)": 0.33,
+      "Documentation": 1.0,
+      "GUI (Presentation Layer)": 1.66,
+      "Node & RPC (App/Interface)": 5.66,
+      "P2P Network (Infrastructure)": 4.12,
+      "Tests (QA)": 0.62,
+      "Wallet (Client App)": 1.82
+    }
+  },
+  "bip_list": [
+    {
+      "number": 129,
+      "title": "Bitcoin Secure Multisig Setup (BSMS)",
+      "status": "Complete",
+      "theme": "Wallet & Keys",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0129.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoin-dev] Nonce blinding protocol for hardware wallets and\n airgapped signers",
+    "date": "2020-02-28",
+    "link": "https://gnusha.org/pi/bitcoindev/c6709c19-a6b2-37a8-0d58-4800126f145f@gmail.com"
+  },
+  "last_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoin-dev] Overview of anti-covert-channel signing techniques",
+    "date": "2020-03-21",
+    "link": "https://gnusha.org/pi/bitcoindev/CAOkeP8tn42PQvnSy_5BZ4H54F9myBODqsYFrGHDs=sncyohYfA@mail.gmail.com"
+  },
+  "social_history": {
+    "2020": {
+      "mining": 2,
+      "signatures-sighash": 1,
+      "taproot": 1,
+      "wallet-keys": 1
+    }
+  }
+}
