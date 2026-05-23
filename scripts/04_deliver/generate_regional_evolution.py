@@ -1,9 +1,33 @@
 
 import json
+import pandas as pd
 from collections import defaultdict
+import os
 
-with open('output/tracker/contributors_rich.json', 'r') as f:
-    contributors = json.load(f)
+# Read directly from the authoritative enriched source.
+# contributors_unified.parquet has github_location (from github_profiles.json join)
+# and first_commit (used to derive cohort year).
+# Using this avoids a dependency on the derived contributors_rich.json artifact.
+UNIFIED_FILE = "data/enriched/contributors_unified.parquet"
+if not os.path.exists(UNIFIED_FILE):
+    print(f"Error: {UNIFIED_FILE} not found. Run unify_contributors.py first.")
+    exit(1)
+
+df = pd.read_parquet(UNIFIED_FILE)
+
+# Derive cohort year: earliest commit year, or earliest overall activity year.
+df['first_commit'] = pd.to_datetime(df['first_commit'], errors='coerce')
+df['global_first_active'] = pd.to_datetime(df['global_first_active'], errors='coerce')
+df['cohort_year'] = df['first_commit'].dt.year.where(
+    df['first_commit'].notna(),
+    df['global_first_active'].dt.year
+)
+
+# Build list of (cohort_year, location) pairs for all contributors with a known cohort
+contributors = [
+    {'cohort_year': int(row['cohort_year']), 'location': row.get('github_location')}
+    for _, row in df[df['cohort_year'].notna()].iterrows()
+]
 
 # Consolidated categories
 # 1. North America
