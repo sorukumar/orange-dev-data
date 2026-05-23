@@ -1,0 +1,1447 @@
+{
+  "soft-fork-activation": {
+    "id": "soft-fork-activation",
+    "name": "Soft Fork Activation",
+    "description": "Soft fork activation mechanisms (BIP 9, BIP 8, Speedy Trial, UASF, flag day)",
+    "keywords": [
+      "soft fork",
+      "softfork",
+      "uasf",
+      "user activated",
+      "speedy trial",
+      "flag day",
+      "lot=true",
+      "lot=false",
+      "version bits",
+      "signaling",
+      "bip148",
+      "bip149",
+      "bip91",
+      "activation"
+    ],
+    "patterns": [
+      "\\b(?:soft[\\s\\-]?fork)\\s+activation\\b",
+      "\\bspeedy\\s+trial\\b",
+      "\\bflag[\\s\\-]?day\\b",
+      "\\buser[\\s\\-]?activated\\b",
+      "\\bversion[\\s\\-]?bits\\b",
+      "\\bsignaling\\b.*(?:threshold|miner|block)"
+    ],
+    "bips": [
+      "8",
+      "9",
+      "91",
+      "135",
+      "148",
+      "149",
+      "343"
+    ],
+    "weight": 70,
+    "github_paths": [
+      "src/versionbits.cpp",
+      "src/deploymentstatus.cpp",
+      "src/deploymentinfo.cpp"
+    ]
+  },
+  "hard-fork-block-size": {
+    "id": "hard-fork-block-size",
+    "name": "Hard Fork Block Size",
+    "description": "Block size debate & hard fork proposals (2015-2017 era and beyond)",
+    "keywords": [
+      "block size",
+      "blocksize",
+      "block weight",
+      "2mb",
+      "8mb",
+      "20mb",
+      "segwit2x",
+      "bitcoin xt",
+      "bitcoin classic",
+      "bitcoin unlimited",
+      "bip100",
+      "bip101",
+      "bip102",
+      "bip103",
+      "bip109",
+      "new york agreement",
+      "hong kong agreement"
+    ],
+    "patterns": [
+      "\\bblock[\\s\\-]?size\\b",
+      "\\bblock[\\s\\-]?weight\\b",
+      "\\b(?:segwit)?2x\\b",
+      "\\bbitcoin[\\s\\-]?(?:xt|classic|unlimited)\\b",
+      "\\b(?:20|2|8)\\s*mb\\b",
+      "\\bhard[\\s\\-]?fork\\b.*\\b(?:size|block|capacity|increase)\\b"
+    ],
+    "bips": [
+      "100",
+      "101",
+      "102",
+      "103",
+      "104",
+      "105",
+      "106",
+      "107",
+      "109"
+    ],
+    "weight": 75,
+    "github_paths": [
+      "src/consensus/params.h"
+    ]
+  },
+  "consensus-cleanup": {
+    "id": "consensus-cleanup",
+    "name": "Consensus Cleanup",
+    "description": "Great Consensus Cleanup & related consensus-level fixes",
+    "keywords": [
+      "consensus cleanup",
+      "great consensus cleanup",
+      "timewarp",
+      "64-byte transaction",
+      "duplicate transaction",
+      "merkle tree vulnerability"
+    ],
+    "patterns": [
+      "\\bconsensus\\s+cleanup\\b",
+      "\\btimewarp\\b",
+      "\\b64[\\s\\-]?byte\\s+transaction\\b"
+    ],
+    "bips": [
+      "30",
+      "53",
+      "54"
+    ],
+    "weight": 72,
+    "github_paths": [
+      "src/consensus/"
+    ]
+  },
+  "segwit": {
+    "id": "segwit",
+    "name": "Segwit",
+    "description": "Segregated Witness design, deployment, and consequences",
+    "keywords": [
+      "segwit",
+      "segregated witness",
+      "witness program",
+      "witness version",
+      "bech32",
+      "malleability",
+      "transaction malleability",
+      "anyone-can-spend"
+    ],
+    "patterns": [
+      "\\bseg[\\s\\-]?wit\\b",
+      "\\bsegregated\\s+witness\\b",
+      "\\bbech32(?:m)?\\b",
+      "\\bwitness\\s+(?:program|version|discount)\\b"
+    ],
+    "bips": [
+      "141",
+      "142",
+      "143",
+      "144",
+      "145",
+      "147",
+      "148",
+      "149",
+      "173",
+      "350"
+    ],
+    "weight": 65,
+    "github_paths": [
+      "src/script/interpreter.cpp",
+      "src/primitives/transaction.h"
+    ]
+  },
+  "taproot": {
+    "id": "taproot",
+    "name": "Taproot",
+    "description": "Taproot, Schnorr signatures, Tapscript",
+    "keywords": [
+      "taproot",
+      "schnorr",
+      "tapscript",
+      "bip340",
+      "bip341",
+      "bip342",
+      "mast",
+      "merkelized abstract syntax tree",
+      "key path spend",
+      "script path spend",
+      "annex"
+    ],
+    "patterns": [
+      "\\btaproot\\b",
+      "\\bschnorr\\b",
+      "\\btapscript\\b",
+      "\\bmast\\b",
+      "\\bkey[\\s\\-]?path\\b",
+      "\\bscript[\\s\\-]?path\\b"
+    ],
+    "bips": [
+      "114",
+      "340",
+      "341",
+      "342",
+      "343",
+      "386"
+    ],
+    "weight": 68,
+    "github_paths": [
+      "src/script/interpreter.cpp",
+      "src/bech32.cpp",
+      "src/pubkey.cpp"
+    ]
+  },
+  "covenants": {
+    "id": "covenants",
+    "name": "Covenants",
+    "description": "Covenant proposals: CTV, OP_CAT, OP_VAULT, TXHASH, APO, CSFS, CHECKSIGFROMSTACK, OP_CHECKCONTRACTVERIFY",
+    "keywords": [
+      "covenant",
+      "op_checktemplateverify",
+      "op_ctv",
+      "checktemplateverify",
+      "bip119",
+      "op_cat",
+      "op_vault",
+      "op_txhash",
+      "anyprevout",
+      "sighash_anyprevout",
+      "checksigfromstack",
+      "csfs",
+      "op_checksigfromstackverify",
+      "op_internalkey",
+      "op_paircommit",
+      "op_checkcontractverify",
+      "op_ccv",
+      "introspection",
+      "lnhance",
+      "graftleaf",
+      "op_expire"
+    ],
+    "patterns": [
+      "\\bcovenant[s]?\\b",
+      "\\bop[\\s_]c(?:tv|at|cv)\\b",
+      "\\bop[\\s_]vault\\b",
+      "\\bop[\\s_]txhash\\b",
+      "\\bop[\\s_]checksigfromstack(?:verify)?\\b",
+      "\\bop[\\s_]checktemplateverify\\b",
+      "\\bop[\\s_]internalkey\\b",
+      "\\bop[\\s_]paircommit\\b",
+      "\\bop[\\s_]checkcontractverify\\b",
+      "\\banyprevout\\b",
+      "\\bcsfs\\b",
+      "\\blnhance\\b",
+      "\\bgraftleaf\\b"
+    ],
+    "bips": [
+      "118",
+      "119",
+      "345",
+      "346",
+      "347",
+      "348",
+      "349",
+      "443"
+    ],
+    "weight": 80,
+    "github_paths": [
+      "src/script/interpreter.cpp"
+    ]
+  },
+  "script-opcodes": {
+    "id": "script-opcodes",
+    "name": "Script Opcodes",
+    "description": "Bitcoin Script, opcodes, Simplicity, Miniscript",
+    "keywords": [
+      "opcode",
+      "op_eval",
+      "p2sh",
+      "pay to script hash",
+      "op_return",
+      "miniscript",
+      "simplicity",
+      "script interpreter",
+      "script validation",
+      "sigop",
+      "op_cltv",
+      "op_csv",
+      "checklocktimeverify",
+      "checksequenceverify",
+      "op_if",
+      "op_success",
+      "script restoration"
+    ],
+    "patterns": [
+      "\\bop_[a-z_]+\\b",
+      "\\bp2sh\\b",
+      "\\bminiscript\\b",
+      "\\bsimplicity\\b",
+      "\\bscript\\s+(?:interpreter|validation|flag|engine|execution)\\b"
+    ],
+    "bips": [
+      "12",
+      "16",
+      "17",
+      "18",
+      "62",
+      "65",
+      "66",
+      "68",
+      "98",
+      "112",
+      "113",
+      "116",
+      "117",
+      "379"
+    ],
+    "weight": 40,
+    "github_paths": [
+      "src/script/"
+    ]
+  },
+  "ordinals-inscriptions": {
+    "id": "ordinals-inscriptions",
+    "name": "Ordinals Inscriptions",
+    "description": "Ordinal theory, Inscriptions, BRC-20, digital artifacts on Bitcoin",
+    "keywords": [
+      "ordinal",
+      "inscription",
+      "inscribe",
+      "brc-20",
+      "brc20",
+      "digital artifact",
+      "sat number",
+      "ordinal number",
+      "inscriptionless",
+      "rare sat"
+    ],
+    "patterns": [
+      "\\bordinal(?:s|\\.)\\b",
+      "\\binscription[s]?\\b",
+      "\\bbrc[\\s\\-]?20\\b",
+      "\\bdigital\\s+artifact\\b",
+      "\\brare\\s+sat[s]?\\b"
+    ],
+    "bips": [],
+    "weight": 82,
+    "github_paths": [
+      "src/kernel/"
+    ]
+  },
+  "tokens-runes": {
+    "id": "tokens-runes",
+    "name": "Tokens Runes",
+    "description": "Runes protocol, colored coins, Counterparty, Omni, RGB, Taro/Taproot Assets, tokenization on Bitcoin",
+    "keywords": [
+      "runes protocol",
+      "rune protocol",
+      "runestone",
+      "colored coin",
+      "counterparty",
+      "mastercoin",
+      "omni layer",
+      "taro asset",
+      "taproot asset",
+      "rgb protocol",
+      "rgb consensus",
+      "lrc-20",
+      "tokenization",
+      "fungible token"
+    ],
+    "patterns": [
+      "\\brunes?\\s+protocol\\b",
+      "\\brunestone\\b",
+      "\\bcolored\\s+coin[s]?\\b",
+      "\\bcounterparty\\b",
+      "\\bomni\\s+layer\\b",
+      "\\btaproot\\s+asset[s]?\\b",
+      "\\btaro\\b(?!\\w)",
+      "\\brgb\\s+(?:protocol|consensus|contract|yellow)\\b",
+      "\\blrc[\\s\\-]?20\\b"
+    ],
+    "bips": [],
+    "weight": 82,
+    "github_paths": [
+      "src/kernel/"
+    ]
+  },
+  "lightning": {
+    "id": "lightning",
+    "name": "Lightning",
+    "description": "Lightning Network: channels, HTLCs, routing, LN-Symmetry (eltoo), watchtowers, LSPs",
+    "keywords": [
+      "lightning",
+      "ln ",
+      "htlc",
+      "payment channel",
+      "channel capacity",
+      "routing",
+      "eltoo",
+      "ln-symmetry",
+      "watchtower",
+      "bolt11",
+      "bolt12",
+      "bolt ",
+      "lsp ",
+      "lightning service provider",
+      "submarine swap",
+      "splicing",
+      "onion message",
+      "onion routing",
+      "trampoline",
+      "blinded path",
+      "channel jamming",
+      "channel depletion"
+    ],
+    "patterns": [
+      "\\blightning\\s+(?:network|channel|payment|node|invoice|wallet)\\b",
+      "\\bhtlc\\b",
+      "\\bln[\\s\\-]symmetry\\b",
+      "\\beltoo\\b",
+      "\\bbolt[\\s\\-]?(?:11|12)\\b",
+      "\\bpayment\\s+channel[s]?\\b",
+      "\\bsplicing\\b",
+      "\\bchannel\\s+(?:jamming|depletion|capacity|open|close|factory)\\b",
+      "\\bsubmarine\\s+swap\\b",
+      "\\bwatchtower\\b",
+      "\\bonion\\s+(?:message|routing)\\b"
+    ],
+    "bips": [],
+    "weight": 60,
+    "github_paths": [
+      "src/interfaces/"
+    ]
+  },
+  "privacy": {
+    "id": "privacy",
+    "name": "Privacy",
+    "description": "Privacy techniques: CoinJoin, PayJoin, CoinSwap, confidential transactions, dandelion",
+    "keywords": [
+      "coinjoin",
+      "payjoin",
+      "coinswap",
+      "bustapay",
+      "confidential transaction",
+      "mixer",
+      "mixing",
+      "dandelion",
+      "privacy",
+      "fungibility",
+      "stealth address",
+      "reusable payment code",
+      "bip47",
+      "paynym"
+    ],
+    "patterns": [
+      "\\bcoin[\\s\\-]?join\\b",
+      "\\bpay[\\s\\-]?join\\b",
+      "\\bcoin[\\s\\-]?swap\\b",
+      "\\bdandelion\\b",
+      "\\bstealth\\s+address\\b",
+      "\\breusable\\s+payment\\s+code\\b",
+      "\\bprivacy\\b",
+      "\\bfungib(?:ility|le)\\b"
+    ],
+    "bips": [
+      "47",
+      "78",
+      "79",
+      "126",
+      "156"
+    ],
+    "weight": 62,
+    "github_paths": [
+      "src/wallet/receive.cpp"
+    ]
+  },
+  "silent-payments": {
+    "id": "silent-payments",
+    "name": "Silent Payments",
+    "description": "Silent Payments (BIP-352): static payment addresses without address reuse",
+    "keywords": [
+      "silent payment",
+      "bip352",
+      "bip-352",
+      "bip 352"
+    ],
+    "patterns": [
+      "\\bsilent\\s+payment[s]?\\b"
+    ],
+    "bips": [
+      "351",
+      "352",
+      "375"
+    ],
+    "weight": 78,
+    "github_paths": [
+      "src/wallet/silentpayments.cpp",
+      "src/bech32.cpp"
+    ]
+  },
+  "wallet-keys": {
+    "id": "wallet-keys",
+    "name": "Wallet Keys",
+    "description": "Wallet standards: HD wallets, BIP39 mnemonics, descriptors, PSBTs, seed backups, key management",
+    "keywords": [
+      "hd wallet",
+      "hierarchical deterministic",
+      "mnemonic",
+      "bip39",
+      "bip32",
+      "bip44",
+      "bip43",
+      "seed phrase",
+      "seed word",
+      "descriptor",
+      "output descriptor",
+      "psbt",
+      "partially signed",
+      "key derivation",
+      "xpub",
+      "zpub",
+      "ypub",
+      "codex32",
+      "shamir",
+      "wallet label",
+      "wallet backup",
+      "wallet policy",
+      "multisig wallet"
+    ],
+    "patterns": [
+      "\\bhd\\s+wallet[s]?\\b",
+      "\\bhierarchical\\s+deterministic\\b",
+      "\\bmnemonic\\b",
+      "\\bseed\\s+(?:phrase|word|backup)\\b",
+      "\\bdescriptor[s]?\\b",
+      "\\bpsbt\\b",
+      "\\bpartially\\s+signed\\b",
+      "\\bcodex32\\b",
+      "\\bkey\\s+derivat(?:ion|e)\\b",
+      "\\boutput\\s+descriptor\\b"
+    ],
+    "bips": [
+      "32",
+      "38",
+      "39",
+      "43",
+      "44",
+      "45",
+      "46",
+      "48",
+      "49",
+      "67",
+      "69",
+      "83",
+      "84",
+      "85",
+      "86",
+      "87",
+      "88",
+      "89",
+      "93",
+      "124",
+      "129",
+      "174",
+      "329",
+      "370",
+      "371",
+      "372",
+      "373",
+      "374",
+      "380",
+      "381",
+      "382",
+      "383",
+      "384",
+      "385",
+      "386",
+      "387",
+      "388",
+      "389",
+      "390"
+    ],
+    "weight": 50,
+    "github_paths": [
+      "src/wallet/",
+      "src/key.cpp",
+      "src/key_io.cpp",
+      "src/outputtype.cpp"
+    ]
+  },
+  "multisig-threshold": {
+    "id": "multisig-threshold",
+    "name": "Multisig Threshold",
+    "description": "Multisig, MuSig2, FROST, threshold signatures, key aggregation",
+    "keywords": [
+      "multisig",
+      "multi-sig",
+      "musig",
+      "musig2",
+      "frost signing",
+      "frost key",
+      "chilldkg",
+      "key aggregation",
+      "threshold signature",
+      "schnorr multisig",
+      "n-of-m",
+      "m-of-n"
+    ],
+    "patterns": [
+      "\\bmulti[\\s\\-]?sig\\b",
+      "\\bmusig[2]?\\b",
+      "\\bfrost\\b",
+      "\\bchilldkg\\b",
+      "\\bthreshold\\s+sign(?:ature|ing)\\b",
+      "\\bkey\\s+aggregation\\b",
+      "\\b[nmk][\\s\\-]?of[\\s\\-]?[nmk]\\b"
+    ],
+    "bips": [
+      "11",
+      "45",
+      "48",
+      "67",
+      "87",
+      "327",
+      "328",
+      "373",
+      "390"
+    ],
+    "weight": 64,
+    "github_paths": [
+      "src/musig.cpp"
+    ]
+  },
+  "mining": {
+    "id": "mining",
+    "name": "Mining",
+    "description": "Mining: PoW, ASICs, pools, block templates, Stratum, selfish mining, fee sniping",
+    "keywords": [
+      "mining",
+      "miner",
+      "hashrate",
+      "proof of work",
+      "asicboost",
+      "selfish mining",
+      "block template",
+      "getblocktemplate",
+      "stratum",
+      "mining pool",
+      "block withholding",
+      "fee sniping",
+      "coinbase transaction",
+      "nonce",
+      "share",
+      "braidpool",
+      "radpool",
+      "ocean pool",
+      "pplns",
+      "job declaration"
+    ],
+    "patterns": [
+      "\\bmining\\b(?!\\s+(?:data|the))",
+      "\\bminer[s]?\\b",
+      "\\bhashrate\\b",
+      "\\basicboost\\b",
+      "\\bselfish\\s+mining\\b",
+      "\\bstratum\\s+v?[12]?\\b",
+      "\\bblock\\s+template\\b",
+      "\\bgetblocktemplate\\b",
+      "\\bmining\\s+pool\\b",
+      "\\bpplns\\b",
+      "\\bbraidpool\\b",
+      "\\bradpool\\b"
+    ],
+    "bips": [
+      "22",
+      "23",
+      "34",
+      "42",
+      "52",
+      "310",
+      "320"
+    ],
+    "weight": 55,
+    "github_paths": [
+      "src/node/miner.cpp",
+      "src/rpc/mining.cpp",
+      "src/pow.cpp",
+      "src/mining/"
+    ]
+  },
+  "mempool-fees": {
+    "id": "mempool-fees",
+    "name": "Mempool Fees",
+    "description": "Mempool policy, RBF, CPFP, fee estimation, package relay, cluster mempool, pinning, V3/TRUC",
+    "keywords": [
+      "mempool",
+      "replace by fee",
+      "replace-by-fee",
+      "rbf",
+      "full-rbf",
+      "full rbf",
+      "cpfp",
+      "child pays for parent",
+      "fee estimation",
+      "fee rate",
+      "feerate",
+      "package relay",
+      "cluster mempool",
+      "linearization",
+      "pinning",
+      "tx pinning",
+      "transaction pinning",
+      "v3 transaction",
+      "truc",
+      "ephemeral anchor",
+      "pay to anchor",
+      "p2a",
+      "ancestor package",
+      "descendant limit",
+      "mempool policy",
+      "relay policy",
+      "min relay fee",
+      "dust limit",
+      "dust threshold"
+    ],
+    "patterns": [
+      "\\bmempool\\b",
+      "\\breplace[\\s\\-]?by[\\s\\-]?fee\\b",
+      "\\b(?:full[\\s\\-]?)?rbf\\b",
+      "\\bcpfp\\b",
+      "\\bfee\\s+(?:estimation|estimator|rate|bump|snip)\\b",
+      "\\bpackage\\s+relay\\b",
+      "\\bcluster\\s+mempool\\b",
+      "\\blinearization\\b",
+      "\\b(?:tx|transaction)\\s+pinning\\b",
+      "\\bv3\\s+transaction[s]?\\b",
+      "\\btruc\\b",
+      "\\bephemeral\\s+anchor[s]?\\b",
+      "\\bp2a\\b",
+      "\\bdust\\s+(?:limit|threshold|attack)\\b"
+    ],
+    "bips": [
+      "125",
+      "133",
+      "331",
+      "431",
+      "433"
+    ],
+    "weight": 58,
+    "github_paths": [
+      "src/txmempool.cpp",
+      "src/policy/",
+      "src/kernel/mempool_entry.h"
+    ]
+  },
+  "p2p-network": {
+    "id": "p2p-network",
+    "name": "P2P Network",
+    "description": "P2P protocol, Erlay, BIP324 encrypted transport, addr relay, compact blocks, DNS seeds",
+    "keywords": [
+      "p2p protocol",
+      "peer to peer",
+      "erlay",
+      "reconciliation",
+      "bip324",
+      "v2 transport",
+      "encrypted transport",
+      "compact block",
+      "addrv2",
+      "addr relay",
+      "dns seed",
+      "node discovery",
+      "eclipse attack",
+      "bgp",
+      "sendheaders",
+      "feefilter",
+      "bloom filter",
+      "bip37",
+      "compact filter",
+      "bip157",
+      "bip158",
+      "neutrino"
+    ],
+    "patterns": [
+      "\\bp2p\\s+(?:protocol|network|transport|relay)\\b",
+      "\\berlay\\b",
+      "\\bbip[\\s\\-]?324\\b",
+      "\\bv2\\s+(?:p2p|transport)\\b",
+      "\\bencrypted\\s+transport\\b",
+      "\\bcompact\\s+block[s]?\\b",
+      "\\baddr(?:v2)?\\s+(?:relay|message)\\b",
+      "\\bdns\\s+seed\\b",
+      "\\beclipse\\s+attack\\b",
+      "\\bbloom\\s+filter\\b",
+      "\\bcompact\\s+(?:block\\s+)?filter[s]?\\b",
+      "\\bneutrino\\b"
+    ],
+    "bips": [
+      "14",
+      "31",
+      "33",
+      "35",
+      "36",
+      "37",
+      "60",
+      "61",
+      "111",
+      "130",
+      "133",
+      "150",
+      "151",
+      "152",
+      "154",
+      "155",
+      "156",
+      "157",
+      "158",
+      "159",
+      "180",
+      "324",
+      "330",
+      "338",
+      "339",
+      "434"
+    ],
+    "weight": 52,
+    "github_paths": [
+      "src/net.cpp",
+      "src/net_processing.cpp",
+      "src/netaddress.cpp",
+      "src/protocol.cpp",
+      "src/bip324.cpp",
+      "src/addrman.cpp",
+      "src/headerssync.cpp"
+    ]
+  },
+  "signatures-sighash": {
+    "id": "signatures-sighash",
+    "name": "Signatures Sighash",
+    "description": "Signature schemes, sighash types, ECDSA, DER encoding",
+    "keywords": [
+      "sighash",
+      "signature hash",
+      "ecdsa",
+      "der encoding",
+      "signature verification",
+      "sighash_single",
+      "sighash_all",
+      "sighash_none",
+      "sighash_noinput",
+      "sighash_anyprevout"
+    ],
+    "patterns": [
+      "\\bsighash\\b",
+      "\\becdsa\\b",
+      "\\bder\\s+(?:encoding|signature)\\b",
+      "\\bsignature\\s+(?:verification|validation|encoding|scheme)\\b"
+    ],
+    "bips": [
+      "66",
+      "143",
+      "146",
+      "340"
+    ],
+    "weight": 45,
+    "github_paths": [
+      "src/pubkey.cpp",
+      "src/key.cpp",
+      "src/crypto/"
+    ]
+  },
+  "vaults": {
+    "id": "vaults",
+    "name": "Vaults",
+    "description": "Bitcoin vaults: custody, clawback, time-delayed spending, OP_VAULT",
+    "keywords": [
+      "vault",
+      "clawback",
+      "unvaulting",
+      "custody",
+      "cold storage",
+      "time-delayed",
+      "recovery path"
+    ],
+    "patterns": [
+      "\\bvault[s]?\\b",
+      "\\bclawback\\b",
+      "\\bunvault(?:ing)?\\b",
+      "\\bcold\\s+storage\\b"
+    ],
+    "bips": [
+      "345"
+    ],
+    "weight": 66,
+    "github_paths": [
+      "src/script/interpreter.cpp"
+    ]
+  },
+  "dlc": {
+    "id": "dlc",
+    "name": "Dlc",
+    "description": "Discreet Log Contracts, oracle-based contracts on Bitcoin",
+    "keywords": [
+      "discreet log contract",
+      "dlc ",
+      "dlc-dev",
+      "oracle contract",
+      "dlc oracle"
+    ],
+    "patterns": [
+      "\\bdiscreet\\s+log\\s+contract[s]?\\b",
+      "\\bdlc[s]?\\b(?!\\w)"
+    ],
+    "bips": [
+      "374"
+    ],
+    "weight": 74,
+    "github_paths": [
+      "src/script/"
+    ]
+  },
+  "sidechains-drivechain": {
+    "id": "sidechains-drivechain",
+    "name": "Sidechains Drivechain",
+    "description": "Sidechains, Drivechain (BIP 300/301), Liquid, federated pegs, merged mining",
+    "keywords": [
+      "sidechain",
+      "drivechain",
+      "hashrate escrow",
+      "blind merged mining",
+      "bip300",
+      "bip301",
+      "federated peg",
+      "two-way peg",
+      "liquid network",
+      "liquid sidechain"
+    ],
+    "patterns": [
+      "\\bsidechain[s]?\\b",
+      "\\bdrivechain[s]?\\b",
+      "\\bhashrate\\s+escrow\\b",
+      "\\bblind\\s+merged\\s+mining\\b",
+      "\\bfederated\\s+peg\\b",
+      "\\btwo[\\s\\-]?way\\s+peg\\b",
+      "\\bliquid\\s+(?:network|sidechain)\\b"
+    ],
+    "bips": [
+      "300",
+      "301"
+    ],
+    "weight": 72,
+    "github_paths": [
+      "src/validation.cpp"
+    ]
+  },
+  "bitvm": {
+    "id": "bitvm",
+    "name": "Bitvm",
+    "description": "BitVM, BitVMX, off-chain computation verification, fraud proofs, validity proofs, STARKs on Bitcoin",
+    "keywords": [
+      "bitvm",
+      "bitvmx",
+      "fraud proof",
+      "validity proof",
+      "validity rollup",
+      "stark",
+      "snark",
+      "zero knowledge",
+      "zk proof",
+      "zkcp",
+      "garbled circuit"
+    ],
+    "patterns": [
+      "\\bbitvm[x2]?\\b",
+      "\\bfraud\\s+proof[s]?\\b",
+      "\\bvalidity\\s+(?:proof|rollup)[s]?\\b",
+      "\\bstark[s]?\\b",
+      "\\bsnark[s]?\\b",
+      "\\bzero[\\s\\-]?knowledge\\b",
+      "\\bzk[\\s\\-]?(?:proof|verify|gossip|statechain|rollup)\\b",
+      "\\bgarbled\\s+circuit[s]?\\b"
+    ],
+    "bips": [],
+    "weight": 76,
+    "github_paths": [
+      "src/script/"
+    ]
+  },
+  "l2-bridges": {
+    "id": "l2-bridges",
+    "name": "L2 Bridges",
+    "description": "L2 protocols, rollups, Ark, statechains, bridges, channel factories, colliderVM",
+    "keywords": [
+      "rollup",
+      "statechain",
+      "ark protocol",
+      "channel factory",
+      "collidervm",
+      "bridge covenant",
+      "l2 protocol",
+      "superscalar",
+      "timeout tree",
+      "unilateral exit",
+      "aggregate exit"
+    ],
+    "patterns": [
+      "\\brollup[s]?\\b",
+      "\\bstatechain[s]?\\b",
+      "\\bark\\s+(?:protocol|case)\\b",
+      "\\bchannel\\s+factor(?:y|ies)\\b",
+      "\\bcollidervm\\b",
+      "\\bsuperscalar\\b",
+      "\\btimeout[\\s\\-]?tree\\b",
+      "\\bunilateral\\s+exit\\b",
+      "\\bl2\\s+(?:protocol|pool|bridge)\\b"
+    ],
+    "bips": [],
+    "weight": 68,
+    "github_paths": [
+      "src/script/"
+    ]
+  },
+  "quantum": {
+    "id": "quantum",
+    "name": "Quantum",
+    "description": "Post-quantum cryptography, quantum resistance, P2QRH, hash-based signatures, Lamport, FALCON, SPHINCS",
+    "keywords": [
+      "quantum",
+      "post-quantum",
+      "post quantum",
+      "p2qrh",
+      "lamport signature",
+      "hash-based signature",
+      "hash based signature",
+      "falcon signature",
+      "falcon post-quantum",
+      "sphincs",
+      "winternitz",
+      "grover",
+      "shor algorithm"
+    ],
+    "patterns": [
+      "\\bquantum\\b",
+      "\\bpost[\\s\\-]?quantum\\b",
+      "\\bp2qrh\\b",
+      "\\blamport\\b",
+      "\\bfalcon\\b",
+      "\\bsphincs\\b",
+      "\\bwinternitz\\b",
+      "\\bshor(?:'s)?\\s+algorithm\\b"
+    ],
+    "bips": [
+      "360"
+    ],
+    "weight": 78,
+    "github_paths": [
+      "src/crypto/"
+    ]
+  },
+  "ecash": {
+    "id": "ecash",
+    "name": "Ecash",
+    "description": "Chaumian ecash, Cashu, Fedimint, blind signatures, mints",
+    "keywords": [
+      "ecash",
+      "e-cash",
+      "cashu",
+      "fedimint",
+      "chaumian",
+      "blind signature",
+      "mint ecash",
+      "fedi"
+    ],
+    "patterns": [
+      "\\becash\\b",
+      "\\bcashu\\b",
+      "\\bfedimint\\b",
+      "\\bchaumian\\b",
+      "\\bblind\\s+signature[s]?\\b"
+    ],
+    "bips": [],
+    "weight": 74,
+    "github_paths": [
+      "src/wallet/"
+    ]
+  },
+  "spam-filtering": {
+    "id": "spam-filtering",
+    "name": "Spam Filtering",
+    "description": "Spam, censorship, OP_RETURN limits, standardness rules, inscription controversy",
+    "keywords": [
+      "spam",
+      "censor",
+      "censorship",
+      "op_return limit",
+      "standardness",
+      "non-standard",
+      "datacarrier",
+      "data carrier",
+      "bare multisig",
+      "dust attack"
+    ],
+    "patterns": [
+      "\\bspam\\b",
+      "\\bcensor(?:ship|ing)?\\b",
+      "\\bop_return\\s+(?:limit|size|standard|restrict|relay)\\b",
+      "\\bstandardness\\b",
+      "\\bnon[\\s\\-]?standard\\b",
+      "\\bdatacarrier\\b"
+    ],
+    "bips": [],
+    "weight": 56,
+    "github_paths": [
+      "src/policy/",
+      "src/net_processing.cpp"
+    ]
+  },
+  "payment-protocol": {
+    "id": "payment-protocol",
+    "name": "Payment Protocol",
+    "description": "Payment protocol (BIP 70-75), bitcoin: URIs, BIP21, BOLT11/12 invoices, DNS payment instructions",
+    "keywords": [
+      "payment protocol",
+      "payment request",
+      "bip70",
+      "bip 70",
+      "bip21",
+      "bip 21",
+      "bitcoin uri",
+      "bitcoin:",
+      "x509",
+      "dns payment instruction",
+      "human readable",
+      "offer"
+    ],
+    "patterns": [
+      "\\bpayment\\s+protocol\\b",
+      "\\bpayment\\s+request\\b",
+      "\\bbitcoin[\\s\\-]?uri\\b",
+      "\\bdns\\s+payment\\b",
+      "\\bhuman[\\s\\-]?readable\\s+(?:payment|address|bitcoin)\\b"
+    ],
+    "bips": [
+      "20",
+      "21",
+      "70",
+      "71",
+      "72",
+      "73",
+      "74",
+      "75",
+      "321",
+      "353"
+    ],
+    "weight": 54,
+    "github_paths": [
+      "src/interfaces/"
+    ]
+  },
+  "atomic-swaps": {
+    "id": "atomic-swaps",
+    "name": "Atomic Swaps",
+    "description": "Atomic swaps, HTLCs for swaps, cross-chain, SAS, submarine swaps",
+    "keywords": [
+      "atomic swap",
+      "cross-chain",
+      "cross chain",
+      "succinct atomic swap",
+      "hash time-locked",
+      "htlc swap"
+    ],
+    "patterns": [
+      "\\batomic\\s+swap[s]?\\b",
+      "\\bcross[\\s\\-]?chain\\b",
+      "\\bsuccinct\\s+atomic\\b"
+    ],
+    "bips": [
+      "197",
+      "199"
+    ],
+    "weight": 62,
+    "github_paths": [
+      "src/wallet/"
+    ]
+  },
+  "security": {
+    "id": "security",
+    "name": "Security",
+    "description": "Security vulnerabilities, CVEs, responsible disclosure, DoS attacks",
+    "keywords": [
+      "cve-",
+      "vulnerability",
+      "disclosure",
+      "exploit",
+      "attack vector",
+      "dos attack",
+      "denial of service",
+      "double spend",
+      "replacement cycling",
+      "free relay",
+      "eclipse attack",
+      "bgp interception",
+      "finney attack",
+      "time dilation"
+    ],
+    "patterns": [
+      "\\bcve[\\s\\-]\\d+\\b",
+      "\\bvulnerabilit(?:y|ies)\\b",
+      "\\b(?:full|responsible)\\s+disclosure\\b",
+      "\\bexploit\\b",
+      "\\bdouble[\\s\\-]?spend\\b",
+      "\\breplacement\\s+cycling\\b",
+      "\\bfree[\\s\\-]?relay\\b",
+      "\\beclipse\\s+attack\\b",
+      "\\bfinney\\s+attack\\b"
+    ],
+    "bips": [],
+    "weight": 64,
+    "github_paths": [
+      "src/banman.cpp",
+      "src/net_permissions.cpp",
+      "src/logging.cpp"
+    ]
+  },
+  "testing-devtools": {
+    "id": "testing-devtools",
+    "name": "Testing Devtools",
+    "description": "Signet, testnet, regtest, Bitcoin Inquisition, fuzzing, debugging tools, development infrastructure",
+    "keywords": [
+      "signet",
+      "testnet",
+      "regtest",
+      "bitcoin inquisition",
+      "inquisition",
+      "fuzzing",
+      "mutation testing",
+      "property-based testing",
+      "debugger",
+      "tapsim",
+      "btcdeb"
+    ],
+    "patterns": [
+      "\\bsignet\\b",
+      "\\btestnet\\s*[34]?\\b",
+      "\\bregtest\\b",
+      "\\binquisition\\b",
+      "\\bfuzz(?:ing|er)\\b",
+      "\\bmutation\\s+testing\\b"
+    ],
+    "bips": [
+      "325",
+      "94"
+    ],
+    "weight": 48,
+    "github_paths": [
+      "src/test/",
+      "src/bench/",
+      "src/signet.cpp"
+    ]
+  },
+  "utxo-sync": {
+    "id": "utxo-sync",
+    "name": "Utxo Sync",
+    "description": "UTXO set management, AssumeUTXO, Utreexo, pruning, IBD, SwiftSync",
+    "keywords": [
+      "assumeutxo",
+      "utreexo",
+      "utxo set",
+      "utxo commitment",
+      "initial block download",
+      "ibd",
+      "pruning",
+      "pruned node",
+      "swiftsync",
+      "witnessless sync"
+    ],
+    "patterns": [
+      "\\bassumeutxo\\b",
+      "\\butreexo\\b",
+      "\\butxo\\s+(?:set|commitment|snapshot|database)\\b",
+      "\\binitial\\s+block\\s+download\\b",
+      "\\bibd\\b",
+      "\\bswiftsync\\b",
+      "\\bwitnessless\\s+sync\\b"
+    ],
+    "bips": [],
+    "weight": 56,
+    "github_paths": [
+      "src/coins.cpp",
+      "src/dbwrapper.cpp",
+      "src/node/utxo_snapshot.cpp",
+      "src/txdb.cpp"
+    ]
+  },
+  "core-dev": {
+    "id": "core-dev",
+    "name": "Core Dev",
+    "description": "Bitcoin Core releases, build system, repository governance, code review",
+    "keywords": [
+      "bitcoin core release",
+      "bitcoin core v",
+      "release candidate",
+      "build system",
+      "cmake",
+      "automake",
+      "guix",
+      "commit access",
+      "merge policy",
+      "repository",
+      "gitlab backup"
+    ],
+    "patterns": [
+      "\\bbitcoin\\s+core\\s+(?:v?\\d|release)\\b",
+      "\\brelease\\s+candidate\\b",
+      "\\bbuild\\s+system\\b",
+      "\\bguix\\b",
+      "\\bcommit\\s+access\\b"
+    ],
+    "bips": [],
+    "weight": 44,
+    "github_paths": [
+      "src/init.cpp",
+      "src/util/",
+      "src/qt/",
+      "src/rpc/",
+      "src/node/"
+    ]
+  },
+  "nostr": {
+    "id": "nostr",
+    "name": "Nostr",
+    "description": "Nostr protocol integration with Bitcoin: relay-based payments, transaction relay over Nostr",
+    "keywords": [
+      "nostr"
+    ],
+    "patterns": [
+      "\\bnostr\\b"
+    ],
+    "bips": [],
+    "weight": 60,
+    "github_paths": []
+  },
+  "scaling": {
+    "id": "scaling",
+    "name": "Scaling",
+    "description": "Scaling discussions: throughput, capacity, batching, aggregation, scalability research",
+    "keywords": [
+      "scaling",
+      "scalability",
+      "throughput",
+      "capacity increase",
+      "batching",
+      "signature aggregation",
+      "cross-input",
+      "cisa"
+    ],
+    "patterns": [
+      "\\bscaling\\b",
+      "\\bscalabilit(?:y|ies)\\b",
+      "\\bthroughput\\b",
+      "\\bcisa\\b",
+      "\\bcross[\\s\\-]?input\\s+(?:signature\\s+)?aggregation\\b"
+    ],
+    "bips": [],
+    "weight": 42,
+    "github_paths": [
+      "src/validation.cpp"
+    ]
+  },
+  "bip-process": {
+    "id": "bip-process",
+    "name": "Bip Process",
+    "description": "BIP editorial process, governance, community coordination, soft fork philosophy",
+    "keywords": [
+      "bip process",
+      "bip acceptance",
+      "bip editor",
+      "bip purpose",
+      "bip classification",
+      "governance",
+      "ossification",
+      "consensus change",
+      "soft fork philosophy"
+    ],
+    "patterns": [
+      "\\bbip\\s+(?:process|acceptance|editor|purpose|classification)\\b",
+      "\\bgovernance\\b",
+      "\\bossification\\b",
+      "\\bconsensus\\s+change\\b"
+    ],
+    "bips": [
+      "1",
+      "2",
+      "3",
+      "123"
+    ],
+    "weight": 46,
+    "github_paths": [
+      "doc/bips.md",
+      "metadata/"
+    ]
+  },
+  "transaction-format": {
+    "id": "transaction-format",
+    "name": "Transaction Format",
+    "description": "Transaction format, txid, wtxid, normalized txid, transaction compression",
+    "keywords": [
+      "transaction format",
+      "txid",
+      "wtxid",
+      "normalized txid",
+      "flexible transaction",
+      "transaction compression",
+      "compressed transaction"
+    ],
+    "patterns": [
+      "\\btxid\\b",
+      "\\bwtxid\\b",
+      "\\bnormalized\\s+txid\\b",
+      "\\btransaction\\s+(?:format|compression)\\b"
+    ],
+    "bips": [
+      "131",
+      "134",
+      "136",
+      "140",
+      "337",
+      "339"
+    ],
+    "weight": 38,
+    "github_paths": [
+      "src/primitives/transaction.cpp"
+    ]
+  },
+  "data-structures": {
+    "id": "data-structures",
+    "name": "Data Structures",
+    "description": "Merkle trees, MATT, Merkleize All The Things, accumulators, commitments",
+    "keywords": [
+      "merkle tree",
+      "merkle branch",
+      "merkle proof",
+      "matt framework",
+      "merkleize all",
+      "accumulator",
+      "commitment scheme"
+    ],
+    "patterns": [
+      "\\bmerkle\\s+(?:tree|branch|proof|root)\\b",
+      "\\bmatt\\s+framework\\b",
+      "\\bmerkleize\\b",
+      "\\baccumulator\\b"
+    ],
+    "bips": [
+      "98"
+    ],
+    "weight": 36,
+    "github_paths": [
+      "src/primitives/",
+      "src/util/"
+    ]
+  }
+}

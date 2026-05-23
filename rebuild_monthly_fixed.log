@@ -1,0 +1,437 @@
+From https://github.com/bitcoin/bitcoin
+ * branch                  master     -> FETCH_HEAD
+Already up to date.
+From https://github.com/bitcoin/bips
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+From https://github.com/jamesob/delving-bitcoin-archive
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+Reading git log...
+Running command: git -C data/sources/bitcoin log master --format=COMMIT_Start^|^%H^|^%at^|^%an^|^%ae^|^%cn^|^%ce^|^%ct^|^%P^|^%ai^|^%s --numstat -m
+Parsed 62625 commits.
+Saved to data/raw/core_commits.parquet
+
+Extracting commit messages for reviewer analysis...
+Extracting commit messages for reviewer parsing...
+Extracted 48617 commit messages.
+Saved messages to data/raw/core_messages.parquet
+Scanning repository structure...
+Scanned 2918 files, 2918 lines.
+Saved Metadata to data/enriched/core_metadata.json
+--- Stage 1: BIP Ingestion Starting ---
+BIPs repo exists and is full.
+Parsing 204 BIP files for metadata and git history...
+  Processed 0/204 files...
+  Processed 50/204 files...
+  Processed 100/204 files...
+  Processed 150/204 files...
+  Processed 200/204 files...
+
+--- Ingestion Complete ---
+Total BIPs Parsed: 204
+Artifact Saved: data/raw/bips.parquet
+
+Status Distribution:
+status
+Deployed                                                                                                                    76
+Draft                                                                                                                       60
+Closed                                                                                                                      52
+Complete                                                                                                                    15
+Draft (Some confusion applies: The announcements for this never made it to the list, so it hasn't had public discussion)     1
+Name: count, dtype: int64
+Already up to date.
+Updating Delving archive in data/sources/delving...
+Processing Delving archive files...
+  Processed 1000 posts...
+  Processed 2000 posts...
+  Processed 3000 posts...
+  Processed 4000 posts...
+
+Saved 4020 Delving posts to data/raw/social_delving.parquet
+
+Top 5 Delving Contributors:
+canonical_id
+auto_ajtowns         297
+auto_instagibbs      173
+auto_sipa            169
+auto_antoinep        136
+auto_1440000bytes    130
+Name: count, dtype: int64
+Processing 24381 PR metadata files...
+  0%|          | 0/24381 [00:00<?, ?it/s]  0%|          | 48/24381 [00:00<00:52, 467.77it/s]  0%|          | 95/24381 [00:00<00:54, 445.85it/s]  1%|          | 149/24381 [00:00<00:50, 479.94it/s]  1%|          | 204/24381 [00:00<00:47, 506.35it/s]  1%|          | 268/24381 [00:00<00:43, 552.29it/s]  1%|▏         | 334/24381 [00:00<00:40, 587.17it/s]  2%|▏         | 393/24381 [00:00<00:41, 577.53it/s]  2%|▏         | 459/24381 [00:00<00:39, 600.82it/s]  2%|▏         | 520/24381 [00:00<00:39, 598.66it/s]  2%|▏         | 580/24381 [00:01<00:43, 547.31it/s]  3%|▎         | 636/24381 [00:01<00:46, 514.61it/s]  3%|▎         | 690/24381 [00:01<00:46, 510.51it/s]  3%|▎         | 749/24381 [00:01<00:44, 531.41it/s]  3%|▎         | 817/24381 [00:01<00:41, 572.53it/s]  4%|▎         | 875/24381 [00:01<00:41, 568.17it/s]  4%|▍         | 933/24381 [00:01<00:43, 535.02it/s]  4%|▍         | 988/24381 [00:01<00:46, 497.92it/s]  4%|▍         | 1045/24381 [00:01<00:45, 511.59it/s]  5%|▍         | 1102/24381 [00:02<00:44, 527.56it/s]  5%|▍         | 1156/24381 [00:02<00:44, 526.91it/s]  5%|▍         | 1210/24381 [00:02<00:45, 511.82it/s]  5%|▌         | 1265/24381 [00:02<00:44, 520.56it/s]  5%|▌         | 1322/24381 [00:02<00:43, 534.09it/s]  6%|▌         | 1376/24381 [00:02<00:46, 494.87it/s]  6%|▌         | 1447/24381 [00:02<00:41, 551.13it/s]  6%|▌         | 1503/24381 [00:02<00:41, 546.76it/s]  6%|▋         | 1559/24381 [00:02<00:41, 550.21it/s]  7%|▋         | 1621/24381 [00:03<00:40, 569.00it/s]  7%|▋         | 1688/24381 [00:03<00:38, 589.37it/s]  7%|▋         | 1748/24381 [00:03<00:38, 590.82it/s]  7%|▋         | 1816/24381 [00:03<00:36, 614.73it/s]  8%|▊         | 1878/24381 [00:03<00:36, 613.41it/s]  8%|▊         | 1940/24381 [00:03<00:37, 601.30it/s]  8%|▊         | 2014/24381 [00:03<00:35, 637.68it/s]  9%|▊         | 2078/24381 [00:03<00:35, 630.30it/s]  9%|▉         | 2146/24381 [00:03<00:34, 643.93it/s]  9%|▉         | 2213/24381 [00:03<00:34, 646.02it/s]  9%|▉         | 2278/24381 [00:04<00:38, 580.61it/s] 10%|▉         | 2343/24381 [00:04<00:36, 596.72it/s] 10%|▉         | 2404/24381 [00:04<00:37, 590.80it/s] 10%|█         | 2464/24381 [00:04<00:37, 588.02it/s] 10%|█         | 2534/24381 [00:04<00:35, 618.39it/s] 11%|█         | 2597/24381 [00:04<00:35, 614.96it/s] 11%|█         | 2659/24381 [00:04<00:38, 570.62it/s] 11%|█         | 2723/24381 [00:04<00:36, 587.61it/s] 11%|█▏        | 2783/24381 [00:04<00:38, 557.41it/s] 12%|█▏        | 2840/24381 [00:05<00:42, 511.78it/s] 12%|█▏        | 2893/24381 [00:05<00:43, 497.96it/s] 12%|█▏        | 2957/24381 [00:05<00:40, 535.17it/s] 12%|█▏        | 3014/24381 [00:05<00:39, 543.33it/s] 13%|█▎        | 3074/24381 [00:05<00:38, 558.56it/s] 13%|█▎        | 3131/24381 [00:05<00:38, 552.73it/s] 13%|█▎        | 3195/24381 [00:05<00:36, 576.24it/s] 13%|█▎        | 3264/24381 [00:05<00:34, 606.52it/s] 14%|█▎        | 3342/24381 [00:05<00:32, 656.77it/s] 14%|█▍        | 3411/24381 [00:05<00:31, 664.99it/s] 14%|█▍        | 3478/24381 [00:06<00:34, 611.05it/s] 15%|█▍        | 3541/24381 [00:06<00:34, 612.27it/s] 15%|█▍        | 3603/24381 [00:06<00:34, 597.77it/s] 15%|█▌        | 3664/24381 [00:06<00:36, 567.65it/s] 15%|█▌        | 3722/24381 [00:06<00:46, 445.78it/s] 16%|█▌        | 3785/24381 [00:06<00:42, 486.85it/s] 16%|█▌        | 3855/24381 [00:06<00:38, 539.15it/s] 16%|█▌        | 3913/24381 [00:07<00:40, 503.20it/s] 16%|█▋        | 3979/24381 [00:07<00:37, 542.49it/s] 17%|█▋        | 4039/24381 [00:07<00:36, 557.65it/s] 17%|█▋        | 4105/24381 [00:07<00:34, 585.26it/s] 17%|█▋        | 4167/24381 [00:07<00:34, 592.65it/s] 17%|█▋        | 4230/24381 [00:07<00:33, 601.83it/s] 18%|█▊        | 4312/24381 [00:07<00:30, 664.84it/s] 18%|█▊        | 4380/24381 [00:07<00:32, 608.75it/s] 18%|█▊        | 4443/24381 [00:07<00:35, 558.36it/s] 18%|█▊        | 4501/24381 [00:07<00:35, 559.04it/s] 19%|█▊        | 4569/24381 [00:08<00:33, 590.19it/s] 19%|█▉        | 4630/24381 [00:08<00:36, 544.08it/s] 19%|█▉        | 4690/24381 [00:08<00:35, 552.13it/s] 19%|█▉        | 4753/24381 [00:08<00:34, 572.83it/s] 20%|█▉        | 4812/24381 [00:08<00:33, 575.87it/s] 20%|█▉        | 4875/24381 [00:08<00:33, 589.23it/s] 20%|██        | 4935/24381 [00:08<00:32, 592.06it/s] 20%|██        | 4995/24381 [00:08<00:32, 590.94it/s] 21%|██        | 5062/24381 [00:08<00:31, 611.80it/s] 21%|██        | 5127/24381 [00:09<00:31, 620.75it/s] 21%|██▏       | 5190/24381 [00:09<00:31, 612.12it/s] 22%|██▏       | 5252/24381 [00:09<00:32, 584.31it/s] 22%|██▏       | 5317/24381 [00:09<00:32, 593.89it/s] 22%|██▏       | 5383/24381 [00:09<00:31, 610.73it/s] 22%|██▏       | 5445/24381 [00:09<00:31, 607.70it/s] 23%|██▎       | 5507/24381 [00:09<00:30, 611.02it/s] 23%|██▎       | 5569/24381 [00:09<00:30, 609.37it/s] 23%|██▎       | 5631/24381 [00:09<00:30, 607.36it/s] 23%|██▎       | 5692/24381 [00:09<00:31, 585.90it/s] 24%|██▎       | 5755/24381 [00:10<00:31, 597.37it/s] 24%|██▍       | 5815/24381 [00:10<00:31, 587.86it/s] 24%|██▍       | 5874/24381 [00:10<00:32, 568.40it/s] 24%|██▍       | 5941/24381 [00:10<00:31, 594.66it/s] 25%|██▍       | 6001/24381 [00:10<00:32, 562.56it/s] 25%|██▍       | 6059/24381 [00:10<00:32, 565.55it/s] 25%|██▌       | 6116/24381 [00:10<00:33, 544.35it/s] 25%|██▌       | 6177/24381 [00:10<00:32, 561.63it/s] 26%|██▌       | 6234/24381 [00:10<00:33, 538.75it/s] 26%|██▌       | 6300/24381 [00:11<00:31, 572.26it/s] 26%|██▌       | 6364/24381 [00:11<00:30, 590.90it/s] 26%|██▋       | 6424/24381 [00:11<00:31, 563.12it/s] 27%|██▋       | 6481/24381 [00:11<00:33, 529.61it/s] 27%|██▋       | 6537/24381 [00:11<00:33, 537.70it/s] 27%|██▋       | 6599/24381 [00:11<00:31, 559.18it/s] 27%|██▋       | 6669/24381 [00:11<00:29, 592.01it/s] 28%|██▊       | 6729/24381 [00:11<00:32, 544.14it/s] 28%|██▊       | 6801/24381 [00:11<00:29, 592.12it/s] 28%|██▊       | 6862/24381 [00:12<00:33, 522.98it/s] 28%|██▊       | 6930/24381 [00:12<00:30, 563.48it/s] 29%|██▊       | 6995/24381 [00:12<00:29, 585.03it/s] 29%|██▉       | 7056/24381 [00:12<00:29, 591.48it/s] 29%|██▉       | 7117/24381 [00:12<00:30, 560.49it/s] 29%|██▉       | 7176/24381 [00:12<00:30, 568.11it/s] 30%|██▉       | 7234/24381 [00:12<00:30, 565.99it/s] 30%|██▉       | 7299/24381 [00:12<00:29, 586.95it/s] 30%|███       | 7363/24381 [00:12<00:28, 593.69it/s] 30%|███       | 7434/24381 [00:13<00:27, 626.70it/s] 31%|███       | 7507/24381 [00:13<00:25, 650.06it/s] 31%|███       | 7573/24381 [00:13<00:28, 599.73it/s] 31%|███▏      | 7634/24381 [00:13<00:29, 559.03it/s] 32%|███▏      | 7694/24381 [00:13<00:29, 568.59it/s] 32%|███▏      | 7763/24381 [00:13<00:27, 600.99it/s] 32%|███▏      | 7839/24381 [00:13<00:25, 645.23it/s] 32%|███▏      | 7905/24381 [00:13<00:27, 592.47it/s] 33%|███▎      | 7966/24381 [00:13<00:27, 595.65it/s] 33%|███▎      | 8029/24381 [00:14<00:27, 600.30it/s] 33%|███▎      | 8093/24381 [00:14<00:26, 609.10it/s] 33%|███▎      | 8155/24381 [00:14<00:26, 608.13it/s] 34%|███▎      | 8217/24381 [00:14<00:26, 598.73it/s] 34%|███▍      | 8287/24381 [00:14<00:25, 624.40it/s] 34%|███▍      | 8350/24381 [00:14<00:26, 611.45it/s] 35%|███▍      | 8412/24381 [00:14<00:28, 558.88it/s] 35%|███▍      | 8479/24381 [00:14<00:27, 588.21it/s] 35%|███▌      | 8539/24381 [00:14<00:32, 494.07it/s] 35%|███▌      | 8592/24381 [00:15<00:32, 481.35it/s] 35%|███▌      | 8650/24381 [00:15<00:31, 504.22it/s] 36%|███▌      | 8712/24381 [00:15<00:29, 534.22it/s] 36%|███▌      | 8768/24381 [00:15<00:28, 540.27it/s] 36%|███▌      | 8830/24381 [00:15<00:27, 561.96it/s] 36%|███▋      | 8888/24381 [00:15<00:27, 563.01it/s] 37%|███▋      | 8947/24381 [00:15<00:27, 569.85it/s] 37%|███▋      | 9018/24381 [00:15<00:25, 606.40it/s] 37%|███▋      | 9085/24381 [00:15<00:24, 620.89it/s] 38%|███▊      | 9148/24381 [00:16<00:29, 514.77it/s] 38%|███▊      | 9219/24381 [00:16<00:26, 564.04it/s] 38%|███▊      | 9279/24381 [00:16<00:26, 570.43it/s] 38%|███▊      | 9347/24381 [00:16<00:25, 600.63it/s] 39%|███▊      | 9409/24381 [00:16<00:26, 568.47it/s] 39%|███▉      | 9470/24381 [00:16<00:25, 578.73it/s] 39%|███▉      | 9531/24381 [00:16<00:25, 585.00it/s] 39%|███▉      | 9593/24381 [00:16<00:24, 592.05it/s] 40%|███▉      | 9653/24381 [00:16<00:25, 577.66it/s] 40%|███▉      | 9727/24381 [00:16<00:23, 622.80it/s] 40%|████      | 9790/24381 [00:17<00:24, 602.15it/s] 40%|████      | 9851/24381 [00:17<00:25, 560.88it/s] 41%|████      | 9925/24381 [00:17<00:23, 609.31it/s] 41%|████      | 9987/24381 [00:17<00:25, 566.28it/s] 41%|████      | 10057/24381 [00:17<00:23, 598.05it/s] 42%|████▏     | 10122/24381 [00:17<00:23, 611.95it/s] 42%|████▏     | 10185/24381 [00:17<00:23, 616.41it/s] 42%|████▏     | 10248/24381 [00:17<00:23, 606.84it/s] 42%|████▏     | 10316/24381 [00:17<00:22, 627.78it/s] 43%|████▎     | 10380/24381 [00:18<00:23, 594.61it/s] 43%|████▎     | 10441/24381 [00:18<00:23, 586.21it/s] 43%|████▎     | 10507/24381 [00:18<00:22, 606.72it/s] 43%|████▎     | 10569/24381 [00:18<00:22, 604.13it/s] 44%|████▎     | 10630/24381 [00:18<00:23, 582.95it/s] 44%|████▍     | 10695/24381 [00:18<00:22, 600.30it/s] 44%|████▍     | 10758/24381 [00:18<00:22, 607.43it/s] 44%|████▍     | 10819/24381 [00:18<00:22, 605.25it/s] 45%|████▍     | 10887/24381 [00:18<00:21, 626.03it/s] 45%|████▍     | 10964/24381 [00:19<00:20, 666.12it/s] 45%|████▌     | 11031/24381 [00:19<00:21, 621.67it/s] 46%|████▌     | 11094/24381 [00:19<00:21, 619.73it/s] 46%|████▌     | 11160/24381 [00:19<00:20, 629.70it/s] 46%|████▌     | 11229/24381 [00:19<00:20, 645.56it/s] 46%|████▋     | 11294/24381 [00:19<00:20, 638.98it/s] 47%|████▋     | 11359/24381 [00:19<00:20, 631.19it/s] 47%|████▋     | 11423/24381 [00:19<00:20, 628.17it/s] 47%|████▋     | 11486/24381 [00:19<00:20, 616.61it/s] 47%|████▋     | 11548/24381 [00:20<00:22, 558.51it/s] 48%|████▊     | 11608/24381 [00:20<00:22, 567.76it/s] 48%|████▊     | 11673/24381 [00:20<00:21, 587.13it/s] 48%|████▊     | 11733/24381 [00:20<00:21, 583.88it/s] 48%|████▊     | 11800/24381 [00:20<00:20, 605.30it/s] 49%|████▊     | 11861/24381 [00:20<00:26, 469.91it/s] 49%|████▉     | 11913/24381 [00:20<00:26, 478.68it/s] 49%|████▉     | 11976/24381 [00:20<00:24, 515.01it/s] 49%|████▉     | 12044/24381 [00:20<00:22, 558.82it/s] 50%|████▉     | 12103/24381 [00:21<00:21, 562.09it/s] 50%|████▉     | 12164/24381 [00:21<00:21, 572.52it/s] 50%|█████     | 12223/24381 [00:21<00:21, 575.99it/s] 50%|█████     | 12289/24381 [00:21<00:20, 593.83it/s] 51%|█████     | 12350/24381 [00:21<00:21, 552.34it/s] 51%|█████     | 12407/24381 [00:21<00:22, 521.25it/s] 51%|█████     | 12470/24381 [00:21<00:21, 550.45it/s] 51%|█████▏    | 12527/24381 [00:21<00:23, 511.61it/s] 52%|█████▏    | 12597/24381 [00:21<00:21, 560.80it/s] 52%|█████▏    | 12655/24381 [00:22<00:20, 563.46it/s] 52%|█████▏    | 12719/24381 [00:22<00:20, 576.33it/s] 52%|█████▏    | 12778/24381 [00:22<00:20, 575.97it/s] 53%|█████▎    | 12837/24381 [00:22<00:20, 571.80it/s] 53%|█████▎    | 12895/24381 [00:22<00:20, 572.00it/s] 53%|█████▎    | 12961/24381 [00:22<00:19, 596.97it/s] 53%|█████▎    | 13021/24381 [00:22<00:19, 593.18it/s] 54%|█████▎    | 13086/24381 [00:22<00:18, 608.04it/s] 54%|█████▍    | 13147/24381 [00:22<00:19, 586.95it/s] 54%|█████▍    | 13225/24381 [00:22<00:17, 642.43it/s] 55%|█████▍    | 13296/24381 [00:23<00:16, 661.18it/s] 55%|█████▍    | 13365/24381 [00:23<00:16, 664.89it/s] 55%|█████▌    | 13434/24381 [00:23<00:16, 672.17it/s] 55%|█████▌    | 13502/24381 [00:23<00:16, 661.60it/s] 56%|█████▌    | 13570/24381 [00:23<00:16, 664.17it/s] 56%|█████▌    | 13637/24381 [00:23<00:16, 643.03it/s] 56%|█████▌    | 13706/24381 [00:23<00:16, 655.15it/s] 56%|█████▋    | 13772/24381 [00:23<00:16, 642.21it/s] 57%|█████▋    | 13837/24381 [00:23<00:17, 604.83it/s] 57%|█████▋    | 13904/24381 [00:24<00:16, 622.80it/s] 57%|█████▋    | 13972/24381 [00:24<00:16, 637.51it/s] 58%|█████▊    | 14037/24381 [00:24<00:22, 466.48it/s] 58%|█████▊    | 14101/24381 [00:24<00:20, 505.22it/s] 58%|█████▊    | 14172/24381 [00:24<00:19, 529.26it/s] 58%|█████▊    | 14235/24381 [00:24<00:18, 546.95it/s] 59%|█████▊    | 14293/24381 [00:24<00:20, 494.62it/s] 59%|█████▉    | 14355/24381 [00:24<00:19, 523.31it/s] 59%|█████▉    | 14418/24381 [00:25<00:18, 550.73it/s] 59%|█████▉    | 14478/24381 [00:25<00:17, 557.59it/s] 60%|█████▉    | 14536/24381 [00:25<00:17, 547.94it/s] 60%|█████▉    | 14600/24381 [00:25<00:17, 571.91it/s] 60%|██████    | 14659/24381 [00:25<00:17, 558.23it/s] 60%|██████    | 14716/24381 [00:25<00:18, 528.46it/s] 61%|██████    | 14770/24381 [00:25<00:18, 518.02it/s] 61%|██████    | 14826/24381 [00:25<00:18, 526.43it/s] 61%|██████    | 14884/24381 [00:25<00:17, 540.91it/s] 61%|██████▏   | 14939/24381 [00:25<00:17, 538.79it/s] 62%|██████▏   | 15001/24381 [00:26<00:16, 560.54it/s] 62%|██████▏   | 15064/24381 [00:26<00:16, 578.84it/s] 62%|██████▏   | 15129/24381 [00:26<00:15, 597.76it/s] 62%|██████▏   | 15189/24381 [00:26<00:15, 578.85it/s] 63%|██████▎   | 15248/24381 [00:26<00:16, 555.00it/s] 63%|██████▎   | 15304/24381 [00:26<00:16, 553.22it/s] 63%|██████▎   | 15375/24381 [00:26<00:15, 594.88it/s] 63%|██████▎   | 15435/24381 [00:26<00:16, 551.06it/s] 64%|██████▎   | 15491/24381 [00:26<00:16, 549.70it/s] 64%|██████▍   | 15553/24381 [00:27<00:15, 568.17it/s] 64%|██████▍   | 15621/24381 [00:27<00:14, 597.29it/s] 64%|██████▍   | 15682/24381 [00:27<00:14, 590.92it/s] 65%|██████▍   | 15742/24381 [00:27<00:15, 575.37it/s] 65%|██████▍   | 15810/24381 [00:27<00:14, 593.51it/s] 65%|██████▌   | 15870/24381 [00:27<00:14, 588.92it/s] 65%|██████▌   | 15941/24381 [00:27<00:13, 623.63it/s] 66%|██████▌   | 16008/24381 [00:27<00:13, 632.91it/s] 66%|██████▌   | 16087/24381 [00:27<00:12, 676.86it/s] 66%|██████▋   | 16155/24381 [00:27<00:12, 650.01it/s] 67%|██████▋   | 16225/24381 [00:28<00:12, 661.83it/s] 67%|██████▋   | 16292/24381 [00:28<00:13, 613.15it/s] 67%|██████▋   | 16355/24381 [00:28<00:13, 601.58it/s] 67%|██████▋   | 16416/24381 [00:28<00:13, 601.02it/s] 68%|██████▊   | 16483/24381 [00:28<00:12, 619.83it/s] 68%|██████▊   | 16563/24381 [00:28<00:11, 670.88it/s] 68%|██████▊   | 16631/24381 [00:28<00:12, 637.06it/s] 68%|██████▊   | 16698/24381 [00:28<00:11, 644.40it/s] 69%|██████▉   | 16763/24381 [00:28<00:12, 599.89it/s] 69%|██████▉   | 16831/24381 [00:29<00:12, 616.41it/s] 69%|██████▉   | 16894/24381 [00:29<00:12, 577.52it/s] 70%|██████▉   | 16953/24381 [00:29<00:13, 550.81it/s] 70%|██████▉   | 17029/24381 [00:29<00:12, 606.20it/s] 70%|███████   | 17091/24381 [00:29<00:12, 588.70it/s] 70%|███████   | 17151/24381 [00:29<00:12, 590.66it/s] 71%|███████   | 17214/24381 [00:29<00:11, 600.65it/s] 71%|███████   | 17275/24381 [00:29<00:12, 566.89it/s] 71%|███████   | 17333/24381 [00:29<00:12, 551.38it/s] 71%|███████▏  | 17389/24381 [00:30<00:12, 549.15it/s] 72%|███████▏  | 17455/24381 [00:30<00:11, 577.38it/s] 72%|███████▏  | 17516/24381 [00:30<00:11, 585.95it/s] 72%|███████▏  | 17575/24381 [00:30<00:11, 582.39it/s] 72%|███████▏  | 17634/24381 [00:30<00:11, 566.25it/s] 73%|███████▎  | 17691/24381 [00:30<00:13, 509.40it/s] 73%|███████▎  | 17752/24381 [00:30<00:12, 535.11it/s] 73%|███████▎  | 17835/24381 [00:30<00:10, 616.25it/s] 73%|███████▎  | 17898/24381 [00:30<00:11, 581.62it/s] 74%|███████▎  | 17958/24381 [00:31<00:13, 464.10it/s] 74%|███████▍  | 18026/24381 [00:31<00:12, 514.89it/s] 74%|███████▍  | 18100/24381 [00:31<00:11, 570.87it/s] 75%|███████▍  | 18171/24381 [00:31<00:10, 606.36it/s] 75%|███████▍  | 18235/24381 [00:31<00:10, 613.10it/s] 75%|███████▌  | 18299/24381 [00:31<00:10, 607.20it/s] 75%|███████▌  | 18365/24381 [00:31<00:09, 620.54it/s] 76%|███████▌  | 18439/24381 [00:31<00:09, 645.11it/s] 76%|███████▌  | 18505/24381 [00:31<00:09, 631.80it/s] 76%|███████▌  | 18573/24381 [00:32<00:09, 616.74it/s] 76%|███████▋  | 18636/24381 [00:32<00:09, 578.12it/s] 77%|███████▋  | 18703/24381 [00:32<00:09, 600.01it/s] 77%|███████▋  | 18765/24381 [00:32<00:09, 597.65it/s] 77%|███████▋  | 18839/24381 [00:32<00:08, 627.14it/s] 78%|███████▊  | 18910/24381 [00:32<00:08, 648.00it/s] 78%|███████▊  | 18976/24381 [00:32<00:08, 640.31it/s] 78%|███████▊  | 19052/24381 [00:32<00:07, 672.76it/s] 78%|███████▊  | 19120/24381 [00:32<00:08, 641.58it/s] 79%|███████▊  | 19185/24381 [00:33<00:08, 607.28it/s] 79%|███████▉  | 19251/24381 [00:33<00:08, 621.70it/s] 79%|███████▉  | 19314/24381 [00:33<00:08, 570.54it/s] 79%|███████▉  | 19377/24381 [00:33<00:08, 585.42it/s] 80%|███████▉  | 19438/24381 [00:33<00:08, 589.21it/s] 80%|███████▉  | 19498/24381 [00:33<00:08, 580.60it/s] 80%|████████  | 19560/24381 [00:33<00:08, 583.50it/s] 80%|████████  | 19626/24381 [00:33<00:07, 604.24it/s] 81%|████████  | 19687/24381 [00:33<00:07, 595.56it/s] 81%|████████  | 19754/24381 [00:34<00:07, 616.57it/s] 81%|████████▏ | 19816/24381 [00:34<00:07, 603.74it/s] 82%|████████▏ | 19882/24381 [00:34<00:07, 619.02it/s] 82%|████████▏ | 19950/24381 [00:34<00:06, 636.32it/s] 82%|████████▏ | 20018/24381 [00:34<00:06, 643.69it/s] 82%|████████▏ | 20083/24381 [00:34<00:06, 642.60it/s] 83%|████████▎ | 20148/24381 [00:34<00:06, 616.94it/s] 83%|████████▎ | 20210/24381 [00:34<00:06, 601.27it/s] 83%|████████▎ | 20284/24381 [00:34<00:06, 636.74it/s] 84%|████████▎ | 20360/24381 [00:34<00:05, 671.97it/s] 84%|████████▍ | 20428/24381 [00:35<00:06, 638.47it/s] 84%|████████▍ | 20500/24381 [00:35<00:05, 661.25it/s] 84%|████████▍ | 20567/24381 [00:35<00:05, 645.68it/s] 85%|████████▍ | 20632/24381 [00:35<00:05, 644.41it/s] 85%|████████▍ | 20697/24381 [00:35<00:05, 637.17it/s] 85%|████████▌ | 20761/24381 [00:35<00:05, 626.42it/s] 85%|████████▌ | 20824/24381 [00:35<00:05, 619.16it/s] 86%|████████▌ | 20887/24381 [00:35<00:06, 533.10it/s] 86%|████████▌ | 20958/24381 [00:35<00:05, 578.34it/s] 86%|████████▌ | 21018/24381 [00:36<00:06, 549.64it/s] 86%|████████▋ | 21078/24381 [00:36<00:05, 562.55it/s] 87%|████████▋ | 21142/24381 [00:36<00:05, 580.68it/s] 87%|████████▋ | 21210/24381 [00:36<00:05, 599.89it/s] 87%|████████▋ | 21277/24381 [00:36<00:05, 618.78it/s] 88%|████████▊ | 21348/24381 [00:36<00:04, 643.58it/s] 88%|████████▊ | 21413/24381 [00:36<00:04, 624.95it/s] 88%|████████▊ | 21485/24381 [00:36<00:04, 650.18it/s] 88%|████████▊ | 21551/24381 [00:36<00:04, 635.84it/s] 89%|████████▊ | 21615/24381 [00:37<00:04, 565.83it/s] 89%|████████▉ | 21692/24381 [00:37<00:04, 620.15it/s] 89%|████████▉ | 21769/24381 [00:37<00:03, 660.42it/s] 90%|████████▉ | 21837/24381 [00:37<00:03, 661.31it/s] 90%|████████▉ | 21905/24381 [00:37<00:03, 635.58it/s] 90%|█████████ | 21970/24381 [00:37<00:03, 621.33it/s] 90%|█████████ | 22033/24381 [00:37<00:03, 598.33it/s] 91%|█████████ | 22094/24381 [00:37<00:03, 598.40it/s] 91%|█████████ | 22165/24381 [00:37<00:03, 629.91it/s] 91%|█████████ | 22232/24381 [00:38<00:03, 637.26it/s] 91%|█████████▏| 22297/24381 [00:38<00:03, 612.28it/s] 92%|█████████▏| 22359/24381 [00:38<00:03, 607.98it/s] 92%|█████████▏| 22421/24381 [00:38<00:03, 549.08it/s] 92%|█████████▏| 22483/24381 [00:38<00:03, 567.42it/s] 92%|█████████▏| 22541/24381 [00:38<00:03, 545.81it/s] 93%|█████████▎| 22597/24381 [00:38<00:03, 538.71it/s] 93%|█████████▎| 22662/24381 [00:38<00:03, 568.19it/s] 93%|█████████▎| 22720/24381 [00:38<00:03, 540.59it/s] 93%|█████████▎| 22782/24381 [00:39<00:02, 561.77it/s] 94%|█████████▎| 22840/24381 [00:39<00:02, 564.72it/s] 94%|█████████▍| 22897/24381 [00:39<00:02, 505.63it/s] 94%|█████████▍| 22949/24381 [00:39<00:03, 380.50it/s] 94%|█████████▍| 22993/24381 [00:39<00:04, 319.89it/s] 95%|█████████▍| 23052/24381 [00:39<00:03, 374.82it/s] 95%|█████████▍| 23098/24381 [00:39<00:03, 393.84it/s] 95%|█████████▌| 23165/24381 [00:40<00:02, 460.38it/s] 95%|█████████▌| 23224/24381 [00:40<00:02, 491.63it/s] 95%|█████████▌| 23277/24381 [00:40<00:02, 457.19it/s] 96%|█████████▌| 23347/24381 [00:40<00:01, 519.53it/s] 96%|█████████▌| 23406/24381 [00:40<00:01, 537.44it/s] 96%|█████████▋| 23476/24381 [00:40<00:01, 580.12it/s] 97%|█████████▋| 23540/24381 [00:40<00:01, 593.56it/s] 97%|█████████▋| 23601/24381 [00:40<00:01, 583.73it/s] 97%|█████████▋| 23669/24381 [00:40<00:01, 600.26it/s] 97%|█████████▋| 23741/24381 [00:40<00:01, 634.04it/s] 98%|█████████▊| 23811/24381 [00:41<00:00, 651.16it/s] 98%|█████████▊| 23879/24381 [00:41<00:00, 656.82it/s] 98%|█████████▊| 23951/24381 [00:41<00:00, 674.44it/s] 99%|█████████▊| 24019/24381 [00:41<00:00, 669.31it/s] 99%|█████████▉| 24087/24381 [00:41<00:00, 645.54it/s] 99%|█████████▉| 24163/24381 [00:41<00:00, 677.69it/s] 99%|█████████▉| 24232/24381 [00:41<00:00, 647.14it/s]100%|█████████▉| 24298/24381 [00:41<00:00, 649.44it/s]100%|█████████▉| 24364/24381 [00:41<00:00, 623.29it/s]100%|██████████| 24381/24381 [00:41<00:00, 581.04it/s]
+Saved 24381 PRs to data/raw/github_pr_metadata.parquet
+Saved 718528 review events to data/raw/github_review_events.parquet
+Loading data...
+Consolidating contributor identities...
+Loaded 122 alias groups from data/cache/aliases_lookup.json
+Injected 291 alias edges from lookup file.
+Consolidated into 1167 unique identities.
+Starting enrichment...
+Warning: Legacy file data/raw/core_legacy_contributors.parquet not found. Skipping enrichment.
+Loading commit messages from data/raw/core_messages.parquet...
+Processing 48617 commit messages...
+Found 18908 review signals in 9743 commits.
+Saved reviews to data/raw/core_reviews.parquet
+Saved reviewer summary to output/tracker/reviewers_summary.json
+  Total reviews: 18908
+  Unique commits with reviews: 9743
+  Top 5 reviewers: ['achow101', 'laanwj', 'marcofalke', 'hebasto', 'fanquake']
+🕵️  Processing local GitHub metadata from data/sources/bitcoin-github-metadata...
+📊 Found 33532 metadata files.
+✨ Successfully enriched 0 GitHub identities via local metadata.
+Loading data...
+Filtering data to cutoff: 2026-03-31
+Consolidating contributor identities...
+Loaded 122 alias groups from data/cache/aliases_lookup.json
+Injected 291 alias edges from lookup file.
+Consolidated into 1165 unique identities.
+Generating Vital Signs...
+Loaded 22 maintainers with 58 email aliases.
+Generating Snapshots...
+Generating Contributor Landscape...
+Generating Category Evolution...
+  Generating Total view...
+  Generating Authored view...
+Generating Contributor Growth...
+Generating Common Metrics...
+Generating Social...
+Generating Corporate Era & Maintainer Independence...
+Loaded 11 sponsors, 84 sponsored developer emails.
+Running Maintainer Footprint Analysis...
+Analyzing footprints for 22 potential maintainers...
+Footprints saved to data/enriched/maintainer_footprints.json
+  Generated: 5 active maintainers, 22 total
+Generating Geography...
+  Skipping Geography (No enriched data)
+Generating Codebase Stats...
+Missing metadata for snapshots.
+  Replaying commits for Category History...
+Generating Engagement Tiers...
+Generating Churn Metrics...
+Generating Retention Metrics...
+Generating Reviewer Metrics...
+All stats generated successfully.
+Loading Delving data from data/raw/social_delving.parquet...
+Merging social data...
+Total social records: 4020
+Saved to data/raw/social_combined.parquet
+
+Social Activity by Source:
+source
+delving    4020
+Name: count, dtype: int64
+
+Top 5 Contributors (Governance):
+canonical_id
+auto_ajtowns         297
+auto_instagibbs      173
+auto_sipa            169
+auto_antoinep        136
+auto_1440000bytes    130
+Name: count, dtype: int64
+--- Stage 3: Forensic Enrichment Starting ---
+Loading datasets...
+Categorizing BIPs and Social threads into themes...
+Linking BIPs to social discussions...
+Linking BIPs to repository commits...
+Calculating Maturity Scores...
+Saving enriched BIPs to data/enriched/bips_refined.parquet...
+
+--- Enrichment Complete ---
+BIPs with code links: 75
+BIPs with social links: 11
+
+Top BIPs by Maturity Score:
+    bip_id  ... maturity_score
+172    360  ...           0.60
+170    352  ...           0.56
+159    340  ...           0.40
+160    341  ...           0.36
+16      21  ...           0.30
+148    324  ...           0.26
+133    174  ...           0.22
+55      75  ...           0.18
+28      39  ...           0.17
+92     119  ...           0.17
+
+[10 rows x 4 columns]
+============================================================
+  Categorize Threads – Bitcoin Social Data
+============================================================
+
+Loading data/raw/social_combined.parquet ...
+  4,020 messages loaded.
+  517 unique threads.
+
+Categorizing threads ...
+     517 / 517 threads processed
+
+Mapping results to messages ...
+
+Saved → data/enriched/social_threads.parquet
+
+============================================================
+  CATEGORIZATION SUMMARY
+============================================================
+
+  Total threads:          517
+  Threads with BIP refs:  58  (11.2%)
+  Categorized (non-other):467  (90.3%)
+  Uncategorized (other):  50  (9.7%)
+
+  Category                      Threads       %
+  ----------------------------------------------
+  covenants                          69   13.3%
+  lightning                          60   11.6%
+  mempool-fees                       55   10.6%
+  other                              50    9.7%
+  mining                             40    7.7%
+  quantum                            19    3.7%
+  taproot                            19    3.7%
+  security                           18    3.5%
+  testing-devtools                   18    3.5%
+  privacy                            16    3.1%
+  p2p-network                        15    2.9%
+  core-dev                           13    2.5%
+  utxo-sync                          13    2.5%
+  script-opcodes                     10    1.9%
+  multisig-threshold                  9    1.7%
+  wallet-keys                         9    1.7%
+  silent-payments                     9    1.7%
+  spam-filtering                      9    1.7%
+  l2-bridges                          8    1.5%
+  bitvm                               8    1.5%
+  vaults                              7    1.4%
+  ecash                               7    1.4%
+  sidechains-drivechain               6    1.2%
+  soft-fork-activation                5    1.0%
+  signatures-sighash                  5    1.0%
+  tokens-runes                        4    0.8%
+  bip-process                         3    0.6%
+  ordinals-inscriptions               3    0.6%
+  consensus-cleanup                   2    0.4%
+  scaling                             2    0.4%
+  segwit                              2    0.4%
+  dlc                                 1    0.2%
+  payment-protocol                    1    0.2%
+  data-structures                     1    0.2%
+  hard-fork-block-size                1    0.2%
+
+  Threads with 2+ categories: 290
+
+Done.
+Loading datasets...
+Loading registry...
+Filtering signals...
+Aggregating reviewer metrics...
+Aggregating author metrics...
+Joining all metrics...
+Efficiency metrics calculated for 5221 contributors.
+Top contributors by Reciprocity:
+         github_login  review_reciprocity
+1907         DrahtBot         4098.333333
+3532         sidhujag          760.714286
+4514             kwvg          365.500000
+4673            str4d          362.500000
+1023  PastaPastaPasta          238.307692
+Fastest Approvers (Avg Latency):
+       github_login  avg_approval_latency_days
+2788    Oolanla8888                   0.002917
+3159  matt-auckland                   0.003333
+4179        rabidus                   0.003715
+591         jtoomim                   0.004641
+1866        lubuzzo                   0.006192
+Loading identity resolver...
+Loading enriched social data from data/enriched/social_threads.parquet...
+Resolving identities based on source platforms...
+Processing edges and expertise fingerprints across eras...
+Dampening message counts for PageRank (Logarithmic scaling)...
+Calculating era-based PageRank centralities...
+  Using Universal Identities population count: 799
+Exporting enriched network data for 799 total contributors (interactive + observers)...
+Enriching all 799 contributors with archetypes and hybrid weighting...
+Exported comprehensive contributor dataset (2765 people) to data/enriched/social_stats.json
+Exported richer network to output/network/network_graph.json
+--- Stage 3.5: Expertise & Authority Mapping ---
+Identifying Full-Stack Architects...
+Resolving commit author identities...
+Identifying The Gatekeepers...
+Expertise mapping saved to output/tracker/expertise.json
+Found 0 Full-Stack Architects.
+Loading Master UUID Identities...
+Discovering all active contributors across sources...
+Master Union: 2772 unique contributors discovered.
+Aggregating contributors.json metadata...
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/groupby/groupby.py", line 1874, in _agg_py_fallback
+    res_values = self.grouper.agg_series(ser, alt, preserve_dtype=True)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/groupby/ops.py", line 850, in agg_series
+    result = self._aggregate_series_pure_python(obj, func)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/groupby/ops.py", line 871, in _aggregate_series_pure_python
+    res = func(group)
+          ^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/numpy/core/fromnumeric.py", line 2810, in max
+    return _wrapreduction(a, np.maximum, 'max', axis, None, out,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/numpy/core/fromnumeric.py", line 86, in _wrapreduction
+    return reduction(axis=axis, out=out, **passkwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/series.py", line 6189, in max
+    return NDFrame.max(self, axis, skipna, numeric_only, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/generic.py", line 11968, in max
+    return self._stat_function(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/generic.py", line 11941, in _stat_function
+    return self._reduce(
+           ^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/series.py", line 6129, in _reduce
+    return op(delegate, skipna=skipna, **kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/nanops.py", line 147, in f
+    result = alt(values, axis=axis, skipna=skipna, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/nanops.py", line 404, in new_func
+    result = func(values, axis=axis, skipna=skipna, mask=mask, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/nanops.py", line 1092, in reduction
+    result = getattr(values, meth)(axis)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/numpy/core/_methods.py", line 41, in _amax
+    return umr_maximum(a, axis, None, out, keepdims, initial, where)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '>=' not supported between instances of 'float' and 'str'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/02_process/unify_contributors.py", line 169, in <module>
+    unify()
+  File "/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/02_process/unify_contributors.py", line 108, in unify
+    df_reg_agg = df_reg.groupby('uuid').agg({
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/groupby/generic.py", line 1445, in aggregate
+    result = op.agg()
+             ^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/apply.py", line 175, in agg
+    return self.agg_dict_like()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/apply.py", line 406, in agg_dict_like
+    return self.agg_or_apply_dict_like(op_name="agg")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/apply.py", line 1388, in agg_or_apply_dict_like
+    result_index, result_data = self.compute_dict_like(
+                                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/apply.py", line 480, in compute_dict_like
+    getattr(obj._gotitem(key, ndim=1), op_name)(how, **kwargs)
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/groupby/generic.py", line 247, in aggregate
+    return getattr(self, func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/groupby/groupby.py", line 3247, in max
+    return self._agg_general(
+           ^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/groupby/groupby.py", line 1839, in _agg_general
+    result = self._cython_agg_general(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/groupby/groupby.py", line 1929, in _cython_agg_general
+    new_mgr = data.grouped_reduce(array_func)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/internals/base.py", line 336, in grouped_reduce
+    res = func(arr)
+          ^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/groupby/groupby.py", line 1926, in array_func
+    result = self._agg_py_fallback(how, values, ndim=data.ndim, alt=alt)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/groupby/groupby.py", line 1878, in _agg_py_fallback
+    raise type(err)(msg) from err
+TypeError: agg function failed [how->max,dtype->object]
+Generated output/tracker/stats_regional_evolution.json with consolidated categories
+🔄 Starting Master Registry Sync...
+  Bootstrapping from 2772 defined identities...
+  Syncing 1165 active core contributors...
+  Syncing 2765 social participants...
+      Matched: auto_admin -> auto_
+      Matched: auto_system -> auto_
+      Matched: auto_pieter_wuille -> auto_
+      Matched: can_wladimir_j_van_der_laan -> can_wladimirjvanderlaan
+      Matched: can_gavin_andresen -> can_gavinandresen
+      Matched: auto_gloria_zhao -> auto_
+      Matched: can_jonas_schnelli -> can_jonasschnelli
+      Matched: can_jeff_garzik -> can_jeffgarzik
+      Matched: can_nils_schneider -> can_nilsschneider
+      Matched: auto_anthony_towns -> auto_
+      Matched: can_marcofalke -> can_marcofalke
+      Matched: can_michael_ford -> can_michaelford
+      Matched: auto_hennadii_stepanov -> auto_
+      Matched: can_ryan_ofsky -> can_ryanofsky
+      Matched: can_samuel_dobson -> can_samueldobson
+      Matched: auto_sebastian_kung -> auto_
+      Matched: can_satoshi_nakamoto -> can_satoshinakamoto
+      Matched: can_gregory_maxwell -> can_gregorymaxwell
+      Matched: auto_james_o_beirne -> auto_
+      Matched: can_chris_moore -> can_chrismoore
+✨ Registry Sync Complete! Tracked 7539 unique contributors.
+Delivering UI artifacts...
+Error: data/enriched/contributors_unified.parquet not found.
+🚀 Starting MONTHLY Automated Pipeline (Deep Analytics)...
+
+--- PHASE 0: Raw Data Sync ---
+
+--- Running: git -C data/sources/bitcoin pull origin master ---
+
+--- Running: git -C data/sources/bips pull origin master ---
+
+--- Running: git -C data/sources/delving pull origin master ---
+
+--- PHASE 1: Extraction (Raw Staging) ---
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/01_ingest/core.py ---
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/01_ingest/bips.py ---
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/01_ingest/delving.py ---
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/01_ingest/mailing_list.py ---
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/01_ingest/github_metadata.py ---
+
+--- PHASE 2: Convergence (Enrichment) ---
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/02_process/enrich_identity.py ---
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/02_process/reviews.py ---
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/02_process/github_social.py ---
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/02_process/core.py ---
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/02_process/merge_social.py ---
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/02_process/governance.py ---
+
+--- PHASE 3: Intelligence (NLP & Graphs) ---
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/02_process/categorize.py ---
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/03_analyze/efficiency.py ---
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/03_analyze/influence.py ---
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/03_analyze/expertise.py ---
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/02_process/unify_contributors.py ---
+⚠️  Command failed with exit code 1
+
+--- PHASE 4: Artifact Generation ---
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/04_deliver/generate_regional_evolution.py ---
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/04_deliver/registry.py ---
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/04_deliver/ui_artifacts.py ---
+
+✨ MONTHLY PIPELINE COMPLETE!
+Everything is up to date and all NLP/Graphs have been recalculated.

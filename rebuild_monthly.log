@@ -1,0 +1,303 @@
+From https://github.com/bitcoin/bitcoin
+ * branch                  master     -> FETCH_HEAD
+Already up to date.
+From https://github.com/bitcoin/bips
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+From https://github.com/jamesob/delving-bitcoin-archive
+ * branch            master     -> FETCH_HEAD
+   0ef4b3f..6cec682  master     -> origin/master
+Updating 0ef4b3f..6cec682
+Fast-forward
+ archive/.metadata.json                             |  2 +-
+ ...ental-mutation-testing-in-the-bitcoin-core.json |  6 +-
+ ...agent-wallet-with-simplicity-pre-execution.json |  4 +-
+ ...xecutable-specification-of-consensus-rules.json |  6 +-
+ ...ing-simplicity-part-programs-and-addresses.json |  6 +-
+ ...3-ml-dsa-65-post-quantum-key-path-spending.json | 25 ++++++---
+ ...ental-mutation-testing-in-the-bitcoin-core.json |  6 +-
+ ...schi-spanning-forest-cluster-linearization.json | 65 ++++++++++++++++++++++
+ ...spanning-forest-cluster-linearization-id1419.md |  8 +++
+ 9 files changed, 106 insertions(+), 22 deletions(-)
+ create mode 100644 archive/posts/2026-04-April/0000007330-isadofschi-spanning-forest-cluster-linearization.json
+Reading git log...
+Running command: git -C data/sources/bitcoin log master --format=COMMIT_Start^|^%H^|^%at^|^%an^|^%ae^|^%cn^|^%ce^|^%ct^|^%P^|^%ai^|^%s --numstat -m
+Parsed 62625 commits.
+Saved to data/raw/core_commits.parquet
+
+Extracting commit messages for reviewer analysis...
+Extracting commit messages for reviewer parsing...
+Extracted 48617 commit messages.
+Saved messages to data/raw/core_messages.parquet
+Scanning repository structure...
+Scanned 2918 files, 2918 lines.
+Saved Metadata to data/enriched/core_metadata.json
+Traceback (most recent call last):
+  File "/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/01_ingest/bips.py", line 10, in <module>
+    from scripts.utils.identity import resolver
+  File "/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/utils/identity.py", line 333, in <module>
+    resolver = IdentityResolver()
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/utils/identity.py", line 19, in __init__
+    self._load()
+  File "/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/utils/identity.py", line 31, in _load
+    self._rebuild_index()
+  File "/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/utils/identity.py", line 37, in _rebuild_index
+    uuid = record["uuid"]
+           ~~~~~~^^^^^^^^
+KeyError: 'uuid'
+Traceback (most recent call last):
+  File "/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/01_ingest/delving.py", line 11, in <module>
+    from scripts.utils.identity import resolver
+  File "/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/utils/identity.py", line 333, in <module>
+    resolver = IdentityResolver()
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/utils/identity.py", line 19, in __init__
+    self._load()
+  File "/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/utils/identity.py", line 31, in _load
+    self._rebuild_index()
+  File "/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/utils/identity.py", line 37, in _rebuild_index
+    uuid = record["uuid"]
+           ~~~~~~^^^^^^^^
+KeyError: 'uuid'
+Traceback (most recent call last):
+  File "/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/01_ingest/mailing_list.py", line 12, in <module>
+    from scripts.utils.identity import resolver
+  File "/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/utils/identity.py", line 333, in <module>
+    resolver = IdentityResolver()
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/utils/identity.py", line 19, in __init__
+    self._load()
+  File "/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/utils/identity.py", line 31, in _load
+    self._rebuild_index()
+  File "/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/utils/identity.py", line 37, in _rebuild_index
+    uuid = record["uuid"]
+           ~~~~~~^^^^^^^^
+KeyError: 'uuid'
+Processing 24381 PR metadata files...
+  0%|          | 0/24381 [00:00<?, ?it/s]  0%|          | 53/24381 [00:00<00:46, 527.22it/s]  0%|          | 106/24381 [00:00<00:46, 522.83it/s]  1%|          | 160/24381 [00:00<00:45, 530.13it/s]  1%|          | 230/24381 [00:00<00:40, 593.12it/s]  1%|▏         | 305/24381 [00:00<00:37, 647.39it/s]  2%|▏         | 370/24381 [00:00<00:37, 643.30it/s]  2%|▏         | 439/24381 [00:00<00:36, 656.81it/s]  2%|▏         | 515/24381 [00:00<00:34, 684.91it/s]  2%|▏         | 584/24381 [00:00<00:36, 644.00it/s]  3%|▎         | 649/24381 [00:01<00:37, 627.81it/s]  3%|▎         | 713/24381 [00:01<00:38, 614.75it/s]  3%|▎         | 777/24381 [00:01<00:37, 621.16it/s]  3%|▎         | 848/24381 [00:01<00:36, 646.34it/s]  4%|▎         | 913/24381 [00:01<00:40, 586.11it/s]  4%|▍         | 973/24381 [00:01<00:41, 566.67it/s]  4%|▍         | 1033/24381 [00:01<00:40, 575.09it/s]  4%|▍         | 1096/24381 [00:01<00:39, 588.12it/s]  5%|▍         | 1156/24381 [00:01<00:39, 585.40it/s]  5%|▍         | 1215/24381 [00:02<00:40, 573.43it/s]  5%|▌         | 1276/24381 [00:02<00:39, 583.75it/s]  6%|▌         | 1341/24381 [00:02<00:38, 601.86it/s]  6%|▌         | 1402/24381 [00:02<00:39, 583.53it/s]  6%|▌         | 1470/24381 [00:02<00:37, 610.65it/s]  6%|▋         | 1532/24381 [00:02<00:37, 607.26it/s]  7%|▋         | 1604/24381 [00:02<00:36, 623.32it/s]  7%|▋         | 1680/24381 [00:02<00:34, 657.47it/s]  7%|▋         | 1747/24381 [00:02<00:34, 660.63it/s]  7%|▋         | 1824/24381 [00:02<00:32, 691.15it/s]  8%|▊         | 1894/24381 [00:03<00:33, 673.90it/s]  8%|▊         | 1962/24381 [00:03<00:33, 664.70it/s]  8%|▊         | 2036/24381 [00:03<00:32, 684.08it/s]  9%|▊         | 2113/24381 [00:03<00:31, 708.62it/s]  9%|▉         | 2189/24381 [00:03<00:30, 721.99it/s]  9%|▉         | 2262/24381 [00:03<00:32, 675.20it/s] 10%|▉         | 2331/24381 [00:03<00:32, 668.99it/s] 10%|▉         | 2399/24381 [00:03<00:33, 654.63it/s] 10%|█         | 2468/24381 [00:03<00:32, 664.49it/s] 10%|█         | 2542/24381 [00:04<00:32, 680.60it/s] 11%|█         | 2611/24381 [00:04<00:32, 667.91it/s] 11%|█         | 2678/24381 [00:04<00:34, 635.50it/s] 11%|█         | 2742/24381 [00:04<00:36, 592.86it/s] 12%|█▏        | 2804/24381 [00:04<00:36, 598.87it/s] 12%|█▏        | 2865/24381 [00:04<00:38, 555.24it/s] 12%|█▏        | 2922/24381 [00:04<00:38, 552.31it/s] 12%|█▏        | 2986/24381 [00:04<00:37, 574.75it/s] 13%|█▎        | 3051/24381 [00:04<00:36, 590.92it/s] 13%|█▎        | 3113/24381 [00:05<00:35, 591.23it/s] 13%|█▎        | 3186/24381 [00:05<00:33, 626.41it/s] 13%|█▎        | 3250/24381 [00:05<00:33, 626.55it/s] 14%|█▎        | 3319/24381 [00:05<00:32, 642.71it/s] 14%|█▍        | 3389/24381 [00:05<00:31, 659.17it/s] 14%|█▍        | 3456/24381 [00:05<00:33, 628.40it/s] 14%|█▍        | 3526/24381 [00:05<00:32, 647.09it/s] 15%|█▍        | 3592/24381 [00:05<00:33, 617.10it/s] 15%|█▍        | 3655/24381 [00:05<00:35, 591.57it/s] 15%|█▌        | 3724/24381 [00:05<00:33, 618.58it/s] 16%|█▌        | 3796/24381 [00:06<00:31, 646.52it/s] 16%|█▌        | 3863/24381 [00:06<00:31, 646.91it/s] 16%|█▌        | 3929/24381 [00:06<00:35, 572.10it/s] 16%|█▋        | 3989/24381 [00:06<00:35, 568.75it/s] 17%|█▋        | 4065/24381 [00:06<00:32, 618.87it/s] 17%|█▋        | 4129/24381 [00:06<00:34, 595.42it/s] 17%|█▋        | 4193/24381 [00:06<00:33, 601.48it/s] 17%|█▋        | 4258/24381 [00:06<00:32, 615.07it/s] 18%|█▊        | 4325/24381 [00:06<00:31, 627.61it/s] 18%|█▊        | 4389/24381 [00:07<00:33, 595.75it/s] 18%|█▊        | 4450/24381 [00:07<00:35, 557.56it/s] 18%|█▊        | 4507/24381 [00:07<00:35, 560.67it/s] 19%|█▉        | 4576/24381 [00:07<00:33, 593.83it/s] 19%|█▉        | 4636/24381 [00:07<00:35, 556.69it/s] 19%|█▉        | 4693/24381 [00:07<00:35, 553.14it/s] 20%|█▉        | 4763/24381 [00:07<00:33, 594.16it/s] 20%|█▉        | 4825/24381 [00:07<00:32, 599.15it/s] 20%|██        | 4886/24381 [00:07<00:32, 592.70it/s] 20%|██        | 4948/24381 [00:08<00:32, 591.12it/s] 21%|██        | 5015/24381 [00:08<00:31, 612.90it/s] 21%|██        | 5077/24381 [00:08<00:31, 613.08it/s] 21%|██        | 5139/24381 [00:08<00:31, 606.24it/s] 21%|██▏       | 5208/24381 [00:08<00:30, 628.45it/s] 22%|██▏       | 5271/24381 [00:08<00:32, 580.71it/s] 22%|██▏       | 5342/24381 [00:08<00:30, 615.78it/s] 22%|██▏       | 5405/24381 [00:08<00:31, 602.05it/s] 22%|██▏       | 5478/24381 [00:08<00:34, 549.30it/s] 23%|██▎       | 5535/24381 [00:09<00:34, 540.06it/s] 23%|██▎       | 5603/24381 [00:09<00:33, 564.72it/s] 23%|██▎       | 5666/24381 [00:09<00:32, 581.14it/s] 23%|██▎       | 5725/24381 [00:09<00:33, 565.09it/s] 24%|██▎       | 5788/24381 [00:09<00:31, 582.55it/s] 24%|██▍       | 5857/24381 [00:09<00:30, 610.94it/s] 24%|██▍       | 5920/24381 [00:09<00:30, 613.38it/s] 25%|██▍       | 5982/24381 [00:09<00:32, 574.43it/s] 25%|██▍       | 6041/24381 [00:09<00:32, 571.57it/s] 25%|██▌       | 6101/24381 [00:10<00:31, 574.53it/s] 25%|██▌       | 6159/24381 [00:10<00:32, 562.19it/s] 25%|██▌       | 6216/24381 [00:10<00:33, 542.24it/s] 26%|██▌       | 6276/24381 [00:10<00:32, 557.02it/s] 26%|██▌       | 6343/24381 [00:10<00:30, 587.40it/s] 26%|██▋       | 6403/24381 [00:10<00:31, 575.25it/s] 27%|██▋       | 6461/24381 [00:10<00:34, 525.27it/s] 27%|██▋       | 6522/24381 [00:10<00:32, 547.02it/s] 27%|██▋       | 6578/24381 [00:10<00:33, 536.78it/s] 27%|██▋       | 6645/24381 [00:10<00:31, 571.53it/s] 27%|██▋       | 6703/24381 [00:11<00:36, 489.46it/s] 28%|██▊       | 6755/24381 [00:11<00:51, 342.05it/s] 28%|██▊       | 6816/24381 [00:11<00:44, 394.96it/s] 28%|██▊       | 6864/24381 [00:11<00:47, 372.28it/s] 28%|██▊       | 6926/24381 [00:11<00:40, 426.48it/s] 29%|██▊       | 6975/24381 [00:11<00:40, 430.66it/s] 29%|██▉       | 7023/24381 [00:11<00:39, 442.78it/s] 29%|██▉       | 7093/24381 [00:12<00:34, 508.17it/s] 29%|██▉       | 7147/24381 [00:12<00:34, 496.52it/s] 30%|██▉       | 7210/24381 [00:12<00:32, 530.82it/s] 30%|██▉       | 7271/24381 [00:12<00:30, 552.88it/s] 30%|███       | 7343/24381 [00:12<00:28, 597.46it/s] 30%|███       | 7404/24381 [00:12<00:28, 589.80it/s] 31%|███       | 7486/24381 [00:12<00:25, 655.37it/s] 31%|███       | 7553/24381 [00:12<00:27, 603.29it/s] 31%|███       | 7615/24381 [00:12<00:28, 583.15it/s] 31%|███▏      | 7675/24381 [00:13<00:28, 581.58it/s] 32%|███▏      | 7740/24381 [00:13<00:28, 593.86it/s] 32%|███▏      | 7829/24381 [00:13<00:24, 674.95it/s] 32%|███▏      | 7898/24381 [00:13<00:26, 632.10it/s] 33%|███▎      | 7963/24381 [00:13<00:25, 636.68it/s] 33%|███▎      | 8028/24381 [00:13<00:25, 635.32it/s] 33%|███▎      | 8093/24381 [00:13<00:25, 637.64it/s] 33%|███▎      | 8158/24381 [00:13<00:25, 637.89it/s] 34%|███▎      | 8224/24381 [00:13<00:25, 643.77it/s] 34%|███▍      | 8289/24381 [00:14<00:25, 640.56it/s] 34%|███▍      | 8354/24381 [00:14<00:26, 611.70it/s] 35%|███▍      | 8416/24381 [00:14<00:27, 583.38it/s] 35%|███▍      | 8484/24381 [00:14<00:27, 572.96it/s] 35%|███▌      | 8542/24381 [00:14<00:29, 528.57it/s] 35%|███▌      | 8596/24381 [00:14<00:31, 508.55it/s] 36%|███▌      | 8668/24381 [00:14<00:28, 560.69it/s] 36%|███▌      | 8726/24381 [00:14<00:27, 565.69it/s] 36%|███▌      | 8784/24381 [00:14<00:27, 561.67it/s] 36%|███▋      | 8846/24381 [00:15<00:26, 576.85it/s] 37%|███▋      | 8911/24381 [00:15<00:25, 596.94it/s] 37%|███▋      | 8979/24381 [00:15<00:24, 619.30it/s] 37%|███▋      | 9051/24381 [00:15<00:23, 648.43it/s] 37%|███▋      | 9117/24381 [00:15<00:23, 643.05it/s] 38%|███▊      | 9189/24381 [00:15<00:22, 664.06it/s] 38%|███▊      | 9256/24381 [00:15<00:23, 649.84it/s] 38%|███▊      | 9329/24381 [00:15<00:22, 672.30it/s] 39%|███▊      | 9397/24381 [00:15<00:22, 655.63it/s] 39%|███▉      | 9463/24381 [00:15<00:22, 650.19it/s] 39%|███▉      | 9529/24381 [00:16<00:22, 652.80it/s] 39%|███▉      | 9595/24381 [00:16<00:22, 650.09it/s] 40%|███▉      | 9661/24381 [00:16<00:23, 624.51it/s] 40%|███▉      | 9736/24381 [00:16<00:22, 658.72it/s] 40%|████      | 9803/24381 [00:16<00:24, 606.69it/s] 40%|████      | 9865/24381 [00:16<00:23, 608.87it/s] 41%|████      | 9932/24381 [00:16<00:23, 612.68it/s] 41%|████      | 9994/24381 [00:16<00:24, 576.12it/s] 41%|████▏     | 10062/24381 [00:16<00:23, 603.72it/s] 42%|████▏     | 10132/24381 [00:17<00:22, 628.07it/s] 42%|████▏     | 10197/24381 [00:17<00:22, 633.01it/s] 42%|████▏     | 10261/24381 [00:17<00:22, 633.51it/s] 42%|████▏     | 10326/24381 [00:17<00:22, 635.01it/s] 43%|████▎     | 10390/24381 [00:17<00:23, 595.85it/s] 43%|████▎     | 10466/24381 [00:17<00:21, 640.80it/s] 43%|████▎     | 10535/24381 [00:17<00:21, 653.10it/s] 43%|████▎     | 10603/24381 [00:17<00:20, 658.00it/s] 44%|████▍     | 10670/24381 [00:17<00:22, 619.98it/s] 44%|████▍     | 10739/24381 [00:17<00:21, 639.56it/s] 44%|████▍     | 10812/24381 [00:18<00:20, 664.98it/s] 45%|████▍     | 10883/24381 [00:18<00:19, 676.85it/s] 45%|████▍     | 10958/24381 [00:18<00:19, 697.10it/s] 45%|████▌     | 11029/24381 [00:18<00:19, 671.97it/s] 46%|████▌     | 11097/24381 [00:18<00:20, 647.93it/s] 46%|████▌     | 11169/24381 [00:18<00:19, 665.43it/s] 46%|████▌     | 11236/24381 [00:18<00:20, 640.69it/s] 46%|████▋     | 11305/24381 [00:18<00:20, 652.98it/s] 47%|████▋     | 11371/24381 [00:18<00:20, 637.00it/s] 47%|████▋     | 11435/24381 [00:19<00:20, 628.08it/s] 47%|████▋     | 11498/24381 [00:19<00:22, 560.39it/s] 47%|████▋     | 11561/24381 [00:19<00:22, 575.96it/s] 48%|████▊     | 11620/24381 [00:19<00:22, 578.99it/s] 48%|████▊     | 11684/24381 [00:19<00:21, 595.14it/s] 48%|████▊     | 11748/24381 [00:19<00:20, 606.87it/s] 48%|████▊     | 11812/24381 [00:19<00:21, 590.45it/s] 49%|████▊     | 11872/24381 [00:19<00:22, 556.69it/s] 49%|████▉     | 11929/24381 [00:19<00:22, 549.04it/s] 49%|████▉     | 11995/24381 [00:20<00:21, 578.16it/s] 49%|████▉     | 12066/24381 [00:20<00:20, 614.09it/s] 50%|████▉     | 12128/24381 [00:20<00:20, 584.98it/s] 50%|█████     | 12194/24381 [00:20<00:20, 595.43it/s] 50%|█████     | 12254/24381 [00:20<00:21, 576.05it/s] 51%|█████     | 12320/24381 [00:20<00:20, 599.09it/s] 51%|█████     | 12381/24381 [00:20<00:21, 564.09it/s] 51%|█████     | 12439/24381 [00:20<00:22, 536.18it/s] 51%|█████▏    | 12508/24381 [00:20<00:20, 573.75it/s] 52%|█████▏    | 12567/24381 [00:21<00:21, 546.57it/s] 52%|█████▏    | 12630/24381 [00:21<00:20, 567.77it/s] 52%|█████▏    | 12694/24381 [00:21<00:19, 587.43it/s] 52%|█████▏    | 12754/24381 [00:21<00:19, 585.94it/s] 53%|█████▎    | 12821/24381 [00:21<00:19, 607.72it/s] 53%|█████▎    | 12883/24381 [00:21<00:19, 604.16it/s] 53%|█████▎    | 12944/24381 [00:21<00:18, 602.00it/s] 53%|█████▎    | 13011/24381 [00:21<00:18, 617.93it/s] 54%|█████▎    | 13073/24381 [00:21<00:18, 613.62it/s] 54%|█████▍    | 13142/24381 [00:21<00:17, 633.11it/s] 54%|█████▍    | 13225/24381 [00:22<00:16, 685.93it/s] 55%|█████▍    | 13301/24381 [00:22<00:15, 701.86it/s] 55%|█████▍    | 13377/24381 [00:22<00:15, 717.21it/s] 55%|█████▌    | 13449/24381 [00:22<00:15, 716.70it/s] 55%|█████▌    | 13521/24381 [00:22<00:15, 705.83it/s] 56%|█████▌    | 13592/24381 [00:22<00:15, 690.05it/s] 56%|█████▌    | 13662/24381 [00:22<00:16, 668.70it/s] 56%|█████▋    | 13730/24381 [00:22<00:16, 655.86it/s] 57%|█████▋    | 13800/24381 [00:22<00:15, 666.97it/s] 57%|█████▋    | 13867/24381 [00:23<00:16, 626.68it/s] 57%|█████▋    | 13940/24381 [00:23<00:16, 651.91it/s] 57%|█████▋    | 14006/24381 [00:23<00:17, 602.30it/s] 58%|█████▊    | 14068/24381 [00:23<00:21, 476.03it/s] 58%|█████▊    | 14144/24381 [00:23<00:18, 542.21it/s] 58%|█████▊    | 14205/24381 [00:23<00:18, 557.01it/s] 59%|█████▊    | 14265/24381 [00:23<00:17, 565.41it/s] 59%|█████▉    | 14325/24381 [00:24<00:25, 393.84it/s] 59%|█████▉    | 14394/24381 [00:24<00:21, 454.93it/s] 59%|█████▉    | 14456/24381 [00:24<00:20, 492.36it/s] 60%|█████▉    | 14513/24381 [00:24<00:19, 495.28it/s] 60%|█████▉    | 14576/24381 [00:24<00:18, 529.53it/s] 60%|██████    | 14634/24381 [00:24<00:18, 514.38it/s] 60%|██████    | 14689/24381 [00:24<00:19, 496.98it/s] 60%|██████    | 14741/24381 [00:24<00:19, 500.70it/s] 61%|██████    | 14807/24381 [00:24<00:17, 543.13it/s] 61%|██████    | 14864/24381 [00:25<00:17, 549.51it/s] 61%|██████    | 14921/24381 [00:25<00:17, 554.63it/s] 61%|██████▏   | 14982/24381 [00:25<00:16, 565.18it/s] 62%|██████▏   | 15048/24381 [00:25<00:15, 590.85it/s] 62%|██████▏   | 15126/24381 [00:25<00:14, 645.71it/s] 62%|██████▏   | 15192/24381 [00:25<00:15, 604.08it/s] 63%|██████▎   | 15254/24381 [00:25<00:15, 589.99it/s] 63%|██████▎   | 15314/24381 [00:25<00:15, 583.95it/s] 63%|██████▎   | 15396/24381 [00:25<00:13, 644.92it/s] 63%|██████▎   | 15462/24381 [00:25<00:15, 582.07it/s] 64%|██████▎   | 15522/24381 [00:26<00:15, 568.92it/s] 64%|██████▍   | 15599/24381 [00:26<00:14, 611.92it/s] 64%|██████▍   | 15663/24381 [00:26<00:14, 619.20it/s] 65%|██████▍   | 15726/24381 [00:26<00:14, 587.77it/s] 65%|██████▍   | 15801/24381 [00:26<00:13, 631.92it/s] 65%|██████▌   | 15866/24381 [00:26<00:14, 606.85it/s] 65%|██████▌   | 15936/24381 [00:26<00:13, 631.78it/s] 66%|██████▌   | 16000/24381 [00:26<00:13, 630.07it/s] 66%|██████▌   | 16076/24381 [00:26<00:12, 665.73it/s] 66%|██████▌   | 16144/24381 [00:27<00:12, 657.73it/s] 66%|██████▋   | 16211/24381 [00:27<00:12, 653.31it/s] 67%|██████▋   | 16277/24381 [00:27<00:13, 621.58it/s] 67%|██████▋   | 16340/24381 [00:27<00:13, 613.04it/s] 67%|██████▋   | 16403/24381 [00:27<00:12, 614.15it/s] 68%|██████▊   | 16474/24381 [00:27<00:12, 635.39it/s] 68%|██████▊   | 16543/24381 [00:27<00:12, 650.78it/s] 68%|██████▊   | 16616/24381 [00:27<00:11, 672.03it/s] 68%|██████▊   | 16684/24381 [00:27<00:11, 657.28it/s] 69%|██████▊   | 16750/24381 [00:28<00:12, 623.19it/s] 69%|██████▉   | 16813/24381 [00:28<00:12, 624.76it/s] 69%|██████▉   | 16876/24381 [00:28<00:13, 571.39it/s] 69%|██████▉   | 16935/24381 [00:28<00:13, 555.15it/s] 70%|██████▉   | 17006/24381 [00:28<00:12, 596.49it/s] 70%|███████   | 17071/24381 [00:28<00:12, 597.97it/s] 70%|███████   | 17140/24381 [00:28<00:11, 623.36it/s] 71%|███████   | 17207/24381 [00:28<00:11, 631.81it/s] 71%|███████   | 17271/24381 [00:28<00:11, 607.68it/s] 71%|███████   | 17333/24381 [00:29<00:12, 563.09it/s] 71%|███████▏  | 17391/24381 [00:29<00:12, 552.06it/s] 72%|███████▏  | 17455/24381 [00:29<00:12, 573.28it/s] 72%|███████▏  | 17521/24381 [00:29<00:11, 594.93it/s] 72%|███████▏  | 17582/24381 [00:29<00:11, 589.23it/s] 72%|███████▏  | 17642/24381 [00:29<00:11, 587.35it/s] 73%|███████▎  | 17701/24381 [00:29<00:12, 531.90it/s] 73%|███████▎  | 17770/24381 [00:29<00:11, 574.54it/s] 73%|███████▎  | 17842/24381 [00:29<00:10, 613.10it/s] 73%|███████▎  | 17905/24381 [00:30<00:11, 585.66it/s] 74%|███████▎  | 17968/24381 [00:30<00:10, 596.04it/s] 74%|███████▍  | 18036/24381 [00:30<00:10, 618.11it/s] 74%|███████▍  | 18108/24381 [00:30<00:09, 646.19it/s] 75%|███████▍  | 18177/24381 [00:30<00:09, 658.05it/s] 75%|███████▍  | 18244/24381 [00:30<00:09, 644.18it/s] 75%|███████▌  | 18315/24381 [00:30<00:09, 662.66it/s] 75%|███████▌  | 18382/24381 [00:30<00:09, 646.92it/s] 76%|███████▌  | 18458/24381 [00:30<00:08, 678.56it/s] 76%|███████▌  | 18527/24381 [00:30<00:08, 651.19it/s] 76%|███████▋  | 18593/24381 [00:31<00:09, 590.53it/s] 77%|███████▋  | 18657/24381 [00:31<00:09, 598.58it/s] 77%|███████▋  | 18721/24381 [00:31<00:09, 609.11it/s] 77%|███████▋  | 18792/24381 [00:31<00:08, 636.73it/s] 77%|███████▋  | 18857/24381 [00:31<00:08, 635.95it/s] 78%|███████▊  | 18926/24381 [00:31<00:08, 649.57it/s] 78%|███████▊  | 18992/24381 [00:31<00:08, 642.02it/s] 78%|███████▊  | 19061/24381 [00:31<00:08, 655.50it/s] 78%|███████▊  | 19127/24381 [00:31<00:08, 620.68it/s] 79%|███████▊  | 19190/24381 [00:32<00:08, 591.76it/s] 79%|███████▉  | 19258/24381 [00:32<00:08, 613.96it/s] 79%|███████▉  | 19320/24381 [00:32<00:09, 560.36it/s] 80%|███████▉  | 19384/24381 [00:32<00:08, 580.17it/s] 80%|███████▉  | 19446/24381 [00:32<00:08, 589.88it/s] 80%|████████  | 19506/24381 [00:32<00:08, 592.56it/s] 80%|████████  | 19570/24381 [00:32<00:07, 603.85it/s] 81%|████████  | 19638/24381 [00:32<00:07, 611.88it/s] 81%|████████  | 19702/24381 [00:32<00:07, 618.86it/s] 81%|████████  | 19767/24381 [00:32<00:07, 625.48it/s] 81%|████████▏ | 19830/24381 [00:33<00:07, 618.69it/s] 82%|████████▏ | 19905/24381 [00:33<00:06, 652.05it/s] 82%|████████▏ | 19978/24381 [00:33<00:06, 674.49it/s] 82%|████████▏ | 20046/24381 [00:33<00:06, 643.81it/s] 82%|████████▏ | 20111/24381 [00:33<00:06, 617.11it/s] 83%|████████▎ | 20177/24381 [00:33<00:06, 627.06it/s] 83%|████████▎ | 20246/24381 [00:33<00:06, 643.78it/s] 83%|████████▎ | 20319/24381 [00:33<00:06, 652.31it/s] 84%|████████▎ | 20396/24381 [00:33<00:05, 682.85it/s] 84%|████████▍ | 20465/24381 [00:34<00:05, 652.95it/s] 84%|████████▍ | 20544/24381 [00:34<00:05, 689.26it/s] 85%|████████▍ | 20614/24381 [00:34<00:05, 647.24it/s] 85%|████████▍ | 20680/24381 [00:34<00:05, 640.42it/s] 85%|████████▌ | 20745/24381 [00:34<00:05, 629.31it/s] 85%|████████▌ | 20809/24381 [00:34<00:05, 605.77it/s] 86%|████████▌ | 20870/24381 [00:34<00:06, 541.04it/s] 86%|████████▌ | 20933/24381 [00:34<00:06, 563.41it/s] 86%|████████▌ | 20992/24381 [00:34<00:05, 569.46it/s] 86%|████████▋ | 21050/24381 [00:35<00:05, 568.23it/s] 87%|████████▋ | 21117/24381 [00:35<00:05, 595.59it/s] 87%|████████▋ | 21180/24381 [00:35<00:05, 603.61it/s] 87%|████████▋ | 21249/24381 [00:35<00:04, 627.59it/s] 87%|████████▋ | 21321/24381 [00:35<00:04, 653.62it/s] 88%|████████▊ | 21395/24381 [00:35<00:04, 675.44it/s] 88%|████████▊ | 21463/24381 [00:35<00:04, 646.95it/s] 88%|████████▊ | 21529/24381 [00:35<00:04, 640.67it/s] 89%|████████▊ | 21594/24381 [00:35<00:04, 572.01it/s] 89%|████████▉ | 21666/24381 [00:36<00:04, 611.22it/s] 89%|████████▉ | 21759/24381 [00:36<00:03, 697.21it/s] 90%|████████▉ | 21831/24381 [00:36<00:03, 665.06it/s] 90%|████████▉ | 21899/24381 [00:36<00:03, 640.53it/s] 90%|█████████ | 21965/24381 [00:36<00:03, 629.52it/s] 90%|█████████ | 22029/24381 [00:36<00:03, 627.95it/s] 91%|█████████ | 22108/24381 [00:36<00:03, 669.16it/s] 91%|█████████ | 22176/24381 [00:36<00:03, 658.91it/s] 91%|█████████ | 22244/24381 [00:36<00:03, 662.01it/s] 92%|█████████▏| 22311/24381 [00:37<00:03, 635.16it/s] 92%|█████████▏| 22375/24381 [00:37<00:03, 618.44it/s] 92%|█████████▏| 22438/24381 [00:37<00:03, 602.69it/s] 92%|█████████▏| 22503/24381 [00:37<00:03, 614.78it/s] 93%|█████████▎| 22565/24381 [00:37<00:03, 552.32it/s] 93%|█████████▎| 22622/24381 [00:37<00:03, 533.99it/s] 93%|█████████▎| 22693/24381 [00:37<00:02, 580.60it/s] 93%|█████████▎| 22753/24381 [00:37<00:02, 543.80it/s] 94%|█████████▎| 22809/24381 [00:37<00:02, 543.35it/s] 94%|█████████▍| 22873/24381 [00:38<00:02, 569.59it/s] 94%|█████████▍| 22938/24381 [00:38<00:02, 589.25it/s] 94%|█████████▍| 22999/24381 [00:38<00:02, 594.01it/s] 95%|█████████▍| 23073/24381 [00:38<00:02, 633.90it/s] 95%|█████████▍| 23137/24381 [00:38<00:02, 584.55it/s] 95%|█████████▌| 23202/24381 [00:38<00:01, 601.90it/s] 95%|█████████▌| 23264/24381 [00:38<00:01, 574.39it/s] 96%|█████████▌| 23323/24381 [00:38<00:01, 558.22it/s] 96%|█████████▌| 23380/24381 [00:38<00:02, 431.99it/s] 96%|█████████▌| 23447/24381 [00:39<00:01, 485.89it/s] 96%|█████████▋| 23517/24381 [00:39<00:01, 539.18it/s] 97%|█████████▋| 23590/24381 [00:39<00:01, 588.84it/s] 97%|█████████▋| 23653/24381 [00:39<00:01, 596.96it/s] 97%|█████████▋| 23724/24381 [00:39<00:01, 628.33it/s] 98%|█████████▊| 23796/24381 [00:39<00:00, 653.99it/s] 98%|█████████▊| 23875/24381 [00:39<00:00, 692.21it/s] 98%|█████████▊| 23950/24381 [00:39<00:00, 708.22it/s] 99%|█████████▊| 24022/24381 [00:39<00:00, 686.53it/s] 99%|█████████▉| 24092/24381 [00:40<00:00, 655.64it/s] 99%|█████████▉| 24166/24381 [00:40<00:00, 679.29it/s] 99%|█████████▉| 24235/24381 [00:40<00:00, 669.92it/s]100%|█████████▉| 24303/24381 [00:40<00:00, 652.29it/s]100%|█████████▉| 24369/24381 [00:40<00:00, 633.24it/s]100%|██████████| 24381/24381 [00:40<00:00, 602.27it/s]
+Saved 24381 PRs to data/raw/github_pr_metadata.parquet
+Saved 718528 review events to data/raw/github_review_events.parquet
+Loading data...
+Consolidating contributor identities...
+Loaded 122 alias groups from data/cache/aliases_lookup.json
+Injected 291 alias edges from lookup file.
+Consolidated into 1167 unique identities.
+Starting enrichment...
+Warning: Legacy file data/raw/core_legacy_contributors.parquet not found. Skipping enrichment.
+Loading commit messages from data/raw/core_messages.parquet...
+Processing 48617 commit messages...
+Found 18908 review signals in 9743 commits.
+Saved reviews to data/raw/core_reviews.parquet
+Saved reviewer summary to output/tracker/reviewers_summary.json
+  Total reviews: 18908
+  Unique commits with reviews: 9743
+  Top 5 reviewers: ['achow101', 'laanwj', 'marcofalke', 'hebasto', 'fanquake']
+🕵️  Processing local GitHub metadata from data/sources/bitcoin-github-metadata...
+📊 Found 33532 metadata files.
+✨ Successfully enriched 0 GitHub identities via local metadata.
+Loading data...
+Filtering data to cutoff: 2026-03-31
+Consolidating contributor identities...
+Loaded 122 alias groups from data/cache/aliases_lookup.json
+Injected 291 alias edges from lookup file.
+Consolidated into 1165 unique identities.
+Generating Vital Signs...
+Loaded 22 maintainers with 58 email aliases.
+Generating Snapshots...
+Generating Contributor Landscape...
+Generating Category Evolution...
+  Generating Total view...
+  Generating Authored view...
+Generating Contributor Growth...
+Generating Common Metrics...
+Generating Social...
+Generating Corporate Era & Maintainer Independence...
+Loaded 11 sponsors, 84 sponsored developer emails.
+Running Maintainer Footprint Analysis...
+Analyzing footprints for 22 potential maintainers...
+Footprints saved to data/enriched/maintainer_footprints.json
+  Generated: 5 active maintainers, 22 total
+Generating Geography...
+  Skipping Geography (No enriched data)
+Generating Codebase Stats...
+Missing metadata for snapshots.
+  Replaying commits for Category History...
+Generating Engagement Tiers...
+Generating Churn Metrics...
+Generating Retention Metrics...
+Generating Reviewer Metrics...
+All stats generated successfully.
+No social data found to merge.
+--- Stage 3: Forensic Enrichment Starting ---
+Loading datasets...
+Traceback (most recent call last):
+  File "/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/02_process/governance.py", line 133, in <module>
+    main()
+  File "/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/02_process/governance.py", line 41, in main
+    df_bips = pd.read_parquet(BIPS_PATH)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/io/parquet.py", line 670, in read_parquet
+    return impl.read(
+           ^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/io/parquet.py", line 265, in read
+    path_or_handle, handles, filesystem = _get_path_or_handle(
+                                          ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/io/parquet.py", line 139, in _get_path_or_handle
+    handles = get_handle(
+              ^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/io/common.py", line 872, in get_handle
+    handle = open(handle, ioargs.mode)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'data/raw/bips.parquet'
+============================================================
+  Categorize Threads – Bitcoin Social Data
+============================================================
+ERROR: Input file data/raw/social_combined.parquet not found.
+Loading datasets...
+Loading registry...
+Filtering signals...
+Aggregating reviewer metrics...
+Aggregating author metrics...
+Joining all metrics...
+Efficiency metrics calculated for 5221 contributors.
+Top contributors by Reciprocity:
+         github_login  review_reciprocity
+2673         DrahtBot         4098.333333
+221          sidhujag          760.714286
+437              kwvg          365.500000
+4710            str4d          362.500000
+450   PastaPastaPasta          238.307692
+Fastest Approvers (Avg Latency):
+       github_login  avg_approval_latency_days
+110     Oolanla8888                   0.002917
+4349  matt-auckland                   0.003333
+711         rabidus                   0.003715
+3016        jtoomim                   0.004641
+3488        lubuzzo                   0.006192
+Traceback (most recent call last):
+  File "/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/03_analyze/influence.py", line 12, in <module>
+    from scripts.utils.identity import resolver
+  File "/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/utils/identity.py", line 333, in <module>
+    resolver = IdentityResolver()
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/utils/identity.py", line 19, in __init__
+    self._load()
+  File "/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/utils/identity.py", line 31, in _load
+    self._rebuild_index()
+  File "/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/utils/identity.py", line 37, in _rebuild_index
+    uuid = record["uuid"]
+           ~~~~~~^^^^^^^^
+KeyError: 'uuid'
+Traceback (most recent call last):
+  File "/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/03_analyze/expertise.py", line 8, in <module>
+    from scripts.utils.identity import resolver
+  File "/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/utils/identity.py", line 333, in <module>
+    resolver = IdentityResolver()
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/utils/identity.py", line 19, in __init__
+    self._load()
+  File "/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/utils/identity.py", line 31, in _load
+    self._rebuild_index()
+  File "/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/utils/identity.py", line 37, in _rebuild_index
+    uuid = record["uuid"]
+           ~~~~~~^^^^^^^^
+KeyError: 'uuid'
+Traceback (most recent call last):
+  File "/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/02_process/unify_contributors.py", line 8, in <module>
+    import scripts.utils.identity 
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/utils/identity.py", line 333, in <module>
+    resolver = IdentityResolver()
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/utils/identity.py", line 19, in __init__
+    self._load()
+  File "/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/utils/identity.py", line 31, in _load
+    self._rebuild_index()
+  File "/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/utils/identity.py", line 37, in _rebuild_index
+    uuid = record["uuid"]
+           ~~~~~~^^^^^^^^
+KeyError: 'uuid'
+Generated output/tracker/stats_regional_evolution.json with consolidated categories
+Traceback (most recent call last):
+  File "/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/04_deliver/registry.py", line 12, in <module>
+    from scripts.utils.identity import IdentityResolver
+  File "/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/utils/identity.py", line 333, in <module>
+    resolver = IdentityResolver()
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/utils/identity.py", line 19, in __init__
+    self._load()
+  File "/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/utils/identity.py", line 31, in _load
+    self._rebuild_index()
+  File "/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/utils/identity.py", line 37, in _rebuild_index
+    uuid = record["uuid"]
+           ~~~~~~^^^^^^^^
+KeyError: 'uuid'
+Delivering UI artifacts...
+Error: data/enriched/contributors_unified.parquet not found.
+🚀 Starting MONTHLY Automated Pipeline (Deep Analytics)...
+
+--- PHASE 0: Raw Data Sync ---
+
+--- Running: git -C data/sources/bitcoin pull origin master ---
+
+--- Running: git -C data/sources/bips pull origin master ---
+
+--- Running: git -C data/sources/delving pull origin master ---
+
+--- PHASE 1: Extraction (Raw Staging) ---
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/01_ingest/core.py ---
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/01_ingest/bips.py ---
+⚠️  Command failed with exit code 1
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/01_ingest/delving.py ---
+⚠️  Command failed with exit code 1
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/01_ingest/mailing_list.py ---
+⚠️  Command failed with exit code 1
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/01_ingest/github_metadata.py ---
+
+--- PHASE 2: Convergence (Enrichment) ---
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/02_process/enrich_identity.py ---
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/02_process/reviews.py ---
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/02_process/github_social.py ---
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/02_process/core.py ---
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/02_process/merge_social.py ---
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/02_process/governance.py ---
+⚠️  Command failed with exit code 1
+
+--- PHASE 3: Intelligence (NLP & Graphs) ---
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/02_process/categorize.py ---
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/03_analyze/efficiency.py ---
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/03_analyze/influence.py ---
+⚠️  Command failed with exit code 1
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/03_analyze/expertise.py ---
+⚠️  Command failed with exit code 1
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/02_process/unify_contributors.py ---
+⚠️  Command failed with exit code 1
+
+--- PHASE 4: Artifact Generation ---
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/04_deliver/generate_regional_evolution.py ---
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/04_deliver/registry.py ---
+⚠️  Command failed with exit code 1
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/04_deliver/ui_artifacts.py ---
+
+✨ MONTHLY PIPELINE COMPLETE!
+Everything is up to date and all NLP/Graphs have been recalculated.

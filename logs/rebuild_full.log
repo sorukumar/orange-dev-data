@@ -1,0 +1,313 @@
+From https://github.com/bitcoin/bitcoin
+ * branch                  master     -> FETCH_HEAD
+   1fa34f90a2..654556e631  master     -> origin/master
+Updating 1fa34f90a2..654556e631
+Fast-forward
+ test/functional/interface_http.py | 119 +++++++++++++++++++++-----------------
+ 1 file changed, 66 insertions(+), 53 deletions(-)
+From https://github.com/bitcoin/bips
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+From https://github.com/jamesob/delving-bitcoin-archive
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+Reading git log...
+Running command: git -C data/sources/bitcoin log master --format=COMMIT_Start^|^%H^|^%at^|^%an^|^%ae^|^%cn^|^%ce^|^%ct^|^%P^|^%ai^|^%s --numstat -m
+Parsed 62629 commits.
+Saved to data/raw/core_commits.parquet
+
+Extracting commit messages for reviewer analysis...
+Extracting commit messages for reviewer parsing...
+Extracted 48621 commit messages.
+Saved messages to data/raw/core_messages.parquet
+Scanning repository structure...
+Scanned 2918 files, 2918 lines.
+Saved Metadata to data/enriched/core_metadata.json
+--- Stage 1: BIP Ingestion Starting ---
+BIPs repo exists and is full.
+BIPs repo is up to date at commit 83c1fc8ed2f91271f311609ae17f71030b199f86. Skipping re-parsing.
+Already up to date.
+Updating Delving archive in data/sources/delving...
+Processing Delving archive files...
+  Processed 1000 posts...
+  Processed 2000 posts...
+  Processed 3000 posts...
+  Processed 4000 posts...
+
+Saved 4022 Delving posts to data/raw/social_delving.parquet
+
+Top 5 Delving Contributors:
+can_anthony_towns      296
+can_greg_sanders       173
+can_pieter_wuille      169
+can_antoine_poinsot    136
+can_david_a_harding    130
+Name: canonical_id, dtype: int64
+From https://github.com/bitcoin-data/github-metadata-backup-bitcoin-bitcoin
+   c0a31920..1d2408de  master     -> origin/master
+Updating c0a31920..1d2408de
+Fast-forward
+ issues/28722.json |   4 +-
+ issues/31194.json |  41 ++-
+ issues/35082.json |  97 ++++++-
+ pulls/25573.json  |  84 ++++++-
+ pulls/27409.json  |  84 ++++++-
+ pulls/32247.json  |  76 +++++-
+ pulls/32387.json  | 445 +++++++++++++++++++++++----------
+ pulls/33117.json  | 112 ++++++++-
+ pulls/33477.json  | 276 +++++++++++++++++++-
+ pulls/33593.json  |  28 +--
+ pulls/33922.json  | 300 ++++++++++++++--------
+ pulls/34020.json  |  26 +-
+ pulls/34176.json  |  26 +-
+ pulls/34425.json  | 259 ++++++++++++++++---
+ pulls/34435.json  |  14 +-
+ pulls/34865.json  |  82 +++---
+ pulls/35003.json  | 737 ++++++++++++++++++++++++++++++++++++------------------
+ pulls/35016.json  | 221 +++++++++++++++-
+ pulls/35069.json  | 360 +++++++++++++++++---------
+ pulls/35070.json  | 159 +++++++++++-
+ pulls/35073.json  |  72 +++++-
+ pulls/35086.json  | 116 +++++++--
+ pulls/35087.json  | 468 +++++++++++++++++++++++++++++-----
+ pulls/35097.json  |  76 +++++-
+ pulls/35100.json  | 494 ++++++++++++++++++++++++++++++++++++
+ pulls/35101.json  | 534 +++++++++++++++++++++++++++++++++++++++
+ pulls/35102.json  | 450 +++++++++++++++++++++++++++++++++
+ state.json        |   2 +-
+ 28 files changed, 4746 insertions(+), 897 deletions(-)
+ create mode 100644 pulls/35100.json
+ create mode 100644 pulls/35101.json
+ create mode 100644 pulls/35102.json
+Updating GitHub metadata archive in data/sources/bitcoin-github-metadata...
+Processing 24407 PR metadata files...
+  0%|          | 0/24407 [00:00<?, ?it/s]  0%|          | 43/24407 [00:00<00:58, 418.89it/s]  0%|          | 85/24407 [00:00<00:59, 412.21it/s]  1%|          | 129/24407 [00:00<00:57, 421.79it/s]  1%|          | 184/24407 [00:00<00:51, 470.29it/s]  1%|          | 241/24407 [00:00<00:47, 505.82it/s]  1%|▏         | 307/24407 [00:00<00:43, 557.62it/s]  1%|▏         | 363/24407 [00:00<00:43, 551.19it/s]  2%|▏         | 425/24407 [00:00<00:41, 571.74it/s]  2%|▏         | 487/24407 [00:00<00:40, 586.37it/s]  2%|▏         | 546/24407 [00:01<00:41, 575.79it/s]  2%|▏         | 604/24407 [00:01<00:48, 487.07it/s]  3%|▎         | 655/24407 [00:01<00:50, 466.51it/s]  3%|▎         | 713/24407 [00:01<00:48, 493.08it/s]  3%|▎         | 771/24407 [00:01<00:45, 516.59it/s]  3%|▎         | 837/24407 [00:01<00:42, 554.24it/s]  4%|▎         | 894/24407 [00:01<00:42, 553.12it/s]  4%|▍         | 951/24407 [00:01<00:46, 501.27it/s]  4%|▍         | 1003/24407 [00:01<00:47, 487.71it/s]  4%|▍         | 1061/24407 [00:02<00:45, 512.08it/s]  5%|▍         | 1124/24407 [00:02<00:42, 544.07it/s]  5%|▍         | 1180/24407 [00:02<00:47, 493.75it/s]  5%|▌         | 1231/24407 [00:02<00:46, 495.51it/s]  5%|▌         | 1282/24407 [00:02<00:46, 496.45it/s]  5%|▌         | 1333/24407 [00:02<00:49, 463.44it/s]  6%|▌         | 1381/24407 [00:02<00:57, 400.05it/s]  6%|▌         | 1444/24407 [00:02<00:50, 457.12it/s]  6%|▌         | 1498/24407 [00:03<00:48, 473.47it/s]  6%|▋         | 1549/24407 [00:03<00:47, 481.90it/s]  7%|▋         | 1606/24407 [00:03<00:45, 504.50it/s]  7%|▋         | 1668/24407 [00:03<00:42, 535.56it/s]  7%|▋         | 1723/24407 [00:03<00:42, 538.30it/s]  7%|▋         | 1789/24407 [00:03<00:39, 572.55it/s]  8%|▊         | 1854/24407 [00:03<00:37, 594.68it/s]  8%|▊         | 1914/24407 [00:03<00:40, 561.49it/s]  8%|▊         | 1980/24407 [00:03<00:38, 587.22it/s]  8%|▊         | 2044/24407 [00:03<00:37, 601.04it/s]  9%|▊         | 2112/24407 [00:04<00:35, 623.01it/s]  9%|▉         | 2183/24407 [00:04<00:34, 646.73it/s]  9%|▉         | 2248/24407 [00:04<00:37, 596.92it/s]  9%|▉         | 2309/24407 [00:04<00:37, 585.25it/s] 10%|▉         | 2376/24407 [00:04<00:36, 597.51it/s] 10%|▉         | 2438/24407 [00:04<00:36, 601.83it/s] 10%|█         | 2499/24407 [00:04<00:36, 604.11it/s] 11%|█         | 2568/24407 [00:04<00:34, 628.14it/s] 11%|█         | 2632/24407 [00:04<00:35, 605.60it/s] 11%|█         | 2693/24407 [00:05<00:37, 576.07it/s] 11%|█▏        | 2752/24407 [00:05<00:39, 542.81it/s] 12%|█▏        | 2809/24407 [00:05<00:39, 549.99it/s] 12%|█▏        | 2865/24407 [00:05<00:43, 496.03it/s] 12%|█▏        | 2916/24407 [00:05<00:44, 486.80it/s] 12%|█▏        | 2975/24407 [00:05<00:42, 507.92it/s] 12%|█▏        | 3036/24407 [00:05<00:39, 535.16it/s] 13%|█▎        | 3094/24407 [00:05<00:39, 541.40it/s] 13%|█▎        | 3153/24407 [00:05<00:38, 552.83it/s] 13%|█▎        | 3218/24407 [00:06<00:36, 580.66it/s] 13%|█▎        | 3277/24407 [00:06<00:36, 572.89it/s] 14%|█▎        | 3337/24407 [00:06<00:36, 579.05it/s] 14%|█▍        | 3396/24407 [00:06<00:36, 581.76it/s] 14%|█▍        | 3455/24407 [00:06<00:36, 579.65it/s] 14%|█▍        | 3514/24407 [00:06<00:36, 570.19it/s] 15%|█▍        | 3572/24407 [00:06<00:36, 567.79it/s] 15%|█▍        | 3629/24407 [00:06<00:38, 545.68it/s] 15%|█▌        | 3684/24407 [00:06<00:38, 535.24it/s] 15%|█▌        | 3738/24407 [00:06<00:42, 490.70it/s] 16%|█▌        | 3801/24407 [00:07<00:39, 527.94it/s] 16%|█▌        | 3862/24407 [00:07<00:37, 547.09it/s] 16%|█▌        | 3918/24407 [00:07<00:43, 475.17it/s] 16%|█▋        | 3981/24407 [00:07<00:39, 514.23it/s] 17%|█▋        | 4035/24407 [00:07<00:39, 519.16it/s] 17%|█▋        | 4101/24407 [00:07<00:36, 556.69it/s] 17%|█▋        | 4159/24407 [00:07<00:36, 560.71it/s] 17%|█▋        | 4222/24407 [00:07<00:35, 571.87it/s] 18%|█▊        | 4302/24407 [00:07<00:31, 636.79it/s] 18%|█▊        | 4367/24407 [00:08<00:32, 609.23it/s] 18%|█▊        | 4429/24407 [00:08<00:44, 454.04it/s] 18%|█▊        | 4485/24407 [00:08<00:41, 477.70it/s] 19%|█▊        | 4548/24407 [00:08<00:38, 514.22it/s] 19%|█▉        | 4608/24407 [00:08<00:36, 536.14it/s] 19%|█▉        | 4665/24407 [00:08<00:39, 505.35it/s] 19%|█▉        | 4736/24407 [00:08<00:35, 553.70it/s] 20%|█▉        | 4794/24407 [00:08<00:37, 526.91it/s] 20%|█▉        | 4861/24407 [00:09<00:34, 563.21it/s] 20%|██        | 4919/24407 [00:09<00:34, 564.43it/s] 20%|██        | 4979/24407 [00:09<00:33, 572.44it/s] 21%|██        | 5050/24407 [00:09<00:31, 610.33it/s] 21%|██        | 5112/24407 [00:09<00:32, 593.73it/s] 21%|██        | 5175/24407 [00:09<00:31, 603.74it/s] 21%|██▏       | 5236/24407 [00:09<00:34, 561.00it/s] 22%|██▏       | 5304/24407 [00:09<00:32, 593.00it/s] 22%|██▏       | 5367/24407 [00:09<00:31, 602.92it/s] 22%|██▏       | 5428/24407 [00:09<00:32, 592.96it/s] 23%|██▎       | 5494/24407 [00:10<00:31, 609.81it/s] 23%|██▎       | 5556/24407 [00:10<00:31, 596.10it/s] 23%|██▎       | 5620/24407 [00:10<00:30, 608.51it/s] 23%|██▎       | 5682/24407 [00:10<00:31, 596.15it/s] 24%|██▎       | 5742/24407 [00:10<00:33, 558.07it/s] 24%|██▍       | 5801/24407 [00:10<00:32, 565.46it/s] 24%|██▍       | 5865/24407 [00:10<00:31, 585.32it/s] 24%|██▍       | 5924/24407 [00:10<00:31, 580.76it/s] 25%|██▍       | 5990/24407 [00:10<00:30, 601.82it/s] 25%|██▍       | 6051/24407 [00:11<00:31, 584.49it/s] 25%|██▌       | 6110/24407 [00:11<00:32, 568.51it/s] 25%|██▌       | 6168/24407 [00:11<00:33, 544.65it/s] 25%|██▌       | 6223/24407 [00:11<00:35, 516.75it/s] 26%|██▌       | 6281/24407 [00:11<00:33, 534.02it/s] 26%|██▌       | 6344/24407 [00:11<00:32, 560.45it/s] 26%|██▌       | 6401/24407 [00:11<00:32, 554.10it/s] 26%|██▋       | 6457/24407 [00:11<00:34, 525.81it/s] 27%|██▋       | 6522/24407 [00:11<00:32, 546.90it/s] 27%|██▋       | 6581/24407 [00:12<00:32, 546.43it/s] 27%|██▋       | 6648/24407 [00:12<00:30, 573.39it/s] 28%|██▊       | 6712/24407 [00:12<00:29, 591.87it/s] 28%|██▊       | 6772/24407 [00:12<00:31, 554.36it/s] 28%|██▊       | 6835/24407 [00:12<00:36, 486.66it/s] 28%|██▊       | 6899/24407 [00:12<00:33, 524.33it/s] 29%|██▊       | 6958/24407 [00:12<00:32, 539.45it/s] 29%|██▊       | 7014/24407 [00:12<00:37, 458.71it/s] 29%|██▉       | 7075/24407 [00:13<00:35, 495.19it/s] 29%|██▉       | 7128/24407 [00:13<00:34, 504.17it/s] 29%|██▉       | 7181/24407 [00:13<00:44, 386.05it/s] 30%|██▉       | 7226/24407 [00:13<00:47, 360.73it/s] 30%|██▉       | 7282/24407 [00:13<00:42, 405.24it/s] 30%|███       | 7345/24407 [00:13<00:37, 459.40it/s] 30%|███       | 7400/24407 [00:13<00:35, 481.46it/s] 31%|███       | 7470/24407 [00:13<00:31, 539.17it/s] 31%|███       | 7527/24407 [00:14<00:31, 528.94it/s] 31%|███       | 7583/24407 [00:14<00:32, 520.97it/s] 31%|███▏      | 7637/24407 [00:14<00:32, 520.78it/s] 32%|███▏      | 7693/24407 [00:14<00:31, 530.42it/s] 32%|███▏      | 7753/24407 [00:14<00:30, 550.09it/s] 32%|███▏      | 7830/24407 [00:14<00:27, 613.43it/s] 32%|███▏      | 7892/24407 [00:14<00:27, 598.42it/s] 33%|███▎      | 7953/24407 [00:14<00:27, 588.34it/s] 33%|███▎      | 8013/24407 [00:14<00:28, 565.70it/s] 33%|███▎      | 8070/24407 [00:14<00:28, 563.41it/s] 33%|███▎      | 8127/24407 [00:15<00:29, 557.96it/s] 34%|███▎      | 8183/24407 [00:15<00:29, 557.19it/s] 34%|███▍      | 8247/24407 [00:15<00:27, 580.14it/s] 34%|███▍      | 8306/24407 [00:15<00:27, 582.62it/s] 34%|███▍      | 8365/24407 [00:15<00:29, 544.66it/s] 35%|███▍      | 8421/24407 [00:15<00:31, 514.73it/s] 35%|███▍      | 8482/24407 [00:15<00:29, 538.60it/s] 35%|███▍      | 8537/24407 [00:15<00:34, 460.91it/s] 35%|███▌      | 8588/24407 [00:15<00:33, 472.85it/s] 35%|███▌      | 8638/24407 [00:16<00:33, 470.89it/s] 36%|███▌      | 8696/24407 [00:16<00:31, 499.80it/s] 36%|███▌      | 8748/24407 [00:16<00:32, 486.22it/s] 36%|███▌      | 8801/24407 [00:16<00:31, 497.21it/s] 36%|███▋      | 8856/24407 [00:16<00:30, 510.75it/s] 37%|███▋      | 8913/24407 [00:16<00:29, 526.05it/s] 37%|███▋      | 8972/24407 [00:16<00:28, 544.06it/s] 37%|███▋      | 9036/24407 [00:16<00:26, 569.83it/s] 37%|███▋      | 9097/24407 [00:16<00:26, 580.93it/s] 38%|███▊      | 9156/24407 [00:17<00:26, 572.34it/s] 38%|███▊      | 9214/24407 [00:17<00:26, 570.69it/s] 38%|███▊      | 9277/24407 [00:17<00:25, 587.82it/s] 38%|███▊      | 9337/24407 [00:17<00:25, 590.10it/s] 39%|███▊      | 9397/24407 [00:17<00:25, 591.12it/s] 39%|███▉      | 9458/24407 [00:17<00:25, 596.48it/s] 39%|███▉      | 9518/24407 [00:17<00:25, 585.56it/s] 39%|███▉      | 9579/24407 [00:17<00:25, 591.98it/s] 39%|███▉      | 9639/24407 [00:17<00:24, 591.71it/s] 40%|███▉      | 9699/24407 [00:17<00:26, 565.26it/s] 40%|███▉      | 9757/24407 [00:18<00:25, 567.34it/s] 40%|████      | 9814/24407 [00:18<00:26, 551.84it/s] 40%|████      | 9870/24407 [00:18<00:26, 541.32it/s] 41%|████      | 9932/24407 [00:18<00:25, 562.59it/s] 41%|████      | 9989/24407 [00:18<00:27, 524.10it/s] 41%|████      | 10049/24407 [00:18<00:26, 544.28it/s] 41%|████▏     | 10110/24407 [00:18<00:25, 561.25it/s] 42%|████▏     | 10167/24407 [00:18<00:28, 508.27it/s] 42%|████▏     | 10225/24407 [00:18<00:27, 523.96it/s] 42%|████▏     | 10285/24407 [00:19<00:26, 535.99it/s] 42%|████▏     | 10343/24407 [00:19<00:25, 546.92it/s] 43%|████▎     | 10402/24407 [00:19<00:25, 557.05it/s] 43%|████▎     | 10471/24407 [00:19<00:23, 591.51it/s] 43%|████▎     | 10540/24407 [00:19<00:22, 619.93it/s] 43%|████▎     | 10603/24407 [00:19<00:23, 588.69it/s] 44%|████▎     | 10663/24407 [00:19<00:27, 491.82it/s] 44%|████▍     | 10732/24407 [00:19<00:25, 540.81it/s] 44%|████▍     | 10797/24407 [00:19<00:24, 566.20it/s] 44%|████▍     | 10858/24407 [00:20<00:23, 576.45it/s] 45%|████▍     | 10937/24407 [00:20<00:21, 634.47it/s] 45%|████▌     | 11003/24407 [00:20<00:21, 625.71it/s] 45%|████▌     | 11067/24407 [00:20<00:22, 602.60it/s] 46%|████▌     | 11129/24407 [00:20<00:22, 600.52it/s] 46%|████▌     | 11190/24407 [00:20<00:25, 521.51it/s] 46%|████▌     | 11248/24407 [00:20<00:24, 535.50it/s] 46%|████▋     | 11309/24407 [00:20<00:23, 555.51it/s] 47%|████▋     | 11372/24407 [00:20<00:22, 575.18it/s] 47%|████▋     | 11431/24407 [00:21<00:22, 568.56it/s] 47%|████▋     | 11489/24407 [00:21<00:23, 552.62it/s] 47%|████▋     | 11545/24407 [00:21<00:25, 503.70it/s] 48%|████▊     | 11597/24407 [00:21<00:25, 507.34it/s] 48%|████▊     | 11663/24407 [00:21<00:23, 541.53it/s] 48%|████▊     | 11719/24407 [00:21<00:23, 545.85it/s] 48%|████▊     | 11787/24407 [00:21<00:21, 582.17it/s] 49%|████▊     | 11846/24407 [00:21<00:22, 547.58it/s] 49%|████▉     | 11902/24407 [00:21<00:23, 539.38it/s] 49%|████▉     | 11961/24407 [00:22<00:22, 547.79it/s] 49%|████▉     | 12020/24407 [00:22<00:22, 557.43it/s] 49%|████▉     | 12080/24407 [00:22<00:21, 567.99it/s] 50%|████▉     | 12138/24407 [00:22<00:22, 534.23it/s] 50%|████▉     | 12199/24407 [00:22<00:22, 553.14it/s] 50%|█████     | 12255/24407 [00:22<00:23, 514.84it/s] 50%|█████     | 12310/24407 [00:22<00:23, 523.70it/s] 51%|█████     | 12363/24407 [00:22<00:25, 474.51it/s] 51%|█████     | 12416/24407 [00:22<00:24, 488.73it/s] 51%|█████     | 12466/24407 [00:23<00:24, 485.88it/s] 51%|█████▏    | 12525/24407 [00:23<00:23, 512.70it/s] 52%|█████▏    | 12577/24407 [00:23<00:24, 480.58it/s] 52%|█████▏    | 12626/24407 [00:23<00:25, 460.02it/s] 52%|█████▏    | 12673/24407 [00:23<00:26, 448.20it/s] 52%|█████▏    | 12733/24407 [00:23<00:24, 484.84it/s] 52%|█████▏    | 12792/24407 [00:23<00:22, 514.08it/s] 53%|█████▎    | 12844/24407 [00:23<00:22, 506.51it/s] 53%|█████▎    | 12900/24407 [00:23<00:22, 513.49it/s] 53%|█████▎    | 12959/24407 [00:23<00:21, 533.01it/s] 53%|█████▎    | 13013/24407 [00:24<00:23, 487.69it/s] 54%|█████▎    | 13063/24407 [00:24<00:27, 407.42it/s] 54%|█████▎    | 13107/24407 [00:24<00:32, 348.49it/s] 54%|█████▍    | 13145/24407 [00:24<00:34, 321.85it/s] 54%|█████▍    | 13180/24407 [00:24<00:37, 302.86it/s] 54%|█████▍    | 13217/24407 [00:24<00:35, 316.23it/s] 54%|█████▍    | 13250/24407 [00:24<00:36, 303.92it/s] 54%|█████▍    | 13283/24407 [00:25<00:35, 309.99it/s] 55%|█████▍    | 13315/24407 [00:25<00:36, 300.72it/s] 55%|█████▍    | 13346/24407 [00:25<00:36, 300.82it/s] 55%|█████▍    | 13377/24407 [00:25<00:42, 256.75it/s] 55%|█████▍    | 13406/24407 [00:25<00:41, 263.72it/s] 55%|█████▌    | 13434/24407 [00:25<00:43, 249.51it/s] 55%|█████▌    | 13460/24407 [00:25<00:47, 231.94it/s] 55%|█████▌    | 13485/24407 [00:25<00:46, 234.29it/s] 55%|█████▌    | 13509/24407 [00:26<00:46, 233.45it/s] 55%|█████▌    | 13533/24407 [00:26<00:46, 232.75it/s] 56%|█████▌    | 13559/24407 [00:26<00:45, 240.18it/s] 56%|█████▌    | 13585/24407 [00:26<00:44, 245.16it/s] 56%|█████▌    | 13610/24407 [00:26<00:47, 229.06it/s] 56%|█████▌    | 13634/24407 [00:26<00:48, 222.50it/s] 56%|█████▌    | 13664/24407 [00:26<00:44, 243.48it/s] 56%|█████▌    | 13692/24407 [00:26<00:42, 253.20it/s] 56%|█████▌    | 13718/24407 [00:26<00:43, 244.73it/s] 56%|█████▋    | 13745/24407 [00:27<00:44, 240.37it/s] 56%|█████▋    | 13773/24407 [00:27<00:42, 249.15it/s] 57%|█████▋    | 13799/24407 [00:27<00:55, 190.69it/s] 57%|█████▋    | 13821/24407 [00:27<00:54, 194.82it/s] 57%|█████▋    | 13843/24407 [00:27<00:54, 193.79it/s] 57%|█████▋    | 13865/24407 [00:27<00:52, 199.66it/s] 57%|█████▋    | 13894/24407 [00:27<00:48, 218.94it/s] 57%|█████▋    | 13917/24407 [00:27<00:48, 215.60it/s] 57%|█████▋    | 13943/24407 [00:27<00:46, 226.35it/s] 57%|█████▋    | 13969/24407 [00:28<00:44, 235.22it/s] 57%|█████▋    | 13997/24407 [00:28<00:41, 247.87it/s] 57%|█████▋    | 14032/24407 [00:28<00:45, 229.17it/s] 58%|█████▊    | 14076/24407 [00:28<00:36, 281.25it/s] 58%|█████▊    | 14145/24407 [00:28<00:26, 389.05it/s] 58%|█████▊    | 14195/24407 [00:28<00:24, 419.21it/s] 58%|█████▊    | 14253/24407 [00:28<00:21, 461.91it/s] 59%|█████▊    | 14301/24407 [00:28<00:24, 415.19it/s] 59%|█████▉    | 14357/24407 [00:29<00:22, 451.99it/s] 59%|█████▉    | 14417/24407 [00:29<00:20, 489.33it/s] 59%|█████▉    | 14472/24407 [00:29<00:19, 505.17it/s] 60%|█████▉    | 14524/24407 [00:29<00:19, 499.53it/s] 60%|█████▉    | 14575/24407 [00:29<00:19, 499.39it/s] 60%|█████▉    | 14626/24407 [00:29<00:20, 483.35it/s] 60%|██████    | 14686/24407 [00:29<00:19, 511.29it/s] 60%|██████    | 14738/24407 [00:29<00:19, 500.56it/s] 61%|██████    | 14790/24407 [00:29<00:19, 505.96it/s] 61%|██████    | 14846/24407 [00:29<00:18, 516.10it/s] 61%|██████    | 14905/24407 [00:30<00:17, 536.85it/s] 61%|██████▏   | 14959/24407 [00:30<00:17, 532.30it/s] 62%|██████▏   | 15017/24407 [00:30<00:17, 545.17it/s] 62%|██████▏   | 15073/24407 [00:30<00:17, 548.23it/s] 62%|██████▏   | 15145/24407 [00:30<00:15, 597.33it/s] 62%|██████▏   | 15205/24407 [00:30<00:18, 490.12it/s] 63%|██████▎   | 15258/24407 [00:30<00:20, 447.63it/s] 63%|██████▎   | 15306/24407 [00:30<00:20, 438.52it/s] 63%|██████▎   | 15370/24407 [00:30<00:18, 488.76it/s] 63%|██████▎   | 15422/24407 [00:31<00:18, 493.76it/s] 63%|██████▎   | 15473/24407 [00:31<00:21, 419.84it/s] 64%|██████▎   | 15518/24407 [00:31<00:23, 375.92it/s] 64%|██████▎   | 15559/24407 [00:31<00:23, 370.81it/s] 64%|██████▍   | 15625/24407 [00:31<00:19, 441.56it/s] 64%|██████▍   | 15684/24407 [00:31<00:18, 479.04it/s] 64%|██████▍   | 15735/24407 [00:31<00:18, 469.33it/s] 65%|██████▍   | 15802/24407 [00:31<00:16, 522.94it/s] 65%|██████▌   | 15867/24407 [00:32<00:15, 555.64it/s] 65%|██████▌   | 15924/24407 [00:32<00:15, 542.22it/s] 66%|██████▌   | 15993/24407 [00:32<00:14, 563.04it/s] 66%|██████▌   | 16050/24407 [00:32<00:16, 510.11it/s] 66%|██████▌   | 16108/24407 [00:32<00:15, 520.81it/s] 66%|██████▋   | 16173/24407 [00:32<00:14, 555.26it/s] 67%|██████▋   | 16236/24407 [00:32<00:14, 574.86it/s] 67%|██████▋   | 16295/24407 [00:32<00:14, 549.08it/s] 67%|██████▋   | 16351/24407 [00:32<00:14, 550.50it/s] 67%|██████▋   | 16408/24407 [00:33<00:14, 552.12it/s] 67%|██████▋   | 16470/24407 [00:33<00:13, 571.52it/s] 68%|██████▊   | 16534/24407 [00:33<00:13, 590.11it/s] 68%|██████▊   | 16606/24407 [00:33<00:12, 627.46it/s] 68%|██████▊   | 16670/24407 [00:33<00:13, 584.95it/s] 69%|██████▊   | 16738/24407 [00:33<00:12, 610.09it/s] 69%|██████▉   | 16800/24407 [00:33<00:13, 568.04it/s] 69%|██████▉   | 16864/24407 [00:33<00:12, 585.78it/s] 69%|██████▉   | 16924/24407 [00:33<00:14, 530.48it/s] 70%|██████▉   | 16979/24407 [00:34<00:14, 518.28it/s] 70%|██████▉   | 17051/24407 [00:34<00:12, 571.42it/s] 70%|███████   | 17110/24407 [00:34<00:12, 564.79it/s] 70%|███████   | 17171/24407 [00:34<00:12, 576.74it/s] 71%|███████   | 17231/24407 [00:34<00:12, 582.14it/s] 71%|███████   | 17290/24407 [00:34<00:12, 555.20it/s] 71%|███████   | 17347/24407 [00:34<00:13, 524.03it/s] 71%|███████▏  | 17401/24407 [00:34<00:14, 498.61it/s] 72%|███████▏  | 17461/24407 [00:34<00:13, 525.78it/s] 72%|███████▏  | 17515/24407 [00:35<00:13, 513.52it/s] 72%|███████▏  | 17570/24407 [00:35<00:13, 523.35it/s] 72%|███████▏  | 17623/24407 [00:35<00:15, 447.32it/s] 72%|███████▏  | 17681/24407 [00:35<00:13, 481.32it/s] 73%|███████▎  | 17737/24407 [00:35<00:13, 501.11it/s] 73%|███████▎  | 17808/24407 [00:35<00:11, 555.49it/s] 73%|███████▎  | 17866/24407 [00:35<00:13, 488.42it/s] 73%|███████▎  | 17918/24407 [00:35<00:13, 488.02it/s] 74%|███████▎  | 17983/24407 [00:35<00:12, 520.04it/s] 74%|███████▍  | 18048/24407 [00:36<00:11, 555.22it/s] 74%|███████▍  | 18110/24407 [00:36<00:11, 570.42it/s] 74%|███████▍  | 18172/24407 [00:36<00:10, 581.43it/s] 75%|███████▍  | 18236/24407 [00:36<00:10, 595.98it/s] 75%|███████▍  | 18297/24407 [00:36<00:10, 563.87it/s] 75%|███████▌  | 18360/24407 [00:36<00:10, 580.43it/s] 75%|███████▌  | 18419/24407 [00:36<00:10, 575.18it/s] 76%|███████▌  | 18487/24407 [00:36<00:09, 601.61it/s] 76%|███████▌  | 18548/24407 [00:36<00:10, 574.00it/s] 76%|███████▌  | 18606/24407 [00:37<00:10, 529.03it/s] 76%|███████▋  | 18660/24407 [00:37<00:11, 503.66it/s] 77%|███████▋  | 18718/24407 [00:37<00:10, 523.60it/s] 77%|███████▋  | 18780/24407 [00:37<00:10, 549.43it/s] 77%|███████▋  | 18848/24407 [00:37<00:09, 582.26it/s] 77%|███████▋  | 18910/24407 [00:37<00:09, 591.64it/s] 78%|███████▊  | 18976/24407 [00:37<00:08, 609.79it/s] 78%|███████▊  | 19038/24407 [00:37<00:08, 602.81it/s] 78%|███████▊  | 19104/24407 [00:37<00:08, 616.89it/s] 79%|███████▊  | 19166/24407 [00:38<00:08, 583.75it/s] 79%|███████▉  | 19225/24407 [00:38<00:09, 541.75it/s] 79%|███████▉  | 19294/24407 [00:38<00:08, 580.75it/s] 79%|███████▉  | 19353/24407 [00:38<00:10, 470.69it/s] 80%|███████▉  | 19412/24407 [00:38<00:10, 497.97it/s] 80%|███████▉  | 19467/24407 [00:38<00:09, 511.18it/s] 80%|███████▉  | 19521/24407 [00:38<00:09, 508.11it/s] 80%|████████  | 19579/24407 [00:38<00:09, 525.73it/s] 80%|████████  | 19645/24407 [00:38<00:08, 562.28it/s] 81%|████████  | 19703/24407 [00:39<00:08, 544.39it/s] 81%|████████  | 19763/24407 [00:39<00:08, 557.31it/s] 81%|████████  | 19820/24407 [00:39<00:08, 541.32it/s] 82%|████████▏ | 19892/24407 [00:39<00:07, 590.71it/s] 82%|████████▏ | 19953/24407 [00:39<00:07, 596.06it/s] 82%|████████▏ | 20021/24407 [00:39<00:07, 618.81it/s] 82%|████████▏ | 20084/24407 [00:39<00:07, 591.05it/s] 83%|████████▎ | 20144/24407 [00:39<00:07, 568.98it/s] 83%|████████▎ | 20202/24407 [00:39<00:07, 551.76it/s] 83%|████████▎ | 20280/24407 [00:40<00:06, 614.67it/s] 83%|████████▎ | 20343/24407 [00:40<00:06, 613.23it/s] 84%|████████▎ | 20417/24407 [00:40<00:06, 643.05it/s] 84%|████████▍ | 20482/24407 [00:40<00:06, 593.42it/s] 84%|████████▍ | 20562/24407 [00:40<00:05, 644.07it/s] 85%|████████▍ | 20628/24407 [00:40<00:06, 603.22it/s] 85%|████████▍ | 20697/24407 [00:40<00:06, 602.14it/s] 85%|████████▌ | 20758/24407 [00:40<00:06, 593.83it/s] 85%|████████▌ | 20823/24407 [00:40<00:05, 608.15it/s] 86%|████████▌ | 20885/24407 [00:41<00:08, 434.84it/s] 86%|████████▌ | 20938/24407 [00:41<00:07, 455.26it/s] 86%|████████▌ | 20990/24407 [00:41<00:07, 465.91it/s] 86%|████████▌ | 21041/24407 [00:41<00:07, 475.43it/s] 86%|████████▋ | 21093/24407 [00:41<00:06, 486.61it/s] 87%|████████▋ | 21149/24407 [00:41<00:06, 505.92it/s] 87%|████████▋ | 21213/24407 [00:41<00:05, 542.86it/s] 87%|████████▋ | 21278/24407 [00:41<00:05, 570.02it/s] 87%|████████▋ | 21337/24407 [00:41<00:05, 574.35it/s] 88%|████████▊ | 21407/24407 [00:42<00:04, 605.34it/s] 88%|████████▊ | 21469/24407 [00:42<00:05, 578.40it/s] 88%|████████▊ | 21532/24407 [00:42<00:04, 583.48it/s] 88%|████████▊ | 21591/24407 [00:42<00:05, 516.94it/s] 89%|████████▊ | 21658/24407 [00:42<00:04, 551.19it/s] 89%|████████▉ | 21738/24407 [00:42<00:04, 617.96it/s] 89%|████████▉ | 21802/24407 [00:42<00:04, 624.09it/s] 90%|████████▉ | 21866/24407 [00:42<00:04, 606.66it/s] 90%|████████▉ | 21928/24407 [00:42<00:04, 604.31it/s] 90%|█████████ | 21990/24407 [00:43<00:04, 590.56it/s] 90%|█████████ | 22050/24407 [00:43<00:04, 586.84it/s] 91%|█████████ | 22123/24407 [00:43<00:03, 626.97it/s] 91%|█████████ | 22187/24407 [00:43<00:03, 627.50it/s] 91%|█████████ | 22251/24407 [00:43<00:03, 621.79it/s] 91%|█████████▏| 22314/24407 [00:43<00:03, 596.79it/s] 92%|█████████▏| 22374/24407 [00:43<00:03, 586.26it/s] 92%|█████████▏| 22433/24407 [00:43<00:03, 508.93it/s] 92%|█████████▏| 22493/24407 [00:43<00:03, 531.38it/s] 92%|█████████▏| 22548/24407 [00:44<00:03, 522.27it/s] 93%|█████████▎| 22602/24407 [00:44<00:03, 507.90it/s] 93%|█████████▎| 22662/24407 [00:44<00:03, 531.06it/s] 93%|█████████▎| 22727/24407 [00:44<00:03, 526.74it/s] 93%|█████████▎| 22785/24407 [00:44<00:03, 537.61it/s] 94%|█████████▎| 22840/24407 [00:44<00:02, 525.08it/s] 94%|█████████▍| 22909/24407 [00:44<00:02, 570.79it/s] 94%|█████████▍| 22967/24407 [00:44<00:02, 564.31it/s] 94%|█████████▍| 23024/24407 [00:44<00:02, 564.40it/s] 95%|█████████▍| 23089/24407 [00:45<00:02, 588.32it/s] 95%|█████████▍| 23149/24407 [00:45<00:02, 540.44it/s] 95%|█████████▌| 23213/24407 [00:45<00:02, 552.49it/s] 95%|█████████▌| 23269/24407 [00:45<00:02, 554.49it/s] 96%|█████████▌| 23325/24407 [00:45<00:02, 502.65it/s] 96%|█████████▌| 23384/24407 [00:45<00:01, 516.27it/s] 96%|█████████▌| 23447/24407 [00:45<00:01, 541.59it/s] 96%|█████████▋| 23514/24407 [00:45<00:01, 574.92it/s] 97%|█████████▋| 23578/24407 [00:45<00:01, 590.04it/s] 97%|█████████▋| 23640/24407 [00:46<00:01, 596.36it/s] 97%|█████████▋| 23702/24407 [00:46<00:01, 601.66it/s] 97%|█████████▋| 23770/24407 [00:46<00:01, 621.89it/s] 98%|█████████▊| 23836/24407 [00:46<00:00, 631.07it/s] 98%|█████████▊| 23914/24407 [00:46<00:00, 674.46it/s] 98%|█████████▊| 23982/24407 [00:46<00:00, 667.65it/s] 99%|█████████▊| 24049/24407 [00:46<00:00, 631.52it/s] 99%|█████████▉| 24113/24407 [00:46<00:00, 599.57it/s] 99%|█████████▉| 24179/24407 [00:46<00:00, 615.80it/s] 99%|█████████▉| 24242/24407 [00:47<00:00, 518.39it/s]100%|█████████▉| 24312/24407 [00:47<00:00, 564.14it/s]100%|█████████▉| 24372/24407 [00:47<00:00, 515.62it/s]100%|██████████| 24407/24407 [00:47<00:00, 515.60it/s]
+Saved 24407 PRs to data/raw/github_pr_metadata.parquet
+Saved 719117 review events to data/raw/github_review_events.parquet
+Building exhaustive universal identity database...
+Traceback (most recent call last):
+  File "/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/maintenance/build_identities.py", line 339, in <module>
+    build_identities()
+  File "/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/maintenance/build_identities.py", line 27, in build_identities
+    curated_full = json.load(f)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting ',' delimiter: line 117 column 1 (char 2131)
+Loading commit messages from data/raw/core_messages.parquet...
+Processing 48621 commit messages...
+Found 18911 review signals in 9745 commits.
+Saved reviews to data/raw/core_reviews.parquet
+Saved reviewer summary to output/tracker/reviewers_summary.json
+  Total reviews: 18911
+  Unique commits with reviews: 9745
+  Top 5 reviewers: ['achow101', 'laanwj', 'marcofalke', 'hebasto', 'fanquake']
+🕵️  Processing local GitHub metadata from data/sources/bitcoin-github-metadata...
+📊 Found 33561 metadata files.
+✨ Successfully enriched 0 GitHub identities via local metadata.
+Loading data...
+Filtering data to cutoff: 2026-03-31
+Normalizing identities using master resolver...
+Generating Vital Signs...
+Loaded 22 maintainers with 58 email aliases.
+Generating Snapshots...
+Generating Contributor Landscape...
+Adding 6456 pure reviewers to the landscape population...
+Generating Category Evolution...
+  Generating Total view...
+  Generating Authored view...
+Generating Contributor Growth...
+Generating Common Metrics...
+Generating Social...
+Generating Corporate Era & Maintainer Independence...
+Loaded 11 sponsors, 84 sponsored developer emails.
+Running Maintainer Footprint Analysis...
+Analyzing footprints for 22 potential maintainers...
+Footprints saved to data/enriched/maintainer_footprints.json
+  Generated: 5 active maintainers, 22 total
+Generating Geography...
+  Skipping Geography (No enriched data)
+Generating Codebase Stats...
+Missing metadata for snapshots.
+  Replaying commits for Category History...
+Generating Engagement Tiers...
+Generating Churn Metrics...
+Generating Retention Metrics...
+Generating Reviewer Metrics...
+All stats generated successfully.
+Loading Delving data from data/raw/social_delving.parquet...
+Loading Mailing List data from data/raw/social_mailing_list.parquet...
+Merging social data...
+Total social records: 28316
+Saved to data/raw/social_combined.parquet
+
+Social Activity by Source:
+mailing_list    24294
+delving          4022
+Name: source, dtype: int64
+
+Top 5 Contributors (Governance):
+can_peter_todd         1278
+can_mike_hearn          981
+can_gregory_maxwell     873
+can_luke_dashjr         703
+can_pieter_wuille       684
+Name: canonical_id, dtype: int64
+--- Stage 3: Forensic Enrichment Starting ---
+Loading datasets...
+Categorizing BIPs and Social threads into themes...
+Linking BIPs to social discussions...
+Linking BIPs to repository commits...
+Calculating Maturity Scores...
+Saving enriched BIPs to data/enriched/bips_refined.parquet...
+
+--- Enrichment Complete ---
+BIPs with code links: 75
+BIPs with social links: 96
+
+Top BIPs by Maturity Score:
+    bip_id  ... maturity_score
+50      70  ...           0.68
+21      32  ...           0.53
+28      39  ...           0.50
+159    340  ...           0.43
+133    174  ...           0.38
+160    341  ...           0.38
+45      65  ...           0.26
+1        2  ...           0.24
+10      15  ...           0.21
+112    141  ...           0.19
+
+[10 rows x 4 columns]
+Loading datasets...
+Using identity resolver for canonical mapping...
+Filtering signals...
+Aggregating reviewer metrics...
+Aggregating author metrics...
+Joining all metrics...
+Efficiency metrics calculated for 7116 contributors.
+Top contributors by Reciprocity:
+              canonical_id  review_reciprocity
+4332         auto_drahtbot         4107.000000
+3699         auto_sidhujag          760.714286
+1989             auto_kwvg          365.500000
+2494            auto_str4d          362.500000
+2246  auto_pastapastapasta          238.307692
+Fastest Approvers (Avg Latency):
+          canonical_id  avg_approval_latency_days
+5239      auto_jtoomim                   0.004641
+4080   auto_joaolobo94                   0.006424
+2196     auto_bitkevin                   0.006632
+1787      auto_nolim1t                   0.009630
+5282  auto_joeyvee8666                   0.010012
+--- Stage 3.5: Expertise & Authority Mapping ---
+Extracting Expertise Tags from PR labels...
+Identifying Full-Stack Architects...
+Resolving commit author identities...
+Identifying The Gatekeepers...
+Assembling Expert Profiles...
+Expertise mapping saved to output/tracker/expertise.json
+Found 71 Full-Stack Architects and 77 specialized experts.
+Loading identity resolver...
+Loading enriched social data from data/enriched/social_threads.parquet...
+Validating canonical IDs (trusting ingest-resolved IDs)...
+Processing edges and expertise fingerprints across eras...
+Dampening message counts for PageRank (Logarithmic scaling)...
+Calculating era-based PageRank centralities...
+  Using Universal Identities population count: 4827
+Exporting enriched network data for 4827 total contributors (interactive + observers)...
+Enriching all 4827 contributors with archetypes and hybrid weighting...
+Exported comprehensive contributor dataset (8624 people) to data/enriched/social_stats.json
+Exported richer network to output/network/network_graph.json
+Loading Master UUID Identities...
+Discovering all active contributors across sources...
+Master Union: 13178 unique contributors discovered.
+Aggregating contributors.json metadata...
+Processing BIP data...
+Grand Join complete. 13178 contributors unified in data/enriched/contributors_unified.parquet
+🔄 Starting Master Registry Sync...
+  Bootstrapping from 4827 defined identities...
+  Syncing 7612 active core contributors...
+  Syncing 8624 social participants...
+      Matched: can_peter_todd -> Peter Todd
+      Matched: can_mike_hearn -> Mike Hearn
+      Matched: can_satoshi_nakamoto -> Satoshi Nakamoto
+      Matched: can_luke_dashjr -> Luke Dashjr
+      Matched: can_chris_moore -> Chris Moore
+      Matched: can_martti_malmi -> Martti Malmi
+      Matched: can_pieter_wuille -> Pieter Wuille
+      Matched: can_gavin_andresen -> Gavin Andresen
+      Matched: can_jeff_garzik -> Jeff Garzik
+      Matched: can_laszlo_hanyecz -> Laszlo Hanyecz
+      Matched: can_matt_corallo -> Matt Corallo
+      Matched: can_eric_lombrozo -> Eric Lombrozo
+      Matched: can_anthony_towns -> Anthony Towns
+      Matched: can_tom_harding -> Tom Harding
+      Matched: can_pavol_rusnak -> Pavol Rusnak
+      Matched: can_christian_decker -> Christian Decker
+      Matched: can_johnson_lau -> Johnson Lau
+      Matched: can_jeremy_rubin -> Jeremy Rubin
+      Matched: can_chris_stewart -> Chris Stewart
+✨ Registry Sync Complete! Tracked 15606 unique contributors.
+Delivering UI artifacts...
+Cleaning profiles directory...
+Generating profiles and tracking filenames...
+Sharded 50 high-signal profiles to output/shared/contributors/profiles
+Registry and profiles saved to output/shared/contributors/
+🚀 Starting DAILY Automated Pipeline (Fast/Incremental)...
+
+--- PHASE 0: Raw Data Sync ---
+
+--- Running: git -C data/sources/bitcoin pull origin master ---
+
+--- Running: git -C data/sources/bips pull origin master ---
+
+--- Running: git -C data/sources/delving pull origin master ---
+
+--- PHASE 1: Extraction (Raw Staging) ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/01_ingest/core.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/01_ingest/bips.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/01_ingest/delving.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/01_ingest/github_metadata.py ---
+
+--- PHASE 2: Convergence (Enrichment) ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/maintenance/build_identities.py ---
+⚠️  Command failed with exit code 1
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/02_process/reviews.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/02_process/github_social.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/02_process/core.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/02_process/merge_social.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/02_process/governance.py ---
+
+--- PHASE 3: Intelligence (Light) ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/03_analyze/efficiency.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/03_analyze/expertise.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/03_analyze/influence.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/02_process/unify_contributors.py ---
+
+--- PHASE 4: Artifact Generation ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/04_deliver/registry.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/04_deliver/ui_artifacts.py ---
+
+✨ DAILY PIPELINE COMPLETE!
