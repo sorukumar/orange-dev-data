@@ -19,7 +19,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-18T00:00:00",
+  "last_seen": "2026-05-23T00:00:00",
   "technical_focus": "Tests (QA)",
   "total_commits": 356.0,
   "authored_commits": 356.0,
@@ -170,20 +170,23 @@
     "2022": {
       "covenants": 7,
       "lightning": 1,
-      "other": 18,
+      "mempool-fees": 4,
+      "other": 14,
       "vaults": 3
     },
     "2023": {
-      "other": 11,
+      "other": 13,
       "covenants": 24,
       "lightning": 1,
+      "mempool-fees": 4,
       "script-opcodes": 10,
       "taproot": 2,
       "vaults": 23
     },
     "2024": {
-      "other": 3,
+      "other": 2,
       "covenants": 1,
+      "mempool-fees": 1,
       "script-opcodes": 2,
       "taproot": 1
     },
@@ -191,11 +194,11 @@
       "bitvm": 12,
       "covenants": 31,
       "lightning": 18,
-      "other": 9,
+      "mempool-fees": 3,
+      "other": 18,
       "script-opcodes": 1,
       "segwit": 13,
       "taproot": 14,
-      "testing-devtools": 12,
       "vaults": 5
     }
   }

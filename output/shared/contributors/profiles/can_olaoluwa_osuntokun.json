@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-18T00:00:00",
+  "last_seen": "2026-05-23T00:00:00",
   "technical_focus": "None",
   "total_commits": 0.0,
   "authored_commits": 0.0,
@@ -28,26 +28,26 @@
   "first_commit": null,
   "last_commit": null,
   "bips_authored": 2.0,
-  "avg_review_latency_days": 1556.6708871844112,
-  "reviews_count": 73.0,
+  "avg_review_latency_days": 1571.5794850992895,
+  "reviews_count": 75.0,
   "avg_approval_latency_days": 1247.5057445987654,
   "approvals_count": 21.0,
   "prs_authored": 12.0,
   "avg_pr_ack_velocity_days": 0.07163194444444444,
   "avg_concept_lead_time_days": null,
-  "review_reciprocity": 6.083333333333333,
-  "hybrid_score": 0.796,
+  "review_reciprocity": 6.25,
+  "hybrid_score": 0.7969,
   "threads_started": 18.0,
-  "replies_sent": 78.0,
+  "replies_sent": 79.0,
   "ml_threads": 7.0,
   "delving_threads": 11.0,
   "ml_responses": 65.0,
-  "delving_responses": 13.0,
+  "delving_responses": 14.0,
   "first_active": "2015-08-06T12:33:49",
-  "last_active": "2026-05-05T04:36:48.472000",
+  "last_active": "2026-05-23T01:38:18.693000",
   "dev_type": "Reviewer",
   "global_first_active": "2015-08-06T12:33:49",
-  "global_last_active": "2026-05-05T04:36:48.472000",
+  "global_last_active": "2026-05-23T01:38:18.692999936",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -81,9 +81,9 @@
   },
   "last_message": {
     "source": "delving",
-    "subject": "Post Quantum Lightning: Layer by Layer",
-    "date": "2026-05-05",
-    "link": "https://delvingbitcoin.org/t/post-quantum-lightning-layer-by-layer/2479/1"
+    "subject": "Re: Onion Message Jamming in the Lightning Network",
+    "date": "2026-05-23",
+    "link": "https://delvingbitcoin.org/t/onion-message-jamming-in-the-lightning-network/2414/15"
   },
   "social_history": {
     "2015": {
@@ -150,9 +150,9 @@
     },
     "2026": {
       "other": 10,
-      "lightning": 1,
+      "lightning": 2,
       "quantum": 6,
-      "taproot": 1
+      "taproot": 2
     }
   }
 }

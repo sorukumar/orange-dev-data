@@ -1,0 +1,180 @@
+{
+  "display_name": "Russell O'Connor",
+  "github_login_final": "roconnor",
+  "delving_username_final": "roconnor-blockstream",
+  "uuid": "can_russell_o_connor",
+  "badges": {
+    "is_bip_author": null,
+    "is_core_committer": null,
+    "is_core_contributor": true,
+    "is_maintainer": null,
+    "is_social_contributor": true,
+    "is_sponsored": true,
+    "maintainer_status": null,
+    "social_source": "mailing_list",
+    "sponsor_id": "blockstream"
+  },
+  "roles": [
+    "Researcher"
+  ],
+  "first_seen": "2026-04-17T00:00:00",
+  "last_seen": "2026-05-23T00:00:00",
+  "technical_focus": "Tests (QA)",
+  "total_commits": 9.0,
+  "authored_commits": 9.0,
+  "merge_commits": 0.0,
+  "total_additions": 82.0,
+  "total_deletions": 68.0,
+  "first_commit": "2021-03-01T14:01:48",
+  "last_commit": "2023-02-22T14:06:20",
+  "bips_authored": 0.0,
+  "avg_review_latency_days": 32.62159248737374,
+  "reviews_count": 3.0,
+  "avg_approval_latency_days": null,
+  "approvals_count": 0.0,
+  "prs_authored": 0.0,
+  "avg_pr_ack_velocity_days": null,
+  "avg_concept_lead_time_days": null,
+  "review_reciprocity": null,
+  "hybrid_score": 0.3308,
+  "threads_started": 22.0,
+  "replies_sent": 204.0,
+  "ml_threads": 15.0,
+  "delving_threads": 7.0,
+  "ml_responses": 202.0,
+  "delving_responses": 2.0,
+  "first_active": "2011-12-29T00:55:03",
+  "last_active": "2025-11-17T19:57:25.994000",
+  "dev_type": "Builder",
+  "global_first_active": "2011-12-29T00:55:03",
+  "global_last_active": "2025-11-17T19:57:25.993999872",
+  "github_location": null,
+  "github_company": null,
+  "github_bio": null,
+  "github_twitter": null,
+  "github_blog": null,
+  "github_followers": null,
+  "is_top_50": false,
+  "github_url": "https://github.com/roconnor",
+  "delving_url": "https://delvingbitcoin.org/u/roconnor-blockstream",
+  "commit_history": {
+    "2021": {
+      "Consensus (Domain Logic)": 0.5,
+      "Tests (QA)": 0.5
+    },
+    "2022": {
+      "Consensus (Domain Logic)": 0.83,
+      "Core Libs": 0.33,
+      "Tests (QA)": 0.83
+    },
+    "2023": {
+      "Tests (QA)": 2.0
+    }
+  },
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "[Bitcoin-development] Alternative to OP_EVAL",
+    "date": "2011-12-29",
+    "link": "https://gnusha.org/pi/bitcoindev/alpine.LRH.2.00.1112290111310.22327@theorem.ca"
+  },
+  "last_message": {
+    "source": "delving",
+    "subject": "Delving Simplicity Part \u2164: Programs and Addresses",
+    "date": "2025-11-17",
+    "link": "https://delvingbitcoin.org/t/delving-simplicity-part-programs-and-addresses/2113/1"
+  },
+  "social_history": {
+    "2011": {
+      "script-opcodes": 4
+    },
+    "2012": {
+      "script-opcodes": 1
+    },
+    "2016": {
+      "covenants": 3,
+      "mempool-fees": 2,
+      "mining": 4,
+      "other": 12,
+      "script-opcodes": 11,
+      "segwit": 6,
+      "soft-fork-activation": 2
+    },
+    "2017": {
+      "other": 18,
+      "covenants": 2,
+      "mempool-fees": 1,
+      "mining": 4,
+      "script-opcodes": 9,
+      "segwit": 7,
+      "signatures-sighash": 2,
+      "soft-fork-activation": 2,
+      "taproot": 2
+    },
+    "2018": {
+      "other": 11,
+      "covenants": 1,
+      "mempool-fees": 12,
+      "mining": 4,
+      "script-opcodes": 5,
+      "segwit": 8,
+      "signatures-sighash": 16,
+      "soft-fork-activation": 1,
+      "taproot": 13
+    },
+    "2019": {
+      "other": 21,
+      "covenants": 10,
+      "mempool-fees": 2,
+      "mining": 2,
+      "script-opcodes": 16,
+      "segwit": 7,
+      "signatures-sighash": 5,
+      "taproot": 9
+    },
+    "2020": {
+      "other": 5,
+      "mining": 1,
+      "script-opcodes": 1,
+      "segwit": 4,
+      "signatures-sighash": 2,
+      "taproot": 6
+    },
+    "2021": {
+      "covenants": 10,
+      "other": 4,
+      "mining": 1,
+      "script-opcodes": 7,
+      "soft-fork-activation": 6,
+      "taproot": 8
+    },
+    "2022": {
+      "other": 11,
+      "covenants": 15,
+      "mempool-fees": 2,
+      "mining": 3,
+      "script-opcodes": 5,
+      "soft-fork-activation": 10,
+      "taproot": 3
+    },
+    "2023": {
+      "other": 12,
+      "covenants": 1,
+      "mempool-fees": 1,
+      "mining": 1,
+      "script-opcodes": 3,
+      "taproot": 5
+    },
+    "2024": {
+      "other": 4,
+      "mempool-fees": 4,
+      "script-opcodes": 4,
+      "soft-fork-activation": 2
+    },
+    "2025": {
+      "mempool-fees": 2,
+      "script-opcodes": 5,
+      "other": 1,
+      "taproot": 1
+    }
+  }
+}

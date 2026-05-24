@@ -18,36 +18,36 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-18T00:00:00",
+  "last_seen": "2026-05-23T00:00:00",
   "technical_focus": "Tests (QA)",
-  "total_commits": 75.0,
-  "authored_commits": 75.0,
+  "total_commits": 80.0,
+  "authored_commits": 80.0,
   "merge_commits": 0.0,
-  "total_additions": 3124.0,
-  "total_deletions": 953.0,
+  "total_additions": 3221.0,
+  "total_deletions": 995.0,
   "first_commit": "2014-09-13T00:09:18",
-  "last_commit": "2026-03-20T22:02:39",
+  "last_commit": "2026-03-20T22:19:52",
   "bips_authored": 1.0,
-  "avg_review_latency_days": 1740.211239088668,
-  "reviews_count": 712.0,
-  "avg_approval_latency_days": 1077.0769625670077,
-  "approvals_count": 267.0,
-  "prs_authored": 54.0,
-  "avg_pr_ack_velocity_days": 43.856237139917695,
+  "avg_review_latency_days": 1746.1677524831487,
+  "reviews_count": 732.0,
+  "avg_approval_latency_days": 1085.190945616883,
+  "approvals_count": 272.0,
+  "prs_authored": 61.0,
+  "avg_pr_ack_velocity_days": 42.69049612112112,
   "avg_concept_lead_time_days": 55.31132137345679,
-  "review_reciprocity": 13.185185185185185,
-  "hybrid_score": 0.9305,
-  "threads_started": 20.0,
-  "replies_sent": 74.0,
+  "review_reciprocity": 12.0,
+  "hybrid_score": 0.9354,
+  "threads_started": 21.0,
+  "replies_sent": 75.0,
   "ml_threads": 6.0,
-  "delving_threads": 14.0,
+  "delving_threads": 15.0,
   "ml_responses": 49.0,
-  "delving_responses": 25.0,
+  "delving_responses": 26.0,
   "first_active": "2016-09-21T07:58:25",
-  "last_active": "2026-04-14T17:39:38",
+  "last_active": "2026-05-23T16:22:16.073000",
   "dev_type": "Builder",
   "global_first_active": "2014-09-13T00:09:18",
-  "global_last_active": "2026-04-14T17:39:38",
+  "global_last_active": "2026-05-23T16:22:16.072999936",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -92,7 +92,8 @@
       "Tests (QA)": 4.0
     },
     "2026": {
-      "Tests (QA)": 5.0
+      "Tests (QA)": 8.5,
+      "Wallet (Client App)": 0.5
     }
   },
   "bip_list": [
@@ -111,10 +112,10 @@
     "link": "https://gnusha.org/pi/bitcoindev/358752cc-48f6-eef8-ae9a-e17a0651ed52@murch.one"
   },
   "last_message": {
-    "source": "mailing_list",
-    "subject": "Re: [bitcoindev] [BIP Draft] Dust UTXO Disposal Protocol",
-    "date": "2026-04-14",
-    "link": "https://gnusha.org/pi/bitcoindev/4c3bb222-c492-4eb2-af98-68bee09ec5cd@murch.one"
+    "source": "delving",
+    "subject": "Re: Disposing of \"dust attack\" UTXOs",
+    "date": "2026-05-23",
+    "link": "https://delvingbitcoin.org/t/disposing-of-dust-attack-utxos/2215/36"
   },
   "social_history": {
     "2016": {
@@ -140,34 +141,34 @@
       "bip-process": 8,
       "consensus-cleanup": 10,
       "other": 35,
-      "hard-fork-block-size": 10,
       "mempool-fees": 17,
       "mining": 14,
       "security": 11,
       "soft-fork-activation": 5,
-      "taproot": 3
+      "taproot": 3,
+      "testing-devtools": 10
     },
     "2025": {
       "bip-process": 10,
-      "other": 19,
+      "other": 18,
       "consensus-cleanup": 1,
-      "hard-fork-block-size": 1,
       "mempool-fees": 5,
       "mining": 3,
       "security": 2,
       "soft-fork-activation": 5,
-      "taproot": 3
+      "taproot": 3,
+      "testing-devtools": 2
     },
     "2026": {
       "bip-process": 3,
       "consensus-cleanup": 2,
-      "other": 20,
-      "hard-fork-block-size": 1,
-      "mempool-fees": 3,
+      "other": 25,
+      "mempool-fees": 4,
       "mining": 3,
       "security": 1,
       "soft-fork-activation": 3,
-      "taproot": 2
+      "taproot": 2,
+      "testing-devtools": 1
     }
   }
 }

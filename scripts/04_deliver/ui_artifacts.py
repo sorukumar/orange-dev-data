@@ -94,10 +94,8 @@ def deliver():
     else:
         print(f"  WARNING: {SOCIAL_HISTORY_PATH} not found — social_history will be omitted from shards")
 
-    # 1. Prepare Sharded Profiles (Deep Dive) first to know who gets a file
-    # FILTER: authored_commits >= 10 OR bips_authored > 0
-    # This covers all meaningful code contributors and all BIP authors regardless
-    # of their hybrid_score rank.
+    # 1. Generate a profile shard for every contributor — files are tiny (~1-3 KB each)
+    # and are fetched on-demand, so there is no cost to generating all 7k.
     print("Cleaning profiles directory...")
     if os.path.exists(PROFILES_DIR):
         shutil.rmtree(PROFILES_DIR)
@@ -107,23 +105,7 @@ def deliver():
     sharded_count = 0
     id_to_filename = {}
 
-    def qualifies_for_shard(rec: dict) -> bool:
-        authored = rec.get('authored_commits') or 0
-        bips = rec.get('bips_authored') or 0
-        try:
-            authored = float(authored)
-        except (TypeError, ValueError):
-            authored = 0
-        try:
-            bips = float(bips)
-        except (TypeError, ValueError):
-            bips = 0
-        return authored >= 10 or bips > 0
-
     for rec in records:
-        if not qualifies_for_shard(rec):
-            continue
-
         rec['is_top_50'] = False  # legacy field kept for compatibility
 
         # Add links to record
@@ -164,7 +146,7 @@ def deliver():
             id_to_filename[rec['id']] = filename
         sharded_count += 1
             
-    print(f"Sharded {sharded_count} high-signal profiles to {PROFILES_DIR}")
+    print(f"Generated {sharded_count} profile shards to {PROFILES_DIR}")
 
     # 2. Prepare Registry (Compact for Table)
     registry_cols = [

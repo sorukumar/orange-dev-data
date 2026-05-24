@@ -16,7 +16,7 @@
   },
   "roles": [],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-18T00:00:00",
+  "last_seen": "2026-05-23T00:00:00",
   "technical_focus": "Core Libs",
   "total_commits": 131.0,
   "authored_commits": 131.0,
@@ -25,7 +25,7 @@
   "total_deletions": 2093.0,
   "first_commit": "2012-01-02T07:27:41",
   "last_commit": "2022-06-07T15:16:25",
-  "bips_authored": 7.0,
+  "bips_authored": 0.0,
   "avg_review_latency_days": 420.92045138888886,
   "reviews_count": 1.0,
   "avg_approval_latency_days": null,
@@ -34,7 +34,7 @@
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": null,
-  "hybrid_score": 1.6218,
+  "hybrid_score": 0.5718,
   "threads_started": 73.0,
   "replies_sent": 189.0,
   "ml_threads": 73.0,
@@ -43,7 +43,7 @@
   "delving_responses": 0.0,
   "first_active": "2013-11-05T16:15:27",
   "last_active": "2022-03-01T22:45:58",
-  "dev_type": "Protocol Designer",
+  "dev_type": "Builder",
   "global_first_active": "2012-01-02T07:27:41",
   "global_last_active": "2022-06-07T15:16:25",
   "github_location": null,
@@ -125,57 +125,6 @@
       "Consensus (Domain Logic)": 1.0
     }
   },
-  "bip_list": [
-    {
-      "number": 68,
-      "title": "Relative lock-time using consensus-enforced sequence numbers",
-      "status": "Deployed",
-      "theme": "Consensus & Soft Forks",
-      "link": "https://github.com/bitcoin/bips/blob/master/bip-0068.mediawiki"
-    },
-    {
-      "number": 98,
-      "title": "Fast Merkle Trees",
-      "status": "Draft",
-      "theme": "Consensus & Soft Forks",
-      "link": "https://github.com/bitcoin/bips/blob/master/bip-0098.mediawiki"
-    },
-    {
-      "number": 105,
-      "title": "Consensus based block size retargeting algorithm",
-      "status": "Closed",
-      "theme": "Consensus & Soft Forks",
-      "link": "https://github.com/bitcoin/bips/blob/master/bip-0105.mediawiki"
-    },
-    {
-      "number": 112,
-      "title": "CHECKSEQUENCEVERIFY",
-      "status": "Deployed",
-      "theme": "Consensus & Soft Forks",
-      "link": "https://github.com/bitcoin/bips/blob/master/bip-0112.mediawiki"
-    },
-    {
-      "number": 116,
-      "title": "MERKLEBRANCHVERIFY",
-      "status": "Draft",
-      "theme": "Consensus & Soft Forks",
-      "link": "https://github.com/bitcoin/bips/blob/master/bip-0116.mediawiki"
-    },
-    {
-      "number": 117,
-      "title": "Tail Call Execution Semantics",
-      "status": "Draft",
-      "theme": "Consensus & Soft Forks",
-      "link": "https://github.com/bitcoin/bips/blob/master/bip-0117.mediawiki"
-    },
-    {
-      "number": 320,
-      "title": "nVersion bits for general purpose use",
-      "status": "Draft",
-      "theme": "Other",
-      "link": "https://github.com/bitcoin/bips/blob/master/bip-0320.mediawiki"
-    }
-  ],
   "first_message": {
     "source": "mailing_list",
     "subject": "Re: [Bitcoin-development] Possible Solution To SM Attack",

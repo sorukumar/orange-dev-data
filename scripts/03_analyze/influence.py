@@ -1,6 +1,8 @@
 import pandas as pd
 import json
 import networkx as nx
+from networkx.algorithms.community import louvain_communities
+import numpy as np
 import os
 import re
 from collections import Counter
@@ -135,11 +137,21 @@ def extract_network():
         recipient = msg_to_author.get(target_mid)
         
         if recipient and recipient != author:
+            # Time-decay weight for community detection.
+            # λ=0.15 → 5yr ago≈0.47, 10yr ago≈0.22, 15yr ago≈0.10.
+            # Preserves historical signal but makes recent activity dominant,
+            # so the old-guard cluster separates from the modern generation.
+            _years_ago = max(0.0, (now - date).total_seconds() / (365.25 * 24 * 3600))
+            _decay = math.exp(-0.15 * _years_ago)
+
             # 1. All-time graph
             if G_all.has_edge(author, recipient):
                 G_all[author][recipient]['weight'] += 1
+                G_all[author][recipient]['decay_weight'] = (
+                    G_all[author][recipient].get('decay_weight', 0.0) + _decay
+                )
             else:
-                G_all.add_edge(author, recipient, weight=1, category=primary_cat, source=source)
+                G_all.add_edge(author, recipient, weight=1, decay_weight=_decay, category=primary_cat, source=source)
             
             # 2. Post-2016 graph
             if date >= post_2016_start:
@@ -467,11 +479,243 @@ def extract_network():
         json.dump({"contributors": all_enriched_nodes}, f, indent=2)
     print(f"Exported comprehensive contributor dataset ({len(all_enriched_nodes)} people) to {SOCIAL_STATS_PATH}")
 
-    # Take top 150 for visualization — covers ~top 2.5% by hybrid_score.
-    # Force layout is cleaner and lower-signal nodes add visual noise beyond this.
-    visible_nodes = all_enriched_nodes[:150]
+    # Take top 250 for visualization.
+    # 150 was only the dense generalist core — adding 100 more brings in the
+    # domain specialists (Lightning devs, Covenant researchers, etc.) whose
+    # connections are narrower and form clearer satellite clusters.
+    visible_nodes = all_enriched_nodes[:250]
     visible_ids = {n['id'] for n in visible_nodes}
-    
+
+    # --- Community Detection & Layout Pre-computation ---
+    # Maps raw category slugs to the same theme labels used in the frontend.
+    THEME_MAP_PY = {
+        'soft-fork-activation': 'Consensus', 'hard-fork-block-size': 'Consensus',
+        'consensus-cleanup': 'Consensus', 'segwit': 'Consensus', 'taproot': 'Consensus',
+        'covenants': 'Script', 'script-opcodes': 'Script', 'vaults': 'Script', 'dlc': 'Script',
+        'lightning': 'L2', 'l2-bridges': 'L2', 'sidechains-drivechain': 'L2',
+        'bitvm': 'L2', 'atomic-swaps': 'L2',
+        'privacy': 'Privacy', 'silent-payments': 'Privacy',
+        'wallet-keys': 'Wallet', 'multisig-threshold': 'Wallet',
+        'mining': 'Mining',
+        'mempool-fees': 'Mempool', 'spam-filtering': 'Mempool',
+        'p2p-network': 'Network',
+        'signatures-sighash': 'Crypto', 'quantum': 'Crypto',
+        'utxo-sync': 'Data', 'transaction-format': 'Data', 'data-structures': 'Data',
+        'payment-protocol': 'Ecosystem', 'ecash': 'Ecosystem', 'nostr': 'Ecosystem',
+        'scaling': 'Ecosystem', 'testing-devtools': 'Ecosystem',
+        'core-dev': 'Ecosystem', 'bip-process': 'Ecosystem',
+    }
+
+    print("Building undirected subgraph for community detection (time-decay weighted)...")
+    # Use decay_weight (not raw weight) so recent interactions dominate cluster
+    # structure.  Old-guard devs who only interacted pre-2018 will have weak
+    # edges to newer developers, letting them form a distinct historical cluster.
+    G_visible = nx.Graph()
+    for n_id in visible_ids:
+        G_visible.add_node(n_id)
+    for u, v, data in G_all.edges(data=True):
+        if u in visible_ids and v in visible_ids:
+            dw = data.get('decay_weight', data['weight'])
+            if G_visible.has_edge(u, v):
+                G_visible[u][v]['weight'] += dw
+            else:
+                G_visible.add_edge(u, v, weight=dw)
+
+    # Louvain works only on connected (non-isolated) nodes.
+    # Isolated nodes (no social edges) receive community_id = -1.
+    connected = {n for n in G_visible.nodes() if G_visible.degree(n) > 0}
+    G_social = G_visible.subgraph(connected).copy()
+
+    node_to_community = {n: -1 for n in visible_ids}
+    communities_list = []
+    if len(G_social) > 2:
+        print(f"Running Louvain community detection on {len(G_social)} connected nodes...")
+        # resolution=1.5 finds finer-grained communities than the default (1.0),
+        # which is needed now that decay weighting makes the graph less dense.
+        communities_list = louvain_communities(G_social, weight='weight', seed=42, resolution=1.5)
+        for cid, members in enumerate(communities_list):
+            for node in members:
+                node_to_community[node] = cid
+
+    # Label each community by majority theme of its members.
+    community_topic_votes: dict = {}
+    for n in visible_nodes:
+        cid = node_to_community.get(n['id'], -1)
+        raw_topic = n.get('top_category', 'other')
+        theme = THEME_MAP_PY.get(raw_topic, raw_topic)
+        community_topic_votes.setdefault(cid, Counter())[theme] += 1
+    community_labels = {
+        cid: votes.most_common(1)[0][0]
+        for cid, votes in community_topic_votes.items()
+    }
+
+    # Seed spring_layout with community-aware initial positions so the solver
+    # starts with clusters already pre-separated — this biases the layout toward
+    # clean community groupings and dramatically speeds convergence.
+    n_communities = max((v for v in node_to_community.values() if v >= 0), default=0) + 1
+    community_centers = {
+        i: (
+            math.cos(i / n_communities * 2 * math.pi) * 0.4,
+            math.sin(i / n_communities * 2 * math.pi) * 0.4,
+        )
+        for i in range(n_communities)
+    }
+    community_placed: Counter = Counter()
+    community_member_count = Counter(v for v in node_to_community.values() if v >= 0)
+    pos_init: dict = {}
+    isolated_idx = 0
+    for n in visible_nodes:
+        n_id = n['id']
+        cid = node_to_community.get(n_id, -1)
+        if cid >= 0:
+            cx, cy = community_centers[cid]
+            idx = community_placed[cid]
+            count = max(community_member_count[cid], 1)
+            spread_angle = (idx / count) * 2 * math.pi
+            pos_init[n_id] = (
+                cx + math.cos(spread_angle) * 0.1,
+                cy + math.sin(spread_angle) * 0.1,
+            )
+            community_placed[cid] += 1
+        else:
+            # Isolated nodes scattered on outer ring using golden-angle spacing.
+            pos_init[n_id] = (
+                math.cos(isolated_idx * 2.399) * 0.75,
+                math.sin(isolated_idx * 2.399) * 0.75,
+            )
+            isolated_idx += 1
+
+    print("Computing spring layout (Fruchterman-Reingold)...")
+    pos = nx.spring_layout(
+        G_visible,
+        pos=pos_init,
+        k=0.20,   # slightly tighter than 0.25 to handle 250 nodes cleanly
+        iterations=80,
+        seed=42,
+        weight='weight',
+    )
+
+    # Normalise positions to [-1, 1] for canvas-independent storage.
+    if pos:
+        xs = [p[0] for p in pos.values()]
+        ys = [p[1] for p in pos.values()]
+        min_x, max_x = min(xs), max(xs)
+        min_y, max_y = min(ys), max(ys)
+        rx = max(max_x - min_x, 1e-6)
+        ry = max(max_y - min_y, 1e-6)
+        norm_pos = {
+            n_id: (
+                round((x - min_x) / rx * 2 - 1, 4),
+                round((y - min_y) / ry * 2 - 1, 4),
+            )
+            for n_id, (x, y) in pos.items()
+        }
+    else:
+        norm_pos = {}
+
+    # Annotate each visible node with community membership and layout position.
+    for n in visible_nodes:
+        cid = node_to_community.get(n['id'], -1)
+        n['community_id'] = cid
+        n['community_label'] = community_labels.get(cid, 'other')
+        lp = norm_pos.get(n['id'], (0.0, 0.0))
+        n['layout_x'] = lp[0]
+        n['layout_y'] = lp[1]
+
+    # Build community metadata block for the frontend legend.
+    communities_meta = []
+    for cid in range(n_communities):
+        members = [n['id'] for n in visible_nodes if n.get('community_id') == cid]
+        communities_meta.append({
+            'id': cid,
+            'label': community_labels.get(cid, 'other'),
+            'size': len(members),
+        })
+    unconnected_count = sum(1 for n in visible_nodes if n.get('community_id') == -1)
+    if unconnected_count:
+        communities_meta.append({'id': -1, 'label': 'Independent', 'size': unconnected_count})
+    print(f"  {n_communities} communication communities detected, {unconnected_count} isolated nodes")
+
+    # --- Expertise-Similarity Community Detection ---
+    # Cluster by WHAT developers work on (not who they reply to).
+    # Immune to the "everyone knows everyone" problem at the top because it
+    # uses topic specialization vectors, not reply-graph structure.
+    EXPERTISE_THEMES = ['Consensus', 'Script', 'L2', 'Privacy', 'Wallet',
+                        'Mempool', 'Network', 'Mining', 'Crypto', 'Data', 'Ecosystem']
+
+    def build_expertise_vector(node):
+        vec = np.zeros(len(EXPERTISE_THEMES))
+        for exp in node.get('expertise', []):
+            theme = THEME_MAP_PY.get(exp.get('topic', ''), 'other')
+            if theme in EXPERTISE_THEMES:
+                vec[EXPERTISE_THEMES.index(theme)] += exp.get('share', 0.0)
+        # Fallback: use top_category when expertise list is empty or negligible.
+        if vec.sum() < 0.05:
+            tc_theme = THEME_MAP_PY.get(node.get('top_category', ''), 'other')
+            if tc_theme in EXPERTISE_THEMES:
+                vec[EXPERTISE_THEMES.index(tc_theme)] = 1.0
+        norm = np.linalg.norm(vec)
+        return vec / norm if norm > 0 else vec  # zero vector = generalist (no clear specialty)
+
+    print("Building expertise similarity graph...")
+    node_vecs = [(n['id'], build_expertise_vector(n)) for n in visible_nodes]
+
+    G_expertise = nx.Graph()
+    for n_id, _ in node_vecs:
+        G_expertise.add_node(n_id)
+    for i in range(len(node_vecs)):
+        for j in range(i + 1, len(node_vecs)):
+            id_i, vec_i = node_vecs[i]
+            id_j, vec_j = node_vecs[j]
+            if np.linalg.norm(vec_i) < 1e-8 or np.linalg.norm(vec_j) < 1e-8:
+                continue  # both are generalists with no measurable specialty — skip
+            sim = float(np.dot(vec_i, vec_j))  # cosine similarity (vectors are normalised)
+            if sim > 0.20:  # threshold: connect only meaningfully similar developers
+                G_expertise.add_edge(id_i, id_j, weight=sim)
+
+    expertise_node_to_community = {n['id']: -1 for n in visible_nodes}
+    exp_connected = {n for n in G_expertise.nodes() if G_expertise.degree(n) > 0}
+    G_exp_social = G_expertise.subgraph(exp_connected).copy()
+    n_exp_communities = 0
+    if len(G_exp_social) > 2:
+        print(f"Running Louvain on expertise graph ({len(G_exp_social)} nodes)...")
+        exp_communities_list = louvain_communities(
+            G_exp_social, weight='weight', seed=42, resolution=1.2
+        )
+        n_exp_communities = len(exp_communities_list)
+        for ecid, members in enumerate(exp_communities_list):
+            for node in members:
+                expertise_node_to_community[node] = ecid
+
+    exp_community_topic_votes: dict = {}
+    for n in visible_nodes:
+        ecid = expertise_node_to_community.get(n['id'], -1)
+        raw_topic = n.get('top_category', 'other')
+        theme = THEME_MAP_PY.get(raw_topic, raw_topic)
+        exp_community_topic_votes.setdefault(ecid, Counter())[theme] += 1
+    exp_community_labels = {
+        ecid: votes.most_common(1)[0][0]
+        for ecid, votes in exp_community_topic_votes.items()
+    }
+
+    for n in visible_nodes:
+        ecid = expertise_node_to_community.get(n['id'], -1)
+        n['expertise_community_id'] = ecid
+        n['expertise_community_label'] = exp_community_labels.get(ecid, 'other')
+
+    exp_communities_meta = []
+    for ecid in range(n_exp_communities):
+        members = [n['id'] for n in visible_nodes if n.get('expertise_community_id') == ecid]
+        exp_communities_meta.append({
+            'id': ecid,
+            'label': exp_community_labels.get(ecid, 'other'),
+            'size': len(members),
+        })
+    exp_unconnected = sum(1 for n in visible_nodes if n.get('expertise_community_id') == -1)
+    if exp_unconnected:
+        exp_communities_meta.append({'id': -1, 'label': 'Generalist', 'size': exp_unconnected})
+    print(f"  {n_exp_communities} expertise communities detected, {exp_unconnected} generalists")
+
     links_data = []
     for u, v, data in G_all.edges(data=True):
         if u in visible_ids and v in visible_ids:
@@ -487,16 +731,18 @@ def extract_network():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     with open(os.path.join(OUTPUT_DIR, 'network_graph.json'), 'w') as f:
         json.dump({
-            "nodes": visible_nodes, 
+            "nodes": visible_nodes,
             "links": links_data,
             "metadata": {
                 "generated_at": datetime.now().isoformat(),
                 "total_population": total_population,
                 "visible_count": len(visible_nodes),
-                "link_count": len(links_data)
+                "link_count": len(links_data),
+                "communities": communities_meta,
+                "expertise_communities": exp_communities_meta,
             }
         }, f, indent=2)
-    
+
     print(f"Exported richer network to {OUTPUT_DIR}/network_graph.json")
 
 if __name__ == "__main__":

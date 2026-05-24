@@ -19,7 +19,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-18T00:00:00",
+  "last_seen": "2026-05-23T00:00:00",
   "technical_focus": "Core Libs",
   "total_commits": 81.0,
   "authored_commits": 81.0,
@@ -28,16 +28,16 @@
   "total_deletions": 603.0,
   "first_commit": "2016-06-15T23:28:04",
   "last_commit": "2022-08-16T19:09:27",
-  "bips_authored": 3.0,
-  "avg_review_latency_days": 409.53402060718383,
-  "reviews_count": 333.0,
+  "bips_authored": 4.0,
+  "avg_review_latency_days": 419.16303709193386,
+  "reviews_count": 334.0,
   "avg_approval_latency_days": 315.3509774899098,
   "approvals_count": 132.0,
   "prs_authored": 97.0,
-  "avg_pr_ack_velocity_days": 32.817245370370365,
+  "avg_pr_ack_velocity_days": 37.44842837428775,
   "avg_concept_lead_time_days": 19.215102171136653,
-  "review_reciprocity": 3.4329896907216493,
-  "hybrid_score": 1.3831,
+  "review_reciprocity": 3.443298969072165,
+  "hybrid_score": 1.4959,
   "threads_started": 113.0,
   "replies_sent": 240.0,
   "ml_threads": 91.0,
@@ -130,6 +130,13 @@
       "status": "Draft",
       "theme": "Consensus & Soft Forks",
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0349.mediawiki"
+    },
+    {
+      "number": 449,
+      "title": "OP_TWEAKADD - x-only key tweak addition",
+      "status": "Draft",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0449.mediawiki"
     }
   ],
   "first_message": {

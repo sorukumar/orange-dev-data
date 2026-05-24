@@ -20,7 +20,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-18T00:00:00",
+  "last_seen": "2026-05-23T00:00:00",
   "technical_focus": "Core Libs",
   "total_commits": 3582.0,
   "authored_commits": 2999.0,
@@ -30,26 +30,26 @@
   "first_commit": "2011-03-17T21:51:59",
   "last_commit": "2026-03-10T18:09:27",
   "bips_authored": 27.0,
-  "avg_review_latency_days": 286.42992603796824,
-  "reviews_count": 4986.0,
-  "avg_approval_latency_days": 120.44453617924218,
-  "approvals_count": 2418.0,
+  "avg_review_latency_days": 286.3826064070168,
+  "reviews_count": 4988.0,
+  "avg_approval_latency_days": 120.44811028427435,
+  "approvals_count": 2419.0,
   "prs_authored": 931.0,
   "avg_pr_ack_velocity_days": 9.56404445631529,
   "avg_concept_lead_time_days": 11.095038614388725,
-  "review_reciprocity": 5.355531686358754,
+  "review_reciprocity": 5.357679914070892,
   "hybrid_score": 3.7919,
-  "threads_started": 139.0,
-  "replies_sent": 548.0,
+  "threads_started": 140.0,
+  "replies_sent": 549.0,
   "ml_threads": 66.0,
-  "delving_threads": 73.0,
+  "delving_threads": 74.0,
   "ml_responses": 449.0,
-  "delving_responses": 99.0,
+  "delving_responses": 100.0,
   "first_active": "2011-06-17T05:31:25",
-  "last_active": "2026-05-15T10:45:08.347000",
+  "last_active": "2026-05-23T14:57:01.104000",
   "dev_type": "Protocol Designer",
   "global_first_active": "2011-03-17T21:51:59",
-  "global_last_active": "2026-05-15T10:45:08.347000064",
+  "global_last_active": "2026-05-23T14:57:01.104000",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -451,9 +451,9 @@
   },
   "last_message": {
     "source": "delving",
-    "subject": "Re: TCP hole punching for Bitcoin nodes behind home NATs?",
-    "date": "2026-05-15",
-    "link": "https://delvingbitcoin.org/t/tcp-hole-punching-for-bitcoin-nodes-behind-home-nats/2497/16"
+    "subject": "Re: Bird of Prey 2: non-malleable Schnorr + PQ signatures",
+    "date": "2026-05-23",
+    "link": "https://delvingbitcoin.org/t/bird-of-prey-2-non-malleable-schnorr-pq-signatures/2514/3"
   },
   "social_history": {
     "2011": {
@@ -582,7 +582,7 @@
       "mempool-fees": 4,
       "mining": 2,
       "script-opcodes": 8,
-      "taproot": 3
+      "taproot": 5
     }
   }
 }

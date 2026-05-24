@@ -21,12 +21,12 @@ data/sources/mailing_list/
 .idea/
 .DS_Store
 
-# Identity (private recipe and derived data)
+# Include curated output by default
+!output/**
+!metadata/**
+
+# Identity (private recipe - keep off GitHub)
 metadata/identities.json
 metadata/identities.json.bak
 metadata/identity_curated.json
 scripts/identity/
-
-# Include curated output by default
-!output/**
-!metadata/**
