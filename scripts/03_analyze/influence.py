@@ -375,9 +375,11 @@ def extract_network():
 
         # Qualitative bonuses (log-scaled BIP count; flat maintainer recognition)
         # Coefficient 0.35: 1 BIP→0.35, 3 BIPs→0.70, 7 BIPs→1.05, 15 BIPs→1.40
-        # (reduced from 0.50 to prevent BIP count from dominating over sustained engineering)
+        # BIP bonus is capped at ~32 BIPs worth (1.765) to prevent runaway scores from
+        # prolific BIP authors and keep the theoretical maximum stable at ~3.75.
+        BIP_BONUS_CAP = math.log(33, 2) * 0.35  # ≈ 1.765
         if bips_authored > 0:
-            hybrid_score += math.log(bips_authored + 1, 2) * 0.35
+            hybrid_score += min(math.log(bips_authored + 1, 2) * 0.35, BIP_BONUS_CAP)
         if c_stats.get('is_maintainer'):
             hybrid_score += 1.0
         
@@ -456,6 +458,7 @@ def extract_network():
             "display_name": identity.get('display_name', cid),
             "dev_type": dev_type,
             "hybrid_score": round(hybrid_score, 4),
+            "impact_score": None,  # Populated after full sort; placeholder until then
             "reviews_count": int(reviews),
             "bips_authored": int(bips_authored),
             "val": (hybrid_score * 10) + 2, # Scale node size by hybrid influence
@@ -471,7 +474,20 @@ def extract_network():
 
     # Sort ALL contributors by hybrid influence
     all_enriched_nodes.sort(key=lambda x: x['hybrid_score'], reverse=True)
-    
+
+    # Compute percentile-based impact_score (0–100 integer, stable across builds).
+    # Uses a fixed theoretical max anchor (3.75 = 1.0 base + 1.765 BIP cap + 1.0 maintainer)
+    # so scores don't shift when new contributors join.
+    # Satoshi (can_satoshi_nakamoto) is excluded — his archetype is "Creator" and his
+    # data footprint (early mailing list only) would understate his true impact.
+    IMPACT_SCORE_MAX = 3.75
+    SATOSHI_ID = 'can_satoshi_nakamoto'
+    for node in all_enriched_nodes:
+        if node['id'] == SATOSHI_ID:
+            node['impact_score'] = None  # Rendered as "Creator" in the frontend
+        else:
+            node['impact_score'] = min(round(node['hybrid_score'] / IMPACT_SCORE_MAX * 100), 100)
+
     # Save FULL list for Registry Sync
     SOCIAL_STATS_PATH = 'data/enriched/social_stats.json'
     os.makedirs(os.path.dirname(SOCIAL_STATS_PATH), exist_ok=True)

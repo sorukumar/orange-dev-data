@@ -152,7 +152,7 @@ def deliver():
     registry_cols = [
         'uuid', 'id', 'display_name', 'github', 'roles', 'is_top_50',
         'dev_type',
-        'total_commits', 'authored_commits', 'merge_commits', 'prs_authored', 'reviews_count', 'hybrid_score', 'bips_authored', 'review_reciprocity',
+        'total_commits', 'authored_commits', 'merge_commits', 'prs_authored', 'reviews_count', 'hybrid_score', 'impact_score', 'bips_authored', 'review_reciprocity',
         'first_seen', 'last_seen', 'global_first_active', 'global_last_active',
         'first_commit', 'last_commit', 'first_active', 'last_active',
         'technical_focus', 'avg_approval_latency_days',

@@ -156,11 +156,11 @@ def unify():
     
     # Join Social
     if not df_soc.empty and 'canonical_id' in df_soc.columns:
-        soc_cols = [c for c in ['canonical_id', 'hybrid_score', 'pagerank', 'threads_started', 'replies_sent', 'ml_threads', 'delving_threads', 'ml_responses', 'delving_responses', 'first_active', 'last_active', 'dev_type'] if c in df_soc.columns]
+        soc_cols = [c for c in ['canonical_id', 'hybrid_score', 'impact_score', 'pagerank', 'threads_started', 'replies_sent', 'ml_threads', 'delving_threads', 'ml_responses', 'delving_responses', 'first_active', 'last_active', 'dev_type'] if c in df_soc.columns]
         df_soc_filtered = df_soc[soc_cols]
         df_unified = df_unified.merge(df_soc_filtered, left_on='uuid', right_on='canonical_id', how='left', suffixes=('', '_soc')).drop(columns=['canonical_id'])
     
-    # Fill defaults
+    # Fill defaults (impact_score intentionally excluded — None means "Creator", 0 means unranked)
     df_unified = df_unified.fillna({
         'total_commits': 0, 'authored_commits': 0, 'merge_commits': 0,
         'bips_authored': 0, 'hybrid_score': 0, 'threads_started': 0,

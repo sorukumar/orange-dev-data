@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-23T00:00:00",
+  "last_seen": "2026-05-25T00:00:00",
   "technical_focus": "Tests (QA)",
   "total_commits": 80.0,
   "authored_commits": 80.0,
@@ -28,26 +28,27 @@
   "first_commit": "2014-09-13T00:09:18",
   "last_commit": "2026-03-20T22:19:52",
   "bips_authored": 1.0,
-  "avg_review_latency_days": 1746.1677524831487,
-  "reviews_count": 732.0,
+  "avg_review_latency_days": 1652.41591837323,
+  "reviews_count": 649.0,
   "avg_approval_latency_days": 1085.190945616883,
   "approvals_count": 272.0,
   "prs_authored": 61.0,
   "avg_pr_ack_velocity_days": 42.69049612112112,
   "avg_concept_lead_time_days": 55.31132137345679,
-  "review_reciprocity": 12.0,
-  "hybrid_score": 0.9354,
+  "review_reciprocity": 10.639344262295081,
+  "hybrid_score": 0.9312,
+  "impact_score": 25.0,
   "threads_started": 21.0,
-  "replies_sent": 75.0,
+  "replies_sent": 78.0,
   "ml_threads": 6.0,
   "delving_threads": 15.0,
   "ml_responses": 49.0,
-  "delving_responses": 26.0,
+  "delving_responses": 29.0,
   "first_active": "2016-09-21T07:58:25",
-  "last_active": "2026-05-23T16:22:16.073000",
+  "last_active": "2026-05-24T03:54:41.814000",
   "dev_type": "Builder",
   "global_first_active": "2014-09-13T00:09:18",
-  "global_last_active": "2026-05-23T16:22:16.072999936",
+  "global_last_active": "2026-05-24T03:54:41.814000128",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -113,14 +114,13 @@
   },
   "last_message": {
     "source": "delving",
-    "subject": "Re: Disposing of \"dust attack\" UTXOs",
-    "date": "2026-05-23",
-    "link": "https://delvingbitcoin.org/t/disposing-of-dust-attack-utxos/2215/36"
+    "subject": "Re: New Post Quantum Bitcoin Proposal using WInternitz + Lamport auth chains",
+    "date": "2026-05-24",
+    "link": "https://delvingbitcoin.org/t/new-post-quantum-bitcoin-proposal-using-winternitz-lamport-auth-chains/2525/6"
   },
   "social_history": {
     "2016": {
-      "other": 5,
-      "taproot": 1
+      "other": 6
     },
     "2021": {
       "mempool-fees": 1,
@@ -134,41 +134,41 @@
     "2023": {
       "mempool-fees": 5,
       "mining": 2,
-      "other": 6,
-      "taproot": 4
+      "other": 9,
+      "script-opcodes": 1
     },
     "2024": {
       "bip-process": 8,
       "consensus-cleanup": 10,
-      "other": 35,
+      "other": 34,
       "mempool-fees": 17,
       "mining": 14,
+      "script-opcodes": 4,
       "security": 11,
       "soft-fork-activation": 5,
-      "taproot": 3,
       "testing-devtools": 10
     },
     "2025": {
       "bip-process": 10,
-      "other": 18,
+      "other": 20,
       "consensus-cleanup": 1,
       "mempool-fees": 5,
       "mining": 3,
+      "script-opcodes": 1,
       "security": 2,
       "soft-fork-activation": 5,
-      "taproot": 3,
       "testing-devtools": 2
     },
     "2026": {
       "bip-process": 3,
       "consensus-cleanup": 2,
       "other": 25,
-      "mempool-fees": 4,
+      "mempool-fees": 5,
       "mining": 3,
+      "script-opcodes": 7,
       "security": 1,
       "soft-fork-activation": 3,
-      "taproot": 2,
-      "testing-devtools": 1
+      "testing-devtools": 2
     }
   }
 }

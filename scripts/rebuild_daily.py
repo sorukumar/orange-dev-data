@@ -42,6 +42,7 @@ def main():
     run("git -C data/sources/bitcoin pull origin master", cwd=root_dir)
     run("git -C data/sources/bips pull origin master", cwd=root_dir)
     run("git -C data/sources/delving pull origin master", cwd=root_dir)
+    run("git -C data/sources/mailing_list/shard_0 fetch origin", cwd=root_dir)
 
     # PHASE 1: Extraction (Source -> Raw)
     print("\n--- PHASE 1: Extraction (Raw Staging) ---")
@@ -49,6 +50,7 @@ def main():
     run("python3 scripts/01_ingest/bips.py", cwd=root_dir)
     run("python3 scripts/01_ingest/bips_metadata.py", cwd=root_dir)  # BIPs GitHub PR + review events
     run("python3 scripts/01_ingest/delving.py", cwd=root_dir)
+    run("python3 scripts/01_ingest/mailing_list.py", cwd=root_dir)
     run("python3 scripts/01_ingest/github_metadata.py", cwd=root_dir)
 
     # PHASE 2: Convergence (Raw -> Enriched)
@@ -77,6 +79,7 @@ def main():
     run("python3 scripts/04_deliver/registry.py", cwd=root_dir)
     run("python3 scripts/04_deliver/ui_artifacts.py", cwd=root_dir)
     run("python3 scripts/04_deliver/ecosystem_summary.py", cwd=root_dir)
+    run("python3 scripts/04_deliver/discussions_pulse.py", cwd=root_dir)
     
     print("\n✨ DAILY PIPELINE COMPLETE!")
 

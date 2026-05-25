@@ -105,22 +105,35 @@ def main():
             subprocess.run(["git", "clone", "--bare", clone_url, path], check=True)
         
         print(f"Ingesting mailing list from Git repo (Shard {shard}): {path}...")
-        
-        # Get latest commit
-        cmd = ["git", "-C", path, "rev-parse", "HEAD"]
+
+        # Fetch latest from remote before comparing
+        print(f"  Fetching latest from remote for shard {shard}...")
+        fetch_result = subprocess.run(
+            ["git", "-C", path, "fetch", "origin"],
+            capture_output=True, text=True
+        )
+        if fetch_result.returncode != 0:
+            print(f"Warning: fetch failed for shard {shard}: {fetch_result.stderr}")
+
+        # Use FETCH_HEAD (latest from remote) rather than local HEAD
+        cmd = ["git", "-C", path, "rev-parse", "FETCH_HEAD"]
         result = subprocess.run(cmd, capture_output=True, text=True)
         if result.returncode != 0:
-            print(f"Error getting HEAD for shard {shard}: {result.stderr}")
+            # Fall back to local HEAD if no FETCH_HEAD
+            cmd = ["git", "-C", path, "rev-parse", "HEAD"]
+            result = subprocess.run(cmd, capture_output=True, text=True)
+        if result.returncode != 0:
+            print(f"Error getting commit for shard {shard}: {result.stderr}")
             continue
         latest_commit = result.stdout.strip()
-        
+
         last_commit = state.get("mailing_list", {}).get(shard, "")
         if last_commit == latest_commit:
             print(f"Shard {shard} is up to date.")
             continue
-        
-        # Get list of all blobs in HEAD
-        cmd = ["git", "-C", path, "ls-tree", "-r", "HEAD"]
+
+        # Get list of all blobs in the fetched commit
+        cmd = ["git", "-C", path, "ls-tree", "-r", latest_commit]
         result = subprocess.run(cmd, capture_output=True, text=True)
         if result.returncode != 0:
             print(f"Error running git ls-tree for shard {shard}: {result.stderr}")

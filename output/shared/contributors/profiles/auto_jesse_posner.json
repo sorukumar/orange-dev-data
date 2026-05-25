@@ -1,7 +1,7 @@
 {
   "display_name": "Jesse Posner",
-  "github_login_final": "jurvis",
-  "delving_username_final": "jurvis",
+  "github_login_final": "jesseposner",
+  "delving_username_final": "jesseposner",
   "uuid": "auto_jesse_posner",
   "badges": {
     "is_bip_author": true,
@@ -19,7 +19,7 @@
     "BIP Author"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-23T00:00:00",
+  "last_seen": "2026-05-25T00:00:00",
   "technical_focus": "None",
   "total_commits": 0.0,
   "authored_commits": 0.0,
@@ -29,35 +29,36 @@
   "first_commit": null,
   "last_commit": null,
   "bips_authored": 1.0,
-  "avg_review_latency_days": 4212.331327314814,
-  "reviews_count": 4.0,
+  "avg_review_latency_days": 4795.504267526455,
+  "reviews_count": 1.0,
   "avg_approval_latency_days": null,
   "approvals_count": 0.0,
   "prs_authored": 3.0,
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
-  "review_reciprocity": 1.3333333333333333,
-  "hybrid_score": 0.4175,
-  "threads_started": 2.0,
-  "replies_sent": 1.0,
+  "review_reciprocity": 0.3333333333333333,
+  "hybrid_score": 0.3952,
+  "impact_score": 11.0,
+  "threads_started": 1.0,
+  "replies_sent": 2.0,
   "ml_threads": 0.0,
-  "delving_threads": 2.0,
+  "delving_threads": 1.0,
   "ml_responses": 0.0,
-  "delving_responses": 1.0,
-  "first_active": "2025-07-15T00:38:33.001000",
-  "last_active": "2025-10-15T03:40:34.123000",
+  "delving_responses": 2.0,
+  "first_active": "2025-07-20T18:30:46.419000",
+  "last_active": "2025-07-28T19:05:27.483000",
   "dev_type": "Participant",
-  "global_first_active": "2025-07-15T00:38:33.000999936",
-  "global_last_active": "2025-10-15T03:40:34.123000064",
-  "github_location": "Los Angeles, CA",
+  "global_first_active": "2025-07-20T18:30:46.419000064",
+  "global_last_active": "2025-07-28T19:05:27.483000064",
+  "github_location": "Bay Area, California",
   "github_company": null,
-  "github_bio": "securing keys @ block",
-  "github_twitter": "jurvistan",
-  "github_blog": "https://jurv.is/",
-  "github_followers": 99.0,
+  "github_bio": null,
+  "github_twitter": "jesseposner",
+  "github_blog": null,
+  "github_followers": 108.0,
   "is_top_50": false,
-  "github_url": "https://github.com/jurvis",
-  "delving_url": "https://delvingbitcoin.org/u/jurvis",
+  "github_url": "https://github.com/jesseposner",
+  "delving_url": "https://delvingbitcoin.org/u/jesseposner",
   "bip_list": [
     {
       "number": 89,
@@ -69,21 +70,24 @@
   ],
   "first_message": {
     "source": "delving",
-    "subject": "Chain Code Delegation: Private Access Control for Bitcoin Keys",
-    "date": "2025-07-15",
-    "link": "https://delvingbitcoin.org/t/chain-code-delegation-private-access-control-for-bitcoin-keys/1837/1"
+    "subject": "Post-Quantum HD-Wallets, Silent Payments, Key Aggregation, and Threshold Signatures",
+    "date": "2025-07-20",
+    "link": "https://delvingbitcoin.org/t/post-quantum-hd-wallets-silent-payments-key-aggregation-and-threshold-signatures/1854/1"
   },
   "last_message": {
     "source": "delving",
-    "subject": "Re: Chain Code Delegation: Private Access Control for Bitcoin Keys",
-    "date": "2025-10-15",
-    "link": "https://delvingbitcoin.org/t/chain-code-delegation-private-access-control-for-bitcoin-keys/1837/6"
+    "subject": "Re: Post-Quantum HD-Wallets, Silent Payments, Key Aggregation, and Threshold Signatures",
+    "date": "2025-07-28",
+    "link": "https://delvingbitcoin.org/t/post-quantum-hd-wallets-silent-payments-key-aggregation-and-threshold-signatures/1854/3"
   },
   "social_history": {
     "2025": {
-      "lightning": 3,
-      "vaults": 3,
-      "wallet-keys": 3
+      "multisig-threshold": 2,
+      "quantum": 3,
+      "signatures-sighash": 2,
+      "silent-payments": 2,
+      "taproot": 1,
+      "wallet-keys": 2
     }
   }
 }

@@ -137,20 +137,18 @@ auto_<slug>  ← everyone else (single-source or not curated)
 ### Output counts (current)
 
 ```
-7,659 total unique identities
-  122  can_  (multi-alias people who were hand-curated)
-7,537  auto_ (everyone else)
-
-1,259  were seen in 2+ sources (named the same person from multiple angles)
+7,249 total unique identities
+  132  can_  (multi-alias people who were hand-curated)
+7,117  auto_ (everyone else)
 
 Identities by source origin:
-  prgithub    (GitHub PR activity)  5,180
-  bipgithub   (BIPs repo PR)        1,437
-  mailinglist (mailing list)        1,311
-  corecommit  (git commits)         1,123
-  delving     (Delving forum)          369
-  bips        (BIP author headers)     152
-  curation    (hand-curated)           122
+  prgithub    (GitHub PR activity)  ~5,000+
+  bipgithub   (BIPs repo PR)        ~1,400+
+  mailinglist (mailing list)        ~1,300+
+  corecommit  (git commits)         ~1,100+
+  delving     (Delving forum)          ~370
+  bips        (BIP author headers)     ~150
+  curation    (hand-curated)            132
 ```
 
 > The higher prgithub/bipgithub counts (vs older runs) reflect that `process_review_events()` now ingests login+GH_ID edges from ALL reviewer events, not just PR authors. The email anchor count is also higher: `github_id_map.json` provides 870 corroborated email anchors (vs ~694 with the old zero-trust SHA join).
@@ -223,13 +221,17 @@ Heavy analytics. Deeper per-UUID aggregations.
 **Computes:** Review latency, ACK speed, PRs authored, review reciprocity  
 **Coverage:** Both Bitcoin Core and BIPs GitHub (BIPs parquets concatenated before processing)  
 **Key fix:** Uses `resolver.resolve_github(login)` (not `resolve_git`) to
-correctly match reviewer logins to their UUIDs.
+correctly match reviewer logins to their UUIDs.  
+**Active-review filter:** Only `commented` and `reviewed` event types are counted as
+active reviews. Passive events (`subscribed`, `mentioned`, `referenced`,
+`head_ref_force_pushed`, `cross-referenced`, `closed`, `merged`, `labeled`) are
+excluded — they inflate the count without reflecting genuine engagement.
 
 ```
-Current output: 5,222 unique UUIDs
-  53   can_ IDs
-5,169  auto_ IDs
-  0    raw handles (was 4,543 before the fix — the source of the 11k inflation)
+Current output: 6,077 unique UUIDs
+  115  can_ IDs
+5,962  auto_ IDs
+  0    raw handles
 ```
 
 ### `influence.py`
@@ -238,15 +240,22 @@ Current output: 5,222 unique UUIDs
 `metadata/contributors.json`, `output/tracker/contributors_rich.json` (code stats, optional)  
 **Writes:** `data/enriched/social_stats.json`, `output/network/network_graph.json`  
 **Computes:** PageRank centrality across three eras (all-time, post-2016, modern),
-contributor archetypes, hybrid influence score combining social + code signals
+contributor archetypes, hybrid influence score combining social + code signals,
+**`impact_score`** (0–100 integer) using a fixed-anchor normalization.
+
+**`impact_score` formula:** `min(round(hybrid_score / 3.75 × 100), 100)`  
+The anchor `3.75` is the theoretical maximum (1.0 base weights + 1.765 BIP cap + 1.0 maintainer bonus).
+BIP bonus is **capped** at `log₂(33) × 0.35 ≈ 1.765` (~32 BIPs) to prevent runaway scores.
+`can_satoshi_nakamoto` receives `impact_score = null` — rendered as "Creator" in the frontend.
 
 > ⚠️ `influence.py` reads `social_threads.parquet` which is produced by `categorize.py`.
 > On daily runs `categorize.py` is skipped, so this uses the last monthly categorisation.
 
 ```
-Current output: 7,347 people in social_stats.json
-  126  can_ IDs
-7,221  auto_ IDs
+Current output: 7,249 people in social_stats.json
+  132  can_ IDs
+7,117  auto_ IDs
+1,411  with zero hybrid_score (observers / inactive)
 ```
 
 ### `expertise.py`
@@ -272,7 +281,7 @@ Current output: 7,347 people in social_stats.json
 | `data/raw/core_commits.parquet` | Commit counts, additions, deletions |
 | `metadata/contributors.json` | Roles, badges, first/last seen |
 | `data/enriched/contributor_review_metrics.parquet` | Reviewer metrics, PRs authored (Bitcoin Core + BIPs) |
-| `data/enriched/social_stats.json` | Social influence score, thread counts, hybrid score |
+| `data/enriched/social_stats.json` | Social influence score, thread counts, hybrid score, **impact_score** |
 | `data/enriched/bips_refined.parquet` | BIPs authored (uses pre-resolved `author_canonical_ids` — NOT re-resolved) |
 | `data/raw/social_delving.parquet` | Used for UUID discovery (delving-only contributors) |
 
@@ -281,12 +290,12 @@ Current output: 7,347 people in social_stats.json
 ```python
 # The union is: everyone seen in ANY source
 all_source_uuids = (
-    set from identities.json         # 4,827
-    | set from core_commits           # +     7 new
-    | set from social_stats.json      # + 2,536 new  (social-only people)
-    | set from contributor_review_metrics # +   179 new  (review-only people)
+    set from identities.json
+    | set from core_commits
+    | set from social_stats.json      # social-only people
+    | set from contributor_review_metrics  # review-only people
 )
-# = 7,549 total
+# = 7,363 total (current run)
 ```
 
 For each UUID, a LEFT JOIN pulls in whatever columns are available. Someone with
@@ -298,15 +307,16 @@ for `ml_threads`.
 `data/enriched/contributors_unified.parquet` — **one row per developer, all signals combined**
 
 ```
-Current output: 7,549 rows (all unique UUIDs, no duplicates)
-  126  can_ IDs
-7,423  auto_ IDs
+Current output: 7,363 rows (all unique UUIDs, no duplicates)
+  132  can_ IDs
+7,231  auto_ IDs
   0    raw handles
 
 Activity breakdown:
-  1,159  have commit activity     (total_commits > 0)
-  3,602  have review activity     (reviews_count > 0)
-    515  have social activity     (ml_threads > 0 OR delving_threads > 0)
+  1,142  have commit activity     (total_commits > 0)
+  4,947  have review activity     (reviews_count > 0 OR prs_authored > 0)
+  1,134  have social activity     (ml_threads > 0 OR delving_threads > 0)
+    157  have BIP authorship      (bips_authored > 0)
 ```
 
 ---
@@ -325,12 +335,13 @@ Refreshes `metadata/contributors.json` with the latest unified data (reads from
 
 **Reads:** `contributors_unified.parquet`  
 **Writes:**
-- `output/shared/contributors/registry_index.json` — flat table of all 7,549 rows
+- `output/shared/contributors/registry_index.json` — flat table of all 7,363 rows
   with selected columns for the directory view
-- `output/shared/contributors/profiles/{uuid}.json` — deep profiles for **301
-  high-signal contributors** (`authored_commits >= 10` OR `bips_authored > 0`).
-  Each shard is the registry entry plus four embedded enriched datasets loaded at
-  startup: per-year commit breakdown by codebase category (`commit_history`),
+- `output/shared/contributors/profiles/{uuid}.json` — **one shard per contributor,
+  all 7,363** — no threshold filtering applied. Every developer gets a profile page
+  regardless of activity level.
+  Each shard is the registry entry plus four embedded enriched datasets loaded
+  on demand: per-year commit breakdown by codebase category (`commit_history`),
   BIP authorship list with title/status/theme/link (`bip_list`), first and last
   indexed social message (`first_message` / `last_message`), and per-year social
   activity count by topic (`social_history`).
@@ -343,12 +354,13 @@ Refreshes `metadata/contributors.json` with the latest unified data (reads from
 
 ```
 Final headline numbers (current run):
-  total_registry   7,549   (all unique developers ever seen)
-  total_active     6,209   (has any non-zero activity signal)
-  committers       1,159   (total_commits > 0)
-  reviewers        5,222   (reviews_count > 0 OR prs_authored > 0)
-  research           594   (ml or delving activity above threshold)
-  standards          151   (authored at least one BIP)
+  total_registry   7,363   (all unique developers ever seen)
+  total_active     6,231   (has any non-zero activity signal)
+  committers       1,142   (total_commits > 0)
+  reviewers        4,947   (reviews_count > 0 OR prs_authored > 0)
+  research         1,596   (ml or delving activity above threshold)
+  standards          157   (authored at least one BIP)
+  all_four            70   (active across all four domains)
 ```
 
 ---
@@ -377,7 +389,7 @@ metadata/identity_curated.json (129 hand entries)
         build_identities.py
                 ↓
         metadata/identities.json          ← THE MASTER UUID TABLE
-        (7,659 unique people)
+        (7,249 unique people)
 
         ↓ all downstream scripts use resolver.resolve_*() ↓
 
@@ -417,12 +429,12 @@ identities.json (base)
         unify_contributors.py
                 ↓
         contributors_unified.parquet       ← ONE ROW PER DEVELOPER
-        (7,549 rows, all signals)
+        (7,363 rows, all signals)
 
                 ↓
         registry.py (final) → metadata/contributors.json refreshed
                 ↓
-        ui_artifacts.py → registry_index.json + 301 high-signal profile shards ({uuid}.json)
+        ui_artifacts.py → registry_index.json + 7,363 profile shards ({uuid}.json, one per contributor)
                 ↓
         ecosystem_summary.py → ecosystem_summary.json
                 ↓
@@ -448,6 +460,15 @@ thread categorisations from the last monthly run. This is likely intentional
 new mailing-list/Delving messages.
 
 ---
+
+## Known Issues Fixed (May 2026)
+
+| Bug | Effect | Fix |
+|---|---|---|
+| `review_metrics.py` counted passive GitHub timeline events as "code reviews" | `subscribed`, `mentioned`, `referenced`, `head_ref_force_pushed`, `cross-referenced`, `closed`, `merged`, `labeled` events inflated `reviews_count` by ~18% (e.g. sipa: 4,988 → 4,260 after fix) | Added `ACTIVE_REVIEW_TYPES = {'commented', 'reviewed'}` filter before all aggregations — only genuine interactions count |
+| `ui_artifacts.py` generated profile shards only for "high-signal" contributors (`authored_commits >= 10` OR `bips_authored > 0`) | ~7,000 contributors with only review or social activity had no profile page | Removed threshold filter — all 7,363 contributors now get a profile shard |
+| `hybrid_score` displayed raw as `3.787` in the Impact Score stat | Unintuitive to users; no reference point; not comparable across builds | Added `impact_score` (0–100 integer) using fixed-anchor normalization: `min(round(hybrid_score / 3.75 × 100), 100)`. Satoshi gets `null` (shown as "Creator"). BIP bonus capped at `log₂(33) × 0.35 ≈ 1.765` (~32 BIPs) to bound the theoretical maximum |
+| `impact_score` computed in `influence.py` but not passed through to `contributors_unified.parquet` | Profile shards had `impact_score: null` | Added `impact_score` to `soc_cols` allowlist in `unify_contributors.py` |
 
 ## Known Issues Fixed (April 2026)
 

@@ -81,16 +81,22 @@ def calculate_review_metrics():
     
     # Sanitize: ignore self-reviews and negative latency
     df_merged = df_merged[(df_merged['user'] != df_merged['author']) & (df_merged['latency_days'] >= 0)]
-    
+
+    # Only count active review participation (comments and formal reviews).
+    # The raw parquet also contains passive timeline events (subscribed, mentioned,
+    # cross-referenced, head_ref_force_pushed, etc.) that must not inflate reviews_count.
+    ACTIVE_REVIEW_TYPES = {'commented', 'reviewed'}
+    df_active = df_merged[df_merged['event_type'].isin(ACTIVE_REVIEW_TYPES)]
+
     print("Aggregating reviewer metrics...")
     # 1. Reviewer Performance (Interaction Speed)
-    reviewer_perf = df_merged.groupby('user').agg(
+    reviewer_perf = df_active.groupby('user').agg(
         avg_review_latency_days=('latency_days', 'mean'),
         reviews_count=('pr_number', 'nunique')
     ).reset_index()
     
-    # 2. Approval Performance (ACK Speed)
-    approval_perf = df_merged[df_merged['is_approval']].groupby('user').agg(
+    # 2. Approval Performance (ACK Speed) — ACKs only come from comments/reviews
+    approval_perf = df_active[df_active['is_approval']].groupby('user').agg(
         avg_approval_latency_days=('latency_days', 'mean'),
         approvals_count=('pr_number', 'nunique')
     ).reset_index()
@@ -99,7 +105,7 @@ def calculate_review_metrics():
     
     # 3. Author Clout (Time-to-ACK for their PRs)
     print("Aggregating author metrics...")
-    first_acks = df_merged[df_merged['is_approval']].groupby('pr_number').agg(
+    first_acks = df_active[df_active['is_approval']].groupby('pr_number').agg(
         first_ack_latency=('latency_days', 'min'),
         author=('author', 'first')
     ).reset_index()
@@ -109,7 +115,7 @@ def calculate_review_metrics():
     ).reset_index()
     
     # 4. Author Concept Lead Time
-    first_concepts = df_merged[df_merged['is_concept']].groupby('pr_number').agg(
+    first_concepts = df_active[df_active['is_concept']].groupby('pr_number').agg(
         first_concept_latency=('latency_days', 'min'),
         author=('author', 'first')
     ).reset_index()

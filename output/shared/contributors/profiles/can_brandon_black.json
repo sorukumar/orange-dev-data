@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-23T00:00:00",
+  "last_seen": "2026-05-25T00:00:00",
   "technical_focus": "None",
   "total_commits": 0.0,
   "authored_commits": 0.0,
@@ -28,15 +28,16 @@
   "first_commit": null,
   "last_commit": null,
   "bips_authored": 4.0,
-  "avg_review_latency_days": 1877.5381606299927,
-  "reviews_count": 22.0,
+  "avg_review_latency_days": 1539.9964176894919,
+  "reviews_count": 20.0,
   "avg_approval_latency_days": 1248.861099537037,
   "approvals_count": 7.0,
   "prs_authored": 10.0,
   "avg_pr_ack_velocity_days": 102.35053819444445,
   "avg_concept_lead_time_days": 0.7398755787037037,
-  "review_reciprocity": 2.2,
-  "hybrid_score": 0.9776,
+  "review_reciprocity": 2.0,
+  "hybrid_score": 0.9749,
+  "impact_score": 26.0,
   "threads_started": 30.0,
   "replies_sent": 49.0,
   "ml_threads": 6.0,
@@ -130,7 +131,7 @@
       "script-opcodes": 13,
       "signatures-sighash": 5,
       "soft-fork-activation": 8,
-      "taproot": 18
+      "taproot": 16
     },
     "2025": {
       "bip-process": 1,

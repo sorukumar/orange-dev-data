@@ -52,10 +52,10 @@
     },
     "2026": {
       "bip-process": 1,
-      "covenants": 2,
-      "lightning": 2,
+      "covenants": 3,
+      "lightning": 3,
       "taproot": 1,
-      "testing-devtools": 2
+      "testing-devtools": 3
     }
   },
   "auto_aaronzhang": {
@@ -223,6 +223,11 @@
     },
     "2026": {
       "covenants": 2
+    }
+  },
+  "auto_aderb001_gmail_com": {
+    "2026": {
+      "other": 1
     }
   },
   "auto_admin": {
@@ -536,17 +541,24 @@
     }
   },
   "auto_alex_wied": {
+    "2024": {
+      "atomic-swaps": 2,
+      "taproot": 2
+    },
     "2025": {
-      "lightning": 1,
-      "p2p-network": 1
+      "atomic-swaps": 3,
+      "lightning": 3,
+      "other": 6
     },
     "2026": {
-      "bitvm": 1,
-      "mempool-fees": 1,
-      "other": 2,
-      "quantum": 9,
-      "signatures-sighash": 2,
-      "taproot": 5
+      "bitvm": 5,
+      "other": 9,
+      "dlc": 6,
+      "lightning": 6,
+      "multisig-threshold": 6,
+      "quantum": 12,
+      "signatures-sighash": 6,
+      "taproot": 7
     }
   },
   "auto_alexander_f_moser": {
@@ -690,6 +702,12 @@
     },
     "2024": {
       "mining": 1
+    }
+  },
+  "auto_amonmoce_gmail_com": {
+    "2026": {
+      "mining": 1,
+      "quantum": 5
     }
   },
   "auto_anas": {
@@ -1111,6 +1129,13 @@
       "lightning": 2
     }
   },
+  "auto_ar_nazeh_gmail_com": {
+    "2026": {
+      "bitvm": 2,
+      "quantum": 1,
+      "soft-fork-activation": 2
+    }
+  },
   "auto_ariel_lorenzo_luaces": {
     "2017": {
       "mempool-fees": 1,
@@ -1353,6 +1378,13 @@
       "hard-fork-block-size": 1,
       "lightning": 2,
       "mining": 1
+    }
+  },
+  "auto_barsonneck_gmail_com": {
+    "2026": {
+      "quantum": 1,
+      "signatures-sighash": 1,
+      "taproot": 1
     }
   },
   "auto_bastiaan_van_den_berg": {
@@ -3570,6 +3602,11 @@
       "utxo-sync": 2
     }
   },
+  "auto_decleyrevoltairine7_gmail_com": {
+    "2026": {
+      "mempool-fees": 1
+    }
+  },
   "auto_defenwycke": {
     "2025": {
       "mempool-fees": 5,
@@ -4099,14 +4136,14 @@
       "wallet-keys": 14
     },
     "2026": {
-      "other": 58,
-      "consensus-cleanup": 4,
+      "other": 92,
+      "consensus-cleanup": 6,
       "covenants": 3,
-      "mempool-fees": 4,
-      "quantum": 30,
+      "mempool-fees": 5,
+      "quantum": 38,
       "script-opcodes": 1,
       "soft-fork-activation": 2,
-      "wallet-keys": 11
+      "wallet-keys": 15
     }
   },
   "auto_emil_engler": {
@@ -4120,7 +4157,7 @@
       "testing-devtools": 5
     }
   },
-  "auto_emil_pfeffer": {
+  "auto_emilian_ursu": {
     "2017": {
       "other": 1
     },
@@ -4162,6 +4199,12 @@
       "lightning": 1,
       "mining": 1,
       "p2p-network": 2
+    }
+  },
+  "auto_endothermicdev": {
+    "2025": {
+      "lightning": 1,
+      "p2p-network": 1
     }
   },
   "auto_enrique": {
@@ -5118,6 +5161,7 @@
       "utxo-sync": 1
     },
     "2026": {
+      "other": 3,
       "mining": 1,
       "ordinals-inscriptions": 1,
       "p2p-network": 1,
@@ -5499,7 +5543,10 @@
   },
   "auto_id_2f15af": {
     "2026": {
-      "quantum": 1
+      "bitvm": 1,
+      "multisig-threshold": 1,
+      "quantum": 2,
+      "wallet-keys": 1
     }
   },
   "auto_id_2fb1c5": {
@@ -5674,7 +5721,8 @@
   },
   "auto_isabel_foxen_duke": {
     "2026": {
-      "other": 2
+      "other": 3,
+      "quantum": 2
     }
   },
   "auto_isidor_zeuner": {
@@ -6137,6 +6185,15 @@
       "hard-fork-block-size": 1
     }
   },
+  "auto_jasonresch_gmail_com": {
+    "2026": {
+      "data-structures": 1,
+      "mempool-fees": 1,
+      "other": 1,
+      "quantum": 4,
+      "signatures-sighash": 1
+    }
+  },
   "auto_jaswanth": {
     "2024": {
       "mining": 2
@@ -6265,13 +6322,6 @@
     }
   },
   "auto_jesse_posner": {
-    "2025": {
-      "lightning": 3,
-      "vaults": 3,
-      "wallet-keys": 3
-    }
-  },
-  "auto_jesseposner": {
     "2025": {
       "multisig-threshold": 2,
       "quantum": 3,
@@ -6632,8 +6682,8 @@
     },
     "2026": {
       "covenants": 1,
-      "other": 2,
-      "privacy": 1,
+      "other": 3,
+      "quantum": 2,
       "script-opcodes": 1,
       "soft-fork-activation": 1
     }
@@ -7028,9 +7078,13 @@
       "multisig-threshold": 11,
       "p2p-network": 9,
       "payment-protocol": 9,
-      "silent-payments": 27,
+      "silent-payments": 26,
       "taproot": 13,
-      "wallet-keys": 16
+      "wallet-keys": 15
+    },
+    "2026": {
+      "p2p-network": 1,
+      "other": 1
     }
   },
   "auto_jouke_hofman": {
@@ -7142,6 +7196,13 @@
       "taproot": 2
     }
   },
+  "auto_jurvis": {
+    "2025": {
+      "lightning": 3,
+      "vaults": 3,
+      "wallet-keys": 3
+    }
+  },
   "auto_justin_a": {
     "2014": {
       "other": 1,
@@ -7245,7 +7306,7 @@
       "wallet-keys": 2
     }
   },
-  "auto_karel_b_lek": {
+  "auto_karel_bilek": {
     "2014": {
       "mining": 1
     }
@@ -7812,6 +7873,18 @@
       "other": 2
     }
   },
+  "auto_lisa_neigut": {
+    "2021": {
+      "mempool-fees": 1,
+      "mining": 1
+    },
+    "2022": {
+      "mempool-fees": 1
+    },
+    "2023": {
+      "lightning": 1
+    }
+  },
   "auto_liz": {
     "2024": {
       "p2p-network": 4,
@@ -8048,35 +8121,6 @@
       "other": 1
     }
   },
-  "auto_m_rtin_h_bo_tiak": {
-    "2015": {
-      "multisig-threshold": 4,
-      "other": 9,
-      "payment-protocol": 7
-    },
-    "2017": {
-      "soft-fork-activation": 1
-    },
-    "2021": {
-      "other": 1,
-      "script-opcodes": 1
-    },
-    "2024": {
-      "other": 1
-    },
-    "2025": {
-      "other": 4,
-      "quantum": 5,
-      "script-opcodes": 6,
-      "soft-fork-activation": 4,
-      "spam-filtering": 4,
-      "taproot": 1
-    },
-    "2026": {
-      "other": 4,
-      "taproot": 3
-    }
-  },
   "auto_maciej_trebacz_1": {
     "2013": {
       "mining": 1,
@@ -8085,6 +8129,13 @@
     },
     "2014": {
       "script-opcodes": 1
+    }
+  },
+  "auto_mail_ekrembal_gmail_com": {
+    "2026": {
+      "p2p-network": 1,
+      "taproot": 1,
+      "tokens-runes": 1
     }
   },
   "auto_major_kusanagi": {
@@ -8119,7 +8170,7 @@
       "payment-protocol": 1
     }
   },
-  "auto_manuel_araoz": {
+  "auto_manuel_ar_oz": {
     "2014": {
       "multisig-threshold": 2,
       "privacy": 1,
@@ -8326,6 +8377,35 @@
     },
     "2018": {
       "taproot": 1
+    }
+  },
+  "auto_martin_habov_tiak": {
+    "2015": {
+      "multisig-threshold": 4,
+      "other": 9,
+      "payment-protocol": 7
+    },
+    "2017": {
+      "soft-fork-activation": 1
+    },
+    "2021": {
+      "other": 1,
+      "script-opcodes": 1
+    },
+    "2024": {
+      "other": 1
+    },
+    "2025": {
+      "other": 4,
+      "quantum": 5,
+      "script-opcodes": 6,
+      "soft-fork-activation": 4,
+      "spam-filtering": 4,
+      "taproot": 1
+    },
+    "2026": {
+      "other": 4,
+      "taproot": 3
     }
   },
   "auto_martin_l_zner": {
@@ -8727,7 +8807,8 @@
       "utxo-sync": 1
     },
     "2026": {
-      "mining": 3
+      "mining": 3,
+      "quantum": 1
     }
   },
   "auto_micah_winkelspecht": {
@@ -9355,18 +9436,6 @@
       "mining": 2
     }
   },
-  "auto_neil_saitug": {
-    "2021": {
-      "mempool-fees": 1,
-      "mining": 1
-    },
-    "2022": {
-      "mempool-fees": 1
-    },
-    "2023": {
-      "lightning": 1
-    }
-  },
   "auto_neill_miller": {
     "2015": {
       "wallet-keys": 2
@@ -9580,7 +9649,9 @@
   },
   "auto_nikita_karetnikov": {
     "2026": {
-      "other": 2
+      "mining": 1,
+      "other": 3,
+      "quantum": 1
     }
   },
   "auto_nikita_schmidt": {
@@ -9764,6 +9835,11 @@
       "scaling": 1
     }
   },
+  "auto_oliver_gugger": {
+    "2026": {
+      "wallet-keys": 2
+    }
+  },
   "auto_oliver_petruzel": {
     "2015": {
       "hard-fork-block-size": 1,
@@ -9782,28 +9858,6 @@
       "mempool-fees": 1,
       "mining": 1,
       "other": 3
-    }
-  },
-  "auto_olkurbatov": {
-    "2024": {
-      "atomic-swaps": 2,
-      "other": 2
-    },
-    "2025": {
-      "atomic-swaps": 3,
-      "lightning": 3,
-      "script-opcodes": 3,
-      "other": 3
-    },
-    "2026": {
-      "bitvm": 3,
-      "other": 3,
-      "dlc": 6,
-      "lightning": 6,
-      "multisig-threshold": 6,
-      "script-opcodes": 1,
-      "signatures-sighash": 3,
-      "soft-fork-activation": 3
     }
   },
   "auto_omer_shlomovits": {
@@ -9865,7 +9919,7 @@
   },
   "auto_opus_lux": {
     "2026": {
-      "quantum": 1
+      "quantum": 5
     }
   },
   "auto_or_sattath": {
@@ -10505,7 +10559,7 @@
       "mining": 1,
       "multisig-threshold": 2,
       "other": 4,
-      "script-opcodes": 2,
+      "script-opcodes": 3,
       "wallet-keys": 3
     }
   },
@@ -11163,6 +11217,12 @@
       "mining": 1
     }
   },
+  "auto_ronakbharadiya180_gmail_com": {
+    "2026": {
+      "mining": 1,
+      "quantum": 1
+    }
+  },
   "auto_ronald_hoffman": {
     "2014": {
       "other": 1
@@ -11447,10 +11507,12 @@
       "utxo-sync": 5
     },
     "2026": {
-      "other": 1,
+      "quantum": 1,
+      "other": 2,
       "signatures-sighash": 1,
       "taproot": 4,
-      "testing-devtools": 1
+      "testing-devtools": 1,
+      "utxo-sync": 1
     }
   },
   "auto_salvatore_ingala": {
@@ -12362,18 +12424,6 @@
       "spam-filtering": 1
     }
   },
-  "auto_steve_coughlan": {
-    "2011": {
-      "lightning": 2,
-      "other": 6,
-      "p2p-network": 2
-    },
-    "2017": {
-      "hard-fork-block-size": 1,
-      "mining": 1,
-      "segwit": 1
-    }
-  },
   "auto_steve_davis": {
     "2017": {
       "mempool-fees": 2,
@@ -12424,6 +12474,18 @@
   "auto_steve_myers": {
     "2021": {
       "core-dev": 1
+    }
+  },
+  "auto_steve_shadders": {
+    "2011": {
+      "lightning": 2,
+      "other": 6,
+      "p2p-network": 2
+    },
+    "2017": {
+      "hard-fork-block-size": 1,
+      "mining": 1,
+      "segwit": 1
     }
   },
   "auto_steven_blinn": {
@@ -12489,6 +12551,12 @@
     "2025": {
       "covenants": 1,
       "taproot": 1
+    }
+  },
+  "auto_supertestnet_gmail_com": {
+    "2026": {
+      "data-structures": 1,
+      "mining": 1
     }
   },
   "auto_sven_berg": {
@@ -12835,11 +12903,12 @@
       "covenants": 6,
       "multisig-threshold": 1,
       "ordinals-inscriptions": 1,
-      "other": 2,
+      "other": 3,
+      "quantum": 2,
       "script-opcodes": 5,
       "security": 5,
       "taproot": 2,
-      "wallet-keys": 6
+      "wallet-keys": 8
     }
   },
   "auto_thomasv": {
@@ -14122,6 +14191,14 @@
       "wallet-keys": 1
     }
   },
+  "auto_zacmitton22_gmail_com": {
+    "2026": {
+      "bitvm": 1,
+      "data-structures": 1,
+      "mining": 1,
+      "other": 1
+    }
+  },
   "auto_zaidan": {
     "2022": {
       "other": 1
@@ -14298,14 +14375,15 @@
       "mempool-fees": 9,
       "mining": 7,
       "nostr": 1,
-      "p2p-network": 1,
+      "other": 3,
       "security": 2,
-      "other": 3
+      "utxo-sync": 1
     },
     "2026": {
       "bitvm": 1,
       "mining": 1,
-      "other": 3
+      "other": 3,
+      "utxo-sync": 1
     }
   },
   "can_adam_back": {
@@ -14419,7 +14497,7 @@
       "mempool-fees": 6,
       "multisig-threshold": 7,
       "privacy": 5,
-      "quantum": 10,
+      "quantum": 11,
       "signatures-sighash": 3,
       "taproot": 4
     }
@@ -14561,6 +14639,11 @@
       "signatures-sighash": 1,
       "taproot": 1,
       "wallet-keys": 1
+    },
+    "2026": {
+      "other": 1,
+      "signatures-sighash": 1,
+      "taproot": 1
     }
   },
   "can_alicexbt": {
@@ -14862,14 +14945,14 @@
       "testing-devtools": 4
     },
     "2024": {
-      "other": 127,
+      "other": 128,
       "covenants": 36,
       "lightning": 30,
       "mempool-fees": 59,
       "mining": 51,
       "script-opcodes": 43,
       "soft-fork-activation": 12,
-      "taproot": 23,
+      "taproot": 21,
       "testing-devtools": 34
     },
     "2025": {
@@ -14884,7 +14967,7 @@
       "testing-devtools": 17
     },
     "2026": {
-      "other": 23,
+      "other": 26,
       "covenants": 2,
       "lightning": 2,
       "mempool-fees": 9,
@@ -15017,13 +15100,14 @@
       "taproot": 9
     },
     "2026": {
-      "other": 15,
+      "other": 20,
       "consensus-cleanup": 7,
       "covenants": 1,
-      "lightning": 2,
+      "lightning": 3,
       "mempool-fees": 1,
       "mining": 7,
       "script-opcodes": 2,
+      "security": 1,
       "taproot": 1
     }
   },
@@ -15374,7 +15458,7 @@
       "script-opcodes": 13,
       "signatures-sighash": 5,
       "soft-fork-activation": 8,
-      "taproot": 18
+      "taproot": 16
     },
     "2025": {
       "bip-process": 1,
@@ -15634,7 +15718,7 @@
     },
     "2026": {
       "bip-process": 1,
-      "other": 1,
+      "other": 3,
       "soft-fork-activation": 1
     }
   },
@@ -15899,6 +15983,71 @@
       "taproot": 3
     }
   },
+  "can_drak": {
+    "2013": {
+      "other": 29,
+      "mining": 2
+    },
+    "2014": {
+      "bip-process": 2,
+      "other": 32,
+      "mempool-fees": 3,
+      "privacy": 7,
+      "script-opcodes": 4
+    },
+    "2015": {
+      "bip-process": 6,
+      "other": 42,
+      "hard-fork-block-size": 37,
+      "mempool-fees": 4,
+      "mining": 21,
+      "privacy": 2,
+      "script-opcodes": 16,
+      "soft-fork-activation": 4
+    },
+    "2016": {
+      "bip-process": 4,
+      "other": 5,
+      "hard-fork-block-size": 1,
+      "mining": 2,
+      "script-opcodes": 2,
+      "soft-fork-activation": 2
+    },
+    "2017": {
+      "hard-fork-block-size": 4,
+      "mining": 2,
+      "other": 2,
+      "soft-fork-activation": 4
+    },
+    "2018": {
+      "mining": 1,
+      "soft-fork-activation": 1
+    },
+    "2020": {
+      "mempool-fees": 3,
+      "other": 5,
+      "privacy": 3
+    },
+    "2021": {
+      "bip-process": 3,
+      "other": 37,
+      "hard-fork-block-size": 1,
+      "mempool-fees": 7,
+      "mining": 10,
+      "privacy": 4,
+      "script-opcodes": 2,
+      "soft-fork-activation": 6
+    },
+    "2022": {
+      "bip-process": 1,
+      "other": 19,
+      "mempool-fees": 5,
+      "mining": 2,
+      "privacy": 3,
+      "script-opcodes": 3,
+      "soft-fork-activation": 8
+    }
+  },
   "can_eric_lombrozo": {
     "2011": {
       "other": 3,
@@ -16011,7 +16160,11 @@
       "utxo-sync": 4
     },
     "2026": {
-      "other": 1
+      "consensus-cleanup": 1,
+      "mining": 2,
+      "other": 4,
+      "p2p-network": 2,
+      "utxo-sync": 12
     }
   },
   "can_erik_aronesty": {
@@ -16082,8 +16235,8 @@
       "soft-fork-activation": 4
     },
     "2026": {
-      "other": 14,
-      "quantum": 9,
+      "other": 15,
+      "quantum": 10,
       "taproot": 7
     }
   },
@@ -16096,20 +16249,19 @@
       "mining": 2
     },
     "2016": {
-      "other": 7,
-      "segwit": 1
+      "other": 8
     },
     "2017": {
       "covenants": 2,
-      "other": 4,
+      "other": 3,
+      "scaling": 1,
       "script-opcodes": 2
     },
     "2019": {
       "bitvm": 3,
       "covenants": 3,
-      "other": 3,
-      "mining": 4,
-      "segwit": 1
+      "other": 4,
+      "mining": 4
     },
     "2021": {
       "covenants": 2,
@@ -16137,14 +16289,16 @@
       "other": 9,
       "mining": 2,
       "quantum": 19,
-      "segwit": 4,
+      "scaling": 4,
       "taproot": 10
     },
     "2026": {
+      "bitvm": 1,
       "covenants": 4,
       "mining": 2,
-      "other": 5,
-      "quantum": 14,
+      "other": 7,
+      "quantum": 16,
+      "scaling": 1,
       "script-opcodes": 3,
       "taproot": 5
     }
@@ -16779,7 +16933,9 @@
       "taproot": 4
     },
     "2026": {
-      "other": 5
+      "other": 11,
+      "script-opcodes": 1,
+      "taproot": 1
     }
   },
   "can_jeremy_spilman": {
@@ -17026,6 +17182,10 @@
       "other": 1
     },
     "2024": {
+      "other": 1
+    },
+    "2026": {
+      "p2p-network": 1,
       "other": 1
     }
   },
@@ -17518,8 +17678,7 @@
   },
   "can_mark_erhardt": {
     "2016": {
-      "other": 5,
-      "taproot": 1
+      "other": 6
     },
     "2021": {
       "mempool-fees": 1,
@@ -17533,41 +17692,41 @@
     "2023": {
       "mempool-fees": 5,
       "mining": 2,
-      "other": 6,
-      "taproot": 4
+      "other": 9,
+      "script-opcodes": 1
     },
     "2024": {
       "bip-process": 8,
       "consensus-cleanup": 10,
-      "other": 35,
+      "other": 34,
       "mempool-fees": 17,
       "mining": 14,
+      "script-opcodes": 4,
       "security": 11,
       "soft-fork-activation": 5,
-      "taproot": 3,
       "testing-devtools": 10
     },
     "2025": {
       "bip-process": 10,
-      "other": 18,
+      "other": 20,
       "consensus-cleanup": 1,
       "mempool-fees": 5,
       "mining": 3,
+      "script-opcodes": 1,
       "security": 2,
       "soft-fork-activation": 5,
-      "taproot": 3,
       "testing-devtools": 2
     },
     "2026": {
-      "bip-process": 3,
+      "bip-process": 5,
       "consensus-cleanup": 2,
-      "other": 25,
-      "mempool-fees": 4,
-      "mining": 3,
+      "other": 29,
+      "mempool-fees": 5,
+      "mining": 5,
+      "script-opcodes": 7,
       "security": 1,
       "soft-fork-activation": 3,
-      "taproot": 2,
-      "testing-devtools": 1
+      "testing-devtools": 2
     }
   },
   "can_mark_friedenbach": {
@@ -17775,7 +17934,7 @@
       "taproot": 5
     },
     "2026": {
-      "other": 31,
+      "other": 38,
       "mining": 4,
       "soft-fork-activation": 1,
       "taproot": 5
@@ -18068,6 +18227,9 @@
       "script-opcodes": 2,
       "security": 4,
       "testing-devtools": 2
+    },
+    "2026": {
+      "security": 1
     }
   },
   "can_nils_schneider": {
@@ -18168,10 +18330,12 @@
       "taproot": 2
     },
     "2026": {
-      "other": 10,
+      "other": 17,
       "lightning": 2,
-      "quantum": 6,
-      "taproot": 2
+      "p2p-network": 3,
+      "quantum": 11,
+      "taproot": 3,
+      "tokens-runes": 1
     }
   },
   "can_omar_shibli": {
@@ -18532,76 +18696,11 @@
       "taproot": 11
     },
     "2026": {
-      "other": 23,
-      "mempool-fees": 4,
+      "other": 27,
+      "mempool-fees": 5,
       "mining": 2,
       "script-opcodes": 8,
       "taproot": 5
-    }
-  },
-  "can_prayank": {
-    "2013": {
-      "other": 29,
-      "mining": 2
-    },
-    "2014": {
-      "bip-process": 2,
-      "other": 32,
-      "mempool-fees": 3,
-      "privacy": 7,
-      "script-opcodes": 4
-    },
-    "2015": {
-      "bip-process": 6,
-      "other": 42,
-      "hard-fork-block-size": 37,
-      "mempool-fees": 4,
-      "mining": 21,
-      "privacy": 2,
-      "script-opcodes": 16,
-      "soft-fork-activation": 4
-    },
-    "2016": {
-      "bip-process": 4,
-      "other": 5,
-      "hard-fork-block-size": 1,
-      "mining": 2,
-      "script-opcodes": 2,
-      "soft-fork-activation": 2
-    },
-    "2017": {
-      "hard-fork-block-size": 4,
-      "mining": 2,
-      "other": 2,
-      "soft-fork-activation": 4
-    },
-    "2018": {
-      "mining": 1,
-      "soft-fork-activation": 1
-    },
-    "2020": {
-      "mempool-fees": 3,
-      "other": 5,
-      "privacy": 3
-    },
-    "2021": {
-      "bip-process": 3,
-      "other": 37,
-      "hard-fork-block-size": 1,
-      "mempool-fees": 7,
-      "mining": 10,
-      "privacy": 4,
-      "script-opcodes": 2,
-      "soft-fork-activation": 6
-    },
-    "2022": {
-      "bip-process": 1,
-      "other": 19,
-      "mempool-fees": 5,
-      "mining": 2,
-      "privacy": 3,
-      "script-opcodes": 3,
-      "soft-fork-activation": 8
     }
   },
   "can_rene_pickhardt": {
@@ -19480,6 +19579,10 @@
     },
     "2025": {
       "other": 1
+    },
+    "2026": {
+      "other": 2,
+      "mining": 1
     }
   },
   "can_troy_benjegerdes": {

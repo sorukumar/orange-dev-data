@@ -243,8 +243,9 @@ def main():
     run("python3 scripts/04_deliver/registry.py", cwd=root_dir)
     run("python3 scripts/04_deliver/ui_artifacts.py", cwd=root_dir)
     run("python3 scripts/04_deliver/ecosystem_summary.py", cwd=root_dir)
+    run("python3 scripts/04_deliver/discussions_pulse.py", cwd=root_dir)
     count_step("FINAL — ecosystem summary", root_dir)
-    
+
     print("\n✨ MONTHLY PIPELINE COMPLETE!")
     print("Everything is up to date and all NLP/Graphs have been recalculated.")
 

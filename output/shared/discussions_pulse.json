@@ -1,0 +1,565 @@
+{
+  "generated_at": "2026-05-25T13:01:00.849961",
+  "windows": {
+    "30d": {
+      "window_days": 30,
+      "total_messages": 219,
+      "total_threads": 113,
+      "unique_voices": 86,
+      "themes": [
+        {
+          "category": "quantum",
+          "label": "Quantum Resistance",
+          "msgs": 63,
+          "threads": 36,
+          "voices": 31,
+          "share": 30.6,
+          "trend": "rising"
+        },
+        {
+          "category": "utxo-sync",
+          "label": "UTXO & Sync",
+          "msgs": 25,
+          "threads": 20,
+          "voices": 8,
+          "share": 12.1,
+          "trend": "rising"
+        },
+        {
+          "category": "core-dev",
+          "label": "Core Dev",
+          "msgs": 19,
+          "threads": 2,
+          "voices": 13,
+          "share": 9.2,
+          "trend": "rising"
+        },
+        {
+          "category": "covenants",
+          "label": "Covenants & Vaults",
+          "msgs": 10,
+          "threads": 4,
+          "voices": 5,
+          "share": 4.9,
+          "trend": "fading"
+        },
+        {
+          "category": "p2p-network",
+          "label": "P2P Network",
+          "msgs": 9,
+          "threads": 2,
+          "voices": 3,
+          "share": 4.4,
+          "trend": "steady"
+        },
+        {
+          "category": "privacy",
+          "label": "Privacy",
+          "msgs": 8,
+          "threads": 1,
+          "voices": 4,
+          "share": 3.9,
+          "trend": "fading"
+        },
+        {
+          "category": "consensus-cleanup",
+          "label": "Consensus Cleanup",
+          "msgs": 8,
+          "threads": 4,
+          "voices": 5,
+          "share": 3.9,
+          "trend": "new"
+        },
+        {
+          "category": "taproot",
+          "label": "Taproot",
+          "msgs": 7,
+          "threads": 4,
+          "voices": 5,
+          "share": 3.4,
+          "trend": "fading"
+        },
+        {
+          "category": "testing-devtools",
+          "label": "Dev Tooling",
+          "msgs": 6,
+          "threads": 1,
+          "voices": 3,
+          "share": 2.9,
+          "trend": "fading"
+        },
+        {
+          "category": "security",
+          "label": "Security",
+          "msgs": 6,
+          "threads": 3,
+          "voices": 5,
+          "share": 2.9,
+          "trend": "new"
+        }
+      ],
+      "hot_threads": [
+        {
+          "thread_id": "topic_2215",
+          "subject": "Disposing of \"dust attack\" UTXOs",
+          "category": "privacy",
+          "label": "Privacy",
+          "reply_count": 7,
+          "unique_authors": 4,
+          "score": 28,
+          "last_post": "2026-05-23",
+          "source": "delving",
+          "link": "https://delvingbitcoin.org/t/disposing-of-dust-attack-utxos/2215/39",
+          "snippet": "For those of you following along at home, some big new developments on this project.\n\nThe bitcoin/bips editors have assigned BIP 451 to\u2026"
+        },
+        {
+          "thread_id": "topic_2498",
+          "subject": "QCAP: A Bitcoin-Native Quantum Canary Alert",
+          "category": "quantum",
+          "label": "Quantum Resistance",
+          "reply_count": 6,
+          "unique_authors": 4,
+          "score": 24,
+          "last_post": "2026-05-14",
+          "source": "delving",
+          "link": "https://delvingbitcoin.org/t/qcap-a-bitcoin-native-quantum-canary-alert/2498/9",
+          "snippet": "Bitcoin\u2019s security depends on the computational hardness of the discrete logarithm problem over elliptic curves (ECDLP). A sufficiently\u2026"
+        },
+        {
+          "thread_id": "topic_2497",
+          "subject": "TCP hole punching for Bitcoin nodes behind home NATs?",
+          "category": "core-dev",
+          "label": "Core Dev",
+          "reply_count": 2,
+          "unique_authors": 12,
+          "score": 24,
+          "last_post": "2026-05-18",
+          "source": "delving",
+          "link": "https://delvingbitcoin.org/t/tcp-hole-punching-for-bitcoin-nodes-behind-home-nats/2497/17",
+          "snippet": "While @willcl-ark and I were discussing\nDid the number of reachable nodes in residential ISPs increase since Bitcoin Core v30.0? -\u2026"
+        },
+        {
+          "thread_id": "<123e5545-2eda-4eca-9532-4f4cea2b83ecn@googlegroups.com>",
+          "subject": "[BIP-0054] 64-Byte Transactions and Potential\n Legitimate Uses",
+          "category": "consensus-cleanup",
+          "label": "Consensus Cleanup",
+          "reply_count": 4,
+          "unique_authors": 5,
+          "score": 20,
+          "last_post": "2026-05-06",
+          "source": "mailing_list",
+          "link": "https://gnusha.org/pi/bitcoindev/A-Yiqh9r08Wd0V1KwMr7MlVObsiW3esWqySZZzm7aZBV3xBpL0qVJSpF07GfQBoq9YFpBLdlo0k2_tGU5CZ-i0_91MEketsaN8V4FpUnno0=@protonmail.com",
+          "snippet": "For fun, let's start with a pop-quiz:  Select all that apply: There can exist a transaction of ___ bytes  serialized size that\u2026"
+        },
+        {
+          "thread_id": "<46a49975-dbaa-48d5-b50f-36c649041933n@googlegroups.com>",
+          "subject": "What if we let Quantum Hunters get Bitcoin rewards ?",
+          "category": "quantum",
+          "label": "Quantum Resistance",
+          "reply_count": 3,
+          "unique_authors": 4,
+          "score": 12,
+          "last_post": "2026-05-21",
+          "source": "mailing_list",
+          "link": "https://gnusha.org/pi/bitcoindev/6469ae87-7225-41a2-bc67-3f3e46e6a279@murch.one",
+          "snippet": "Hi all,  I'd like to share a draft Informational BIP as an alternative framework to  BIP-361's proposed coin freeze.  The core argument:\u2026"
+        },
+        {
+          "thread_id": "topic_2414",
+          "subject": "Onion Message Jamming in the Lightning Network",
+          "category": "lightning",
+          "label": "Lightning / L2",
+          "reply_count": 3,
+          "unique_authors": 3,
+          "score": 9,
+          "last_post": "2026-05-23",
+          "source": "delving",
+          "link": "https://delvingbitcoin.org/t/onion-message-jamming-in-the-lightning-network/2414/15",
+          "snippet": "nan"
+        },
+        {
+          "thread_id": "topic_2466",
+          "subject": "Fingerprinting nodes: Possible Solutions",
+          "category": "testing-devtools",
+          "label": "Dev Tooling",
+          "reply_count": 3,
+          "unique_authors": 3,
+          "score": 9,
+          "last_post": "2026-05-15",
+          "source": "delving",
+          "link": "https://delvingbitcoin.org/t/fingerprinting-nodes-possible-solutions/2466/6",
+          "snippet": "This is an update on the  Addr fingerprinting attack and potential mitigation strategies. It\u2019s still a work in progress, so if you see\u2026"
+        },
+        {
+          "thread_id": "<CmNC-9nAajMwaJi6dHTdlpgjzLZazPlMjGAxNT8DJXAnyw2sUKCygJJU4BLqaF8OYw3carG_pt1Rriqu66OG3wQ8u2itVlJCFo1AhI3V4es=@protonmail.com>",
+          "subject": "Re: [BIP Draft] P2P UTXO Set Sharing",
+          "category": "utxo-sync",
+          "label": "UTXO & Sync",
+          "reply_count": 2,
+          "unique_authors": 3,
+          "score": 6,
+          "last_post": "2026-05-19",
+          "source": "mailing_list",
+          "link": "https://gnusha.org/pi/bitcoindev/8661e699-47d8-46e4-a561-41c5d2fdc0e6n@googlegroups.com",
+          "snippet": "Dear list,  I am sharing a BIP draft for sharing the UTXO set over the P2P network, an old idea that makes it possible to utilize\u2026"
+        }
+      ],
+      "top_bips": [
+        {
+          "bip_id": "54",
+          "title": "Consensus Cleanup",
+          "mentions": 9
+        },
+        {
+          "bip_id": "451",
+          "title": "Dust UTXO Disposal Protocol",
+          "mentions": 8
+        },
+        {
+          "bip_id": "361",
+          "title": "Post Quantum Migration and Legacy Signature Sunset",
+          "mentions": 7
+        },
+        {
+          "bip_id": "158",
+          "title": "Compact Block Filters for Light Clients",
+          "mentions": 7
+        },
+        {
+          "bip_id": "324",
+          "title": "Version 2 P2P Encrypted Transport Protocol",
+          "mentions": 6
+        },
+        {
+          "bip_id": "32",
+          "title": "Hierarchical Deterministic Wallets",
+          "mentions": 5
+        }
+      ],
+      "top_voices": [
+        {
+          "name": "Eric Voskuil",
+          "posts": 10
+        },
+        {
+          "name": "Adam Gibson",
+          "posts": 10
+        },
+        {
+          "name": "Murch",
+          "posts": 9
+        },
+        {
+          "name": "'Fabian' via Bitcoin Development Mailing List",
+          "posts": 8
+        },
+        {
+          "name": "'conduition' via Bitcoin Development Mailing List",
+          "posts": 8
+        },
+        {
+          "name": "0xB10C",
+          "posts": 8
+        },
+        {
+          "name": "Pieter Wuille",
+          "posts": 7
+        },
+        {
+          "name": "Olaoluwa Osuntokun",
+          "posts": 6
+        }
+      ],
+      "source_pct": {
+        "delving": 54.3,
+        "mailing_list": 45.7
+      },
+      "source_counts": {
+        "delving": 119,
+        "mailing_list": 100
+      },
+      "mailing_list_stale": false,
+      "mailing_list_days_since": null
+    },
+    "90d": {
+      "window_days": 90,
+      "total_messages": 660,
+      "total_threads": 323,
+      "unique_voices": 175,
+      "themes": [
+        {
+          "category": "quantum",
+          "label": "Quantum Resistance",
+          "msgs": 137,
+          "threads": 79,
+          "voices": 52,
+          "share": 23.5,
+          "trend": "rising"
+        },
+        {
+          "category": "testing-devtools",
+          "label": "Dev Tooling",
+          "msgs": 65,
+          "threads": 6,
+          "voices": 30,
+          "share": 11.1,
+          "trend": "fading"
+        },
+        {
+          "category": "covenants",
+          "label": "Covenants & Vaults",
+          "msgs": 42,
+          "threads": 16,
+          "voices": 11,
+          "share": 7.2,
+          "trend": "fading"
+        },
+        {
+          "category": "taproot",
+          "label": "Taproot",
+          "msgs": 37,
+          "threads": 27,
+          "voices": 19,
+          "share": 6.3,
+          "trend": "fading"
+        },
+        {
+          "category": "privacy",
+          "label": "Privacy",
+          "msgs": 31,
+          "threads": 6,
+          "voices": 15,
+          "share": 5.3,
+          "trend": "fading"
+        },
+        {
+          "category": "utxo-sync",
+          "label": "UTXO & Sync",
+          "msgs": 31,
+          "threads": 23,
+          "voices": 13,
+          "share": 5.3,
+          "trend": "rising"
+        },
+        {
+          "category": "mempool-fees",
+          "label": "Mempool & Fees",
+          "msgs": 25,
+          "threads": 15,
+          "voices": 19,
+          "share": 4.3,
+          "trend": "fading"
+        },
+        {
+          "category": "p2p-network",
+          "label": "P2P Network",
+          "msgs": 23,
+          "threads": 7,
+          "voices": 8,
+          "share": 3.9,
+          "trend": "steady"
+        },
+        {
+          "category": "lightning",
+          "label": "Lightning / L2",
+          "msgs": 23,
+          "threads": 7,
+          "voices": 17,
+          "share": 3.9,
+          "trend": "fading"
+        },
+        {
+          "category": "core-dev",
+          "label": "Core Dev",
+          "msgs": 22,
+          "threads": 5,
+          "voices": 15,
+          "share": 3.8,
+          "trend": "rising"
+        }
+      ],
+      "hot_threads": [
+        {
+          "thread_id": "topic_2367",
+          "subject": "Consensus Cleanup: demo of slow blocks on Signet",
+          "category": "testing-devtools",
+          "label": "Dev Tooling",
+          "reply_count": 14,
+          "unique_authors": 20,
+          "score": 280,
+          "last_post": "2026-04-15",
+          "source": "delving",
+          "link": "https://delvingbitcoin.org/t/consensus-cleanup-demo-of-slow-blocks-on-signet/2367/46",
+          "snippet": "We are going to do a demo of long-to-validate blocks on Signet on Wednesday. Here are instructions on how you can join.\nThe goal of this\u2026"
+        },
+        {
+          "thread_id": "topic_2215",
+          "subject": "Disposing of \"dust attack\" UTXOs",
+          "category": "privacy",
+          "label": "Privacy",
+          "reply_count": 14,
+          "unique_authors": 6,
+          "score": 84,
+          "last_post": "2026-05-23",
+          "source": "delving",
+          "link": "https://delvingbitcoin.org/t/disposing-of-dust-attack-utxos/2215/39",
+          "snippet": "A quick update on this project:\nThanks to @harris the ddust tool now 1) batches new dust inputs with unconfirmed dust disposal txs it\u2026"
+        },
+        {
+          "thread_id": "topic_2414",
+          "subject": "Onion Message Jamming in the Lightning Network",
+          "category": "lightning",
+          "label": "Lightning / L2",
+          "reply_count": 8,
+          "unique_authors": 10,
+          "score": 80,
+          "last_post": "2026-05-23",
+          "source": "delving",
+          "link": "https://delvingbitcoin.org/t/onion-message-jamming-in-the-lightning-network/2414/15",
+          "snippet": "Background\nBOLT 4 acknowledges that onion message routing is inherently unreliable and recommends that implementations apply rate\u2026"
+        },
+        {
+          "thread_id": "topic_2253",
+          "subject": "The future of the Bitcoin Core GUI",
+          "category": "mempool-fees",
+          "label": "Mempool & Fees",
+          "reply_count": 5,
+          "unique_authors": 6,
+          "score": 30,
+          "last_post": "2026-04-22",
+          "source": "delving",
+          "link": "https://delvingbitcoin.org/t/the-future-of-the-bitcoin-core-gui/2253/26",
+          "snippet": "Just curious if there\u2019s awareness of the Bitcoin Core App project, which intends to replace the QT GUI with a QML-based one? A lot of\u2026"
+        },
+        {
+          "thread_id": "topic_2498",
+          "subject": "QCAP: A Bitcoin-Native Quantum Canary Alert",
+          "category": "quantum",
+          "label": "Quantum Resistance",
+          "reply_count": 6,
+          "unique_authors": 4,
+          "score": 24,
+          "last_post": "2026-05-14",
+          "source": "delving",
+          "link": "https://delvingbitcoin.org/t/qcap-a-bitcoin-native-quantum-canary-alert/2498/9",
+          "snippet": "Bitcoin\u2019s security depends on the computational hardness of the discrete logarithm problem over elliptic curves (ECDLP). A sufficiently\u2026"
+        },
+        {
+          "thread_id": "topic_2497",
+          "subject": "TCP hole punching for Bitcoin nodes behind home NATs?",
+          "category": "core-dev",
+          "label": "Core Dev",
+          "reply_count": 2,
+          "unique_authors": 12,
+          "score": 24,
+          "last_post": "2026-05-18",
+          "source": "delving",
+          "link": "https://delvingbitcoin.org/t/tcp-hole-punching-for-bitcoin-nodes-behind-home-nats/2497/17",
+          "snippet": "While @willcl-ark and I were discussing\nDid the number of reachable nodes in residential ISPs increase since Bitcoin Core v30.0? -\u2026"
+        },
+        {
+          "thread_id": "topic_2360",
+          "subject": "BIP-110 update: v0.4.1 release and implementation submitted to Bitcoin Core",
+          "category": "spam-filtering",
+          "label": "Spam Filtering",
+          "reply_count": 5,
+          "unique_authors": 4,
+          "score": 20,
+          "last_post": "2026-04-10",
+          "source": "delving",
+          "link": "https://delvingbitcoin.org/t/bip-110-update-v0-4-1-release-and-implementation-submitted-to-bitcoin-core/2360/10",
+          "snippet": "BIP-110 update: v0.4.1 release and implementation submitted to Bitcoin Core\nHi all,\nFollowing up on the BIP-110 proposal from October, I\u2026"
+        },
+        {
+          "thread_id": "<123e5545-2eda-4eca-9532-4f4cea2b83ecn@googlegroups.com>",
+          "subject": "[BIP-0054] 64-Byte Transactions and Potential\n Legitimate Uses",
+          "category": "consensus-cleanup",
+          "label": "Consensus Cleanup",
+          "reply_count": 4,
+          "unique_authors": 5,
+          "score": 20,
+          "last_post": "2026-05-06",
+          "source": "mailing_list",
+          "link": "https://gnusha.org/pi/bitcoindev/A-Yiqh9r08Wd0V1KwMr7MlVObsiW3esWqySZZzm7aZBV3xBpL0qVJSpF07GfQBoq9YFpBLdlo0k2_tGU5CZ-i0_91MEketsaN8V4FpUnno0=@protonmail.com",
+          "snippet": "For fun, let's start with a pop-quiz:  Select all that apply: There can exist a transaction of ___ bytes  serialized size that\u2026"
+        }
+      ],
+      "top_bips": [
+        {
+          "bip_id": "32",
+          "title": "Hierarchical Deterministic Wallets",
+          "mentions": 27
+        },
+        {
+          "bip_id": "352",
+          "title": "Silent Payments",
+          "mentions": 24
+        },
+        {
+          "bip_id": "451",
+          "title": "Dust UTXO Disposal Protocol",
+          "mentions": 20
+        },
+        {
+          "bip_id": "86",
+          "title": "Key Derivation for Single Key P2TR Outputs",
+          "mentions": 18
+        },
+        {
+          "bip_id": "324",
+          "title": "Version 2 P2P Encrypted Transport Protocol",
+          "mentions": 17
+        },
+        {
+          "bip_id": "118",
+          "title": "SIGHASH_ANYPREVOUT for Taproot Scripts",
+          "mentions": 16
+        }
+      ],
+      "top_voices": [
+        {
+          "name": "vano",
+          "posts": 26
+        },
+        {
+          "name": "AaronZhang",
+          "posts": 26
+        },
+        {
+          "name": "Matt Corallo",
+          "posts": 24
+        },
+        {
+          "name": "'conduition' via Bitcoin Development Mailing List",
+          "posts": 24
+        },
+        {
+          "name": "Antoine Poinsot",
+          "posts": 16
+        },
+        {
+          "name": "0xB10C",
+          "posts": 15
+        },
+        {
+          "name": "Adam Gibson",
+          "posts": 14
+        },
+        {
+          "name": "Antoine Riard",
+          "posts": 14
+        }
+      ],
+      "source_pct": {
+        "delving": 55.0,
+        "mailing_list": 45.0
+      },
+      "source_counts": {
+        "delving": 363,
+        "mailing_list": 297
+      },
+      "mailing_list_stale": false,
+      "mailing_list_days_since": null
+    }
+  }
+}
