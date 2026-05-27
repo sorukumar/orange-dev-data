@@ -19,7 +19,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-25T00:00:00",
+  "last_seen": "2026-05-27T00:00:00",
   "technical_focus": "Core Libs",
   "total_commits": 81.0,
   "authored_commits": 81.0,
@@ -29,7 +29,7 @@
   "first_commit": "2016-06-15T23:28:04",
   "last_commit": "2022-08-16T19:09:27",
   "bips_authored": 4.0,
-  "avg_review_latency_days": 349.37469158184905,
+  "avg_review_latency_days": 355.7497400149388,
   "reviews_count": 285.0,
   "avg_approval_latency_days": 315.3509774899098,
   "approvals_count": 132.0,
@@ -37,19 +37,19 @@
   "avg_pr_ack_velocity_days": 36.74193789308176,
   "avg_concept_lead_time_days": 18.57474652777778,
   "review_reciprocity": 2.9081632653061225,
-  "hybrid_score": 1.491,
+  "hybrid_score": 1.5015,
   "impact_score": 40.0,
-  "threads_started": 113.0,
-  "replies_sent": 240.0,
-  "ml_threads": 91.0,
+  "threads_started": 115.0,
+  "replies_sent": 242.0,
+  "ml_threads": 93.0,
   "delving_threads": 22.0,
-  "ml_responses": 230.0,
+  "ml_responses": 232.0,
   "delving_responses": 10.0,
   "first_active": "2014-07-16T12:56:54",
-  "last_active": "2026-05-02T17:14:48.542000",
+  "last_active": "2026-05-14T09:46:05",
   "dev_type": "Protocol Designer",
   "global_first_active": "2014-07-16T12:56:54",
-  "global_last_active": "2026-05-02T17:14:48.542000128",
+  "global_last_active": "2026-05-14T09:46:05",
   "github_location": "behind u",
   "github_company": null,
   "github_bio": null,
@@ -147,10 +147,10 @@
     "link": "https://gnusha.org/pi/bitcoindev/CAD5xwhgyCOdJwnXw+YchptfXjtshDi_VVEGOjR-hG2qV=u6m2g@mail.gmail.com"
   },
   "last_message": {
-    "source": "delving",
-    "subject": "Re: Commit-Reveal for PQ Migration",
-    "date": "2026-05-02",
-    "link": "https://delvingbitcoin.org/t/commit-reveal-for-pq-migration/2419/5"
+    "source": "mailing_list",
+    "subject": "[bitcoindev] Knowledge Gathering: SPV Proof Applications In the Wild\n and Proposed",
+    "date": "2026-05-14",
+    "link": "https://gnusha.org/pi/bitcoindev/a3049fd5-e001-4d3a-9c99-d5629f47dfd8n@googlegroups.com"
   },
   "social_history": {
     "2014": {
@@ -235,7 +235,9 @@
       "taproot": 4
     },
     "2026": {
-      "other": 5
+      "other": 11,
+      "script-opcodes": 1,
+      "taproot": 1
     }
   }
 }

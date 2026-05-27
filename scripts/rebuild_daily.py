@@ -80,6 +80,7 @@ def main():
     run("python3 scripts/04_deliver/ui_artifacts.py", cwd=root_dir)
     run("python3 scripts/04_deliver/ecosystem_summary.py", cwd=root_dir)
     run("python3 scripts/04_deliver/discussions_pulse.py", cwd=root_dir)
+    run("python3 scripts/04_deliver/network_home_snapshot.py", cwd=root_dir)
     
     print("\n✨ DAILY PIPELINE COMPLETE!")
 

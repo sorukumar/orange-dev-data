@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-05-25T13:01:00.849961",
+  "generated_at": "2026-05-27T14:53:02.665320",
   "windows": {
     "30d": {
       "window_days": 30,
-      "total_messages": 219,
-      "total_threads": 113,
-      "unique_voices": 86,
+      "total_messages": 225,
+      "total_threads": 118,
+      "unique_voices": 89,
       "themes": [
         {
           "category": "quantum",
           "label": "Quantum Resistance",
-          "msgs": 63,
-          "threads": 36,
+          "msgs": 66,
+          "threads": 37,
           "voices": 31,
-          "share": 30.6,
+          "share": 31.3,
           "trend": "rising"
         },
         {
@@ -22,7 +22,7 @@
           "msgs": 25,
           "threads": 20,
           "voices": 8,
-          "share": 12.1,
+          "share": 11.8,
           "trend": "rising"
         },
         {
@@ -31,7 +31,7 @@
           "msgs": 19,
           "threads": 2,
           "voices": 13,
-          "share": 9.2,
+          "share": 9.0,
           "trend": "rising"
         },
         {
@@ -40,7 +40,7 @@
           "msgs": 10,
           "threads": 4,
           "voices": 5,
-          "share": 4.9,
+          "share": 4.7,
           "trend": "fading"
         },
         {
@@ -49,7 +49,7 @@
           "msgs": 9,
           "threads": 2,
           "voices": 3,
-          "share": 4.4,
+          "share": 4.3,
           "trend": "steady"
         },
         {
@@ -58,7 +58,7 @@
           "msgs": 8,
           "threads": 1,
           "voices": 4,
-          "share": 3.9,
+          "share": 3.8,
           "trend": "fading"
         },
         {
@@ -67,7 +67,7 @@
           "msgs": 8,
           "threads": 4,
           "voices": 5,
-          "share": 3.9,
+          "share": 3.8,
           "trend": "new"
         },
         {
@@ -76,7 +76,7 @@
           "msgs": 7,
           "threads": 4,
           "voices": 5,
-          "share": 3.4,
+          "share": 3.3,
           "trend": "fading"
         },
         {
@@ -85,16 +85,16 @@
           "msgs": 6,
           "threads": 1,
           "voices": 3,
-          "share": 2.9,
+          "share": 2.8,
           "trend": "fading"
         },
         {
-          "category": "security",
-          "label": "Security",
+          "category": "script-opcodes",
+          "label": "Script & Opcodes",
           "msgs": 6,
           "threads": 3,
-          "voices": 5,
-          "share": 2.9,
+          "voices": 4,
+          "share": 2.8,
           "trend": "new"
         }
       ],
@@ -165,19 +165,6 @@
           "snippet": "Hi all,  I'd like to share a draft Informational BIP as an alternative framework to  BIP-361's proposed coin freeze.  The core argument:\u2026"
         },
         {
-          "thread_id": "topic_2414",
-          "subject": "Onion Message Jamming in the Lightning Network",
-          "category": "lightning",
-          "label": "Lightning / L2",
-          "reply_count": 3,
-          "unique_authors": 3,
-          "score": 9,
-          "last_post": "2026-05-23",
-          "source": "delving",
-          "link": "https://delvingbitcoin.org/t/onion-message-jamming-in-the-lightning-network/2414/15",
-          "snippet": "nan"
-        },
-        {
           "thread_id": "topic_2466",
           "subject": "Fingerprinting nodes: Possible Solutions",
           "category": "testing-devtools",
@@ -189,6 +176,19 @@
           "source": "delving",
           "link": "https://delvingbitcoin.org/t/fingerprinting-nodes-possible-solutions/2466/6",
           "snippet": "This is an update on the  Addr fingerprinting attack and potential mitigation strategies. It\u2019s still a work in progress, so if you see\u2026"
+        },
+        {
+          "thread_id": "topic_2428",
+          "subject": "Binary Fuse filters as an alternative to BIP 158 GCS",
+          "category": "p2p-network",
+          "label": "P2P Network",
+          "reply_count": 4,
+          "unique_authors": 2,
+          "score": 8,
+          "last_post": "2026-05-25",
+          "source": "delving",
+          "link": "https://delvingbitcoin.org/t/binary-fuse-filters-as-an-alternative-to-bip-158-gcs/2428/9",
+          "snippet": "rustaceanrob:\n\nThe benchmark compares bandwidth but the false positive rates do not match, GCS has a false positive rate of 1/784931\u2026"
         },
         {
           "thread_id": "<CmNC-9nAajMwaJi6dHTdlpgjzLZazPlMjGAxNT8DJXAnyw2sUKCygJJU4BLqaF8OYw3carG_pt1Rriqu66OG3wQ8u2itVlJCFo1AhI3V4es=@protonmail.com>",
@@ -216,13 +216,13 @@
           "mentions": 8
         },
         {
-          "bip_id": "361",
-          "title": "Post Quantum Migration and Legacy Signature Sunset",
+          "bip_id": "158",
+          "title": "Compact Block Filters for Light Clients",
           "mentions": 7
         },
         {
-          "bip_id": "158",
-          "title": "Compact Block Filters for Light Clients",
+          "bip_id": "361",
+          "title": "Post Quantum Migration and Legacy Signature Sunset",
           "mentions": 7
         },
         {
@@ -231,30 +231,30 @@
           "mentions": 6
         },
         {
-          "bip_id": "32",
-          "title": "Hierarchical Deterministic Wallets",
+          "bip_id": "360",
+          "title": "Pay-to-Merkle-Root (P2MR)",
           "mentions": 5
         }
       ],
       "top_voices": [
         {
           "name": "Eric Voskuil",
-          "posts": 10
+          "posts": 13
+        },
+        {
+          "name": "conduition",
+          "posts": 12
         },
         {
           "name": "Adam Gibson",
-          "posts": 10
+          "posts": 11
         },
         {
           "name": "Murch",
-          "posts": 9
+          "posts": 10
         },
         {
-          "name": "'Fabian' via Bitcoin Development Mailing List",
-          "posts": 8
-        },
-        {
-          "name": "'conduition' via Bitcoin Development Mailing List",
+          "name": "Fabian",
           "posts": 8
         },
         {
@@ -262,46 +262,46 @@
           "posts": 8
         },
         {
-          "name": "Pieter Wuille",
-          "posts": 7
+          "name": "roasbeef",
+          "posts": 8
         },
         {
-          "name": "Olaoluwa Osuntokun",
-          "posts": 6
+          "name": "Pieter Wuille",
+          "posts": 7
         }
       ],
       "source_pct": {
-        "delving": 54.3,
-        "mailing_list": 45.7
+        "delving": 52.9,
+        "mailing_list": 47.1
       },
       "source_counts": {
         "delving": 119,
-        "mailing_list": 100
+        "mailing_list": 106
       },
       "mailing_list_stale": false,
       "mailing_list_days_since": null
     },
     "90d": {
       "window_days": 90,
-      "total_messages": 660,
-      "total_threads": 323,
-      "unique_voices": 175,
+      "total_messages": 651,
+      "total_threads": 317,
+      "unique_voices": 183,
       "themes": [
         {
           "category": "quantum",
           "label": "Quantum Resistance",
-          "msgs": 137,
+          "msgs": 140,
           "threads": 79,
           "voices": 52,
-          "share": 23.5,
+          "share": 24.2,
           "trend": "rising"
         },
         {
           "category": "testing-devtools",
           "label": "Dev Tooling",
-          "msgs": 65,
+          "msgs": 64,
           "threads": 6,
-          "voices": 30,
+          "voices": 29,
           "share": 11.1,
           "trend": "fading"
         },
@@ -311,7 +311,7 @@
           "msgs": 42,
           "threads": 16,
           "voices": 11,
-          "share": 7.2,
+          "share": 7.3,
           "trend": "fading"
         },
         {
@@ -320,7 +320,7 @@
           "msgs": 37,
           "threads": 27,
           "voices": 19,
-          "share": 6.3,
+          "share": 6.4,
           "trend": "fading"
         },
         {
@@ -329,7 +329,7 @@
           "msgs": 31,
           "threads": 6,
           "voices": 15,
-          "share": 5.3,
+          "share": 5.4,
           "trend": "fading"
         },
         {
@@ -338,25 +338,25 @@
           "msgs": 31,
           "threads": 23,
           "voices": 13,
-          "share": 5.3,
+          "share": 5.4,
           "trend": "rising"
         },
         {
           "category": "mempool-fees",
           "label": "Mempool & Fees",
-          "msgs": 25,
-          "threads": 15,
-          "voices": 19,
-          "share": 4.3,
+          "msgs": 24,
+          "threads": 14,
+          "voices": 18,
+          "share": 4.1,
           "trend": "fading"
         },
         {
           "category": "p2p-network",
           "label": "P2P Network",
-          "msgs": 23,
+          "msgs": 24,
           "threads": 7,
           "voices": 8,
-          "share": 3.9,
+          "share": 4.1,
           "trend": "steady"
         },
         {
@@ -365,7 +365,7 @@
           "msgs": 23,
           "threads": 7,
           "voices": 17,
-          "share": 3.9,
+          "share": 4.0,
           "trend": "fading"
         },
         {
@@ -432,19 +432,6 @@
           "snippet": "Just curious if there\u2019s awareness of the Bitcoin Core App project, which intends to replace the QT GUI with a QML-based one? A lot of\u2026"
         },
         {
-          "thread_id": "topic_2498",
-          "subject": "QCAP: A Bitcoin-Native Quantum Canary Alert",
-          "category": "quantum",
-          "label": "Quantum Resistance",
-          "reply_count": 6,
-          "unique_authors": 4,
-          "score": 24,
-          "last_post": "2026-05-14",
-          "source": "delving",
-          "link": "https://delvingbitcoin.org/t/qcap-a-bitcoin-native-quantum-canary-alert/2498/9",
-          "snippet": "Bitcoin\u2019s security depends on the computational hardness of the discrete logarithm problem over elliptic curves (ECDLP). A sufficiently\u2026"
-        },
-        {
           "thread_id": "topic_2497",
           "subject": "TCP hole punching for Bitcoin nodes behind home NATs?",
           "category": "core-dev",
@@ -456,6 +443,19 @@
           "source": "delving",
           "link": "https://delvingbitcoin.org/t/tcp-hole-punching-for-bitcoin-nodes-behind-home-nats/2497/17",
           "snippet": "While @willcl-ark and I were discussing\nDid the number of reachable nodes in residential ISPs increase since Bitcoin Core v30.0? -\u2026"
+        },
+        {
+          "thread_id": "topic_2498",
+          "subject": "QCAP: A Bitcoin-Native Quantum Canary Alert",
+          "category": "quantum",
+          "label": "Quantum Resistance",
+          "reply_count": 6,
+          "unique_authors": 4,
+          "score": 24,
+          "last_post": "2026-05-14",
+          "source": "delving",
+          "link": "https://delvingbitcoin.org/t/qcap-a-bitcoin-native-quantum-canary-alert/2498/9",
+          "snippet": "Bitcoin\u2019s security depends on the computational hardness of the discrete logarithm problem over elliptic curves (ECDLP). A sufficiently\u2026"
         },
         {
           "thread_id": "topic_2360",
@@ -493,7 +493,7 @@
         {
           "bip_id": "352",
           "title": "Silent Payments",
-          "mentions": 24
+          "mentions": 23
         },
         {
           "bip_id": "451",
@@ -518,45 +518,45 @@
       ],
       "top_voices": [
         {
-          "name": "vano",
-          "posts": 26
+          "name": "conduition",
+          "posts": 38
+        },
+        {
+          "name": "Antoine Poinsot",
+          "posts": 28
         },
         {
           "name": "AaronZhang",
           "posts": 26
         },
         {
+          "name": "vano",
+          "posts": 25
+        },
+        {
           "name": "Matt Corallo",
           "posts": 24
         },
         {
-          "name": "'conduition' via Bitcoin Development Mailing List",
-          "posts": 24
+          "name": "Adam Gibson",
+          "posts": 17
         },
         {
-          "name": "Antoine Poinsot",
+          "name": "Eric Voskuil",
           "posts": 16
         },
         {
           "name": "0xB10C",
-          "posts": 15
-        },
-        {
-          "name": "Adam Gibson",
-          "posts": 14
-        },
-        {
-          "name": "Antoine Riard",
-          "posts": 14
+          "posts": 16
         }
       ],
       "source_pct": {
-        "delving": 55.0,
-        "mailing_list": 45.0
+        "delving": 54.7,
+        "mailing_list": 45.3
       },
       "source_counts": {
-        "delving": 363,
-        "mailing_list": 297
+        "delving": 356,
+        "mailing_list": 295
       },
       "mailing_list_stale": false,
       "mailing_list_days_since": null

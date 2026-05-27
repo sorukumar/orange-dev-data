@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-19T00:00:00",
-  "last_seen": "2026-05-25T00:00:00",
+  "last_seen": "2026-05-27T00:00:00",
   "technical_focus": "code",
   "total_commits": 0.0,
   "authored_commits": 0.0,
@@ -36,19 +36,19 @@
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": null,
-  "hybrid_score": 0.0055,
+  "hybrid_score": 0.0052,
   "impact_score": 0.0,
   "threads_started": 0.0,
-  "replies_sent": 1.0,
+  "replies_sent": 2.0,
   "ml_threads": 0.0,
   "delving_threads": 0.0,
-  "ml_responses": 1.0,
+  "ml_responses": 2.0,
   "delving_responses": 0.0,
   "first_active": "2026-04-15T15:16:02",
-  "last_active": "2026-04-15T15:16:02",
+  "last_active": "2026-04-15T17:39:08",
   "dev_type": "Participant",
   "global_first_active": "2026-04-15T15:16:02",
-  "global_last_active": "2026-04-15T15:16:02",
+  "global_last_active": "2026-04-15T17:39:08",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -64,13 +64,16 @@
   },
   "last_message": {
     "source": "mailing_list",
-    "subject": "Re: [bitcoindev] In defense of a PQ output type",
+    "subject": "Re: [bitcoindev] Post-Quantum BIP-86 Recovery via zk-STARK Proof of\n BIP-32 Seed Knowledge",
     "date": "2026-04-15",
-    "link": "https://gnusha.org/pi/bitcoindev/CABgZVQDUPc0QR3qRkJi3oMG27vk5=6HS6M6wEHcDJjJYt1k_Rg@mail.gmail.com"
+    "link": "https://gnusha.org/pi/bitcoindev/CABgZVQDMaGEMQBEJZFfubheZeiTC3uAvKeP-f=gf_yjqdDrswQ@mail.gmail.com"
   },
   "social_history": {
     "2026": {
-      "quantum": 1
+      "bitvm": 1,
+      "multisig-threshold": 1,
+      "quantum": 2,
+      "wallet-keys": 1
     }
   }
 }

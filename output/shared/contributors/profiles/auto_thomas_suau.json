@@ -1,5 +1,5 @@
 {
-  "display_name": "thomas suau",
+  "display_name": "Thomas Suau",
   "github_login_final": null,
   "delving_username_final": "tsua00021",
   "uuid": "auto_thomas_suau",
@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-25T00:00:00",
+  "last_seen": "2026-05-27T00:00:00",
   "technical_focus": "covenants",
   "total_commits": 0.0,
   "authored_commits": 0.0,
@@ -36,19 +36,19 @@
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": null,
-  "hybrid_score": 0.0109,
-  "impact_score": 0.0,
+  "hybrid_score": 0.0232,
+  "impact_score": 1.0,
   "threads_started": 4.0,
-  "replies_sent": 5.0,
+  "replies_sent": 9.0,
   "ml_threads": 0.0,
   "delving_threads": 4.0,
-  "ml_responses": 3.0,
+  "ml_responses": 7.0,
   "delving_responses": 2.0,
   "first_active": "2026-03-17T14:38:00.510000",
-  "last_active": "2026-04-23T01:40:15.478000",
+  "last_active": "2026-05-12T10:04:24",
   "dev_type": "Participant",
   "global_first_active": "2026-03-17T14:38:00.510000128",
-  "global_last_active": "2026-04-23T01:40:15.478000128",
+  "global_last_active": "2026-05-12T10:04:24",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -64,21 +64,22 @@
     "link": "https://delvingbitcoin.org/t/btsl-bitcoin-transaction-schema-language-a-declarative-validation-schema-for-psbt-workflows/2338/1"
   },
   "last_message": {
-    "source": "delving",
-    "subject": "Re: Introspection or Not? Why Ordinals Are the Ultimate L1 Battleground",
-    "date": "2026-04-23",
-    "link": "https://delvingbitcoin.org/t/introspection-or-not-why-ordinals-are-the-ultimate-l1-battleground/2442/2"
+    "source": "mailing_list",
+    "subject": "Re: [bitcoindev] Against Allowing Quantum Recovery of Bitcoin",
+    "date": "2026-05-12",
+    "link": "https://gnusha.org/pi/bitcoindev/9564EAA8-807A-4448-8A92-FEEAC92D4709@gmail.com"
   },
   "social_history": {
     "2026": {
       "covenants": 6,
       "multisig-threshold": 1,
       "ordinals-inscriptions": 1,
-      "other": 2,
+      "other": 3,
+      "quantum": 2,
       "script-opcodes": 5,
       "security": 5,
       "taproot": 2,
-      "wallet-keys": 6
+      "wallet-keys": 8
     }
   }
 }

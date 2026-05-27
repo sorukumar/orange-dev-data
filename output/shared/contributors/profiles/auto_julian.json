@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-25T00:00:00",
+  "last_seen": "2026-05-27T00:00:00",
   "technical_focus": "taproot",
   "total_commits": 0.0,
   "authored_commits": 0.0,
@@ -36,18 +36,18 @@
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": null,
-  "hybrid_score": 0.0,
+  "hybrid_score": 0.0068,
   "impact_score": 0.0,
-  "threads_started": 3.0,
-  "replies_sent": 4.0,
-  "ml_threads": 0.0,
+  "threads_started": 4.0,
+  "replies_sent": 5.0,
+  "ml_threads": 1.0,
   "delving_threads": 3.0,
-  "ml_responses": 0.0,
+  "ml_responses": 1.0,
   "delving_responses": 4.0,
-  "first_active": "2025-11-07T15:14:37.127000",
+  "first_active": "2025-11-07T09:50:55",
   "last_active": "2026-02-08T15:07:23.373000",
   "dev_type": "Participant",
-  "global_first_active": "2025-11-07T15:14:37.127000064",
+  "global_first_active": "2025-11-07T09:50:55",
   "global_last_active": "2026-02-08T15:07:23.372999936",
   "github_location": null,
   "github_company": null,
@@ -58,10 +58,10 @@
   "is_top_50": false,
   "delving_url": "https://delvingbitcoin.org/u/julian",
   "first_message": {
-    "source": "delving",
-    "subject": "Benchmarking Bitcoin Script Evaluation for the Varops Budget (Great Script Restoration)",
+    "source": "mailing_list",
+    "subject": "[bitcoindev] Benchmarking Bitcoin Script Evaluation for the Varops\n Budget (GSR)",
     "date": "2025-11-07",
-    "link": "https://delvingbitcoin.org/t/benchmarking-bitcoin-script-evaluation-for-the-varops-budget-great-script-restoration/2094/1"
+    "link": "https://gnusha.org/pi/bitcoindev/19fde638-aa4f-4a02-9aad-ea437c73b3c1n@googlegroups.com"
   },
   "last_message": {
     "source": "delving",
@@ -73,9 +73,9 @@
     "2025": {
       "covenants": 6,
       "hard-fork-block-size": 6,
-      "script-opcodes": 6,
+      "script-opcodes": 7,
       "signatures-sighash": 6,
-      "taproot": 6
+      "taproot": 7
     },
     "2026": {
       "covenants": 1,

@@ -19,7 +19,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-25T00:00:00",
+  "last_seen": "2026-05-27T00:00:00",
   "technical_focus": "Tests (QA)",
   "total_commits": 21.0,
   "authored_commits": 21.0,
@@ -37,19 +37,19 @@
   "avg_pr_ack_velocity_days": 36.03384910300926,
   "avg_concept_lead_time_days": 50.93259645061729,
   "review_reciprocity": 1.6666666666666667,
-  "hybrid_score": 0.9703,
+  "hybrid_score": 0.9788,
   "impact_score": 26.0,
   "threads_started": 17.0,
-  "replies_sent": 80.0,
+  "replies_sent": 83.0,
   "ml_threads": 13.0,
   "delving_threads": 4.0,
-  "ml_responses": 71.0,
+  "ml_responses": 74.0,
   "delving_responses": 9.0,
   "first_active": "2014-06-03T06:51:45",
-  "last_active": "2026-04-15T11:26:08",
+  "last_active": "2026-05-05T14:17:23",
   "dev_type": "Builder",
   "global_first_active": "2014-06-03T06:51:45",
-  "global_last_active": "2026-04-15T11:26:08",
+  "global_last_active": "2026-05-05T14:17:23",
   "github_location": null,
   "github_company": "@cloudflare",
   "github_bio": "Network Security/Crypto Researcher looking at Bitcoin and the RPKI.",
@@ -111,9 +111,9 @@
   },
   "last_message": {
     "source": "mailing_list",
-    "subject": "Re: [bitcoindev] In defense of a PQ output type",
-    "date": "2026-04-15",
-    "link": "https://gnusha.org/pi/bitcoindev/CAEM=y+UeV-dO2TT2Sg4rXqVuTauObJwF3K+2LmxTWFWE8ePcNg@mail.gmail.com"
+    "subject": "Re: [bitcoindev] A Post-Quantum Path for BIP 324",
+    "date": "2026-05-05",
+    "link": "https://gnusha.org/pi/bitcoindev/CAEM=y+X7MCojBcNeJmmVd0J-_AhuA3K9B9Yu2qiMb9iNqxQE5A@mail.gmail.com"
   },
   "social_history": {
     "2014": {
@@ -124,20 +124,19 @@
       "mining": 2
     },
     "2016": {
-      "other": 7,
-      "segwit": 1
+      "other": 8
     },
     "2017": {
       "covenants": 2,
-      "other": 4,
+      "other": 3,
+      "scaling": 1,
       "script-opcodes": 2
     },
     "2019": {
       "bitvm": 3,
       "covenants": 3,
-      "other": 3,
-      "mining": 4,
-      "segwit": 1
+      "other": 4,
+      "mining": 4
     },
     "2021": {
       "covenants": 2,
@@ -165,14 +164,16 @@
       "other": 9,
       "mining": 2,
       "quantum": 19,
-      "segwit": 4,
+      "scaling": 4,
       "taproot": 10
     },
     "2026": {
+      "bitvm": 1,
       "covenants": 4,
       "mining": 2,
-      "other": 5,
-      "quantum": 14,
+      "other": 7,
+      "quantum": 16,
+      "scaling": 1,
       "script-opcodes": 3,
       "taproot": 5
     }

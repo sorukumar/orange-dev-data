@@ -1,0 +1,173 @@
+{
+  "generated_at": "2026-05-27T17:10:54.249043",
+  "contributors_tracked": 7409,
+  "window_reference": {
+    "anchor_timestamp": "2026-05-27T16:55:35+00:00",
+    "current_window_start": "2026-04-27T16:55:35+00:00",
+    "previous_window_start": "2026-03-28T16:55:35+00:00",
+    "window_days": 30
+  },
+  "widgets": {
+    "active_contributors_30d": {
+      "value": 107,
+      "previous_30d": 81,
+      "delta_30d": 26,
+      "window_days": 30,
+      "definition": "Contributors with global_last_active in current 30-day window, compared to the previous 30-day window.",
+      "latest_activity_date": "2026-05-27"
+    },
+    "top_reviewers_30d": {
+      "window_days": 30,
+      "definition": "Top reviewers by unique PRs reviewed in current 30-day window (comments/reviews only), with previous 30-day comparison.",
+      "items": [
+        {
+          "uuid": "auto_sebastian_kung",
+          "display_name": "Sebastian Kung",
+          "reviews_30d": 126,
+          "previous_30d": 73,
+          "delta_30d": 53
+        },
+        {
+          "uuid": "can_marcofalke",
+          "display_name": "MarcoFalke",
+          "reviews_30d": 110,
+          "previous_30d": 90,
+          "delta_30d": 20
+        },
+        {
+          "uuid": "can_michael_ford",
+          "display_name": "Michael Ford",
+          "reviews_30d": 90,
+          "previous_30d": 37,
+          "delta_30d": 53
+        },
+        {
+          "uuid": "can_ava_chow",
+          "display_name": "Ava Chow",
+          "reviews_30d": 64,
+          "previous_30d": 56,
+          "delta_30d": 8
+        },
+        {
+          "uuid": "can_mark_erhardt",
+          "display_name": "Mark Erhardt",
+          "reviews_30d": 48,
+          "previous_30d": 36,
+          "delta_30d": 12
+        }
+      ],
+      "aliases_collapsed": 14185
+    },
+    "recent_bips": {
+      "window_days": 30,
+      "definition": "Most-mentioned BIPs in current 30-day discussion window versus previous 30-day baseline.",
+      "items": [
+        {
+          "bip_id": "54",
+          "title": "Consensus Cleanup",
+          "primary_author": "Antoine Poinsot",
+          "primary_author_uuid": "can_antoine_poinsot",
+          "mentions_30d": 9,
+          "previous_30d": 2,
+          "delta_30d": 7
+        },
+        {
+          "bip_id": "451",
+          "title": "Dust UTXO Disposal Protocol",
+          "primary_author": "bubb1es",
+          "primary_author_uuid": "auto_bubb1es",
+          "mentions_30d": 8,
+          "previous_30d": 11,
+          "delta_30d": -3
+        },
+        {
+          "bip_id": "158",
+          "title": "Compact Block Filters for Light Clients",
+          "primary_author": "Olaoluwa Osuntokun",
+          "primary_author_uuid": "can_olaoluwa_osuntokun",
+          "mentions_30d": 7,
+          "previous_30d": 2,
+          "delta_30d": 5
+        }
+      ]
+    },
+    "research_activity_30d": {
+      "messages_30d": 218,
+      "previous_30d": 287,
+      "delta_30d": -69,
+      "momentum": "cooling",
+      "definition": "Combined Delving Bitcoin and mailing list discussion volume in current 30 days versus previous 30 days."
+    },
+    "discussion_voices_30d": {
+      "value": 83,
+      "previous_30d": 104,
+      "delta_30d": -21,
+      "messages_30d": 218,
+      "messages_previous_30d": 287
+    },
+    "topic_momentum_30d": {
+      "window_days": 30,
+      "definition": "Most active research topics in current 30-day discussion window versus previous 30-day baseline.",
+      "items": [
+        {
+          "topic": "quantum",
+          "label": "Quantum",
+          "mentions_30d": 66,
+          "previous_30d": 54,
+          "delta_30d": 12
+        },
+        {
+          "topic": "utxo-sync",
+          "label": "Utxo Sync",
+          "mentions_30d": 25,
+          "previous_30d": 3,
+          "delta_30d": 22
+        },
+        {
+          "topic": "core-dev",
+          "label": "Core Dev",
+          "mentions_30d": 19,
+          "previous_30d": 3,
+          "delta_30d": 16
+        },
+        {
+          "topic": "covenants",
+          "label": "Covenants",
+          "mentions_30d": 9,
+          "previous_30d": 21,
+          "delta_30d": -12
+        },
+        {
+          "topic": "consensus-cleanup",
+          "label": "Consensus Cleanup",
+          "mentions_30d": 8,
+          "previous_30d": 2,
+          "delta_30d": 6
+        }
+      ]
+    }
+  },
+  "quality": {
+    "bots_excluded": 20,
+    "bot_filter_tokens": [
+      "bot",
+      "automerge",
+      "bitcoinpulltester",
+      "drahtbot"
+    ],
+    "active_review_event_types": [
+      "commented",
+      "reviewed"
+    ]
+  },
+  "sources": {
+    "registry_index": "output/shared/contributors/registry_index.json",
+    "review_events": [
+      "data/raw/github_review_events.parquet",
+      "data/raw/bips_review_events.parquet"
+    ],
+    "social_combined": "data/raw/social_combined.parquet",
+    "social_threads": "data/enriched/social_threads.parquet",
+    "bips_ui": "output/tracker/bips_ui.json"
+  }
+}

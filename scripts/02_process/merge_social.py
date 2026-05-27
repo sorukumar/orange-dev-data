@@ -1,17 +1,36 @@
 import pandas as pd
 import os
+import json
 
 # --- Configuration ---
 DELVING_PATH = "data/raw/social_delving.parquet"
 MAILING_LIST_PATH = "data/raw/social_mailing_list.parquet"
 OUTPUT_PARQUET = "data/raw/social_combined.parquet"
+IDENTITY_CURATED_PATH = "metadata/identity_curated.json"
+
+def _load_bots():
+    """Return a lowercase set of bot/system usernames from identity_curated.json."""
+    if not os.path.exists(IDENTITY_CURATED_PATH):
+        return set()
+    with open(IDENTITY_CURATED_PATH) as f:
+        curated = json.load(f)
+    bots = curated.get("special_nodes", {}).get("bots", [])
+    return {b.lower() for b in bots}
 
 def main():
+    BOTS = _load_bots()
     dfs = []
     
     if os.path.exists(DELVING_PATH):
         print(f"Loading Delving data from {DELVING_PATH}...")
         df_delving = pd.read_parquet(DELVING_PATH)
+        # Drop system/bot accounts (e.g. Delving platform 'admin')
+        if 'author_username' in df_delving.columns and BOTS:
+            before = len(df_delving)
+            df_delving = df_delving[~df_delving['author_username'].str.lower().isin(BOTS)]
+            dropped = before - len(df_delving)
+            if dropped:
+                print(f"  Dropped {dropped} row(s) from bot accounts.")
         # Ensure date is TZ-naive for consistency
         if df_delving['date'].dt.tz is not None:
             df_delving['date'] = df_delving['date'].dt.tz_localize(None)

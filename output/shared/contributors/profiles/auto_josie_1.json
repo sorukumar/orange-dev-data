@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-25T00:00:00",
+  "last_seen": "2026-05-27T00:00:00",
   "technical_focus": "None",
   "total_commits": 0.0,
   "authored_commits": 0.0,
@@ -36,19 +36,19 @@
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": null,
-  "hybrid_score": 0.0055,
+  "hybrid_score": 0.0065,
   "impact_score": 0.0,
-  "threads_started": 11.0,
-  "replies_sent": 28.0,
+  "threads_started": 12.0,
+  "replies_sent": 29.0,
   "ml_threads": 0.0,
-  "delving_threads": 11.0,
-  "ml_responses": 0.0,
+  "delving_threads": 12.0,
+  "ml_responses": 1.0,
   "delving_responses": 28.0,
   "first_active": "2023-12-19T14:49:37.565000",
-  "last_active": "2024-11-05T10:23:56.088000",
+  "last_active": "2026-05-19T04:32:33",
   "dev_type": "Participant",
   "global_first_active": "2023-12-19T14:49:37.564999936",
-  "global_last_active": "2024-11-05T10:23:56.088000",
+  "global_last_active": "2026-05-19T04:32:33",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -64,10 +64,10 @@
     "link": "https://delvingbitcoin.org/t/unspendable-keys-in-descriptors/304/4"
   },
   "last_message": {
-    "source": "delving",
-    "subject": "Re: Libbitcoin for Core people",
-    "date": "2024-11-05",
-    "link": "https://delvingbitcoin.org/t/libbitcoin-for-core-people/1222/10"
+    "source": "mailing_list",
+    "subject": "[bitcoindev] Re: [BIP Draft] P2P UTXO Set Sharing",
+    "date": "2026-05-19",
+    "link": "https://gnusha.org/pi/bitcoindev/8661e699-47d8-46e4-a561-41c5d2fdc0e6n@googlegroups.com"
   },
   "social_history": {
     "2023": {
@@ -83,9 +83,13 @@
       "multisig-threshold": 11,
       "p2p-network": 9,
       "payment-protocol": 9,
-      "silent-payments": 26,
+      "silent-payments": 27,
       "taproot": 13,
-      "wallet-keys": 15
+      "wallet-keys": 16
+    },
+    "2026": {
+      "p2p-network": 1,
+      "other": 1
     }
   }
 }

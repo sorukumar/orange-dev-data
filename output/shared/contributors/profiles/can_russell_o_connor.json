@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-25T00:00:00",
+  "last_seen": "2026-05-27T00:00:00",
   "technical_focus": "Tests (QA)",
   "total_commits": 9.0,
   "authored_commits": 9.0,
@@ -36,19 +36,19 @@
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": null,
-  "hybrid_score": 0.3204,
+  "hybrid_score": 0.3463,
   "impact_score": 9.0,
   "threads_started": 22.0,
-  "replies_sent": 204.0,
+  "replies_sent": 218.0,
   "ml_threads": 15.0,
   "delving_threads": 7.0,
-  "ml_responses": 202.0,
+  "ml_responses": 216.0,
   "delving_responses": 2.0,
   "first_active": "2011-12-29T00:55:03",
-  "last_active": "2025-11-17T19:57:25.994000",
+  "last_active": "2025-12-15T10:31:49",
   "dev_type": "Builder",
   "global_first_active": "2011-12-29T00:55:03",
-  "global_last_active": "2025-11-17T19:57:25.993999872",
+  "global_last_active": "2025-12-15T10:31:49",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -79,10 +79,10 @@
     "link": "https://gnusha.org/pi/bitcoindev/alpine.LRH.2.00.1112290111310.22327@theorem.ca"
   },
   "last_message": {
-    "source": "delving",
-    "subject": "Delving Simplicity Part \u2164: Programs and Addresses",
-    "date": "2025-11-17",
-    "link": "https://delvingbitcoin.org/t/delving-simplicity-part-programs-and-addresses/2113/1"
+    "source": "mailing_list",
+    "subject": "Re: [bitcoindev] Does GCC preclude a soft fork to handle timestamp overflow?",
+    "date": "2025-12-15",
+    "link": "https://gnusha.org/pi/bitcoindev/CAMZUoK=KqPTXCuBhy9O5YDXrLhRQMZJ25qAvTtRrE78s8SZniQ@mail.gmail.com"
   },
   "social_history": {
     "2011": {
@@ -172,10 +172,11 @@
       "soft-fork-activation": 2
     },
     "2025": {
-      "mempool-fees": 2,
-      "script-opcodes": 5,
-      "other": 1,
-      "taproot": 1
+      "other": 11,
+      "mempool-fees": 6,
+      "script-opcodes": 9,
+      "soft-fork-activation": 4,
+      "taproot": 3
     }
   }
 }

@@ -16,37 +16,37 @@
   },
   "roles": [],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-25T00:00:00",
+  "last_seen": "2026-05-27T00:00:00",
   "technical_focus": "None",
-  "total_commits": 2920.0,
+  "total_commits": 2922.0,
   "authored_commits": 1832.0,
-  "merge_commits": 1088.0,
+  "merge_commits": 1090.0,
   "total_additions": 69188.0,
   "total_deletions": 45604.0,
   "first_commit": "2016-01-23T13:58:17",
-  "last_commit": "2026-05-21T18:26:26",
+  "last_commit": "2026-05-26T00:47:45",
   "bips_authored": 18.0,
-  "avg_review_latency_days": 235.71955040298533,
-  "reviews_count": 2453.0,
-  "avg_approval_latency_days": 161.5914128050862,
-  "approvals_count": 1870.0,
-  "prs_authored": 539.0,
+  "avg_review_latency_days": 235.46764728453093,
+  "reviews_count": 2457.0,
+  "avg_approval_latency_days": 161.40439116002796,
+  "approvals_count": 1873.0,
+  "prs_authored": 540.0,
   "avg_pr_ack_velocity_days": 17.636560062056738,
   "avg_concept_lead_time_days": 39.67480501786235,
-  "review_reciprocity": 4.551020408163265,
-  "hybrid_score": 2.3909,
-  "impact_score": 64.0,
-  "threads_started": 25.0,
-  "replies_sent": 88.0,
-  "ml_threads": 24.0,
+  "review_reciprocity": 4.55,
+  "hybrid_score": 2.4439,
+  "impact_score": 65.0,
+  "threads_started": 43.0,
+  "replies_sent": 106.0,
+  "ml_threads": 42.0,
   "delving_threads": 1.0,
-  "ml_responses": 87.0,
+  "ml_responses": 105.0,
   "delving_responses": 1.0,
   "first_active": "2015-05-07T06:15:57",
-  "last_active": "2024-06-14T18:38:31.635000",
+  "last_active": "2026-04-21T13:17:58",
   "dev_type": "Protocol Designer",
   "global_first_active": "2015-05-07T06:15:57",
-  "global_last_active": "2026-05-21T18:26:26",
+  "global_last_active": "2026-05-26T00:47:45",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -311,10 +311,10 @@
     "link": "https://gnusha.org/pi/bitcoindev/CAL8tG==YbM8Lv4+iW3PVO34Dcs_kJ7CMbw9koOSr7GpOYmbE=Q@mail.gmail.com"
   },
   "last_message": {
-    "source": "delving",
-    "subject": "Re: BIP352: PSBT support",
-    "date": "2024-06-14",
-    "link": "https://delvingbitcoin.org/t/bip352-psbt-support/877/15"
+    "source": "mailing_list",
+    "subject": "[bitcoindev] Bitcoin Core v31.0 Released",
+    "date": "2026-04-21",
+    "link": "https://gnusha.org/pi/bitcoindev/27c7294e-a958-4255-b0dc-3ef541811458@achow101.com"
   },
   "social_history": {
     "2015": {
@@ -322,23 +322,20 @@
       "mining": 2,
       "scaling": 10,
       "segwit": 1,
-      "other": 4,
-      "soft-fork-activation": 1
+      "other": 5
     },
     "2016": {
-      "other": 7,
+      "other": 10,
       "multisig-threshold": 1,
-      "segwit": 2,
-      "soft-fork-activation": 3
+      "segwit": 2
     },
     "2017": {
       "hard-fork-block-size": 4,
-      "other": 7,
+      "other": 10,
       "mining": 2,
       "multisig-threshold": 1,
       "scaling": 1,
       "segwit": 3,
-      "soft-fork-activation": 3,
       "wallet-keys": 1
     },
     "2018": {
@@ -358,9 +355,9 @@
       "wallet-keys": 7
     },
     "2021": {
-      "other": 13,
+      "core-dev": 1,
+      "other": 14,
       "segwit": 1,
-      "soft-fork-activation": 2,
       "wallet-keys": 13
     },
     "2022": {
@@ -373,9 +370,23 @@
       "wallet-keys": 3
     },
     "2024": {
-      "other": 4,
+      "bip-process": 14,
+      "core-dev": 6,
+      "other": 8,
       "multisig-threshold": 3,
       "wallet-keys": 3
+    },
+    "2025": {
+      "bip-process": 1,
+      "core-dev": 5,
+      "multisig-threshold": 2,
+      "other": 1,
+      "segwit": 2,
+      "wallet-keys": 3
+    },
+    "2026": {
+      "core-dev": 2,
+      "other": 1
     }
   }
 }

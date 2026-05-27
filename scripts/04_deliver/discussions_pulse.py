@@ -1,7 +1,11 @@
 import json
 import os
+import re
 import pandas as pd
 from datetime import datetime
+
+# Strip "'NAME' via Bitcoin Development Mailing List" delivery-address artifacts
+_via_pat = re.compile(r"^'(.+)'\s+via\s+", re.IGNORECASE)
 
 # --- Configuration ---
 SOCIAL_THREADS_INPUT = "data/enriched/social_threads.parquet"
@@ -160,10 +164,21 @@ def _compute_window(df, window_days):
         })
 
     # --- Top Voices ---
-    voice_counts = w.groupby('author_name').size().sort_values(ascending=False)
+    # Group by canonical_id so the same person isn't split across name variants
+    # (e.g. "'conduition' via Bitcoin Development Mailing List" vs "conduition").
+    # For the display name, prefer a non-via author_name; fall back to stripping the via suffix.
+    def _best_name(grp):
+        names = grp['author_name'].dropna()
+        non_via = names[~names.str.contains(' via ', na=False, regex=False)]
+        raw = non_via.iloc[0] if len(non_via) > 0 else names.iloc[0] if len(names) > 0 else ''
+        m = _via_pat.match(str(raw))
+        return m.group(1).strip() if m else str(raw).strip()
+
+    name_map = {cid: _best_name(grp) for cid, grp in w.groupby('canonical_id')}
+    voice_counts = w.groupby('canonical_id').size().sort_values(ascending=False)
     top_voices = [
-        {"name": name, "posts": int(count)}
-        for name, count in voice_counts.head(8).items()
+        {"name": name_map.get(cid, cid), "posts": int(count)}
+        for cid, count in voice_counts.head(8).items()
     ]
 
     # --- Source Split ---

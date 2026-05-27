@@ -11,7 +11,7 @@
     "is_social_contributor": true,
     "is_sponsored": true,
     "maintainer_status": null,
-    "social_source": "delving",
+    "social_source": "Mixed",
     "sponsor_id": "chaincode"
   },
   "roles": [
@@ -19,7 +19,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-25T00:00:00",
+  "last_seen": "2026-05-27T00:00:00",
   "technical_focus": "Tests (QA)",
   "total_commits": 301.0,
   "authored_commits": 301.0,
@@ -29,24 +29,24 @@
   "first_commit": "2019-03-01T16:06:27",
   "last_commit": "2026-05-20T20:04:58",
   "bips_authored": 4.0,
-  "avg_review_latency_days": 415.8007133293612,
-  "reviews_count": 348.0,
+  "avg_review_latency_days": 414.5771341704906,
+  "reviews_count": 350.0,
   "avg_approval_latency_days": 105.42505498575498,
   "approvals_count": 244.0,
   "prs_authored": 129.0,
   "avg_pr_ack_velocity_days": 14.577175598357792,
   "avg_concept_lead_time_days": 18.135407175925927,
-  "review_reciprocity": 2.697674418604651,
-  "hybrid_score": 1.3909,
-  "impact_score": 37.0,
-  "threads_started": 83.0,
-  "replies_sent": 92.0,
-  "ml_threads": 6.0,
+  "review_reciprocity": 2.7131782945736433,
+  "hybrid_score": 1.5017,
+  "impact_score": 40.0,
+  "threads_started": 103.0,
+  "replies_sent": 153.0,
+  "ml_threads": 26.0,
   "delving_threads": 77.0,
-  "ml_responses": 32.0,
+  "ml_responses": 93.0,
   "delving_responses": 60.0,
   "first_active": "2020-04-24T10:00:16",
-  "last_active": "2026-04-27T17:03:09.154000",
+  "last_active": "2026-05-20T13:48:57",
   "dev_type": "Protocol Designer",
   "global_first_active": "2019-03-01T16:06:27",
   "global_last_active": "2026-05-20T20:04:58",
@@ -164,10 +164,10 @@
     "link": "https://gnusha.org/pi/bitcoindev/Dc8XgZU3_W8pUwgCBfL4uo9wLWlZOWBG9Q8iBUTcq9V4DRzItDzlEB5nNq8a6U64k2wVD4gPWrsYmnv3I2DEB7pXydGToN32UHUnrL5faa0=@protonmail.com"
   },
   "last_message": {
-    "source": "delving",
-    "subject": "Re: Great Consensus Cleanup Revival",
-    "date": "2026-04-27",
-    "link": "https://delvingbitcoin.org/t/great-consensus-cleanup-revival/710/94"
+    "source": "mailing_list",
+    "subject": "Re: [bitcoindev] PQC - What is our Goal, Even?",
+    "date": "2026-05-20",
+    "link": "https://gnusha.org/pi/bitcoindev/3TguePkqzkPWZeuW8j7nrZnDnhmDpYfIh22hbInFeyVRwPX0Ohh7wjsptoNMnJAKwysYUGaGOaQVVx7se5WEeO-nmUEpcWUC_jKBWQrx4tI=@protonmail.com"
   },
   "social_history": {
     "2020": {
@@ -195,35 +195,36 @@
       "script-opcodes": 7
     },
     "2024": {
-      "other": 23,
-      "consensus-cleanup": 24,
+      "other": 29,
+      "consensus-cleanup": 33,
+      "covenants": 1,
       "mempool-fees": 5,
-      "mining": 25,
+      "mining": 26,
       "script-opcodes": 28,
-      "security": 25,
+      "security": 31,
       "testing-devtools": 24,
       "utxo-sync": 21
     },
     "2025": {
-      "other": 61,
-      "consensus-cleanup": 18,
-      "covenants": 16,
-      "mempool-fees": 10,
-      "mining": 37,
-      "script-opcodes": 26,
-      "security": 19,
-      "testing-devtools": 23,
-      "utxo-sync": 13
+      "other": 100,
+      "consensus-cleanup": 31,
+      "covenants": 25,
+      "mempool-fees": 14,
+      "mining": 38,
+      "script-opcodes": 33,
+      "security": 23,
+      "testing-devtools": 27,
+      "utxo-sync": 18
     },
     "2026": {
-      "consensus-cleanup": 17,
-      "other": 19,
-      "covenants": 4,
+      "consensus-cleanup": 23,
+      "other": 32,
+      "covenants": 5,
       "mempool-fees": 16,
-      "mining": 11,
+      "mining": 16,
       "script-opcodes": 8,
       "security": 5,
-      "testing-devtools": 18,
+      "testing-devtools": 20,
       "utxo-sync": 17
     }
   }

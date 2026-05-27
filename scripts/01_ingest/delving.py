@@ -14,6 +14,16 @@ from scripts.utils.identity import resolver
 ARCHIVE_REPO_URL = "https://github.com/jamesob/delving-bitcoin-archive"
 ARCHIVE_PATH = "data/sources/delving"
 OUTPUT_PARQUET = "data/raw/social_delving.parquet"
+IDENTITY_CURATED_PATH = "metadata/identity_curated.json"
+
+
+def _load_bots():
+    """Return a lowercase set of bot/system usernames from identity_curated.json."""
+    if not os.path.exists(IDENTITY_CURATED_PATH):
+        return set()
+    with open(IDENTITY_CURATED_PATH) as f:
+        curated = json.load(f)
+    return {b.lower() for b in curated.get("special_nodes", {}).get("bots", [])}
 
 def setup_archive():
     """Clones or pulls the Delving Bitcoin archive repository."""
@@ -30,6 +40,7 @@ def map_author(username):
 
 def process_archive():
     print("Processing Delving archive files...")
+    BOTS = _load_bots()
     all_records = []
     posts_root = os.path.join(ARCHIVE_PATH, "archive", "posts")
     
@@ -38,6 +49,7 @@ def process_archive():
         return []
 
     count = 0
+    skipped_bots = 0
     for root, dirs, files in os.walk(posts_root):
         for file in files:
             if file.endswith(".json"):
@@ -57,7 +69,12 @@ def process_archive():
                     
                     author_name = post.get("name") or post.get("username")
                     author_username = post.get("username")
-                    
+
+                    # Skip known bot/system accounts at ingest time
+                    if author_username and author_username.lower() in BOTS:
+                        skipped_bots += 1
+                        continue
+
                     canonical_id = map_author(author_username)
                     
                     # Clean snippet
@@ -86,6 +103,8 @@ def process_archive():
                 except Exception as e:
                     print(f"Error processing {path}: {e}")
                     
+    if skipped_bots:
+        print(f"  Skipped {skipped_bots} post(s) from bot/system accounts.")
     return all_records
 
 def main():

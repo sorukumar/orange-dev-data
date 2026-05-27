@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-25T00:00:00",
+  "last_seen": "2026-05-27T00:00:00",
   "technical_focus": "None",
   "total_commits": 0.0,
   "authored_commits": 0.0,
@@ -36,19 +36,19 @@
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 3.0,
-  "hybrid_score": 0.3952,
+  "hybrid_score": 0.4138,
   "impact_score": 11.0,
   "threads_started": 18.0,
-  "replies_sent": 373.0,
+  "replies_sent": 388.0,
   "ml_threads": 10.0,
   "delving_threads": 8.0,
-  "ml_responses": 342.0,
+  "ml_responses": 357.0,
   "delving_responses": 31.0,
   "first_active": "2015-02-02T12:05:57",
-  "last_active": "2026-04-15T19:21:04",
+  "last_active": "2026-05-24T19:45:20",
   "dev_type": "Reviewer",
   "global_first_active": "2015-02-02T12:05:57",
-  "global_last_active": "2026-04-15T19:21:04",
+  "global_last_active": "2026-05-24T19:45:20",
   "github_location": null,
   "github_company": null,
   "github_bio": "Libbitcoin, Cryptoeconomics",
@@ -66,9 +66,9 @@
   },
   "last_message": {
     "source": "mailing_list",
-    "subject": "RE: [bitcoindev] Hornet Update: A declarative executable\n specification of Bitcoin consensus rules",
-    "date": "2026-04-15",
-    "link": "https://gnusha.org/pi/bitcoindev/006501dccd36$ea035fd0$be0a1f70$@voskuil.org"
+    "subject": "Re: [bitcoindev] Re: [BIP Draft] P2P UTXO Set Sharing",
+    "date": "2026-05-24",
+    "link": "https://gnusha.org/pi/bitcoindev/b1b6b197-899e-4dee-b75d-26fc7e1a40c7n@googlegroups.com"
   },
   "social_history": {
     "2015": {
@@ -146,7 +146,11 @@
       "utxo-sync": 4
     },
     "2026": {
-      "other": 1
+      "consensus-cleanup": 1,
+      "mining": 2,
+      "other": 4,
+      "p2p-network": 2,
+      "utxo-sync": 12
     }
   }
 }

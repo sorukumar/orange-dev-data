@@ -1,7 +1,7 @@
 {
   "display_name": "Alex Wied",
   "github_login_final": "centromere",
-  "delving_username_final": "olkurbatov",
+  "delving_username_final": "endothermicdev",
   "uuid": "auto_alex_wied",
   "badges": {
     "is_bip_author": null,
@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-25T00:00:00",
+  "last_seen": "2026-05-27T00:00:00",
   "technical_focus": "code",
   "total_commits": 2.0,
   "authored_commits": 2.0,
@@ -36,19 +36,19 @@
   "avg_pr_ack_velocity_days": 0.38570023148148147,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 0.0,
-  "hybrid_score": 0.0496,
+  "hybrid_score": 0.0544,
   "impact_score": 1.0,
-  "threads_started": 8.0,
-  "replies_sent": 20.0,
+  "threads_started": 0.0,
+  "replies_sent": 17.0,
   "ml_threads": 0.0,
-  "delving_threads": 8.0,
-  "ml_responses": 13.0,
-  "delving_responses": 7.0,
-  "first_active": "2024-01-22T18:30:22.523000",
-  "last_active": "2026-04-14T23:27:25",
+  "delving_threads": 0.0,
+  "ml_responses": 16.0,
+  "delving_responses": 1.0,
+  "first_active": "2025-12-16T18:33:26.624000",
+  "last_active": "2026-05-20T05:35:51",
   "dev_type": "Participant",
   "global_first_active": "2012-10-22T05:46:31",
-  "global_last_active": "2026-04-14T23:27:25",
+  "global_last_active": "2026-05-20T05:35:51",
   "github_location": "New Hampshire, USA",
   "github_company": null,
   "github_bio": null,
@@ -57,7 +57,7 @@
   "github_followers": 30.0,
   "is_top_50": false,
   "github_url": "https://github.com/centromere",
-  "delving_url": "https://delvingbitcoin.org/u/olkurbatov",
+  "delving_url": "https://delvingbitcoin.org/u/endothermicdev",
   "commit_history": {
     "2012": {
       "Database (Persistence)": 1.0,
@@ -66,35 +66,29 @@
   },
   "first_message": {
     "source": "delving",
-    "subject": "Untraceable Taprootized Atomic Swaps",
-    "date": "2024-01-22",
-    "link": "https://delvingbitcoin.org/t/untraceable-taprootized-atomic-swaps/458/1"
+    "subject": "Re: Gossip Observer: New project to monitor the Lightning P2P network",
+    "date": "2025-12-16",
+    "link": "https://delvingbitcoin.org/t/gossip-observer-new-project-to-monitor-the-lightning-p2p-network/2105/20"
   },
   "last_message": {
     "source": "mailing_list",
-    "subject": "Re: [bitcoindev] Deactivating ECDSA/Schnorr",
-    "date": "2026-04-14",
-    "link": "https://gnusha.org/pi/bitcoindev/a058151d-3134-47e5-96c7-3f79f6dab5b2n@googlegroups.com"
+    "subject": "Re: [bitcoindev] PQC: Lattice-based signatures",
+    "date": "2026-05-20",
+    "link": "https://gnusha.org/pi/bitcoindev/38c3ad3e-2358-49c9-be92-ae6d34ac45bbn@googlegroups.com"
   },
   "social_history": {
-    "2024": {
-      "atomic-swaps": 2,
-      "taproot": 2
-    },
     "2025": {
-      "atomic-swaps": 3,
-      "lightning": 3,
-      "other": 6
+      "lightning": 1,
+      "other": 1
     },
     "2026": {
-      "bitvm": 4,
-      "other": 8,
-      "dlc": 6,
-      "lightning": 6,
-      "multisig-threshold": 6,
-      "quantum": 10,
-      "signatures-sighash": 5,
-      "taproot": 6
+      "bitvm": 2,
+      "mempool-fees": 1,
+      "other": 1,
+      "quantum": 11,
+      "signatures-sighash": 3,
+      "taproot": 6,
+      "wallet-keys": 2
     }
   }
 }

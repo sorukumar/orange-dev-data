@@ -130,6 +130,12 @@ Reads from `data/enriched/`, writes lightweight JSON to `output/`.
   registry index → `output/shared/ecosystem_summary.json`.
 - **`generate_regional_evolution.py`** **[monthly only]**: Formats geospatial time-series
   data for the regional dashboard. Skipped in daily runs.
+- **`network_home_snapshot.py`** **[daily] [monthly]**: Builds a homepage-specific,
+  quality-guarded snapshot for orange-dev-network → `output/shared/network_home_snapshot.json`.
+  It enforces stricter active windows (`global_last_active`), computes period-over-period
+  deltas (current 30d vs previous 30d), filters bot-like identities in reviewer rankings,
+  collapses `auto_*/can_*` reviewer duplicates when slug-linked, and derives top reviewers
+  from timestamped review events (30-day window only) rather than lifetime totals.
 
 ---
 

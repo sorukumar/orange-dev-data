@@ -11,14 +11,14 @@
     "is_social_contributor": true,
     "is_sponsored": null,
     "maintainer_status": null,
-    "social_source": "github",
+    "social_source": "mailing_list",
     "sponsor_id": null
   },
   "roles": [
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-25T00:00:00",
+  "last_seen": "2026-05-27T00:00:00",
   "technical_focus": "Core Libs",
   "total_commits": 2.0,
   "authored_commits": 2.0,
@@ -36,18 +36,18 @@
   "avg_pr_ack_velocity_days": 0.016383101851851854,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 22.5,
-  "hybrid_score": 0.1789,
+  "hybrid_score": 0.1841,
   "impact_score": 5.0,
   "threads_started": 0.0,
-  "replies_sent": 0.0,
+  "replies_sent": 1.0,
   "ml_threads": 0.0,
   "delving_threads": 0.0,
-  "ml_responses": 0.0,
+  "ml_responses": 1.0,
   "delving_responses": 0.0,
-  "first_active": null,
-  "last_active": null,
+  "first_active": "2025-04-03T23:49:28",
+  "last_active": "2025-04-03T23:49:28",
   "dev_type": "Builder",
-  "global_first_active": "2025-12-30T20:12:26",
+  "global_first_active": "2025-04-03T23:49:28",
   "global_last_active": "2025-12-30T20:12:26",
   "github_location": "Los Angeles, CA",
   "github_company": null,
@@ -61,6 +61,23 @@
     "2025": {
       "Core Libs": 0.5,
       "Tests (QA)": 0.5
+    }
+  },
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoindev] Against Allowing Quantum Recovery of Bitcoin",
+    "date": "2025-04-03",
+    "link": "https://gnusha.org/pi/bitcoindev/50193bed-7134-4b4a-9c15-12c5dd559ad7n@googlegroups.com"
+  },
+  "last_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoindev] Against Allowing Quantum Recovery of Bitcoin",
+    "date": "2025-04-03",
+    "link": "https://gnusha.org/pi/bitcoindev/50193bed-7134-4b4a-9c15-12c5dd559ad7n@googlegroups.com"
+  },
+  "social_history": {
+    "2025": {
+      "quantum": 1
     }
   }
 }

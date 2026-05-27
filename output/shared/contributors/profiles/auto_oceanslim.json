@@ -11,14 +11,14 @@
     "is_social_contributor": true,
     "is_sponsored": null,
     "maintainer_status": null,
-    "social_source": "github",
+    "social_source": "mailing_list",
     "sponsor_id": null
   },
   "roles": [
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-25T00:00:00",
+  "last_seen": "2026-05-27T00:00:00",
   "technical_focus": "other",
   "total_commits": 0.0,
   "authored_commits": 0.0,
@@ -36,19 +36,19 @@
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": null,
-  "hybrid_score": 0.35,
-  "impact_score": 9.0,
-  "threads_started": 0.0,
+  "hybrid_score": 0.3634,
+  "impact_score": 10.0,
+  "threads_started": 1.0,
   "replies_sent": 0.0,
-  "ml_threads": 0.0,
+  "ml_threads": 1.0,
   "delving_threads": 0.0,
   "ml_responses": 0.0,
   "delving_responses": 0.0,
-  "first_active": null,
-  "last_active": null,
+  "first_active": "2025-04-29T07:18:07",
+  "last_active": "2025-04-29T07:18:07",
   "dev_type": "Participant",
-  "global_first_active": null,
-  "global_last_active": null,
+  "global_first_active": "2025-04-29T07:18:07",
+  "global_last_active": "2025-04-29T07:18:07",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -64,5 +64,22 @@
       "theme": "Other",
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0172.mediawiki"
     }
-  ]
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "[bitcoindev] BIP Proposal: Define Bitcoin Subunits as Satoshis/Sats",
+    "date": "2025-04-29",
+    "link": "https://gnusha.org/pi/bitcoindev/17076438-87eb-4531-81a1-e1850dffe277n@googlegroups.com"
+  },
+  "last_message": {
+    "source": "mailing_list",
+    "subject": "[bitcoindev] BIP Proposal: Define Bitcoin Subunits as Satoshis/Sats",
+    "date": "2025-04-29",
+    "link": "https://gnusha.org/pi/bitcoindev/17076438-87eb-4531-81a1-e1850dffe277n@googlegroups.com"
+  },
+  "social_history": {
+    "2025": {
+      "other": 1
+    }
+  }
 }

@@ -11,14 +11,14 @@
     "is_social_contributor": true,
     "is_sponsored": null,
     "maintainer_status": null,
-    "social_source": "github",
+    "social_source": "mailing_list",
     "sponsor_id": null
   },
   "roles": [
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-25T00:00:00",
+  "last_seen": "2026-05-27T00:00:00",
   "technical_focus": "Documentation",
   "total_commits": 6.0,
   "authored_commits": 6.0,
@@ -36,16 +36,16 @@
   "avg_pr_ack_velocity_days": 2.9717453703703702,
   "avg_concept_lead_time_days": 0.2883969907407407,
   "review_reciprocity": 1.25,
-  "hybrid_score": 0.1905,
-  "impact_score": 5.0,
-  "threads_started": 0.0,
-  "replies_sent": 0.0,
-  "ml_threads": 0.0,
+  "hybrid_score": 0.2113,
+  "impact_score": 6.0,
+  "threads_started": 1.0,
+  "replies_sent": 2.0,
+  "ml_threads": 1.0,
   "delving_threads": 0.0,
-  "ml_responses": 0.0,
+  "ml_responses": 2.0,
   "delving_responses": 0.0,
-  "first_active": null,
-  "last_active": null,
+  "first_active": "2025-08-31T17:25:47",
+  "last_active": "2025-09-02T19:44:07",
   "dev_type": "Builder",
   "global_first_active": "2024-03-25T06:39:22",
   "global_last_active": "2025-10-21T15:24:29",
@@ -65,6 +65,24 @@
     "2025": {
       "Documentation": 1.5,
       "Tests (QA)": 0.5
+    }
+  },
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "[bitcoindev] [BIP Proposal] Add BIP-0093 (Codex32) as application to BIP-0085",
+    "date": "2025-08-31",
+    "link": "https://gnusha.org/pi/bitcoindev/774faeb9-6c6b-4545-8071-56ec03e78cd0n@googlegroups.com"
+  },
+  "last_message": {
+    "source": "mailing_list",
+    "subject": "[bitcoindev] Re: [BIP Proposal] Add BIP-0093 (Codex32) as application\n to BIP-0085",
+    "date": "2025-09-02",
+    "link": "https://gnusha.org/pi/bitcoindev/4064eb1b-f430-4ccd-958e-aa03c653439dn@googlegroups.com"
+  },
+  "social_history": {
+    "2025": {
+      "bip-process": 1,
+      "wallet-keys": 3
     }
   }
 }

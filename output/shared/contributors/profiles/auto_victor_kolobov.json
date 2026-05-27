@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-25T00:00:00",
+  "last_seen": "2026-05-27T00:00:00",
   "technical_focus": "covenants",
   "total_commits": 0.0,
   "authored_commits": 0.0,
@@ -36,18 +36,18 @@
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": null,
-  "hybrid_score": 0.0,
+  "hybrid_score": 0.0102,
   "impact_score": 0.0,
-  "threads_started": 2.0,
+  "threads_started": 4.0,
   "replies_sent": 3.0,
-  "ml_threads": 0.0,
+  "ml_threads": 2.0,
   "delving_threads": 2.0,
   "ml_responses": 0.0,
   "delving_responses": 3.0,
-  "first_active": "2024-08-29T11:00:08.070000",
+  "first_active": "2024-08-29T08:18:28",
   "last_active": "2025-05-04T12:08:34.491000",
   "dev_type": "Participant",
-  "global_first_active": "2024-08-29T11:00:08.070000128",
+  "global_first_active": "2024-08-29T08:18:28",
   "global_last_active": "2025-05-04T12:08:34.491000064",
   "github_location": null,
   "github_company": null,
@@ -58,10 +58,10 @@
   "is_top_50": false,
   "delving_url": "https://delvingbitcoin.org/u/victorkstarkware",
   "first_message": {
-    "source": "delving",
-    "subject": "The path to general computation on Bitcoin (with OP_CAT)",
+    "source": "mailing_list",
+    "subject": "[bitcoindev] OP_CAT Research Fund sponsored by StarkWare",
     "date": "2024-08-29",
-    "link": "https://delvingbitcoin.org/t/the-path-to-general-computation-on-bitcoin-with-op-cat/1106/1"
+    "link": "https://gnusha.org/pi/bitcoindev/04b61777-7f9a-4714-b3f2-422f99e54f87n@googlegroups.com"
   },
   "last_message": {
     "source": "delving",
@@ -71,13 +71,16 @@
   },
   "social_history": {
     "2024": {
-      "bitvm": 1,
-      "covenants": 1
+      "bitvm": 2,
+      "covenants": 2,
+      "script-opcodes": 1,
+      "soft-fork-activation": 1,
+      "spam-filtering": 1
     },
     "2025": {
-      "bitvm": 4,
+      "bitvm": 5,
       "covenants": 3,
-      "l2-bridges": 1
+      "l2-bridges": 2
     }
   }
 }

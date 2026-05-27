@@ -161,6 +161,45 @@
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0149.mediawiki"
     }
   ],
+  "can_gregory_maxwell": [
+    {
+      "number": 9,
+      "title": "Version bits with timeout and delay",
+      "status": "Deployed",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0009.mediawiki"
+    },
+    {
+      "number": 173,
+      "title": "Base32 address format for native v0-16 witness outputs",
+      "status": "Deployed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0173.mediawiki"
+    }
+  ],
+  "can_rusty_russell": [
+    {
+      "number": 9,
+      "title": "Version bits with timeout and delay",
+      "status": "Deployed",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0009.mediawiki"
+    },
+    {
+      "number": 440,
+      "title": "Varops Budget For Script Runtime Constraint",
+      "status": "Draft",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0440.mediawiki"
+    },
+    {
+      "number": 441,
+      "title": "Restoration of disabled script (Tapleaf 0xC2)",
+      "status": "Draft",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0441.mediawiki"
+    }
+  ],
   "can_pieter_wuille": [
     {
       "number": 9,
@@ -382,45 +421,6 @@
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0125.mediawiki"
     }
   ],
-  "can_gregory_maxwell": [
-    {
-      "number": 9,
-      "title": "Version bits with timeout and delay",
-      "status": "Deployed",
-      "theme": "Other",
-      "link": "https://github.com/bitcoin/bips/blob/master/bip-0009.mediawiki"
-    },
-    {
-      "number": 173,
-      "title": "Base32 address format for native v0-16 witness outputs",
-      "status": "Deployed",
-      "theme": "Consensus & Soft Forks",
-      "link": "https://github.com/bitcoin/bips/blob/master/bip-0173.mediawiki"
-    }
-  ],
-  "can_rusty_russell": [
-    {
-      "number": 9,
-      "title": "Version bits with timeout and delay",
-      "status": "Deployed",
-      "theme": "Other",
-      "link": "https://github.com/bitcoin/bips/blob/master/bip-0009.mediawiki"
-    },
-    {
-      "number": 440,
-      "title": "Varops Budget For Script Runtime Constraint",
-      "status": "Draft",
-      "theme": "Consensus & Soft Forks",
-      "link": "https://github.com/bitcoin/bips/blob/master/bip-0440.mediawiki"
-    },
-    {
-      "number": 441,
-      "title": "Restoration of disabled script (Tapleaf 0xC2)",
-      "status": "Draft",
-      "theme": "Consensus & Soft Forks",
-      "link": "https://github.com/bitcoin/bips/blob/master/bip-0441.mediawiki"
-    }
-  ],
   "can_alan_reiner": [
     {
       "number": 10,
@@ -525,15 +525,6 @@
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0014.mediawiki"
     }
   ],
-  "can_nils_schneider": [
-    {
-      "number": 21,
-      "title": "URI Scheme",
-      "status": "Closed",
-      "theme": "Other",
-      "link": "https://github.com/bitcoin/bips/blob/master/bip-0021.mediawiki"
-    }
-  ],
   "can_matt_corallo": [
     {
       "number": 21,
@@ -590,6 +581,15 @@
       "status": "Complete",
       "theme": "Other",
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0353.mediawiki"
+    }
+  ],
+  "can_nils_schneider": [
+    {
+      "number": 21,
+      "title": "URI Scheme",
+      "status": "Closed",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0021.mediawiki"
     }
   ],
   "can_mike_hearn": [
@@ -654,15 +654,6 @@
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0036.mediawiki"
     }
   ],
-  "auto_mike_caldwell": [
-    {
-      "number": 38,
-      "title": "Passphrase-protected private key",
-      "status": "Deployed",
-      "theme": "Other",
-      "link": "https://github.com/bitcoin/bips/blob/master/bip-0038.mediawiki"
-    }
-  ],
   "can_aaron_voisine": [
     {
       "number": 38,
@@ -684,6 +675,15 @@
       "status": "Deployed",
       "theme": "P2P Network",
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0075.mediawiki"
+    }
+  ],
+  "auto_mike_caldwell": [
+    {
+      "number": 38,
+      "title": "Passphrase-protected private key",
+      "status": "Deployed",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0038.mediawiki"
     }
   ],
   "can_marek_palatinus": [
@@ -755,16 +755,7 @@
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0084.mediawiki"
     }
   ],
-  "auto_manuel_araoz": [
-    {
-      "number": 45,
-      "title": "Structure for Deterministic P2SH Multisignature Wallets",
-      "status": "Complete",
-      "theme": "Wallet & Keys",
-      "link": "https://github.com/bitcoin/bips/blob/master/bip-0045.mediawiki"
-    }
-  ],
-  "auto_matias_alejo_garcia": [
+  "auto_manuel_ar_oz": [
     {
       "number": 45,
       "title": "Structure for Deterministic P2SH Multisignature Wallets",
@@ -782,6 +773,24 @@
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0045.mediawiki"
     }
   ],
+  "auto_matias_alejo_garcia": [
+    {
+      "number": 45,
+      "title": "Structure for Deterministic P2SH Multisignature Wallets",
+      "status": "Complete",
+      "theme": "Wallet & Keys",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0045.mediawiki"
+    }
+  ],
+  "auto_thebora_kompanioni": [
+    {
+      "number": 46,
+      "title": "Address Scheme for Timelocked Fidelity Bonds",
+      "status": "Draft",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0046.mediawiki"
+    }
+  ],
   "can_chris_belcher": [
     {
       "number": 46,
@@ -796,15 +805,6 @@
       "status": "Draft",
       "theme": "Consensus & Soft Forks",
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0326.mediawiki"
-    }
-  ],
-  "auto_thebora_kompanioni": [
-    {
-      "number": 46,
-      "title": "Address Scheme for Timelocked Fidelity Bonds",
-      "status": "Draft",
-      "theme": "Other",
-      "link": "https://github.com/bitcoin/bips/blob/master/bip-0046.mediawiki"
     }
   ],
   "can_justus_ranvier": [
@@ -848,7 +848,7 @@
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0049.mediawiki"
     }
   ],
-  "auto_bogdan_penkovsky": [
+  "auto_michael_dubrovsky": [
     {
       "number": 52,
       "title": "Durable, Low Energy Bitcoin PoW",
@@ -857,7 +857,7 @@
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0052.mediawiki"
     }
   ],
-  "auto_michael_dubrovsky": [
+  "auto_bogdan_penkovsky": [
     {
       "number": 52,
       "title": "Durable, Low Energy Bitcoin PoW",
@@ -905,7 +905,7 @@
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0448.mediawiki"
     }
   ],
-  "auto_jean_pierre_rupp": [
+  "auto_ruben_de_vries": [
     {
       "number": 67,
       "title": "Deterministic Pay-to-script-hash multi-signature addresses through public key sorting",
@@ -930,13 +930,38 @@
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0113.mediawiki"
     }
   ],
-  "auto_ruben_de_vries": [
+  "auto_jean_pierre_rupp": [
     {
       "number": 67,
       "title": "Deterministic Pay-to-script-hash multi-signature addresses through public key sorting",
       "status": "Complete",
       "theme": "Script & Smart Contracts",
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0067.mediawiki"
+    }
+  ],
+  "auto_id_e8365f": [
+    {
+      "number": 68,
+      "title": "Relative lock-time using consensus-enforced sequence numbers",
+      "status": "Deployed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0068.mediawiki"
+    }
+  ],
+  "auto_nicolas_dorier": [
+    {
+      "number": 68,
+      "title": "Relative lock-time using consensus-enforced sequence numbers",
+      "status": "Deployed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0068.mediawiki"
+    },
+    {
+      "number": 78,
+      "title": "A Simple Payjoin Proposal",
+      "status": "Deployed",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0078.mediawiki"
     }
   ],
   "can_mark_friedenbach": [
@@ -981,15 +1006,6 @@
       "status": "Draft",
       "theme": "Consensus & Soft Forks",
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0117.mediawiki"
-    }
-  ],
-  "auto_id_e8365f": [
-    {
-      "number": 68,
-      "title": "Relative lock-time using consensus-enforced sequence numbers",
-      "status": "Deployed",
-      "theme": "Consensus & Soft Forks",
-      "link": "https://github.com/bitcoin/bips/blob/master/bip-0068.mediawiki"
     }
   ],
   "can_prayank": [
@@ -1041,22 +1057,6 @@
       "status": "Draft",
       "theme": "Other",
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0320.mediawiki"
-    }
-  ],
-  "auto_nicolas_dorier": [
-    {
-      "number": 68,
-      "title": "Relative lock-time using consensus-enforced sequence numbers",
-      "status": "Deployed",
-      "theme": "Consensus & Soft Forks",
-      "link": "https://github.com/bitcoin/bips/blob/master/bip-0068.mediawiki"
-    },
-    {
-      "number": 78,
-      "title": "A Simple Payjoin Proposal",
-      "status": "Deployed",
-      "theme": "Other",
-      "link": "https://github.com/bitcoin/bips/blob/master/bip-0078.mediawiki"
     }
   ],
   "auto_kristov_atlas": [
@@ -1426,6 +1426,15 @@
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0091.mediawiki"
     }
   ],
+  "auto_leon_olsson_curr_and_pearlwort_sneed": [
+    {
+      "number": 93,
+      "title": "codex32: Checksummed SSSS-aware BIP32 seeds",
+      "status": "Draft",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0093.mediawiki"
+    }
+  ],
   "auto_andrew_poelstra": [
     {
       "number": 93,
@@ -1440,15 +1449,6 @@
       "status": "Draft",
       "theme": "Wallet & Keys",
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0379.mediawiki"
-    }
-  ],
-  "auto_leon_olsson_curr_and_pearlwort_sneed": [
-    {
-      "number": 93,
-      "title": "codex32: Checksummed SSSS-aware BIP32 seeds",
-      "status": "Draft",
-      "theme": "Other",
-      "link": "https://github.com/bitcoin/bips/blob/master/bip-0093.mediawiki"
     }
   ],
   "can_fabian_jahr": [
@@ -1783,7 +1783,7 @@
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0128.mediawiki"
     }
   ],
-  "auto_peter_coinkite_inc": [
+  "auto_aaron_chen": [
     {
       "number": 129,
       "title": "Bitcoin Secure Multisig Setup (BSMS)",
@@ -1792,7 +1792,7 @@
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0129.mediawiki"
     }
   ],
-  "auto_marko_bencun": [
+  "auto_peter_coinkite_inc": [
     {
       "number": 129,
       "title": "Bitcoin Secure Multisig Setup (BSMS)",
@@ -1810,7 +1810,7 @@
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0129.mediawiki"
     }
   ],
-  "auto_aaron_chen": [
+  "auto_hugo_nguyen": [
     {
       "number": 129,
       "title": "Bitcoin Secure Multisig Setup (BSMS)",
@@ -1819,7 +1819,7 @@
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0129.mediawiki"
     }
   ],
-  "auto_hugo_nguyen": [
+  "auto_marko_bencun": [
     {
       "number": 129,
       "title": "Bitcoin Secure Multisig Setup (BSMS)",
@@ -1873,6 +1873,15 @@
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0135.mediawiki"
     }
   ],
+  "auto_dan_pape": [
+    {
+      "number": 136,
+      "title": "Bech32 Encoded Tx Position References",
+      "status": "Draft",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0136.mediawiki"
+    }
+  ],
   "auto_id_fc7737": [
     {
       "number": 136,
@@ -1919,15 +1928,6 @@
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0324.mediawiki"
     }
   ],
-  "auto_dan_pape": [
-    {
-      "number": 136,
-      "title": "Bech32 Encoded Tx Position References",
-      "status": "Draft",
-      "theme": "Other",
-      "link": "https://github.com/bitcoin/bips/blob/master/bip-0136.mediawiki"
-    }
-  ],
   "auto_christopher_gilliard": [
     {
       "number": 137,
@@ -1944,33 +1944,6 @@
       "status": "Deployed",
       "theme": "Other",
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0155.mediawiki"
-    }
-  ],
-  "auto_bradley_denby": [
-    {
-      "number": 156,
-      "title": "Dandelion - Privacy Enhancing Routing",
-      "status": "Closed",
-      "theme": "Privacy",
-      "link": "https://github.com/bitcoin/bips/blob/master/bip-0156.mediawiki"
-    }
-  ],
-  "auto_giulia_fanti": [
-    {
-      "number": 156,
-      "title": "Dandelion - Privacy Enhancing Routing",
-      "status": "Closed",
-      "theme": "Privacy",
-      "link": "https://github.com/bitcoin/bips/blob/master/bip-0156.mediawiki"
-    }
-  ],
-  "auto_shaileshh_bojja_venkatakrishnan": [
-    {
-      "number": 156,
-      "title": "Dandelion - Privacy Enhancing Routing",
-      "status": "Closed",
-      "theme": "Privacy",
-      "link": "https://github.com/bitcoin/bips/blob/master/bip-0156.mediawiki"
     }
   ],
   "auto_andrew_miller": [
@@ -1991,7 +1964,7 @@
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0156.mediawiki"
     }
   ],
-  "auto_pramod_viswanath": [
+  "auto_giulia_fanti": [
     {
       "number": 156,
       "title": "Dandelion - Privacy Enhancing Routing",
@@ -2000,20 +1973,31 @@
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0156.mediawiki"
     }
   ],
-  "can_olaoluwa_osuntokun": [
+  "auto_bradley_denby": [
     {
-      "number": 157,
-      "title": "Client Side Block Filtering",
-      "status": "Deployed",
-      "theme": "Other",
-      "link": "https://github.com/bitcoin/bips/blob/master/bip-0157.mediawiki"
-    },
+      "number": 156,
+      "title": "Dandelion - Privacy Enhancing Routing",
+      "status": "Closed",
+      "theme": "Privacy",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0156.mediawiki"
+    }
+  ],
+  "auto_shaileshh_bojja_venkatakrishnan": [
     {
-      "number": 158,
-      "title": "Compact Block Filters for Light Clients",
-      "status": "Deployed",
-      "theme": "Scaling & Lightning",
-      "link": "https://github.com/bitcoin/bips/blob/master/bip-0158.mediawiki"
+      "number": 156,
+      "title": "Dandelion - Privacy Enhancing Routing",
+      "status": "Closed",
+      "theme": "Privacy",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0156.mediawiki"
+    }
+  ],
+  "auto_pramod_viswanath": [
+    {
+      "number": 156,
+      "title": "Dandelion - Privacy Enhancing Routing",
+      "status": "Closed",
+      "theme": "Privacy",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0156.mediawiki"
     }
   ],
   "can_jim_posen": [
@@ -2041,6 +2025,22 @@
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0158.mediawiki"
     }
   ],
+  "can_olaoluwa_osuntokun": [
+    {
+      "number": 157,
+      "title": "Client Side Block Filtering",
+      "status": "Deployed",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0157.mediawiki"
+    },
+    {
+      "number": 158,
+      "title": "Compact Block Filters for Light Clients",
+      "status": "Deployed",
+      "theme": "Scaling & Lightning",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0158.mediawiki"
+    }
+  ],
   "auto_oceanslim": [
     {
       "number": 172,
@@ -2050,7 +2050,7 @@
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0172.mediawiki"
     }
   ],
-  "auto_nicholas_gregory": [
+  "can_omar_shibli": [
     {
       "number": 175,
       "title": "Pay to Contract Protocol",
@@ -2059,7 +2059,7 @@
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0175.mediawiki"
     }
   ],
-  "can_omar_shibli": [
+  "auto_nicholas_gregory": [
     {
       "number": 175,
       "title": "Pay to Contract Protocol",
@@ -2086,7 +2086,7 @@
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0179.mediawiki"
     }
   ],
-  "auto_tony_cai": [
+  "auto_matthew_black": [
     {
       "number": 197,
       "title": "Hashed Time-Locked Collateral Contract",
@@ -2095,7 +2095,7 @@
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0197.mediawiki"
     }
   ],
-  "auto_matthew_black": [
+  "auto_tony_cai": [
     {
       "number": 197,
       "title": "Hashed Time-Locked Collateral Contract",
@@ -2145,7 +2145,7 @@
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0301.mediawiki"
     }
   ],
-  "auto_jan_apek": [
+  "auto_pavel_moravec": [
     {
       "number": 310,
       "title": "Stratum protocol extensions",
@@ -2154,7 +2154,7 @@
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0310.mediawiki"
     }
   ],
-  "auto_pavel_moravec": [
+  "auto_jan_apek": [
     {
       "number": 310,
       "title": "Stratum protocol extensions",
@@ -2204,6 +2204,15 @@
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0340.mediawiki"
     }
   ],
+  "auto_elliott_jin": [
+    {
+      "number": 327,
+      "title": "MuSig2 for BIP340-compatible Multi-Signatures",
+      "status": "Deployed",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0327.mediawiki"
+    }
+  ],
   "can_jonas_nick": [
     {
       "number": 327,
@@ -2232,15 +2241,6 @@
       "status": "Deployed",
       "theme": "Consensus & Soft Forks",
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0342.mediawiki"
-    }
-  ],
-  "auto_elliott_jin": [
-    {
-      "number": 327,
-      "title": "MuSig2 for BIP340-compatible Multi-Signatures",
-      "status": "Deployed",
-      "theme": "Other",
-      "link": "https://github.com/bitcoin/bips/blob/master/bip-0327.mediawiki"
     }
   ],
   "auto_craig_raw": [
@@ -2387,15 +2387,6 @@
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0442.mediawiki"
     }
   ],
-  "auto_armin_sabouri": [
-    {
-      "number": 347,
-      "title": "OP_CAT in Tapscript",
-      "status": "Complete",
-      "theme": "Consensus & Soft Forks",
-      "link": "https://github.com/bitcoin/bips/blob/master/bip-0347.mediawiki"
-    }
-  ],
   "can_ethan_heilman": [
     {
       "number": 347,
@@ -2410,6 +2401,15 @@
       "status": "Draft",
       "theme": "Consensus & Soft Forks",
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0360.mediawiki"
+    }
+  ],
+  "auto_armin_sabouri": [
+    {
+      "number": 347,
+      "title": "OP_CAT in Tapscript",
+      "status": "Complete",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0347.mediawiki"
     }
   ],
   "can_lloyd_fournier": [
@@ -2428,22 +2428,6 @@
       "status": "Draft",
       "theme": "Other",
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0351.mediawiki"
-    }
-  ],
-  "can_sebastian_falbesoner": [
-    {
-      "number": 352,
-      "title": "Silent Payments",
-      "status": "Complete",
-      "theme": "Other",
-      "link": "https://github.com/bitcoin/bips/blob/master/bip-0352.mediawiki"
-    },
-    {
-      "number": 374,
-      "title": "Discrete Log Equality Proofs",
-      "status": "Draft",
-      "theme": "Other",
-      "link": "https://github.com/bitcoin/bips/blob/master/bip-0374.mediawiki"
     }
   ],
   "can_ruben_somsen": [
@@ -2478,6 +2462,22 @@
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0375.mediawiki"
     }
   ],
+  "can_sebastian_falbesoner": [
+    {
+      "number": 352,
+      "title": "Silent Payments",
+      "status": "Complete",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0352.mediawiki"
+    },
+    {
+      "number": 374,
+      "title": "Discrete Log Equality Proofs",
+      "status": "Draft",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0374.mediawiki"
+    }
+  ],
   "can_bastien_teinturier": [
     {
       "number": 353,
@@ -2485,15 +2485,6 @@
       "status": "Complete",
       "theme": "Other",
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0353.mediawiki"
-    }
-  ],
-  "auto_isabel_foxen_duke": [
-    {
-      "number": 360,
-      "title": "Pay-to-Merkle-Root (P2MR)",
-      "status": "Draft",
-      "theme": "Consensus & Soft Forks",
-      "link": "https://github.com/bitcoin/bips/blob/master/bip-0360.mediawiki"
     }
   ],
   "auto_hunter_beast": [
@@ -2505,7 +2496,16 @@
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0360.mediawiki"
     }
   ],
-  "can_jameson_lopp": [
+  "auto_isabel_foxen_duke": [
+    {
+      "number": 360,
+      "title": "Pay-to-Merkle-Root (P2MR)",
+      "status": "Draft",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0360.mediawiki"
+    }
+  ],
+  "auto_ian_quantum": [
     {
       "number": 361,
       "title": "Post Quantum Migration and Legacy Signature Sunset",
@@ -2514,7 +2514,16 @@
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0361.mediawiki"
     }
   ],
-  "auto_joe_ross": [
+  "auto_steve_vaile": [
+    {
+      "number": 361,
+      "title": "Post Quantum Migration and Legacy Signature Sunset",
+      "status": "Draft",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0361.mediawiki"
+    }
+  ],
+  "can_jameson_lopp": [
     {
       "number": 361,
       "title": "Post Quantum Migration and Legacy Signature Sunset",
@@ -2532,25 +2541,16 @@
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0361.mediawiki"
     }
   ],
+  "auto_joe_ross": [
+    {
+      "number": 361,
+      "title": "Post Quantum Migration and Legacy Signature Sunset",
+      "status": "Draft",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0361.mediawiki"
+    }
+  ],
   "auto_pierre_luc_dallaire_demers": [
-    {
-      "number": 361,
-      "title": "Post Quantum Migration and Legacy Signature Sunset",
-      "status": "Draft",
-      "theme": "Consensus & Soft Forks",
-      "link": "https://github.com/bitcoin/bips/blob/master/bip-0361.mediawiki"
-    }
-  ],
-  "auto_ian_quantum": [
-    {
-      "number": 361,
-      "title": "Post Quantum Migration and Legacy Signature Sunset",
-      "status": "Draft",
-      "theme": "Consensus & Soft Forks",
-      "link": "https://github.com/bitcoin/bips/blob/master/bip-0361.mediawiki"
-    }
-  ],
-  "auto_steve_vaile": [
     {
       "number": 361,
       "title": "Post Quantum Migration and Legacy Signature Sunset",
@@ -2652,15 +2652,6 @@
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0442.mediawiki"
     }
   ],
-  "auto_yuri_s_villas_boas": [
-    {
-      "number": 450,
-      "title": "Formosa\u2014Seed encoding by themed mnemonic stories",
-      "status": "Draft",
-      "theme": "Privacy",
-      "link": "https://github.com/bitcoin/bips/blob/master/bip-0450.mediawiki"
-    }
-  ],
   "auto_andr_fidencio_gon_alves": [
     {
       "number": 450,
@@ -2670,7 +2661,16 @@
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0450.mediawiki"
     }
   ],
-  "auto_bubb1es": [
+  "auto_yuri_s_villas_boas": [
+    {
+      "number": 450,
+      "title": "Formosa\u2014Seed encoding by themed mnemonic stories",
+      "status": "Draft",
+      "theme": "Privacy",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0450.mediawiki"
+    }
+  ],
+  "auto_haris": [
     {
       "number": 451,
       "title": "Dust UTXO Disposal Protocol",
@@ -2679,7 +2679,7 @@
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0451.mediawiki"
     }
   ],
-  "auto_haris": [
+  "auto_bubb1es": [
     {
       "number": 451,
       "title": "Dust UTXO Disposal Protocol",
