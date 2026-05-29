@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "Core Libs",
   "total_commits": 150.0,
   "authored_commits": 150.0,
@@ -27,16 +27,22 @@
   "total_deletions": 1741.0,
   "first_commit": "2018-03-01T19:49:08",
   "last_commit": "2019-02-28T18:44:01",
+  "p2016_authored_commits": 105.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
   "avg_review_latency_days": 33.931908705378504,
   "reviews_count": 261.0,
   "avg_approval_latency_days": 28.977899421296296,
   "approvals_count": 175.0,
+  "p2016_reviews_count": 261.0,
+  "modern_reviews_count": 0.0,
   "prs_authored": 108.0,
   "avg_pr_ack_velocity_days": 7.438425659855258,
   "avg_concept_lead_time_days": 7.938462888291517,
   "review_reciprocity": 2.4166666666666665,
   "hybrid_score": 0.4767,
+  "p2016_hybrid_score": 0.4767,
+  "modern_hybrid_score": 0.2076,
   "impact_score": 13.0,
   "threads_started": 0.0,
   "replies_sent": 0.0,
@@ -47,6 +53,30 @@
   "first_active": null,
   "last_active": null,
   "dev_type": "Builder",
+  "expertise_domains": [
+    "Infrastructure",
+    "Wallet",
+    "Cryptography"
+  ],
+  "expertise_by_source": {
+    "code": {
+      "Consensus": 0.008,
+      "Cryptography": 0.01,
+      "Infrastructure": 0.934,
+      "Network": 0.005,
+      "Wallet": 0.044
+    }
+  },
+  "expertise_domain_scores": {
+    "Infrastructure": 0.9331,
+    "Wallet": 0.044
+  },
+  "p2016_posts": 0.0,
+  "modern_posts": 0.0,
+  "p2016_ml_posts": 0.0,
+  "p2016_delving_posts": 0.0,
+  "modern_ml_posts": 0.0,
+  "modern_delving_posts": 0.0,
   "global_first_active": "2018-03-01T19:49:08",
   "global_last_active": "2019-02-28T18:44:01",
   "github_location": "Taiwan",

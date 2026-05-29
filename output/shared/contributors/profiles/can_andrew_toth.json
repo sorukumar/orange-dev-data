@@ -19,7 +19,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "Tests (QA)",
   "total_commits": 121.0,
   "authored_commits": 121.0,
@@ -28,16 +28,22 @@
   "total_deletions": 633.0,
   "first_commit": "2018-12-01T18:00:00",
   "last_commit": "2026-03-21T15:21:27",
+  "p2016_authored_commits": 91.0,
+  "modern_authored_commits": 64.0,
   "bips_authored": 2.0,
-  "avg_review_latency_days": 403.46622569174656,
-  "reviews_count": 151.0,
-  "avg_approval_latency_days": 386.52545334507045,
-  "approvals_count": 86.0,
+  "avg_review_latency_days": 399.78526165960994,
+  "reviews_count": 152.0,
+  "avg_approval_latency_days": 383.89295932077187,
+  "approvals_count": 87.0,
+  "p2016_reviews_count": 152.0,
+  "modern_reviews_count": 122.0,
   "prs_authored": 59.0,
   "avg_pr_ack_velocity_days": 17.677450617283952,
   "avg_concept_lead_time_days": 25.780489174836603,
-  "review_reciprocity": 2.559322033898305,
-  "hybrid_score": 1.0099,
+  "review_reciprocity": 2.5762711864406778,
+  "hybrid_score": 1.0101,
+  "p2016_hybrid_score": 0.4591,
+  "modern_hybrid_score": 0.4618,
   "impact_score": 27.0,
   "threads_started": 12.0,
   "replies_sent": 27.0,
@@ -48,6 +54,38 @@
   "first_active": "2024-05-20T17:55:19.232000",
   "last_active": "2026-04-08T15:38:12.011000",
   "dev_type": "Builder",
+  "expertise_domains": [
+    "Infrastructure",
+    "Privacy",
+    "Wallet"
+  ],
+  "expertise_by_source": {
+    "bips": {
+      "Infrastructure": 1.0
+    },
+    "code": {
+      "Consensus": 0.255,
+      "Infrastructure": 0.663,
+      "Network": 0.033,
+      "Wallet": 0.049
+    },
+    "discussion": {
+      "Privacy": 0.667,
+      "Wallet": 0.333
+    }
+  },
+  "expertise_domain_scores": {
+    "Consensus": 0.0765,
+    "Infrastructure": 0.6989,
+    "Privacy": 0.1334,
+    "Wallet": 0.0813
+  },
+  "p2016_posts": 39.0,
+  "modern_posts": 39.0,
+  "p2016_ml_posts": 5.0,
+  "p2016_delving_posts": 34.0,
+  "modern_ml_posts": 5.0,
+  "modern_delving_posts": 34.0,
   "global_first_active": "2018-12-01T18:00:00",
   "global_last_active": "2026-04-08T15:38:12.011000064",
   "github_location": "Toronto",

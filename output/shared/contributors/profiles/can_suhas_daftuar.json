@@ -19,7 +19,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "Core Libs",
   "total_commits": 603.0,
   "authored_commits": 603.0,
@@ -28,16 +28,22 @@
   "total_deletions": 8712.0,
   "first_commit": "2014-09-08T17:29:14",
   "last_commit": "2025-11-29T19:07:23",
+  "p2016_authored_commits": 377.0,
+  "modern_authored_commits": 119.0,
   "bips_authored": 4.0,
   "avg_review_latency_days": 100.85893798632567,
   "reviews_count": 548.0,
   "avg_approval_latency_days": 30.747205401234567,
   "approvals_count": 301.0,
+  "p2016_reviews_count": 489.0,
+  "modern_reviews_count": 35.0,
   "prs_authored": 209.0,
   "avg_pr_ack_velocity_days": 5.384773209064328,
   "avg_concept_lead_time_days": 9.707705399061032,
   "review_reciprocity": 2.6220095693779903,
   "hybrid_score": 1.4386,
+  "p2016_hybrid_score": 0.6437,
+  "modern_hybrid_score": 0.5133,
   "impact_score": 38.0,
   "threads_started": 19.0,
   "replies_sent": 37.0,
@@ -48,6 +54,41 @@
   "first_active": "2015-07-30T11:41:55",
   "last_active": "2025-11-19T15:29:46.556000",
   "dev_type": "Protocol Designer",
+  "expertise_domains": [
+    "Infrastructure",
+    "Network",
+    "Mempool"
+  ],
+  "expertise_by_source": {
+    "bips": {
+      "Infrastructure": 0.5,
+      "Network": 0.5
+    },
+    "code": {
+      "Consensus": 0.122,
+      "Infrastructure": 0.684,
+      "Network": 0.17,
+      "Wallet": 0.023
+    },
+    "discussion": {
+      "Mempool": 0.738,
+      "Mining": 0.148,
+      "Network": 0.115
+    }
+  },
+  "expertise_domain_scores": {
+    "Consensus": 0.0366,
+    "Infrastructure": 0.4552,
+    "Mempool": 0.1476,
+    "Mining": 0.0296,
+    "Network": 0.324
+  },
+  "p2016_posts": 52.0,
+  "modern_posts": 32.0,
+  "p2016_ml_posts": 20.0,
+  "p2016_delving_posts": 32.0,
+  "modern_ml_posts": 0.0,
+  "modern_delving_posts": 32.0,
   "global_first_active": "2014-09-08T17:29:14",
   "global_last_active": "2025-11-29T19:07:23",
   "github_location": null,

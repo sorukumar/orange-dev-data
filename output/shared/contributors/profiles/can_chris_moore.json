@@ -19,7 +19,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "Core Libs",
   "total_commits": 42.0,
   "authored_commits": 39.0,
@@ -28,16 +28,22 @@
   "total_deletions": 225.0,
   "first_commit": "2011-01-20T18:49:44",
   "last_commit": "2019-06-14T02:33:28",
+  "p2016_authored_commits": 10.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
   "avg_review_latency_days": 145.72388362794612,
   "reviews_count": 16.0,
   "avg_approval_latency_days": 0.10998842592592592,
   "approvals_count": 1.0,
+  "p2016_reviews_count": 11.0,
+  "modern_reviews_count": 0.0,
   "prs_authored": 48.0,
   "avg_pr_ack_velocity_days": 94.30479370915033,
   "avg_concept_lead_time_days": 5.010969650205762,
   "review_reciprocity": 0.3333333333333333,
   "hybrid_score": 1.387,
+  "p2016_hybrid_score": 0.3056,
+  "modern_hybrid_score": 0.1339,
   "impact_score": 37.0,
   "threads_started": 2.0,
   "replies_sent": 37.0,
@@ -48,6 +54,33 @@
   "first_active": "2014-03-13T10:37:56",
   "last_active": "2019-07-26T11:48:36",
   "dev_type": "Builder",
+  "expertise_domains": [
+    "Infrastructure",
+    "Mining",
+    "Script"
+  ],
+  "expertise_by_source": {
+    "code": {
+      "Infrastructure": 0.88,
+      "Wallet": 0.12
+    },
+    "discussion": {
+      "Mining": 0.5,
+      "Script": 0.5
+    }
+  },
+  "expertise_domain_scores": {
+    "Infrastructure": 0.528,
+    "Mining": 0.2,
+    "Script": 0.2,
+    "Wallet": 0.072
+  },
+  "p2016_posts": 11.0,
+  "modern_posts": 0.0,
+  "p2016_ml_posts": 11.0,
+  "p2016_delving_posts": 0.0,
+  "modern_ml_posts": 0.0,
+  "modern_delving_posts": 0.0,
   "global_first_active": "2011-01-20T18:49:44",
   "global_last_active": "2019-07-26T11:48:36",
   "github_location": "Canada",

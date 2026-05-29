@@ -126,6 +126,11 @@ class SubsystemResolver:
         primary, _, _ = self.score_with_details(text)
         return primary
 
+    def get_expertise_domain(self, slug: str) -> str:
+        """Returns the expertise domain for a subsystem slug.
+        Falls back to 'Infrastructure' for unknown slugs."""
+        return self.subsystems.get(slug, {}).get('expertise_domain', 'Infrastructure')
+
 # Singleton instance for easy access
 _RESOLVER = None
 

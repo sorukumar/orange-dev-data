@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-05-23T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "quantum",
   "total_commits": 0.0,
   "authored_commits": 0.0,
@@ -27,28 +27,54 @@
   "total_deletions": null,
   "first_commit": null,
   "last_commit": null,
+  "p2016_authored_commits": 0.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
   "avg_review_latency_days": null,
   "reviews_count": null,
   "avg_approval_latency_days": null,
   "approvals_count": null,
+  "p2016_reviews_count": null,
+  "modern_reviews_count": null,
   "prs_authored": null,
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": null,
   "hybrid_score": 0.0,
+  "p2016_hybrid_score": 0.0,
+  "modern_hybrid_score": 0.0,
   "impact_score": 0.0,
   "threads_started": 4.0,
-  "replies_sent": 2.0,
+  "replies_sent": 4.0,
   "ml_threads": 0.0,
   "delving_threads": 4.0,
   "ml_responses": 0.0,
-  "delving_responses": 2.0,
+  "delving_responses": 4.0,
   "first_active": "2026-05-22T01:04:56.742000",
-  "last_active": "2026-05-26T21:14:43.619000",
+  "last_active": "2026-05-28T23:17:20.579000",
   "dev_type": "Participant",
+  "expertise_domains": [
+    "Cryptography",
+    "Consensus"
+  ],
+  "expertise_by_source": {
+    "discussion": {
+      "Consensus": 0.2,
+      "Cryptography": 0.8
+    }
+  },
+  "expertise_domain_scores": {
+    "Consensus": 0.2,
+    "Cryptography": 0.8
+  },
+  "p2016_posts": 8.0,
+  "modern_posts": 8.0,
+  "p2016_ml_posts": 0.0,
+  "p2016_delving_posts": 8.0,
+  "modern_ml_posts": 0.0,
+  "modern_delving_posts": 8.0,
   "global_first_active": "2026-05-22T01:04:56.742000128",
-  "global_last_active": "2026-05-26T21:14:43.619000064",
+  "global_last_active": "2026-05-28T23:17:20.579000064",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -66,13 +92,13 @@
   "last_message": {
     "source": "delving",
     "subject": "Re: P2WOTS: Post Quantum UTXO Winternitz Signatures",
-    "date": "2026-05-26",
-    "link": "https://delvingbitcoin.org/t/p2wots-post-quantum-utxo-winternitz-signatures/2530/3"
+    "date": "2026-05-28",
+    "link": "https://delvingbitcoin.org/t/p2wots-post-quantum-utxo-winternitz-signatures/2530/6"
   },
   "social_history": {
     "2026": {
-      "quantum": 6,
-      "segwit": 2
+      "quantum": 8,
+      "segwit": 4
     }
   }
 }

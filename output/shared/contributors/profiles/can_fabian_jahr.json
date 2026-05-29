@@ -19,7 +19,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "Tests (QA)",
   "total_commits": 421.0,
   "authored_commits": 421.0,
@@ -28,16 +28,22 @@
   "total_deletions": 3641.0,
   "first_commit": "2019-07-10T19:44:26",
   "last_commit": "2026-05-20T14:39:06",
+  "p2016_authored_commits": 289.0,
+  "modern_authored_commits": 169.0,
   "bips_authored": 1.0,
-  "avg_review_latency_days": 135.6322178780933,
-  "reviews_count": 549.0,
+  "avg_review_latency_days": 139.83972067285592,
+  "reviews_count": 550.0,
   "avg_approval_latency_days": 104.43438926531013,
   "approvals_count": 476.0,
-  "prs_authored": 157.0,
+  "p2016_reviews_count": 550.0,
+  "modern_reviews_count": 273.0,
+  "prs_authored": 158.0,
   "avg_pr_ack_velocity_days": 12.6440988372093,
   "avg_concept_lead_time_days": 27.34062605218855,
-  "review_reciprocity": 3.4968152866242037,
+  "review_reciprocity": 3.481012658227848,
   "hybrid_score": 0.9312,
+  "p2016_hybrid_score": 0.598,
+  "modern_hybrid_score": 0.6512,
   "impact_score": 25.0,
   "threads_started": 11.0,
   "replies_sent": 21.0,
@@ -48,6 +54,34 @@
   "first_active": "2023-01-14T14:34:38",
   "last_active": "2026-05-24T18:50:28",
   "dev_type": "Builder",
+  "expertise_domains": [
+    "Infrastructure",
+    "Consensus",
+    "Wallet"
+  ],
+  "expertise_by_source": {
+    "bips": {
+      "Infrastructure": 1.0
+    },
+    "code": {
+      "Consensus": 0.081,
+      "Cryptography": 0.013,
+      "Infrastructure": 0.839,
+      "Network": 0.012,
+      "Wallet": 0.055
+    }
+  },
+  "expertise_domain_scores": {
+    "Consensus": 0.0304,
+    "Infrastructure": 0.9396,
+    "Wallet": 0.0206
+  },
+  "p2016_posts": 32.0,
+  "modern_posts": 31.0,
+  "p2016_ml_posts": 20.0,
+  "p2016_delving_posts": 12.0,
+  "modern_ml_posts": 19.0,
+  "modern_delving_posts": 12.0,
   "global_first_active": "2019-07-10T19:44:26",
   "global_last_active": "2026-05-24T18:50:28",
   "github_location": "Berlin",

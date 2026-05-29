@@ -6,7 +6,7 @@
   "badges": {
     "is_bip_author": null,
     "is_core_committer": null,
-    "is_core_contributor": true,
+    "is_core_contributor": null,
     "is_maintainer": null,
     "is_social_contributor": true,
     "is_sponsored": null,
@@ -18,8 +18,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
-  "technical_focus": "Documentation",
+  "last_seen": "2026-05-29T00:00:00",
+  "technical_focus": "code",
   "total_commits": 5.0,
   "authored_commits": 5.0,
   "merge_commits": 0.0,
@@ -27,16 +27,22 @@
   "total_deletions": 7.0,
   "first_commit": "2018-04-05T08:38:57",
   "last_commit": "2018-04-30T09:08:55",
+  "p2016_authored_commits": 3.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
   "avg_review_latency_days": null,
   "reviews_count": 0.0,
   "avg_approval_latency_days": null,
   "approvals_count": 0.0,
+  "p2016_reviews_count": 0.0,
+  "modern_reviews_count": 0.0,
   "prs_authored": 3.0,
   "avg_pr_ack_velocity_days": 0.43288580246913577,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 0.0,
   "hybrid_score": 0.113,
+  "p2016_hybrid_score": 0.1129,
+  "modern_hybrid_score": 0.033,
   "impact_score": 3.0,
   "threads_started": 0.0,
   "replies_sent": 0.0,
@@ -47,6 +53,23 @@
   "first_active": null,
   "last_active": null,
   "dev_type": "Builder",
+  "expertise_domains": [
+    "Infrastructure"
+  ],
+  "expertise_by_source": {
+    "code": {
+      "Infrastructure": 1.0
+    }
+  },
+  "expertise_domain_scores": {
+    "Infrastructure": 1.0
+  },
+  "p2016_posts": 0.0,
+  "modern_posts": 0.0,
+  "p2016_ml_posts": 0.0,
+  "p2016_delving_posts": 0.0,
+  "modern_ml_posts": 0.0,
+  "modern_delving_posts": 0.0,
   "global_first_active": "2018-04-05T08:38:57",
   "global_last_active": "2018-04-30T09:08:55",
   "github_location": null,

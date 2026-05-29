@@ -19,7 +19,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "Consensus (Domain Logic)",
   "total_commits": 7.0,
   "authored_commits": 7.0,
@@ -28,16 +28,22 @@
   "total_deletions": 5.0,
   "first_commit": "2014-01-01T18:53:04",
   "last_commit": "2021-04-06T11:06:41",
+  "p2016_authored_commits": 5.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 2.0,
   "avg_review_latency_days": 447.5338888888889,
   "reviews_count": 37.0,
   "avg_approval_latency_days": 110.82721485690236,
   "approvals_count": 21.0,
+  "p2016_reviews_count": 30.0,
+  "modern_reviews_count": 2.0,
   "prs_authored": 8.0,
   "avg_pr_ack_velocity_days": 0.030327932098765432,
   "avg_concept_lead_time_days": 0.08222222222222222,
   "review_reciprocity": 4.625,
   "hybrid_score": 0.9463,
+  "p2016_hybrid_score": 0.3644,
+  "modern_hybrid_score": 0.1804,
   "impact_score": 25.0,
   "threads_started": 14.0,
   "replies_sent": 125.0,
@@ -48,6 +54,36 @@
   "first_active": "2011-06-13T03:55:04",
   "last_active": "2026-04-13T10:57:41.510000",
   "dev_type": "Builder",
+  "expertise_domains": [
+    "Consensus",
+    "Infrastructure",
+    "L2"
+  ],
+  "expertise_by_source": {
+    "bips": {
+      "Consensus": 1.0
+    },
+    "code": {
+      "Consensus": 0.286,
+      "Infrastructure": 0.714
+    },
+    "discussion": {
+      "Cryptography": 0.435,
+      "L2": 0.565
+    }
+  },
+  "expertise_domain_scores": {
+    "Consensus": 0.5858,
+    "Cryptography": 0.087,
+    "Infrastructure": 0.2142,
+    "L2": 0.113
+  },
+  "p2016_posts": 67.0,
+  "modern_posts": 12.0,
+  "p2016_ml_posts": 58.0,
+  "p2016_delving_posts": 9.0,
+  "modern_ml_posts": 3.0,
+  "modern_delving_posts": 9.0,
   "global_first_active": "2011-06-13T03:55:04",
   "global_last_active": "2026-04-13T10:57:41.510000128",
   "github_location": "Zurich, Switzerland",

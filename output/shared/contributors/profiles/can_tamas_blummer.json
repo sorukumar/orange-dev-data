@@ -6,20 +6,20 @@
   "badges": {
     "is_bip_author": null,
     "is_core_committer": null,
-    "is_core_contributor": true,
+    "is_core_contributor": null,
     "is_maintainer": null,
     "is_social_contributor": true,
     "is_sponsored": null,
     "maintainer_status": null,
-    "social_source": "mailing_list",
+    "social_source": "github",
     "sponsor_id": null
   },
   "roles": [
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
-  "technical_focus": "Node & RPC (App/Interface)",
+  "last_seen": "2026-05-29T00:00:00",
+  "technical_focus": "code",
   "total_commits": 3.0,
   "authored_commits": 3.0,
   "merge_commits": 0.0,
@@ -27,16 +27,22 @@
   "total_deletions": 4.0,
   "first_commit": "2013-06-11T21:10:22",
   "last_commit": "2018-02-27T10:43:46",
+  "p2016_authored_commits": 1.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
   "avg_review_latency_days": 811.7661406893004,
   "reviews_count": 3.0,
   "avg_approval_latency_days": null,
   "approvals_count": 0.0,
+  "p2016_reviews_count": 3.0,
+  "modern_reviews_count": 0.0,
   "prs_authored": 2.0,
   "avg_pr_ack_velocity_days": 0.5463715277777778,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 1.5,
-  "hybrid_score": 0.2961,
+  "hybrid_score": 0.296,
+  "p2016_hybrid_score": 0.1733,
+  "modern_hybrid_score": 0.058,
   "impact_score": 8.0,
   "threads_started": 14.0,
   "replies_sent": 162.0,
@@ -47,6 +53,33 @@
   "first_active": "2013-05-26T21:57:38",
   "last_active": "2019-09-21T16:16:25",
   "dev_type": "Builder",
+  "expertise_domains": [
+    "Infrastructure",
+    "Script",
+    "Mining"
+  ],
+  "expertise_by_source": {
+    "code": {
+      "Infrastructure": 0.667,
+      "Network": 0.333
+    },
+    "discussion": {
+      "Mining": 0.5,
+      "Script": 0.5
+    }
+  },
+  "expertise_domain_scores": {
+    "Infrastructure": 0.4002,
+    "Mining": 0.2,
+    "Network": 0.1998,
+    "Script": 0.2
+  },
+  "p2016_posts": 54.0,
+  "modern_posts": 0.0,
+  "p2016_ml_posts": 54.0,
+  "p2016_delving_posts": 0.0,
+  "modern_ml_posts": 0.0,
+  "modern_delving_posts": 0.0,
   "global_first_active": "2013-05-26T21:57:38",
   "global_last_active": "2019-09-21T16:16:25",
   "github_location": "Germany",

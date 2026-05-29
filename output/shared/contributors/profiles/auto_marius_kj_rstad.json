@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "Documentation",
   "total_commits": 17.0,
   "authored_commits": 17.0,
@@ -27,16 +27,22 @@
   "total_deletions": 289.0,
   "first_commit": "2014-06-08T15:37:53",
   "last_commit": "2019-11-22T16:48:49",
+  "p2016_authored_commits": 2.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
   "avg_review_latency_days": 3.287901055124892,
   "reviews_count": 16.0,
   "avg_approval_latency_days": 1.660943287037037,
   "approvals_count": 6.0,
+  "p2016_reviews_count": 6.0,
+  "modern_reviews_count": 1.0,
   "prs_authored": 20.0,
   "avg_pr_ack_velocity_days": 0.2808984375,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 0.8,
   "hybrid_score": 0.2517,
+  "p2016_hybrid_score": 0.1823,
+  "modern_hybrid_score": 0.1189,
   "impact_score": 7.0,
   "threads_started": 0.0,
   "replies_sent": 0.0,
@@ -47,6 +53,31 @@
   "first_active": null,
   "last_active": null,
   "dev_type": "Builder",
+  "expertise_domains": [
+    "Infrastructure",
+    "Consensus",
+    "Cryptography"
+  ],
+  "expertise_by_source": {
+    "code": {
+      "Consensus": 0.012,
+      "Cryptography": 0.012,
+      "Infrastructure": 0.963,
+      "Network": 0.012
+    }
+  },
+  "expertise_domain_scores": {
+    "Consensus": 0.012,
+    "Cryptography": 0.012,
+    "Infrastructure": 0.964,
+    "Network": 0.012
+  },
+  "p2016_posts": 0.0,
+  "modern_posts": 0.0,
+  "p2016_ml_posts": 0.0,
+  "p2016_delving_posts": 0.0,
+  "modern_ml_posts": 0.0,
+  "modern_delving_posts": 0.0,
   "global_first_active": "2014-06-08T15:37:53",
   "global_last_active": "2019-11-22T16:48:49",
   "github_location": null,

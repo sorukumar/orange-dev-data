@@ -16,7 +16,7 @@
   },
   "roles": [],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "None",
   "total_commits": 0.0,
   "authored_commits": 0.0,
@@ -25,16 +25,22 @@
   "total_deletions": null,
   "first_commit": null,
   "last_commit": null,
+  "p2016_authored_commits": 0.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
   "avg_review_latency_days": 1952.4601028806585,
   "reviews_count": 4.0,
   "avg_approval_latency_days": 2226.2337471064816,
   "approvals_count": 2.0,
+  "p2016_reviews_count": 4.0,
+  "modern_reviews_count": 4.0,
   "prs_authored": 1.0,
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 4.0,
   "hybrid_score": 0.0886,
+  "p2016_hybrid_score": 0.1094,
+  "modern_hybrid_score": 0.1271,
   "impact_score": 2.0,
   "threads_started": 15.0,
   "replies_sent": 46.0,
@@ -45,6 +51,26 @@
   "first_active": "2018-05-21T03:35:28",
   "last_active": "2025-12-10T14:15:51.084000",
   "dev_type": "Participant",
+  "expertise_domains": [
+    "Consensus",
+    "L2"
+  ],
+  "expertise_by_source": {
+    "discussion": {
+      "Consensus": 0.516,
+      "L2": 0.484
+    }
+  },
+  "expertise_domain_scores": {
+    "Consensus": 0.516,
+    "L2": 0.484
+  },
+  "p2016_posts": 61.0,
+  "modern_posts": 48.0,
+  "p2016_ml_posts": 24.0,
+  "p2016_delving_posts": 37.0,
+  "modern_ml_posts": 11.0,
+  "modern_delving_posts": 37.0,
   "global_first_active": "2018-05-21T03:35:28",
   "global_last_active": "2025-12-10T14:15:51.084000",
   "github_location": null,

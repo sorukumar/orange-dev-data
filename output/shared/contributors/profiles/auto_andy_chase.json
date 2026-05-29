@@ -19,7 +19,7 @@
     "BIP Author"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "None",
   "total_commits": 0.0,
   "authored_commits": 0.0,
@@ -28,16 +28,22 @@
   "total_deletions": null,
   "first_commit": null,
   "last_commit": null,
+  "p2016_authored_commits": 0.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 1.0,
   "avg_review_latency_days": 1072.9299074074074,
   "reviews_count": 6.0,
   "avg_approval_latency_days": null,
   "approvals_count": 0.0,
+  "p2016_reviews_count": 1.0,
+  "modern_reviews_count": 0.0,
   "prs_authored": 4.0,
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 1.5,
   "hybrid_score": 0.4481,
+  "p2016_hybrid_score": 0.0907,
+  "modern_hybrid_score": 0.0792,
   "impact_score": 12.0,
   "threads_started": 3.0,
   "replies_sent": 11.0,
@@ -48,6 +54,33 @@
   "first_active": "2015-08-25T18:20:28",
   "last_active": "2016-01-18T22:23:31",
   "dev_type": "Participant",
+  "expertise_domains": [
+    "Infrastructure",
+    "Ecosystem",
+    "Consensus"
+  ],
+  "expertise_by_source": {
+    "bips": {
+      "Infrastructure": 1.0
+    },
+    "discussion": {
+      "Consensus": 0.143,
+      "Ecosystem": 0.786,
+      "Privacy": 0.071
+    }
+  },
+  "expertise_domain_scores": {
+    "Consensus": 0.0409,
+    "Ecosystem": 0.2246,
+    "Infrastructure": 0.7143,
+    "Privacy": 0.0203
+  },
+  "p2016_posts": 1.0,
+  "modern_posts": 0.0,
+  "p2016_ml_posts": 1.0,
+  "p2016_delving_posts": 0.0,
+  "modern_ml_posts": 0.0,
+  "modern_delving_posts": 0.0,
   "global_first_active": "2015-08-25T18:20:28",
   "global_last_active": "2016-01-18T22:23:31",
   "github_location": "Tigard, OR",

@@ -19,7 +19,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "P2P Network (Infrastructure)",
   "total_commits": 68.0,
   "authored_commits": 68.0,
@@ -28,16 +28,22 @@
   "total_deletions": 561.0,
   "first_commit": "2018-05-21T19:02:40",
   "last_commit": "2022-11-14T09:45:52",
+  "p2016_authored_commits": 42.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 1.0,
   "avg_review_latency_days": 187.71359365331918,
   "reviews_count": 312.0,
   "avg_approval_latency_days": 110.65005456745713,
   "approvals_count": 266.0,
+  "p2016_reviews_count": 312.0,
+  "modern_reviews_count": 57.0,
   "prs_authored": 29.0,
   "avg_pr_ack_velocity_days": 27.0624751984127,
   "avg_concept_lead_time_days": 42.84460099902534,
   "review_reciprocity": 10.758620689655173,
   "hybrid_score": 0.7902,
+  "p2016_hybrid_score": 0.4508,
+  "modern_hybrid_score": 0.2089,
   "impact_score": 21.0,
   "threads_started": 2.0,
   "replies_sent": 7.0,
@@ -48,6 +54,36 @@
   "first_active": "2018-04-02T17:18:07",
   "last_active": "2023-02-02T02:40:04",
   "dev_type": "Builder",
+  "expertise_domains": [
+    "Infrastructure",
+    "Network",
+    "L2"
+  ],
+  "expertise_by_source": {
+    "bips": {
+      "Infrastructure": 1.0
+    },
+    "code": {
+      "Consensus": 0.012,
+      "Infrastructure": 0.5,
+      "Network": 0.488
+    },
+    "discussion": {
+      "L2": 0.256,
+      "Network": 0.744
+    }
+  },
+  "expertise_domain_scores": {
+    "Infrastructure": 0.65,
+    "L2": 0.0512,
+    "Network": 0.2952
+  },
+  "p2016_posts": 9.0,
+  "modern_posts": 0.0,
+  "p2016_ml_posts": 9.0,
+  "p2016_delving_posts": 0.0,
+  "modern_ml_posts": 0.0,
+  "modern_delving_posts": 0.0,
   "global_first_active": "2018-04-02T17:18:07",
   "global_last_active": "2023-02-02T02:40:04",
   "github_location": null,

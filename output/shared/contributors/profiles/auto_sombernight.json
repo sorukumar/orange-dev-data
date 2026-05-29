@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "Consensus (Domain Logic)",
   "total_commits": 2.0,
   "authored_commits": 2.0,
@@ -27,16 +27,22 @@
   "total_deletions": 4.0,
   "first_commit": "2023-02-14T14:28:08",
   "last_commit": "2026-02-11T16:16:50",
+  "p2016_authored_commits": 2.0,
+  "modern_authored_commits": 1.0,
   "bips_authored": 0.0,
   "avg_review_latency_days": 453.85570265830347,
   "reviews_count": 13.0,
   "avg_approval_latency_days": null,
   "approvals_count": 0.0,
+  "p2016_reviews_count": 13.0,
+  "modern_reviews_count": 2.0,
   "prs_authored": 4.0,
   "avg_pr_ack_velocity_days": 0.47248263888888886,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 3.25,
   "hybrid_score": 0.1781,
+  "p2016_hybrid_score": 0.1856,
+  "modern_hybrid_score": 0.1634,
   "impact_score": 5.0,
   "threads_started": 4.0,
   "replies_sent": 1.0,
@@ -47,6 +53,32 @@
   "first_active": "2018-11-08T04:37:50",
   "last_active": "2021-03-14T10:13:32",
   "dev_type": "Builder",
+  "expertise_domains": [
+    "Wallet",
+    "Consensus",
+    "Privacy"
+  ],
+  "expertise_by_source": {
+    "code": {
+      "Consensus": 0.5,
+      "Wallet": 0.5
+    },
+    "discussion": {
+      "Privacy": 0.377,
+      "Wallet": 0.623
+    }
+  },
+  "expertise_domain_scores": {
+    "Consensus": 0.3,
+    "Privacy": 0.1508,
+    "Wallet": 0.5492
+  },
+  "p2016_posts": 5.0,
+  "modern_posts": 0.0,
+  "p2016_ml_posts": 5.0,
+  "p2016_delving_posts": 0.0,
+  "modern_ml_posts": 0.0,
+  "modern_delving_posts": 0.0,
   "global_first_active": "2018-11-08T04:37:50",
   "global_last_active": "2026-02-11T16:16:50",
   "github_location": null,

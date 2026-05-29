@@ -20,7 +20,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "Core Libs",
   "total_commits": 3582.0,
   "authored_commits": 2999.0,
@@ -29,16 +29,22 @@
   "total_deletions": 80822.0,
   "first_commit": "2011-03-17T21:51:59",
   "last_commit": "2026-03-10T18:09:27",
+  "p2016_authored_commits": 1160.0,
+  "modern_authored_commits": 310.0,
   "bips_authored": 27.0,
   "avg_review_latency_days": 127.15835650454602,
   "reviews_count": 4260.0,
   "avg_approval_latency_days": 120.61540550653788,
   "approvals_count": 2419.0,
+  "p2016_reviews_count": 2801.0,
+  "modern_reviews_count": 444.0,
   "prs_authored": 931.0,
   "avg_pr_ack_velocity_days": 9.56404445631529,
   "avg_concept_lead_time_days": 11.095038614388725,
   "review_reciprocity": 4.575725026852846,
   "hybrid_score": 3.7867,
+  "p2016_hybrid_score": 1.0741,
+  "modern_hybrid_score": 0.9914,
   "impact_score": 100.0,
   "threads_started": 140.0,
   "replies_sent": 551.0,
@@ -49,6 +55,46 @@
   "first_active": "2011-06-17T05:31:25",
   "last_active": "2026-05-23T14:57:01.104000",
   "dev_type": "Protocol Designer",
+  "expertise_domains": [
+    "Consensus",
+    "Infrastructure",
+    "Mempool"
+  ],
+  "expertise_by_source": {
+    "bips": {
+      "Consensus": 0.556,
+      "Infrastructure": 0.111,
+      "Network": 0.037,
+      "Privacy": 0.222,
+      "Wallet": 0.074
+    },
+    "code": {
+      "Consensus": 0.111,
+      "Cryptography": 0.02,
+      "Infrastructure": 0.758,
+      "Network": 0.092,
+      "Wallet": 0.02
+    },
+    "discussion": {
+      "Mempool": 0.56,
+      "Mining": 0.44
+    }
+  },
+  "expertise_domain_scores": {
+    "Consensus": 0.3112,
+    "Infrastructure": 0.2828,
+    "Mempool": 0.112,
+    "Mining": 0.088,
+    "Network": 0.0461,
+    "Privacy": 0.111,
+    "Wallet": 0.043
+  },
+  "p2016_posts": 346.0,
+  "modern_posts": 194.0,
+  "p2016_ml_posts": 172.0,
+  "p2016_delving_posts": 174.0,
+  "modern_ml_posts": 20.0,
+  "modern_delving_posts": 174.0,
   "global_first_active": "2011-03-17T21:51:59",
   "global_last_active": "2026-05-23T14:57:01.104000",
   "github_location": null,

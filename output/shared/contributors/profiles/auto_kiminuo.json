@@ -1,5 +1,5 @@
 {
-  "display_name": "Kiminuo",
+  "display_name": "kiminuo",
   "github_login_final": "kiminuo",
   "delving_username_final": null,
   "uuid": "auto_kiminuo",
@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "Tests (QA)",
   "total_commits": 84.0,
   "authored_commits": 84.0,
@@ -27,16 +27,22 @@
   "total_deletions": 1274.0,
   "first_commit": "2020-02-25T19:05:48",
   "last_commit": "2023-06-21T19:27:00",
+  "p2016_authored_commits": 47.0,
+  "modern_authored_commits": 1.0,
   "bips_authored": 0.0,
   "avg_review_latency_days": 114.76816933221099,
   "reviews_count": 66.0,
   "avg_approval_latency_days": 101.33460813492063,
   "approvals_count": 31.0,
+  "p2016_reviews_count": 66.0,
+  "modern_reviews_count": 0.0,
   "prs_authored": 32.0,
   "avg_pr_ack_velocity_days": 4.839795657726692,
   "avg_concept_lead_time_days": 2.930066550925926,
   "review_reciprocity": 2.0625,
   "hybrid_score": 0.3895,
+  "p2016_hybrid_score": 0.3931,
+  "modern_hybrid_score": 0.2543,
   "impact_score": 10.0,
   "threads_started": 0.0,
   "replies_sent": 1.0,
@@ -47,6 +53,35 @@
   "first_active": "2023-09-08T09:36:16",
   "last_active": "2023-09-08T09:36:16",
   "dev_type": "Builder",
+  "expertise_domains": [
+    "Infrastructure",
+    "Ecosystem",
+    "Consensus"
+  ],
+  "expertise_by_source": {
+    "code": {
+      "Consensus": 0.03,
+      "Infrastructure": 0.901,
+      "Network": 0.006,
+      "Wallet": 0.063
+    },
+    "discussion": {
+      "Consensus": 0.33,
+      "Ecosystem": 0.67
+    }
+  },
+  "expertise_domain_scores": {
+    "Consensus": 0.15,
+    "Ecosystem": 0.268,
+    "Infrastructure": 0.5406,
+    "Wallet": 0.0378
+  },
+  "p2016_posts": 1.0,
+  "modern_posts": 1.0,
+  "p2016_ml_posts": 1.0,
+  "p2016_delving_posts": 0.0,
+  "modern_ml_posts": 1.0,
+  "modern_delving_posts": 0.0,
   "global_first_active": "2020-02-25T19:05:48",
   "global_last_active": "2023-09-08T09:36:16",
   "github_location": null,

@@ -19,7 +19,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "Consensus (Domain Logic)",
   "total_commits": 42.0,
   "authored_commits": 42.0,
@@ -28,16 +28,22 @@
   "total_deletions": 185.0,
   "first_commit": "2016-01-22T17:46:11",
   "last_commit": "2020-09-11T21:34:02",
+  "p2016_authored_commits": 30.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 6.0,
   "avg_review_latency_days": 616.5665203791608,
   "reviews_count": 79.0,
   "avg_approval_latency_days": 428.03442569444445,
   "approvals_count": 35.0,
+  "p2016_reviews_count": 75.0,
+  "modern_reviews_count": 0.0,
   "prs_authored": 93.0,
   "avg_pr_ack_velocity_days": 13.103833333333332,
   "avg_concept_lead_time_days": 22.354290123456792,
   "review_reciprocity": 0.8494623655913979,
   "hybrid_score": 1.6,
+  "p2016_hybrid_score": 0.6728,
+  "modern_hybrid_score": 0.1746,
   "impact_score": 43.0,
   "threads_started": 44.0,
   "replies_sent": 202.0,
@@ -48,6 +54,35 @@
   "first_active": "2015-07-22T12:00:41",
   "last_active": "2019-05-26T12:24:13",
   "dev_type": "Protocol Designer",
+  "expertise_domains": [
+    "Consensus",
+    "Infrastructure",
+    "Network"
+  ],
+  "expertise_by_source": {
+    "bips": {
+      "Consensus": 1.0
+    },
+    "code": {
+      "Consensus": 0.361,
+      "Infrastructure": 0.617,
+      "Network": 0.011,
+      "Wallet": 0.011
+    },
+    "discussion": {
+      "Consensus": 1.0
+    }
+  },
+  "expertise_domain_scores": {
+    "Consensus": 0.8083,
+    "Infrastructure": 0.1851
+  },
+  "p2016_posts": 162.0,
+  "modern_posts": 0.0,
+  "p2016_ml_posts": 162.0,
+  "p2016_delving_posts": 0.0,
+  "modern_ml_posts": 0.0,
+  "modern_delving_posts": 0.0,
   "global_first_active": "2015-07-22T12:00:41",
   "global_last_active": "2020-09-11T21:34:02",
   "github_location": null,

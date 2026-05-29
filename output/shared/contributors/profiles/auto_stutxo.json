@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "Documentation",
   "total_commits": 1.0,
   "authored_commits": 1.0,
@@ -27,16 +27,22 @@
   "total_deletions": 1.0,
   "first_commit": "2025-07-13T22:13:04",
   "last_commit": "2025-07-13T22:13:04",
+  "p2016_authored_commits": 1.0,
+  "modern_authored_commits": 1.0,
   "bips_authored": 0.0,
   "avg_review_latency_days": 1231.477566550926,
   "reviews_count": 3.0,
   "avg_approval_latency_days": null,
   "approvals_count": 0.0,
+  "p2016_reviews_count": 3.0,
+  "modern_reviews_count": 3.0,
   "prs_authored": 4.0,
   "avg_pr_ack_velocity_days": 0.2677314814814815,
   "avg_concept_lead_time_days": 0.2748611111111111,
   "review_reciprocity": 0.75,
   "hybrid_score": 0.1113,
+  "p2016_hybrid_score": 0.115,
+  "modern_hybrid_score": 0.1334,
   "impact_score": 3.0,
   "threads_started": 1.0,
   "replies_sent": 1.0,
@@ -47,6 +53,31 @@
   "first_active": "2024-12-17T18:25:43",
   "last_active": "2024-12-30T18:57:15",
   "dev_type": "Builder",
+  "expertise_domains": [
+    "Infrastructure",
+    "Mempool",
+    "Script"
+  ],
+  "expertise_by_source": {
+    "code": {
+      "Infrastructure": 1.0
+    },
+    "discussion": {
+      "Mempool": 0.806,
+      "Script": 0.194
+    }
+  },
+  "expertise_domain_scores": {
+    "Infrastructure": 0.6,
+    "Mempool": 0.3224,
+    "Script": 0.0776
+  },
+  "p2016_posts": 2.0,
+  "modern_posts": 2.0,
+  "p2016_ml_posts": 2.0,
+  "p2016_delving_posts": 0.0,
+  "modern_ml_posts": 2.0,
+  "modern_delving_posts": 0.0,
   "global_first_active": "2024-12-17T18:25:43",
   "global_last_active": "2025-07-13T22:13:04",
   "github_location": null,

@@ -19,7 +19,7 @@
     "BIP Author"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "None",
   "total_commits": 0.0,
   "authored_commits": 0.0,
@@ -28,16 +28,22 @@
   "total_deletions": null,
   "first_commit": null,
   "last_commit": null,
+  "p2016_authored_commits": 0.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 3.0,
   "avg_review_latency_days": 1385.2815166666667,
   "reviews_count": 20.0,
   "avg_approval_latency_days": 148.73193055555555,
   "approvals_count": 4.0,
+  "p2016_reviews_count": 20.0,
+  "modern_reviews_count": 14.0,
   "prs_authored": 6.0,
   "avg_pr_ack_velocity_days": 44.95344328703704,
   "avg_concept_lead_time_days": 89.69445601851852,
   "review_reciprocity": 3.3333333333333335,
-  "hybrid_score": 0.8594,
+  "hybrid_score": 0.8593,
+  "p2016_hybrid_score": 0.1882,
+  "modern_hybrid_score": 0.2326,
   "impact_score": 23.0,
   "threads_started": 5.0,
   "replies_sent": 19.0,
@@ -48,6 +54,30 @@
   "first_active": "2021-01-16T00:15:27",
   "last_active": "2026-04-14T01:27:16",
   "dev_type": "Reviewer",
+  "expertise_domains": [
+    "Privacy",
+    "Wallet"
+  ],
+  "expertise_by_source": {
+    "bips": {
+      "Privacy": 0.667,
+      "Wallet": 0.333
+    },
+    "discussion": {
+      "Privacy": 0.237,
+      "Wallet": 0.762
+    }
+  },
+  "expertise_domain_scores": {
+    "Privacy": 0.5443,
+    "Wallet": 0.4557
+  },
+  "p2016_posts": 24.0,
+  "modern_posts": 7.0,
+  "p2016_ml_posts": 22.0,
+  "p2016_delving_posts": 2.0,
+  "modern_ml_posts": 5.0,
+  "modern_delving_posts": 2.0,
   "global_first_active": "2021-01-16T00:15:27",
   "global_last_active": "2026-04-14T01:27:16",
   "github_location": null,

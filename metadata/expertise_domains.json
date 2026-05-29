@@ -1,0 +1,91 @@
+{
+  "_comment": "Canonical expertise domain definitions. Single source of truth for domain names, colors, and the crosswalk from git commit categories and BIP themes to domains. Subsystem slug → domain is stored in subsystems.json (expertise_domain field per entry). Edit this file — not Python scripts or JS files — when domain definitions change.",
+  "domains": [
+    {
+      "id": "Consensus",
+      "name": "Consensus",
+      "color": "#E07A5F",
+      "commit_categories": ["Consensus (Domain Logic)"],
+      "bip_themes": ["Consensus & Soft Forks"]
+    },
+    {
+      "id": "Script",
+      "name": "Script & Covenants",
+      "color": "#f59e0b",
+      "commit_categories": [],
+      "bip_themes": ["Script & Smart Contracts"]
+    },
+    {
+      "id": "L2",
+      "name": "Layer 2",
+      "color": "#10b981",
+      "commit_categories": [],
+      "bip_themes": ["Scaling & Lightning"]
+    },
+    {
+      "id": "Privacy",
+      "name": "Privacy",
+      "color": "#9F86C0",
+      "commit_categories": [],
+      "bip_themes": ["Privacy"]
+    },
+    {
+      "id": "Wallet",
+      "name": "Wallet & Keys",
+      "color": "#D69E2E",
+      "commit_categories": ["Wallet (Client App)"],
+      "bip_themes": ["Wallet & Keys"]
+    },
+    {
+      "id": "Network",
+      "name": "P2P Network",
+      "color": "#2B6CB0",
+      "commit_categories": ["P2P Network (Infrastructure)"],
+      "bip_themes": ["P2P Network"]
+    },
+    {
+      "id": "Mining",
+      "name": "Mining",
+      "color": "#F6AD55",
+      "commit_categories": [],
+      "bip_themes": ["Mining"]
+    },
+    {
+      "id": "Mempool",
+      "name": "Mempool & Fees",
+      "color": "#6366f1",
+      "commit_categories": [],
+      "bip_themes": []
+    },
+    {
+      "id": "Cryptography",
+      "name": "Cryptography",
+      "color": "#a855f7",
+      "commit_categories": ["Cryptography (Primitives)"],
+      "bip_themes": []
+    },
+    {
+      "id": "Infrastructure",
+      "name": "Core Infrastructure",
+      "color": "#94A3B8",
+      "commit_categories": [
+        "Core Libs",
+        "Database (Persistence)",
+        "Build & CI (DevOps)",
+        "Tests (QA)",
+        "Utilities (Shared Libs)",
+        "Node & RPC (App/Interface)",
+        "GUI (Presentation Layer)",
+        "Documentation"
+      ],
+      "bip_themes": ["Other"]
+    },
+    {
+      "id": "Ecosystem",
+      "name": "Ecosystem",
+      "color": "#64748b",
+      "commit_categories": [],
+      "bip_themes": []
+    }
+  ]
+}

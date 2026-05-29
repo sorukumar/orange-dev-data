@@ -19,7 +19,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "Consensus (Domain Logic)",
   "total_commits": 1.0,
   "authored_commits": 1.0,
@@ -28,16 +28,22 @@
   "total_deletions": 3.0,
   "first_commit": "2020-02-07T19:10:31",
   "last_commit": "2020-02-07T19:10:31",
+  "p2016_authored_commits": 1.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 1.0,
   "avg_review_latency_days": 2443.6267285052913,
   "reviews_count": 10.0,
   "avg_approval_latency_days": 4666.402083333333,
   "approvals_count": 1.0,
+  "p2016_reviews_count": 10.0,
+  "modern_reviews_count": 9.0,
   "prs_authored": 4.0,
   "avg_pr_ack_velocity_days": 0.011944444444444445,
   "avg_concept_lead_time_days": 170.01446759259258,
   "review_reciprocity": 2.5,
   "hybrid_score": 0.5121,
+  "p2016_hybrid_score": 0.1823,
+  "modern_hybrid_score": 0.1711,
   "impact_score": 14.0,
   "threads_started": 7.0,
   "replies_sent": 24.0,
@@ -48,6 +54,36 @@
   "first_active": "2018-11-06T09:50:38",
   "last_active": "2026-04-15T01:18:36.415000",
   "dev_type": "Builder",
+  "expertise_domains": [
+    "Infrastructure",
+    "Consensus",
+    "Privacy"
+  ],
+  "expertise_by_source": {
+    "bips": {
+      "Infrastructure": 1.0
+    },
+    "code": {
+      "Consensus": 1.0
+    },
+    "discussion": {
+      "Consensus": 0.085,
+      "Mempool": 0.153,
+      "Privacy": 0.763
+    }
+  },
+  "expertise_domain_scores": {
+    "Consensus": 0.3169,
+    "Infrastructure": 0.4999,
+    "Mempool": 0.0306,
+    "Privacy": 0.1526
+  },
+  "p2016_posts": 31.0,
+  "modern_posts": 17.0,
+  "p2016_ml_posts": 26.0,
+  "p2016_delving_posts": 5.0,
+  "modern_ml_posts": 12.0,
+  "modern_delving_posts": 5.0,
   "global_first_active": "2018-11-06T09:50:38",
   "global_last_active": "2026-04-15T01:18:36.415000064",
   "github_location": null,

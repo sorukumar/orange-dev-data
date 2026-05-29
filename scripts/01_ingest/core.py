@@ -10,6 +10,20 @@ import json
 REPO_PATH = "data/sources/bitcoin"
 OUTPUT_PATH = "data/raw/core_commits.parquet"
 MESSAGES_OUTPUT_PATH = "data/raw/core_messages.parquet"  # Standardized raw location
+STATE_PATH = "data/state.json"
+
+
+def load_state():
+    if os.path.exists(STATE_PATH):
+        with open(STATE_PATH) as f:
+            return json.load(f)
+    return {}
+
+
+def save_state(state):
+    with open(STATE_PATH, 'w') as f:
+        json.dump(state, f, indent=2)
+
 
 # --- Categorization Logic ---
 CATEGORY_RULES = {
@@ -355,6 +369,21 @@ def main():
         print(f"Error: Repo not found at {REPO_PATH}")
         return
 
+    if not os.path.isdir(os.path.join(REPO_PATH, '.git')):
+        print(f"Error: {REPO_PATH} exists but is not a valid git repository (no .git dir). "
+              f"Run: git clone https://github.com/bitcoin/bitcoin {REPO_PATH}")
+        return
+
+    # State checkpoint: skip if Core repo HEAD hasn't moved since last build.
+    latest_commit = subprocess.run(
+        ["git", "-C", REPO_PATH, "rev-parse", "HEAD"], capture_output=True, text=True
+    ).stdout.strip()
+    state = load_state()
+    if (state.get("core", {}).get("latest_commit") == latest_commit
+            and os.path.exists(OUTPUT_PATH) and os.path.exists(MESSAGES_OUTPUT_PATH)):
+        print(f"Core repo is up to date at commit {latest_commit[:12]}. Skipping re-parse.")
+        return
+
     print("Reading git log...")
     
     # Actual run - commits with numstat
@@ -362,8 +391,16 @@ def main():
     commits = parse_log(process)
     
     print(f"Parsed {len(commits)} commits.")
-    
-    df = pd.DataFrame(commits)
+
+    if not commits:
+        print("Warning: No commits parsed. Check that the repo has a 'master' branch and is not empty.")
+        # Write a schema-correct empty parquet so downstream scripts don't crash with KeyError.
+        empty_cols = ['hash', 'author_ts', 'author_name', 'author_email', 'committer_name',
+                      'committer_email', 'committer_ts', 'parents', 'date_utc', 'subject',
+                      'is_merge', 'file_path', 'additions', 'deletions', 'category', 'extensions_json']
+        df = pd.DataFrame(columns=empty_cols)
+    else:
+        df = pd.DataFrame(commits)
 
     # Save commits
     os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
@@ -382,6 +419,13 @@ def main():
     
     # --- Static Analysis ---
     scan_repository(REPO_PATH)
+
+    # Persist state checkpoint
+    state = load_state()
+    state.setdefault("core", {})["latest_commit"] = latest_commit
+    state["core"]["total_commits"] = len(commits) if commits else 0
+    state["core"]["latest_update"] = datetime.utcnow().isoformat()
+    save_state(state)
 
 def scan_repository(repo_path):
     """

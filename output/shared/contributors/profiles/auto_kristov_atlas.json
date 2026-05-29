@@ -19,7 +19,7 @@
     "BIP Author"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "None",
   "total_commits": 0.0,
   "authored_commits": 0.0,
@@ -28,16 +28,22 @@
   "total_deletions": null,
   "first_commit": null,
   "last_commit": null,
+  "p2016_authored_commits": 0.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 2.0,
   "avg_review_latency_days": 1073.3647280092594,
   "reviews_count": 16.0,
   "avg_approval_latency_days": 1158.543691520468,
   "approvals_count": 10.0,
+  "p2016_reviews_count": 11.0,
+  "modern_reviews_count": 0.0,
   "prs_authored": 3.0,
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 5.333333333333333,
   "hybrid_score": 0.6938,
+  "p2016_hybrid_score": 0.1296,
+  "modern_hybrid_score": 0.1052,
   "impact_score": 19.0,
   "threads_started": 5.0,
   "replies_sent": 23.0,
@@ -48,6 +54,31 @@
   "first_active": "2014-04-23T15:05:49",
   "last_active": "2016-05-18T23:18:15",
   "dev_type": "Reviewer",
+  "expertise_domains": [
+    "Infrastructure",
+    "Script",
+    "Privacy"
+  ],
+  "expertise_by_source": {
+    "bips": {
+      "Infrastructure": 0.5,
+      "Script": 0.5
+    },
+    "discussion": {
+      "Privacy": 1.0
+    }
+  },
+  "expertise_domain_scores": {
+    "Infrastructure": 0.3571,
+    "Privacy": 0.2857,
+    "Script": 0.3571
+  },
+  "p2016_posts": 3.0,
+  "modern_posts": 0.0,
+  "p2016_ml_posts": 3.0,
+  "p2016_delving_posts": 0.0,
+  "modern_ml_posts": 0.0,
+  "modern_delving_posts": 0.0,
   "global_first_active": "2014-04-23T15:05:49",
   "global_last_active": "2016-05-18T23:18:15",
   "github_location": "Texas",

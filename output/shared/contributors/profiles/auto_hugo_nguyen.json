@@ -19,7 +19,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "Node & RPC (App/Interface)",
   "total_commits": 3.0,
   "authored_commits": 3.0,
@@ -28,16 +28,22 @@
   "total_deletions": 0.0,
   "first_commit": "2019-08-01T22:08:47",
   "last_commit": "2019-08-01T22:08:47",
+  "p2016_authored_commits": 1.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 1.0,
-  "avg_review_latency_days": 1306.0706868489583,
-  "reviews_count": 13.0,
-  "avg_approval_latency_days": 4.418098958333333,
-  "approvals_count": 4.0,
+  "avg_review_latency_days": 1266.5222825476994,
+  "reviews_count": 14.0,
+  "avg_approval_latency_days": 3.7291481481481483,
+  "approvals_count": 5.0,
+  "p2016_reviews_count": 14.0,
+  "modern_reviews_count": 5.0,
   "prs_authored": 1.0,
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
-  "review_reciprocity": 13.0,
-  "hybrid_score": 0.518,
+  "review_reciprocity": 14.0,
+  "hybrid_score": 0.5203,
+  "p2016_hybrid_score": 0.1915,
+  "modern_hybrid_score": 0.0989,
   "impact_score": 14.0,
   "threads_started": 1.0,
   "replies_sent": 18.0,
@@ -48,6 +54,35 @@
   "first_active": "2021-02-08T17:14:17",
   "last_active": "2022-09-21T01:07:12",
   "dev_type": "Builder",
+  "expertise_domains": [
+    "Wallet",
+    "Infrastructure",
+    "Mining"
+  ],
+  "expertise_by_source": {
+    "bips": {
+      "Wallet": 1.0
+    },
+    "code": {
+      "Infrastructure": 0.667,
+      "Wallet": 0.333
+    },
+    "discussion": {
+      "Mining": 0.082,
+      "Wallet": 0.918
+    }
+  },
+  "expertise_domain_scores": {
+    "Infrastructure": 0.2001,
+    "Mining": 0.0164,
+    "Wallet": 0.7835
+  },
+  "p2016_posts": 19.0,
+  "modern_posts": 0.0,
+  "p2016_ml_posts": 19.0,
+  "p2016_delving_posts": 0.0,
+  "modern_ml_posts": 0.0,
+  "modern_delving_posts": 0.0,
   "global_first_active": "2019-08-01T22:08:47",
   "global_last_active": "2022-09-21T01:07:12",
   "github_location": null,

@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "Core Libs",
   "total_commits": 1.0,
   "authored_commits": 1.0,
@@ -27,16 +27,22 @@
   "total_deletions": 5.0,
   "first_commit": "2012-12-06T19:05:11",
   "last_commit": "2012-12-06T19:05:11",
+  "p2016_authored_commits": 0.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
   "avg_review_latency_days": 1.4091550925925926,
   "reviews_count": 1.0,
   "avg_approval_latency_days": null,
   "approvals_count": 0.0,
+  "p2016_reviews_count": 0.0,
+  "modern_reviews_count": 0.0,
   "prs_authored": 1.0,
   "avg_pr_ack_velocity_days": 0.1658449074074074,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 1.0,
   "hybrid_score": 0.0885,
+  "p2016_hybrid_score": 0.057,
+  "modern_hybrid_score": 0.1036,
   "impact_score": 2.0,
   "threads_started": 0.0,
   "replies_sent": 3.0,
@@ -47,6 +53,33 @@
   "first_active": "2024-12-13T11:16:23",
   "last_active": "2024-12-28T10:15:42",
   "dev_type": "Builder",
+  "expertise_domains": [
+    "Infrastructure",
+    "Mining",
+    "Mempool"
+  ],
+  "expertise_by_source": {
+    "code": {
+      "Infrastructure": 1.0
+    },
+    "discussion": {
+      "Ecosystem": 0.121,
+      "Mempool": 0.121,
+      "Mining": 0.758
+    }
+  },
+  "expertise_domain_scores": {
+    "Ecosystem": 0.0484,
+    "Infrastructure": 0.6,
+    "Mempool": 0.0484,
+    "Mining": 0.3032
+  },
+  "p2016_posts": 3.0,
+  "modern_posts": 3.0,
+  "p2016_ml_posts": 3.0,
+  "p2016_delving_posts": 0.0,
+  "modern_ml_posts": 3.0,
+  "modern_delving_posts": 0.0,
   "global_first_active": "2012-12-06T19:05:11",
   "global_last_active": "2024-12-28T10:15:42",
   "github_location": "Denver, CO",

@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "Core Libs",
   "total_commits": 9.0,
   "authored_commits": 9.0,
@@ -27,16 +27,22 @@
   "total_deletions": 48.0,
   "first_commit": "2014-01-19T23:59:57",
   "last_commit": "2015-06-24T08:32:20",
+  "p2016_authored_commits": 0.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
   "avg_review_latency_days": 6.048713991769548,
   "reviews_count": 4.0,
   "avg_approval_latency_days": null,
   "approvals_count": 0.0,
+  "p2016_reviews_count": 0.0,
+  "modern_reviews_count": 0.0,
   "prs_authored": 6.0,
   "avg_pr_ack_velocity_days": 15.555082947530865,
   "avg_concept_lead_time_days": 16.326944444444443,
   "review_reciprocity": 0.6666666666666666,
   "hybrid_score": 0.2012,
+  "p2016_hybrid_score": 0.075,
+  "modern_hybrid_score": 0.075,
   "impact_score": 5.0,
   "threads_started": 1.0,
   "replies_sent": 6.0,
@@ -47,6 +53,31 @@
   "first_active": "2014-04-21T10:40:48",
   "last_active": "2015-08-13T04:52:37",
   "dev_type": "Builder",
+  "expertise_domains": [
+    "Infrastructure",
+    "Consensus",
+    "Mining"
+  ],
+  "expertise_by_source": {
+    "code": {
+      "Infrastructure": 1.0
+    },
+    "discussion": {
+      "Consensus": 0.5,
+      "Mining": 0.5
+    }
+  },
+  "expertise_domain_scores": {
+    "Consensus": 0.2,
+    "Infrastructure": 0.6,
+    "Mining": 0.2
+  },
+  "p2016_posts": 0.0,
+  "modern_posts": 0.0,
+  "p2016_ml_posts": 0.0,
+  "p2016_delving_posts": 0.0,
+  "modern_ml_posts": 0.0,
+  "modern_delving_posts": 0.0,
   "global_first_active": "2014-01-19T23:59:57",
   "global_last_active": "2015-08-13T04:52:37",
   "github_location": "Sydney, Australia",

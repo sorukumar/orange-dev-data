@@ -6,7 +6,7 @@
   "badges": {
     "is_bip_author": null,
     "is_core_committer": null,
-    "is_core_contributor": true,
+    "is_core_contributor": null,
     "is_maintainer": null,
     "is_social_contributor": true,
     "is_sponsored": null,
@@ -18,8 +18,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
-  "technical_focus": "Tests (QA)",
+  "last_seen": "2026-05-29T00:00:00",
+  "technical_focus": "code",
   "total_commits": 15.0,
   "authored_commits": 15.0,
   "merge_commits": 0.0,
@@ -27,16 +27,22 @@
   "total_deletions": 111.0,
   "first_commit": "2025-01-03T13:39:03",
   "last_commit": "2026-05-18T13:58:09",
+  "p2016_authored_commits": 9.0,
+  "modern_authored_commits": 9.0,
   "bips_authored": 0.0,
   "avg_review_latency_days": 81.20994444444445,
   "reviews_count": 93.0,
   "avg_approval_latency_days": 66.11888217179232,
   "approvals_count": 85.0,
+  "p2016_reviews_count": 93.0,
+  "modern_reviews_count": 93.0,
   "prs_authored": 9.0,
   "avg_pr_ack_velocity_days": 5.141673611111111,
   "avg_concept_lead_time_days": 14.95716724537037,
   "review_reciprocity": 10.333333333333334,
   "hybrid_score": 0.2923,
+  "p2016_hybrid_score": 0.2923,
+  "modern_hybrid_score": 0.2923,
   "impact_score": 8.0,
   "threads_started": 0.0,
   "replies_sent": 0.0,
@@ -47,6 +53,26 @@
   "first_active": null,
   "last_active": null,
   "dev_type": "Builder",
+  "expertise_domains": [
+    "Infrastructure",
+    "Consensus"
+  ],
+  "expertise_by_source": {
+    "code": {
+      "Consensus": 0.166,
+      "Infrastructure": 0.834
+    }
+  },
+  "expertise_domain_scores": {
+    "Consensus": 0.166,
+    "Infrastructure": 0.834
+  },
+  "p2016_posts": 0.0,
+  "modern_posts": 0.0,
+  "p2016_ml_posts": 0.0,
+  "p2016_delving_posts": 0.0,
+  "modern_ml_posts": 0.0,
+  "modern_delving_posts": 0.0,
   "global_first_active": "2025-01-03T13:39:03",
   "global_last_active": "2026-05-18T13:58:09",
   "github_location": "Remote",

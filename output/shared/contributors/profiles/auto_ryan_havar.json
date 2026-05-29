@@ -19,7 +19,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "Wallet (Client App)",
   "total_commits": 4.0,
   "authored_commits": 4.0,
@@ -28,16 +28,22 @@
   "total_deletions": 6.0,
   "first_commit": "2015-09-07T23:12:25",
   "last_commit": "2017-07-25T19:25:07",
+  "p2016_authored_commits": 3.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 1.0,
   "avg_review_latency_days": 119.8430880106911,
   "reviews_count": 23.0,
   "avg_approval_latency_days": 578.432744107744,
   "approvals_count": 8.0,
+  "p2016_reviews_count": 21.0,
+  "modern_reviews_count": 0.0,
   "prs_authored": 13.0,
   "avg_pr_ack_velocity_days": 8.154351851851851,
   "avg_concept_lead_time_days": 8.005671296296295,
   "review_reciprocity": 1.7692307692307692,
   "hybrid_score": 0.6154,
+  "p2016_hybrid_score": 0.2932,
+  "modern_hybrid_score": 0.1233,
   "impact_score": 16.0,
   "threads_started": 6.0,
   "replies_sent": 40.0,
@@ -48,6 +54,34 @@
   "first_active": "2017-07-02T15:35:22",
   "last_active": "2022-08-25T08:48:36",
   "dev_type": "Builder",
+  "expertise_domains": [
+    "Privacy",
+    "Wallet",
+    "Mempool"
+  ],
+  "expertise_by_source": {
+    "bips": {
+      "Privacy": 1.0
+    },
+    "code": {
+      "Wallet": 1.0
+    },
+    "discussion": {
+      "Mempool": 0.7,
+      "Privacy": 0.3
+    }
+  },
+  "expertise_domain_scores": {
+    "Mempool": 0.14,
+    "Privacy": 0.56,
+    "Wallet": 0.3
+  },
+  "p2016_posts": 46.0,
+  "modern_posts": 0.0,
+  "p2016_ml_posts": 46.0,
+  "p2016_delving_posts": 0.0,
+  "modern_ml_posts": 0.0,
+  "modern_delving_posts": 0.0,
   "global_first_active": "2015-09-07T23:12:25",
   "global_last_active": "2022-08-25T08:48:36",
   "github_location": "Zimbabwe",

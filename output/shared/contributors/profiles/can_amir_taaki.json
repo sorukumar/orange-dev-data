@@ -19,7 +19,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "Core Libs",
   "total_commits": 2.0,
   "authored_commits": 2.0,
@@ -28,16 +28,22 @@
   "total_deletions": 2.0,
   "first_commit": "2013-10-13T06:44:28",
   "last_commit": "2014-08-30T01:21:18",
+  "p2016_authored_commits": 0.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 5.0,
   "avg_review_latency_days": 52.43388573232323,
   "reviews_count": 6.0,
   "avg_approval_latency_days": null,
   "approvals_count": 0.0,
+  "p2016_reviews_count": 0.0,
+  "modern_reviews_count": 0.0,
   "prs_authored": 5.0,
   "avg_pr_ack_velocity_days": 45.18333333333333,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 1.2,
   "hybrid_score": 1.1876,
+  "p2016_hybrid_score": 0.1185,
+  "modern_hybrid_score": 0.0812,
   "impact_score": 32.0,
   "threads_started": 51.0,
   "replies_sent": 67.0,
@@ -48,6 +54,37 @@
   "first_active": "2011-06-16T13:24:01",
   "last_active": "2022-07-04T02:53:48",
   "dev_type": "Protocol Designer",
+  "expertise_domains": [
+    "Infrastructure",
+    "Network",
+    "Script"
+  ],
+  "expertise_by_source": {
+    "bips": {
+      "Infrastructure": 0.6,
+      "Network": 0.4
+    },
+    "code": {
+      "Infrastructure": 0.5,
+      "Network": 0.5
+    },
+    "discussion": {
+      "Ecosystem": 0.412,
+      "Script": 0.588
+    }
+  },
+  "expertise_domain_scores": {
+    "Ecosystem": 0.0824,
+    "Infrastructure": 0.45,
+    "Network": 0.35,
+    "Script": 0.1176
+  },
+  "p2016_posts": 6.0,
+  "modern_posts": 0.0,
+  "p2016_ml_posts": 6.0,
+  "p2016_delving_posts": 0.0,
+  "modern_ml_posts": 0.0,
+  "modern_delving_posts": 0.0,
   "global_first_active": "2011-06-16T13:24:01",
   "global_last_active": "2022-07-04T02:53:48",
   "github_location": null,

@@ -4,7 +4,7 @@
   "delving_username_final": null,
   "uuid": "auto_dagur_valberg_johannsson",
   "badges": {
-    "is_bip_author": true,
+    "is_bip_author": null,
     "is_core_committer": null,
     "is_core_contributor": true,
     "is_maintainer": null,
@@ -15,12 +15,11 @@
     "sponsor_id": null
   },
   "roles": [
-    "BIP Author",
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
-  "technical_focus": "Core Libs",
+  "last_seen": "2026-05-29T00:00:00",
+  "technical_focus": "None",
   "total_commits": 1.0,
   "authored_commits": 1.0,
   "merge_commits": 0.0,
@@ -28,16 +27,22 @@
   "total_deletions": 1.0,
   "first_commit": "2016-10-09T19:47:55",
   "last_commit": "2016-10-09T19:47:55",
+  "p2016_authored_commits": 1.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 1.0,
   "avg_review_latency_days": null,
   "reviews_count": 0.0,
   "avg_approval_latency_days": null,
   "approvals_count": 0.0,
+  "p2016_reviews_count": 0.0,
+  "modern_reviews_count": 0.0,
   "prs_authored": 2.0,
   "avg_pr_ack_velocity_days": 3.802303240740741,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 0.0,
   "hybrid_score": 0.422,
+  "p2016_hybrid_score": 0.0763,
+  "modern_hybrid_score": 0.025,
   "impact_score": 11.0,
   "threads_started": 0.0,
   "replies_sent": 1.0,
@@ -48,6 +53,31 @@
   "first_active": "2016-03-07T15:10:33",
   "last_active": "2016-03-07T15:10:33",
   "dev_type": "Builder",
+  "expertise_domains": [
+    "Consensus",
+    "Infrastructure"
+  ],
+  "expertise_by_source": {
+    "bips": {
+      "Consensus": 1.0
+    },
+    "code": {
+      "Infrastructure": 1.0
+    },
+    "discussion": {
+      "Consensus": 1.0
+    }
+  },
+  "expertise_domain_scores": {
+    "Consensus": 0.7,
+    "Infrastructure": 0.3
+  },
+  "p2016_posts": 1.0,
+  "modern_posts": 0.0,
+  "p2016_ml_posts": 1.0,
+  "p2016_delving_posts": 0.0,
+  "modern_ml_posts": 0.0,
+  "modern_delving_posts": 0.0,
   "global_first_active": "2016-03-07T15:10:33",
   "global_last_active": "2016-10-09T19:47:55",
   "github_location": null,

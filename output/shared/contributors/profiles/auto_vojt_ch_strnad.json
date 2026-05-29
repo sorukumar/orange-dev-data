@@ -25,16 +25,22 @@
   "total_deletions": null,
   "first_commit": null,
   "last_commit": null,
+  "p2016_authored_commits": 0.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
   "avg_review_latency_days": 1390.6464308449074,
   "reviews_count": 43.0,
   "avg_approval_latency_days": 1050.5460913671025,
   "approvals_count": 12.0,
+  "p2016_reviews_count": 43.0,
+  "modern_reviews_count": 34.0,
   "prs_authored": 5.0,
   "avg_pr_ack_velocity_days": 0.26358796296296294,
   "avg_concept_lead_time_days": 0.1888425925925926,
   "review_reciprocity": 8.6,
   "hybrid_score": 0.1385,
+  "p2016_hybrid_score": 0.1385,
+  "modern_hybrid_score": 0.1385,
   "impact_score": 4.0,
   "threads_started": 5.0,
   "replies_sent": 4.0,
@@ -45,6 +51,26 @@
   "first_active": "2024-03-12T04:08:49.428000",
   "last_active": "2025-05-30T07:38:02.854000",
   "dev_type": "Reviewer",
+  "expertise_domains": [
+    "Script",
+    "Mining"
+  ],
+  "expertise_by_source": {
+    "discussion": {
+      "Mining": 0.325,
+      "Script": 0.675
+    }
+  },
+  "expertise_domain_scores": {
+    "Mining": 0.325,
+    "Script": 0.675
+  },
+  "p2016_posts": 9.0,
+  "modern_posts": 9.0,
+  "p2016_ml_posts": 0.0,
+  "p2016_delving_posts": 9.0,
+  "modern_ml_posts": 0.0,
+  "modern_delving_posts": 9.0,
   "global_first_active": "2024-03-12T04:08:49.428000",
   "global_last_active": "2025-05-30T07:38:02.854000128",
   "github_location": null,

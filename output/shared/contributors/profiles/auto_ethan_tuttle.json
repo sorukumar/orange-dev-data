@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "None",
   "total_commits": 0.0,
   "authored_commits": 0.0,
@@ -27,16 +27,22 @@
   "total_deletions": null,
   "first_commit": null,
   "last_commit": null,
+  "p2016_authored_commits": 0.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
   "avg_review_latency_days": 148.98900462962962,
   "reviews_count": 1.0,
   "avg_approval_latency_days": 148.98900462962962,
   "approvals_count": 1.0,
+  "p2016_reviews_count": 1.0,
+  "modern_reviews_count": 1.0,
   "prs_authored": 1.0,
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 1.0,
   "hybrid_score": 0.033,
+  "p2016_hybrid_score": 0.033,
+  "modern_hybrid_score": 0.033,
   "impact_score": 1.0,
   "threads_started": 8.0,
   "replies_sent": 10.0,
@@ -47,6 +53,26 @@
   "first_active": "2023-08-22T20:21:05.873000",
   "last_active": "2024-07-21T19:48:40.045000",
   "dev_type": "Participant",
+  "expertise_domains": [
+    "L2",
+    "Mining"
+  ],
+  "expertise_by_source": {
+    "discussion": {
+      "L2": 0.529,
+      "Mining": 0.471
+    }
+  },
+  "expertise_domain_scores": {
+    "L2": 0.529,
+    "Mining": 0.471
+  },
+  "p2016_posts": 18.0,
+  "modern_posts": 18.0,
+  "p2016_ml_posts": 0.0,
+  "p2016_delving_posts": 18.0,
+  "modern_ml_posts": 0.0,
+  "modern_delving_posts": 18.0,
   "global_first_active": "2023-08-22T20:21:05.872999936",
   "global_last_active": "2024-07-21T19:48:40.044999936",
   "github_location": null,

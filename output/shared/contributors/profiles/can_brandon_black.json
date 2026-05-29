@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "None",
   "total_commits": 0.0,
   "authored_commits": 0.0,
@@ -27,28 +27,57 @@
   "total_deletions": null,
   "first_commit": null,
   "last_commit": null,
+  "p2016_authored_commits": 0.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 4.0,
   "avg_review_latency_days": 1539.9964176894919,
   "reviews_count": 20.0,
   "avg_approval_latency_days": 1248.861099537037,
   "approvals_count": 7.0,
+  "p2016_reviews_count": 20.0,
+  "modern_reviews_count": 15.0,
   "prs_authored": 10.0,
   "avg_pr_ack_velocity_days": 102.35053819444445,
   "avg_concept_lead_time_days": 0.7398755787037037,
   "review_reciprocity": 2.0,
-  "hybrid_score": 0.9773,
+  "hybrid_score": 0.9772,
+  "p2016_hybrid_score": 0.1967,
+  "modern_hybrid_score": 0.3242,
   "impact_score": 26.0,
-  "threads_started": 30.0,
+  "threads_started": 31.0,
   "replies_sent": 53.0,
   "ml_threads": 6.0,
-  "delving_threads": 24.0,
+  "delving_threads": 25.0,
   "ml_responses": 32.0,
   "delving_responses": 21.0,
   "first_active": "2018-09-06T15:32:44",
-  "last_active": "2026-04-26T00:04:06.695000",
+  "last_active": "2026-05-28T21:44:54.048000",
   "dev_type": "Reviewer",
+  "expertise_domains": [
+    "Consensus",
+    "Script"
+  ],
+  "expertise_by_source": {
+    "bips": {
+      "Consensus": 1.0
+    },
+    "discussion": {
+      "Consensus": 0.212,
+      "Script": 0.788
+    }
+  },
+  "expertise_domain_scores": {
+    "Consensus": 0.7749,
+    "Script": 0.2251
+  },
+  "p2016_posts": 84.0,
+  "modern_posts": 77.0,
+  "p2016_ml_posts": 38.0,
+  "p2016_delving_posts": 46.0,
+  "modern_ml_posts": 31.0,
+  "modern_delving_posts": 46.0,
   "global_first_active": "2018-09-06T15:32:44",
-  "global_last_active": "2026-04-26T00:04:06.695000064",
+  "global_last_active": "2026-05-28T21:44:54.048000",
   "github_location": "Seattle",
   "github_company": null,
   "github_bio": "Freedom fighter, stoic, software engineer, thinker. I regret to admit that NodeJS is awesome. Study Bitcoin.",
@@ -96,9 +125,9 @@
   },
   "last_message": {
     "source": "delving",
-    "subject": "Re: Commit-Reveal for PQ Migration",
-    "date": "2026-04-26",
-    "link": "https://delvingbitcoin.org/t/commit-reveal-for-pq-migration/2419/2"
+    "subject": "Re: CTV-only Vault Concept v0.1.0 release",
+    "date": "2026-05-28",
+    "link": "https://delvingbitcoin.org/t/ctv-only-vault-concept-v0-1-0-release/2539/2"
   },
   "social_history": {
     "2018": {
@@ -144,8 +173,8 @@
       "taproot": 9
     },
     "2026": {
-      "covenants": 1,
-      "other": 7,
+      "covenants": 2,
+      "other": 8,
       "taproot": 1
     }
   }

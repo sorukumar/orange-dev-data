@@ -88,6 +88,16 @@ def calculate_review_metrics():
     ACTIVE_REVIEW_TYPES = {'commented', 'reviewed'}
     df_active = df_merged[df_merged['event_type'].isin(ACTIVE_REVIEW_TYPES)]
 
+    # Era-specific review counts
+    post_2016_start = pd.Timestamp('2016-01-01', tz='UTC')
+    modern_cutoff = df_active['timestamp'].max() - pd.DateOffset(years=3)
+    p2016_reviewer_counts = df_active[df_active['timestamp'] >= post_2016_start].groupby('user').agg(
+        p2016_reviews_count=('pr_number', 'nunique')
+    ).reset_index()
+    modern_reviewer_counts = df_active[df_active['timestamp'] >= modern_cutoff].groupby('user').agg(
+        modern_reviews_count=('pr_number', 'nunique')
+    ).reset_index()
+
     print("Aggregating reviewer metrics...")
     # 1. Reviewer Performance (Interaction Speed)
     reviewer_perf = df_active.groupby('user').agg(
@@ -102,6 +112,8 @@ def calculate_review_metrics():
     ).reset_index()
     
     reviewer_metrics = reviewer_perf.merge(approval_perf, on='user', how='left')
+    reviewer_metrics = reviewer_metrics.merge(p2016_reviewer_counts, on='user', how='left')
+    reviewer_metrics = reviewer_metrics.merge(modern_reviewer_counts, on='user', how='left')
     
     # 3. Author Clout (Time-to-ACK for their PRs)
     print("Aggregating author metrics...")
@@ -146,7 +158,9 @@ def calculate_review_metrics():
     metrics_df = metrics_df.fillna({
         'reviews_count': 0,
         'approvals_count': 0,
-        'prs_authored': 0
+        'prs_authored': 0,
+        'p2016_reviews_count': 0,
+        'modern_reviews_count': 0
     })
     
     # Save output

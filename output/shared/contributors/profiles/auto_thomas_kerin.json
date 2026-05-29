@@ -19,7 +19,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "Consensus (Domain Logic)",
   "total_commits": 6.0,
   "authored_commits": 6.0,
@@ -28,16 +28,22 @@
   "total_deletions": 17.0,
   "first_commit": "2015-10-18T18:04:14",
   "last_commit": "2018-07-13T11:47:07",
+  "p2016_authored_commits": 3.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 2.0,
   "avg_review_latency_days": 686.8561622117401,
   "reviews_count": 54.0,
   "avg_approval_latency_days": 372.2445299796748,
   "approvals_count": 32.0,
+  "p2016_reviews_count": 39.0,
+  "modern_reviews_count": 0.0,
   "prs_authored": 14.0,
   "avg_pr_ack_velocity_days": 0.9868229166666668,
   "avg_concept_lead_time_days": 0.6678009259259259,
   "review_reciprocity": 3.857142857142857,
   "hybrid_score": 0.8414,
+  "p2016_hybrid_score": 0.253,
+  "modern_hybrid_score": 0.1489,
   "impact_score": 22.0,
   "threads_started": 5.0,
   "replies_sent": 20.0,
@@ -48,6 +54,39 @@
   "first_active": "2014-03-27T08:12:07",
   "last_active": "2019-05-26T14:34:55",
   "dev_type": "Builder",
+  "expertise_domains": [
+    "Script",
+    "Consensus",
+    "Infrastructure"
+  ],
+  "expertise_by_source": {
+    "bips": {
+      "Consensus": 0.5,
+      "Script": 0.5
+    },
+    "code": {
+      "Consensus": 0.25,
+      "Infrastructure": 0.5,
+      "Network": 0.25
+    },
+    "discussion": {
+      "Script": 0.389,
+      "Wallet": 0.611
+    }
+  },
+  "expertise_domain_scores": {
+    "Consensus": 0.325,
+    "Infrastructure": 0.15,
+    "Network": 0.075,
+    "Script": 0.3278,
+    "Wallet": 0.1222
+  },
+  "p2016_posts": 7.0,
+  "modern_posts": 0.0,
+  "p2016_ml_posts": 7.0,
+  "p2016_delving_posts": 0.0,
+  "modern_ml_posts": 0.0,
+  "modern_delving_posts": 0.0,
   "global_first_active": "2014-03-27T08:12:07",
   "global_last_active": "2019-05-26T14:34:55",
   "github_location": "Ireland",

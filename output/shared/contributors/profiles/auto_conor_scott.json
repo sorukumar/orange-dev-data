@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "Tests (QA)",
   "total_commits": 9.0,
   "authored_commits": 9.0,
@@ -27,16 +27,22 @@
   "total_deletions": 155.0,
   "first_commit": "2018-02-06T13:57:32",
   "last_commit": "2018-07-30T08:20:36",
+  "p2016_authored_commits": 9.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
   "avg_review_latency_days": 26.45748263888889,
   "reviews_count": 55.0,
   "avg_approval_latency_days": 17.823649691358025,
   "approvals_count": 47.0,
+  "p2016_reviews_count": 55.0,
+  "modern_reviews_count": 0.0,
   "prs_authored": 8.0,
   "avg_pr_ack_velocity_days": 2.6347040343915347,
   "avg_concept_lead_time_days": 3.4289756944444445,
   "review_reciprocity": 6.875,
   "hybrid_score": 0.2805,
+  "p2016_hybrid_score": 0.2805,
+  "modern_hybrid_score": 0.1477,
   "impact_score": 7.0,
   "threads_started": 0.0,
   "replies_sent": 0.0,
@@ -47,6 +53,23 @@
   "first_active": null,
   "last_active": null,
   "dev_type": "Builder",
+  "expertise_domains": [
+    "Infrastructure"
+  ],
+  "expertise_by_source": {
+    "code": {
+      "Infrastructure": 1.0
+    }
+  },
+  "expertise_domain_scores": {
+    "Infrastructure": 1.0
+  },
+  "p2016_posts": 0.0,
+  "modern_posts": 0.0,
+  "p2016_ml_posts": 0.0,
+  "p2016_delving_posts": 0.0,
+  "modern_ml_posts": 0.0,
+  "modern_delving_posts": 0.0,
   "global_first_active": "2018-02-06T13:57:32",
   "global_last_active": "2018-07-30T08:20:36",
   "github_location": "France",

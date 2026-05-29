@@ -16,7 +16,7 @@
   },
   "roles": [],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "None",
   "total_commits": 2.0,
   "authored_commits": 2.0,
@@ -25,16 +25,22 @@
   "total_deletions": 1.0,
   "first_commit": "2016-02-27T03:57:12",
   "last_commit": "2016-02-27T03:57:12",
+  "p2016_authored_commits": 1.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
   "avg_review_latency_days": 3.5578703703703702,
   "reviews_count": 1.0,
   "avg_approval_latency_days": null,
   "approvals_count": 0.0,
+  "p2016_reviews_count": 0.0,
+  "modern_reviews_count": 0.0,
   "prs_authored": 1.0,
   "avg_pr_ack_velocity_days": 0.0015972222222222223,
   "avg_concept_lead_time_days": 0.0015972222222222223,
   "review_reciprocity": 1.0,
   "hybrid_score": 0.0923,
+  "p2016_hybrid_score": 0.0934,
+  "modern_hybrid_score": 0.033,
   "impact_score": 2.0,
   "threads_started": 1.0,
   "replies_sent": 8.0,
@@ -45,6 +51,31 @@
   "first_active": "2015-08-03T12:06:40",
   "last_active": "2017-04-06T07:30:51",
   "dev_type": "Builder",
+  "expertise_domains": [
+    "Infrastructure",
+    "Mining",
+    "Consensus"
+  ],
+  "expertise_by_source": {
+    "code": {
+      "Infrastructure": 1.0
+    },
+    "discussion": {
+      "Consensus": 0.28,
+      "Mining": 0.72
+    }
+  },
+  "expertise_domain_scores": {
+    "Consensus": 0.112,
+    "Infrastructure": 0.6,
+    "Mining": 0.288
+  },
+  "p2016_posts": 6.0,
+  "modern_posts": 0.0,
+  "p2016_ml_posts": 6.0,
+  "p2016_delving_posts": 0.0,
+  "modern_ml_posts": 0.0,
+  "modern_delving_posts": 0.0,
   "global_first_active": "2015-08-03T12:06:40",
   "global_last_active": "2017-04-06T07:30:51",
   "github_location": null,

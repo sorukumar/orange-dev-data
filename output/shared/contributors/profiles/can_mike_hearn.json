@@ -19,7 +19,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "Core Libs",
   "total_commits": 25.0,
   "authored_commits": 25.0,
@@ -28,16 +28,22 @@
   "total_deletions": 693.0,
   "first_commit": "2012-06-25T09:17:22",
   "last_commit": "2015-03-10T18:33:46",
+  "p2016_authored_commits": 0.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 4.0,
   "avg_review_latency_days": 65.22204535854284,
   "reviews_count": 116.0,
   "avg_approval_latency_days": 336.253761574074,
   "approvals_count": 4.0,
+  "p2016_reviews_count": 0.0,
+  "modern_reviews_count": 0.0,
   "prs_authored": 15.0,
   "avg_pr_ack_velocity_days": 12.924140046296296,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 7.733333333333333,
   "hybrid_score": 1.4801,
+  "p2016_hybrid_score": 0.174,
+  "modern_hybrid_score": 0.174,
   "impact_score": 39.0,
   "threads_started": 72.0,
   "replies_sent": 909.0,
@@ -48,6 +54,38 @@
   "first_active": "2011-06-14T11:44:41",
   "last_active": "2015-10-28T05:26:56",
   "dev_type": "Protocol Designer",
+  "expertise_domains": [
+    "Infrastructure",
+    "Network",
+    "Ecosystem"
+  ],
+  "expertise_by_source": {
+    "bips": {
+      "Infrastructure": 0.75,
+      "Network": 0.25
+    },
+    "code": {
+      "Consensus": 0.013,
+      "Infrastructure": 0.838,
+      "Network": 0.149
+    },
+    "discussion": {
+      "Ecosystem": 0.714,
+      "Mining": 0.286
+    }
+  },
+  "expertise_domain_scores": {
+    "Ecosystem": 0.1428,
+    "Infrastructure": 0.6264,
+    "Mining": 0.0572,
+    "Network": 0.1697
+  },
+  "p2016_posts": 0.0,
+  "modern_posts": 0.0,
+  "p2016_ml_posts": 0.0,
+  "p2016_delving_posts": 0.0,
+  "modern_ml_posts": 0.0,
+  "modern_delving_posts": 0.0,
   "global_first_active": "2011-06-14T11:44:41",
   "global_last_active": "2015-10-28T05:26:56",
   "github_location": "Switzerland",

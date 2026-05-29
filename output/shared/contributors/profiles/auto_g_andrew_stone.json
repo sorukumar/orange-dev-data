@@ -1,25 +1,25 @@
 {
   "display_name": "G. Andrew Stone",
-  "github_login_final": "cryptobuks",
+  "github_login_final": "gandrewstone",
   "delving_username_final": null,
   "uuid": "auto_g_andrew_stone",
   "badges": {
     "is_bip_author": null,
     "is_core_committer": null,
-    "is_core_contributor": true,
+    "is_core_contributor": null,
     "is_maintainer": null,
     "is_social_contributor": true,
     "is_sponsored": null,
     "maintainer_status": null,
-    "social_source": "mailing_list",
+    "social_source": "github",
     "sponsor_id": null
   },
   "roles": [
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
-  "technical_focus": "None",
+  "last_seen": "2026-05-29T00:00:00",
+  "technical_focus": "code",
   "total_commits": 0.0,
   "authored_commits": 0.0,
   "merge_commits": 0.0,
@@ -27,16 +27,22 @@
   "total_deletions": null,
   "first_commit": null,
   "last_commit": null,
+  "p2016_authored_commits": 0.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
   "avg_review_latency_days": 3.767708333333333,
   "reviews_count": 1.0,
   "avg_approval_latency_days": null,
   "approvals_count": 0.0,
+  "p2016_reviews_count": 1.0,
+  "modern_reviews_count": 0.0,
   "prs_authored": 4.0,
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 0.25,
   "hybrid_score": 0.071,
+  "p2016_hybrid_score": 0.087,
+  "modern_hybrid_score": 0.1345,
   "impact_score": 2.0,
   "threads_started": 1.0,
   "replies_sent": 10.0,
@@ -47,6 +53,26 @@
   "first_active": "2015-07-31T13:04:53",
   "last_active": "2023-12-21T22:52:08",
   "dev_type": "Participant",
+  "expertise_domains": [
+    "Mempool",
+    "Consensus"
+  ],
+  "expertise_by_source": {
+    "discussion": {
+      "Consensus": 0.5,
+      "Mempool": 0.5
+    }
+  },
+  "expertise_domain_scores": {
+    "Consensus": 0.5,
+    "Mempool": 0.5
+  },
+  "p2016_posts": 10.0,
+  "modern_posts": 2.0,
+  "p2016_ml_posts": 10.0,
+  "p2016_delving_posts": 0.0,
+  "modern_ml_posts": 2.0,
+  "modern_delving_posts": 0.0,
   "global_first_active": "2015-07-31T13:04:53",
   "global_last_active": "2023-12-21T22:52:08",
   "github_location": null,
@@ -54,9 +80,9 @@
   "github_bio": null,
   "github_twitter": null,
   "github_blog": null,
-  "github_followers": 185.0,
+  "github_followers": 81.0,
   "is_top_50": false,
-  "github_url": "https://github.com/cryptobuks",
+  "github_url": "https://github.com/gandrewstone",
   "first_message": {
     "source": "mailing_list",
     "subject": "Re: [bitcoin-dev] A compromise between BIP101 and Pieter's proposal",

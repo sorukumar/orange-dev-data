@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "Documentation",
   "total_commits": 3.0,
   "authored_commits": 3.0,
@@ -27,16 +27,22 @@
   "total_deletions": 1.0,
   "first_commit": "2015-07-13T16:22:55",
   "last_commit": "2015-07-15T12:40:18",
+  "p2016_authored_commits": 0.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
   "avg_review_latency_days": 1247.8337393162392,
   "reviews_count": 6.0,
   "avg_approval_latency_days": 1004.2431944444444,
   "approvals_count": 1.0,
+  "p2016_reviews_count": 6.0,
+  "modern_reviews_count": 0.0,
   "prs_authored": 1.0,
   "avg_pr_ack_velocity_days": 1.0988888888888888,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 6.0,
   "hybrid_score": 0.1685,
+  "p2016_hybrid_score": 0.0986,
+  "modern_hybrid_score": 0.0727,
   "impact_score": 4.0,
   "threads_started": 2.0,
   "replies_sent": 11.0,
@@ -47,6 +53,28 @@
   "first_active": "2019-10-03T19:38:36",
   "last_active": "2020-09-09T08:28:38",
   "dev_type": "Builder",
+  "expertise_domains": [
+    "Infrastructure",
+    "Ecosystem"
+  ],
+  "expertise_by_source": {
+    "code": {
+      "Infrastructure": 1.0
+    },
+    "discussion": {
+      "Ecosystem": 1.0
+    }
+  },
+  "expertise_domain_scores": {
+    "Ecosystem": 0.4,
+    "Infrastructure": 0.6
+  },
+  "p2016_posts": 13.0,
+  "modern_posts": 0.0,
+  "p2016_ml_posts": 13.0,
+  "p2016_delving_posts": 0.0,
+  "modern_ml_posts": 0.0,
+  "modern_delving_posts": 0.0,
   "global_first_active": "2015-07-13T16:22:55",
   "global_last_active": "2020-09-09T08:28:38",
   "github_location": null,

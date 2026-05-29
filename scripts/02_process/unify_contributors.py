@@ -45,27 +45,40 @@ def unify():
     
     def map_author(row):
         return resolver.resolve_git(str(row.get('author_name', '')), str(row.get('author_email', '')))
+
+    if not df_commits.empty and 'hash' in df_commits.columns:
+        df_commits['canonical_id'] = df_commits.apply(map_author, axis=1)
         
-    df_commits['canonical_id'] = df_commits.apply(map_author, axis=1)
-    
-    if 'is_merge' in df_commits.columns:
-        df_commits['is_auth'] = (~df_commits['is_merge']).astype(int)
-        df_commits['is_merg'] = df_commits['is_merge'].astype(int)
+        if 'is_merge' in df_commits.columns:
+            df_commits['is_auth'] = (~df_commits['is_merge']).astype(int)
+            df_commits['is_merg'] = df_commits['is_merge'].astype(int)
+        else:
+            df_commits['is_auth'] = 1
+            df_commits['is_merg'] = 0
+            
+        commit_stats = df_commits.groupby('canonical_id').agg(
+            total_commits=('hash', 'count'),
+            authored_commits=('is_auth', 'sum'),
+            merge_commits=('is_merg', 'sum'),
+            total_additions=('additions', 'sum'),
+            total_deletions=('deletions', 'sum'),
+            first_commit=('date_utc', 'min'),
+            last_commit=('date_utc', 'max')
+        ).reset_index()
+
+        # Era-specific authored commit counts
+        dates_utc = pd.to_datetime(df_commits['date_utc'], utc=True, errors='coerce')
+        p2016_start = pd.Timestamp('2016-01-01', tz='UTC')
+        modern_cutoff = dates_utc.max() - pd.DateOffset(years=3)
+        mask_auth = df_commits['is_auth'] == 1
+        p2016_auth = df_commits[mask_auth & (dates_utc >= p2016_start)].groupby('canonical_id')['hash'].nunique().rename('p2016_authored_commits').reset_index()
+        modern_auth = df_commits[mask_auth & (dates_utc >= modern_cutoff)].groupby('canonical_id')['hash'].nunique().rename('modern_authored_commits').reset_index()
+        commit_stats = commit_stats.merge(p2016_auth, on='canonical_id', how='left')
+        commit_stats = commit_stats.merge(modern_auth, on='canonical_id', how='left')
+
+        all_source_uuids.update(commit_stats['canonical_id'])
     else:
-        df_commits['is_auth'] = 1
-        df_commits['is_merg'] = 0
-        
-    commit_stats = df_commits.groupby('canonical_id').agg(
-        total_commits=('hash', 'count'),
-        authored_commits=('is_auth', 'sum'),
-        merge_commits=('is_merg', 'sum'),
-        total_additions=('additions', 'sum'),
-        total_deletions=('deletions', 'sum'),
-        first_commit=('date_utc', 'min'),
-        last_commit=('date_utc', 'max')
-    ).reset_index()
-    
-    all_source_uuids.update(commit_stats['canonical_id'])
+        commit_stats = pd.DataFrame(columns=['canonical_id', 'total_commits', 'authored_commits', 'merge_commits', 'total_additions', 'total_deletions', 'first_commit', 'last_commit', 'p2016_authored_commits', 'modern_authored_commits'])
     
     # 2. Discover from Social
     df_soc = pd.DataFrame(columns=['canonical_id'])
@@ -156,16 +169,20 @@ def unify():
     
     # Join Social
     if not df_soc.empty and 'canonical_id' in df_soc.columns:
-        soc_cols = [c for c in ['canonical_id', 'hybrid_score', 'impact_score', 'pagerank', 'threads_started', 'replies_sent', 'ml_threads', 'delving_threads', 'ml_responses', 'delving_responses', 'first_active', 'last_active', 'dev_type'] if c in df_soc.columns]
+        soc_cols = [c for c in ['canonical_id', 'hybrid_score', 'p2016_hybrid_score', 'modern_hybrid_score', 'impact_score', 'pagerank', 'threads_started', 'replies_sent', 'ml_threads', 'delving_threads', 'ml_responses', 'delving_responses', 'first_active', 'last_active', 'dev_type', 'expertise_domains', 'expertise_by_source', 'expertise_domain_scores', 'p2016_posts', 'modern_posts', 'p2016_ml_posts', 'p2016_delving_posts', 'modern_ml_posts', 'modern_delving_posts'] if c in df_soc.columns]
         df_soc_filtered = df_soc[soc_cols]
         df_unified = df_unified.merge(df_soc_filtered, left_on='uuid', right_on='canonical_id', how='left', suffixes=('', '_soc')).drop(columns=['canonical_id'])
     
     # Fill defaults (impact_score intentionally excluded — None means "Creator", 0 means unranked)
     df_unified = df_unified.fillna({
         'total_commits': 0, 'authored_commits': 0, 'merge_commits': 0,
+        'p2016_authored_commits': 0, 'modern_authored_commits': 0,
         'bips_authored': 0, 'hybrid_score': 0, 'threads_started': 0,
         'replies_sent': 0, 'ml_threads': 0, 'delving_threads': 0,
-        'ml_responses': 0, 'delving_responses': 0
+        'ml_responses': 0, 'delving_responses': 0,
+        'p2016_posts': 0, 'modern_posts': 0,
+        'p2016_ml_posts': 0, 'p2016_delving_posts': 0,
+        'modern_ml_posts': 0, 'modern_delving_posts': 0
     })
     
     # Global Timeline
@@ -215,6 +232,21 @@ def unify():
                             ('bio', 'github_bio'), ('twitter_username', 'github_twitter'),
                             ('blog', 'github_blog'), ('followers', 'github_followers')]:
             df_unified[col_name] = None
+
+    # Normalize expertise columns: pyarrow cannot serialize a column with mixed
+    # list/NaN values; coerce NaN → empty list/dict so the type is consistent.
+    if 'expertise_domains' in df_unified.columns:
+        df_unified['expertise_domains'] = df_unified['expertise_domains'].apply(
+            lambda x: x if isinstance(x, list) else []
+        )
+    if 'expertise_by_source' in df_unified.columns:
+        df_unified['expertise_by_source'] = df_unified['expertise_by_source'].apply(
+            lambda x: x if isinstance(x, dict) else {}
+        )
+    if 'expertise_domain_scores' in df_unified.columns:
+        df_unified['expertise_domain_scores'] = df_unified['expertise_domain_scores'].apply(
+            lambda x: x if isinstance(x, dict) else {}
+        )
 
     os.makedirs(os.path.dirname(OUTPUT_PARQUET), exist_ok=True)
     df_unified.to_parquet(OUTPUT_PARQUET, index=False)

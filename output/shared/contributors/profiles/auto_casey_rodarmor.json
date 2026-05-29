@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "Core Libs",
   "total_commits": 20.0,
   "authored_commits": 20.0,
@@ -27,16 +27,22 @@
   "total_deletions": 479.0,
   "first_commit": "2015-07-22T16:03:16",
   "last_commit": "2015-09-03T16:53:00",
+  "p2016_authored_commits": 0.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
   "avg_review_latency_days": 2496.939081384016,
   "reviews_count": 11.0,
   "avg_approval_latency_days": 1955.1980497685186,
   "approvals_count": 2.0,
+  "p2016_reviews_count": 7.0,
+  "modern_reviews_count": 4.0,
   "prs_authored": 18.0,
   "avg_pr_ack_velocity_days": 1.1209995039682539,
   "avg_concept_lead_time_days": 1.7558564814814817,
   "review_reciprocity": 0.6111111111111112,
   "hybrid_score": 0.2873,
+  "p2016_hybrid_score": 0.1399,
+  "modern_hybrid_score": 0.1917,
   "impact_score": 8.0,
   "threads_started": 5.0,
   "replies_sent": 8.0,
@@ -47,6 +53,31 @@
   "first_active": "2013-12-03T23:16:18",
   "last_active": "2025-10-15T15:04:26",
   "dev_type": "Builder",
+  "expertise_domains": [
+    "Infrastructure",
+    "Ecosystem",
+    "Privacy"
+  ],
+  "expertise_by_source": {
+    "code": {
+      "Infrastructure": 1.0
+    },
+    "discussion": {
+      "Ecosystem": 0.85,
+      "Privacy": 0.15
+    }
+  },
+  "expertise_domain_scores": {
+    "Ecosystem": 0.34,
+    "Infrastructure": 0.6,
+    "Privacy": 0.06
+  },
+  "p2016_posts": 12.0,
+  "modern_posts": 5.0,
+  "p2016_ml_posts": 10.0,
+  "p2016_delving_posts": 2.0,
+  "modern_ml_posts": 3.0,
+  "modern_delving_posts": 2.0,
   "global_first_active": "2013-12-03T23:16:18",
   "global_last_active": "2025-10-15T15:04:26",
   "github_location": "The Blue Planet",

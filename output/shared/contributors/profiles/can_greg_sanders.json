@@ -19,7 +19,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "Tests (QA)",
   "total_commits": 435.0,
   "authored_commits": 435.0,
@@ -28,28 +28,71 @@
   "total_deletions": 2482.0,
   "first_commit": "2015-11-11T15:49:32",
   "last_commit": "2026-04-06T20:43:46",
+  "p2016_authored_commits": 336.0,
+  "modern_authored_commits": 170.0,
   "bips_authored": 4.0,
-  "avg_review_latency_days": 153.42985402514526,
-  "reviews_count": 956.0,
-  "avg_approval_latency_days": 61.8141658078598,
-  "approvals_count": 677.0,
-  "prs_authored": 247.0,
+  "avg_review_latency_days": 153.32616413835913,
+  "reviews_count": 957.0,
+  "avg_approval_latency_days": 61.79195359020651,
+  "approvals_count": 678.0,
+  "p2016_reviews_count": 931.0,
+  "modern_reviews_count": 268.0,
+  "prs_authored": 248.0,
   "avg_pr_ack_velocity_days": 7.941069694081336,
   "avg_concept_lead_time_days": 15.63761665448343,
-  "review_reciprocity": 3.8704453441295548,
-  "hybrid_score": 1.5284,
+  "review_reciprocity": 3.8588709677419355,
+  "hybrid_score": 1.5309,
+  "p2016_hybrid_score": 0.8171,
+  "modern_hybrid_score": 0.8754,
   "impact_score": 41.0,
   "threads_started": 70.0,
-  "replies_sent": 233.0,
+  "replies_sent": 234.0,
   "ml_threads": 5.0,
   "delving_threads": 65.0,
-  "ml_responses": 125.0,
+  "ml_responses": 126.0,
   "delving_responses": 108.0,
   "first_active": "2014-08-03T12:23:07",
-  "last_active": "2026-04-14T08:57:06",
+  "last_active": "2026-05-28T09:04:24",
   "dev_type": "Protocol Designer",
+  "expertise_domains": [
+    "Consensus",
+    "Infrastructure",
+    "Mempool"
+  ],
+  "expertise_by_source": {
+    "bips": {
+      "Consensus": 0.75,
+      "Infrastructure": 0.25
+    },
+    "code": {
+      "Consensus": 0.104,
+      "Infrastructure": 0.722,
+      "Network": 0.037,
+      "Wallet": 0.137
+    },
+    "discussion": {
+      "L2": 0.224,
+      "Mempool": 0.531,
+      "Script": 0.245
+    }
+  },
+  "expertise_domain_scores": {
+    "Consensus": 0.4062,
+    "Infrastructure": 0.3416,
+    "L2": 0.0448,
+    "Mempool": 0.1062,
+    "Network": 0.0111,
+    "Script": 0.049,
+    "Wallet": 0.0411
+  },
+  "p2016_posts": 300.0,
+  "modern_posts": 202.0,
+  "p2016_ml_posts": 127.0,
+  "p2016_delving_posts": 173.0,
+  "modern_ml_posts": 29.0,
+  "modern_delving_posts": 173.0,
   "global_first_active": "2014-08-03T12:23:07",
-  "global_last_active": "2026-04-14T08:57:06",
+  "global_last_active": "2026-05-28T09:04:24",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -194,9 +237,9 @@
   },
   "last_message": {
     "source": "mailing_list",
-    "subject": "[bitcoindev] Re: Subject: Eltoo / LN-Symmetry on Inquisition Signet:\n BIP 118 + 3-Round State Chain (APO+CTV)",
-    "date": "2026-04-14",
-    "link": "https://gnusha.org/pi/bitcoindev/494c0600-2daa-4500-8e49-bf36efbf2625n@googlegroups.com"
+    "subject": "[bitcoindev] Re: Mapping the design space of sibling-aware covenants",
+    "date": "2026-05-28",
+    "link": "https://gnusha.org/pi/bitcoindev/c00f0fdf-950b-4ff8-a502-eeb1be02c510n@googlegroups.com"
   },
   "social_history": {
     "2014": {
@@ -284,8 +327,8 @@
       "testing-devtools": 21
     },
     "2026": {
-      "other": 8,
-      "covenants": 2,
+      "other": 9,
+      "covenants": 3,
       "lightning": 6,
       "mempool-fees": 2,
       "mining": 2,

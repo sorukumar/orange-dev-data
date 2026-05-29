@@ -1,0 +1,787 @@
+From https://github.com/bitcoin/bitcoin
+ * branch                  master     -> FETCH_HEAD
+Already up to date.
+From https://github.com/bitcoin/bips
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+fatal: couldn't find remote ref master
+Reading git log...
+Running command: git -C data/sources/bitcoin log master --format=COMMIT_Start^|^%H^|^%at^|^%an^|^%ae^|^%cn^|^%ce^|^%ct^|^%P^|^%ai^|^%s --numstat -m
+Parsed 63314 commits.
+Saved to data/raw/core_commits.parquet
+
+Extracting commit messages for reviewer analysis...
+Extracting commit messages for reviewer parsing...
+Extracted 49120 commit messages.
+Saved messages to data/raw/core_messages.parquet
+Scanning repository structure...
+Scanned 2939 files, 2939 lines.
+Saved Metadata to data/enriched/core_metadata.json
+--- Stage 1: BIP Ingestion Starting ---
+BIPs repo exists and is full.
+Parsing 209 BIP files for metadata and git history...
+  Processed 0/209 files...
+  Processed 50/209 files...
+  Processed 100/209 files...
+  Processed 150/209 files...
+  Processed 200/209 files...
+
+--- Ingestion Complete ---
+Total BIPs Parsed: 209
+Artifact Saved: data/raw/bips.parquet
+
+Status Distribution:
+Deployed    78
+Draft       60
+Closed      53
+Complete    18
+Name: status, dtype: int64
+Already up to date.
+Updating BIPs GitHub metadata archive in data/sources/bips-github-metadata...
+Warning: Pulls directory not found at data/sources/bips-github-metadata/pulls. Ensure sync completed successfully.
+Already up to date.
+Updating Delving archive in data/sources/delving...
+Processing Delving archive files...
+Error: Posts directory not found at data/sources/delving/archive/posts
+No Delving records found in archive.
+Ingesting mailing list from Git repo (Shard 0): data/sources/mailing_list/shard_0...
+  Fetching latest from remote for shard 0...
+Shard 0 is up to date.
+Mailing list state updated: 24444 messages, latest from 2026-05-28T13:37:10
+Already up to date.
+Updating GitHub metadata archive in data/sources/bitcoin-github-metadata...
+Processing 0 PR metadata files...
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Saved 0 PRs to data/raw/github_pr_metadata.parquet
+Saved 0 review events to data/raw/github_review_events.parquet
+Deriving proxy set from merged events...
+  0 proxy logins derived (≥5 merges): 
+Mining PR directories...
+  0 (github_id, email) pairs found (pre-corroboration)
+  0 github_ids with only noreply emails
+  0 unique github_ids seen
+Loading curated anchors...
+  3 explicit blocked anchors loaded from curated file
+  0 github_ids matched from curated entries
+  149 emails blocked (owned by curated identities)
+Building map...
+
+Wrote 0 entries → metadata/github_id_map.json
+  0  have at least one real email
+  0  have only a noreply address
+  0  entries supplemented from hand-curated table
+Building exhaustive universal identity database...
+Indexing Git Commits...
+Loading github_id_map...
+  0 github_ids with real email anchors
+Parsing PR Metadata (prgithub)...
+Parsing PR Metadata (bipgithub)...
+Parsing Review Events (prgithub)...
+Parsing Review Events (bipgithub)...
+Parsing Delving...
+Parsing Mailing List...
+Parsing BIP Author headers...
+Loading GitHub profiles (public email + display-name bridge)...
+  777 public profile email edges
+  1,417 display-name bridge edges (login → real name)
+Loading single-PR candidate emails...
+  281 confirmed (candidate == profile email)
+  1,003 candidate-only (no profile email to cross-validate)
+Injecting explicit curated edges...
+Computing Universal Map...
+Generated 4796 high-fidelity identities.
+Re-stamping canonical_ids in social_mailing_list.parquet ...
+  24,444 rows re-stamped: 1,374 unique IDs before → 1,373 after
+  ✓ Collapsed 1 stale auto_ IDs into canonical Phase 2 UUIDs.
+Re-stamping canonical_ids in social_delving.parquet ...
+  4,158 rows re-stamped: 397 unique IDs before → 398 after
+Loading commit messages from data/raw/core_messages.parquet...
+Processing 49120 commit messages...
+Found 19278 review signals in 9919 commits.
+Saved reviews to data/raw/core_reviews.parquet
+Saved reviewer summary to output/tracker/reviewers_summary.json
+  Total reviews: 19278
+  Unique commits with reviews: 9919
+  Top 5 reviewers: ['achow101', 'laanwj', 'marcofalke', 'hebasto', 'fanquake']
+🕵️  Processing local GitHub metadata from data/sources/bitcoin-github-metadata...
+📊 Found 0 metadata files.
+✨ Successfully enriched 0 GitHub identities via local metadata.
+/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/02_process/core.py:1354: UserWarning: Converting to PeriodArray/Index representation will drop timezone information.
+  df['month_period'] = df['date_utc'].dt.to_period('M')
+Loading data...
+Filtering data to cutoff: 2026-04-30
+Normalizing identities using master resolver...
+Generating Vital Signs...
+Loaded 22 maintainers with 58 email aliases.
+Generating Snapshots...
+Generating Contributor Landscape...
+Adding 1255 pure reviewers to the landscape population...
+Exported contributor commit history to data/enriched/contributor_commit_history.json
+Generating Category Evolution...
+  Generating Total view...
+  Generating Authored view...
+Generating Contributor Growth...
+Generating Common Metrics...
+Generating Social...
+Generating Corporate Era & Maintainer Independence...
+Loaded 11 sponsors, 84 sponsored developer emails.
+Running Maintainer Footprint Analysis...
+Analyzing footprints for 22 potential maintainers...
+Footprints saved to data/enriched/maintainer_footprints.json
+  Generated: 5 active maintainers, 22 total
+Generating Geography...
+Generating Codebase Stats...
+  Replaying 63098 commits for stack evolution...
+  Scaling Stack Evolution by 0.410318 (Hist: 1216226 -> Target: 499039)
+  Replaying commits for Category History...
+  Scaling Category History by 0.514038 (Hist: 970822 -> Target: 499039)
+Generating Engagement Tiers...
+Generating Churn Metrics...
+Generating Retention Metrics...
+Generating Reviewer Metrics...
+All stats generated successfully.
+Loading Delving data from data/raw/social_delving.parquet...
+Loading Mailing List data from data/raw/social_mailing_list.parquet...
+Merging social data...
+Total social records: 28602
+Saved to data/raw/social_combined.parquet
+
+Social Activity by Source:
+mailing_list    24444
+delving          4158
+Name: source, dtype: int64
+
+Top 5 Contributors (Governance):
+can_alicexbt           1583
+can_mike_hearn          981
+can_gregory_maxwell     873
+can_luke_dashjr         703
+can_pieter_wuille       691
+Name: canonical_id, dtype: int64
+--- Stage 3: Forensic Enrichment Starting ---
+Loading datasets...
+Categorizing BIPs and Social threads into themes...
+Linking BIPs to social discussions...
+Linking BIPs to repository commits...
+Calculating Maturity Scores...
+Saving enriched BIPs to data/enriched/bips_refined.parquet...
+Wrote 209 BIP records to output/tracker/bips_ui.json
+
+--- Enrichment Complete ---
+BIPs with code links: 76
+BIPs with social links: 97
+
+Top BIPs by Maturity Score:
+    bip_id  ... maturity_score
+50      70  ...           0.68
+21      32  ...           0.55
+28      39  ...           0.50
+160    340  ...           0.43
+133    174  ...           0.38
+161    341  ...           0.38
+45      65  ...           0.26
+1        2  ...           0.24
+10      15  ...           0.21
+55      75  ...           0.19
+
+[10 rows x 4 columns]
+Exported per-contributor BIP index to data/enriched/contributor_bips.json (159 contributors)
+🔄 Starting Master Registry Sync...
+  Bootstrapping from 4796 defined identities...
+  Syncing 2426 active core contributors...
+  Syncing 4620 social participants...
+      Matched: can_pieter_wuille -> Pieter Wuille
+      Matched: can_luke_dashjr -> Luke Dashjr
+      Matched: can_gavin_andresen -> Gavin Andresen
+      Matched: can_jonas_schnelli -> Jonas Schnelli
+      Matched: can_jeff_garzik -> Jeff Garzik
+      Matched: can_gregory_maxwell -> Gregory Maxwell
+      Matched: can_ava_chow -> Ava Chow
+      Matched: can_gloria_zhao -> Gloria Zhao
+      Matched: can_matt_corallo -> Matt Corallo
+      Matched: can_anthony_towns -> Anthony Towns
+      Matched: can_marcofalke -> MarcoFalke
+      Matched: can_mark_friedenbach -> Mark Friedenbach
+      Matched: can_nils_schneider -> Nils Schneider
+      Matched: can_johnson_lau -> Johnson Lau
+      Matched: can_eric_lombrozo -> Eric Lombrozo
+      Matched: can_hennadii_stepanov -> Hennadii Stepanov
+      Matched: can_jeremy_rubin -> Jeremy Rubin
+      Matched: can_ryan_ofsky -> Ryan Ofsky
+      Matched: auto_karl_johan_alm -> Karl Johan Alm
+      Matched: can_antoine_poinsot -> Antoine Poinsot
+✨ Registry Sync Complete! Tracked 15155 unique contributors.
+============================================================
+  Categorize Threads – Bitcoin Social Data
+============================================================
+
+Loading data/raw/social_combined.parquet ...
+  28,602 messages loaded.
+  17,286 unique threads.
+
+Categorizing threads ...
+   2,000 / 17,286 threads processed
+   4,000 / 17,286 threads processed
+   6,000 / 17,286 threads processed
+   8,000 / 17,286 threads processed
+  10,000 / 17,286 threads processed
+  12,000 / 17,286 threads processed
+  14,000 / 17,286 threads processed
+  16,000 / 17,286 threads processed
+  17,286 / 17,286 threads processed
+
+Mapping results to messages ...
+
+Saved → data/enriched/social_threads.parquet
+
+============================================================
+  CATEGORIZATION SUMMARY
+============================================================
+
+  Total threads:          17,286
+  Threads with BIP refs:  2,547  (14.7%)
+  Categorized (non-other):12,528  (72.5%)
+  Uncategorized (other):  4,758  (27.5%)
+
+  Category                      Threads       %
+  ----------------------------------------------
+  other                           4,758   27.5%
+  mining                          1,224    7.1%
+  hard-fork-block-size            1,116    6.5%
+  mempool-fees                      992    5.7%
+  payment-protocol                  765    4.4%
+  wallet-keys                       761    4.4%
+  covenants                         693    4.0%
+  script-opcodes                    645    3.7%
+  taproot                           571    3.3%
+  soft-fork-activation              547    3.2%
+  segwit                            465    2.7%
+  p2p-network                       458    2.6%
+  privacy                           450    2.6%
+  security                          354    2.0%
+  quantum                           349    2.0%
+  core-dev                          335    1.9%
+  multisig-threshold                288    1.7%
+  lightning                         287    1.7%
+  spam-filtering                    285    1.6%
+  bip-process                       272    1.6%
+  utxo-sync                         255    1.5%
+  testing-devtools                  216    1.2%
+  scaling                           198    1.1%
+  sidechains-drivechain             180    1.0%
+  signatures-sighash                139    0.8%
+  consensus-cleanup                 132    0.8%
+  bitvm                              81    0.5%
+  tokens-runes                       78    0.5%
+  ordinals-inscriptions              68    0.4%
+  vaults                             59    0.3%
+  data-structures                    57    0.3%
+  l2-bridges                         47    0.3%
+  silent-payments                    43    0.2%
+  transaction-format                 38    0.2%
+  atomic-swaps                       34    0.2%
+  dlc                                19    0.1%
+  ecash                              17    0.1%
+  nostr                              10    0.1%
+
+  Threads with 2+ categories: 4,875
+
+Done.
+
+Computing contributor message bookmarks...
+  Saved → data/enriched/contributor_message_bookmarks.json (1655 contributors)
+Computing contributor social history by topic...
+  Saved → data/enriched/contributor_social_history.json (1655 contributors)
+Loading datasets...
+Using identity resolver for canonical mapping...
+Filtering signals...
+Aggregating reviewer metrics...
+Aggregating author metrics...
+Joining all metrics...
+Review metrics calculated for 1478 contributors.
+Top contributors by Reciprocity:
+               canonical_id  review_reciprocity
+115     can_gregory_maxwell           69.000000
+122     can_michael_folkson           29.000000
+1334    auto_vojt_ch_strnad           23.000000
+962   can_keagan_mcclelland           18.000000
+926         can_luke_dashjr           16.135135
+Fastest Approvers (Avg Latency):
+             canonical_id  avg_approval_latency_days
+1054       auto_steve_lee                   0.000683
+1306  auto_alexander_cyon                   0.001331
+619         auto_cbspears                   0.001516
+142      can_niklas_g_gge                   0.003137
+890   auto_miguelmedeiros                   0.010301
+Loading identity resolver...
+Loading enriched social data from data/enriched/social_threads.parquet...
+Processing edges and expertise fingerprints across eras...
+Dampening message counts for PageRank (Logarithmic scaling)...
+Calculating era-based PageRank centralities...
+  Using Universal Identities population count: 4796
+Exporting enriched network data for 4796 total contributors (interactive + observers)...
+Enriching all 4796 contributors with archetypes and hybrid weighting...
+  Loaded commit history for 1171 contributors.
+Exported comprehensive contributor dataset (4796 people) to data/enriched/social_stats.json
+Building undirected subgraph for community detection (time-decay weighted)...
+Running Louvain community detection on 174 connected nodes...
+Computing spring layout (Fruchterman-Reingold)...
+  11 communication communities detected, 76 isolated nodes
+Building expertise similarity graph...
+Running Louvain on expertise graph (250 nodes)...
+  6 expertise communities detected, 0 generalists
+Exported richer network to output/network/network_graph.json
+--- Stage 3.5: Expertise & Authority Mapping ---
+Extracting Expertise Tags from PR labels...
+Identifying Full-Stack Architects...
+Resolving commit author identities...
+Identifying The Gatekeepers...
+Assembling Expert Profiles...
+Expertise mapping saved to output/tracker/expertise.json
+Found 71 Full-Stack Architects and 77 specialized experts.
+Loading Master UUID Identities...
+Discovering all active contributors across sources...
+Master Union: 4817 unique contributors discovered.
+Aggregating contributors.json metadata...
+Processing BIP data...
+Enriching with GitHub profile data (location, company, bio, twitter)...
+  Profile enrichment: 357 / 4817 contributors with location data
+Grand Join complete. 4817 contributors unified in data/enriched/contributors_unified.parquet
+Generated output/tracker/stats_regional_evolution.json with consolidated categories
+🔄 Starting Master Registry Sync...
+  Bootstrapping from 4796 defined identities...
+  Syncing 2426 active core contributors...
+  Syncing 4796 social participants...
+      Matched: can_pieter_wuille -> Pieter Wuille
+      Matched: can_luke_dashjr -> Luke Dashjr
+      Matched: can_gavin_andresen -> Gavin Andresen
+      Matched: can_jonas_schnelli -> Jonas Schnelli
+      Matched: can_jeff_garzik -> Jeff Garzik
+      Matched: can_gregory_maxwell -> Gregory Maxwell
+      Matched: can_wladimir_j_van_der_laan -> Wladimir J. van der Laan
+      Matched: can_ava_chow -> Ava Chow
+      Matched: can_gloria_zhao -> Gloria Zhao
+      Matched: can_matt_corallo -> Matt Corallo
+      Matched: can_anthony_towns -> Anthony Towns
+      Matched: can_marcofalke -> MarcoFalke
+      Matched: can_drak -> Drak
+      Matched: can_mark_friedenbach -> Mark Friedenbach
+      Matched: can_nils_schneider -> Nils Schneider
+      Matched: can_johnson_lau -> Johnson Lau
+      Matched: can_eric_lombrozo -> Eric Lombrozo
+      Matched: can_hennadii_stepanov -> Hennadii Stepanov
+      Matched: can_alicexbt -> alicexbt
+      Matched: can_jeremy_rubin -> Jeremy Rubin
+✨ Registry Sync Complete! Tracked 15155 unique contributors.
+Delivering UI artifacts...
+Loading enriched per-contributor data files...
+  commit_history loaded for 1171 contributors
+  contributor_bips loaded for 159 contributors
+  message_bookmarks loaded for 1655 contributors
+  social_history loaded for 1655 contributors
+Cleaning profiles directory...
+Generating profiles and tracking filenames...
+Generated 4817 profile shards to output/shared/contributors/profiles
+Registry and profiles saved to output/shared/contributors/
+Generating Ecosystem Summary (Pure Python)...
+Ecosystem summary saved to output/shared/ecosystem_summary.json
+Stats: Total Active=3545, New Coders=16, New Discussants=77
+Generating Discussions Pulse...
+  ✅ Written: output/shared/discussions_pulse.json
+     90d: 634 msgs · 314 threads · 181 voices
+     30d: 222 msgs · 119 threads · 84 voices
+Traceback (most recent call last):
+  File "/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/04_deliver/network_home_snapshot.py", line 405, in <module>
+    generate_snapshot()
+  File "/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/04_deliver/network_home_snapshot.py", line 120, in generate_snapshot
+    reviews_df = load_review_events()
+  File "/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/04_deliver/network_home_snapshot.py", line 74, in load_review_events
+    frames.append(pd.read_parquet(path, columns=['pr_number', 'user', 'timestamp', 'event_type']))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pandas/io/parquet.py", line 503, in read_parquet
+    return impl.read(
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pandas/io/parquet.py", line 251, in read
+    result = self.api.parquet.read_table(
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pyarrow/parquet/core.py", line 1926, in read_table
+    return dataset.read(columns=columns, use_threads=use_threads,
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pyarrow/parquet/core.py", line 1552, in read
+    table = self._dataset.to_table(
+  File "pyarrow/_dataset.pyx", line 579, in pyarrow._dataset.Dataset.to_table
+  File "pyarrow/_dataset.pyx", line 415, in pyarrow._dataset.Dataset.scanner
+  File "pyarrow/_dataset.pyx", line 3704, in pyarrow._dataset.Scanner.from_dataset
+  File "pyarrow/_dataset.pyx", line 3617, in pyarrow._dataset.Scanner._make_scan_options
+  File "pyarrow/_dataset.pyx", line 3567, in pyarrow._dataset._populate_builder
+  File "pyarrow/error.pxi", line 92, in pyarrow.lib.check_status
+pyarrow.lib.ArrowInvalid: No match for FieldRef.Name(pr_number) in __fragment_index: int32
+__batch_index: int32
+__last_in_fragment: bool
+__filename: string
+🚀 Starting MONTHLY Automated Pipeline (Deep Analytics)...
+✅ Loaded .env file
+
+--- PHASE 0: Raw Data Sync ---
+
+--- Running: git -C data/sources/bitcoin pull origin master ---
+
+--- Running: git -C data/sources/bips pull origin master ---
+
+--- Running: git -C data/sources/delving pull origin master ---
+⚠️  Command failed with exit code 1
+
+--- PHASE 1: Extraction (Raw Staging) ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/01_ingest/core.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/01_ingest/bips.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/01_ingest/bips_metadata.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/01_ingest/delving.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/01_ingest/mailing_list.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/01_ingest/github_metadata.py ---
+
+────────────────────────────────────────────────────────────
+  📊  DEV COUNT SNAPSHOT — After Phase 1 — raw source files extracted
+────────────────────────────────────────────────────────────
+    Commit authors (unique emails)                  1,319
+    BIPs PR authors (unique IDs)                      749
+    BIPs reviewers (unique IDs)                     1,298
+    Mailing list (unique emails)                    1,471
+    Delving (unique usernames)                        398
+
+    identities.json — total                         4,620
+      can_ (hand-curated multi-alias)                 132
+      auto_ (everyone else)                         4,488
+      merged across 2+ sources                      1,180
+      origin: ghprofile                             1,623
+      origin: bipgithub                             1,468
+      origin: mailinglist                           1,374
+      origin: singlepr                              1,370
+      origin: delving                                 393
+      origin: bips                                    159
+      origin: curation                                131
+
+    audit — Delving users mapped                      371 / 376
+    audit — Delving candidates to curate                1
+    audit — ML emails mapped                        1,451 / 1,451
+    audit — fuzzy name pairs to review                245
+
+    contributor_review_metrics — unique UUIDs       1,478
+
+    social_stats — unique UUIDs                     4,620
+      with mailing list activity                      891
+      with Delving activity                           366
+
+    contributors_unified — ONE ROW PER DEV          4,631
+      commit activity (total_commits > 0)               0
+      review activity (reviews > 0)                 1,315
+      social activity (ML or Delving > 0)           1,169
+      BIP authorship (bips_authored > 0)              156
+      cross-source (2+ signal types)                  208
+
+    ecosystem_summary — total_registry              7,409
+    ecosystem_summary — total_active                6,273
+    ecosystem_summary — committers                  1,142
+    ecosystem_summary — reviewers                   4,954
+    ecosystem_summary — research                    1,638
+    ecosystem_summary — standards                     156
+
+────────────────────────────────────────────────────────────
+
+--- PHASE 2: Convergence (Enrichment) ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/identity/build_github_id_map.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/identity/build_identities.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/identity/restamp_social_ids.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/identity/restamp_delving_ids.py ---
+
+────────────────────────────────────────────────────────────
+  📊  DEV COUNT SNAPSHOT — After build_identities — identity graph built
+────────────────────────────────────────────────────────────
+    Commit authors (unique emails)                  1,319
+    BIPs PR authors (unique IDs)                      749
+    BIPs reviewers (unique IDs)                     1,298
+    Mailing list (unique emails)                    1,471
+    Delving (unique usernames)                        398
+
+    identities.json — total                         4,796
+      can_ (hand-curated multi-alias)                 132
+      auto_ (everyone else)                         4,664
+      merged across 2+ sources                      1,668
+      origin: ghprofile                             1,622
+      origin: bipgithub                             1,467
+      origin: mailinglist                           1,373
+      origin: singlepr                              1,369
+      origin: corecommit                            1,165
+      origin: delving                                 393
+      origin: bips                                    158
+      origin: curation                                131
+
+    audit — Delving users mapped                      371 / 376
+    audit — Delving candidates to curate                1
+    audit — ML emails mapped                        1,451 / 1,451
+    audit — fuzzy name pairs to review                245
+
+    contributor_review_metrics — unique UUIDs       1,478
+
+    social_stats — unique UUIDs                     4,620
+      with mailing list activity                      891
+      with Delving activity                           366
+
+    contributors_unified — ONE ROW PER DEV          4,631
+      commit activity (total_commits > 0)               0
+      review activity (reviews > 0)                 1,315
+      social activity (ML or Delving > 0)           1,169
+      BIP authorship (bips_authored > 0)              156
+      cross-source (2+ signal types)                  208
+
+    ecosystem_summary — total_registry              7,409
+    ecosystem_summary — total_active                6,273
+    ecosystem_summary — committers                  1,142
+    ecosystem_summary — reviewers                   4,954
+    ecosystem_summary — research                    1,638
+    ecosystem_summary — standards                     156
+
+────────────────────────────────────────────────────────────
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/02_process/reviews.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/02_process/github_social.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/02_process/core.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/02_process/merge_social.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/02_process/governance.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/04_deliver/registry.py ---
+
+--- PHASE 3: Intelligence (NLP & Graphs) ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/02_process/categorize.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/03_analyze/review_metrics.py ---
+
+────────────────────────────────────────────────────────────
+  📊  DEV COUNT SNAPSHOT — After review_metrics — reviewer metrics computed
+────────────────────────────────────────────────────────────
+    Commit authors (unique emails)                  1,319
+    BIPs PR authors (unique IDs)                      749
+    BIPs reviewers (unique IDs)                     1,298
+    Mailing list (unique emails)                    1,471
+    Delving (unique usernames)                        398
+
+    identities.json — total                         4,796
+      can_ (hand-curated multi-alias)                 132
+      auto_ (everyone else)                         4,664
+      merged across 2+ sources                      1,668
+      origin: ghprofile                             1,622
+      origin: bipgithub                             1,467
+      origin: mailinglist                           1,373
+      origin: singlepr                              1,369
+      origin: corecommit                            1,165
+      origin: delving                                 393
+      origin: bips                                    158
+      origin: curation                                131
+
+    audit — Delving users mapped                      371 / 376
+    audit — Delving candidates to curate                1
+    audit — ML emails mapped                        1,451 / 1,451
+    audit — fuzzy name pairs to review                245
+
+    contributor_review_metrics — unique UUIDs       1,478
+
+    social_stats — unique UUIDs                     4,620
+      with mailing list activity                      891
+      with Delving activity                           366
+
+    contributors_unified — ONE ROW PER DEV          4,631
+      commit activity (total_commits > 0)               0
+      review activity (reviews > 0)                 1,315
+      social activity (ML or Delving > 0)           1,169
+      BIP authorship (bips_authored > 0)              156
+      cross-source (2+ signal types)                  208
+
+    ecosystem_summary — total_registry              7,409
+    ecosystem_summary — total_active                6,273
+    ecosystem_summary — committers                  1,142
+    ecosystem_summary — reviewers                   4,954
+    ecosystem_summary — research                    1,638
+    ecosystem_summary — standards                     156
+
+────────────────────────────────────────────────────────────
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/03_analyze/influence.py ---
+
+────────────────────────────────────────────────────────────
+  📊  DEV COUNT SNAPSHOT — After influence — social stats computed
+────────────────────────────────────────────────────────────
+    Commit authors (unique emails)                  1,319
+    BIPs PR authors (unique IDs)                      749
+    BIPs reviewers (unique IDs)                     1,298
+    Mailing list (unique emails)                    1,471
+    Delving (unique usernames)                        398
+
+    identities.json — total                         4,796
+      can_ (hand-curated multi-alias)                 132
+      auto_ (everyone else)                         4,664
+      merged across 2+ sources                      1,668
+      origin: ghprofile                             1,622
+      origin: bipgithub                             1,467
+      origin: mailinglist                           1,373
+      origin: singlepr                              1,369
+      origin: corecommit                            1,165
+      origin: delving                                 393
+      origin: bips                                    158
+      origin: curation                                131
+
+    audit — Delving users mapped                      371 / 376
+    audit — Delving candidates to curate                1
+    audit — ML emails mapped                        1,451 / 1,451
+    audit — fuzzy name pairs to review                245
+
+    contributor_review_metrics — unique UUIDs       1,478
+
+    social_stats — unique UUIDs                     4,796
+      with mailing list activity                      891
+      with Delving activity                           367
+
+    contributors_unified — ONE ROW PER DEV          4,631
+      commit activity (total_commits > 0)               0
+      review activity (reviews > 0)                 1,315
+      social activity (ML or Delving > 0)           1,169
+      BIP authorship (bips_authored > 0)              156
+      cross-source (2+ signal types)                  208
+
+    ecosystem_summary — total_registry              7,409
+    ecosystem_summary — total_active                6,273
+    ecosystem_summary — committers                  1,142
+    ecosystem_summary — reviewers                   4,954
+    ecosystem_summary — research                    1,638
+    ecosystem_summary — standards                     156
+
+────────────────────────────────────────────────────────────
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/03_analyze/expertise.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/02_process/unify_contributors.py ---
+
+────────────────────────────────────────────────────────────
+  📊  DEV COUNT SNAPSHOT — After unify_contributors — grand join complete
+────────────────────────────────────────────────────────────
+    Commit authors (unique emails)                  1,319
+    BIPs PR authors (unique IDs)                      749
+    BIPs reviewers (unique IDs)                     1,298
+    Mailing list (unique emails)                    1,471
+    Delving (unique usernames)                        398
+
+    identities.json — total                         4,796
+      can_ (hand-curated multi-alias)                 132
+      auto_ (everyone else)                         4,664
+      merged across 2+ sources                      1,668
+      origin: ghprofile                             1,622
+      origin: bipgithub                             1,467
+      origin: mailinglist                           1,373
+      origin: singlepr                              1,369
+      origin: corecommit                            1,165
+      origin: delving                                 393
+      origin: bips                                    158
+      origin: curation                                131
+
+    audit — Delving users mapped                      371 / 376
+    audit — Delving candidates to curate                1
+    audit — ML emails mapped                        1,451 / 1,451
+    audit — fuzzy name pairs to review                245
+
+    contributor_review_metrics — unique UUIDs       1,478
+
+    social_stats — unique UUIDs                     4,796
+      with mailing list activity                      891
+      with Delving activity                           367
+
+    contributors_unified — ONE ROW PER DEV          4,817
+      commit activity (total_commits > 0)           1,174
+      review activity (reviews > 0)                 1,315
+      social activity (ML or Delving > 0)           1,167
+      BIP authorship (bips_authored > 0)              155
+      cross-source (2+ signal types)                  350
+
+    ecosystem_summary — total_registry              7,409
+    ecosystem_summary — total_active                6,273
+    ecosystem_summary — committers                  1,142
+    ecosystem_summary — reviewers                   4,954
+    ecosystem_summary — research                    1,638
+    ecosystem_summary — standards                     156
+
+────────────────────────────────────────────────────────────
+
+--- PHASE 4: Artifact Generation ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/04_deliver/generate_regional_evolution.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/04_deliver/registry.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/04_deliver/ui_artifacts.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/04_deliver/ecosystem_summary.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/04_deliver/discussions_pulse.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/04_deliver/network_home_snapshot.py ---
+⚠️  Command failed with exit code 1
+
+────────────────────────────────────────────────────────────
+  📊  DEV COUNT SNAPSHOT — FINAL — ecosystem summary
+────────────────────────────────────────────────────────────
+    Commit authors (unique emails)                  1,319
+    BIPs PR authors (unique IDs)                      749
+    BIPs reviewers (unique IDs)                     1,298
+    Mailing list (unique emails)                    1,471
+    Delving (unique usernames)                        398
+
+    identities.json — total                         4,796
+      can_ (hand-curated multi-alias)                 132
+      auto_ (everyone else)                         4,664
+      merged across 2+ sources                      1,668
+      origin: ghprofile                             1,622
+      origin: bipgithub                             1,467
+      origin: mailinglist                           1,373
+      origin: singlepr                              1,369
+      origin: corecommit                            1,165
+      origin: delving                                 393
+      origin: bips                                    158
+      origin: curation                                131
+
+    audit — Delving users mapped                      371 / 376
+    audit — Delving candidates to curate                1
+    audit — ML emails mapped                        1,451 / 1,451
+    audit — fuzzy name pairs to review                245
+
+    contributor_review_metrics — unique UUIDs       1,478
+
+    social_stats — unique UUIDs                     4,796
+      with mailing list activity                      891
+      with Delving activity                           367
+
+    contributors_unified — ONE ROW PER DEV          4,817
+      commit activity (total_commits > 0)           1,174
+      review activity (reviews > 0)                 1,315
+      social activity (ML or Delving > 0)           1,167
+      BIP authorship (bips_authored > 0)              155
+      cross-source (2+ signal types)                  350
+
+    ecosystem_summary — total_registry              4,817
+    ecosystem_summary — total_active                3,545
+    ecosystem_summary — committers                  1,174
+    ecosystem_summary — reviewers                   1,315
+    ecosystem_summary — research                    1,648
+    ecosystem_summary — standards                     155
+
+────────────────────────────────────────────────────────────
+
+✨ MONTHLY PIPELINE COMPLETE!
+Everything is up to date and all NLP/Graphs have been recalculated.

@@ -16,7 +16,7 @@
   },
   "roles": [],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-28T00:00:00",
   "technical_focus": "None",
   "total_commits": 0.0,
   "authored_commits": 0.0,
@@ -25,16 +25,22 @@
   "total_deletions": null,
   "first_commit": null,
   "last_commit": null,
+  "p2016_authored_commits": 0.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
   "avg_review_latency_days": 476.810174988977,
   "reviews_count": 16.0,
   "avg_approval_latency_days": 117.66631944444444,
   "approvals_count": 2.0,
+  "p2016_reviews_count": 16.0,
+  "modern_reviews_count": 6.0,
   "prs_authored": 1.0,
   "avg_pr_ack_velocity_days": 914.9784375,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 16.0,
   "hybrid_score": 0.1533,
+  "p2016_hybrid_score": 0.1589,
+  "modern_hybrid_score": 0.2706,
   "impact_score": 4.0,
   "threads_started": 4.0,
   "replies_sent": 32.0,
@@ -45,6 +51,26 @@
   "first_active": "2015-01-30T19:30:49",
   "last_active": "2026-03-16T11:25:36",
   "dev_type": "Reviewer",
+  "expertise_domains": [
+    "Ecosystem",
+    "Script"
+  ],
+  "expertise_by_source": {
+    "discussion": {
+      "Ecosystem": 0.577,
+      "Script": 0.423
+    }
+  },
+  "expertise_domain_scores": {
+    "Ecosystem": 0.577,
+    "Script": 0.423
+  },
+  "p2016_posts": 18.0,
+  "modern_posts": 16.0,
+  "p2016_ml_posts": 18.0,
+  "p2016_delving_posts": 0.0,
+  "modern_ml_posts": 16.0,
+  "modern_delving_posts": 0.0,
   "global_first_active": "2015-01-30T19:30:49",
   "global_last_active": "2026-03-16T11:25:36",
   "github_location": "Bratislava",

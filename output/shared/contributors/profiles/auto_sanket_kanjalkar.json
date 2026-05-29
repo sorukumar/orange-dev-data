@@ -19,7 +19,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "Consensus (Domain Logic)",
   "total_commits": 6.0,
   "authored_commits": 6.0,
@@ -28,16 +28,22 @@
   "total_deletions": 123.0,
   "first_commit": "2018-09-15T09:32:12",
   "last_commit": "2021-07-11T08:59:27",
+  "p2016_authored_commits": 6.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 1.0,
   "avg_review_latency_days": 682.9517113743645,
   "reviews_count": 24.0,
   "avg_approval_latency_days": 447.8747042824074,
   "approvals_count": 16.0,
+  "p2016_reviews_count": 24.0,
+  "modern_reviews_count": 3.0,
   "prs_authored": 12.0,
   "avg_pr_ack_velocity_days": 124.43330687830687,
   "avg_concept_lead_time_days": 2.968283179012346,
   "review_reciprocity": 2.0,
   "hybrid_score": 0.5946,
+  "p2016_hybrid_score": 0.2511,
+  "modern_hybrid_score": 0.1839,
   "impact_score": 16.0,
   "threads_started": 8.0,
   "replies_sent": 9.0,
@@ -48,6 +54,38 @@
   "first_active": "2020-12-10T05:28:23",
   "last_active": "2025-08-15T05:09:15.910000",
   "dev_type": "Builder",
+  "expertise_domains": [
+    "Wallet",
+    "Consensus",
+    "Infrastructure"
+  ],
+  "expertise_by_source": {
+    "bips": {
+      "Wallet": 1.0
+    },
+    "code": {
+      "Consensus": 0.5,
+      "Infrastructure": 0.5
+    },
+    "discussion": {
+      "Consensus": 0.19,
+      "Cryptography": 0.214,
+      "Script": 0.595
+    }
+  },
+  "expertise_domain_scores": {
+    "Consensus": 0.188,
+    "Cryptography": 0.0428,
+    "Infrastructure": 0.15,
+    "Script": 0.119,
+    "Wallet": 0.5001
+  },
+  "p2016_posts": 17.0,
+  "modern_posts": 15.0,
+  "p2016_ml_posts": 6.0,
+  "p2016_delving_posts": 11.0,
+  "modern_ml_posts": 4.0,
+  "modern_delving_posts": 11.0,
   "global_first_active": "2018-09-15T09:32:12",
   "global_last_active": "2025-08-15T05:09:15.910000128",
   "github_location": "Seattle, WA",

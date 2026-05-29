@@ -19,7 +19,7 @@
     "BIP Author"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "None",
   "total_commits": 0.0,
   "authored_commits": 0.0,
@@ -28,16 +28,22 @@
   "total_deletions": null,
   "first_commit": null,
   "last_commit": null,
+  "p2016_authored_commits": 0.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 2.0,
   "avg_review_latency_days": 770.2432039141414,
   "reviews_count": 5.0,
   "avg_approval_latency_days": 809.8751041666666,
   "approvals_count": 1.0,
+  "p2016_reviews_count": 3.0,
+  "modern_reviews_count": 0.0,
   "prs_authored": 11.0,
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 0.45454545454545453,
   "hybrid_score": 0.6994,
+  "p2016_hybrid_score": 0.1276,
+  "modern_hybrid_score": 0.1204,
   "impact_score": 19.0,
   "threads_started": 7.0,
   "replies_sent": 39.0,
@@ -48,6 +54,31 @@
   "first_active": "2015-03-13T14:29:42",
   "last_active": "2025-01-17T04:38:28",
   "dev_type": "Participant",
+  "expertise_domains": [
+    "Infrastructure",
+    "Mining",
+    "Mempool"
+  ],
+  "expertise_by_source": {
+    "bips": {
+      "Infrastructure": 1.0
+    },
+    "discussion": {
+      "Mempool": 0.5,
+      "Mining": 0.5
+    }
+  },
+  "expertise_domain_scores": {
+    "Infrastructure": 0.7143,
+    "Mempool": 0.1429,
+    "Mining": 0.1429
+  },
+  "p2016_posts": 12.0,
+  "modern_posts": 2.0,
+  "p2016_ml_posts": 12.0,
+  "p2016_delving_posts": 0.0,
+  "modern_ml_posts": 2.0,
+  "modern_delving_posts": 0.0,
   "global_first_active": "2015-03-13T14:29:42",
   "global_last_active": "2025-01-17T04:38:28",
   "github_location": null,

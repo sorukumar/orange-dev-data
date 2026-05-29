@@ -37,6 +37,7 @@
       "343"
     ],
     "weight": 70,
+    "expertise_domain": "Consensus",
     "github_paths": [
       "src/versionbits.cpp",
       "src/deploymentstatus.cpp",
@@ -86,6 +87,7 @@
       "109"
     ],
     "weight": 75,
+    "expertise_domain": "Consensus",
     "github_paths": [
       "src/consensus/params.h"
     ]
@@ -113,6 +115,7 @@
       "54"
     ],
     "weight": 72,
+    "expertise_domain": "Consensus",
     "github_paths": [
       "src/consensus/"
     ]
@@ -150,6 +153,7 @@
       "350"
     ],
     "weight": 65,
+    "expertise_domain": "Consensus",
     "github_paths": [
       "src/script/interpreter.cpp",
       "src/primitives/transaction.h"
@@ -189,6 +193,7 @@
       "386"
     ],
     "weight": 68,
+    "expertise_domain": "Consensus",
     "github_paths": [
       "src/script/interpreter.cpp",
       "src/bech32.cpp",
@@ -248,6 +253,7 @@
       "443"
     ],
     "weight": 80,
+    "expertise_domain": "Script",
     "github_paths": [
       "src/script/interpreter.cpp"
     ]
@@ -299,6 +305,7 @@
       "379"
     ],
     "weight": 40,
+    "expertise_domain": "Script",
     "github_paths": [
       "src/script/"
     ]
@@ -328,6 +335,7 @@
     ],
     "bips": [],
     "weight": 82,
+    "expertise_domain": "Ecosystem",
     "github_paths": [
       "src/kernel/"
     ]
@@ -365,6 +373,7 @@
     ],
     "bips": [],
     "weight": 82,
+    "expertise_domain": "Ecosystem",
     "github_paths": [
       "src/kernel/"
     ]
@@ -412,6 +421,7 @@
     ],
     "bips": [],
     "weight": 60,
+    "expertise_domain": "L2",
     "github_paths": [
       "src/interfaces/"
     ]
@@ -454,6 +464,7 @@
       "156"
     ],
     "weight": 62,
+    "expertise_domain": "Privacy",
     "github_paths": [
       "src/wallet/receive.cpp"
     ]
@@ -477,6 +488,7 @@
       "375"
     ],
     "weight": 78,
+    "expertise_domain": "Privacy",
     "github_paths": [
       "src/wallet/silentpayments.cpp",
       "src/bech32.cpp"
@@ -565,6 +577,7 @@
       "390"
     ],
     "weight": 50,
+    "expertise_domain": "Wallet",
     "github_paths": [
       "src/wallet/",
       "src/key.cpp",
@@ -611,6 +624,7 @@
       "390"
     ],
     "weight": 64,
+    "expertise_domain": "Wallet",
     "github_paths": [
       "src/musig.cpp"
     ]
@@ -665,6 +679,7 @@
       "320"
     ],
     "weight": 55,
+    "expertise_domain": "Mining",
     "github_paths": [
       "src/node/miner.cpp",
       "src/rpc/mining.cpp",
@@ -731,6 +746,7 @@
       "433"
     ],
     "weight": 58,
+    "expertise_domain": "Mempool",
     "github_paths": [
       "src/txmempool.cpp",
       "src/policy/",
@@ -808,6 +824,7 @@
       "434"
     ],
     "weight": 52,
+    "expertise_domain": "Network",
     "github_paths": [
       "src/net.cpp",
       "src/net_processing.cpp",
@@ -847,6 +864,7 @@
       "340"
     ],
     "weight": 45,
+    "expertise_domain": "Cryptography",
     "github_paths": [
       "src/pubkey.cpp",
       "src/key.cpp",
@@ -876,6 +894,7 @@
       "345"
     ],
     "weight": 66,
+    "expertise_domain": "Script",
     "github_paths": [
       "src/script/interpreter.cpp"
     ]
@@ -899,6 +918,7 @@
       "374"
     ],
     "weight": 74,
+    "expertise_domain": "L2",
     "github_paths": [
       "src/script/"
     ]
@@ -933,6 +953,7 @@
       "301"
     ],
     "weight": 72,
+    "expertise_domain": "L2",
     "github_paths": [
       "src/validation.cpp"
     ]
@@ -966,6 +987,7 @@
     ],
     "bips": [],
     "weight": 76,
+    "expertise_domain": "L2",
     "github_paths": [
       "src/script/"
     ]
@@ -1000,6 +1022,7 @@
     ],
     "bips": [],
     "weight": 68,
+    "expertise_domain": "L2",
     "github_paths": [
       "src/script/"
     ]
@@ -1037,6 +1060,7 @@
       "360"
     ],
     "weight": 78,
+    "expertise_domain": "Cryptography",
     "github_paths": [
       "src/crypto/"
     ]
@@ -1064,6 +1088,7 @@
     ],
     "bips": [],
     "weight": 74,
+    "expertise_domain": "L2",
     "github_paths": [
       "src/wallet/"
     ]
@@ -1094,6 +1119,7 @@
     ],
     "bips": [],
     "weight": 56,
+    "expertise_domain": "Mempool",
     "github_paths": [
       "src/policy/",
       "src/net_processing.cpp"
@@ -1137,6 +1163,7 @@
       "353"
     ],
     "weight": 54,
+    "expertise_domain": "Ecosystem",
     "github_paths": [
       "src/interfaces/"
     ]
@@ -1163,6 +1190,7 @@
       "199"
     ],
     "weight": 62,
+    "expertise_domain": "L2",
     "github_paths": [
       "src/wallet/"
     ]
@@ -1200,6 +1228,7 @@
     ],
     "bips": [],
     "weight": 64,
+    "expertise_domain": "Infrastructure",
     "github_paths": [
       "src/banman.cpp",
       "src/net_permissions.cpp",
@@ -1236,6 +1265,7 @@
       "94"
     ],
     "weight": 48,
+    "expertise_domain": "Infrastructure",
     "github_paths": [
       "src/test/",
       "src/bench/",
@@ -1269,6 +1299,7 @@
     ],
     "bips": [],
     "weight": 56,
+    "expertise_domain": "Infrastructure",
     "github_paths": [
       "src/coins.cpp",
       "src/dbwrapper.cpp",
@@ -1302,6 +1333,7 @@
     ],
     "bips": [],
     "weight": 44,
+    "expertise_domain": "Infrastructure",
     "github_paths": [
       "src/init.cpp",
       "src/util/",
@@ -1322,6 +1354,7 @@
     ],
     "bips": [],
     "weight": 60,
+    "expertise_domain": "Ecosystem",
     "github_paths": []
   },
   "scaling": {
@@ -1347,6 +1380,7 @@
     ],
     "bips": [],
     "weight": 42,
+    "expertise_domain": "Ecosystem",
     "github_paths": [
       "src/validation.cpp"
     ]
@@ -1379,6 +1413,7 @@
       "123"
     ],
     "weight": 46,
+    "expertise_domain": "Ecosystem",
     "github_paths": [
       "doc/bips.md",
       "metadata/"
@@ -1412,6 +1447,7 @@
       "339"
     ],
     "weight": 38,
+    "expertise_domain": "Infrastructure",
     "github_paths": [
       "src/primitives/transaction.cpp"
     ]
@@ -1439,6 +1475,7 @@
       "98"
     ],
     "weight": 36,
+    "expertise_domain": "Infrastructure",
     "github_paths": [
       "src/primitives/",
       "src/util/"

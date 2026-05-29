@@ -19,7 +19,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "Tests (QA)",
   "total_commits": 3.0,
   "authored_commits": 3.0,
@@ -28,16 +28,22 @@
   "total_deletions": 5.0,
   "first_commit": "2019-08-29T10:58:00",
   "last_commit": "2022-03-16T19:30:46",
+  "p2016_authored_commits": 3.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 1.0,
   "avg_review_latency_days": 575.5857894644854,
   "reviews_count": 260.0,
   "avg_approval_latency_days": 339.0910703941121,
   "approvals_count": 155.0,
+  "p2016_reviews_count": 260.0,
+  "modern_reviews_count": 11.0,
   "prs_authored": 8.0,
   "avg_pr_ack_velocity_days": 0.02502314814814815,
   "avg_concept_lead_time_days": 0.04951388888888889,
   "review_reciprocity": 32.5,
-  "hybrid_score": 0.7811,
+  "hybrid_score": 0.781,
+  "p2016_hybrid_score": 0.5501,
+  "modern_hybrid_score": 0.4404,
   "impact_score": 21.0,
   "threads_started": 45.0,
   "replies_sent": 97.0,
@@ -48,6 +54,31 @@
   "first_active": "2020-08-29T05:14:50",
   "last_active": "2025-06-11T03:38:17",
   "dev_type": "Builder",
+  "expertise_domains": [
+    "Consensus",
+    "Infrastructure"
+  ],
+  "expertise_by_source": {
+    "bips": {
+      "Consensus": 1.0
+    },
+    "code": {
+      "Infrastructure": 1.0
+    },
+    "discussion": {
+      "Consensus": 1.0
+    }
+  },
+  "expertise_domain_scores": {
+    "Consensus": 0.7,
+    "Infrastructure": 0.3
+  },
+  "p2016_posts": 142.0,
+  "modern_posts": 29.0,
+  "p2016_ml_posts": 135.0,
+  "p2016_delving_posts": 7.0,
+  "modern_ml_posts": 22.0,
+  "modern_delving_posts": 7.0,
   "global_first_active": "2019-08-29T10:58:00",
   "global_last_active": "2025-06-11T03:38:17",
   "github_location": "London",

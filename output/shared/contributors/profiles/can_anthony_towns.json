@@ -19,7 +19,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "Tests (QA)",
   "total_commits": 606.0,
   "authored_commits": 606.0,
@@ -28,16 +28,22 @@
   "total_deletions": 6158.0,
   "first_commit": "2016-08-23T06:55:15",
   "last_commit": "2026-04-22T07:58:25",
+  "p2016_authored_commits": 355.0,
+  "modern_authored_commits": 106.0,
   "bips_authored": 5.0,
-  "avg_review_latency_days": 283.44613618456907,
-  "reviews_count": 723.0,
+  "avg_review_latency_days": 283.26612671095006,
+  "reviews_count": 724.0,
   "avg_approval_latency_days": 159.53934626182033,
   "approvals_count": 353.0,
+  "p2016_reviews_count": 723.0,
+  "modern_reviews_count": 295.0,
   "prs_authored": 157.0,
   "avg_pr_ack_velocity_days": 10.156134806065909,
   "avg_concept_lead_time_days": 22.343851175613814,
-  "review_reciprocity": 4.6050955414012735,
-  "hybrid_score": 1.8135,
+  "review_reciprocity": 4.611464968152866,
+  "hybrid_score": 1.8157,
+  "p2016_hybrid_score": 0.9303,
+  "modern_hybrid_score": 0.8656,
   "impact_score": 48.0,
   "threads_started": 128.0,
   "replies_sent": 491.0,
@@ -48,6 +54,42 @@
   "first_active": "2015-08-02T17:35:45",
   "last_active": "2026-05-26T20:51:30",
   "dev_type": "Protocol Designer",
+  "expertise_domains": [
+    "Infrastructure",
+    "Consensus",
+    "Mempool"
+  ],
+  "expertise_by_source": {
+    "bips": {
+      "Consensus": 0.6,
+      "Infrastructure": 0.4
+    },
+    "code": {
+      "Consensus": 0.091,
+      "Infrastructure": 0.707,
+      "Network": 0.174,
+      "Wallet": 0.028
+    },
+    "discussion": {
+      "Mempool": 0.4,
+      "Mining": 0.257,
+      "Script": 0.343
+    }
+  },
+  "expertise_domain_scores": {
+    "Consensus": 0.3273,
+    "Infrastructure": 0.4121,
+    "Mempool": 0.08,
+    "Mining": 0.0514,
+    "Network": 0.0522,
+    "Script": 0.0686
+  },
+  "p2016_posts": 591.0,
+  "modern_posts": 357.0,
+  "p2016_ml_posts": 294.0,
+  "p2016_delving_posts": 297.0,
+  "modern_ml_posts": 66.0,
+  "modern_delving_posts": 291.0,
   "global_first_active": "2015-08-02T17:35:45",
   "global_last_active": "2026-05-26T20:51:30",
   "github_location": "Brisbane, Australia",

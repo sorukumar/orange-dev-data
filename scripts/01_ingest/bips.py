@@ -34,8 +34,12 @@ def run_command(cmd, cwd=None):
     return result.stdout
 
 def setup_repo():
-    """Clones the BIPs repository if it doesn't exist."""
-    if not os.path.exists(BIPS_REPO_PATH):
+    """Clones the BIPs repository if it doesn't exist or is not a valid git repo."""
+    if not os.path.isdir(os.path.join(BIPS_REPO_PATH, '.git')):
+        if os.path.exists(BIPS_REPO_PATH):
+            print(f"Warning: {BIPS_REPO_PATH} exists but has no .git — removing and re-cloning...")
+            import shutil
+            shutil.rmtree(BIPS_REPO_PATH)
         print(f"Cloning BIPs repo to {BIPS_REPO_PATH}...")
         # Do NOT use --depth 1, we need full history for git log
         subprocess.run(["git", "clone", BIPS_REPO_URL, BIPS_REPO_PATH], check=True)

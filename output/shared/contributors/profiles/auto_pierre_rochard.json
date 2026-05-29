@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "Wallet (Client App)",
   "total_commits": 12.0,
   "authored_commits": 12.0,
@@ -27,16 +27,22 @@
   "total_deletions": 67.0,
   "first_commit": "2017-09-26T22:02:09",
   "last_commit": "2018-09-15T01:10:20",
+  "p2016_authored_commits": 9.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
   "avg_review_latency_days": 84.28630605482934,
   "reviews_count": 25.0,
   "avg_approval_latency_days": 110.68148194444444,
   "approvals_count": 20.0,
+  "p2016_reviews_count": 24.0,
+  "modern_reviews_count": 0.0,
   "prs_authored": 8.0,
   "avg_pr_ack_velocity_days": 7.493207947530865,
   "avg_concept_lead_time_days": 0.6517361111111111,
   "review_reciprocity": 3.125,
   "hybrid_score": 0.2555,
+  "p2016_hybrid_score": 0.2555,
+  "modern_hybrid_score": 0.1227,
   "impact_score": 7.0,
   "threads_started": 1.0,
   "replies_sent": 0.0,
@@ -47,6 +53,33 @@
   "first_active": "2024-05-21T03:35:59.869000",
   "last_active": "2024-05-21T03:35:59.869000",
   "dev_type": "Builder",
+  "expertise_domains": [
+    "Wallet",
+    "Consensus",
+    "Infrastructure"
+  ],
+  "expertise_by_source": {
+    "code": {
+      "Infrastructure": 0.278,
+      "Wallet": 0.722
+    },
+    "discussion": {
+      "Consensus": 0.75,
+      "Script": 0.25
+    }
+  },
+  "expertise_domain_scores": {
+    "Consensus": 0.3,
+    "Infrastructure": 0.1668,
+    "Script": 0.1,
+    "Wallet": 0.4332
+  },
+  "p2016_posts": 1.0,
+  "modern_posts": 1.0,
+  "p2016_ml_posts": 0.0,
+  "p2016_delving_posts": 1.0,
+  "modern_ml_posts": 0.0,
+  "modern_delving_posts": 1.0,
   "global_first_active": "2017-09-26T22:02:09",
   "global_last_active": "2024-05-21T03:35:59.868999936",
   "github_location": "Earth",

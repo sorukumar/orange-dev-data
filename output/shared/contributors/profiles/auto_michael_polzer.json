@@ -1,6 +1,6 @@
 {
   "display_name": "Michael Polzer",
-  "github_login_final": "HashUnlimited",
+  "github_login_final": "SmarterHomes",
   "delving_username_final": null,
   "uuid": "auto_michael_polzer",
   "badges": {
@@ -16,7 +16,7 @@
   },
   "roles": [],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "None",
   "total_commits": 3.0,
   "authored_commits": 3.0,
@@ -25,16 +25,22 @@
   "total_deletions": 3.0,
   "first_commit": "2018-09-10T11:08:25",
   "last_commit": "2020-04-03T10:52:36",
+  "p2016_authored_commits": 3.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
   "avg_review_latency_days": 4.671883680555555,
   "reviews_count": 3.0,
   "avg_approval_latency_days": null,
   "approvals_count": 0.0,
+  "p2016_reviews_count": 3.0,
+  "modern_reviews_count": 0.0,
   "prs_authored": 8.0,
   "avg_pr_ack_velocity_days": 44.74499074074075,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 0.375,
   "hybrid_score": 0.155,
+  "p2016_hybrid_score": 0.155,
+  "modern_hybrid_score": 0.075,
   "impact_score": 4.0,
   "threads_started": 0.0,
   "replies_sent": 0.0,
@@ -45,6 +51,26 @@
   "first_active": null,
   "last_active": null,
   "dev_type": "Builder",
+  "expertise_domains": [
+    "Infrastructure",
+    "Network"
+  ],
+  "expertise_by_source": {
+    "code": {
+      "Infrastructure": 0.667,
+      "Network": 0.333
+    }
+  },
+  "expertise_domain_scores": {
+    "Infrastructure": 0.667,
+    "Network": 0.333
+  },
+  "p2016_posts": 0.0,
+  "modern_posts": 0.0,
+  "p2016_ml_posts": 0.0,
+  "p2016_delving_posts": 0.0,
+  "modern_ml_posts": 0.0,
+  "modern_delving_posts": 0.0,
   "global_first_active": "2018-09-10T11:08:25",
   "global_last_active": "2020-04-03T10:52:36",
   "github_location": null,
@@ -54,7 +80,7 @@
   "github_blog": null,
   "github_followers": null,
   "is_top_50": false,
-  "github_url": "https://github.com/HashUnlimited",
+  "github_url": "https://github.com/SmarterHomes",
   "commit_history": {
     "2018": {
       "Node & RPC (App/Interface)": 1.0

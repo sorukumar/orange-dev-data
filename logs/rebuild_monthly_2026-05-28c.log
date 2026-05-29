@@ -1,0 +1,834 @@
+From https://github.com/bitcoin/bitcoin
+ * branch                  master     -> FETCH_HEAD
+Already up to date.
+From https://github.com/bitcoin/bips
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+From https://github.com/jamesob/delving-bitcoin-archive
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+Reading git log...
+Running command: git -C data/sources/bitcoin log master --format=COMMIT_Start^|^%H^|^%at^|^%an^|^%ae^|^%cn^|^%ce^|^%ct^|^%P^|^%ai^|^%s --numstat -m
+Parsed 63314 commits.
+Saved to data/raw/core_commits.parquet
+
+Extracting commit messages for reviewer analysis...
+Extracting commit messages for reviewer parsing...
+Extracted 49120 commit messages.
+Saved messages to data/raw/core_messages.parquet
+Scanning repository structure...
+Scanned 2939 files, 2939 lines.
+Saved Metadata to data/enriched/core_metadata.json
+--- Stage 1: BIP Ingestion Starting ---
+BIPs repo exists and is full.
+Parsing 209 BIP files for metadata and git history...
+  Processed 0/209 files...
+  Processed 50/209 files...
+  Processed 100/209 files...
+  Processed 150/209 files...
+  Processed 200/209 files...
+
+--- Ingestion Complete ---
+Total BIPs Parsed: 209
+Artifact Saved: data/raw/bips.parquet
+
+Status Distribution:
+Deployed    78
+Draft       60
+Closed      53
+Complete    18
+Name: status, dtype: int64
+From https://github.com/bitcoin-data/github-metadata-backup-bitcoin-bips
+   e5a1a7f..b5d6e02  master     -> origin/master
+Updating e5a1a7f..b5d6e02
+Fast-forward
+ pulls/2097.json |  66 ++++++++++-
+ pulls/2180.json | 355 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ state.json      |   2 +-
+ 3 files changed, 418 insertions(+), 5 deletions(-)
+ create mode 100644 pulls/2180.json
+Updating BIPs GitHub metadata archive in data/sources/bips-github-metadata...
+Processing 2021 BIP metadata files...
+  0%|          | 0/2021 [00:00<?, ?it/s]  4%|▎         | 75/2021 [00:00<00:04, 426.91it/s]  9%|▉         | 182/2021 [00:00<00:02, 715.16it/s] 14%|█▍        | 283/2021 [00:00<00:02, 828.88it/s] 18%|█▊        | 373/2021 [00:00<00:02, 816.04it/s] 24%|██▍       | 494/2021 [00:00<00:01, 943.34it/s] 30%|██▉       | 601/2021 [00:00<00:01, 982.62it/s] 35%|███▍      | 703/2021 [00:00<00:01, 956.41it/s] 40%|███▉      | 801/2021 [00:00<00:01, 931.53it/s] 44%|████▍     | 898/2021 [00:01<00:01, 932.90it/s] 49%|████▉     | 993/2021 [00:01<00:01, 894.13it/s] 54%|█████▎    | 1084/2021 [00:01<00:01, 841.01it/s] 59%|█████▉    | 1189/2021 [00:01<00:00, 898.69it/s] 63%|██████▎   | 1281/2021 [00:01<00:00, 799.27it/s] 68%|██████▊   | 1368/2021 [00:01<00:00, 759.52it/s] 74%|███████▎  | 1489/2021 [00:01<00:00, 863.39it/s] 78%|███████▊  | 1578/2021 [00:01<00:00, 856.59it/s] 84%|████████▍ | 1695/2021 [00:01<00:00, 941.46it/s] 89%|████████▊ | 1792/2021 [00:02<00:00, 831.41it/s] 93%|█████████▎| 1879/2021 [00:02<00:00, 746.38it/s] 98%|█████████▊| 1988/2021 [00:02<00:00, 831.04it/s]100%|██████████| 2021/2021 [00:02<00:00, 850.83it/s]
+Saved 2021 BIP PRs to data/raw/bips_pr_metadata.parquet
+Saved 32369 BIP review events to data/raw/bips_review_events.parquet
+Already up to date.
+Updating Delving archive in data/sources/delving...
+Processing Delving archive files...
+  Processed 1000 posts...
+  Processed 2000 posts...
+  Processed 3000 posts...
+  Processed 4000 posts...
+  Skipped 4 post(s) from bot/system accounts.
+
+Saved 4162 Delving posts to data/raw/social_delving.parquet
+
+Top 5 Delving Contributors:
+can_anthony_towns      298
+can_pieter_wuille      174
+can_greg_sanders       173
+can_antoine_poinsot    137
+can_peter_todd         131
+Name: canonical_id, dtype: int64
+Ingesting mailing list from Git repo (Shard 0): data/sources/mailing_list/shard_0...
+  Fetching latest from remote for shard 0...
+Found 24445 potential email files in shard 0.
+  Processed 5000/24445 emails in shard 0...
+  Processed 10000/24445 emails in shard 0...
+  Processed 15000/24445 emails in shard 0...
+  Processed 20000/24445 emails in shard 0...
+Added 1 new emails from shard 0.
+Saved 24445 total messages to data/raw/social_mailing_list.parquet
+Mailing list state updated: 24445 messages, latest from 2026-05-28T17:13:12
+From https://github.com/bitcoin-data/github-metadata-backup-bitcoin-bitcoin
+   18fe12c8..86590a8d  master     -> origin/master
+Updating 18fe12c8..86590a8d
+Fast-forward
+ issues/31684.json |  62 +++++-
+ pulls/32575.json  | 238 ++++++++++++++++++++++-
+ pulls/33034.json  | 129 +++++++++++--
+ pulls/34875.json  |  28 +--
+ pulls/35407.json  | 551 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ state.json        |   2 +-
+ 6 files changed, 975 insertions(+), 35 deletions(-)
+ create mode 100644 pulls/35407.json
+Updating GitHub metadata archive in data/sources/bitcoin-github-metadata...
+Processing 24662 PR metadata files...
+  0%|          | 0/24662 [00:00<?, ?it/s]  0%|          | 43/24662 [00:00<00:57, 429.10it/s]  0%|          | 86/24662 [00:00<00:57, 424.88it/s]  1%|          | 129/24662 [00:00<01:00, 404.69it/s]  1%|          | 193/24662 [00:00<00:50, 482.51it/s]  1%|          | 256/24662 [00:00<00:45, 532.73it/s]  1%|▏         | 323/24662 [00:00<00:42, 577.27it/s]  2%|▏         | 381/24662 [00:00<00:44, 546.14it/s]  2%|▏         | 440/24662 [00:00<00:43, 556.87it/s]  2%|▏         | 497/24662 [00:00<00:46, 515.78it/s]  2%|▏         | 556/24662 [00:01<00:44, 535.73it/s]  2%|▏         | 611/24662 [00:01<00:46, 520.85it/s]  3%|▎         | 664/24662 [00:01<00:49, 481.55it/s]  3%|▎         | 729/24662 [00:01<00:45, 526.58it/s]  3%|▎         | 796/24662 [00:01<00:42, 562.64it/s]  4%|▎         | 866/24662 [00:01<00:39, 599.77it/s]  4%|▍         | 927/24662 [00:01<00:41, 565.89it/s]  4%|▍         | 985/24662 [00:01<00:42, 560.24it/s]  4%|▍         | 1043/24662 [00:01<00:41, 564.73it/s]  4%|▍         | 1106/24662 [00:02<00:40, 581.14it/s]  5%|▍         | 1165/24662 [00:02<00:43, 540.53it/s]  5%|▍         | 1220/24662 [00:02<00:43, 543.10it/s]  5%|▌         | 1280/24662 [00:02<00:41, 559.10it/s]  5%|▌         | 1350/24662 [00:02<00:39, 597.69it/s]  6%|▌         | 1411/24662 [00:02<00:39, 586.20it/s]  6%|▌         | 1488/24662 [00:02<00:37, 621.57it/s]  6%|▋         | 1551/24662 [00:02<00:37, 612.40it/s]  7%|▋         | 1626/24662 [00:02<00:36, 638.44it/s]  7%|▋         | 1702/24662 [00:03<00:34, 672.42it/s]  7%|▋         | 1770/24662 [00:03<00:34, 672.30it/s]  7%|▋         | 1849/24662 [00:03<00:32, 704.53it/s]  8%|▊         | 1920/24662 [00:03<00:33, 687.42it/s]  8%|▊         | 1989/24662 [00:03<00:33, 683.98it/s]  8%|▊         | 2066/24662 [00:03<00:31, 708.34it/s]  9%|▊         | 2147/24662 [00:03<00:30, 734.28it/s]  9%|▉         | 2221/24662 [00:03<00:31, 707.03it/s]  9%|▉         | 2292/24662 [00:03<00:33, 666.66it/s] 10%|▉         | 2366/24662 [00:03<00:32, 683.50it/s] 10%|▉         | 2435/24662 [00:04<00:33, 672.84it/s] 10%|█         | 2504/24662 [00:04<00:32, 675.68it/s] 10%|█         | 2581/24662 [00:04<00:31, 701.58it/s] 11%|█         | 2652/24662 [00:04<00:31, 696.04it/s] 11%|█         | 2722/24662 [00:04<00:33, 648.89it/s] 11%|█▏        | 2788/24662 [00:04<00:34, 630.76it/s] 12%|█▏        | 2858/24662 [00:04<00:33, 644.67it/s] 12%|█▏        | 2923/24662 [00:04<00:37, 578.99it/s] 12%|█▏        | 3003/24662 [00:04<00:34, 629.46it/s] 12%|█▏        | 3069/24662 [00:05<00:34, 634.63it/s] 13%|█▎        | 3134/24662 [00:05<00:33, 638.01it/s] 13%|█▎        | 3210/24662 [00:05<00:31, 671.38it/s] 13%|█▎        | 3285/24662 [00:05<00:30, 693.32it/s] 14%|█▎        | 3362/24662 [00:05<00:29, 713.73it/s] 14%|█▍        | 3442/24662 [00:05<00:28, 738.53it/s] 14%|█▍        | 3517/24662 [00:05<00:30, 689.25it/s] 15%|█▍        | 3591/24662 [00:05<00:30, 698.97it/s] 15%|█▍        | 3662/24662 [00:05<00:30, 677.59it/s] 15%|█▌        | 3731/24662 [00:06<00:31, 668.41it/s] 15%|█▌        | 3799/24662 [00:06<00:31, 667.78it/s] 16%|█▌        | 3884/24662 [00:06<00:28, 718.87it/s] 16%|█▌        | 3957/24662 [00:06<00:35, 582.18it/s] 16%|█▋        | 4027/24662 [00:06<00:33, 610.26it/s] 17%|█▋        | 4103/24662 [00:06<00:31, 648.01it/s] 17%|█▋        | 4171/24662 [00:06<00:31, 642.37it/s] 17%|█▋        | 4242/24662 [00:06<00:30, 659.28it/s] 18%|█▊        | 4324/24662 [00:06<00:28, 703.73it/s] 18%|█▊        | 4397/24662 [00:07<00:28, 710.84it/s] 18%|█▊        | 4470/24662 [00:07<00:32, 613.19it/s] 18%|█▊        | 4539/24662 [00:07<00:31, 631.36it/s] 19%|█▊        | 4610/24662 [00:07<00:30, 651.30it/s] 19%|█▉        | 4677/24662 [00:07<00:32, 617.71it/s] 19%|█▉        | 4745/24662 [00:07<00:31, 633.48it/s] 20%|█▉        | 4818/24662 [00:07<00:30, 659.91it/s] 20%|█▉        | 4886/24662 [00:07<00:29, 660.25it/s] 20%|██        | 4956/24662 [00:07<00:29, 669.79it/s] 20%|██        | 5024/24662 [00:08<00:29, 668.12it/s] 21%|██        | 5108/24662 [00:08<00:27, 717.75it/s] 21%|██        | 5181/24662 [00:08<00:27, 702.28it/s] 21%|██▏       | 5253/24662 [00:08<00:27, 707.34it/s] 22%|██▏       | 5324/24662 [00:08<00:29, 658.75it/s] 22%|██▏       | 5404/24662 [00:08<00:27, 693.60it/s] 22%|██▏       | 5475/24662 [00:08<00:27, 690.80it/s] 23%|██▎       | 5554/24662 [00:08<00:26, 717.05it/s] 23%|██▎       | 5627/24662 [00:08<00:26, 709.47it/s] 23%|██▎       | 5699/24662 [00:08<00:27, 693.71it/s] 23%|██▎       | 5769/24662 [00:09<00:28, 662.30it/s] 24%|██▎       | 5836/24662 [00:09<00:28, 663.51it/s] 24%|██▍       | 5912/24662 [00:09<00:27, 689.11it/s] 24%|██▍       | 5982/24662 [00:09<00:28, 652.62it/s] 25%|██▍       | 6048/24662 [00:09<00:28, 649.18it/s] 25%|██▍       | 6115/24662 [00:09<00:28, 654.68it/s] 25%|██▌       | 6181/24662 [00:09<00:28, 642.04it/s] 25%|██▌       | 6246/24662 [00:09<00:28, 642.29it/s] 26%|██▌       | 6311/24662 [00:09<00:29, 620.04it/s] 26%|██▌       | 6379/24662 [00:10<00:28, 637.06it/s] 26%|██▌       | 6449/24662 [00:10<00:27, 652.40it/s] 26%|██▋       | 6515/24662 [00:10<00:29, 625.08it/s] 27%|██▋       | 6589/24662 [00:10<00:27, 648.86it/s] 27%|██▋       | 6655/24662 [00:10<00:28, 640.51it/s] 27%|██▋       | 6733/24662 [00:10<00:26, 679.24it/s] 28%|██▊       | 6802/24662 [00:10<00:28, 636.55it/s] 28%|██▊       | 6879/24662 [00:10<00:26, 673.02it/s] 28%|██▊       | 6948/24662 [00:10<00:29, 602.83it/s] 28%|██▊       | 7022/24662 [00:11<00:27, 638.85it/s] 29%|██▊       | 7088/24662 [00:11<00:27, 642.23it/s] 29%|██▉       | 7160/24662 [00:11<00:26, 662.94it/s] 29%|██▉       | 7228/24662 [00:11<00:27, 634.00it/s] 30%|██▉       | 7299/24662 [00:11<00:26, 653.68it/s] 30%|██▉       | 7372/24662 [00:11<00:25, 675.26it/s] 30%|███       | 7441/24662 [00:11<00:26, 658.24it/s] 30%|███       | 7517/24662 [00:11<00:25, 685.79it/s] 31%|███       | 7587/24662 [00:11<00:25, 679.62it/s] 31%|███       | 7656/24662 [00:12<00:27, 613.00it/s] 31%|███▏      | 7719/24662 [00:12<00:30, 560.84it/s] 32%|███▏      | 7789/24662 [00:12<00:28, 596.53it/s] 32%|███▏      | 7870/24662 [00:12<00:25, 652.67it/s] 32%|███▏      | 7946/24662 [00:12<00:24, 673.81it/s] 32%|███▏      | 8015/24662 [00:12<00:24, 676.58it/s] 33%|███▎      | 8087/24662 [00:12<00:24, 685.84it/s] 33%|███▎      | 8157/24662 [00:12<00:24, 679.50it/s] 33%|███▎      | 8226/24662 [00:12<00:24, 666.71it/s] 34%|███▎      | 8298/24662 [00:12<00:24, 678.81it/s] 34%|███▍      | 8373/24662 [00:13<00:23, 698.43it/s] 34%|███▍      | 8444/24662 [00:13<00:24, 656.46it/s] 35%|███▍      | 8511/24662 [00:13<00:25, 630.07it/s] 35%|███▍      | 8578/24662 [00:13<00:26, 616.95it/s] 35%|███▌      | 8641/24662 [00:13<00:27, 572.39it/s] 35%|███▌      | 8699/24662 [00:13<00:28, 569.15it/s] 36%|███▌      | 8770/24662 [00:13<00:26, 607.19it/s] 36%|███▌      | 8832/24662 [00:13<00:26, 608.16it/s] 36%|███▌      | 8894/24662 [00:13<00:26, 605.25it/s] 36%|███▋      | 8957/24662 [00:14<00:25, 611.84it/s] 37%|███▋      | 9030/24662 [00:14<00:24, 645.51it/s] 37%|███▋      | 9106/24662 [00:14<00:22, 677.86it/s] 37%|███▋      | 9176/24662 [00:14<00:22, 679.80it/s] 37%|███▋      | 9245/24662 [00:14<00:22, 677.46it/s] 38%|███▊      | 9317/24662 [00:14<00:22, 689.04it/s] 38%|███▊      | 9387/24662 [00:14<00:22, 684.07it/s] 38%|███▊      | 9471/24662 [00:14<00:20, 728.84it/s] 39%|███▊      | 9545/24662 [00:14<00:21, 706.39it/s] 39%|███▉      | 9616/24662 [00:14<00:21, 694.91it/s] 39%|███▉      | 9687/24662 [00:15<00:21, 698.71it/s] 40%|███▉      | 9758/24662 [00:15<00:21, 679.83it/s] 40%|███▉      | 9831/24662 [00:15<00:21, 692.92it/s] 40%|████      | 9901/24662 [00:15<00:21, 680.45it/s] 40%|████      | 9970/24662 [00:15<00:22, 652.44it/s] 41%|████      | 10047/24662 [00:15<00:21, 674.55it/s] 41%|████      | 10115/24662 [00:15<00:22, 649.77it/s] 41%|████▏     | 10188/24662 [00:15<00:21, 670.48it/s] 42%|████▏     | 10256/24662 [00:15<00:21, 668.25it/s] 42%|████▏     | 10324/24662 [00:16<00:21, 671.28it/s] 42%|████▏     | 10392/24662 [00:16<00:21, 657.59it/s] 42%|████▏     | 10458/24662 [00:16<00:21, 652.36it/s] 43%|████▎     | 10525/24662 [00:16<00:21, 656.83it/s] 43%|████▎     | 10613/24662 [00:16<00:19, 719.03it/s] 43%|████▎     | 10686/24662 [00:16<00:19, 710.65it/s] 44%|████▎     | 10758/24662 [00:16<00:20, 682.53it/s] 44%|████▍     | 10834/24662 [00:16<00:19, 704.09it/s] 44%|████▍     | 10910/24662 [00:16<00:19, 719.95it/s] 45%|████▍     | 10983/24662 [00:16<00:18, 722.05it/s] 45%|████▍     | 11075/24662 [00:17<00:17, 779.55it/s] 45%|████▌     | 11154/24662 [00:17<00:18, 741.64it/s] 46%|████▌     | 11229/24662 [00:17<00:18, 722.84it/s] 46%|████▌     | 11307/24662 [00:17<00:18, 738.18it/s] 46%|████▌     | 11382/24662 [00:17<00:18, 722.64it/s] 46%|████▋     | 11455/24662 [00:17<00:18, 723.15it/s] 47%|████▋     | 11528/24662 [00:17<00:18, 710.01it/s] 47%|████▋     | 11600/24662 [00:17<00:18, 687.97it/s] 47%|████▋     | 11670/24662 [00:17<00:20, 634.06it/s] 48%|████▊     | 11735/24662 [00:18<00:20, 637.25it/s] 48%|████▊     | 11800/24662 [00:18<00:25, 504.28it/s] 48%|████▊     | 11868/24662 [00:18<00:23, 545.71it/s] 48%|████▊     | 11938/24662 [00:18<00:21, 584.23it/s] 49%|████▊     | 12004/24662 [00:18<00:21, 600.47it/s] 49%|████▉     | 12070/24662 [00:18<00:20, 615.04it/s] 49%|████▉     | 12141/24662 [00:18<00:19, 640.72it/s] 50%|████▉     | 12216/24662 [00:18<00:18, 669.48it/s] 50%|████▉     | 12285/24662 [00:18<00:19, 644.03it/s] 50%|█████     | 12353/24662 [00:19<00:18, 650.20it/s] 50%|█████     | 12419/24662 [00:19<00:20, 603.59it/s] 51%|█████     | 12481/24662 [00:19<00:21, 568.75it/s] 51%|█████     | 12539/24662 [00:19<00:21, 564.41it/s] 51%|█████     | 12597/24662 [00:19<00:29, 413.23it/s] 51%|█████▏    | 12657/24662 [00:19<00:26, 453.74it/s] 52%|█████▏    | 12713/24662 [00:19<00:24, 479.07it/s] 52%|█████▏    | 12787/24662 [00:19<00:21, 544.98it/s] 52%|█████▏    | 12849/24662 [00:20<00:20, 563.67it/s] 52%|█████▏    | 12911/24662 [00:20<00:20, 577.26it/s] 53%|█████▎    | 12978/24662 [00:20<00:19, 601.64it/s] 53%|█████▎    | 13040/24662 [00:20<00:19, 601.90it/s] 53%|█████▎    | 13110/24662 [00:20<00:18, 625.60it/s] 53%|█████▎    | 13189/24662 [00:20<00:17, 671.92it/s] 54%|█████▍    | 13261/24662 [00:20<00:16, 683.97it/s] 54%|█████▍    | 13338/24662 [00:20<00:15, 707.91it/s] 54%|█████▍    | 13421/24662 [00:20<00:15, 741.74it/s] 55%|█████▍    | 13499/24662 [00:21<00:14, 752.66it/s] 55%|█████▌    | 13575/24662 [00:21<00:14, 754.60it/s] 55%|█████▌    | 13651/24662 [00:21<00:14, 748.83it/s] 56%|█████▌    | 13727/24662 [00:21<00:14, 746.59it/s] 56%|█████▌    | 13802/24662 [00:21<00:15, 713.05it/s] 56%|█████▋    | 13879/24662 [00:21<00:14, 728.98it/s] 57%|█████▋    | 13953/24662 [00:21<00:15, 700.65it/s] 57%|█████▋    | 14024/24662 [00:21<00:15, 675.65it/s] 57%|█████▋    | 14103/24662 [00:21<00:14, 705.60it/s] 57%|█████▋    | 14175/24662 [00:22<00:19, 547.54it/s] 58%|█████▊    | 14236/24662 [00:22<00:18, 560.29it/s] 58%|█████▊    | 14308/24662 [00:22<00:17, 600.06it/s] 58%|█████▊    | 14372/24662 [00:22<00:17, 593.40it/s] 59%|█████▊    | 14434/24662 [00:22<00:19, 529.69it/s] 59%|█████▉    | 14498/24662 [00:22<00:18, 556.00it/s] 59%|█████▉    | 14569/24662 [00:22<00:16, 596.16it/s] 59%|█████▉    | 14636/24662 [00:22<00:16, 615.37it/s] 60%|█████▉    | 14700/24662 [00:22<00:16, 594.33it/s] 60%|█████▉    | 14766/24662 [00:23<00:16, 610.49it/s] 60%|██████    | 14830/24662 [00:23<00:16, 605.96it/s] 60%|██████    | 14892/24662 [00:23<00:16, 577.24it/s] 61%|██████    | 14951/24662 [00:23<00:16, 579.18it/s] 61%|██████    | 15017/24662 [00:23<00:16, 601.43it/s] 61%|██████    | 15084/24662 [00:23<00:15, 601.57it/s] 61%|██████▏   | 15150/24662 [00:23<00:15, 612.92it/s] 62%|██████▏   | 15220/24662 [00:23<00:14, 636.55it/s] 62%|██████▏   | 15302/24662 [00:23<00:13, 689.29it/s] 62%|██████▏   | 15372/24662 [00:24<00:14, 633.96it/s] 63%|██████▎   | 15437/24662 [00:24<00:14, 634.57it/s] 63%|██████▎   | 15510/24662 [00:24<00:13, 659.87it/s] 63%|██████▎   | 15589/24662 [00:24<00:14, 612.80it/s] 63%|██████▎   | 15655/24662 [00:24<00:14, 623.82it/s] 64%|██████▎   | 15719/24662 [00:24<00:14, 627.37it/s] 64%|██████▍   | 15796/24662 [00:24<00:13, 664.96it/s] 64%|██████▍   | 15864/24662 [00:24<00:13, 666.23it/s] 65%|██████▍   | 15932/24662 [00:24<00:13, 639.95it/s] 65%|██████▍   | 16003/24662 [00:24<00:13, 657.86it/s] 65%|██████▌   | 16070/24662 [00:25<00:13, 646.36it/s] 65%|██████▌   | 16143/24662 [00:25<00:12, 669.55it/s] 66%|██████▌   | 16212/24662 [00:25<00:12, 675.33it/s] 66%|██████▌   | 16280/24662 [00:25<00:12, 661.97it/s] 66%|██████▋   | 16355/24662 [00:25<00:12, 686.18it/s] 67%|██████▋   | 16427/24662 [00:25<00:12, 671.43it/s] 67%|██████▋   | 16495/24662 [00:25<00:12, 637.24it/s] 67%|██████▋   | 16561/24662 [00:25<00:12, 642.70it/s] 67%|██████▋   | 16631/24662 [00:25<00:12, 654.56it/s] 68%|██████▊   | 16705/24662 [00:26<00:11, 679.17it/s] 68%|██████▊   | 16784/24662 [00:26<00:11, 706.02it/s] 68%|██████▊   | 16855/24662 [00:26<00:11, 685.85it/s] 69%|██████▊   | 16927/24662 [00:26<00:11, 683.94it/s] 69%|██████▉   | 16997/24662 [00:26<00:11, 680.27it/s] 69%|██████▉   | 17066/24662 [00:26<00:11, 637.01it/s] 69%|██████▉   | 17131/24662 [00:26<00:12, 622.25it/s] 70%|██████▉   | 17211/24662 [00:26<00:11, 668.99it/s] 70%|███████   | 17279/24662 [00:26<00:11, 661.12it/s] 70%|███████   | 17351/24662 [00:27<00:10, 677.04it/s] 71%|███████   | 17420/24662 [00:27<00:10, 673.70it/s] 71%|███████   | 17488/24662 [00:27<00:11, 640.92it/s] 71%|███████   | 17553/24662 [00:27<00:11, 611.69it/s] 71%|███████▏  | 17615/24662 [00:27<00:11, 599.22it/s] 72%|███████▏  | 17677/24662 [00:27<00:11, 603.50it/s] 72%|███████▏  | 17749/24662 [00:27<00:10, 636.13it/s] 72%|███████▏  | 17813/24662 [00:27<00:10, 628.63it/s] 73%|███████▎  | 17880/24662 [00:27<00:10, 635.94it/s] 73%|███████▎  | 17945/24662 [00:27<00:10, 635.26it/s] 73%|███████▎  | 18012/24662 [00:28<00:10, 644.84it/s] 73%|███████▎  | 18084/24662 [00:28<00:09, 666.79it/s] 74%|███████▎  | 18151/24662 [00:28<00:10, 623.13it/s] 74%|███████▍  | 18222/24662 [00:28<00:09, 646.06it/s] 74%|███████▍  | 18293/24662 [00:28<00:09, 662.99it/s] 74%|███████▍  | 18364/24662 [00:28<00:09, 675.91it/s] 75%|███████▍  | 18439/24662 [00:28<00:08, 691.57it/s] 75%|███████▌  | 18509/24662 [00:28<00:09, 683.39it/s] 75%|███████▌  | 18578/24662 [00:28<00:09, 666.80it/s] 76%|███████▌  | 18651/24662 [00:29<00:08, 684.74it/s] 76%|███████▌  | 18720/24662 [00:29<00:08, 667.03it/s] 76%|███████▌  | 18787/24662 [00:29<00:09, 641.34it/s] 76%|███████▋  | 18852/24662 [00:29<00:09, 594.35it/s] 77%|███████▋  | 18918/24662 [00:29<00:09, 609.52it/s] 77%|███████▋  | 18981/24662 [00:29<00:09, 613.77it/s] 77%|███████▋  | 19050/24662 [00:29<00:08, 634.42it/s] 78%|███████▊  | 19121/24662 [00:29<00:08, 652.71it/s] 78%|███████▊  | 19187/24662 [00:29<00:09, 562.58it/s] 78%|███████▊  | 19260/24662 [00:30<00:08, 605.83it/s] 78%|███████▊  | 19332/24662 [00:30<00:08, 628.72it/s] 79%|███████▊  | 19397/24662 [00:30<00:08, 604.59it/s] 79%|███████▉  | 19459/24662 [00:30<00:08, 608.37it/s] 79%|███████▉  | 19521/24662 [00:30<00:08, 606.15it/s] 79%|███████▉  | 19583/24662 [00:30<00:08, 605.32it/s] 80%|███████▉  | 19656/24662 [00:30<00:07, 640.50it/s] 80%|███████▉  | 19721/24662 [00:30<00:07, 625.02it/s] 80%|████████  | 19790/24662 [00:30<00:07, 642.23it/s] 81%|████████  | 19861/24662 [00:30<00:07, 660.72it/s] 81%|████████  | 19928/24662 [00:31<00:07, 646.26it/s] 81%|████████  | 19993/24662 [00:31<00:07, 644.36it/s] 81%|████████▏ | 20058/24662 [00:31<00:07, 642.94it/s] 82%|████████▏ | 20138/24662 [00:31<00:06, 685.38it/s] 82%|████████▏ | 20216/24662 [00:31<00:06, 711.94it/s] 82%|████████▏ | 20288/24662 [00:31<00:06, 684.09it/s] 83%|████████▎ | 20357/24662 [00:31<00:06, 678.90it/s] 83%|████████▎ | 20426/24662 [00:31<00:06, 664.81it/s] 83%|████████▎ | 20510/24662 [00:31<00:05, 714.28it/s] 83%|████████▎ | 20582/24662 [00:32<00:05, 711.90it/s] 84%|████████▎ | 20654/24662 [00:32<00:05, 694.05it/s] 84%|████████▍ | 20737/24662 [00:32<00:05, 731.36it/s] 84%|████████▍ | 20811/24662 [00:32<00:05, 720.74it/s] 85%|████████▍ | 20889/24662 [00:32<00:05, 736.23it/s] 85%|████████▌ | 20963/24662 [00:32<00:05, 703.06it/s] 85%|████████▌ | 21034/24662 [00:32<00:05, 681.73it/s] 86%|████████▌ | 21103/24662 [00:32<00:06, 525.43it/s] 86%|████████▌ | 21175/24662 [00:32<00:06, 570.20it/s] 86%|████████▌ | 21238/24662 [00:33<00:05, 584.17it/s] 86%|████████▋ | 21301/24662 [00:33<00:05, 585.27it/s] 87%|████████▋ | 21370/24662 [00:33<00:05, 607.02it/s] 87%|████████▋ | 21441/24662 [00:33<00:05, 635.48it/s] 87%|████████▋ | 21512/24662 [00:33<00:04, 654.87it/s] 88%|████████▊ | 21592/24662 [00:33<00:04, 694.79it/s] 88%|████████▊ | 21663/24662 [00:33<00:04, 683.38it/s] 88%|████████▊ | 21743/24662 [00:33<00:04, 708.36it/s] 88%|████████▊ | 21815/24662 [00:33<00:04, 620.73it/s] 89%|████████▉ | 21891/24662 [00:34<00:04, 657.52it/s] 89%|████████▉ | 21979/24662 [00:34<00:03, 718.47it/s] 89%|████████▉ | 22053/24662 [00:34<00:03, 722.22it/s] 90%|████████▉ | 22127/24662 [00:34<00:03, 691.70it/s] 90%|█████████ | 22198/24662 [00:34<00:03, 693.96it/s] 90%|█████████ | 22269/24662 [00:34<00:03, 676.62it/s] 91%|█████████ | 22345/24662 [00:34<00:03, 698.62it/s] 91%|█████████ | 22422/24662 [00:34<00:03, 710.76it/s] 91%|█████████ | 22497/24662 [00:34<00:03, 718.89it/s] 92%|█████████▏| 22570/24662 [00:35<00:03, 673.37it/s] 92%|█████████▏| 22639/24662 [00:35<00:03, 636.58it/s] 92%|█████████▏| 22712/24662 [00:35<00:02, 661.53it/s] 92%|█████████▏| 22779/24662 [00:35<00:02, 629.02it/s] 93%|█████████▎| 22843/24662 [00:35<00:02, 620.03it/s] 93%|█████████▎| 22907/24662 [00:35<00:02, 622.98it/s] 93%|█████████▎| 22970/24662 [00:35<00:02, 613.49it/s] 93%|█████████▎| 23036/24662 [00:35<00:02, 620.95it/s] 94%|█████████▎| 23099/24662 [00:35<00:02, 620.01it/s] 94%|█████████▍| 23171/24662 [00:35<00:02, 647.30it/s] 94%|█████████▍| 23237/24662 [00:36<00:02, 650.55it/s] 95%|█████████▍| 23309/24662 [00:36<00:02, 666.57it/s] 95%|█████████▍| 23376/24662 [00:36<00:02, 637.02it/s] 95%|█████████▌| 23446/24662 [00:36<00:01, 653.60it/s] 95%|█████████▌| 23512/24662 [00:36<00:01, 639.61it/s] 96%|█████████▌| 23577/24662 [00:36<00:01, 597.21it/s] 96%|█████████▌| 23643/24662 [00:36<00:01, 614.48it/s] 96%|█████████▌| 23714/24662 [00:36<00:01, 640.94it/s] 96%|█████████▋| 23792/24662 [00:36<00:01, 673.13it/s] 97%|█████████▋| 23866/24662 [00:37<00:01, 683.25it/s] 97%|█████████▋| 23942/24662 [00:37<00:01, 700.58it/s] 97%|█████████▋| 24020/24662 [00:37<00:00, 723.20it/s] 98%|█████████▊| 24102/24662 [00:37<00:00, 750.04it/s] 98%|█████████▊| 24183/24662 [00:37<00:00, 756.44it/s] 98%|█████████▊| 24267/24662 [00:37<00:00, 780.13it/s] 99%|█████████▊| 24346/24662 [00:37<00:00, 706.45it/s] 99%|█████████▉| 24423/24662 [00:37<00:00, 719.50it/s] 99%|█████████▉| 24499/24662 [00:37<00:00, 728.62it/s]100%|█████████▉| 24573/24662 [00:38<00:00, 699.79it/s]100%|█████████▉| 24644/24662 [00:38<00:00, 676.77it/s]100%|██████████| 24662/24662 [00:38<00:00, 644.30it/s]
+Saved 24662 PRs to data/raw/github_pr_metadata.parquet
+Saved 726792 review events to data/raw/github_review_events.parquet
+Deriving proxy set from merged events...
+  21 proxy logins derived (≥5 merges): achow101, fanquake, gavinandresen, glozow, gmaxwell, hebasto, jgarzik, jonasschnelli, jonatack, kallewoof, laanwj, luke-jr, maflcko, marcofalke, meshcollider, murchandamus, roasbeef, ryanofsky, sedited, sipa, tcatm
+Mining PR directories...
+  2,947 (github_id, email) pairs found (pre-corroboration)
+  788 github_ids with only noreply emails
+  3,058 unique github_ids seen
+Loading curated anchors...
+  3 explicit blocked anchors loaded from curated file
+  60 github_ids matched from curated entries
+  149 emails blocked (owned by curated identities)
+Building map...
+
+Wrote 1,605 entries → metadata/github_id_map.json
+  897  have at least one real email
+  708  have only a noreply address
+  24  entries supplemented from hand-curated table
+Building exhaustive universal identity database...
+Indexing Git Commits...
+Loading github_id_map...
+  788 gh_id_map email(s) suppressed by blocked_anchors
+  897 github_ids with real email anchors
+Parsing PR Metadata (prgithub)...
+Parsing PR Metadata (bipgithub)...
+Parsing Review Events (prgithub)...
+Parsing Review Events (bipgithub)...
+Parsing Delving...
+Parsing Mailing List...
+Parsing BIP Author headers...
+Loading GitHub profiles (public email + display-name bridge)...
+  777 public profile email edges
+  1,417 display-name bridge edges (login → real name)
+Loading single-PR candidate emails...
+  280 confirmed (candidate == profile email)
+  992 candidate-only (no profile email to cross-validate)
+Injecting explicit curated edges...
+Computing Universal Map...
+Generated 7297 high-fidelity identities.
+Re-stamping canonical_ids in social_mailing_list.parquet ...
+  24,445 rows re-stamped: 1,373 unique IDs before → 1,368 after
+  ✓ Collapsed 5 stale auto_ IDs into canonical Phase 2 UUIDs.
+Re-stamping canonical_ids in social_delving.parquet ...
+  4,162 rows re-stamped: 398 unique IDs before → 397 after
+  ✓ Collapsed 1 stale auto_ IDs into canonical Phase 2 UUIDs.
+Loading commit messages from data/raw/core_messages.parquet...
+Processing 49120 commit messages...
+Found 19278 review signals in 9919 commits.
+Saved reviews to data/raw/core_reviews.parquet
+Saved reviewer summary to output/tracker/reviewers_summary.json
+  Total reviews: 19278
+  Unique commits with reviews: 9919
+  Top 5 reviewers: ['achow101', 'laanwj', 'marcofalke', 'hebasto', 'fanquake']
+🕵️  Processing local GitHub metadata from data/sources/bitcoin-github-metadata...
+📊 Found 33863 metadata files.
+✨ Successfully enriched 0 GitHub identities via local metadata.
+/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/02_process/core.py:1354: UserWarning: Converting to PeriodArray/Index representation will drop timezone information.
+  df['month_period'] = df['date_utc'].dt.to_period('M')
+Loading data...
+Filtering data to cutoff: 2026-04-30
+Normalizing identities using master resolver...
+Generating Vital Signs...
+Loaded 22 maintainers with 58 email aliases.
+Generating Snapshots...
+Generating Contributor Landscape...
+Adding 1238 pure reviewers to the landscape population...
+Exported contributor commit history to data/enriched/contributor_commit_history.json
+Generating Category Evolution...
+  Generating Total view...
+  Generating Authored view...
+Generating Contributor Growth...
+Generating Common Metrics...
+Generating Social...
+Generating Corporate Era & Maintainer Independence...
+Loaded 11 sponsors, 84 sponsored developer emails.
+Running Maintainer Footprint Analysis...
+Analyzing footprints for 22 potential maintainers...
+Footprints saved to data/enriched/maintainer_footprints.json
+  Generated: 5 active maintainers, 22 total
+Generating Geography...
+Generating Codebase Stats...
+  Replaying 63098 commits for stack evolution...
+  Scaling Stack Evolution by 0.410318 (Hist: 1216226 -> Target: 499039)
+  Replaying commits for Category History...
+  Scaling Category History by 0.514038 (Hist: 970822 -> Target: 499039)
+Generating Engagement Tiers...
+Generating Churn Metrics...
+Generating Retention Metrics...
+Generating Reviewer Metrics...
+All stats generated successfully.
+Loading Delving data from data/raw/social_delving.parquet...
+Loading Mailing List data from data/raw/social_mailing_list.parquet...
+Merging social data...
+Total social records: 28607
+Saved to data/raw/social_combined.parquet
+
+Social Activity by Source:
+mailing_list    24445
+delving          4162
+Name: source, dtype: int64
+
+Top 5 Contributors (Governance):
+can_peter_todd         1278
+can_mike_hearn          981
+can_gregory_maxwell     873
+can_luke_dashjr         703
+can_pieter_wuille       691
+Name: canonical_id, dtype: int64
+--- Stage 3: Forensic Enrichment Starting ---
+Loading datasets...
+Categorizing BIPs and Social threads into themes...
+Linking BIPs to social discussions...
+Linking BIPs to repository commits...
+Calculating Maturity Scores...
+Saving enriched BIPs to data/enriched/bips_refined.parquet...
+Wrote 209 BIP records to output/tracker/bips_ui.json
+
+--- Enrichment Complete ---
+BIPs with code links: 76
+BIPs with social links: 97
+
+Top BIPs by Maturity Score:
+    bip_id  ... maturity_score
+50      70  ...           0.68
+21      32  ...           0.55
+28      39  ...           0.50
+160    340  ...           0.43
+133    174  ...           0.38
+161    341  ...           0.38
+45      65  ...           0.26
+1        2  ...           0.24
+10      15  ...           0.21
+55      75  ...           0.19
+
+[10 rows x 4 columns]
+Exported per-contributor BIP index to data/enriched/contributor_bips.json (158 contributors)
+🔄 Starting Master Registry Sync...
+  Bootstrapping from 7297 defined identities...
+  Syncing 2377 active core contributors...
+  Syncing 4796 social participants...
+      Matched: can_pieter_wuille -> Pieter Wuille
+      Matched: can_luke_dashjr -> Luke Dashjr
+      Matched: can_gavin_andresen -> Gavin Andresen
+      Matched: can_jonas_schnelli -> Jonas Schnelli
+      Matched: can_jeff_garzik -> Jeff Garzik
+      Matched: can_gregory_maxwell -> Gregory Maxwell
+      Matched: can_wladimir_j_van_der_laan -> Wladimir J. van der Laan
+      Matched: can_ava_chow -> Ava Chow
+      Matched: can_gloria_zhao -> Gloria Zhao
+      Matched: can_matt_corallo -> Matt Corallo
+      Matched: can_anthony_towns -> Anthony Towns
+      Matched: can_marcofalke -> MarcoFalke
+      Matched: can_mark_friedenbach -> Mark Friedenbach
+      Matched: can_nils_schneider -> Nils Schneider
+      Matched: auto_karl_johan_alm -> Karl-Johan Alm
+      Matched: can_johnson_lau -> Johnson Lau
+      Matched: can_eric_lombrozo -> Eric Lombrozo
+      Matched: can_hennadii_stepanov -> Hennadii Stepanov
+      Matched: can_jeremy_rubin -> Jeremy Rubin
+✨ Registry Sync Complete! Tracked 15604 unique contributors.
+============================================================
+  Categorize Threads – Bitcoin Social Data
+============================================================
+
+Loading data/raw/social_combined.parquet ...
+  28,607 messages loaded.
+  17,288 unique threads.
+
+Categorizing threads ...
+   2,000 / 17,288 threads processed
+   4,000 / 17,288 threads processed
+   6,000 / 17,288 threads processed
+   8,000 / 17,288 threads processed
+  10,000 / 17,288 threads processed
+  12,000 / 17,288 threads processed
+  14,000 / 17,288 threads processed
+  16,000 / 17,288 threads processed
+  17,288 / 17,288 threads processed
+
+Mapping results to messages ...
+
+Saved → data/enriched/social_threads.parquet
+
+============================================================
+  CATEGORIZATION SUMMARY
+============================================================
+
+  Total threads:          17,288
+  Threads with BIP refs:  2,547  (14.7%)
+  Categorized (non-other):12,530  (72.5%)
+  Uncategorized (other):  4,758  (27.5%)
+
+  Category                      Threads       %
+  ----------------------------------------------
+  other                           4,758   27.5%
+  mining                          1,224    7.1%
+  hard-fork-block-size            1,116    6.5%
+  mempool-fees                      992    5.7%
+  payment-protocol                  765    4.4%
+  wallet-keys                       761    4.4%
+  covenants                         694    4.0%
+  script-opcodes                    645    3.7%
+  taproot                           571    3.3%
+  soft-fork-activation              547    3.2%
+  segwit                            465    2.7%
+  p2p-network                       458    2.6%
+  privacy                           451    2.6%
+  security                          354    2.0%
+  quantum                           350    2.0%
+  core-dev                          335    1.9%
+  multisig-threshold                288    1.7%
+  lightning                         287    1.7%
+  spam-filtering                    285    1.6%
+  bip-process                       272    1.6%
+  utxo-sync                         255    1.5%
+  testing-devtools                  216    1.2%
+  scaling                           198    1.1%
+  sidechains-drivechain             180    1.0%
+  signatures-sighash                139    0.8%
+  consensus-cleanup                 132    0.8%
+  bitvm                              81    0.5%
+  tokens-runes                       78    0.5%
+  ordinals-inscriptions              68    0.4%
+  vaults                             59    0.3%
+  data-structures                    57    0.3%
+  l2-bridges                         47    0.3%
+  silent-payments                    42    0.2%
+  transaction-format                 38    0.2%
+  atomic-swaps                       34    0.2%
+  dlc                                19    0.1%
+  ecash                              17    0.1%
+  nostr                              10    0.1%
+
+  Threads with 2+ categories: 4,875
+
+Done.
+
+Computing contributor message bookmarks...
+  Saved → data/enriched/contributor_message_bookmarks.json (1644 contributors)
+Computing contributor social history by topic...
+  Saved → data/enriched/contributor_social_history.json (1644 contributors)
+Loading datasets...
+Using identity resolver for canonical mapping...
+Filtering signals...
+Aggregating reviewer metrics...
+Aggregating author metrics...
+Joining all metrics...
+Review metrics calculated for 6087 contributors.
+Top contributors by Reciprocity:
+               canonical_id  review_reciprocity
+5509          auto_drahtbot         3740.333333
+1677             auto_jan_b           36.285714
+13      auto_daniel_cousens           34.315789
+3002  auto_shashwat_vangani           32.833333
+846     can_michael_folkson           32.500000
+Fastest Approvers (Avg Latency):
+                          canonical_id  avg_approval_latency_days
+2241                  auto_oolanla8888                   0.002917
+1509                auto_matt_auckland                   0.003333
+200                       auto_rabidus                   0.003715
+5900  auto_jonathan_toomim_toomim_bros                   0.004641
+4276                      auto_lubuzzo                   0.006192
+Loading identity resolver...
+Loading enriched social data from data/enriched/social_threads.parquet...
+Processing edges and expertise fingerprints across eras...
+Dampening message counts for PageRank (Logarithmic scaling)...
+Calculating era-based PageRank centralities...
+  Using Universal Identities population count: 7297
+Exporting enriched network data for 7297 total contributors (interactive + observers)...
+Enriching all 7297 contributors with archetypes and hybrid weighting...
+  Loaded commit history for 1139 contributors.
+Exported comprehensive contributor dataset (7297 people) to data/enriched/social_stats.json
+Building undirected subgraph for community detection (time-decay weighted)...
+Running Louvain community detection on 168 connected nodes...
+Computing spring layout (Fruchterman-Reingold)...
+  10 communication communities detected, 82 isolated nodes
+Building expertise similarity graph...
+Running Louvain on expertise graph (250 nodes)...
+  6 expertise communities detected, 0 generalists
+Exported richer network to output/network/network_graph.json
+--- Stage 3.5: Expertise & Authority Mapping ---
+Extracting Expertise Tags from PR labels...
+Identifying Full-Stack Architects...
+Resolving commit author identities...
+Identifying The Gatekeepers...
+Assembling Expert Profiles...
+Expertise mapping saved to output/tracker/expertise.json
+Found 72 Full-Stack Architects and 78 specialized experts.
+Loading Master UUID Identities...
+Discovering all active contributors across sources...
+Master Union: 7411 unique contributors discovered.
+Aggregating contributors.json metadata...
+Processing BIP data...
+Enriching with GitHub profile data (location, company, bio, twitter)...
+  Profile enrichment: 1275 / 7411 contributors with location data
+Grand Join complete. 7411 contributors unified in data/enriched/contributors_unified.parquet
+Generated output/tracker/stats_regional_evolution.json with consolidated categories
+🔄 Starting Master Registry Sync...
+  Bootstrapping from 7297 defined identities...
+  Syncing 2377 active core contributors...
+  Syncing 7297 social participants...
+      Matched: can_pieter_wuille -> Pieter Wuille
+      Matched: can_luke_dashjr -> Luke Dashjr
+      Matched: can_gavin_andresen -> Gavin Andresen
+      Matched: can_jonas_schnelli -> Jonas Schnelli
+      Matched: can_jeff_garzik -> Jeff Garzik
+      Matched: can_wladimir_j_van_der_laan -> Wladimir J. van der Laan
+      Matched: can_gregory_maxwell -> Gregory Maxwell
+      Matched: can_ava_chow -> Ava Chow
+      Matched: can_gloria_zhao -> Gloria Zhao
+      Matched: can_matt_corallo -> Matt Corallo
+      Matched: can_marcofalke -> MarcoFalke
+      Matched: can_anthony_towns -> Anthony Towns
+      Matched: can_hennadii_stepanov -> Hennadii Stepanov
+      Matched: can_nils_schneider -> Nils Schneider
+      Matched: can_mark_friedenbach -> Mark Friedenbach
+      Matched: can_ryan_ofsky -> Ryan Ofsky
+      Matched: can_peter_todd -> Peter Todd
+      Matched: auto_karl_johan_alm -> Karl-Johan Alm
+      Matched: can_johnson_lau -> Johnson Lau
+      Matched: can_samuel_dobson -> Samuel Dobson
+✨ Registry Sync Complete! Tracked 15604 unique contributors.
+Delivering UI artifacts...
+Loading enriched per-contributor data files...
+  commit_history loaded for 1139 contributors
+  contributor_bips loaded for 158 contributors
+  message_bookmarks loaded for 1644 contributors
+  social_history loaded for 1644 contributors
+Cleaning profiles directory...
+Generating profiles and tracking filenames...
+Generated 7411 profile shards to output/shared/contributors/profiles
+Registry and profiles saved to output/shared/contributors/
+Generating Ecosystem Summary (Pure Python)...
+Ecosystem summary saved to output/shared/ecosystem_summary.json
+Stats: Total Active=6275, New Coders=16, New Discussants=77
+Generating Discussions Pulse...
+  ✅ Written: output/shared/discussions_pulse.json
+     90d: 637 msgs · 316 threads · 183 voices
+     30d: 220 msgs · 117 threads · 87 voices
+Wrote output/shared/network_home_snapshot.json
+  active_contributors_30d=109 (delta=+28)
+  top_reviewers_30d=['Sebastian Kung', 'MarcoFalke', 'Michael Ford', 'Ava Chow', 'Mark Erhardt']
+  top_topics_30d=['Quantum', 'Utxo Sync', 'Core Dev', 'Taproot', 'Privacy']
+🚀 Starting MONTHLY Automated Pipeline (Deep Analytics)...
+✅ Loaded .env file
+
+--- PHASE 0: Raw Data Sync ---
+  Source repo status:
+    bitcoin (Core git)                       ✅ git repo
+    bips (BIPs git)                          ✅ git repo
+    delving (archive)                        ✅ git repo
+    bitcoin-github-metadata (PRs)            ✅ git repo
+    bips-github-metadata (PRs)               ✅ git repo
+    mailing_list/shard_0                     ✅ bare repo
+
+
+--- Running: git -C data/sources/bitcoin pull origin master ---
+
+--- Running: git -C data/sources/bips pull origin master ---
+
+--- Running: git -C data/sources/delving pull origin master ---
+
+--- PHASE 1: Extraction (Raw Staging) ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/01_ingest/core.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/01_ingest/bips.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/01_ingest/bips_metadata.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/01_ingest/delving.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/01_ingest/mailing_list.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/01_ingest/github_metadata.py ---
+
+────────────────────────────────────────────────────────────
+  📊  DEV COUNT SNAPSHOT — After Phase 1 — raw source files extracted
+────────────────────────────────────────────────────────────
+    Commit authors (unique emails)                  1,319
+    GitHub PR authors (unique IDs)                  2,614
+    GitHub reviewers (unique IDs)                   4,566
+    BIPs PR authors (unique IDs)                      750
+    BIPs reviewers (unique IDs)                     1,298
+    Mailing list (unique emails)                    1,471
+    Delving (unique usernames)                        398
+
+    identities.json — total                         4,796
+      can_ (hand-curated multi-alias)                 132
+      auto_ (everyone else)                         4,664
+      merged across 2+ sources                      1,668
+      origin: ghprofile                             1,622
+      origin: bipgithub                             1,467
+      origin: mailinglist                           1,373
+      origin: singlepr                              1,369
+      origin: corecommit                            1,165
+      origin: delving                                 393
+      origin: bips                                    158
+      origin: curation                                131
+
+    audit — Delving users mapped                      371 / 376
+    audit — Delving candidates to curate                1
+    audit — ML emails mapped                        1,451 / 1,451
+    audit — fuzzy name pairs to review                245
+
+    contributor_review_metrics — unique UUIDs       1,478
+
+    social_stats — unique UUIDs                     4,796
+      with mailing list activity                      891
+      with Delving activity                           366
+
+    contributors_unified — ONE ROW PER DEV          4,817
+      commit activity (total_commits > 0)           1,174
+      review activity (reviews > 0)                 1,315
+      social activity (ML or Delving > 0)           1,166
+      BIP authorship (bips_authored > 0)              157
+      cross-source (2+ signal types)                  349
+
+    ecosystem_summary — total_registry              4,817
+    ecosystem_summary — total_active                3,545
+    ecosystem_summary — committers                  1,174
+    ecosystem_summary — reviewers                   1,315
+    ecosystem_summary — research                    1,648
+    ecosystem_summary — standards                     157
+
+────────────────────────────────────────────────────────────
+
+--- PHASE 2: Convergence (Enrichment) ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/identity/build_github_id_map.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/identity/build_identities.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/identity/restamp_social_ids.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/identity/restamp_delving_ids.py ---
+
+────────────────────────────────────────────────────────────
+  📊  DEV COUNT SNAPSHOT — After build_identities — identity graph built
+────────────────────────────────────────────────────────────
+    Commit authors (unique emails)                  1,319
+    GitHub PR authors (unique IDs)                  2,614
+    GitHub reviewers (unique IDs)                   4,566
+    BIPs PR authors (unique IDs)                      750
+    BIPs reviewers (unique IDs)                     1,298
+    Mailing list (unique emails)                    1,471
+    Delving (unique usernames)                        398
+
+    identities.json — total                         7,297
+      can_ (hand-curated multi-alias)                 132
+      auto_ (everyone else)                         7,165
+      merged across 2+ sources                      2,652
+      origin: prgithub                              5,125
+      origin: ghprofile                             1,603
+      origin: bipgithub                             1,463
+      origin: mailinglist                           1,368
+      origin: singlepr                              1,356
+      origin: corecommit                            1,134
+      origin: delving                                 393
+      origin: bips                                    158
+      origin: curation                                131
+
+    audit — Delving users mapped                      371 / 376
+    audit — Delving candidates to curate                1
+    audit — ML emails mapped                        1,451 / 1,451
+    audit — fuzzy name pairs to review                245
+
+    contributor_review_metrics — unique UUIDs       1,478
+
+    social_stats — unique UUIDs                     4,796
+      with mailing list activity                      891
+      with Delving activity                           366
+
+    contributors_unified — ONE ROW PER DEV          4,817
+      commit activity (total_commits > 0)           1,174
+      review activity (reviews > 0)                 1,315
+      social activity (ML or Delving > 0)           1,166
+      BIP authorship (bips_authored > 0)              157
+      cross-source (2+ signal types)                  349
+
+    ecosystem_summary — total_registry              4,817
+    ecosystem_summary — total_active                3,545
+    ecosystem_summary — committers                  1,174
+    ecosystem_summary — reviewers                   1,315
+    ecosystem_summary — research                    1,648
+    ecosystem_summary — standards                     157
+
+────────────────────────────────────────────────────────────
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/02_process/reviews.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/02_process/github_social.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/02_process/core.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/02_process/merge_social.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/02_process/governance.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/04_deliver/registry.py ---
+
+--- PHASE 3: Intelligence (NLP & Graphs) ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/02_process/categorize.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/03_analyze/review_metrics.py ---
+
+────────────────────────────────────────────────────────────
+  📊  DEV COUNT SNAPSHOT — After review_metrics — reviewer metrics computed
+────────────────────────────────────────────────────────────
+    Commit authors (unique emails)                  1,319
+    GitHub PR authors (unique IDs)                  2,614
+    GitHub reviewers (unique IDs)                   4,566
+    BIPs PR authors (unique IDs)                      750
+    BIPs reviewers (unique IDs)                     1,298
+    Mailing list (unique emails)                    1,471
+    Delving (unique usernames)                        398
+
+    identities.json — total                         7,297
+      can_ (hand-curated multi-alias)                 132
+      auto_ (everyone else)                         7,165
+      merged across 2+ sources                      2,652
+      origin: prgithub                              5,125
+      origin: ghprofile                             1,603
+      origin: bipgithub                             1,463
+      origin: mailinglist                           1,368
+      origin: singlepr                              1,356
+      origin: corecommit                            1,134
+      origin: delving                                 393
+      origin: bips                                    158
+      origin: curation                                131
+
+    audit — Delving users mapped                      371 / 376
+    audit — Delving candidates to curate                1
+    audit — ML emails mapped                        1,451 / 1,451
+    audit — fuzzy name pairs to review                245
+
+    contributor_review_metrics — unique UUIDs       6,087
+
+    social_stats — unique UUIDs                     4,796
+      with mailing list activity                      891
+      with Delving activity                           366
+
+    contributors_unified — ONE ROW PER DEV          4,817
+      commit activity (total_commits > 0)           1,174
+      review activity (reviews > 0)                 1,315
+      social activity (ML or Delving > 0)           1,166
+      BIP authorship (bips_authored > 0)              157
+      cross-source (2+ signal types)                  349
+
+    ecosystem_summary — total_registry              4,817
+    ecosystem_summary — total_active                3,545
+    ecosystem_summary — committers                  1,174
+    ecosystem_summary — reviewers                   1,315
+    ecosystem_summary — research                    1,648
+    ecosystem_summary — standards                     157
+
+────────────────────────────────────────────────────────────
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/03_analyze/influence.py ---
+
+────────────────────────────────────────────────────────────
+  📊  DEV COUNT SNAPSHOT — After influence — social stats computed
+────────────────────────────────────────────────────────────
+    Commit authors (unique emails)                  1,319
+    GitHub PR authors (unique IDs)                  2,614
+    GitHub reviewers (unique IDs)                   4,566
+    BIPs PR authors (unique IDs)                      750
+    BIPs reviewers (unique IDs)                     1,298
+    Mailing list (unique emails)                    1,471
+    Delving (unique usernames)                        398
+
+    identities.json — total                         7,297
+      can_ (hand-curated multi-alias)                 132
+      auto_ (everyone else)                         7,165
+      merged across 2+ sources                      2,652
+      origin: prgithub                              5,125
+      origin: ghprofile                             1,603
+      origin: bipgithub                             1,463
+      origin: mailinglist                           1,368
+      origin: singlepr                              1,356
+      origin: corecommit                            1,134
+      origin: delving                                 393
+      origin: bips                                    158
+      origin: curation                                131
+
+    audit — Delving users mapped                      371 / 376
+    audit — Delving candidates to curate                1
+    audit — ML emails mapped                        1,451 / 1,451
+    audit — fuzzy name pairs to review                245
+
+    contributor_review_metrics — unique UUIDs       6,087
+
+    social_stats — unique UUIDs                     7,297
+      with mailing list activity                      887
+      with Delving activity                           367
+
+    contributors_unified — ONE ROW PER DEV          4,817
+      commit activity (total_commits > 0)           1,174
+      review activity (reviews > 0)                 1,315
+      social activity (ML or Delving > 0)           1,166
+      BIP authorship (bips_authored > 0)              157
+      cross-source (2+ signal types)                  349
+
+    ecosystem_summary — total_registry              4,817
+    ecosystem_summary — total_active                3,545
+    ecosystem_summary — committers                  1,174
+    ecosystem_summary — reviewers                   1,315
+    ecosystem_summary — research                    1,648
+    ecosystem_summary — standards                     157
+
+────────────────────────────────────────────────────────────
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/03_analyze/expertise.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/02_process/unify_contributors.py ---
+
+────────────────────────────────────────────────────────────
+  📊  DEV COUNT SNAPSHOT — After unify_contributors — grand join complete
+────────────────────────────────────────────────────────────
+    Commit authors (unique emails)                  1,319
+    GitHub PR authors (unique IDs)                  2,614
+    GitHub reviewers (unique IDs)                   4,566
+    BIPs PR authors (unique IDs)                      750
+    BIPs reviewers (unique IDs)                     1,298
+    Mailing list (unique emails)                    1,471
+    Delving (unique usernames)                        398
+
+    identities.json — total                         7,297
+      can_ (hand-curated multi-alias)                 132
+      auto_ (everyone else)                         7,165
+      merged across 2+ sources                      2,652
+      origin: prgithub                              5,125
+      origin: ghprofile                             1,603
+      origin: bipgithub                             1,463
+      origin: mailinglist                           1,368
+      origin: singlepr                              1,356
+      origin: corecommit                            1,134
+      origin: delving                                 393
+      origin: bips                                    158
+      origin: curation                                131
+
+    audit — Delving users mapped                      371 / 376
+    audit — Delving candidates to curate                1
+    audit — ML emails mapped                        1,451 / 1,451
+    audit — fuzzy name pairs to review                245
+
+    contributor_review_metrics — unique UUIDs       6,087
+
+    social_stats — unique UUIDs                     7,297
+      with mailing list activity                      887
+      with Delving activity                           367
+
+    contributors_unified — ONE ROW PER DEV          7,411
+      commit activity (total_commits > 0)           1,142
+      review activity (reviews > 0)                 4,956
+      social activity (ML or Delving > 0)           1,158
+      BIP authorship (bips_authored > 0)              153
+      cross-source (2+ signal types)                  733
+
+    ecosystem_summary — total_registry              4,817
+    ecosystem_summary — total_active                3,545
+    ecosystem_summary — committers                  1,174
+    ecosystem_summary — reviewers                   1,315
+    ecosystem_summary — research                    1,648
+    ecosystem_summary — standards                     157
+
+────────────────────────────────────────────────────────────
+
+--- PHASE 4: Artifact Generation ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/04_deliver/generate_regional_evolution.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/04_deliver/registry.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/04_deliver/ui_artifacts.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/04_deliver/ecosystem_summary.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/04_deliver/discussions_pulse.py ---
+
+--- Running: "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3" scripts/04_deliver/network_home_snapshot.py ---
+
+────────────────────────────────────────────────────────────
+  📊  DEV COUNT SNAPSHOT — FINAL — ecosystem summary
+────────────────────────────────────────────────────────────
+    Commit authors (unique emails)                  1,319
+    GitHub PR authors (unique IDs)                  2,614
+    GitHub reviewers (unique IDs)                   4,566
+    BIPs PR authors (unique IDs)                      750
+    BIPs reviewers (unique IDs)                     1,298
+    Mailing list (unique emails)                    1,471
+    Delving (unique usernames)                        398
+
+    identities.json — total                         7,297
+      can_ (hand-curated multi-alias)                 132
+      auto_ (everyone else)                         7,165
+      merged across 2+ sources                      2,652
+      origin: prgithub                              5,125
+      origin: ghprofile                             1,603
+      origin: bipgithub                             1,463
+      origin: mailinglist                           1,368
+      origin: singlepr                              1,356
+      origin: corecommit                            1,134
+      origin: delving                                 393
+      origin: bips                                    158
+      origin: curation                                131
+
+    audit — Delving users mapped                      371 / 376
+    audit — Delving candidates to curate                1
+    audit — ML emails mapped                        1,451 / 1,451
+    audit — fuzzy name pairs to review                245
+
+    contributor_review_metrics — unique UUIDs       6,087
+
+    social_stats — unique UUIDs                     7,297
+      with mailing list activity                      887
+      with Delving activity                           367
+
+    contributors_unified — ONE ROW PER DEV          7,411
+      commit activity (total_commits > 0)           1,142
+      review activity (reviews > 0)                 4,956
+      social activity (ML or Delving > 0)           1,158
+      BIP authorship (bips_authored > 0)              153
+      cross-source (2+ signal types)                  733
+
+    ecosystem_summary — total_registry              7,411
+    ecosystem_summary — total_active                6,275
+    ecosystem_summary — committers                  1,142
+    ecosystem_summary — reviewers                   4,956
+    ecosystem_summary — research                    1,638
+    ecosystem_summary — standards                     153
+
+────────────────────────────────────────────────────────────
+
+✨ MONTHLY PIPELINE COMPLETE!
+Everything is up to date and all NLP/Graphs have been recalculated.

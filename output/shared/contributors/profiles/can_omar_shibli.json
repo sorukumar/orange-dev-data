@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "code",
   "total_commits": 0.0,
   "authored_commits": 0.0,
@@ -27,16 +27,22 @@
   "total_deletions": null,
   "first_commit": null,
   "last_commit": null,
+  "p2016_authored_commits": 0.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 1.0,
   "avg_review_latency_days": 1352.9190726273148,
   "reviews_count": 3.0,
   "avg_approval_latency_days": 725.7580671296297,
   "approvals_count": 2.0,
+  "p2016_reviews_count": 3.0,
+  "modern_reviews_count": 0.0,
   "prs_authored": 5.0,
   "avg_pr_ack_velocity_days": 0.09036458333333333,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 0.6,
   "hybrid_score": 0.4276,
+  "p2016_hybrid_score": 0.0858,
+  "modern_hybrid_score": 0.0675,
   "impact_score": 11.0,
   "threads_started": 1.0,
   "replies_sent": 11.0,
@@ -47,6 +53,33 @@
   "first_active": "2017-08-14T01:05:35",
   "last_active": "2020-12-23T05:44:52",
   "dev_type": "Participant",
+  "expertise_domains": [
+    "Network",
+    "Wallet",
+    "Mempool"
+  ],
+  "expertise_by_source": {
+    "bips": {
+      "Network": 1.0
+    },
+    "discussion": {
+      "Mempool": 0.265,
+      "Mining": 0.204,
+      "Wallet": 0.531
+    }
+  },
+  "expertise_domain_scores": {
+    "Mempool": 0.0757,
+    "Mining": 0.0583,
+    "Network": 0.7143,
+    "Wallet": 0.1517
+  },
+  "p2016_posts": 12.0,
+  "modern_posts": 0.0,
+  "p2016_ml_posts": 12.0,
+  "p2016_delving_posts": 0.0,
+  "modern_ml_posts": 0.0,
+  "modern_delving_posts": 0.0,
   "global_first_active": "2017-08-14T01:05:35",
   "global_last_active": "2020-12-23T05:44:52",
   "github_location": "Wherever there is internet",

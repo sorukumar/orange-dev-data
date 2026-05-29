@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "GUI (Presentation Layer)",
   "total_commits": 4.0,
   "authored_commits": 4.0,
@@ -27,16 +27,22 @@
   "total_deletions": 29.0,
   "first_commit": "2014-03-13T17:15:51",
   "last_commit": "2014-12-28T23:25:18",
+  "p2016_authored_commits": 0.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 1.0,
   "avg_review_latency_days": 413.96016070156696,
   "reviews_count": 13.0,
   "avg_approval_latency_days": 3.528263888888889,
   "approvals_count": 3.0,
+  "p2016_reviews_count": 2.0,
+  "modern_reviews_count": 0.0,
   "prs_authored": 11.0,
   "avg_pr_ack_velocity_days": 0.46619984567901224,
   "avg_concept_lead_time_days": 0.018796296296296297,
   "review_reciprocity": 1.1818181818181819,
   "hybrid_score": 0.7449,
+  "p2016_hybrid_score": 0.3565,
+  "modern_hybrid_score": 0.1071,
   "impact_score": 20.0,
   "threads_started": 5.0,
   "replies_sent": 173.0,
@@ -47,6 +53,34 @@
   "first_active": "2014-09-15T02:23:02",
   "last_active": "2017-09-02T16:13:57",
   "dev_type": "Builder",
+  "expertise_domains": [
+    "Consensus",
+    "Infrastructure",
+    "Mining"
+  ],
+  "expertise_by_source": {
+    "bips": {
+      "Consensus": 1.0
+    },
+    "code": {
+      "Infrastructure": 1.0
+    },
+    "discussion": {
+      "Consensus": 0.615,
+      "Mining": 0.385
+    }
+  },
+  "expertise_domain_scores": {
+    "Consensus": 0.623,
+    "Infrastructure": 0.3,
+    "Mining": 0.077
+  },
+  "p2016_posts": 100.0,
+  "modern_posts": 0.0,
+  "p2016_ml_posts": 100.0,
+  "p2016_delving_posts": 0.0,
+  "modern_ml_posts": 0.0,
+  "modern_delving_posts": 0.0,
   "global_first_active": "2014-03-13T17:15:51",
   "global_last_active": "2017-09-02T16:13:57",
   "github_location": null,

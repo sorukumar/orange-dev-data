@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "Core Libs",
   "total_commits": 3.0,
   "authored_commits": 3.0,
@@ -27,16 +27,22 @@
   "total_deletions": 5.0,
   "first_commit": "2014-07-01T05:05:24",
   "last_commit": "2014-07-16T00:13:24",
+  "p2016_authored_commits": 0.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
   "avg_review_latency_days": 0.09003472222222222,
   "reviews_count": 1.0,
   "avg_approval_latency_days": null,
   "approvals_count": 0.0,
+  "p2016_reviews_count": 1.0,
+  "modern_reviews_count": 0.0,
   "prs_authored": 2.0,
   "avg_pr_ack_velocity_days": 0.8477893518518519,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 0.5,
   "hybrid_score": 0.1132,
+  "p2016_hybrid_score": 0.0561,
+  "modern_hybrid_score": 0.0396,
   "impact_score": 3.0,
   "threads_started": 0.0,
   "replies_sent": 6.0,
@@ -47,6 +53,33 @@
   "first_active": "2015-06-21T14:17:37",
   "last_active": "2017-03-26T15:37:28",
   "dev_type": "Builder",
+  "expertise_domains": [
+    "Infrastructure",
+    "Mining",
+    "Ecosystem"
+  ],
+  "expertise_by_source": {
+    "code": {
+      "Infrastructure": 1.0
+    },
+    "discussion": {
+      "Consensus": 0.246,
+      "Ecosystem": 0.246,
+      "Mining": 0.508
+    }
+  },
+  "expertise_domain_scores": {
+    "Consensus": 0.0984,
+    "Ecosystem": 0.0984,
+    "Infrastructure": 0.6,
+    "Mining": 0.2032
+  },
+  "p2016_posts": 3.0,
+  "modern_posts": 0.0,
+  "p2016_ml_posts": 3.0,
+  "p2016_delving_posts": 0.0,
+  "modern_ml_posts": 0.0,
+  "modern_delving_posts": 0.0,
   "global_first_active": "2014-07-01T05:05:24",
   "global_last_active": "2017-03-26T15:37:28",
   "github_location": "Wisconsin",

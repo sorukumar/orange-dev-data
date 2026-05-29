@@ -70,8 +70,15 @@ def count_window(series, start, end):
 def load_review_events():
     frames = []
     for path in REVIEW_EVENTS_PATHS:
-        if os.path.exists(path):
-            frames.append(pd.read_parquet(path, columns=['pr_number', 'user', 'timestamp', 'event_type']))
+        if not os.path.exists(path):
+            continue
+        try:
+            df = pd.read_parquet(path)
+            if df.empty or not all(c in df.columns for c in ['pr_number', 'user', 'timestamp', 'event_type']):
+                continue
+            frames.append(df[['pr_number', 'user', 'timestamp', 'event_type']])
+        except Exception:
+            continue
     if not frames:
         return pd.DataFrame(columns=['pr_number', 'user', 'timestamp', 'event_type'])
     return pd.concat(frames, ignore_index=True)

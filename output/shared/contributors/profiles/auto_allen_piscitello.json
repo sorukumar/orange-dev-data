@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "None",
   "total_commits": 0.0,
   "authored_commits": 0.0,
@@ -27,16 +27,22 @@
   "total_deletions": null,
   "first_commit": null,
   "last_commit": null,
+  "p2016_authored_commits": 0.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
   "avg_review_latency_days": 0.43324074074074076,
   "reviews_count": 1.0,
   "avg_approval_latency_days": 0.43324074074074076,
   "approvals_count": 1.0,
+  "p2016_reviews_count": 1.0,
+  "modern_reviews_count": 1.0,
   "prs_authored": 1.0,
   "avg_pr_ack_velocity_days": 41.87582175925926,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 1.0,
   "hybrid_score": 0.0809,
+  "p2016_hybrid_score": 0.0409,
+  "modern_hybrid_score": 0.033,
   "impact_score": 2.0,
   "threads_started": 0.0,
   "replies_sent": 34.0,
@@ -47,6 +53,26 @@
   "first_active": "2013-10-23T16:42:14",
   "last_active": "2016-05-11T21:31:33",
   "dev_type": "Participant",
+  "expertise_domains": [
+    "Mempool",
+    "Mining"
+  ],
+  "expertise_by_source": {
+    "discussion": {
+      "Mempool": 0.529,
+      "Mining": 0.471
+    }
+  },
+  "expertise_domain_scores": {
+    "Mempool": 0.529,
+    "Mining": 0.471
+  },
+  "p2016_posts": 1.0,
+  "modern_posts": 0.0,
+  "p2016_ml_posts": 1.0,
+  "p2016_delving_posts": 0.0,
+  "modern_ml_posts": 0.0,
+  "modern_delving_posts": 0.0,
   "global_first_active": "2013-10-23T16:42:14",
   "global_last_active": "2016-05-11T21:31:33",
   "github_location": null,

@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "Documentation",
   "total_commits": 19.0,
   "authored_commits": 19.0,
@@ -27,16 +27,22 @@
   "total_deletions": 19.0,
   "first_commit": "2018-12-17T12:12:05",
   "last_commit": "2025-05-23T22:28:26",
+  "p2016_authored_commits": 17.0,
+  "modern_authored_commits": 1.0,
   "bips_authored": 0.0,
   "avg_review_latency_days": 350.8450398253367,
   "reviews_count": 129.0,
   "avg_approval_latency_days": 334.71717253839205,
   "approvals_count": 93.0,
+  "p2016_reviews_count": 129.0,
+  "modern_reviews_count": 11.0,
   "prs_authored": 35.0,
   "avg_pr_ack_velocity_days": 10.806071127946128,
   "avg_concept_lead_time_days": 19.056106288580246,
   "review_reciprocity": 3.6857142857142855,
-  "hybrid_score": 0.3607,
+  "hybrid_score": 0.3606,
+  "p2016_hybrid_score": 0.3696,
+  "modern_hybrid_score": 0.2532,
   "impact_score": 10.0,
   "threads_started": 4.0,
   "replies_sent": 4.0,
@@ -47,6 +53,33 @@
   "first_active": "2021-06-28T05:55:30",
   "last_active": "2024-10-17T23:37:44.518000",
   "dev_type": "Builder",
+  "expertise_domains": [
+    "Infrastructure",
+    "Script",
+    "Consensus"
+  ],
+  "expertise_by_source": {
+    "code": {
+      "Infrastructure": 0.882,
+      "Wallet": 0.118
+    },
+    "discussion": {
+      "Consensus": 0.372,
+      "Script": 0.628
+    }
+  },
+  "expertise_domain_scores": {
+    "Consensus": 0.1488,
+    "Infrastructure": 0.5292,
+    "Script": 0.2512,
+    "Wallet": 0.0708
+  },
+  "p2016_posts": 8.0,
+  "modern_posts": 5.0,
+  "p2016_ml_posts": 4.0,
+  "p2016_delving_posts": 4.0,
+  "modern_ml_posts": 1.0,
+  "modern_delving_posts": 4.0,
   "global_first_active": "2018-12-17T12:12:05",
   "global_last_active": "2025-05-23T22:28:26",
   "github_location": "Austin, TX",

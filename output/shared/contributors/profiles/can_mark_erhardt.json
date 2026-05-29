@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "Tests (QA)",
   "total_commits": 80.0,
   "authored_commits": 80.0,
@@ -27,28 +27,68 @@
   "total_deletions": 995.0,
   "first_commit": "2014-09-13T00:09:18",
   "last_commit": "2026-03-20T22:19:52",
+  "p2016_authored_commits": 58.0,
+  "modern_authored_commits": 45.0,
   "bips_authored": 1.0,
-  "avg_review_latency_days": 1650.0588500084314,
-  "reviews_count": 651.0,
-  "avg_approval_latency_days": 1085.190945616883,
-  "approvals_count": 272.0,
+  "avg_review_latency_days": 1649.3498235384145,
+  "reviews_count": 653.0,
+  "avg_approval_latency_days": 1082.8485007199424,
+  "approvals_count": 273.0,
+  "p2016_reviews_count": 653.0,
+  "modern_reviews_count": 548.0,
   "prs_authored": 61.0,
   "avg_pr_ack_velocity_days": 42.69049612112112,
   "avg_concept_lead_time_days": 55.31132137345679,
-  "review_reciprocity": 10.672131147540984,
-  "hybrid_score": 0.9471,
+  "review_reciprocity": 10.704918032786885,
+  "hybrid_score": 0.9465,
+  "p2016_hybrid_score": 0.6792,
+  "modern_hybrid_score": 0.8101,
   "impact_score": 25.0,
   "threads_started": 23.0,
-  "replies_sent": 82.0,
+  "replies_sent": 85.0,
   "ml_threads": 7.0,
   "delving_threads": 16.0,
-  "ml_responses": 53.0,
-  "delving_responses": 29.0,
+  "ml_responses": 55.0,
+  "delving_responses": 30.0,
   "first_active": "2016-09-21T07:58:25",
-  "last_active": "2026-05-26T19:29:57.354000",
+  "last_active": "2026-05-28T13:28:49",
   "dev_type": "Builder",
+  "expertise_domains": [
+    "Infrastructure",
+    "Wallet",
+    "Mempool"
+  ],
+  "expertise_by_source": {
+    "bips": {
+      "Infrastructure": 1.0
+    },
+    "code": {
+      "Consensus": 0.04,
+      "Infrastructure": 0.633,
+      "Wallet": 0.327
+    },
+    "discussion": {
+      "Ecosystem": 0.333,
+      "Mempool": 0.385,
+      "Mining": 0.282
+    }
+  },
+  "expertise_domain_scores": {
+    "Consensus": 0.012,
+    "Ecosystem": 0.0666,
+    "Infrastructure": 0.6899,
+    "Mempool": 0.077,
+    "Mining": 0.0564,
+    "Wallet": 0.0981
+  },
+  "p2016_posts": 108.0,
+  "modern_posts": 101.0,
+  "p2016_ml_posts": 62.0,
+  "p2016_delving_posts": 46.0,
+  "modern_ml_posts": 55.0,
+  "modern_delving_posts": 46.0,
   "global_first_active": "2014-09-13T00:09:18",
-  "global_last_active": "2026-05-26T19:29:57.353999872",
+  "global_last_active": "2026-05-28T13:28:49",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -113,10 +153,10 @@
     "link": "https://gnusha.org/pi/bitcoindev/358752cc-48f6-eef8-ae9a-e17a0651ed52@murch.one"
   },
   "last_message": {
-    "source": "delving",
-    "subject": "Re: P2WOTS: Post Quantum UTXO Winternitz Signatures",
-    "date": "2026-05-26",
-    "link": "https://delvingbitcoin.org/t/p2wots-post-quantum-utxo-winternitz-signatures/2530/2"
+    "source": "mailing_list",
+    "subject": "Re: [bitcoindev] BIP 3 and issues on BIPs",
+    "date": "2026-05-28",
+    "link": "https://gnusha.org/pi/bitcoindev/db744821-940e-4f76-9a54-9c763ce7ce1e@murch.one"
   },
   "social_history": {
     "2016": {
@@ -160,9 +200,9 @@
       "testing-devtools": 2
     },
     "2026": {
-      "bip-process": 5,
+      "bip-process": 6,
       "consensus-cleanup": 2,
-      "other": 31,
+      "other": 34,
       "mempool-fees": 5,
       "mining": 5,
       "script-opcodes": 7,

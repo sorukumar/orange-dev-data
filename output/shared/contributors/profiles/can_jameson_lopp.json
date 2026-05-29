@@ -19,7 +19,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "Node & RPC (App/Interface)",
   "total_commits": 18.0,
   "authored_commits": 18.0,
@@ -28,16 +28,22 @@
   "total_deletions": 59.0,
   "first_commit": "2014-12-21T14:10:43",
   "last_commit": "2025-06-29T17:07:06",
+  "p2016_authored_commits": 10.0,
+  "modern_authored_commits": 2.0,
   "bips_authored": 1.0,
   "avg_review_latency_days": 1296.5031383211042,
   "reviews_count": 21.0,
   "avg_approval_latency_days": 386.8943456196581,
   "approvals_count": 11.0,
+  "p2016_reviews_count": 20.0,
+  "modern_reviews_count": 16.0,
   "prs_authored": 17.0,
   "avg_pr_ack_velocity_days": 0.6741889245014245,
   "avg_concept_lead_time_days": 1.441730324074074,
   "review_reciprocity": 1.2352941176470589,
   "hybrid_score": 0.8312,
+  "p2016_hybrid_score": 0.5294,
+  "modern_hybrid_score": 0.5365,
   "impact_score": 22.0,
   "threads_started": 9.0,
   "replies_sent": 82.0,
@@ -48,6 +54,37 @@
   "first_active": "2013-11-05T13:33:14",
   "last_active": "2026-05-21T12:12:56.161000",
   "dev_type": "Builder",
+  "expertise_domains": [
+    "Consensus",
+    "Infrastructure",
+    "Cryptography"
+  ],
+  "expertise_by_source": {
+    "bips": {
+      "Consensus": 1.0
+    },
+    "code": {
+      "Consensus": 0.042,
+      "Infrastructure": 0.931,
+      "Network": 0.028
+    },
+    "discussion": {
+      "Cryptography": 0.5,
+      "Mining": 0.5
+    }
+  },
+  "expertise_domain_scores": {
+    "Consensus": 0.5124,
+    "Cryptography": 0.1,
+    "Infrastructure": 0.2792,
+    "Mining": 0.1
+  },
+  "p2016_posts": 52.0,
+  "modern_posts": 34.0,
+  "p2016_ml_posts": 51.0,
+  "p2016_delving_posts": 1.0,
+  "modern_ml_posts": 33.0,
+  "modern_delving_posts": 1.0,
   "global_first_active": "2013-11-05T13:33:14",
   "global_last_active": "2026-05-21T12:12:56.160999936",
   "github_location": "United States",

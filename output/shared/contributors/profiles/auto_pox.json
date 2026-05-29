@@ -15,16 +15,22 @@
   "total_deletions": 3.0,
   "first_commit": "2020-12-12T04:55:09",
   "last_commit": "2020-12-12T04:55:09",
+  "p2016_authored_commits": 1.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
   "avg_review_latency_days": 27.57226851851852,
   "reviews_count": 7.0,
   "avg_approval_latency_days": 54.37033275462963,
   "approvals_count": 3.0,
+  "p2016_reviews_count": 7.0,
+  "modern_reviews_count": 2.0,
   "prs_authored": 2.0,
   "avg_pr_ack_velocity_days": 5.342361111111111,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 3.5,
   "hybrid_score": 0.0792,
+  "p2016_hybrid_score": 0.1192,
+  "modern_hybrid_score": 0.0792,
   "impact_score": 2.0,
   "threads_started": 0.0,
   "replies_sent": 0.0,
@@ -35,6 +41,23 @@
   "first_active": null,
   "last_active": null,
   "dev_type": "Participant",
+  "expertise_domains": [
+    "Wallet"
+  ],
+  "expertise_by_source": {
+    "code": {
+      "Wallet": 1.0
+    }
+  },
+  "expertise_domain_scores": {
+    "Wallet": 1.0
+  },
+  "p2016_posts": 0.0,
+  "modern_posts": 0.0,
+  "p2016_ml_posts": 0.0,
+  "p2016_delving_posts": 0.0,
+  "modern_ml_posts": 0.0,
+  "modern_delving_posts": 0.0,
   "global_first_active": "2020-12-12T04:55:09",
   "global_last_active": "2020-12-12T04:55:09",
   "github_location": null,

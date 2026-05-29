@@ -1,87 +1,41 @@
 {
-  "generated_at": "2026-05-27T12:25:44.355799",
+  "generated_at": "2026-05-29T01:01:19.519708",
   "groups": {
     "committers": 1142,
-    "reviewers": 4954,
+    "reviewers": 4956,
     "research": 1638,
-    "standards": 156,
-    "total_active": 6273,
-    "total_registry": 7409
+    "standards": 157,
+    "total_active": 6275,
+    "total_registry": 7411
   },
   "venn_4": {
     "0001": 15,
-    "0010": 1169,
+    "0010": 1168,
     "0011": 24,
-    "0100": 3740,
+    "0100": 3743,
     "0101": 5,
     "0110": 140,
     "0111": 38,
     "1000": 100,
     "1001": 1,
     "1010": 9,
-    "1011": 1,
-    "1100": 772,
+    "1011": 2,
+    "1100": 771,
     "1101": 2,
     "1110": 187,
     "1111": 70
   },
   "venn_summary": {
     "code_only": 100,
-    "review_only": 3740,
-    "research_only": 1169,
+    "review_only": 3743,
+    "research_only": 1168,
     "standards_only": 15,
     "all_four": 70,
-    "code_review": 772,
+    "code_review": 771,
     "review_research": 140,
     "research_standards": 24
   },
-  "rd_focus": {
-    "Core Libs": 24.2,
-    "Consensus (Domain Logic)": 5.0,
-    "lightning": 2.7,
-    "Tests (QA)": 14.8,
-    "Documentation": 14.0,
-    "GUI (Presentation Layer)": 4.7,
-    "mining": 1.7,
-    "spam-filtering": 0.4,
-    "privacy": 1.0,
-    "Wallet (Client App)": 2.7,
-    "testing-devtools": 0.8,
-    "signatures-sighash": 0.2,
-    "quantum": 1.9,
-    "Node & RPC (App/Interface)": 4.4,
-    "P2P Network (Infrastructure)": 2.1,
-    "Build & CI (DevOps)": 6.7,
-    "vaults": 0.4,
-    "security": 0.4,
-    "soft-fork-activation": 0.6,
-    "utxo-sync": 0.7,
-    "mempool-fees": 2.3,
-    "bitvm": 0.4,
-    "segwit": 0.1,
-    "ecash": 0.3,
-    "Utilities (Shared Libs)": 0.7,
-    "hard-fork-block-size": 0.4,
-    "sidechains-drivechain": 0.4,
-    "taproot": 0.5,
-    "Cryptography (Primitives)": 0.2,
-    "core-dev": 0.1,
-    "payment-protocol": 0.1,
-    "multisig-threshold": 0.1,
-    "Merge": 0.5,
-    "covenants": 1.6,
-    "bip-process": 0.2,
-    "script-opcodes": 0.5,
-    "tokens-runes": 0.2,
-    "p2p-network": 0.5,
-    "wallet-keys": 0.6,
-    "l2-bridges": 0.3,
-    "dlc": 0.1,
-    "silent-payments": 0.3,
-    "Database (Persistence)": 0.1,
-    "data-structures": 0.1,
-    "ordinals-inscriptions": 0.1
-  },
+  "rd_focus": {},
   "hotspot": {
     "title": "Trending BIP Discussions",
     "value": "BIP 70"
@@ -96,8 +50,8 @@
       {
         "category": "quantum",
         "label": "Quantum Resistance",
-        "count": 138,
-        "share": 24.2
+        "count": 143,
+        "share": 25.0
       },
       {
         "category": "testing-devtools",
@@ -108,8 +62,8 @@
       {
         "category": "covenants",
         "label": "Covenants & Vaults",
-        "count": 42,
-        "share": 7.4
+        "count": 48,
+        "share": 8.4
       }
     ],
     "top_bips": [

@@ -16,7 +16,7 @@
   },
   "roles": [],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "None",
   "total_commits": 0.0,
   "authored_commits": 0.0,
@@ -25,16 +25,22 @@
   "total_deletions": null,
   "first_commit": null,
   "last_commit": null,
+  "p2016_authored_commits": 0.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
   "avg_review_latency_days": 19.54015625,
   "reviews_count": 2.0,
   "avg_approval_latency_days": 37.14725694444444,
   "approvals_count": 1.0,
+  "p2016_reviews_count": 2.0,
+  "modern_reviews_count": 2.0,
   "prs_authored": 1.0,
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 2.0,
   "hybrid_score": 0.0522,
+  "p2016_hybrid_score": 0.0564,
+  "modern_hybrid_score": 0.0452,
   "impact_score": 1.0,
   "threads_started": 2.0,
   "replies_sent": 0.0,
@@ -45,6 +51,23 @@
   "first_active": "2016-07-26T13:31:36",
   "last_active": "2017-12-23T13:05:20",
   "dev_type": "Participant",
+  "expertise_domains": [
+    "Wallet"
+  ],
+  "expertise_by_source": {
+    "discussion": {
+      "Wallet": 1.0
+    }
+  },
+  "expertise_domain_scores": {
+    "Wallet": 1.0
+  },
+  "p2016_posts": 2.0,
+  "modern_posts": 0.0,
+  "p2016_ml_posts": 2.0,
+  "p2016_delving_posts": 0.0,
+  "modern_ml_posts": 0.0,
+  "modern_delving_posts": 0.0,
   "global_first_active": "2016-07-26T13:31:36",
   "global_last_active": "2017-12-23T13:05:20",
   "github_location": "Netherlands",

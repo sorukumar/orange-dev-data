@@ -19,7 +19,7 @@
     "BIP Author"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "None",
   "total_commits": 0.0,
   "authored_commits": 0.0,
@@ -28,16 +28,22 @@
   "total_deletions": null,
   "first_commit": null,
   "last_commit": null,
+  "p2016_authored_commits": 0.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 1.0,
   "avg_review_latency_days": 1752.0043849206347,
   "reviews_count": 2.0,
   "avg_approval_latency_days": null,
   "approvals_count": 0.0,
+  "p2016_reviews_count": 2.0,
+  "modern_reviews_count": 0.0,
   "prs_authored": 5.0,
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 0.4,
   "hybrid_score": 0.4167,
+  "p2016_hybrid_score": 0.0693,
+  "modern_hybrid_score": 0.0615,
   "impact_score": 11.0,
   "threads_started": 0.0,
   "replies_sent": 1.0,
@@ -48,6 +54,28 @@
   "first_active": "2016-06-21T16:17:12",
   "last_active": "2016-06-21T16:17:12",
   "dev_type": "Participant",
+  "expertise_domains": [
+    "Network",
+    "Ecosystem"
+  ],
+  "expertise_by_source": {
+    "bips": {
+      "Network": 1.0
+    },
+    "discussion": {
+      "Ecosystem": 1.0
+    }
+  },
+  "expertise_domain_scores": {
+    "Ecosystem": 0.2857,
+    "Network": 0.7143
+  },
+  "p2016_posts": 1.0,
+  "modern_posts": 0.0,
+  "p2016_ml_posts": 1.0,
+  "p2016_delving_posts": 0.0,
+  "modern_ml_posts": 0.0,
+  "modern_delving_posts": 0.0,
   "global_first_active": "2016-06-21T16:17:12",
   "global_last_active": "2016-06-21T16:17:12",
   "github_location": "Los Angeles",

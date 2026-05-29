@@ -136,6 +136,21 @@ def deliver():
         file_id = rec.get('uuid', str(rec.get('id')))
         filename = f"{file_id}.json"
         profile_path = os.path.join(PROFILES_DIR, filename)
+
+        # Clean None values from dict columns — pyarrow expands map columns across
+        # all rows using a union of keys, filling missing ones with None. Strip them
+        # here so profile shards only carry the domains that actually have signal.
+        for dict_col in ('expertise_by_source', 'expertise_domain_scores'):
+            val = rec.get(dict_col)
+            if isinstance(val, dict):
+                if dict_col == 'expertise_by_source':
+                    rec[dict_col] = {
+                        src: {k: v for k, v in dom_dict.items() if v is not None}
+                        for src, dom_dict in val.items()
+                        if isinstance(dom_dict, dict)
+                    }
+                else:
+                    rec[dict_col] = {k: v for k, v in val.items() if v is not None}
         
         with open(profile_path, 'w') as f:
             json.dump(rec, f, indent=2)
@@ -148,15 +163,25 @@ def deliver():
             
     print(f"Generated {sharded_count} profile shards to {PROFILES_DIR}")
 
+    # Load expertise domain definitions to embed in registry metadata.
+    EXPERTISE_DOMAINS_PATH = 'metadata/expertise_domains.json'
+    expertise_domains_def = []
+    if os.path.exists(EXPERTISE_DOMAINS_PATH):
+        with open(EXPERTISE_DOMAINS_PATH) as _f:
+            expertise_domains_def = json.load(_f).get('domains', [])
+
     # 2. Prepare Registry (Compact for Table)
     registry_cols = [
         'uuid', 'id', 'display_name', 'github', 'roles', 'is_top_50',
         'dev_type',
-        'total_commits', 'authored_commits', 'merge_commits', 'prs_authored', 'reviews_count', 'hybrid_score', 'impact_score', 'bips_authored', 'review_reciprocity',
+        'total_commits', 'authored_commits', 'merge_commits', 'p2016_authored_commits', 'modern_authored_commits', 'prs_authored', 'reviews_count', 'p2016_reviews_count', 'modern_reviews_count', 'hybrid_score', 'impact_score', 'bips_authored', 'review_reciprocity',
         'first_seen', 'last_seen', 'global_first_active', 'global_last_active',
         'first_commit', 'last_commit', 'first_active', 'last_active',
-        'technical_focus', 'avg_approval_latency_days',
-        'ml_threads', 'delving_threads', 'ml_responses', 'delving_responses', 'threads_started', 'replies_sent'
+        'expertise_domains', 'expertise_by_source', 'expertise_domain_scores',
+        'modern_hybrid_score', 'p2016_hybrid_score',
+        'avg_approval_latency_days',
+        'ml_threads', 'delving_threads', 'ml_responses', 'delving_responses', 'threads_started', 'replies_sent',
+        'p2016_posts', 'modern_posts', 'p2016_ml_posts', 'p2016_delving_posts', 'modern_ml_posts', 'modern_delving_posts'
     ]
     
     registry_list = []
@@ -190,7 +215,8 @@ def deliver():
             "metadata": {
                 "count": len(registry_list),
                 "generated_at": datetime.now().isoformat(),
-                "sharded_count": sharded_count
+                "sharded_count": sharded_count,
+                "domains": expertise_domains_def,
             },
             "contributors": registry_list
         }, f, indent=2)

@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "None",
   "total_commits": 0.0,
   "authored_commits": 0.0,
@@ -27,16 +27,22 @@
   "total_deletions": null,
   "first_commit": null,
   "last_commit": null,
+  "p2016_authored_commits": 0.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
   "avg_review_latency_days": 1687.2487526304712,
   "reviews_count": 4.0,
   "avg_approval_latency_days": null,
   "approvals_count": 0.0,
+  "p2016_reviews_count": 4.0,
+  "modern_reviews_count": 0.0,
   "prs_authored": 1.0,
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 4.0,
   "hybrid_score": 0.0684,
+  "p2016_hybrid_score": 0.0721,
+  "modern_hybrid_score": 0.0615,
   "impact_score": 2.0,
   "threads_started": 1.0,
   "replies_sent": 1.0,
@@ -47,6 +53,26 @@
   "first_active": "2018-06-26T10:58:53",
   "last_active": "2022-08-18T10:29:01",
   "dev_type": "Participant",
+  "expertise_domains": [
+    "Mining",
+    "Wallet"
+  ],
+  "expertise_by_source": {
+    "discussion": {
+      "Mining": 0.5,
+      "Wallet": 0.5
+    }
+  },
+  "expertise_domain_scores": {
+    "Mining": 0.5,
+    "Wallet": 0.5
+  },
+  "p2016_posts": 2.0,
+  "modern_posts": 0.0,
+  "p2016_ml_posts": 2.0,
+  "p2016_delving_posts": 0.0,
+  "modern_ml_posts": 0.0,
+  "modern_delving_posts": 0.0,
   "global_first_active": "2018-06-26T10:58:53",
   "global_last_active": "2022-08-18T10:29:01",
   "github_location": "Bras\u00edlia, Brazil",

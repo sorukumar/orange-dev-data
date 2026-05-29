@@ -15,16 +15,22 @@
   "total_deletions": null,
   "first_commit": null,
   "last_commit": null,
+  "p2016_authored_commits": 0.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
   "avg_review_latency_days": null,
   "reviews_count": null,
   "avg_approval_latency_days": null,
   "approvals_count": null,
+  "p2016_reviews_count": null,
+  "modern_reviews_count": null,
   "prs_authored": null,
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": null,
-  "hybrid_score": 0.0352,
+  "hybrid_score": 0.0351,
+  "p2016_hybrid_score": 0.0629,
+  "modern_hybrid_score": 0.0,
   "impact_score": 1.0,
   "threads_started": 2.0,
   "replies_sent": 21.0,
@@ -35,6 +41,26 @@
   "first_active": "2020-09-19T07:36:47",
   "last_active": "2022-02-13T03:56:21",
   "dev_type": "Participant",
+  "expertise_domains": [
+    "Mining",
+    "Consensus"
+  ],
+  "expertise_by_source": {
+    "discussion": {
+      "Consensus": 0.425,
+      "Mining": 0.575
+    }
+  },
+  "expertise_domain_scores": {
+    "Consensus": 0.425,
+    "Mining": 0.575
+  },
+  "p2016_posts": 23.0,
+  "modern_posts": 0.0,
+  "p2016_ml_posts": 23.0,
+  "p2016_delving_posts": 0.0,
+  "modern_ml_posts": 0.0,
+  "modern_delving_posts": 0.0,
   "global_first_active": "2020-09-19T07:36:47",
   "global_last_active": "2022-02-13T03:56:21",
   "github_location": null,

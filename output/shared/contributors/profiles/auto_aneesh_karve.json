@@ -19,7 +19,7 @@
     "BIP Author"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "None",
   "total_commits": 0.0,
   "authored_commits": 0.0,
@@ -28,16 +28,22 @@
   "total_deletions": null,
   "first_commit": null,
   "last_commit": null,
+  "p2016_authored_commits": 0.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 1.0,
   "avg_review_latency_days": 2175.557286111111,
   "reviews_count": 8.0,
   "avg_approval_latency_days": null,
   "approvals_count": 0.0,
+  "p2016_reviews_count": 8.0,
+  "modern_reviews_count": 8.0,
   "prs_authored": 4.0,
   "avg_pr_ack_velocity_days": 121.75216435185185,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 2.0,
   "hybrid_score": 0.4509,
+  "p2016_hybrid_score": 0.1085,
+  "modern_hybrid_score": 0.1471,
   "impact_score": 12.0,
   "threads_started": 3.0,
   "replies_sent": 3.0,
@@ -48,6 +54,33 @@
   "first_active": "2024-05-27T21:04:50",
   "last_active": "2025-09-07T18:13:17",
   "dev_type": "Participant",
+  "expertise_domains": [
+    "Infrastructure",
+    "Wallet",
+    "Mempool"
+  ],
+  "expertise_by_source": {
+    "bips": {
+      "Infrastructure": 1.0
+    },
+    "discussion": {
+      "Consensus": 0.08,
+      "Mempool": 0.15,
+      "Wallet": 0.77
+    }
+  },
+  "expertise_domain_scores": {
+    "Consensus": 0.0229,
+    "Infrastructure": 0.7143,
+    "Mempool": 0.0429,
+    "Wallet": 0.22
+  },
+  "p2016_posts": 6.0,
+  "modern_posts": 6.0,
+  "p2016_ml_posts": 6.0,
+  "p2016_delving_posts": 0.0,
+  "modern_ml_posts": 6.0,
+  "modern_delving_posts": 0.0,
   "global_first_active": "2024-05-27T21:04:50",
   "global_last_active": "2025-09-07T18:13:17",
   "github_location": "California",

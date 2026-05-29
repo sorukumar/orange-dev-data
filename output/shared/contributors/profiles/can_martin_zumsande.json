@@ -8,15 +8,17 @@
     "is_core_committer": null,
     "is_core_contributor": true,
     "is_maintainer": null,
-    "is_social_contributor": null,
+    "is_social_contributor": true,
     "is_sponsored": null,
     "maintainer_status": null,
-    "social_source": null,
+    "social_source": "mailing_list",
     "sponsor_id": null
   },
-  "roles": [],
+  "roles": [
+    "Researcher"
+  ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "P2P Network (Infrastructure)",
   "total_commits": 526.0,
   "authored_commits": 526.0,
@@ -25,16 +27,22 @@
   "total_deletions": 3926.0,
   "first_commit": "2019-01-26T22:34:00",
   "last_commit": "2026-03-09T09:40:24",
+  "p2016_authored_commits": 400.0,
+  "modern_authored_commits": 142.0,
   "bips_authored": 0.0,
-  "avg_review_latency_days": 84.91296176260704,
+  "avg_review_latency_days": 84.83418581009717,
   "reviews_count": 538.0,
-  "avg_approval_latency_days": 65.95822780646566,
-  "approvals_count": 340.0,
+  "avg_approval_latency_days": 65.82194301310906,
+  "approvals_count": 341.0,
+  "p2016_reviews_count": 538.0,
+  "modern_reviews_count": 297.0,
   "prs_authored": 145.0,
   "avg_pr_ack_velocity_days": 7.9229323450223275,
   "avg_concept_lead_time_days": 10.9440924232159,
   "review_reciprocity": 3.7103448275862068,
   "hybrid_score": 0.5773,
+  "p2016_hybrid_score": 0.5773,
+  "modern_hybrid_score": 0.532,
   "impact_score": 15.0,
   "threads_started": 6.0,
   "replies_sent": 0.0,
@@ -45,6 +53,35 @@
   "first_active": "2021-04-14T15:59:35",
   "last_active": "2026-02-25T13:20:05.693000",
   "dev_type": "Builder",
+  "expertise_domains": [
+    "Network",
+    "Infrastructure",
+    "Mining"
+  ],
+  "expertise_by_source": {
+    "code": {
+      "Consensus": 0.086,
+      "Infrastructure": 0.65,
+      "Network": 0.251,
+      "Wallet": 0.013
+    },
+    "discussion": {
+      "Mining": 0.245,
+      "Network": 0.755
+    }
+  },
+  "expertise_domain_scores": {
+    "Consensus": 0.0516,
+    "Infrastructure": 0.39,
+    "Mining": 0.098,
+    "Network": 0.4526
+  },
+  "p2016_posts": 6.0,
+  "modern_posts": 5.0,
+  "p2016_ml_posts": 1.0,
+  "p2016_delving_posts": 5.0,
+  "modern_ml_posts": 0.0,
+  "modern_delving_posts": 5.0,
   "global_first_active": "2019-01-26T22:34:00",
   "global_last_active": "2026-03-09T09:40:24",
   "github_location": null,

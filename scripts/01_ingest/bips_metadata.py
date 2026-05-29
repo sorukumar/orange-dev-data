@@ -3,6 +3,7 @@ import json
 import pandas as pd
 import subprocess
 from glob import glob
+from datetime import datetime
 import tqdm
 
 # --- Configuration ---
@@ -10,12 +11,29 @@ METADATA_REPO_URL = "https://github.com/bitcoin-data/github-metadata-backup-bitc
 METADATA_PATH = "data/sources/bips-github-metadata"
 OUTPUT_PR_PARQUET = "data/raw/bips_pr_metadata.parquet"
 OUTPUT_REVIEW_PARQUET = "data/raw/bips_review_events.parquet"
+STATE_PATH = "data/state.json"
+
+
+def load_state():
+    if os.path.exists(STATE_PATH):
+        with open(STATE_PATH) as f:
+            return json.load(f)
+    return {}
+
+
+def save_state(state):
+    with open(STATE_PATH, 'w') as f:
+        json.dump(state, f, indent=2)
+
 
 def setup_metadata():
     """Clones or pulls the BIPs GitHub metadata backup repository."""
-    if not os.path.exists(METADATA_PATH):
+    if not os.path.isdir(os.path.join(METADATA_PATH, '.git')):
+        if os.path.exists(METADATA_PATH):
+            print(f"Warning: {METADATA_PATH} exists but has no .git — removing and re-cloning...")
+            import shutil
+            shutil.rmtree(METADATA_PATH)
         print(f"Cloning BIPs GitHub metadata archive to {METADATA_PATH}...")
-        os.makedirs(os.path.dirname(METADATA_PATH), exist_ok=True)
         # Using shallow clone for performance and space efficiency
         subprocess.run(["git", "clone", "--depth", "1", METADATA_REPO_URL, METADATA_PATH], check=True)
     else:
@@ -27,6 +45,16 @@ def process_metadata():
     Parses the JSON metadata for BIP Pull Requests and Issues.
     Extracts PR authorship and review event signals.
     """
+    # State checkpoint: skip if archive HEAD hasn't changed since last build.
+    latest_commit = subprocess.run(
+        ["git", "-C", METADATA_PATH, "rev-parse", "HEAD"], capture_output=True, text=True
+    ).stdout.strip()
+    state = load_state()
+    if (state.get("bips_metadata", {}).get("latest_commit") == latest_commit
+            and os.path.exists(OUTPUT_PR_PARQUET) and os.path.exists(OUTPUT_REVIEW_PARQUET)):
+        print(f"BIPs metadata archive is up to date at commit {latest_commit[:12]}. Skipping re-parse.")
+        return
+
     source_dir = os.path.join(METADATA_PATH, "pulls")
     
     if not os.path.exists(source_dir):
@@ -111,6 +139,13 @@ def process_metadata():
     
     print(f"Saved {len(df_prs)} BIP PRs to {OUTPUT_PR_PARQUET}")
     print(f"Saved {len(df_reviews)} BIP review events to {OUTPUT_REVIEW_PARQUET}")
+
+    # Persist state checkpoint
+    state = load_state()
+    state.setdefault("bips_metadata", {})["latest_commit"] = latest_commit
+    state["bips_metadata"]["total_prs"] = len(df_prs)
+    state["bips_metadata"]["total_events"] = len(df_reviews)
+    save_state(state)
 
 if __name__ == "__main__":
     setup_metadata()

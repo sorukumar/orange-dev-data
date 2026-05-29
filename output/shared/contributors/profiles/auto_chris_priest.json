@@ -19,7 +19,7 @@
     "BIP Author"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "None",
   "total_commits": 0.0,
   "authored_commits": 0.0,
@@ -28,16 +28,22 @@
   "total_deletions": null,
   "first_commit": null,
   "last_commit": null,
+  "p2016_authored_commits": 0.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 1.0,
   "avg_review_latency_days": 1136.9407773919754,
   "reviews_count": 4.0,
   "avg_approval_latency_days": null,
   "approvals_count": 0.0,
+  "p2016_reviews_count": 2.0,
+  "modern_reviews_count": 0.0,
   "prs_authored": 4.0,
   "avg_pr_ack_velocity_days": 20.00758101851852,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 1.0,
   "hybrid_score": 0.4806,
+  "p2016_hybrid_score": 0.1398,
+  "modern_hybrid_score": 0.0702,
   "impact_score": 13.0,
   "threads_started": 5.0,
   "replies_sent": 31.0,
@@ -48,6 +54,29 @@
   "first_active": "2015-11-06T02:05:23",
   "last_active": "2017-09-27T14:35:33",
   "dev_type": "Participant",
+  "expertise_domains": [
+    "Consensus",
+    "Mining"
+  ],
+  "expertise_by_source": {
+    "bips": {
+      "Consensus": 1.0
+    },
+    "discussion": {
+      "Consensus": 0.528,
+      "Mining": 0.472
+    }
+  },
+  "expertise_domain_scores": {
+    "Consensus": 0.8651,
+    "Mining": 0.1349
+  },
+  "p2016_posts": 19.0,
+  "modern_posts": 0.0,
+  "p2016_ml_posts": 19.0,
+  "p2016_delving_posts": 0.0,
+  "modern_ml_posts": 0.0,
+  "modern_delving_posts": 0.0,
   "global_first_active": "2015-11-06T02:05:23",
   "global_last_active": "2017-09-27T14:35:33",
   "github_location": "Santa Barbara, CA",

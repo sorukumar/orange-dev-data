@@ -25,16 +25,22 @@
   "total_deletions": null,
   "first_commit": null,
   "last_commit": null,
+  "p2016_authored_commits": 0.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 1.0,
   "avg_review_latency_days": 2295.2645481824416,
   "reviews_count": 2.0,
   "avg_approval_latency_days": null,
   "approvals_count": 0.0,
+  "p2016_reviews_count": 2.0,
+  "modern_reviews_count": 0.0,
   "prs_authored": 2.0,
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 1.0,
   "hybrid_score": 0.4091,
+  "p2016_hybrid_score": 0.0647,
+  "modern_hybrid_score": 0.05,
   "impact_score": 11.0,
   "threads_started": 4.0,
   "replies_sent": 1.0,
@@ -45,6 +51,31 @@
   "first_active": "2017-05-23T10:30:58",
   "last_active": "2022-08-25T14:24:16",
   "dev_type": "Participant",
+  "expertise_domains": [
+    "Infrastructure",
+    "Ecosystem",
+    "Consensus"
+  ],
+  "expertise_by_source": {
+    "bips": {
+      "Infrastructure": 1.0
+    },
+    "discussion": {
+      "Consensus": 0.5,
+      "Ecosystem": 0.5
+    }
+  },
+  "expertise_domain_scores": {
+    "Consensus": 0.1429,
+    "Ecosystem": 0.1429,
+    "Infrastructure": 0.7143
+  },
+  "p2016_posts": 5.0,
+  "modern_posts": 0.0,
+  "p2016_ml_posts": 5.0,
+  "p2016_delving_posts": 0.0,
+  "modern_ml_posts": 0.0,
+  "modern_delving_posts": 0.0,
   "global_first_active": "2017-05-23T10:30:58",
   "global_last_active": "2022-08-25T14:24:16",
   "github_location": null,

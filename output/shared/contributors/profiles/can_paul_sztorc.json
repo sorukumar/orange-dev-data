@@ -6,18 +6,20 @@
   "badges": {
     "is_bip_author": null,
     "is_core_committer": null,
-    "is_core_contributor": null,
+    "is_core_contributor": true,
     "is_maintainer": null,
-    "is_social_contributor": null,
+    "is_social_contributor": true,
     "is_sponsored": null,
     "maintainer_status": null,
-    "social_source": null,
+    "social_source": "github",
     "sponsor_id": null
   },
-  "roles": [],
+  "roles": [
+    "Researcher"
+  ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
-  "technical_focus": "sidechains-drivechain",
+  "last_seen": "2026-05-29T00:00:00",
+  "technical_focus": "None",
   "total_commits": 0.0,
   "authored_commits": 0.0,
   "merge_commits": 0.0,
@@ -25,16 +27,22 @@
   "total_deletions": null,
   "first_commit": null,
   "last_commit": null,
+  "p2016_authored_commits": 0.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 2.0,
   "avg_review_latency_days": 1342.4333208689459,
   "reviews_count": 4.0,
   "avg_approval_latency_days": null,
   "approvals_count": 0.0,
+  "p2016_reviews_count": 4.0,
+  "modern_reviews_count": 3.0,
   "prs_authored": 7.0,
   "avg_pr_ack_velocity_days": 284.11974537037037,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 0.5714285714285714,
-  "hybrid_score": 0.7112,
+  "hybrid_score": 0.7111,
+  "p2016_hybrid_score": 0.2132,
+  "modern_hybrid_score": 0.1064,
   "impact_score": 19.0,
   "threads_started": 5.0,
   "replies_sent": 70.0,
@@ -45,6 +53,33 @@
   "first_active": "2015-08-21T18:17:51",
   "last_active": "2025-06-10T14:04:14",
   "dev_type": "Participant",
+  "expertise_domains": [
+    "Consensus",
+    "L2",
+    "Mining"
+  ],
+  "expertise_by_source": {
+    "bips": {
+      "Consensus": 1.0
+    },
+    "discussion": {
+      "Ecosystem": 0.157,
+      "L2": 0.671,
+      "Mining": 0.171
+    }
+  },
+  "expertise_domain_scores": {
+    "Consensus": 0.7145,
+    "Ecosystem": 0.0449,
+    "L2": 0.1918,
+    "Mining": 0.0489
+  },
+  "p2016_posts": 70.0,
+  "modern_posts": 2.0,
+  "p2016_ml_posts": 70.0,
+  "p2016_delving_posts": 0.0,
+  "modern_ml_posts": 2.0,
+  "modern_delving_posts": 0.0,
   "global_first_active": "2015-08-21T18:17:51",
   "global_last_active": "2025-06-10T14:04:14",
   "github_location": "New Haven, CT",

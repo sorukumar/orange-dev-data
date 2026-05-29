@@ -1,22 +1,24 @@
 {
-  "display_name": "Drak",
-  "github_login_final": "btcdrak",
+  "display_name": "Prayank",
+  "github_login_final": "prayank",
   "delving_username_final": null,
-  "uuid": "can_drak",
+  "uuid": "can_prayank",
   "badges": {
     "is_bip_author": null,
     "is_core_committer": null,
     "is_core_contributor": true,
     "is_maintainer": null,
-    "is_social_contributor": null,
+    "is_social_contributor": true,
     "is_sponsored": null,
     "maintainer_status": null,
-    "social_source": null,
+    "social_source": "mailing_list",
     "sponsor_id": null
   },
-  "roles": [],
+  "roles": [
+    "Researcher"
+  ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "Core Libs",
   "total_commits": 131.0,
   "authored_commits": 131.0,
@@ -25,17 +27,23 @@
   "total_deletions": 2093.0,
   "first_commit": "2012-01-02T07:27:41",
   "last_commit": "2022-06-07T15:16:25",
-  "bips_authored": 0.0,
-  "avg_review_latency_days": 221.6377988336256,
-  "reviews_count": 401.0,
-  "avg_approval_latency_days": 166.35990761657743,
-  "approvals_count": 277.0,
-  "prs_authored": 69.0,
-  "avg_pr_ack_velocity_days": 13.7415102682811,
-  "avg_concept_lead_time_days": 23.749498456790125,
-  "review_reciprocity": 5.811594202898551,
-  "hybrid_score": 0.762,
-  "impact_score": 20.0,
+  "p2016_authored_commits": 55.0,
+  "modern_authored_commits": 0.0,
+  "bips_authored": 7.0,
+  "avg_review_latency_days": null,
+  "reviews_count": 0.0,
+  "avg_approval_latency_days": null,
+  "approvals_count": 0.0,
+  "p2016_reviews_count": 0.0,
+  "modern_reviews_count": 0.0,
+  "prs_authored": 0.0,
+  "avg_pr_ack_velocity_days": null,
+  "avg_concept_lead_time_days": null,
+  "review_reciprocity": null,
+  "hybrid_score": 1.5927,
+  "p2016_hybrid_score": 0.4173,
+  "modern_hybrid_score": 0.0,
+  "impact_score": 42.0,
   "threads_started": 73.0,
   "replies_sent": 189.0,
   "ml_threads": 73.0,
@@ -44,17 +52,51 @@
   "delving_responses": 0.0,
   "first_active": "2013-11-05T16:15:27",
   "last_active": "2022-03-01T22:45:58",
-  "dev_type": "Builder",
+  "dev_type": "Protocol Designer",
+  "expertise_domains": [
+    "Consensus",
+    "Infrastructure",
+    "Mining"
+  ],
+  "expertise_by_source": {
+    "bips": {
+      "Consensus": 0.857,
+      "Infrastructure": 0.143
+    },
+    "code": {
+      "Consensus": 0.12,
+      "Cryptography": 0.001,
+      "Infrastructure": 0.818,
+      "Network": 0.045,
+      "Wallet": 0.015
+    },
+    "discussion": {
+      "Consensus": 0.591,
+      "Mining": 0.409
+    }
+  },
+  "expertise_domain_scores": {
+    "Consensus": 0.5829,
+    "Infrastructure": 0.317,
+    "Mining": 0.0818,
+    "Network": 0.0135
+  },
+  "p2016_posts": 101.0,
+  "modern_posts": 0.0,
+  "p2016_ml_posts": 101.0,
+  "p2016_delving_posts": 0.0,
+  "modern_ml_posts": 0.0,
+  "modern_delving_posts": 0.0,
   "global_first_active": "2012-01-02T07:27:41",
   "global_last_active": "2022-06-07T15:16:25",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
   "github_twitter": null,
-  "github_blog": "twitter.com/btcdrak",
-  "github_followers": 539.0,
+  "github_blog": null,
+  "github_followers": null,
   "is_top_50": false,
-  "github_url": "https://github.com/btcdrak",
+  "github_url": "https://github.com/prayank",
   "commit_history": {
     "2012": {
       "Core Libs": 2.5,
@@ -126,6 +168,57 @@
       "Consensus (Domain Logic)": 1.0
     }
   },
+  "bip_list": [
+    {
+      "number": 68,
+      "title": "Relative lock-time using consensus-enforced sequence numbers",
+      "status": "Deployed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0068.mediawiki"
+    },
+    {
+      "number": 98,
+      "title": "Fast Merkle Trees",
+      "status": "Draft",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0098.mediawiki"
+    },
+    {
+      "number": 105,
+      "title": "Consensus based block size retargeting algorithm",
+      "status": "Closed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0105.mediawiki"
+    },
+    {
+      "number": 112,
+      "title": "CHECKSEQUENCEVERIFY",
+      "status": "Deployed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0112.mediawiki"
+    },
+    {
+      "number": 116,
+      "title": "MERKLEBRANCHVERIFY",
+      "status": "Draft",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0116.mediawiki"
+    },
+    {
+      "number": 117,
+      "title": "Tail Call Execution Semantics",
+      "status": "Draft",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0117.mediawiki"
+    },
+    {
+      "number": 320,
+      "title": "nVersion bits for general purpose use",
+      "status": "Draft",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0320.mediawiki"
+    }
+  ],
   "first_message": {
     "source": "mailing_list",
     "subject": "Re: [Bitcoin-development] Possible Solution To SM Attack",

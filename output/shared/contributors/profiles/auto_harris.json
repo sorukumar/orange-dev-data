@@ -6,20 +6,20 @@
   "badges": {
     "is_bip_author": null,
     "is_core_committer": null,
-    "is_core_contributor": true,
+    "is_core_contributor": null,
     "is_maintainer": null,
     "is_social_contributor": true,
     "is_sponsored": null,
     "maintainer_status": null,
-    "social_source": "delving",
+    "social_source": "github",
     "sponsor_id": null
   },
   "roles": [
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
-  "technical_focus": "Tests (QA)",
+  "last_seen": "2026-05-29T00:00:00",
+  "technical_focus": "privacy",
   "total_commits": 0.0,
   "authored_commits": 0.0,
   "merge_commits": 0.0,
@@ -27,16 +27,22 @@
   "total_deletions": null,
   "first_commit": null,
   "last_commit": null,
+  "p2016_authored_commits": 0.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
   "avg_review_latency_days": null,
   "reviews_count": null,
   "avg_approval_latency_days": null,
   "approvals_count": null,
+  "p2016_reviews_count": null,
+  "modern_reviews_count": null,
   "prs_authored": null,
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": null,
   "hybrid_score": 0.1563,
+  "p2016_hybrid_score": 0.0,
+  "modern_hybrid_score": 0.0,
   "impact_score": 4.0,
   "threads_started": 2.0,
   "replies_sent": 1.0,
@@ -47,6 +53,29 @@
   "first_active": "2026-02-19T10:43:14.974000",
   "last_active": "2026-04-01T07:19:52.611000",
   "dev_type": "Builder",
+  "expertise_domains": [
+    "Privacy",
+    "Mempool",
+    "Cryptography"
+  ],
+  "expertise_by_source": {
+    "discussion": {
+      "Cryptography": 0.254,
+      "Mempool": 0.254,
+      "Privacy": 0.493
+    }
+  },
+  "expertise_domain_scores": {
+    "Cryptography": 0.2537,
+    "Mempool": 0.2537,
+    "Privacy": 0.4925
+  },
+  "p2016_posts": 3.0,
+  "modern_posts": 3.0,
+  "p2016_ml_posts": 0.0,
+  "p2016_delving_posts": 3.0,
+  "modern_ml_posts": 0.0,
+  "modern_delving_posts": 3.0,
   "global_first_active": "2026-02-19T10:43:14.974000128",
   "global_last_active": "2026-04-01T07:19:52.611000064",
   "github_location": null,

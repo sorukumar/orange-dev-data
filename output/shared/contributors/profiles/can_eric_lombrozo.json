@@ -16,7 +16,7 @@
   },
   "roles": [],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "None",
   "total_commits": 49.0,
   "authored_commits": 49.0,
@@ -25,16 +25,22 @@
   "total_deletions": 1669.0,
   "first_commit": "2013-01-06T12:30:00",
   "last_commit": "2015-11-16T01:13:30",
+  "p2016_authored_commits": 0.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 6.0,
   "avg_review_latency_days": 476.2978610402494,
   "reviews_count": 60.0,
   "avg_approval_latency_days": 389.96920309653916,
   "approvals_count": 45.0,
+  "p2016_reviews_count": 38.0,
+  "modern_reviews_count": 1.0,
   "prs_authored": 42.0,
   "avg_pr_ack_velocity_days": 140.19762118736384,
   "avg_concept_lead_time_days": 15.186357060185186,
   "review_reciprocity": 1.4285714285714286,
-  "hybrid_score": 1.5379,
+  "hybrid_score": 1.5378,
+  "p2016_hybrid_score": 0.2064,
+  "modern_hybrid_score": 0.1589,
   "impact_score": 41.0,
   "threads_started": 19.0,
   "replies_sent": 192.0,
@@ -45,6 +51,40 @@
   "first_active": "2011-12-17T01:41:56",
   "last_active": "2017-06-01T16:00:02",
   "dev_type": "Protocol Designer",
+  "expertise_domains": [
+    "Infrastructure",
+    "Consensus",
+    "Script"
+  ],
+  "expertise_by_source": {
+    "bips": {
+      "Consensus": 0.5,
+      "Infrastructure": 0.333,
+      "Script": 0.167
+    },
+    "code": {
+      "Consensus": 0.031,
+      "Infrastructure": 0.896,
+      "Network": 0.073
+    },
+    "discussion": {
+      "Consensus": 0.64,
+      "Mempool": 0.36
+    }
+  },
+  "expertise_domain_scores": {
+    "Consensus": 0.3873,
+    "Infrastructure": 0.4353,
+    "Mempool": 0.072,
+    "Network": 0.0219,
+    "Script": 0.0835
+  },
+  "p2016_posts": 12.0,
+  "modern_posts": 0.0,
+  "p2016_ml_posts": 12.0,
+  "p2016_delving_posts": 0.0,
+  "modern_ml_posts": 0.0,
+  "modern_delving_posts": 0.0,
   "global_first_active": "2011-12-17T01:41:56",
   "global_last_active": "2017-06-01T16:00:02",
   "github_location": null,

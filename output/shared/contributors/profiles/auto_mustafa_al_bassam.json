@@ -8,17 +8,15 @@
     "is_core_committer": null,
     "is_core_contributor": true,
     "is_maintainer": null,
-    "is_social_contributor": true,
+    "is_social_contributor": null,
     "is_sponsored": null,
     "maintainer_status": null,
-    "social_source": "mailing_list",
+    "social_source": null,
     "sponsor_id": null
   },
-  "roles": [
-    "Researcher"
-  ],
+  "roles": [],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "Tests (QA)",
   "total_commits": 4.0,
   "authored_commits": 4.0,
@@ -27,16 +25,22 @@
   "total_deletions": 25.0,
   "first_commit": "2016-03-11T12:03:45",
   "last_commit": "2016-03-11T15:04:05",
+  "p2016_authored_commits": 2.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
   "avg_review_latency_days": 0.5843171296296297,
   "reviews_count": 1.0,
   "avg_approval_latency_days": null,
   "approvals_count": 0.0,
+  "p2016_reviews_count": 1.0,
+  "modern_reviews_count": 0.0,
   "prs_authored": 1.0,
   "avg_pr_ack_velocity_days": 0.002662037037037037,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 1.0,
   "hybrid_score": 0.1125,
+  "p2016_hybrid_score": 0.1234,
+  "modern_hybrid_score": 0.033,
   "impact_score": 3.0,
   "threads_started": 0.0,
   "replies_sent": 10.0,
@@ -47,6 +51,31 @@
   "first_active": "2016-03-09T18:36:39",
   "last_active": "2018-04-09T18:39:15",
   "dev_type": "Builder",
+  "expertise_domains": [
+    "Infrastructure",
+    "Ecosystem",
+    "Mining"
+  ],
+  "expertise_by_source": {
+    "code": {
+      "Infrastructure": 1.0
+    },
+    "discussion": {
+      "Ecosystem": 0.714,
+      "Mining": 0.286
+    }
+  },
+  "expertise_domain_scores": {
+    "Ecosystem": 0.2856,
+    "Infrastructure": 0.6,
+    "Mining": 0.1144
+  },
+  "p2016_posts": 10.0,
+  "modern_posts": 0.0,
+  "p2016_ml_posts": 10.0,
+  "p2016_delving_posts": 0.0,
+  "modern_ml_posts": 0.0,
+  "modern_delving_posts": 0.0,
   "global_first_active": "2016-03-09T18:36:39",
   "global_last_active": "2018-04-09T18:39:15",
   "github_location": null,

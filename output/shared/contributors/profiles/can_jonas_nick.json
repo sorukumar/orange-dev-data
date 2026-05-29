@@ -19,7 +19,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "Node & RPC (App/Interface)",
   "total_commits": 4.0,
   "authored_commits": 4.0,
@@ -28,16 +28,22 @@
   "total_deletions": 3.0,
   "first_commit": "2016-05-28T17:22:13",
   "last_commit": "2017-08-18T02:35:30",
+  "p2016_authored_commits": 3.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 4.0,
   "avg_review_latency_days": 1656.2585937217705,
   "reviews_count": 77.0,
   "avg_approval_latency_days": 1391.7889613583754,
   "approvals_count": 50.0,
+  "p2016_reviews_count": 76.0,
+  "modern_reviews_count": 22.0,
   "prs_authored": 16.0,
   "avg_pr_ack_velocity_days": 2.523973765432099,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 4.8125,
-  "hybrid_score": 1.1265,
+  "hybrid_score": 1.1264,
+  "p2016_hybrid_score": 0.3641,
+  "modern_hybrid_score": 0.4221,
   "impact_score": 30.0,
   "threads_started": 14.0,
   "replies_sent": 50.0,
@@ -48,6 +54,37 @@
   "first_active": "2015-06-14T12:45:48",
   "last_active": "2026-04-06T08:30:15.751000",
   "dev_type": "Protocol Designer",
+  "expertise_domains": [
+    "Infrastructure",
+    "Consensus",
+    "Wallet"
+  ],
+  "expertise_by_source": {
+    "bips": {
+      "Consensus": 0.5,
+      "Infrastructure": 0.5
+    },
+    "code": {
+      "Infrastructure": 1.0
+    },
+    "discussion": {
+      "Consensus": 0.259,
+      "Cryptography": 0.352,
+      "Wallet": 0.389
+    }
+  },
+  "expertise_domain_scores": {
+    "Consensus": 0.3018,
+    "Cryptography": 0.0704,
+    "Infrastructure": 0.55,
+    "Wallet": 0.0778
+  },
+  "p2016_posts": 63.0,
+  "modern_posts": 41.0,
+  "p2016_ml_posts": 53.0,
+  "p2016_delving_posts": 10.0,
+  "modern_ml_posts": 31.0,
+  "modern_delving_posts": 10.0,
   "global_first_active": "2015-06-14T12:45:48",
   "global_last_active": "2026-04-06T08:30:15.751000064",
   "github_location": null,

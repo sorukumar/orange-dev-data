@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "None",
   "total_commits": 0.0,
   "authored_commits": 0.0,
@@ -27,28 +27,57 @@
   "total_deletions": null,
   "first_commit": null,
   "last_commit": null,
+  "p2016_authored_commits": 0.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
   "avg_review_latency_days": 2068.340975222908,
   "reviews_count": 4.0,
   "avg_approval_latency_days": null,
   "approvals_count": 0.0,
+  "p2016_reviews_count": 4.0,
+  "modern_reviews_count": 4.0,
   "prs_authored": 2.0,
   "avg_pr_ack_velocity_days": 0.09181712962962962,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 2.0,
-  "hybrid_score": 0.1613,
+  "hybrid_score": 0.1638,
+  "p2016_hybrid_score": 0.2298,
+  "modern_hybrid_score": 0.4146,
   "impact_score": 4.0,
   "threads_started": 15.0,
-  "replies_sent": 82.0,
+  "replies_sent": 84.0,
   "ml_threads": 2.0,
   "delving_threads": 13.0,
-  "ml_responses": 68.0,
+  "ml_responses": 70.0,
   "delving_responses": 14.0,
   "first_active": "2023-11-22T01:40:54.064000",
-  "last_active": "2026-05-26T19:51:55",
+  "last_active": "2026-05-28T13:37:10",
   "dev_type": "Participant",
+  "expertise_domains": [
+    "Cryptography",
+    "Consensus",
+    "Script"
+  ],
+  "expertise_by_source": {
+    "discussion": {
+      "Consensus": 0.148,
+      "Cryptography": 0.721,
+      "Script": 0.131
+    }
+  },
+  "expertise_domain_scores": {
+    "Consensus": 0.148,
+    "Cryptography": 0.721,
+    "Script": 0.131
+  },
+  "p2016_posts": 99.0,
+  "modern_posts": 99.0,
+  "p2016_ml_posts": 72.0,
+  "p2016_delving_posts": 27.0,
+  "modern_ml_posts": 72.0,
+  "modern_delving_posts": 27.0,
   "global_first_active": "2023-11-22T01:40:54.064000",
-  "global_last_active": "2026-05-26T19:51:55",
+  "global_last_active": "2026-05-28T13:37:10",
   "github_location": null,
   "github_company": null,
   "github_bio": "Pseudonymous freelance cypherpunk",
@@ -66,9 +95,9 @@
   },
   "last_message": {
     "source": "mailing_list",
-    "subject": "Re: [bitcoindev] [BIP Proposal] Hybrid SPHINCS+ / secp256k1 Key\n Derivation for Quantum-Resistant Paper Wallets",
-    "date": "2026-05-26",
-    "link": "https://gnusha.org/pi/bitcoindev/8xzOqkvC9ILirjnikYtVVAW60ZqDGF9RfQi4hZ-g9gM7Ex4onLrDLT132wC2ObA8F1oixXZRGT-uE8DMc7qoVYhh9pCO2ioFT76RzbLoi08=@proton.me"
+    "subject": "Re: [bitcoindev] PQC: Lattice-based signatures",
+    "date": "2026-05-28",
+    "link": "https://gnusha.org/pi/bitcoindev/gykF8zbGCmjgSr4Je8XH-al1Uge3Uk1t7L9mrNDmLcIeJM48s6ujL84IPctqF1C8t9doEtYscjjGGeE2s-AqK9eAl7suRdsCPs2OBAgWurU=@proton.me"
   },
   "social_history": {
     "2023": {
@@ -92,11 +121,11 @@
     "2026": {
       "bitvm": 10,
       "covenants": 9,
-      "other": 32,
+      "other": 33,
       "multisig-threshold": 6,
       "quantum": 38,
       "script-opcodes": 9,
-      "taproot": 15,
+      "taproot": 17,
       "wallet-keys": 12
     }
   }

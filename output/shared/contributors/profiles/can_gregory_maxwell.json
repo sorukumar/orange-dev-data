@@ -5,22 +5,21 @@
   "uuid": "can_gregory_maxwell",
   "badges": {
     "is_bip_author": null,
-    "is_core_committer": true,
-    "is_core_contributor": true,
-    "is_maintainer": true,
+    "is_core_committer": null,
+    "is_core_contributor": null,
+    "is_maintainer": null,
     "is_social_contributor": true,
     "is_sponsored": null,
-    "maintainer_status": "historical",
-    "social_source": "mailing_list",
+    "maintainer_status": null,
+    "social_source": "github",
     "sponsor_id": null
   },
   "roles": [
-    "Core Maintainer",
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
-  "technical_focus": "Merge",
+  "last_seen": "2026-05-29T00:00:00",
+  "technical_focus": "code",
   "total_commits": 342.0,
   "authored_commits": 238.0,
   "merge_commits": 104.0,
@@ -28,16 +27,22 @@
   "total_deletions": 1910.0,
   "first_commit": "2012-02-01T23:08:03",
   "last_commit": "2019-02-17T03:38:08",
+  "p2016_authored_commits": 72.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 2.0,
   "avg_review_latency_days": 78.76335932970649,
   "reviews_count": 1530.0,
   "avg_approval_latency_days": 52.147786115287325,
   "approvals_count": 678.0,
+  "p2016_reviews_count": 892.0,
+  "modern_reviews_count": 33.0,
   "prs_authored": 158.0,
   "avg_pr_ack_velocity_days": 4.3671314571150095,
   "avg_concept_lead_time_days": 14.436305076628354,
   "review_reciprocity": 9.683544303797468,
   "hybrid_score": 2.4937,
+  "p2016_hybrid_score": 0.8639,
+  "modern_hybrid_score": 0.6163,
   "impact_score": 66.0,
   "threads_started": 58.0,
   "replies_sent": 815.0,
@@ -48,6 +53,41 @@
   "first_active": "2011-06-30T21:07:50",
   "last_active": "2026-02-07T17:38:38.269000",
   "dev_type": "Protocol Designer",
+  "expertise_domains": [
+    "Infrastructure",
+    "Consensus",
+    "Mining"
+  ],
+  "expertise_by_source": {
+    "bips": {
+      "Consensus": 0.5,
+      "Infrastructure": 0.5
+    },
+    "code": {
+      "Consensus": 0.089,
+      "Infrastructure": 0.674,
+      "Network": 0.175,
+      "Wallet": 0.062
+    },
+    "discussion": {
+      "Mining": 0.6,
+      "Script": 0.4
+    }
+  },
+  "expertise_domain_scores": {
+    "Consensus": 0.2767,
+    "Infrastructure": 0.4522,
+    "Mining": 0.12,
+    "Network": 0.0525,
+    "Script": 0.08,
+    "Wallet": 0.0186
+  },
+  "p2016_posts": 319.0,
+  "modern_posts": 107.0,
+  "p2016_ml_posts": 272.0,
+  "p2016_delving_posts": 47.0,
+  "modern_ml_posts": 60.0,
+  "modern_delving_posts": 47.0,
   "global_first_active": "2011-06-30T21:07:50",
   "global_last_active": "2026-02-07T17:38:38.268999936",
   "github_location": null,

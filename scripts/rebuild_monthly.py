@@ -5,6 +5,9 @@ import sys
 import json
 import pandas as pd
 
+# Force unbuffered stdout so tee/pipe sees output in real time
+sys.stdout.reconfigure(line_buffering=True)
+
 def load_env():
     """Load environment variables from .env file"""
     env_path = os.path.join(os.path.dirname(__file__), "..", ".env")
@@ -174,7 +177,31 @@ def main():
         action="store_true",
         help="Also regenerate audit_potential_matches.json for identity curation review",
     )
+    parser.add_argument(
+        "--background",
+        action="store_true",
+        help="Run the pipeline in the background (detached process). Output is written to logs/rebuild_monthly_<date>.log",
+    )
     args = parser.parse_args()
+
+    if args.background:
+        from datetime import datetime
+        import shlex
+        root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+        log_path  = os.path.join(root_dir, "logs", f"rebuild_monthly_{datetime.now().strftime('%Y-%m-%d_%H%M%S')}.log")
+        os.makedirs(os.path.dirname(log_path), exist_ok=True)
+        # Build the same command without --background to avoid recursion
+        cmd = [sys.executable, __file__]
+        if args.audit:
+            cmd.append("--audit")
+        with open(log_path, "w") as log_f:
+            proc = subprocess.Popen(cmd, stdout=log_f, stderr=subprocess.STDOUT,
+                                    cwd=root_dir, start_new_session=True)
+        print(f"🚀 Pipeline started in background (PID {proc.pid})")
+        print(f"   Log: {log_path}")
+        print(f"   Monitor: tail -f {log_path}")
+        return
+
     run_audit = args.audit
 
     print("🚀 Starting MONTHLY Automated Pipeline (Deep Analytics)...")
@@ -189,6 +216,27 @@ def main():
 
     # PHASE 0: Fresh Sync
     print("\n--- PHASE 0: Raw Data Sync ---")
+
+    # Health check: report which source repos are present vs missing
+    sources = {
+        "bitcoin (Core git)":            ("data/sources/bitcoin",                 False),
+        "bips (BIPs git)":               ("data/sources/bips",                    False),
+        "delving (archive)":             ("data/sources/delving",                 False),
+        "bitcoin-github-metadata (PRs)": ("data/sources/bitcoin-github-metadata", False),
+        "bips-github-metadata (PRs)":    ("data/sources/bips-github-metadata",    False),
+        "mailing_list/shard_0":          ("data/sources/mailing_list/shard_0",    True),   # bare repo
+    }
+    print("  Source repo status:")
+    for label, (rel_path, is_bare) in sources.items():
+        full = os.path.join(root_dir, rel_path)
+        sentinel = os.path.join(full, "HEAD") if is_bare else os.path.join(full, ".git")
+        is_valid = os.path.exists(sentinel)
+        items    = len(os.listdir(full)) if os.path.isdir(full) else 0
+        status   = ("✅ bare repo" if is_bare else "✅ git repo") if is_valid else \
+                   ("⚠️  empty dir (will clone)" if items == 0 else "⚠️  no git sentinel")
+        print(f"    {label:<40} {status}")
+    print()
+
     run("git -C data/sources/bitcoin pull origin master", cwd=root_dir)
     run("git -C data/sources/bips pull origin master", cwd=root_dir)
     run("git -C data/sources/delving pull origin master", cwd=root_dir)

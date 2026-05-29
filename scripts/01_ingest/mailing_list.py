@@ -99,7 +99,11 @@ def main():
     
     for shard in SHARDS:
         path = f"data/sources/mailing_list/shard_{shard}"
-        if not os.path.exists(path):
+        if not os.path.exists(os.path.join(path, 'HEAD')):
+            if os.path.exists(path):
+                print(f"Warning: shard_{shard} exists but is not a valid bare repo — removing and re-cloning...")
+                import shutil
+                shutil.rmtree(path)
             print(f"Cloning shard {shard}...")
             clone_url = "https://gnusha.org/pi/bitcoindev/"
             subprocess.run(["git", "clone", "--bare", clone_url, path], check=True)

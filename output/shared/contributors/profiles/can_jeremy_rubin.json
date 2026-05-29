@@ -19,7 +19,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "Core Libs",
   "total_commits": 81.0,
   "authored_commits": 81.0,
@@ -28,16 +28,22 @@
   "total_deletions": 603.0,
   "first_commit": "2016-06-15T23:28:04",
   "last_commit": "2022-08-16T19:09:27",
+  "p2016_authored_commits": 60.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 4.0,
-  "avg_review_latency_days": 355.7497400149388,
-  "reviews_count": 285.0,
+  "avg_review_latency_days": 375.96835506317586,
+  "reviews_count": 287.0,
   "avg_approval_latency_days": 315.3509774899098,
   "approvals_count": 132.0,
-  "prs_authored": 98.0,
+  "p2016_reviews_count": 286.0,
+  "modern_reviews_count": 20.0,
+  "prs_authored": 99.0,
   "avg_pr_ack_velocity_days": 36.74193789308176,
   "avg_concept_lead_time_days": 18.57474652777778,
-  "review_reciprocity": 2.9081632653061225,
-  "hybrid_score": 1.5015,
+  "review_reciprocity": 2.898989898989899,
+  "hybrid_score": 1.5018,
+  "p2016_hybrid_score": 0.7972,
+  "modern_hybrid_score": 0.3946,
   "impact_score": 40.0,
   "threads_started": 115.0,
   "replies_sent": 242.0,
@@ -48,6 +54,38 @@
   "first_active": "2014-07-16T12:56:54",
   "last_active": "2026-05-14T09:46:05",
   "dev_type": "Protocol Designer",
+  "expertise_domains": [
+    "Consensus",
+    "Infrastructure",
+    "Script"
+  ],
+  "expertise_by_source": {
+    "bips": {
+      "Consensus": 1.0
+    },
+    "code": {
+      "Consensus": 0.088,
+      "Infrastructure": 0.74,
+      "Network": 0.06,
+      "Wallet": 0.113
+    },
+    "discussion": {
+      "Script": 1.0
+    }
+  },
+  "expertise_domain_scores": {
+    "Consensus": 0.5262,
+    "Infrastructure": 0.2219,
+    "Network": 0.018,
+    "Script": 0.1999,
+    "Wallet": 0.0339
+  },
+  "p2016_posts": 342.0,
+  "modern_posts": 50.0,
+  "p2016_ml_posts": 310.0,
+  "p2016_delving_posts": 32.0,
+  "modern_ml_posts": 18.0,
+  "modern_delving_posts": 32.0,
   "global_first_active": "2014-07-16T12:56:54",
   "global_last_active": "2026-05-14T09:46:05",
   "github_location": "behind u",

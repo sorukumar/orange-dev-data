@@ -16,7 +16,7 @@
   },
   "roles": [],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "None",
   "total_commits": 991.0,
   "authored_commits": 701.0,
@@ -25,16 +25,22 @@
   "total_deletions": 7265.0,
   "first_commit": "2020-03-04T22:01:31",
   "last_commit": "2026-01-13T23:35:38",
+  "p2016_authored_commits": 505.0,
+  "modern_authored_commits": 257.0,
   "bips_authored": 2.0,
   "avg_review_latency_days": 140.4966889923348,
   "reviews_count": 710.0,
   "avg_approval_latency_days": 69.07101198769303,
   "approvals_count": 490.0,
+  "p2016_reviews_count": 710.0,
+  "modern_reviews_count": 412.0,
   "prs_authored": 159.0,
   "avg_pr_ack_velocity_days": 8.204880243764173,
   "avg_concept_lead_time_days": 14.515481999269005,
   "review_reciprocity": 4.465408805031447,
-  "hybrid_score": 2.2241,
+  "hybrid_score": 2.2242,
+  "p2016_hybrid_score": 0.7031,
+  "modern_hybrid_score": 0.6748,
   "impact_score": 59.0,
   "threads_started": 29.0,
   "replies_sent": 31.0,
@@ -45,6 +51,39 @@
   "first_active": "2021-04-26T18:06:34",
   "last_active": "2025-10-14T18:53:00.532000",
   "dev_type": "Protocol Designer",
+  "expertise_domains": [
+    "Infrastructure",
+    "Privacy",
+    "Mempool"
+  ],
+  "expertise_by_source": {
+    "bips": {
+      "Infrastructure": 0.5,
+      "Privacy": 0.5
+    },
+    "code": {
+      "Consensus": 0.199,
+      "Infrastructure": 0.694,
+      "Network": 0.084,
+      "Wallet": 0.023
+    },
+    "discussion": {
+      "Mempool": 1.0
+    }
+  },
+  "expertise_domain_scores": {
+    "Consensus": 0.0597,
+    "Infrastructure": 0.4582,
+    "Mempool": 0.2,
+    "Network": 0.0252,
+    "Privacy": 0.25
+  },
+  "p2016_posts": 60.0,
+  "modern_posts": 34.0,
+  "p2016_ml_posts": 37.0,
+  "p2016_delving_posts": 23.0,
+  "modern_ml_posts": 11.0,
+  "modern_delving_posts": 23.0,
   "global_first_active": "2020-03-04T22:01:31",
   "global_last_active": "2026-01-13T23:35:38",
   "github_location": null,

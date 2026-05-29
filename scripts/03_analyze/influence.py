@@ -12,14 +12,126 @@ import sys
 
 sys.path.append(os.getcwd())
 from scripts.utils.identity import resolver
+from scripts.utils.subsystem import SubsystemResolver
 
 # --- Configuration & Identity Resolution ---
 IDENTITY_MAP_PATH = 'metadata/identities.json'
 INPUT_DATA_PATH = 'data/enriched/social_threads.parquet'
 OUTPUT_DIR = 'output/network'
 
+
+def compute_expertise_signals(node, commit_hist, bip_theme_counts,
+                               commit_cat_to_domain, bip_theme_to_domain, sub_resolver):
+    """Synthesize expertise signals from code commits, BIP authorship, and discussion activity.
+
+    Weights: BIPs (0.50) > code commits (0.30) > discussion (0.20).
+    BIP authorship is the strongest explicit expertise signal; code commits reflect sustained
+    effort; discussion participation is the weakest (engagement != deep expertise).
+
+    Returns dict with:
+      expertise_domains: list of 1-3 domain IDs (synthesized, most relevant first)
+      expertise_by_source: {source: {domain: share}} — stored for future source-split UI
+    """
+    expertise_by_source = {}
+
+    # 1. Code signal: aggregate across all years, map commit category → domain
+    code_domain_counts = Counter()
+    for year_data in commit_hist.values():
+        for cat, count in year_data.items():
+            domain = commit_cat_to_domain.get(cat)
+            if domain:
+                code_domain_counts[domain] += count
+    if code_domain_counts:
+        total = sum(code_domain_counts.values())
+        expertise_by_source['code'] = {
+            d: round(c / total, 3) for d, c in code_domain_counts.most_common()
+        }
+
+    # 2. BIP signal: map BIP theme → domain
+    bip_domain_counts = Counter()
+    for theme, count in (bip_theme_counts or {}).items():
+        domain = bip_theme_to_domain.get(theme)
+        if domain:
+            bip_domain_counts[domain] += count
+    if bip_domain_counts:
+        total = sum(bip_domain_counts.values())
+        expertise_by_source['bips'] = {
+            d: round(c / total, 3) for d, c in bip_domain_counts.most_common()
+        }
+
+    # 3. Discussion signal: map subsystem slugs from social expertise list → domain.
+    # Exclude Infrastructure here (social chatter about build/test topics is noise).
+    discussion_domain_counts = Counter()
+    for exp in node.get('expertise', []):
+        slug = exp.get('topic', '')
+        domain = sub_resolver.get_expertise_domain(slug)
+        if domain and domain != 'Infrastructure':
+            discussion_domain_counts[domain] += exp.get('share', 0.0)
+    if discussion_domain_counts:
+        total = sum(discussion_domain_counts.values())
+        expertise_by_source['discussion'] = {
+            d: round(c / total, 3)
+            for d, c in sorted(discussion_domain_counts.items(), key=lambda x: -x[1])
+        }
+
+    # 4. Weighted synthesis
+    combined = Counter()
+    for domain, share in expertise_by_source.get('bips', {}).items():
+        combined[domain] += share * 0.50
+    for domain, share in expertise_by_source.get('code', {}).items():
+        combined[domain] += share * 0.30
+    for domain, share in expertise_by_source.get('discussion', {}).items():
+        combined[domain] += share * 0.20
+
+    # Fallback when no structured signals: map top_category slug → domain
+    if not combined:
+        tc = node.get('top_category', 'other')
+        domain = sub_resolver.get_expertise_domain(tc)
+        if domain:
+            combined[domain] = 1.0
+
+    top_domains = [d for d, _ in combined.most_common(3)]
+    if not top_domains:
+        top_domains = ['Infrastructure']
+
+    # Normalize the full weighted synthesis into a continuous score dict.
+    # Stored as expertise_domain_scores for threshold-based filtering and
+    # weighted ranking in the frontend (e.g. hybrid_score × domain_score = domain authority).
+    # Only domains with a meaningful score (>0.01) are emitted to keep JSON compact.
+    total_combined = sum(combined.values()) or 1.0
+    expertise_domain_scores = {
+        d: round(s / total_combined, 4)
+        for d, s in combined.most_common()
+        if s / total_combined > 0.01
+    }
+
+    return {
+        'expertise_domains': top_domains,
+        'expertise_by_source': expertise_by_source,
+        'expertise_domain_scores': expertise_domain_scores,
+    }
+
+
 def extract_network():
     print(f"Loading identity resolver...")
+    sub_resolver = SubsystemResolver()
+
+    # Load expertise domain definitions (single source of truth for domain metadata).
+    EXPERTISE_DOMAINS_PATH = 'metadata/expertise_domains.json'
+    expertise_domains_def = []
+    commit_cat_to_domain = {}   # "Tests (QA)" → "Infrastructure"
+    bip_theme_to_domain = {}    # "Consensus & Soft Forks" → "Consensus"
+    if os.path.exists(EXPERTISE_DOMAINS_PATH):
+        with open(EXPERTISE_DOMAINS_PATH) as _f:
+            expertise_domains_def = json.load(_f).get('domains', [])
+        for _d in expertise_domains_def:
+            for _cc in _d.get('commit_categories', []):
+                commit_cat_to_domain[_cc] = _d['id']
+            for _bt in _d.get('bip_themes', []):
+                bip_theme_to_domain[_bt] = _d['id']
+    else:
+        print(f"  Warning: {EXPERTISE_DOMAINS_PATH} not found; expertise synthesis will use discussion signals only.")
+
     
     if not os.path.exists(INPUT_DATA_PATH):
         print(f"Error: {INPUT_DATA_PATH} not found. Run categorization script first.")
@@ -100,7 +212,13 @@ def extract_network():
                 "ml_threads": 0,
                 "delving_threads": 0,
                 "ml_responses": 0,
-                "delving_responses": 0
+                "delving_responses": 0,
+                "p2016_posts": 0,
+                "modern_posts": 0,
+                "p2016_ml_posts": 0,
+                "p2016_delving_posts": 0,
+                "modern_ml_posts": 0,
+                "modern_delving_posts": 0
             }
         
         node_metadata[author]["sources"][source] += 1
@@ -129,6 +247,18 @@ def extract_network():
             
         node_metadata[author]["first_active"] = min(node_metadata[author]["first_active"], date)
         node_metadata[author]["last_active"] = max(node_metadata[author]["last_active"], date)
+        if date >= post_2016_start:
+            node_metadata[author]["p2016_posts"] += 1
+            if source == "mailing_list":
+                node_metadata[author]["p2016_ml_posts"] += 1
+            elif source == "delving":
+                node_metadata[author]["p2016_delving_posts"] += 1
+        if date >= modern_start:
+            node_metadata[author]["modern_posts"] += 1
+            if source == "mailing_list":
+                node_metadata[author]["modern_ml_posts"] += 1
+            elif source == "delving":
+                node_metadata[author]["modern_delving_posts"] += 1
         
         if pd.isna(reply_to) or not author or author.lower() in ['system', 'unknown', 'admin']:
             continue
@@ -251,6 +381,12 @@ def extract_network():
             "ml_responses": node_metadata[node]["ml_responses"],
             "delving_responses": node_metadata[node]["delving_responses"],
             "replies_received": int(G_all.in_degree(node, weight='weight')) if node in G_all else 0,
+            "p2016_posts": node_metadata[node]["p2016_posts"],
+            "modern_posts": node_metadata[node]["modern_posts"],
+            "p2016_ml_posts": node_metadata[node]["p2016_ml_posts"],
+            "p2016_delving_posts": node_metadata[node]["p2016_delving_posts"],
+            "modern_ml_posts": node_metadata[node]["modern_ml_posts"],
+            "modern_delving_posts": node_metadata[node]["modern_delving_posts"],
             "first_active": node_metadata[node]["first_active"].isoformat(),
             "last_active": node_metadata[node]["last_active"].isoformat()
         })
@@ -309,31 +445,50 @@ def extract_network():
     registry_stats = {}  # uuid -> {reviews_count, bips_authored}
     if os.path.exists(EFFICIENCY_PATH):
         try:
-            eff_df = pd.read_parquet(EFFICIENCY_PATH, columns=['canonical_id', 'reviews_count', 'prs_authored'])
+            eff_df = pd.read_parquet(EFFICIENCY_PATH, columns=['canonical_id', 'reviews_count', 'prs_authored', 'p2016_reviews_count', 'modern_reviews_count'])
             for _, row in eff_df.iterrows():
                 uid = row.get('canonical_id')
                 if uid:
                     registry_stats.setdefault(uid, {})['reviews_count'] = row.get('reviews_count') or 0
                     registry_stats.setdefault(uid, {})['prs_authored'] = row.get('prs_authored') or 0
+                    registry_stats.setdefault(uid, {})['p2016_reviews_count'] = row.get('p2016_reviews_count') or 0
+                    registry_stats.setdefault(uid, {})['modern_reviews_count'] = row.get('modern_reviews_count') or 0
         except Exception as e:
             print(f"  Warning: Could not load contributor_review_metrics for review data: {e}")
 
     # Derive bips_authored count per UUID from bips_refined.parquet (Phase 1 ingest output).
     # author_canonical_ids is a list column; explode it to count BIPs per author.
+    # Also collect per-author BIP theme distribution for expertise synthesis.
     BIPS_PATH = 'data/enriched/bips_refined.parquet'
+    bip_author_themes = {}  # uuid → Counter{theme: bip_count}
     if os.path.exists(BIPS_PATH):
         try:
-            bips_df = pd.read_parquet(BIPS_PATH, columns=['author_canonical_ids'])
+            bips_df = pd.read_parquet(BIPS_PATH, columns=['author_canonical_ids', 'theme'])
             bip_counts = Counter()
-            for ids in bips_df['author_canonical_ids'].dropna():
-                # column is stored as numpy.ndarray; coerce to iterable safely
-                for uid in (ids.tolist() if hasattr(ids, 'tolist') else list(ids)):
+            for _, brow in bips_df.iterrows():
+                theme = brow.get('theme')
+                ids = brow['author_canonical_ids']
+                for uid in (ids.tolist() if hasattr(ids, 'tolist') else list(ids or [])):
                     if uid:
                         bip_counts[uid] += 1
+                        if theme:
+                            bip_author_themes.setdefault(uid, Counter())[theme] += 1
             for uid, count in bip_counts.items():
                 registry_stats.setdefault(uid, {})['bips_authored'] = count
         except Exception as e:
             print(f"  Warning: Could not load bips_refined for BIP count data: {e}")
+
+    # Load contributor commit history for code-signal expertise synthesis.
+    # Written by 02_process/core.py. Format: {uuid: {year: {category: count}}}
+    COMMIT_HISTORY_PATH = 'data/enriched/contributor_commit_history.json'
+    commit_history = {}
+    if os.path.exists(COMMIT_HISTORY_PATH):
+        try:
+            with open(COMMIT_HISTORY_PATH) as _f:
+                commit_history = json.load(_f)
+            print(f"  Loaded commit history for {len(commit_history)} contributors.")
+        except Exception as e:
+            print(f"  Warning: Could not load contributor_commit_history: {e}")
 
     for identity in identities_list:
         cid = identity['uuid']
@@ -383,6 +538,44 @@ def extract_network():
         if c_stats.get('is_maintainer'):
             hybrid_score += 1.0
         
+        # 2b. Modern Hybrid Score — same formula but uses era-specific inputs.
+        # modern_hybrid_score answers "how active/influential is this person RIGHT NOW?"
+        # Uses: last-3Y commit count + all-time reviews (no era split available) + modern PageRank.
+        # BIP/maintainer bonuses are intentionally omitted: those are career-level signals,
+        # not a measure of current momentum.
+        modern_cutoff_year = modern_start.year
+        cid_commit_hist = commit_history.get(cid, {})
+        modern_commits = sum(
+            sum(cat_counts.values())
+            for year_str, cat_counts in cid_commit_hist.items()
+            if isinstance(cat_counts, dict) and int(year_str) >= modern_cutoff_year
+        )
+        modern_social_score = pagerank_modern.get(cid, 0)
+        modern_commit_factor = math.log(modern_commits + 1, 2) / 10.0
+        modern_social_factor = min(modern_social_score * 100, 1.0)
+        modern_hybrid_score = (
+            (modern_social_factor * 0.35)
+            + (modern_commit_factor * 0.40)
+            + (review_factor * 0.25)  # all-time reviews — era-split not available
+        )
+
+        # 2c. P2016 Hybrid Score — same formula as modern but for the post-2016 era.
+        # Answers "how influential has this person been since 2016?"
+        # Uses: post-2016 commits + all-time reviews + post-2016 PageRank.
+        # No BIP/maintainer bonuses — era-specific signal, not career-level.
+        p2016_commits = sum(
+            sum(cat_counts.values())
+            for year_str, cat_counts in cid_commit_hist.items()
+            if isinstance(cat_counts, dict) and int(year_str) >= post_2016_start.year
+        )
+        p2016_commit_factor = math.log(p2016_commits + 1, 2) / 10.0
+        p2016_social_factor = min(pagerank_post2016.get(cid, 0) * 100, 1.0)
+        p2016_hybrid_score = (
+            (p2016_social_factor * 0.35)
+            + (p2016_commit_factor * 0.40)
+            + (review_factor * 0.25)
+        )
+
         # 3. Archetype Logic — 4 groups + Creator singleton
         # PM-friendly grouping: each label answers "what is their primary role?"
         #
@@ -447,6 +640,8 @@ def extract_network():
             "ml_responses": 0,
             "delving_responses": 0,
             "replies_received": 0,
+            "p2016_posts": 0,
+            "modern_posts": 0,
             "first_active": None,  # Code-only: no social activity date
             "last_active": None    # Will be derived from last_commit in unify step
         }
@@ -458,18 +653,40 @@ def extract_network():
             "display_name": identity.get('display_name', cid),
             "dev_type": dev_type,
             "hybrid_score": round(hybrid_score, 4),
+            "p2016_hybrid_score": round(p2016_hybrid_score, 4),
+            "modern_hybrid_score": round(modern_hybrid_score, 4),
             "impact_score": None,  # Populated after full sort; placeholder until then
             "reviews_count": int(reviews),
+            "p2016_reviews_count": int(reg_data.get('p2016_reviews_count', 0)),
+            "modern_reviews_count": int(reg_data.get('modern_reviews_count', 0)),
             "bips_authored": int(bips_authored),
             "val": (hybrid_score * 10) + 2, # Scale node size by hybrid influence
             "code_stats": {
                 "commits": commits,
+                "p2016_commits": int(p2016_commits),
+                "modern_commits": int(modern_commits),
                 "reviews": int(reviews),
                 "bips_authored": int(bips_authored),
                 "impact": impact,
                 "is_maintainer": c_stats.get('is_maintainer', False)
             }
         })
+
+        # Synthesize expertise signals from code, BIPs, and discussion.
+        signals = compute_expertise_signals(
+            node_obj,
+            commit_history.get(cid, {}),
+            bip_author_themes.get(cid),
+            commit_cat_to_domain,
+            bip_theme_to_domain,
+            sub_resolver,
+        )
+        node_obj.update(signals)
+        # scores dict (raw PageRank per era) is now superseded by the three composite
+        # hybrid scores (hybrid_score, p2016_hybrid_score, modern_hybrid_score).
+        # Drop it from the output to keep the JSON lean.
+        node_obj.pop('scores', None)
+
         all_enriched_nodes.append(node_obj)
 
     # Sort ALL contributors by hybrid influence
@@ -501,26 +718,6 @@ def extract_network():
     # connections are narrower and form clearer satellite clusters.
     visible_nodes = all_enriched_nodes[:250]
     visible_ids = {n['id'] for n in visible_nodes}
-
-    # --- Community Detection & Layout Pre-computation ---
-    # Maps raw category slugs to the same theme labels used in the frontend.
-    THEME_MAP_PY = {
-        'soft-fork-activation': 'Consensus', 'hard-fork-block-size': 'Consensus',
-        'consensus-cleanup': 'Consensus', 'segwit': 'Consensus', 'taproot': 'Consensus',
-        'covenants': 'Script', 'script-opcodes': 'Script', 'vaults': 'Script', 'dlc': 'Script',
-        'lightning': 'L2', 'l2-bridges': 'L2', 'sidechains-drivechain': 'L2',
-        'bitvm': 'L2', 'atomic-swaps': 'L2',
-        'privacy': 'Privacy', 'silent-payments': 'Privacy',
-        'wallet-keys': 'Wallet', 'multisig-threshold': 'Wallet',
-        'mining': 'Mining',
-        'mempool-fees': 'Mempool', 'spam-filtering': 'Mempool',
-        'p2p-network': 'Network',
-        'signatures-sighash': 'Crypto', 'quantum': 'Crypto',
-        'utxo-sync': 'Data', 'transaction-format': 'Data', 'data-structures': 'Data',
-        'payment-protocol': 'Ecosystem', 'ecash': 'Ecosystem', 'nostr': 'Ecosystem',
-        'scaling': 'Ecosystem', 'testing-devtools': 'Ecosystem',
-        'core-dev': 'Ecosystem', 'bip-process': 'Ecosystem',
-    }
 
     print("Building undirected subgraph for community detection (time-decay weighted)...")
     # Use decay_weight (not raw weight) so recent interactions dominate cluster
@@ -557,8 +754,11 @@ def extract_network():
     community_topic_votes: dict = {}
     for n in visible_nodes:
         cid = node_to_community.get(n['id'], -1)
-        raw_topic = n.get('top_category', 'other')
-        theme = THEME_MAP_PY.get(raw_topic, raw_topic)
+        # Use synthesized expertise_domains[0] if available; fall back to top_category slug → domain.
+        theme = (n.get('expertise_domains') or [None])[0]
+        if not theme:
+            raw_topic = n.get('top_category', 'other')
+            theme = sub_resolver.get_expertise_domain(raw_topic) if raw_topic not in ('other', 'code') else 'Ecosystem'
         community_topic_votes.setdefault(cid, Counter())[theme] += 1
     community_labels = {
         cid: votes.most_common(1)[0][0]
@@ -654,22 +854,35 @@ def extract_network():
 
     # --- Expertise-Similarity Community Detection ---
     # Cluster by WHAT developers work on (not who they reply to).
-    # Immune to the "everyone knows everyone" problem at the top because it
-    # uses topic specialization vectors, not reply-graph structure.
+    # Uses synthesized expertise_domains for clean, multi-signal representation.
     EXPERTISE_THEMES = ['Consensus', 'Script', 'L2', 'Privacy', 'Wallet',
-                        'Mempool', 'Network', 'Mining', 'Crypto', 'Data', 'Ecosystem']
+                        'Mempool', 'Network', 'Mining', 'Cryptography', 'Infrastructure', 'Ecosystem']
 
     def build_expertise_vector(node):
         vec = np.zeros(len(EXPERTISE_THEMES))
-        for exp in node.get('expertise', []):
-            theme = THEME_MAP_PY.get(exp.get('topic', ''), 'other')
-            if theme in EXPERTISE_THEMES:
-                vec[EXPERTISE_THEMES.index(theme)] += exp.get('share', 0.0)
-        # Fallback: use top_category when expertise list is empty or negligible.
+        domain_scores = node.get('expertise_domain_scores', {})
+        if domain_scores:
+            # Use continuous weighted scores for richer similarity — exclude Infrastructure
+            # to prevent the majority of developers from clustering together on build/test work.
+            has_non_infra = any(
+                d != 'Infrastructure' for d in domain_scores
+            )
+            for domain, score in domain_scores.items():
+                if domain in EXPERTISE_THEMES and score > 0:
+                    if domain != 'Infrastructure' or not has_non_infra:
+                        vec[EXPERTISE_THEMES.index(domain)] = score
+        else:
+            # Fallback for nodes without expertise_domain_scores (backward compat).
+            domains = node.get('expertise_domains', [])
+            use_domains = [d for d in domains if d != 'Infrastructure'] or domains
+            for domain in use_domains:
+                if domain in EXPERTISE_THEMES:
+                    vec[EXPERTISE_THEMES.index(domain)] += 1.0
+        # Fallback: map top_category slug → domain when no expertise signal at all.
         if vec.sum() < 0.05:
-            tc_theme = THEME_MAP_PY.get(node.get('top_category', ''), 'other')
-            if tc_theme in EXPERTISE_THEMES:
-                vec[EXPERTISE_THEMES.index(tc_theme)] = 1.0
+            tc_domain = sub_resolver.get_expertise_domain(node.get('top_category', 'other'))
+            if tc_domain and tc_domain != 'Infrastructure' and tc_domain in EXPERTISE_THEMES:
+                vec[EXPERTISE_THEMES.index(tc_domain)] = 1.0
         norm = np.linalg.norm(vec)
         return vec / norm if norm > 0 else vec  # zero vector = generalist (no clear specialty)
 
@@ -706,8 +919,10 @@ def extract_network():
     exp_community_topic_votes: dict = {}
     for n in visible_nodes:
         ecid = expertise_node_to_community.get(n['id'], -1)
-        raw_topic = n.get('top_category', 'other')
-        theme = THEME_MAP_PY.get(raw_topic, raw_topic)
+        theme = (n.get('expertise_domains') or [None])[0]
+        if not theme:
+            raw_topic = n.get('top_category', 'other')
+            theme = sub_resolver.get_expertise_domain(raw_topic) if raw_topic not in ('other', 'code') else 'Ecosystem'
         exp_community_topic_votes.setdefault(ecid, Counter())[theme] += 1
     exp_community_labels = {
         ecid: votes.most_common(1)[0][0]
@@ -756,6 +971,7 @@ def extract_network():
                 "link_count": len(links_data),
                 "communities": communities_meta,
                 "expertise_communities": exp_communities_meta,
+                "domains": expertise_domains_def,
             }
         }, f, indent=2)
 

@@ -19,7 +19,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "Documentation",
   "total_commits": 17.0,
   "authored_commits": 17.0,
@@ -28,16 +28,22 @@
   "total_deletions": 430.0,
   "first_commit": "2014-04-29T18:34:41",
   "last_commit": "2019-08-22T19:22:52",
+  "p2016_authored_commits": 15.0,
+  "modern_authored_commits": 0.0,
   "bips_authored": 1.0,
   "avg_review_latency_days": 696.4620611006487,
   "reviews_count": 83.0,
   "avg_approval_latency_days": 689.9485959545856,
   "approvals_count": 30.0,
+  "p2016_reviews_count": 77.0,
+  "modern_reviews_count": 7.0,
   "prs_authored": 24.0,
   "avg_pr_ack_velocity_days": 8.296097709551658,
   "avg_concept_lead_time_days": 0.613275462962963,
   "review_reciprocity": 3.4583333333333335,
-  "hybrid_score": 0.9109,
+  "hybrid_score": 0.911,
+  "p2016_hybrid_score": 0.6746,
+  "modern_hybrid_score": 0.5146,
   "impact_score": 24.0,
   "threads_started": 50.0,
   "replies_sent": 194.0,
@@ -48,6 +54,38 @@
   "first_active": "2014-05-21T15:25:02",
   "last_active": "2025-11-19T00:25:27",
   "dev_type": "Builder",
+  "expertise_domains": [
+    "Mining",
+    "Infrastructure",
+    "Mempool"
+  ],
+  "expertise_by_source": {
+    "bips": {
+      "Mining": 1.0
+    },
+    "code": {
+      "Infrastructure": 0.882,
+      "Wallet": 0.118
+    },
+    "discussion": {
+      "L2": 0.235,
+      "Mempool": 0.471,
+      "Mining": 0.294
+    }
+  },
+  "expertise_domain_scores": {
+    "Infrastructure": 0.2646,
+    "L2": 0.047,
+    "Mempool": 0.0942,
+    "Mining": 0.5588,
+    "Wallet": 0.0354
+  },
+  "p2016_posts": 236.0,
+  "modern_posts": 126.0,
+  "p2016_ml_posts": 151.0,
+  "p2016_delving_posts": 85.0,
+  "modern_ml_posts": 41.0,
+  "modern_delving_posts": 85.0,
   "global_first_active": "2014-04-29T18:34:41",
   "global_last_active": "2025-11-19T00:25:27",
   "github_location": "Hilo, HI, USA",

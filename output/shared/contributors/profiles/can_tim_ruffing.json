@@ -19,7 +19,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-27T00:00:00",
+  "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "Documentation",
   "total_commits": 14.0,
   "authored_commits": 14.0,
@@ -28,16 +28,22 @@
   "total_deletions": 201.0,
   "first_commit": "2018-05-03T15:45:51",
   "last_commit": "2025-10-23T12:20:17",
+  "p2016_authored_commits": 11.0,
+  "modern_authored_commits": 4.0,
   "bips_authored": 3.0,
   "avg_review_latency_days": 1194.237175525285,
   "reviews_count": 102.0,
   "avg_approval_latency_days": 1000.9090772537648,
   "approvals_count": 59.0,
+  "p2016_reviews_count": 102.0,
+  "modern_reviews_count": 56.0,
   "prs_authored": 18.0,
   "avg_pr_ack_velocity_days": 1.6427713477366257,
   "avg_concept_lead_time_days": 0.7549614197530864,
   "review_reciprocity": 5.666666666666667,
-  "hybrid_score": 1.0998,
+  "hybrid_score": 1.0996,
+  "p2016_hybrid_score": 0.4479,
+  "modern_hybrid_score": 0.4463,
   "impact_score": 29.0,
   "threads_started": 11.0,
   "replies_sent": 64.0,
@@ -48,6 +54,39 @@
   "first_active": "2014-08-06T17:22:31",
   "last_active": "2026-02-27T10:52:17.147000",
   "dev_type": "Protocol Designer",
+  "expertise_domains": [
+    "Infrastructure",
+    "Network",
+    "Cryptography"
+  ],
+  "expertise_by_source": {
+    "bips": {
+      "Infrastructure": 0.667,
+      "Network": 0.333
+    },
+    "code": {
+      "Infrastructure": 0.682,
+      "Network": 0.136,
+      "Wallet": 0.182
+    },
+    "discussion": {
+      "Cryptography": 0.522,
+      "Privacy": 0.478
+    }
+  },
+  "expertise_domain_scores": {
+    "Cryptography": 0.1044,
+    "Infrastructure": 0.5381,
+    "Network": 0.2073,
+    "Privacy": 0.0956,
+    "Wallet": 0.0546
+  },
+  "p2016_posts": 71.0,
+  "modern_posts": 28.0,
+  "p2016_ml_posts": 59.0,
+  "p2016_delving_posts": 12.0,
+  "modern_ml_posts": 16.0,
+  "modern_delving_posts": 12.0,
   "global_first_active": "2014-08-06T17:22:31",
   "global_last_active": "2026-02-27T10:52:17.147000064",
   "github_location": "Germany",

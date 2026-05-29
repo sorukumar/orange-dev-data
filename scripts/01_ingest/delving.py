@@ -15,6 +15,19 @@ ARCHIVE_REPO_URL = "https://github.com/jamesob/delving-bitcoin-archive"
 ARCHIVE_PATH = "data/sources/delving"
 OUTPUT_PARQUET = "data/raw/social_delving.parquet"
 IDENTITY_CURATED_PATH = "metadata/identity_curated.json"
+STATE_PATH = "data/state.json"
+
+
+def load_state():
+    if os.path.exists(STATE_PATH):
+        with open(STATE_PATH) as f:
+            return json.load(f)
+    return {}
+
+
+def save_state(state):
+    with open(STATE_PATH, 'w') as f:
+        json.dump(state, f, indent=2)
 
 
 def _load_bots():
@@ -27,9 +40,12 @@ def _load_bots():
 
 def setup_archive():
     """Clones or pulls the Delving Bitcoin archive repository."""
-    if not os.path.exists(ARCHIVE_PATH):
+    if not os.path.isdir(os.path.join(ARCHIVE_PATH, '.git')):
+        if os.path.exists(ARCHIVE_PATH):
+            print(f"Warning: {ARCHIVE_PATH} exists but has no .git — removing and re-cloning...")
+            import shutil
+            shutil.rmtree(ARCHIVE_PATH)
         print(f"Cloning Delving archive to {ARCHIVE_PATH}...")
-        os.makedirs(os.path.dirname(ARCHIVE_PATH), exist_ok=True)
         subprocess.run(["git", "clone", "--depth", "1", ARCHIVE_REPO_URL, ARCHIVE_PATH], check=True)
     else:
         print(f"Updating Delving archive in {ARCHIVE_PATH}...")
@@ -109,6 +125,17 @@ def process_archive():
 
 def main():
     setup_archive()
+
+    # State checkpoint: skip if archive HEAD hasn't changed since last build.
+    latest_commit = subprocess.run(
+        ["git", "-C", ARCHIVE_PATH, "rev-parse", "HEAD"], capture_output=True, text=True
+    ).stdout.strip()
+    state = load_state()
+    if (state.get("delving", {}).get("latest_commit") == latest_commit
+            and os.path.exists(OUTPUT_PARQUET)):
+        print(f"Delving archive is up to date at commit {latest_commit[:12]}. Skipping re-parse.")
+        return
+
     records = process_archive()
     
     if records:
@@ -120,7 +147,18 @@ def main():
         os.makedirs(os.path.dirname(OUTPUT_PARQUET), exist_ok=True)
         df.to_parquet(OUTPUT_PARQUET, index=False)
         print(f"\nSaved {len(df)} Delving posts to {OUTPUT_PARQUET}")
-        
+
+        # Persist state checkpoint
+        state = load_state()
+        state.setdefault("delving", {})["latest_commit"] = latest_commit
+        state["delving"]["max_topic_id"] = max(
+            (int(r["thread_id"].replace("topic_", ""))
+             for r in records if (r.get("thread_id") or "").startswith("topic_")),
+            default=state.get("delving", {}).get("max_topic_id", 0)
+        )
+        state["delving"]["total_posts"] = len(df)
+        save_state(state)
+
         # Summary for sanity check
         print("\nTop 5 Delving Contributors:")
         print(df['canonical_id'].value_counts().head(5))
