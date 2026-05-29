@@ -206,3 +206,88 @@ see IDENTITY_RESOLUTION.md).
 ### `aliases_lookup.json`
 Flattened index of the identity registry for fast name resolution during heavy
 ingestion passes. Generated at resolver startup if not present.
+
+---
+
+## `output/shared/contributors/` — Frontend Delivery Artifacts
+
+Written by `scripts/04_deliver/ui_artifacts.py`. These files are the direct data
+source for the `orange-dev-network` and `orange-dev-tracker` frontends.
+
+### `registry_contributors.parquet` ⭐ Primary directory data file
+**Role**: Flat, Snappy-compressed columnar table of all ~7,400 contributors. This
+is the main data file loaded by `directory.js` (replaces the old 10 MB
+`registry_index.json` — now only ~850 KB).
+
+**Written by**: `scripts/04_deliver/ui_artifacts.py`
+
+**Consumed by**: `orange-dev-network/js/directory.js` via
+[hyparquet](https://www.npmjs.com/package/hyparquet) (`import { parquetRead } from
+'https://cdn.jsdelivr.net/npm/hyparquet@1.17.1/+esm'`).
+
+**Nested column encoding**: Parquet is a flat columnar format. Five fields that are
+dicts or lists in the source data are **JSON-stringified** when writing parquet and
+**JSON.parse()'d** in JavaScript after loading. They are listed in
+`registry_metadata.json → metadata.parquet_nested_cols`:
+
+| Column | Original Python type | Parquet type | JS after parse |
+|---|---|---|---|
+| `expertise_domain_scores` | `dict[str, float]` | `STRING` (JSON) | `Object` |
+| `expertise_domains` | `list[str]` | `STRING` (JSON) | `Array` |
+| `expertise_by_source` | `dict[str, dict]` | `STRING` (JSON) | `Object` |
+| `roles` | `list[str]` | `STRING` (JSON) | `Array` |
+| `github` | `dict` | `STRING` (JSON) | `Object` |
+
+All other columns (30+ numeric/float fields, string IDs, dates) are stored natively.
+`null` Python values become parquet nulls; `None` in nested fields becomes the
+JSON string `"null"` (JS: `null`, safely handled by existing `|| {}` / `|| []` guards).
+
+**Why not change `registry_index.json`?**: `registry_index.json` is kept for backward
+compatibility. It's still written by the pipeline but is no longer the primary path
+for `directory.js`.
+
+---
+
+### `registry_metadata.json` — Tiny metadata companion
+**Role**: Lightweight sidecar to `registry_contributors.parquet`. Loaded first (< 3 KB)
+to bootstrap domain maps and supply the column schema for parquet reconstruction.
+
+**Schema**:
+```json
+{
+  "metadata": {
+    "count": 7411,
+    "generated_at": "2026-05-29T...",
+    "sharded_count": 7411,
+    "domains": [ { "id": "Consensus", "name": "...", "color": "..." }, ... ],
+    "parquet_columns": ["uuid", "display_name", ...],
+    "parquet_nested_cols": ["expertise_by_source", "expertise_domain_scores", "expertise_domains", "github", "roles"]
+  }
+}
+```
+
+`parquet_columns` declares the exact column order in the parquet file — the JS uses
+this to convert each positional row array from hyparquet back to a named object.
+`parquet_nested_cols` declares which of those columns need `JSON.parse()`.
+
+---
+
+### `registry_index.json` — Legacy full registry (backward compat)
+**Role**: The original combined file (`{metadata, contributors: [...]}`). Still written
+each pipeline run. No longer the primary path for `directory.js` (superseded by parquet
++ metadata split), but retained in case other tooling needs it.
+
+**Size**: ~13 MB (formatted) / ~10 MB (raw). Do not add new frontend consumers — use
+the parquet instead.
+
+---
+
+### `profiles/` — Per-contributor profile shards
+**Role**: One JSON file per contributor (e.g. `can_pieter_wuille.json`). Fetched
+on-demand by `profile.js` when a user opens a profile. Each shard contains the full
+contributor record plus enriched data (commit history, BIP list, social bookmarks,
+social history). Average shard size ~1–3 KB.
+
+**Written by**: `scripts/04_deliver/ui_artifacts.py`
+
+**Consumed by**: `orange-dev-network/js/profile.js`

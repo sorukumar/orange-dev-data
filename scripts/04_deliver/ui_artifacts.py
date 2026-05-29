@@ -210,16 +210,58 @@ def deliver():
         registry_list.append(entry)
     
     os.makedirs(OUTPUT_DIR, exist_ok=True)
+    generated_at = datetime.now().isoformat()
     with open(REGISTRY_FILE, 'w') as f:
         json.dump({
             "metadata": {
                 "count": len(registry_list),
-                "generated_at": datetime.now().isoformat(),
+                "generated_at": generated_at,
                 "sharded_count": sharded_count,
                 "domains": expertise_domains_def,
             },
             "contributors": registry_list
         }, f, indent=2)
+
+    # --- Write Parquet + slim metadata JSON for fast directory loading ---
+    # Nested dict/list fields cannot be stored natively in flat Parquet columns,
+    # so they are JSON-stringified here and JSON.parse()'d back in directory.js.
+    # The metadata JSON tells the JS which columns are nested, so no hardcoding
+    # of column names is needed in the frontend.
+    NESTED_JSON_COLS = {'expertise_domain_scores', 'expertise_domains', 'expertise_by_source', 'roles', 'github'}
+    parquet_rows = []
+    for entry in registry_list:
+        flat = {}
+        for k, v in entry.items():
+            flat[k] = json.dumps(v, separators=(',', ':')) if k in NESTED_JSON_COLS else v
+        parquet_rows.append(flat)
+
+    import pyarrow as pa
+    import pyarrow.parquet as pq
+    df_parquet = pd.DataFrame(parquet_rows)
+    parquet_path = os.path.join(OUTPUT_DIR, 'registry_contributors.parquet')
+    pq.write_table(
+        pa.Table.from_pandas(df_parquet, preserve_index=False),
+        parquet_path,
+        compression='snappy'
+    )
+    parquet_size_kb = os.path.getsize(parquet_path) / 1024
+    print(f"  registry_contributors.parquet written ({parquet_size_kb:.0f} KB, snappy-compressed)")
+
+    # Tiny metadata JSON — domains, freshness, and parquet schema hints for JS
+    metadata_path = os.path.join(OUTPUT_DIR, 'registry_metadata.json')
+    with open(metadata_path, 'w') as f:
+        json.dump({
+            "metadata": {
+                "count": len(registry_list),
+                "generated_at": generated_at,
+                "sharded_count": sharded_count,
+                "domains": expertise_domains_def,
+                "parquet_columns": list(df_parquet.columns),
+                "parquet_nested_cols": sorted(NESTED_JSON_COLS),
+            }
+        }, f)
+    print(f"  registry_metadata.json written ({os.path.getsize(metadata_path)} bytes)")
+
     # Final save confirmation
     print(f"Registry and profiles saved to {OUTPUT_DIR}/")
 
