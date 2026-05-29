@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-05-29T01:01:40.758962",
+  "generated_at": "2026-05-29T10:12:42.993878",
   "contributors_tracked": 7411,
   "window_reference": {
-    "anchor_timestamp": "2026-05-29T04:39:10+00:00",
-    "current_window_start": "2026-04-29T04:39:10+00:00",
-    "previous_window_start": "2026-03-30T04:39:10+00:00",
+    "anchor_timestamp": "2026-05-29T13:59:47+00:00",
+    "current_window_start": "2026-04-29T13:59:47+00:00",
+    "previous_window_start": "2026-03-30T13:59:47+00:00",
     "window_days": 30
   },
   "widgets": {
     "active_contributors_30d": {
-      "value": 110,
+      "value": 109,
       "previous_30d": 80,
-      "delta_30d": 30,
+      "delta_30d": 29,
       "window_days": 30,
       "definition": "Contributors with global_last_active in current 30-day window, compared to the previous 30-day window.",
       "latest_activity_date": "2026-05-28"
@@ -23,23 +23,23 @@
         {
           "uuid": "auto_sebastian_kung",
           "display_name": "Sebastian Kung",
-          "reviews_30d": 126,
-          "previous_30d": 81,
-          "delta_30d": 45
+          "reviews_30d": 129,
+          "previous_30d": 83,
+          "delta_30d": 46
         },
         {
           "uuid": "can_marcofalke",
           "display_name": "MarcoFalke",
-          "reviews_30d": 115,
-          "previous_30d": 94,
-          "delta_30d": 21
+          "reviews_30d": 118,
+          "previous_30d": 93,
+          "delta_30d": 25
         },
         {
           "uuid": "can_michael_ford",
           "display_name": "Michael Ford",
-          "reviews_30d": 97,
-          "previous_30d": 38,
-          "delta_30d": 59
+          "reviews_30d": 100,
+          "previous_30d": 39,
+          "delta_30d": 61
         },
         {
           "uuid": "can_ava_chow",
@@ -49,8 +49,8 @@
           "delta_30d": 6
         },
         {
-          "uuid": "auto_woltx",
-          "display_name": "woltx",
+          "uuid": "auto_w0xlt",
+          "display_name": "w0xlt",
           "reviews_30d": 48,
           "previous_30d": 27,
           "delta_30d": 21
@@ -92,18 +92,18 @@
       ]
     },
     "research_activity_30d": {
-      "messages_30d": 220,
-      "previous_30d": 298,
+      "messages_30d": 219,
+      "previous_30d": 297,
       "delta_30d": -78,
       "momentum": "cooling",
       "definition": "Combined Delving Bitcoin and mailing list discussion volume in current 30 days versus previous 30 days."
     },
     "discussion_voices_30d": {
-      "value": 88,
-      "previous_30d": 106,
+      "value": 87,
+      "previous_30d": 105,
       "delta_30d": -18,
-      "messages_30d": 220,
-      "messages_previous_30d": 298
+      "messages_30d": 219,
+      "messages_previous_30d": 297
     },
     "topic_momentum_30d": {
       "window_days": 30,

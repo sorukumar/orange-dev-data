@@ -459,22 +459,40 @@ def extract_network():
     # Derive bips_authored count per UUID from bips_refined.parquet (Phase 1 ingest output).
     # author_canonical_ids is a list column; explode it to count BIPs per author.
     # Also collect per-author BIP theme distribution for expertise synthesis.
+    # Era BIP counts use git_created_at so post-2016 / modern BIP work feeds the
+    # era hybrid scores rather than always using the all-time total.
     BIPS_PATH = 'data/enriched/bips_refined.parquet'
     bip_author_themes = {}  # uuid → Counter{theme: bip_count}
     if os.path.exists(BIPS_PATH):
         try:
-            bips_df = pd.read_parquet(BIPS_PATH, columns=['author_canonical_ids', 'theme'])
+            bips_df = pd.read_parquet(BIPS_PATH, columns=['author_canonical_ids', 'theme', 'git_created_at'])
             bip_counts = Counter()
+            p2016_bip_counts = Counter()
+            modern_bip_counts = Counter()
+            p2016_ts = pd.Timestamp(post_2016_start)
+            modern_ts = pd.Timestamp(modern_start)
             for _, brow in bips_df.iterrows():
                 theme = brow.get('theme')
                 ids = brow['author_canonical_ids']
+                raw_ts = brow.get('git_created_at')
+                bip_ts = pd.Timestamp(raw_ts).replace(tzinfo=None) if pd.notna(raw_ts) else None
+                is_p2016 = bip_ts is not None and bip_ts >= p2016_ts
+                is_modern = bip_ts is not None and bip_ts >= modern_ts
                 for uid in (ids.tolist() if hasattr(ids, 'tolist') else list(ids or [])):
                     if uid:
                         bip_counts[uid] += 1
                         if theme:
                             bip_author_themes.setdefault(uid, Counter())[theme] += 1
+                        if is_p2016:
+                            p2016_bip_counts[uid] += 1
+                        if is_modern:
+                            modern_bip_counts[uid] += 1
             for uid, count in bip_counts.items():
                 registry_stats.setdefault(uid, {})['bips_authored'] = count
+            for uid, count in p2016_bip_counts.items():
+                registry_stats.setdefault(uid, {})['p2016_bips_authored'] = count
+            for uid, count in modern_bip_counts.items():
+                registry_stats.setdefault(uid, {})['modern_bips_authored'] = count
         except Exception as e:
             print(f"  Warning: Could not load bips_refined for BIP count data: {e}")
 
@@ -510,6 +528,8 @@ def extract_network():
         reviews = reg_data.get('reviews_count', 0) or 0
         prs_authored = reg_data.get('prs_authored', 0) or 0
         bips_authored = reg_data.get('bips_authored', 0) or 0
+        p2016_bips_authored = reg_data.get('p2016_bips_authored', 0) or 0
+        modern_bips_authored = reg_data.get('modern_bips_authored', 0) or 0
         # Fall back to boolean badge if registry count unavailable
         if bips_authored == 0 and is_bip_author:
             bips_authored = 1
@@ -525,6 +545,15 @@ def extract_network():
         # social_factor is capped at 1.0: PageRank is graph-normalized, so raw value shrinks
         # as the contributor pool grows. Capping keeps scores comparable across monthly builds.
         social_factor = min(social_score * 100, 1.0)               # weight: 0.35
+
+        # Era-specific review factors — use p2016/modern review counts now that they exist.
+        # prs_authored remains all-time (no era split available; minor signal).
+        p2016_reviews = reg_data.get('p2016_reviews_count', 0) or 0
+        modern_reviews = reg_data.get('modern_reviews_count', 0) or 0
+        p2016_review_signal = p2016_reviews + (prs_authored * 0.5)
+        p2016_review_factor  = math.log(p2016_review_signal + 1, 2) / 10.0
+        modern_review_signal = modern_reviews + (prs_authored * 0.5)
+        modern_review_factor  = math.log(modern_review_signal + 1, 2) / 10.0
 
         hybrid_score = (social_factor * 0.35) + (commit_factor * 0.40) + (review_factor * 0.25)
 
@@ -556,13 +585,14 @@ def extract_network():
         modern_hybrid_score = (
             (modern_social_factor * 0.35)
             + (modern_commit_factor * 0.40)
-            + (review_factor * 0.25)  # all-time reviews — era-split not available
+            + (modern_review_factor * 0.25)
         )
+        if modern_bips_authored > 0:
+            modern_hybrid_score += min(math.log(modern_bips_authored + 1, 2) * 0.35, BIP_BONUS_CAP)
 
         # 2c. P2016 Hybrid Score — same formula as modern but for the post-2016 era.
         # Answers "how influential has this person been since 2016?"
-        # Uses: post-2016 commits + all-time reviews + post-2016 PageRank.
-        # No BIP/maintainer bonuses — era-specific signal, not career-level.
+        # Uses: post-2016 commits + post-2016 reviews + post-2016 PageRank + post-2016 BIP bonus.
         p2016_commits = sum(
             sum(cat_counts.values())
             for year_str, cat_counts in cid_commit_hist.items()
@@ -573,8 +603,10 @@ def extract_network():
         p2016_hybrid_score = (
             (p2016_social_factor * 0.35)
             + (p2016_commit_factor * 0.40)
-            + (review_factor * 0.25)
+            + (p2016_review_factor * 0.25)
         )
+        if p2016_bips_authored > 0:
+            p2016_hybrid_score += min(math.log(p2016_bips_authored + 1, 2) * 0.35, BIP_BONUS_CAP)
 
         # 3. Archetype Logic — 4 groups + Creator singleton
         # PM-friendly grouping: each label answers "what is their primary role?"
@@ -655,11 +687,15 @@ def extract_network():
             "hybrid_score": round(hybrid_score, 4),
             "p2016_hybrid_score": round(p2016_hybrid_score, 4),
             "modern_hybrid_score": round(modern_hybrid_score, 4),
-            "impact_score": None,  # Populated after full sort; placeholder until then
+            "impact_score": None,       # Populated after full sort via saturation curve
+            "p2016_impact_score": None,  # Populated after full sort via saturation curve
+            "modern_impact_score": None, # Populated after full sort via saturation curve
             "reviews_count": int(reviews),
-            "p2016_reviews_count": int(reg_data.get('p2016_reviews_count', 0)),
-            "modern_reviews_count": int(reg_data.get('modern_reviews_count', 0)),
+            "p2016_reviews_count": int(p2016_reviews),
+            "modern_reviews_count": int(modern_reviews),
             "bips_authored": int(bips_authored),
+            "p2016_bips_authored": int(p2016_bips_authored),
+            "modern_bips_authored": int(modern_bips_authored),
             "val": (hybrid_score * 10) + 2, # Scale node size by hybrid influence
             "code_stats": {
                 "commits": commits,
@@ -692,18 +728,24 @@ def extract_network():
     # Sort ALL contributors by hybrid influence
     all_enriched_nodes.sort(key=lambda x: x['hybrid_score'], reverse=True)
 
-    # Compute percentile-based impact_score (0–100 integer, stable across builds).
-    # Uses a fixed theoretical max anchor (3.75 = 1.0 base + 1.765 BIP cap + 1.0 maintainer)
-    # so scores don't shift when new contributors join.
-    # Satoshi (can_satoshi_nakamoto) is excluded — his archetype is "Creator" and his
-    # data footprint (early mailing list only) would understate his true impact.
-    IMPACT_SCORE_MAX = 3.75
+    # Saturation-curve impact scores: impact = 100 × (1 − e^(−k × hybrid_score))
+    # k=0.6 calibrated so the top all-time contributor (~3.79) lands at ~90.
+    # Approaches 100 asymptotically — no one can ever reach 100.
+    # Same formula and same k applied to all three eras so scores are directly
+    # comparable: p2016_impact ≤ impact (era slice ≤ full career).
+    # Satoshi (can_satoshi_nakamoto) stays None — archetype "Creator", data footprint
+    # (early mailing list only) would understate true impact.
+    K_IMPACT = 0.6
     SATOSHI_ID = 'can_satoshi_nakamoto'
     for node in all_enriched_nodes:
         if node['id'] == SATOSHI_ID:
-            node['impact_score'] = None  # Rendered as "Creator" in the frontend
+            node['impact_score'] = None
+            node['p2016_impact_score'] = None
+            node['modern_impact_score'] = None
         else:
-            node['impact_score'] = min(round(node['hybrid_score'] / IMPACT_SCORE_MAX * 100), 100)
+            node['impact_score'] = round(100 * (1 - math.exp(-K_IMPACT * node['hybrid_score'])))
+            node['p2016_impact_score'] = round(100 * (1 - math.exp(-K_IMPACT * node['p2016_hybrid_score'])))
+            node['modern_impact_score'] = round(100 * (1 - math.exp(-K_IMPACT * node['modern_hybrid_score'])))
 
     # Save FULL list for Registry Sync
     SOCIAL_STATS_PATH = 'data/enriched/social_stats.json'

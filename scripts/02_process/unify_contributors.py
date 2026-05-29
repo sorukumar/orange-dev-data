@@ -148,17 +148,42 @@ def unify():
     print("Processing BIP data...")
     df_bips = pd.read_parquet(BIPS_PARQUET)
     bip_counts = {}
-    for ids in df_bips['author_canonical_ids']:
+    p2016_bip_counts = {}
+    modern_bip_counts = {}
+    # Era cutoffs for BIP dates (timezone-naive, matching git_created_at dtype)
+    bip_p2016_start = pd.Timestamp('2016-01-01')
+    _bip_dates = pd.to_datetime(df_bips['git_created_at'], errors='coerce')
+    if _bip_dates.dt.tz is not None:
+        _bip_dates = _bip_dates.dt.tz_localize(None)
+    bip_modern_start = _bip_dates.max() - pd.DateOffset(years=3)
+    for _, brow in df_bips.iterrows():
+        ids = brow['author_canonical_ids']
         if ids is None:
             continue
         if isinstance(ids, str):
             try: ids = json.loads(ids.replace("'", '"'))
             except: continue
+        raw_ts = brow.get('git_created_at')
+        bip_ts = pd.Timestamp(raw_ts).replace(tzinfo=None) if pd.notna(raw_ts) else None
+        is_p2016 = bip_ts is not None and bip_ts >= bip_p2016_start
+        is_modern = bip_ts is not None and bip_ts >= bip_modern_start
         for cid in ids:
             cid = str(cid).strip()
             if cid:
                 bip_counts[cid] = bip_counts.get(cid, 0) + 1
+                if is_p2016:
+                    p2016_bip_counts[cid] = p2016_bip_counts.get(cid, 0) + 1
+                if is_modern:
+                    modern_bip_counts[cid] = modern_bip_counts.get(cid, 0) + 1
     df_bip_stats = pd.DataFrame(list(bip_counts.items()), columns=['uuid', 'bips_authored'])
+    if p2016_bip_counts:
+        df_bip_stats = df_bip_stats.merge(
+            pd.DataFrame(list(p2016_bip_counts.items()), columns=['uuid', 'p2016_bips_authored']),
+            on='uuid', how='left')
+    if modern_bip_counts:
+        df_bip_stats = df_bip_stats.merge(
+            pd.DataFrame(list(modern_bip_counts.items()), columns=['uuid', 'modern_bips_authored']),
+            on='uuid', how='left')
     df_unified = df_unified.merge(df_bip_stats, on='uuid', how='left')
     
     # Join Efficiency
@@ -169,7 +194,7 @@ def unify():
     
     # Join Social
     if not df_soc.empty and 'canonical_id' in df_soc.columns:
-        soc_cols = [c for c in ['canonical_id', 'hybrid_score', 'p2016_hybrid_score', 'modern_hybrid_score', 'impact_score', 'pagerank', 'threads_started', 'replies_sent', 'ml_threads', 'delving_threads', 'ml_responses', 'delving_responses', 'first_active', 'last_active', 'dev_type', 'expertise_domains', 'expertise_by_source', 'expertise_domain_scores', 'p2016_posts', 'modern_posts', 'p2016_ml_posts', 'p2016_delving_posts', 'modern_ml_posts', 'modern_delving_posts'] if c in df_soc.columns]
+        soc_cols = [c for c in ['canonical_id', 'hybrid_score', 'p2016_hybrid_score', 'modern_hybrid_score', 'impact_score', 'p2016_impact_score', 'modern_impact_score', 'pagerank', 'threads_started', 'replies_sent', 'ml_threads', 'delving_threads', 'ml_responses', 'delving_responses', 'first_active', 'last_active', 'dev_type', 'expertise_domains', 'expertise_by_source', 'expertise_domain_scores', 'p2016_posts', 'modern_posts', 'p2016_ml_posts', 'p2016_delving_posts', 'modern_ml_posts', 'modern_delving_posts'] if c in df_soc.columns]
         df_soc_filtered = df_soc[soc_cols]
         df_unified = df_unified.merge(df_soc_filtered, left_on='uuid', right_on='canonical_id', how='left', suffixes=('', '_soc')).drop(columns=['canonical_id'])
     
@@ -177,7 +202,7 @@ def unify():
     df_unified = df_unified.fillna({
         'total_commits': 0, 'authored_commits': 0, 'merge_commits': 0,
         'p2016_authored_commits': 0, 'modern_authored_commits': 0,
-        'bips_authored': 0, 'hybrid_score': 0, 'threads_started': 0,
+        'bips_authored': 0, 'p2016_bips_authored': 0, 'modern_bips_authored': 0, 'hybrid_score': 0, 'threads_started': 0,
         'replies_sent': 0, 'ml_threads': 0, 'delving_threads': 0,
         'ml_responses': 0, 'delving_responses': 0,
         'p2016_posts': 0, 'modern_posts': 0,

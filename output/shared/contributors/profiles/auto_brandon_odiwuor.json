@@ -20,16 +20,18 @@
   "first_seen": "2026-04-17T00:00:00",
   "last_seen": "2026-05-29T00:00:00",
   "technical_focus": "Tests (QA)",
-  "total_commits": 14.0,
-  "authored_commits": 14.0,
+  "total_commits": 18.0,
+  "authored_commits": 18.0,
   "merge_commits": 0.0,
-  "total_additions": 507.0,
-  "total_deletions": 219.0,
+  "total_additions": 667.0,
+  "total_deletions": 287.0,
   "first_commit": "2023-08-29T11:59:14",
-  "last_commit": "2025-09-16T07:58:13",
-  "p2016_authored_commits": 13.0,
-  "modern_authored_commits": 13.0,
+  "last_commit": "2026-04-04T20:22:29",
+  "p2016_authored_commits": 14.0,
+  "modern_authored_commits": 14.0,
   "bips_authored": 0.0,
+  "p2016_bips_authored": 0.0,
+  "modern_bips_authored": 0.0,
   "avg_review_latency_days": 24.36335518345448,
   "reviews_count": 195.0,
   "avg_approval_latency_days": 25.018000161230884,
@@ -40,10 +42,12 @@
   "avg_pr_ack_velocity_days": 20.853031764403294,
   "avg_concept_lead_time_days": 32.67590172558923,
   "review_reciprocity": 6.5,
-  "hybrid_score": 0.3453,
-  "p2016_hybrid_score": 0.3453,
-  "modern_hybrid_score": 0.3453,
-  "impact_score": 9.0,
+  "hybrid_score": 0.3493,
+  "p2016_hybrid_score": 0.3493,
+  "modern_hybrid_score": 0.3493,
+  "impact_score": 19.0,
+  "p2016_impact_score": 19.0,
+  "modern_impact_score": 19.0,
   "threads_started": 0.0,
   "replies_sent": 0.0,
   "ml_threads": 0.0,
@@ -54,15 +58,21 @@
   "last_active": null,
   "dev_type": "Builder",
   "expertise_domains": [
-    "Infrastructure"
+    "Infrastructure",
+    "Consensus",
+    "Wallet"
   ],
   "expertise_by_source": {
     "code": {
-      "Infrastructure": 1.0
+      "Consensus": 0.018,
+      "Infrastructure": 0.964,
+      "Wallet": 0.018
     }
   },
   "expertise_domain_scores": {
-    "Infrastructure": 1.0
+    "Consensus": 0.018,
+    "Infrastructure": 0.964,
+    "Wallet": 0.018
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -71,7 +81,7 @@
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
   "global_first_active": "2023-08-29T11:59:14",
-  "global_last_active": "2025-09-16T07:58:13",
+  "global_last_active": "2026-04-04T20:22:29",
   "github_location": "Nairobi, Kenya",
   "github_company": null,
   "github_bio": "Software Engineer",
@@ -91,6 +101,12 @@
     },
     "2025": {
       "Tests (QA)": 3.0
+    },
+    "2026": {
+      "Consensus (Domain Logic)": 0.25,
+      "Core Libs": 0.25,
+      "Tests (QA)": 0.25,
+      "Wallet (Client App)": 0.25
     }
   }
 }
