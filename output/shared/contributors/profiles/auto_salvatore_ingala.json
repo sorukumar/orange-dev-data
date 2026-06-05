@@ -19,7 +19,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
+  "last_seen": "2026-06-04T00:00:00",
   "technical_focus": "Documentation",
   "total_commits": 1.0,
   "authored_commits": 1.0,
@@ -39,16 +39,18 @@
   "approvals_count": 9.0,
   "p2016_reviews_count": 28.0,
   "modern_reviews_count": 24.0,
+  "first_review_date": "2021-04-12T15:39:10+00:00",
+  "last_review_date": "2026-05-21T07:33:01+00:00",
   "prs_authored": 12.0,
   "avg_pr_ack_velocity_days": 8.723671875,
   "avg_concept_lead_time_days": 0.06405092592592593,
   "review_reciprocity": 2.3333333333333335,
-  "hybrid_score": 0.7617,
-  "p2016_hybrid_score": 0.7903,
-  "modern_hybrid_score": 0.5914,
+  "hybrid_score": 0.7616,
+  "p2016_hybrid_score": 0.7901,
+  "modern_hybrid_score": 0.5813,
   "impact_score": 37.0,
   "p2016_impact_score": 38.0,
-  "modern_impact_score": 30.0,
+  "modern_impact_score": 29.0,
   "threads_started": 5.0,
   "replies_sent": 21.0,
   "ml_threads": 5.0,
@@ -59,14 +61,14 @@
   "last_active": "2025-01-17T07:02:50",
   "dev_type": "Builder",
   "expertise_domains": [
+    "Script",
     "Infrastructure",
-    "Privacy",
     "Consensus"
   ],
   "expertise_by_source": {
     "bips": {
       "Consensus": 0.5,
-      "Privacy": 0.5
+      "Script": 0.5
     },
     "code": {
       "Infrastructure": 1.0
@@ -79,8 +81,7 @@
   "expertise_domain_scores": {
     "Consensus": 0.25,
     "Infrastructure": 0.3,
-    "Privacy": 0.25,
-    "Script": 0.082,
+    "Script": 0.332,
     "Wallet": 0.118
   },
   "p2016_posts": 26.0,
@@ -109,7 +110,7 @@
       "number": 388,
       "title": "Wallet Policies for Descriptor Wallets",
       "status": "Complete",
-      "theme": "Privacy",
+      "theme": "Script & Smart Contracts",
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0388.mediawiki"
     },
     {

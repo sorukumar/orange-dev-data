@@ -18,8 +18,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Core Libs",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Utilities",
   "total_commits": 23.0,
   "authored_commits": 23.0,
   "merge_commits": 0.0,
@@ -38,16 +38,18 @@
   "approvals_count": 31.0,
   "p2016_reviews_count": 16.0,
   "modern_reviews_count": 1.0,
-  "prs_authored": 20.0,
+  "first_review_date": "2013-05-24T08:51:25+00:00",
+  "last_review_date": "2024-05-13T05:36:24+00:00",
+  "prs_authored": 21.0,
   "avg_pr_ack_velocity_days": 3.389370177469136,
   "avg_concept_lead_time_days": null,
-  "review_reciprocity": 5.8,
+  "review_reciprocity": 5.523809523809524,
   "hybrid_score": 0.4453,
-  "p2016_hybrid_score": 0.2725,
-  "modern_hybrid_score": 0.111,
+  "p2016_hybrid_score": 0.2731,
+  "modern_hybrid_score": 0.1122,
   "impact_score": 23.0,
   "p2016_impact_score": 15.0,
-  "modern_impact_score": 6.0,
+  "modern_impact_score": 7.0,
   "threads_started": 20.0,
   "replies_sent": 44.0,
   "ml_threads": 20.0,
@@ -96,21 +98,21 @@
   "github_url": "https://github.com/wtogami",
   "commit_history": {
     "2013": {
-      "Core Libs": 8.0,
       "Documentation": 0.5,
-      "P2P Network (Infrastructure)": 0.5
+      "P2P Network": 0.5,
+      "Utilities": 8.0
     },
     "2014": {
-      "Build & CI (DevOps)": 0.33,
-      "Core Libs": 2.33,
-      "Documentation": 0.33
+      "Build & CI": 0.33,
+      "Documentation": 0.33,
+      "Utilities": 2.33
     },
     "2016": {
       "Documentation": 2.0,
-      "P2P Network (Infrastructure)": 4.0
+      "P2P Network": 4.0
     },
     "2017": {
-      "Wallet (Client App)": 1.0
+      "Wallet": 1.0
     }
   },
   "first_message": {

@@ -18,8 +18,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Consensus (Domain Logic)",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Build & CI",
   "total_commits": 5.0,
   "authored_commits": 5.0,
   "merge_commits": 0.0,
@@ -38,11 +38,13 @@
   "approvals_count": 1.0,
   "p2016_reviews_count": 9.0,
   "modern_reviews_count": 6.0,
+  "first_review_date": "2017-12-29T03:56:36+00:00",
+  "last_review_date": "2026-02-20T07:56:41+00:00",
   "prs_authored": 7.0,
   "avg_pr_ack_velocity_days": 28.357586805555556,
   "avg_concept_lead_time_days": 37.649475308641975,
   "review_reciprocity": 1.2857142857142858,
-  "hybrid_score": 0.3686,
+  "hybrid_score": 0.3685,
   "p2016_hybrid_score": 0.1867,
   "modern_hybrid_score": 0.1482,
   "impact_score": 20.0,
@@ -60,12 +62,13 @@
   "expertise_domains": [
     "Wallet",
     "Infrastructure",
-    "Consensus"
+    "Network"
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.375,
+      "Consensus": 0.125,
       "Infrastructure": 0.375,
+      "Mempool": 0.25,
       "Network": 0.25
     },
     "discussion": {
@@ -74,8 +77,9 @@
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.225,
+    "Consensus": 0.075,
     "Infrastructure": 0.225,
+    "Mempool": 0.15,
     "Mining": 0.138,
     "Network": 0.15,
     "Wallet": 0.262
@@ -98,14 +102,15 @@
   "github_url": "https://github.com/whitslack",
   "commit_history": {
     "2018": {
-      "P2P Network (Infrastructure)": 1.0
+      "P2P Network": 1.0
     },
     "2021": {
-      "Build & CI (DevOps)": 1.0
+      "Build & CI": 1.0
     },
     "2024": {
-      "Consensus (Domain Logic)": 1.5,
-      "Node & RPC (App/Interface)": 0.5
+      "Consensus": 0.5,
+      "Mempool": 1.0,
+      "Node & RPC": 0.5
     }
   },
   "first_message": {

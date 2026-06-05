@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
+  "last_seen": "2026-06-04T00:00:00",
   "technical_focus": "Documentation",
   "total_commits": 19.0,
   "authored_commits": 19.0,
@@ -38,13 +38,15 @@
   "approvals_count": 93.0,
   "p2016_reviews_count": 129.0,
   "modern_reviews_count": 11.0,
+  "first_review_date": "2018-12-16T15:51:12+00:00",
+  "last_review_date": "2025-10-26T16:14:35+00:00",
   "prs_authored": 35.0,
   "avg_pr_ack_velocity_days": 10.806071127946128,
   "avg_concept_lead_time_days": 19.056106288580246,
   "review_reciprocity": 3.6857142857142855,
   "hybrid_score": 0.3606,
-  "p2016_hybrid_score": 0.3696,
-  "modern_hybrid_score": 0.1952,
+  "p2016_hybrid_score": 0.3695,
+  "modern_hybrid_score": 0.195,
   "impact_score": 19.0,
   "p2016_impact_score": 20.0,
   "modern_impact_score": 11.0,
@@ -55,7 +57,7 @@
   "ml_responses": 3.0,
   "delving_responses": 1.0,
   "first_active": "2021-06-28T05:55:30",
-  "last_active": "2024-10-17T23:37:44.518000",
+  "last_active": null,
   "dev_type": "Builder",
   "expertise_domains": [
     "Infrastructure",
@@ -98,24 +100,24 @@
   "commit_history": {
     "2018": {
       "Documentation": 1.0,
-      "Node & RPC (App/Interface)": 1.0
+      "Node & RPC": 1.0
     },
     "2019": {
       "Documentation": 1.0,
-      "GUI (Presentation Layer)": 4.0,
-      "Node & RPC (App/Interface)": 1.5,
-      "Tests (QA)": 2.5
+      "GUI": 4.0,
+      "Node & RPC": 1.5,
+      "Tests": 2.5
     },
     "2020": {
       "Documentation": 0.5,
-      "Node & RPC (App/Interface)": 1.5
+      "Node & RPC": 1.5
     },
     "2021": {
       "Documentation": 2.0,
-      "Wallet (Client App)": 1.0
+      "Wallet": 1.0
     },
     "2025": {
-      "Wallet (Client App)": 1.0
+      "Wallet": 1.0
     }
   },
   "first_message": {

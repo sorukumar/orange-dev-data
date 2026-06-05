@@ -19,8 +19,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Tests (QA)",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Tests",
   "total_commits": 14.0,
   "authored_commits": 14.0,
   "merge_commits": 0.0,
@@ -39,13 +39,15 @@
   "approvals_count": 25.0,
   "p2016_reviews_count": 51.0,
   "modern_reviews_count": 31.0,
+  "first_review_date": "2016-09-06T14:16:02+00:00",
+  "last_review_date": "2026-05-01T18:27:16+00:00",
   "prs_authored": 32.0,
   "avg_pr_ack_velocity_days": 34.872457561728396,
   "avg_concept_lead_time_days": 93.17467206790123,
   "review_reciprocity": 1.59375,
-  "hybrid_score": 0.7083,
-  "p2016_hybrid_score": 0.7559,
-  "modern_hybrid_score": 0.7175,
+  "hybrid_score": 0.7082,
+  "p2016_hybrid_score": 0.7557,
+  "modern_hybrid_score": 0.7159,
   "impact_score": 35.0,
   "p2016_impact_score": 36.0,
   "modern_impact_score": 35.0,
@@ -99,22 +101,22 @@
   "delving_url": "https://delvingbitcoin.org/u/chris_stewart_5",
   "commit_history": {
     "2016": {
-      "Tests (QA)": 5.0
+      "Tests": 5.0
     },
     "2017": {
-      "Core Libs": 1.0
+      "Utilities": 1.0
     },
     "2018": {
-      "Build & CI (DevOps)": 0.5,
-      "Tests (QA)": 1.5
+      "Build & CI": 0.5,
+      "Tests": 1.5
     },
     "2024": {
       "Documentation": 1.0,
-      "Tests (QA)": 1.0
+      "Tests": 1.0
     },
     "2025": {
-      "Node & RPC (App/Interface)": 0.5,
-      "Tests (QA)": 1.5
+      "Node & RPC": 0.5,
+      "Tests": 1.5
     }
   },
   "bip_list": [

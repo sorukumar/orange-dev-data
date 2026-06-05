@@ -12,7 +12,11 @@
     "is_sponsored": null,
     "maintainer_status": "historical",
     "social_source": "mailing_list",
-    "sponsor_id": null
+    "sponsor_id": null,
+    "maintainer_title": "Core Maintainer",
+    "maintainer_primary_area": "General",
+    "maintainer_appointed": "2011-09-19",
+    "maintainer_stepped_down": "2012-05-31"
   },
   "roles": [
     "Core Maintainer",
@@ -20,8 +24,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Core Libs",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Utilities",
   "total_commits": 53.0,
   "authored_commits": 39.0,
   "merge_commits": 14.0,
@@ -34,21 +38,23 @@
   "bips_authored": 1.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": 1.472115036231884,
-  "reviews_count": 16.0,
-  "avg_approval_latency_days": null,
-  "approvals_count": 0.0,
-  "p2016_reviews_count": 0.0,
-  "modern_reviews_count": 0.0,
+  "avg_review_latency_days": 347.4764855664488,
+  "reviews_count": 23.0,
+  "avg_approval_latency_days": 931.705691550926,
+  "approvals_count": 5.0,
+  "p2016_reviews_count": 6.0,
+  "modern_reviews_count": 1.0,
+  "first_review_date": "2011-01-28T17:26:25+00:00",
+  "last_review_date": "2023-07-05T15:06:43+00:00",
   "prs_authored": 16.0,
   "avg_pr_ack_velocity_days": 25.516401515151514,
   "avg_concept_lead_time_days": null,
-  "review_reciprocity": 1.0,
-  "hybrid_score": 1.7132,
-  "p2016_hybrid_score": 0.0792,
-  "modern_hybrid_score": 0.0792,
+  "review_reciprocity": 1.4375,
+  "hybrid_score": 1.7221,
+  "p2016_hybrid_score": 0.0977,
+  "modern_hybrid_score": 0.083,
   "impact_score": 64.0,
-  "p2016_impact_score": 5.0,
+  "p2016_impact_score": 6.0,
   "modern_impact_score": 5.0,
   "threads_started": 1.0,
   "replies_sent": 7.0,
@@ -99,20 +105,20 @@
   "github_url": "https://github.com/tcatm",
   "commit_history": {
     "2011": {
-      "Build & CI (DevOps)": 0.25,
-      "Core Libs": 17.75,
+      "Build & CI": 0.25,
       "Documentation": 1.25,
-      "GUI (Presentation Layer)": 8.0,
+      "GUI": 8.0,
       "Merge": 10.0,
-      "Node & RPC (App/Interface)": 1.0,
-      "P2P Network (Infrastructure)": 1.5,
-      "Tests (QA)": 0.25
+      "Node & RPC": 1.0,
+      "P2P Network": 1.5,
+      "Tests": 0.25,
+      "Utilities": 17.75
     },
     "2012": {
       "Documentation": 1.0,
-      "GUI (Presentation Layer)": 2.5,
+      "GUI": 2.5,
       "Merge": 4.0,
-      "Node & RPC (App/Interface)": 0.5
+      "Node & RPC": 0.5
     }
   },
   "bip_list": [

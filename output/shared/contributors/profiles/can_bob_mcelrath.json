@@ -18,8 +18,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Core Libs",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Utilities",
   "total_commits": 8.0,
   "authored_commits": 8.0,
   "merge_commits": 0.0,
@@ -38,12 +38,14 @@
   "approvals_count": 1.0,
   "p2016_reviews_count": 3.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": "2015-10-29T15:16:51+00:00",
+  "last_review_date": "2020-10-09T00:59:53+00:00",
   "prs_authored": 4.0,
   "avg_pr_ack_velocity_days": 1.7416782407407407,
   "avg_concept_lead_time_days": 2.607366898148148,
   "review_reciprocity": 1.25,
   "hybrid_score": 0.2264,
-  "p2016_hybrid_score": 0.2158,
+  "p2016_hybrid_score": 0.2157,
   "modern_hybrid_score": 0.0396,
   "impact_score": 13.0,
   "p2016_impact_score": 12.0,
@@ -55,7 +57,7 @@
   "ml_responses": 23.0,
   "delving_responses": 19.0,
   "first_active": "2014-08-10T09:07:19",
-  "last_active": "2025-12-03T12:49:27.107000",
+  "last_active": null,
   "dev_type": "Builder",
   "expertise_domains": [
     "Infrastructure",
@@ -87,7 +89,7 @@
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 31.0,
   "global_first_active": "2014-08-10T09:07:19",
-  "global_last_active": "2025-12-03T12:49:27.107000064",
+  "global_last_active": "2017-01-19T22:06:52",
   "github_location": "Boston, MA",
   "github_company": "Startup/VC Tech Advisor, Independent Contributor",
   "github_bio": "Remaking money and reverse-engineering the universe.",
@@ -99,15 +101,15 @@
   "delving_url": "https://delvingbitcoin.org/u/mcelrath",
   "commit_history": {
     "2015": {
-      "Core Libs": 1.0
+      "Utilities": 1.0
     },
     "2016": {
-      "Consensus (Domain Logic)": 0.33,
-      "Core Libs": 0.33,
-      "Tests (QA)": 0.33
+      "Consensus": 0.33,
+      "Tests": 0.33,
+      "Utilities": 0.33
     },
     "2017": {
-      "Core Libs": 4.0
+      "Utilities": 4.0
     }
   },
   "first_message": {

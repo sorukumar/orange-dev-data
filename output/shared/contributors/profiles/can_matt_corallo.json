@@ -18,10 +18,10 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
+  "last_seen": "2026-06-04T00:00:00",
   "technical_focus": "Core Libs",
-  "total_commits": 889.0,
-  "authored_commits": 889.0,
+  "total_commits": 894.0,
+  "authored_commits": 894.0,
   "merge_commits": 0.0,
   "total_additions": 24481.0,
   "total_deletions": 10839.0,
@@ -38,13 +38,15 @@
   "approvals_count": 574.0,
   "p2016_reviews_count": 718.0,
   "modern_reviews_count": 28.0,
-  "prs_authored": 398.0,
+  "first_review_date": "2011-03-07T18:51:18+00:00",
+  "last_review_date": "2026-05-11T20:38:09+00:00",
+  "prs_authored": 399.0,
   "avg_pr_ack_velocity_days": 9.254600213793527,
   "avg_concept_lead_time_days": 15.101981310013716,
-  "review_reciprocity": 2.7613065326633164,
-  "hybrid_score": 2.0924,
-  "p2016_hybrid_score": 1.749,
-  "modern_hybrid_score": 1.3092,
+  "review_reciprocity": 2.754385964912281,
+  "hybrid_score": 2.0925,
+  "p2016_hybrid_score": 1.7491,
+  "modern_hybrid_score": 1.3093,
   "impact_score": 72.0,
   "p2016_impact_score": 65.0,
   "modern_impact_score": 54.0,
@@ -69,9 +71,11 @@
       "L2": 0.125
     },
     "code": {
-      "Consensus": 0.11,
-      "Infrastructure": 0.704,
+      "Consensus": 0.104,
+      "Infrastructure": 0.682,
+      "Mempool": 0.026,
       "Network": 0.138,
+      "Script": 0.002,
       "Wallet": 0.048
     },
     "discussion": {
@@ -80,8 +84,8 @@
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.1889,
-    "Infrastructure": 0.5862,
+    "Consensus": 0.1871,
+    "Infrastructure": 0.5796,
     "L2": 0.0625,
     "Mining": 0.1066,
     "Network": 0.0414,
@@ -106,99 +110,104 @@
   "delving_url": "https://delvingbitcoin.org/u/mattcorallo",
   "commit_history": {
     "2011": {
-      "Build & CI (DevOps)": 14.58,
-      "Core Libs": 65.25,
+      "Build & CI": 14.58,
       "Documentation": 8.83,
-      "GUI (Presentation Layer)": 2.58,
-      "Node & RPC (App/Interface)": 3.92,
-      "P2P Network (Infrastructure)": 7.83,
-      "Tests (QA)": 2.0
+      "GUI": 2.58,
+      "Node & RPC": 3.92,
+      "P2P Network": 7.83,
+      "Tests": 2.0,
+      "Utilities": 65.25
     },
     "2012": {
-      "Build & CI (DevOps)": 9.5,
-      "Core Libs": 32.17,
+      "Build & CI": 9.5,
       "Documentation": 3.0,
-      "GUI (Presentation Layer)": 5.33,
-      "Node & RPC (App/Interface)": 1.33,
-      "P2P Network (Infrastructure)": 10.33,
-      "Tests (QA)": 9.33
+      "GUI": 5.33,
+      "Node & RPC": 1.33,
+      "P2P Network": 10.33,
+      "Tests": 9.33,
+      "Utilities": 32.17
     },
     "2013": {
-      "Build & CI (DevOps)": 2.2,
-      "Core Libs": 29.2,
+      "Build & CI": 2.2,
       "Documentation": 0.2,
-      "Node & RPC (App/Interface)": 0.7,
-      "P2P Network (Infrastructure)": 2.2,
-      "Tests (QA)": 3.5
+      "Node & RPC": 0.7,
+      "P2P Network": 2.2,
+      "Tests": 3.5,
+      "Utilities": 29.2
     },
     "2014": {
-      "Build & CI (DevOps)": 1.25,
-      "Consensus (Domain Logic)": 0.75,
-      "Core Libs": 15.25,
+      "Build & CI": 1.25,
+      "Consensus": 0.75,
       "Documentation": 1.0,
-      "Node & RPC (App/Interface)": 4.5,
-      "P2P Network (Infrastructure)": 1.0,
-      "Tests (QA)": 1.25
+      "Mempool": 2.5,
+      "Node & RPC": 2.0,
+      "P2P Network": 1.0,
+      "Tests": 1.25,
+      "Utilities": 15.25
     },
     "2015": {
-      "Consensus (Domain Logic)": 2.5,
-      "Core Libs": 31.33,
-      "GUI (Presentation Layer)": 1.83,
-      "Node & RPC (App/Interface)": 7.83,
-      "P2P Network (Infrastructure)": 0.83,
-      "Tests (QA)": 1.67,
-      "Wallet (Client App)": 8.0
+      "Consensus": 2.0,
+      "GUI": 1.83,
+      "Mempool": 7.33,
+      "Node & RPC": 0.67,
+      "P2P Network": 0.83,
+      "Script": 0.5,
+      "Tests": 1.67,
+      "Utilities": 31.17,
+      "Wallet": 8.0
     },
     "2016": {
-      "Build & CI (DevOps)": 2.29,
-      "Consensus (Domain Logic)": 10.88,
-      "Core Libs": 52.04,
+      "Build & CI": 2.29,
+      "Consensus": 10.75,
       "Documentation": 1.0,
-      "GUI (Presentation Layer)": 0.96,
-      "Node & RPC (App/Interface)": 9.96,
-      "P2P Network (Infrastructure)": 16.21,
-      "Tests (QA)": 6.46,
-      "Wallet (Client App)": 1.21
+      "GUI": 0.96,
+      "Mempool": 1.12,
+      "Node & RPC": 8.96,
+      "P2P Network": 16.21,
+      "Tests": 6.46,
+      "Utilities": 52.04,
+      "Wallet": 1.21
     },
     "2017": {
-      "Build & CI (DevOps)": 2.33,
-      "Consensus (Domain Logic)": 37.95,
-      "Core Libs": 60.62,
+      "Build & CI": 2.33,
+      "Consensus": 34.98,
       "Documentation": 2.75,
-      "GUI (Presentation Layer)": 2.83,
-      "Node & RPC (App/Interface)": 25.7,
-      "P2P Network (Infrastructure)": 45.7,
-      "Tests (QA)": 13.33,
-      "Wallet (Client App)": 21.78
+      "GUI": 2.83,
+      "Mempool": 5.87,
+      "Node & RPC": 22.4,
+      "P2P Network": 45.7,
+      "Script": 0.58,
+      "Tests": 13.37,
+      "Utilities": 60.4,
+      "Wallet": 21.78
     },
     "2018": {
-      "Consensus (Domain Logic)": 8.75,
-      "Core Libs": 3.33,
+      "Consensus": 8.75,
       "Documentation": 2.0,
-      "GUI (Presentation Layer)": 0.75,
-      "Node & RPC (App/Interface)": 2.08,
-      "P2P Network (Infrastructure)": 1.75,
-      "Tests (QA)": 1.83,
-      "Utilities (Shared Libs)": 1.0,
-      "Wallet (Client App)": 0.5
+      "GUI": 0.75,
+      "Node & RPC": 2.08,
+      "P2P Network": 1.75,
+      "Tests": 1.83,
+      "Utilities": 4.33,
+      "Wallet": 0.5
     },
     "2019": {
-      "Consensus (Domain Logic)": 9.58,
-      "Core Libs": 1.83,
+      "Consensus": 9.58,
       "Documentation": 2.08,
-      "Node & RPC (App/Interface)": 0.75,
-      "P2P Network (Infrastructure)": 4.83,
-      "Tests (QA)": 4.92
+      "Node & RPC": 0.75,
+      "P2P Network": 4.83,
+      "Tests": 4.92,
+      "Utilities": 1.83
     },
     "2021": {
       "Documentation": 1.0
     },
     "2024": {
-      "Consensus (Domain Logic)": 1.0
+      "Consensus": 1.0
     },
     "2025": {
-      "Consensus (Domain Logic)": 0.5,
-      "Tests (QA)": 0.5
+      "Consensus": 0.5,
+      "Tests": 0.5
     }
   },
   "bip_list": [

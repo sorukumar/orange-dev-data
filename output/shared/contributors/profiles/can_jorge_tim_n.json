@@ -8,8 +8,8 @@
   "first_seen": null,
   "last_seen": null,
   "technical_focus": null,
-  "total_commits": 387.0,
-  "authored_commits": 387.0,
+  "total_commits": 397.0,
+  "authored_commits": 397.0,
   "merge_commits": 0.0,
   "total_additions": 8341.0,
   "total_deletions": 7343.0,
@@ -26,12 +26,14 @@
   "approvals_count": null,
   "p2016_reviews_count": null,
   "modern_reviews_count": null,
+  "first_review_date": null,
+  "last_review_date": null,
   "prs_authored": null,
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": null,
   "hybrid_score": 0.7,
-  "p2016_hybrid_score": 0.4532,
+  "p2016_hybrid_score": 0.453,
   "modern_hybrid_score": 0.0,
   "impact_score": 34.0,
   "p2016_impact_score": 24.0,
@@ -55,10 +57,12 @@
       "Consensus": 1.0
     },
     "code": {
-      "Consensus": 0.235,
-      "Infrastructure": 0.7,
+      "Consensus": 0.219,
+      "Infrastructure": 0.667,
+      "Mempool": 0.029,
       "Network": 0.038,
-      "Wallet": 0.027
+      "Script": 0.021,
+      "Wallet": 0.025
     },
     "discussion": {
       "Consensus": 0.571,
@@ -66,8 +70,8 @@
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.6847,
-    "Infrastructure": 0.21,
+    "Consensus": 0.6801,
+    "Infrastructure": 0.2002,
     "Mining": 0.0858,
     "Network": 0.0114
   },
@@ -89,59 +93,65 @@
   "github_url": "https://github.com/jtimon",
   "commit_history": {
     "2014": {
-      "Build & CI (DevOps)": 5.34,
-      "Consensus (Domain Logic)": 20.18,
-      "Core Libs": 30.51,
-      "GUI (Presentation Layer)": 3.68,
-      "Node & RPC (App/Interface)": 3.89,
-      "P2P Network (Infrastructure)": 1.48,
-      "Tests (QA)": 6.93
+      "Build & CI": 5.28,
+      "Consensus": 18.12,
+      "GUI": 3.61,
+      "Mempool": 1.32,
+      "Node & RPC": 2.7,
+      "P2P Network": 1.46,
+      "Script": 2.16,
+      "Tests": 6.91,
+      "Utilities": 30.44
     },
     "2015": {
-      "Build & CI (DevOps)": 5.33,
-      "Consensus (Domain Logic)": 10.0,
-      "Core Libs": 13.45,
-      "GUI (Presentation Layer)": 2.53,
-      "Node & RPC (App/Interface)": 3.45,
-      "P2P Network (Infrastructure)": 0.17,
-      "Tests (QA)": 4.28,
-      "Wallet (Client App)": 2.78
+      "Build & CI": 5.29,
+      "Consensus": 9.81,
+      "GUI": 2.53,
+      "Mempool": 0.45,
+      "Node & RPC": 3.24,
+      "P2P Network": 0.17,
+      "Script": 0.14,
+      "Tests": 4.24,
+      "Utilities": 13.4,
+      "Wallet": 2.74
     },
     "2016": {
-      "Build & CI (DevOps)": 0.31,
-      "Consensus (Domain Logic)": 3.14,
-      "Core Libs": 8.01,
-      "Database (Persistence)": 0.2,
+      "Build & CI": 0.29,
+      "Consensus": 2.08,
+      "Database": 0.2,
       "Documentation": 0.33,
-      "GUI (Presentation Layer)": 1.33,
-      "Node & RPC (App/Interface)": 4.34,
-      "P2P Network (Infrastructure)": 0.14,
-      "Tests (QA)": 2.18,
-      "Utilities (Shared Libs)": 0.17,
-      "Wallet (Client App)": 0.84
+      "GUI": 1.28,
+      "Mempool": 1.54,
+      "Node & RPC": 3.19,
+      "P2P Network": 0.12,
+      "Script": 1.0,
+      "Tests": 2.19,
+      "Utilities": 8.03,
+      "Wallet": 0.74
     },
     "2017": {
-      "Build & CI (DevOps)": 0.17,
-      "Consensus (Domain Logic)": 5.52,
-      "Core Libs": 8.19,
-      "GUI (Presentation Layer)": 1.65,
-      "Node & RPC (App/Interface)": 6.69,
-      "P2P Network (Infrastructure)": 4.82,
-      "Tests (QA)": 4.32,
-      "Wallet (Client App)": 0.65
+      "Build & CI": 0.17,
+      "Consensus": 5.79,
+      "GUI": 1.55,
+      "Mempool": 1.77,
+      "Node & RPC": 5.21,
+      "P2P Network": 4.77,
+      "Script": 0.38,
+      "Tests": 4.25,
+      "Utilities": 7.58,
+      "Wallet": 0.55
     },
     "2018": {
-      "Build & CI (DevOps)": 0.33,
-      "Consensus (Domain Logic)": 0.83,
-      "Core Libs": 0.33,
-      "Node & RPC (App/Interface)": 1.17,
-      "Tests (QA)": 0.33
+      "Build & CI": 0.33,
+      "Consensus": 1.17,
+      "Node & RPC": 1.17,
+      "Tests": 0.33
     },
     "2019": {
-      "Consensus (Domain Logic)": 1.0,
+      "Consensus": 1.0,
       "Documentation": 0.33,
-      "Tests (QA)": 1.33,
-      "Wallet (Client App)": 0.33
+      "Tests": 1.33,
+      "Wallet": 0.33
     }
   },
   "bip_list": [

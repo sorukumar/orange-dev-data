@@ -18,8 +18,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Core Libs",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Utilities",
   "total_commits": 23.0,
   "authored_commits": 23.0,
   "merge_commits": 0.0,
@@ -38,6 +38,8 @@
   "approvals_count": 0.0,
   "p2016_reviews_count": 2.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": "2016-09-22T07:40:51+00:00",
+  "last_review_date": "2022-07-11T17:16:43+00:00",
   "prs_authored": 18.0,
   "avg_pr_ack_velocity_days": 32.13947048611111,
   "avg_concept_lead_time_days": 46.16816603535353,
@@ -92,30 +94,30 @@
   "github_url": "https://github.com/rodentrabies",
   "commit_history": {
     "2016": {
-      "Build & CI (DevOps)": 0.5,
-      "Core Libs": 6.0,
-      "Node & RPC (App/Interface)": 2.0,
-      "Tests (QA)": 0.5
+      "Build & CI": 0.5,
+      "Node & RPC": 2.0,
+      "Tests": 0.5,
+      "Utilities": 6.0
     },
     "2018": {
       "Documentation": 0.5,
-      "Tests (QA)": 1.0,
-      "Wallet (Client App)": 0.5
+      "Tests": 1.0,
+      "Wallet": 0.5
     },
     "2019": {
-      "Tests (QA)": 0.5,
-      "Wallet (Client App)": 0.5
+      "Tests": 0.5,
+      "Wallet": 0.5
     },
     "2020": {
-      "Core Libs": 0.5,
-      "Tests (QA)": 1.0,
-      "Wallet (Client App)": 0.5
+      "Tests": 1.0,
+      "Utilities": 0.5,
+      "Wallet": 0.5
     },
     "2022": {
-      "Consensus (Domain Logic)": 1.0,
-      "Node & RPC (App/Interface)": 0.5,
-      "Tests (QA)": 1.0,
-      "Wallet (Client App)": 1.5
+      "Consensus": 1.0,
+      "Node & RPC": 0.5,
+      "Tests": 1.0,
+      "Wallet": 1.5
     }
   }
 }

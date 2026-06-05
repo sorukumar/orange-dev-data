@@ -19,10 +19,10 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Core Libs",
-  "total_commits": 603.0,
-  "authored_commits": 603.0,
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Utilities",
+  "total_commits": 618.0,
+  "authored_commits": 618.0,
   "merge_commits": 0.0,
   "total_additions": 25123.0,
   "total_deletions": 8712.0,
@@ -39,13 +39,15 @@
   "approvals_count": 301.0,
   "p2016_reviews_count": 489.0,
   "modern_reviews_count": 35.0,
-  "prs_authored": 209.0,
+  "first_review_date": "2015-02-02T21:23:23+00:00",
+  "last_review_date": "2025-12-02T13:49:48+00:00",
+  "prs_authored": 210.0,
   "avg_pr_ack_velocity_days": 5.384773209064328,
   "avg_concept_lead_time_days": 9.707705399061032,
-  "review_reciprocity": 2.6220095693779903,
+  "review_reciprocity": 2.6095238095238096,
   "hybrid_score": 1.4386,
-  "p2016_hybrid_score": 1.3403,
-  "modern_hybrid_score": 0.4579,
+  "p2016_hybrid_score": 1.3402,
+  "modern_hybrid_score": 0.458,
   "impact_score": 58.0,
   "p2016_impact_score": 55.0,
   "modern_impact_score": 24.0,
@@ -56,7 +58,7 @@
   "ml_responses": 16.0,
   "delving_responses": 21.0,
   "first_active": "2015-07-30T11:41:55",
-  "last_active": "2025-11-19T15:29:46.556000",
+  "last_active": null,
   "dev_type": "Protocol Designer",
   "expertise_domains": [
     "Infrastructure",
@@ -69,9 +71,10 @@
       "Network": 0.5
     },
     "code": {
-      "Consensus": 0.122,
-      "Infrastructure": 0.684,
-      "Network": 0.17,
+      "Consensus": 0.1,
+      "Infrastructure": 0.553,
+      "Mempool": 0.154,
+      "Network": 0.169,
       "Wallet": 0.023
     },
     "discussion": {
@@ -81,11 +84,11 @@
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.0366,
-    "Infrastructure": 0.4552,
-    "Mempool": 0.1476,
+    "Consensus": 0.03,
+    "Infrastructure": 0.4159,
+    "Mempool": 0.1938,
     "Mining": 0.0296,
-    "Network": 0.324
+    "Network": 0.3237
   },
   "p2016_posts": 52.0,
   "modern_posts": 32.0,
@@ -106,90 +109,97 @@
   "delving_url": "https://delvingbitcoin.org/u/sdaftuar",
   "commit_history": {
     "2014": {
-      "Consensus (Domain Logic)": 0.33,
-      "Core Libs": 3.83,
-      "Node & RPC (App/Interface)": 0.5,
-      "P2P Network (Infrastructure)": 0.33
+      "Consensus": 0.33,
+      "Node & RPC": 0.5,
+      "P2P Network": 0.33,
+      "Utilities": 3.83
     },
     "2015": {
-      "Build & CI (DevOps)": 0.25,
-      "Consensus (Domain Logic)": 0.58,
-      "Core Libs": 49.75,
-      "Node & RPC (App/Interface)": 7.33,
-      "Tests (QA)": 4.5,
-      "Wallet (Client App)": 0.58
+      "Build & CI": 0.25,
+      "Mempool": 7.17,
+      "Node & RPC": 0.75,
+      "Tests": 4.42,
+      "Utilities": 49.67,
+      "Wallet": 0.75
     },
     "2016": {
-      "Consensus (Domain Logic)": 2.58,
-      "Core Libs": 50.75,
+      "Consensus": 1.7,
       "Documentation": 1.0,
-      "Node & RPC (App/Interface)": 9.25,
-      "P2P Network (Infrastructure)": 3.5,
-      "Tests (QA)": 6.67,
-      "Wallet (Client App)": 2.25
+      "Mempool": 2.87,
+      "Node & RPC": 7.37,
+      "P2P Network": 3.5,
+      "Tests": 6.67,
+      "Utilities": 50.7,
+      "Wallet": 2.2
     },
     "2017": {
-      "Consensus (Domain Logic)": 7.7,
-      "Core Libs": 10.45,
+      "Consensus": 8.03,
       "Documentation": 1.0,
-      "GUI (Presentation Layer)": 0.25,
-      "Node & RPC (App/Interface)": 5.78,
-      "P2P Network (Infrastructure)": 10.28,
-      "Tests (QA)": 19.53,
-      "Wallet (Client App)": 4.0
+      "GUI": 0.25,
+      "Mempool": 3.5,
+      "Node & RPC": 2.12,
+      "P2P Network": 10.28,
+      "Tests": 19.53,
+      "Utilities": 10.28,
+      "Wallet": 4.0
     },
     "2018": {
-      "Consensus (Domain Logic)": 3.5,
-      "Core Libs": 0.5,
-      "Node & RPC (App/Interface)": 5.5,
-      "Tests (QA)": 12.0,
-      "Wallet (Client App)": 2.5
+      "Consensus": 3.0,
+      "Mempool": 5.5,
+      "Node & RPC": 0.5,
+      "Tests": 12.0,
+      "Utilities": 0.5,
+      "Wallet": 2.5
     },
     "2019": {
-      "Consensus (Domain Logic)": 5.33,
+      "Consensus": 5.33,
       "Documentation": 0.33,
-      "Node & RPC (App/Interface)": 0.33,
-      "P2P Network (Infrastructure)": 18.83,
-      "Tests (QA)": 7.17
+      "Node & RPC": 0.33,
+      "P2P Network": 18.83,
+      "Tests": 7.17
     },
     "2020": {
-      "Consensus (Domain Logic)": 1.0,
-      "Core Libs": 0.5,
-      "Node & RPC (App/Interface)": 1.67,
-      "P2P Network (Infrastructure)": 25.17,
-      "Tests (QA)": 1.67
+      "Consensus": 0.83,
+      "Mempool": 1.33,
+      "Node & RPC": 0.67,
+      "P2P Network": 25.0,
+      "Tests": 1.67,
+      "Utilities": 0.5
     },
     "2021": {
-      "P2P Network (Infrastructure)": 1.0
+      "P2P Network": 1.0
     },
     "2022": {
-      "Build & CI (DevOps)": 0.7,
-      "Consensus (Domain Logic)": 1.9,
-      "Core Libs": 1.65,
-      "Node & RPC (App/Interface)": 0.45,
-      "P2P Network (Infrastructure)": 14.65,
-      "Tests (QA)": 9.65
+      "Build & CI": 0.7,
+      "Consensus": 1.9,
+      "Node & RPC": 0.45,
+      "P2P Network": 14.65,
+      "Tests": 9.65,
+      "Utilities": 1.65
     },
     "2023": {
-      "Consensus (Domain Logic)": 12.33,
-      "Node & RPC (App/Interface)": 18.17,
-      "P2P Network (Infrastructure)": 1.83,
-      "Tests (QA)": 10.67
+      "Consensus": 12.0,
+      "Mempool": 12.0,
+      "Node & RPC": 7.0,
+      "P2P Network": 1.83,
+      "Tests": 10.17
     },
     "2024": {
-      "Consensus (Domain Logic)": 8.33,
+      "Consensus": 7.33,
       "Documentation": 1.0,
-      "Node & RPC (App/Interface)": 12.33,
-      "Tests (QA)": 9.33
+      "Mempool": 12.67,
+      "Node & RPC": 0.83,
+      "Tests": 9.17
     },
     "2025": {
-      "Build & CI (DevOps)": 0.25,
-      "Consensus (Domain Logic)": 10.92,
+      "Build & CI": 0.2,
+      "Consensus": 4.2,
       "Documentation": 3.33,
-      "Node & RPC (App/Interface)": 22.25,
-      "Tests (QA)": 12.25,
-      "Utilities (Shared Libs)": 2.0,
-      "Wallet (Client App)": 1.0
+      "Mempool": 23.37,
+      "Node & RPC": 5.7,
+      "Tests": 12.2,
+      "Utilities": 2.0,
+      "Wallet": 1.0
     }
   },
   "bip_list": [

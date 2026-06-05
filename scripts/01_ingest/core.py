@@ -26,47 +26,72 @@ def save_state(state):
 
 
 # --- Categorization Logic ---
+# Category names match expertise domain names exactly (see metadata/expertise_domains.json).
+# Rule order matters: more-specific rules must appear before broader ones that share paths.
 CATEGORY_RULES = {
-    # Global Cross-Cutting (Catch these before subsystem matches)
-    "Tests (QA)": [
-        r"/test/", r"/fuzz/", r"/bench/", 
+    # ── Cross-cutting quality (evaluated before subsystem rules) ──────────────
+    "Tests": [
+        r"/test/", r"/fuzz/", r"/bench/",
         r"src/test/", r"test/", r"src/bench/"
     ],
-    "Build & CI (DevOps)": [
+    "Build & CI": [
         r"Makefile", r"ci/", r"\.github/", r"build_msvc", r"configure\.ac",
         r"CMakeLists\.txt", r"depends/", r"share/"
     ],
     "Documentation": [r"doc/", r".*\.md$", r".*\.txt$", r".*\.rst$"],
 
-    # Domain Logic (The "Truth")
-    "Consensus (Domain Logic)": [
-        r"src/consensus/", r"src/kernel/", r"src/script/", r"src/primitives/",
-        r"src/chain", r"src/coins", r"src/pow", r"src/validation\.", r"src/policy/"
+    # ── Script interpreter and opcodes ─────────────────────────────────────────
+    # Intentionally before Consensus: src/script/ is the opcode/covenant surface,
+    # distinct from chain-validation logic in src/consensus/.
+    "Script": [
+        r"src/script/"
     ],
 
-    # Application & Interface Layer (The "Software")
-    "Node & RPC (App/Interface)": [
+    # ── Mempool and fee policy ─────────────────────────────────────────────────
+    # Standardness rules, fee estimation, RBF, dust thresholds.
+    # src/policy/ is policy (not consensus): move it out of Consensus bucket.
+    "Mempool": [
+        r"src/txmempool\.", r"src/policy/"
+    ],
+
+    # ── Mining — block assembly and template generation ────────────────────────
+    "Mining": [
+        r"src/mining/"
+    ],
+
+    # ── Consensus rules ────────────────────────────────────────────────────────
+    # Chain state, validation, PoW, activation logic.
+    # src/script/ and src/policy/ are carved out above.
+    "Consensus": [
+        r"src/consensus/", r"src/kernel/", r"src/primitives/",
+        r"src/chain", r"src/coins", r"src/pow", r"src/validation\.",
+        r"src/deploymentstatus", r"src/versionbits"
+    ],
+
+    # ── P2P networking ─────────────────────────────────────────────────────────
+    "P2P Network": [r"src/net", r"src/protocol", r"src/addrman"],
+
+    # ── Wallet ─────────────────────────────────────────────────────────────────
+    "Wallet": [r"src/wallet/", r"src/interfaces/"],
+
+    # ── Node and RPC interfaces ────────────────────────────────────────────────
+    # src/txmempool. is carved out above into Mempool.
+    "Node & RPC": [
         r"src/node/", r"src/rpc/", r"src/index/", r"src/zmq/",
-        r"src/init\.", r"src/bitcoind\.", r"src/bitcoin-cli\.", r"src/txmempool\."
+        r"src/init\.", r"src/bitcoind\.", r"src/bitcoin-cli\."
     ],
 
-    # Infrastructure Layer (Networking)
-    "P2P Network (Infrastructure)": [r"src/net", r"src/protocol", r"src/addrman"],
+    # ── GUI ────────────────────────────────────────────────────────────────────
+    "GUI": [r"src/qt/", r"src/forms/"],
 
-    # Client Layer
-    "Wallet (Client App)": [r"src/wallet/", r"src/interfaces/"],
+    # ── Persistence ────────────────────────────────────────────────────────────
+    "Database": [r"src/leveldb/", r"src/crc32c/", r"src/dbwrapper\."],
 
-    # Presentation Layer
-    "GUI (Presentation Layer)": [r"src/qt/", r"src/forms/"],
+    # ── Cryptographic primitives ───────────────────────────────────────────────
+    "Cryptography": [r"src/crypto/", r"src/secp256k1/", r"src/minisketch/"],
 
-    # Persistence Layer
-    "Database (Persistence)": [r"src/leveldb/", r"src/crc32c/", r"src/dbwrapper\."],
-
-    # Cryptographic Primitives
-    "Cryptography (Primitives)": [r"src/crypto/", r"src/secp256k1/", r"src/minisketch/"],
-
-    # Cross-Cutting Concerns & Utilities
-    "Utilities (Shared Libs)": [
+    # ── Shared utilities ───────────────────────────────────────────────────────
+    "Utilities": [
         r"src/util/", r"src/support/", r"src/common/",
         r"src/univalue/", r"src/compat/", r"src/ipc/"
     ]
@@ -254,7 +279,7 @@ def categorize_file(path):
         for pattern in regexes:
             if re.search(pattern, path, re.IGNORECASE):
                 return category
-    return "Core Libs"
+    return "Utilities"  # fallback: unrecognised path → shared utilities bucket
 
 def process_commit(meta, stats, commits_list):
     # Base Stats (Total for the commit)
@@ -295,9 +320,9 @@ def process_commit(meta, stats, commits_list):
             ext_deltas[ext]["adds"] += s["adds"]
             ext_deltas[ext]["dels"] += s["dels"]
 
-    # If no stats (Empty commit), assign "Core Libs" default with 0 stats
+    # If no stats (empty commit), assign fallback category with 0 stats
     if not cat_deltas:
-        cat_deltas["Core Libs"] = {"adds": 0, "dels": 0}
+        cat_deltas["Utilities"] = {"adds": 0, "dels": 0}
 
     dt_utc = datetime.fromtimestamp(meta["author_ts"], timezone.utc)
     

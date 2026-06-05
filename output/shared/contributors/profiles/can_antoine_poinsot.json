@@ -19,60 +19,64 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Tests (QA)",
-  "total_commits": 301.0,
-  "authored_commits": 301.0,
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Tests",
+  "total_commits": 308.0,
+  "authored_commits": 308.0,
   "merge_commits": 0.0,
-  "total_additions": 8334.0,
-  "total_deletions": 2835.0,
+  "total_additions": 8511.0,
+  "total_deletions": 2919.0,
   "first_commit": "2019-03-01T16:06:27",
-  "last_commit": "2026-05-20T20:04:58",
-  "p2016_authored_commits": 227.0,
-  "modern_authored_commits": 97.0,
+  "last_commit": "2026-05-25T23:00:12",
+  "p2016_authored_commits": 233.0,
+  "modern_authored_commits": 103.0,
   "bips_authored": 4.0,
   "p2016_bips_authored": 4.0,
   "modern_bips_authored": 4.0,
-  "avg_review_latency_days": 415.9920512691107,
-  "reviews_count": 356.0,
-  "avg_approval_latency_days": 103.58464560954458,
-  "approvals_count": 248.0,
-  "p2016_reviews_count": 356.0,
-  "modern_reviews_count": 201.0,
+  "avg_review_latency_days": 421.8633350442834,
+  "reviews_count": 357.0,
+  "avg_approval_latency_days": 117.62668950200201,
+  "approvals_count": 249.0,
+  "p2016_reviews_count": 357.0,
+  "modern_reviews_count": 202.0,
+  "first_review_date": "2019-02-27T10:46:16+00:00",
+  "last_review_date": "2026-05-29T15:47:50+00:00",
   "prs_authored": 129.0,
   "avg_pr_ack_velocity_days": 14.577175598357792,
   "avg_concept_lead_time_days": 18.135407175925927,
-  "review_reciprocity": 2.75968992248062,
-  "hybrid_score": 1.5014,
-  "p2016_hybrid_score": 1.6228,
-  "modern_hybrid_score": 1.6441,
+  "review_reciprocity": 2.7674418604651163,
+  "hybrid_score": 1.504,
+  "p2016_hybrid_score": 1.6256,
+  "modern_hybrid_score": 1.6477,
   "impact_score": 59.0,
   "p2016_impact_score": 62.0,
   "modern_impact_score": 63.0,
   "threads_started": 103.0,
-  "replies_sent": 153.0,
+  "replies_sent": 155.0,
   "ml_threads": 26.0,
   "delving_threads": 77.0,
-  "ml_responses": 93.0,
+  "ml_responses": 95.0,
   "delving_responses": 60.0,
   "first_active": "2020-04-24T10:00:16",
-  "last_active": "2026-05-20T13:48:57",
+  "last_active": "2026-06-02T10:29:39",
   "dev_type": "Protocol Designer",
   "expertise_domains": [
     "Consensus",
     "Infrastructure",
-    "Wallet"
+    "Script"
   ],
   "expertise_by_source": {
     "bips": {
       "Consensus": 0.75,
-      "Wallet": 0.25
+      "Script": 0.25
     },
     "code": {
-      "Consensus": 0.267,
-      "Infrastructure": 0.676,
+      "Consensus": 0.049,
+      "Infrastructure": 0.668,
+      "Mempool": 0.032,
       "Network": 0.014,
-      "Wallet": 0.042
+      "Script": 0.197,
+      "Wallet": 0.04
     },
     "discussion": {
       "Consensus": 0.429,
@@ -80,19 +84,20 @@
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.5411,
-    "Infrastructure": 0.2029,
+    "Consensus": 0.4755,
+    "Infrastructure": 0.2004,
     "Mining": 0.1142,
-    "Wallet": 0.1376
+    "Script": 0.1841,
+    "Wallet": 0.012
   },
-  "p2016_posts": 256.0,
-  "modern_posts": 221.0,
-  "p2016_ml_posts": 119.0,
+  "p2016_posts": 258.0,
+  "modern_posts": 223.0,
+  "p2016_ml_posts": 121.0,
   "p2016_delving_posts": 137.0,
-  "modern_ml_posts": 84.0,
+  "modern_ml_posts": 86.0,
   "modern_delving_posts": 137.0,
   "global_first_active": "2019-03-01T16:06:27",
-  "global_last_active": "2026-05-20T20:04:58",
+  "global_last_active": "2026-06-02T10:29:39",
   "github_location": null,
   "github_company": "@chaincodelabs",
   "github_bio": "590B 7292 695A FFA5 B672  CBB2 E13F C145 CD3F 4304 <darosior@protonmail.com>",
@@ -104,70 +109,78 @@
   "delving_url": "https://delvingbitcoin.org/u/antoinep",
   "commit_history": {
     "2019": {
-      "Consensus (Domain Logic)": 1.0,
-      "Core Libs": 1.0,
+      "Consensus": 1.0,
       "Documentation": 2.0,
-      "Node & RPC (App/Interface)": 4.0,
-      "Tests (QA)": 3.5,
-      "Wallet (Client App)": 0.5
+      "Node & RPC": 4.0,
+      "Tests": 3.5,
+      "Utilities": 1.0,
+      "Wallet": 0.5
     },
     "2020": {
-      "Consensus (Domain Logic)": 5.33,
-      "Node & RPC (App/Interface)": 2.83,
-      "Tests (QA)": 2.33,
-      "Wallet (Client App)": 0.5
+      "Consensus": 0.33,
+      "Mempool": 5.0,
+      "Node & RPC": 2.83,
+      "Tests": 2.33,
+      "Wallet": 0.5
     },
     "2021": {
-      "Build & CI (DevOps)": 0.5,
-      "Consensus (Domain Logic)": 9.0,
-      "Core Libs": 1.0,
+      "Build & CI": 0.5,
+      "Consensus": 1.0,
       "Documentation": 5.0,
-      "Node & RPC (App/Interface)": 1.5,
-      "Tests (QA)": 18.0,
-      "Wallet (Client App)": 1.0
+      "Mempool": 1.0,
+      "Node & RPC": 1.5,
+      "Script": 7.0,
+      "Tests": 18.0,
+      "Utilities": 1.0,
+      "Wallet": 1.0
     },
     "2022": {
-      "Build & CI (DevOps)": 0.5,
-      "Consensus (Domain Logic)": 16.0,
-      "Core Libs": 2.5,
+      "Build & CI": 0.5,
+      "Consensus": 0.33,
       "Documentation": 2.0,
-      "Node & RPC (App/Interface)": 0.33,
-      "Tests (QA)": 11.33,
-      "Wallet (Client App)": 6.33
+      "Node & RPC": 0.33,
+      "Script": 15.67,
+      "Tests": 11.33,
+      "Utilities": 2.5,
+      "Wallet": 6.33
     },
     "2023": {
-      "Build & CI (DevOps)": 0.5,
-      "Consensus (Domain Logic)": 19.83,
-      "Core Libs": 2.67,
+      "Build & CI": 0.5,
+      "Consensus": 0.5,
       "Documentation": 1.0,
-      "Node & RPC (App/Interface)": 0.33,
-      "Tests (QA)": 25.17,
-      "Wallet (Client App)": 0.5
+      "Node & RPC": 0.33,
+      "Script": 19.33,
+      "Tests": 25.17,
+      "Utilities": 2.67,
+      "Wallet": 0.5
     },
     "2024": {
-      "Build & CI (DevOps)": 2.0,
-      "Consensus (Domain Logic)": 1.5,
-      "Core Libs": 11.33,
+      "Build & CI": 2.0,
+      "Consensus": 1.0,
       "Documentation": 2.0,
-      "GUI (Presentation Layer)": 0.75,
-      "Node & RPC (App/Interface)": 2.83,
-      "P2P Network (Infrastructure)": 3.25,
-      "Tests (QA)": 6.75,
-      "Wallet (Client App)": 0.58
+      "GUI": 0.75,
+      "Node & RPC": 2.83,
+      "P2P Network": 3.25,
+      "Script": 0.5,
+      "Tests": 6.75,
+      "Utilities": 11.33,
+      "Wallet": 0.58
     },
     "2025": {
-      "Consensus (Domain Logic)": 5.17,
-      "Core Libs": 4.33,
+      "Consensus": 4.17,
       "Documentation": 4.0,
-      "Node & RPC (App/Interface)": 2.33,
-      "Tests (QA)": 22.17,
-      "Utilities (Shared Libs)": 2.0
+      "Mempool": 1.5,
+      "Node & RPC": 2.83,
+      "Script": 1.0,
+      "Tests": 22.17,
+      "Utilities": 6.33
     },
     "2026": {
-      "Consensus (Domain Logic)": 2.33,
-      "Core Libs": 0.33,
-      "Documentation": 1.0,
-      "Tests (QA)": 2.33
+      "Consensus": 3.0,
+      "Documentation": 2.0,
+      "Script": 2.33,
+      "Tests": 4.33,
+      "Utilities": 0.33
     }
   },
   "bip_list": [
@@ -182,7 +195,7 @@
       "number": 379,
       "title": "Miniscript",
       "status": "Draft",
-      "theme": "Wallet & Keys",
+      "theme": "Script & Smart Contracts",
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0379.mediawiki"
     },
     {
@@ -208,9 +221,9 @@
   },
   "last_message": {
     "source": "mailing_list",
-    "subject": "Re: [bitcoindev] PQC - What is our Goal, Even?",
-    "date": "2026-05-20",
-    "link": "https://gnusha.org/pi/bitcoindev/3TguePkqzkPWZeuW8j7nrZnDnhmDpYfIh22hbInFeyVRwPX0Ohh7wjsptoNMnJAKwysYUGaGOaQVVx7se5WEeO-nmUEpcWUC_jKBWQrx4tI=@protonmail.com"
+    "subject": "Re: [bitcoindev] [BIP Draft] Testnet 5",
+    "date": "2026-06-02",
+    "link": "https://gnusha.org/pi/bitcoindev/Note5jyeHB1BStZ3AMHw2aYjj8KmOuSO7wl8FAAEj8lzo9PFX6972iUY6iWbcG0VidvpgRbw-gh1dZTC3DTlELA3pjANhz_1WLW7P1KiXL4=@protonmail.com"
   },
   "social_history": {
     "2020": {
@@ -260,14 +273,14 @@
       "utxo-sync": 18
     },
     "2026": {
-      "consensus-cleanup": 23,
-      "other": 32,
+      "consensus-cleanup": 24,
+      "other": 33,
       "covenants": 5,
       "mempool-fees": 16,
       "mining": 16,
       "script-opcodes": 8,
       "security": 5,
-      "testing-devtools": 20,
+      "testing-devtools": 21,
       "utxo-sync": 17
     }
   }

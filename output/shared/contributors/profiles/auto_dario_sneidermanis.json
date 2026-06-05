@@ -18,8 +18,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Consensus (Domain Logic)",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Mempool",
   "total_commits": 1.0,
   "authored_commits": 1.0,
   "merge_commits": 0.0,
@@ -38,12 +38,14 @@
   "approvals_count": 0.0,
   "p2016_reviews_count": 3.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": "2021-09-12T02:41:54+00:00",
+  "last_review_date": "2022-11-07T16:41:58+00:00",
   "prs_authored": 2.0,
   "avg_pr_ack_velocity_days": 0.017326388888888888,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 1.5,
   "hybrid_score": 0.1172,
-  "p2016_hybrid_score": 0.1313,
+  "p2016_hybrid_score": 0.1312,
   "modern_hybrid_score": 0.025,
   "impact_score": 7.0,
   "p2016_impact_score": 8.0,
@@ -58,13 +60,12 @@
   "last_active": "2022-10-21T16:13:41",
   "dev_type": "Builder",
   "expertise_domains": [
-    "Consensus",
     "Mempool",
     "Cryptography"
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 1.0
+      "Mempool": 1.0
     },
     "discussion": {
       "Cryptography": 0.123,
@@ -72,9 +73,8 @@
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.6,
     "Cryptography": 0.0492,
-    "Mempool": 0.3508
+    "Mempool": 0.9508
   },
   "p2016_posts": 6.0,
   "modern_posts": 0.0,
@@ -94,7 +94,7 @@
   "github_url": "https://github.com/esneider",
   "commit_history": {
     "2017": {
-      "Consensus (Domain Logic)": 1.0
+      "Mempool": 1.0
     }
   },
   "first_message": {

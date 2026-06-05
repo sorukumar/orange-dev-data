@@ -18,10 +18,10 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Tests (QA)",
-  "total_commits": 1083.0,
-  "authored_commits": 1083.0,
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Tests",
+  "total_commits": 1085.0,
+  "authored_commits": 1085.0,
   "merge_commits": 0.0,
   "total_additions": 27491.0,
   "total_deletions": 26800.0,
@@ -38,6 +38,8 @@
   "approvals_count": 927.0,
   "p2016_reviews_count": 1267.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": "2016-10-11T08:48:41+00:00",
+  "last_review_date": "2023-05-03T12:46:46+00:00",
   "prs_authored": 378.0,
   "avg_pr_ack_velocity_days": 5.492368927804616,
   "avg_concept_lead_time_days": 8.034394973544973,
@@ -64,10 +66,12 @@
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.03,
-      "Infrastructure": 0.668,
+      "Consensus": 0.028,
+      "Infrastructure": 0.663,
+      "Mempool": 0.005,
       "Network": 0.208,
-      "Wallet": 0.095
+      "Script": 0.002,
+      "Wallet": 0.094
     },
     "discussion": {
       "Consensus": 0.293,
@@ -75,10 +79,10 @@
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.1351,
-    "Infrastructure": 0.4006,
-    "Network": 0.4074,
-    "Wallet": 0.057
+    "Consensus": 0.134,
+    "Infrastructure": 0.3978,
+    "Network": 0.4076,
+    "Wallet": 0.0564
   },
   "p2016_posts": 12.0,
   "modern_posts": 0.0,
@@ -98,70 +102,73 @@
   "github_url": "https://github.com/jnewbery",
   "commit_history": {
     "2016": {
-      "Core Libs": 5.67,
-      "Node & RPC (App/Interface)": 4.67,
-      "Tests (QA)": 8.33,
-      "Wallet (Client App)": 0.33
+      "Mempool": 1.5,
+      "Node & RPC": 3.17,
+      "Tests": 8.33,
+      "Utilities": 5.67,
+      "Wallet": 0.33
     },
     "2017": {
-      "Build & CI (DevOps)": 6.5,
-      "Consensus (Domain Logic)": 4.33,
-      "Core Libs": 42.33,
+      "Build & CI": 6.5,
+      "Consensus": 3.33,
       "Documentation": 4.17,
-      "Node & RPC (App/Interface)": 22.33,
-      "P2P Network (Infrastructure)": 2.67,
-      "Tests (QA)": 170.17,
-      "Wallet (Client App)": 19.5
+      "Mempool": 1.0,
+      "Node & RPC": 21.33,
+      "P2P Network": 2.67,
+      "Script": 1.0,
+      "Tests": 170.17,
+      "Utilities": 42.33,
+      "Wallet": 19.5
     },
     "2018": {
-      "Build & CI (DevOps)": 0.83,
-      "Consensus (Domain Logic)": 0.2,
-      "Core Libs": 6.62,
-      "Database (Persistence)": 0.2,
+      "Build & CI": 0.83,
+      "Consensus": 0.2,
+      "Database": 0.2,
       "Documentation": 12.67,
-      "GUI (Presentation Layer)": 0.92,
-      "Node & RPC (App/Interface)": 11.95,
-      "P2P Network (Infrastructure)": 1.0,
-      "Tests (QA)": 74.33,
-      "Wallet (Client App)": 27.28
+      "GUI": 0.92,
+      "Node & RPC": 11.95,
+      "P2P Network": 1.0,
+      "Tests": 74.33,
+      "Utilities": 6.62,
+      "Wallet": 27.28
     },
     "2019": {
-      "Build & CI (DevOps)": 3.73,
-      "Consensus (Domain Logic)": 15.49,
-      "Core Libs": 3.62,
+      "Build & CI": 3.69,
+      "Consensus": 15.12,
       "Documentation": 6.75,
-      "GUI (Presentation Layer)": 1.48,
-      "Node & RPC (App/Interface)": 8.57,
-      "P2P Network (Infrastructure)": 5.25,
-      "Tests (QA)": 27.54,
-      "Utilities (Shared Libs)": 0.59,
-      "Wallet (Client App)": 26.99
+      "GUI": 1.48,
+      "Mempool": 1.09,
+      "Node & RPC": 8.2,
+      "P2P Network": 5.25,
+      "Script": 0.67,
+      "Tests": 27.5,
+      "Utilities": 3.45,
+      "Wallet": 26.79
     },
     "2020": {
-      "Consensus (Domain Logic)": 1.5,
-      "Core Libs": 3.83,
+      "Consensus": 1.5,
       "Documentation": 1.0,
-      "GUI (Presentation Layer)": 1.75,
-      "Node & RPC (App/Interface)": 10.08,
-      "P2P Network (Infrastructure)": 83.92,
-      "Tests (QA)": 42.92,
-      "Wallet (Client App)": 1.0
+      "GUI": 1.75,
+      "Node & RPC": 10.08,
+      "P2P Network": 83.92,
+      "Tests": 42.92,
+      "Utilities": 3.83,
+      "Wallet": 1.0
     },
     "2021": {
-      "Build & CI (DevOps)": 0.5,
-      "Consensus (Domain Logic)": 2.25,
-      "Core Libs": 2.75,
+      "Build & CI": 0.5,
+      "Consensus": 2.25,
       "Documentation": 1.0,
-      "Node & RPC (App/Interface)": 10.83,
-      "P2P Network (Infrastructure)": 68.83,
-      "Tests (QA)": 25.5,
-      "Utilities (Shared Libs)": 1.33
+      "Node & RPC": 10.83,
+      "P2P Network": 68.83,
+      "Tests": 25.5,
+      "Utilities": 4.08
     },
     "2022": {
-      "Build & CI (DevOps)": 0.5,
-      "Core Libs": 0.33,
-      "P2P Network (Infrastructure)": 3.33,
-      "Tests (QA)": 3.83
+      "Build & CI": 0.5,
+      "P2P Network": 3.33,
+      "Tests": 3.83,
+      "Utilities": 0.33
     }
   },
   "first_message": {

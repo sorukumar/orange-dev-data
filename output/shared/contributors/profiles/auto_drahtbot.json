@@ -18,10 +18,10 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "GUI (Presentation Layer)",
-  "total_commits": 19.0,
-  "authored_commits": 19.0,
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "GUI",
+  "total_commits": 20.0,
+  "authored_commits": 20.0,
   "merge_commits": 0.0,
   "total_additions": 967.0,
   "total_deletions": 895.0,
@@ -32,19 +32,21 @@
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": 51.9888603748667,
-  "reviews_count": 11226.0,
+  "avg_review_latency_days": 52.313699262233435,
+  "reviews_count": 11270.0,
   "avg_approval_latency_days": 1.7954050925925926,
   "approvals_count": 1.0,
-  "p2016_reviews_count": 11226.0,
-  "modern_reviews_count": 5650.0,
+  "p2016_reviews_count": 11270.0,
+  "modern_reviews_count": 5666.0,
+  "first_review_date": "2018-06-04T12:41:57+00:00",
+  "last_review_date": "2026-06-04T14:43:37+00:00",
   "prs_authored": 3.0,
   "avg_pr_ack_velocity_days": 2.069969135802469,
   "avg_concept_lead_time_days": null,
-  "review_reciprocity": 3742.0,
-  "hybrid_score": 0.4487,
-  "p2016_hybrid_score": 0.4486,
-  "modern_hybrid_score": 0.3116,
+  "review_reciprocity": 3756.6666666666665,
+  "hybrid_score": 0.4488,
+  "p2016_hybrid_score": 0.4485,
+  "modern_hybrid_score": 0.3117,
   "impact_score": 24.0,
   "p2016_impact_score": 24.0,
   "modern_impact_score": 17.0,
@@ -64,19 +66,23 @@
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.057,
-      "Cryptography": 0.015,
-      "Infrastructure": 0.898,
-      "Network": 0.015,
-      "Wallet": 0.015
+      "Consensus": 0.055,
+      "Cryptography": 0.013,
+      "Infrastructure": 0.878,
+      "Mempool": 0.013,
+      "Network": 0.013,
+      "Script": 0.013,
+      "Wallet": 0.013
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.057,
-    "Cryptography": 0.015,
-    "Infrastructure": 0.898,
-    "Network": 0.015,
-    "Wallet": 0.015
+    "Consensus": 0.0551,
+    "Cryptography": 0.013,
+    "Infrastructure": 0.8798,
+    "Mempool": 0.013,
+    "Network": 0.013,
+    "Script": 0.013,
+    "Wallet": 0.013
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -96,21 +102,22 @@
   "github_url": "https://github.com/DrahtBot",
   "commit_history": {
     "2018": {
-      "Build & CI (DevOps)": 0.09,
-      "Consensus (Domain Logic)": 0.34,
-      "Core Libs": 0.34,
-      "Cryptography (Primitives)": 0.09,
-      "Database (Persistence)": 0.09,
+      "Build & CI": 0.08,
+      "Consensus": 0.33,
+      "Cryptography": 0.08,
+      "Database": 0.08,
       "Documentation": 2.0,
-      "GUI (Presentation Layer)": 1.34,
-      "Node & RPC (App/Interface)": 0.09,
-      "P2P Network (Infrastructure)": 0.09,
-      "Tests (QA)": 0.34,
-      "Utilities (Shared Libs)": 0.09,
-      "Wallet (Client App)": 0.09
+      "GUI": 1.33,
+      "Mempool": 0.08,
+      "Node & RPC": 0.08,
+      "P2P Network": 0.08,
+      "Script": 0.08,
+      "Tests": 0.33,
+      "Utilities": 0.33,
+      "Wallet": 0.08
     },
     "2022": {
-      "Tests (QA)": 1.0
+      "Tests": 1.0
     }
   }
 }

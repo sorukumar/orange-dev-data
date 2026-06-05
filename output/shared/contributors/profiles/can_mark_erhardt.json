@@ -18,44 +18,46 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Tests (QA)",
-  "total_commits": 80.0,
-  "authored_commits": 80.0,
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Tests",
+  "total_commits": 93.0,
+  "authored_commits": 93.0,
   "merge_commits": 0.0,
-  "total_additions": 3221.0,
-  "total_deletions": 995.0,
+  "total_additions": 3462.0,
+  "total_deletions": 1148.0,
   "first_commit": "2014-09-13T00:09:18",
   "last_commit": "2026-03-20T22:19:52",
-  "p2016_authored_commits": 58.0,
-  "modern_authored_commits": 45.0,
+  "p2016_authored_commits": 65.0,
+  "modern_authored_commits": 49.0,
   "bips_authored": 1.0,
   "p2016_bips_authored": 1.0,
   "modern_bips_authored": 1.0,
-  "avg_review_latency_days": 1649.3498235384145,
-  "reviews_count": 653.0,
-  "avg_approval_latency_days": 1082.8485007199424,
-  "approvals_count": 273.0,
-  "p2016_reviews_count": 653.0,
-  "modern_reviews_count": 548.0,
-  "prs_authored": 61.0,
-  "avg_pr_ack_velocity_days": 42.69049612112112,
-  "avg_concept_lead_time_days": 55.31132137345679,
-  "review_reciprocity": 10.704918032786885,
-  "hybrid_score": 0.9465,
-  "p2016_hybrid_score": 1.0292,
-  "modern_hybrid_score": 1.1541,
-  "impact_score": 43.0,
+  "avg_review_latency_days": 1667.073572972188,
+  "reviews_count": 654.0,
+  "avg_approval_latency_days": 1085.0104628377026,
+  "approvals_count": 272.0,
+  "p2016_reviews_count": 654.0,
+  "modern_reviews_count": 549.0,
+  "first_review_date": "2016-01-03T22:44:22+00:00",
+  "last_review_date": "2026-06-03T22:21:08+00:00",
+  "prs_authored": 63.0,
+  "avg_pr_ack_velocity_days": 41.61851181773879,
+  "avg_concept_lead_time_days": 52.503098806042885,
+  "review_reciprocity": 10.380952380952381,
+  "hybrid_score": 0.9526,
+  "p2016_hybrid_score": 1.0364,
+  "modern_hybrid_score": 1.1619,
+  "impact_score": 44.0,
   "p2016_impact_score": 46.0,
   "modern_impact_score": 50.0,
   "threads_started": 23.0,
-  "replies_sent": 85.0,
+  "replies_sent": 87.0,
   "ml_threads": 7.0,
   "delving_threads": 16.0,
-  "ml_responses": 55.0,
+  "ml_responses": 57.0,
   "delving_responses": 30.0,
   "first_active": "2016-09-21T07:58:25",
-  "last_active": "2026-05-28T13:28:49",
+  "last_active": "2026-06-01T17:54:36",
   "dev_type": "Builder",
   "expertise_domains": [
     "Infrastructure",
@@ -67,32 +69,31 @@
       "Infrastructure": 1.0
     },
     "code": {
-      "Consensus": 0.04,
-      "Infrastructure": 0.633,
-      "Wallet": 0.327
+      "Infrastructure": 0.598,
+      "Mempool": 0.051,
+      "Wallet": 0.351
     },
     "discussion": {
-      "Ecosystem": 0.333,
-      "Mempool": 0.385,
+      "Ecosystem": 0.359,
+      "Mempool": 0.359,
       "Mining": 0.282
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.012,
-    "Ecosystem": 0.0666,
-    "Infrastructure": 0.6899,
-    "Mempool": 0.077,
+    "Ecosystem": 0.0718,
+    "Infrastructure": 0.6794,
+    "Mempool": 0.0871,
     "Mining": 0.0564,
-    "Wallet": 0.0981
+    "Wallet": 0.1053
   },
-  "p2016_posts": 108.0,
-  "modern_posts": 101.0,
-  "p2016_ml_posts": 62.0,
+  "p2016_posts": 110.0,
+  "modern_posts": 103.0,
+  "p2016_ml_posts": 64.0,
   "p2016_delving_posts": 46.0,
-  "modern_ml_posts": 55.0,
+  "modern_ml_posts": 57.0,
   "modern_delving_posts": 46.0,
   "global_first_active": "2014-09-13T00:09:18",
-  "global_last_active": "2026-05-28T13:28:49",
+  "global_last_active": "2026-06-01T17:54:36",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -104,41 +105,42 @@
   "delving_url": "https://delvingbitcoin.org/u/murch",
   "commit_history": {
     "2014": {
-      "Wallet (Client App)": 1.0
+      "Wallet": 1.0
     },
     "2015": {
-      "Tests (QA)": 0.5,
-      "Wallet (Client App)": 2.5
+      "Tests": 0.5,
+      "Wallet": 2.5
     },
     "2017": {
-      "Consensus (Domain Logic)": 1.0
+      "Mempool": 1.0
     },
     "2019": {
-      "Node & RPC (App/Interface)": 1.0
+      "Mempool": 1.0
     },
     "2022": {
-      "Consensus (Domain Logic)": 1.0,
       "Documentation": 0.25,
-      "Node & RPC (App/Interface)": 0.25,
-      "Tests (QA)": 1.25,
-      "Wallet (Client App)": 5.25
+      "Mempool": 1.0,
+      "Node & RPC": 0.25,
+      "Tests": 1.25,
+      "Wallet": 5.25
     },
     "2023": {
-      "Consensus (Domain Logic)": 0.5,
-      "Node & RPC (App/Interface)": 3.0,
-      "Tests (QA)": 7.0,
-      "Wallet (Client App)": 4.5
+      "Mempool": 0.5,
+      "Node & RPC": 3.0,
+      "Tests": 7.0,
+      "Wallet": 4.5
     },
     "2024": {
-      "Tests (QA)": 13.5,
-      "Wallet (Client App)": 6.5
+      "Tests": 13.5,
+      "Wallet": 6.5
     },
     "2025": {
-      "Tests (QA)": 4.0
+      "Tests": 7.0,
+      "Wallet": 4.0
     },
     "2026": {
-      "Tests (QA)": 8.5,
-      "Wallet (Client App)": 0.5
+      "Tests": 8.5,
+      "Wallet": 0.5
     }
   },
   "bip_list": [
@@ -159,8 +161,8 @@
   "last_message": {
     "source": "mailing_list",
     "subject": "Re: [bitcoindev] BIP 3 and issues on BIPs",
-    "date": "2026-05-28",
-    "link": "https://gnusha.org/pi/bitcoindev/db744821-940e-4f76-9a54-9c763ce7ce1e@murch.one"
+    "date": "2026-06-01",
+    "link": "https://gnusha.org/pi/bitcoindev/06d94f73-eb1e-4072-8135-81f8d38260b9@murch.one"
   },
   "social_history": {
     "2016": {
@@ -204,7 +206,7 @@
       "testing-devtools": 2
     },
     "2026": {
-      "bip-process": 6,
+      "bip-process": 8,
       "consensus-cleanup": 2,
       "other": 34,
       "mempool-fees": 5,

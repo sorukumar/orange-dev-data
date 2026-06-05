@@ -18,10 +18,10 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Utilities (Shared Libs)",
-  "total_commits": 22.0,
-  "authored_commits": 22.0,
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Utilities",
+  "total_commits": 21.0,
+  "authored_commits": 21.0,
   "merge_commits": 0.0,
   "total_additions": 202.0,
   "total_deletions": 181.0,
@@ -38,12 +38,14 @@
   "approvals_count": 11.0,
   "p2016_reviews_count": 24.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": "2019-07-30T23:41:06+00:00",
+  "last_review_date": "2020-06-01T17:50:54+00:00",
   "prs_authored": 6.0,
   "avg_pr_ack_velocity_days": 34.50090740740741,
   "avg_concept_lead_time_days": 34.65790509259259,
   "review_reciprocity": 4.0,
   "hybrid_score": 0.2725,
-  "p2016_hybrid_score": 0.2723,
+  "p2016_hybrid_score": 0.2724,
   "modern_hybrid_score": 0.05,
   "impact_score": 15.0,
   "p2016_impact_score": 15.0,
@@ -64,15 +66,17 @@
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.164,
-      "Infrastructure": 0.818,
-      "Network": 0.009,
-      "Wallet": 0.009
+      "Consensus": 0.165,
+      "Infrastructure": 0.814,
+      "Network": 0.011,
+      "Wallet": 0.011
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.164,
-    "Infrastructure": 0.818
+    "Consensus": 0.1648,
+    "Infrastructure": 0.8132,
+    "Network": 0.011,
+    "Wallet": 0.011
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -92,17 +96,16 @@
   "github_url": "https://github.com/jkczyz",
   "commit_history": {
     "2019": {
-      "Build & CI (DevOps)": 0.12,
-      "Consensus (Domain Logic)": 2.12,
-      "Core Libs": 2.62,
-      "Node & RPC (App/Interface)": 0.12,
-      "P2P Network (Infrastructure)": 0.12,
-      "Tests (QA)": 2.12,
-      "Utilities (Shared Libs)": 3.62,
-      "Wallet (Client App)": 0.12
+      "Build & CI": 0.14,
+      "Consensus": 2.14,
+      "Node & RPC": 0.14,
+      "P2P Network": 0.14,
+      "Tests": 2.14,
+      "Utilities": 6.14,
+      "Wallet": 0.14
     },
     "2020": {
-      "Utilities (Shared Libs)": 2.0
+      "Utilities": 2.0
     }
   }
 }

@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
+  "last_seen": "2026-06-04T00:00:00",
   "technical_focus": "code",
   "total_commits": 5.0,
   "authored_commits": 5.0,
@@ -38,6 +38,8 @@
   "approvals_count": 0.0,
   "p2016_reviews_count": 0.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": null,
+  "last_review_date": null,
   "prs_authored": 2.0,
   "avg_pr_ack_velocity_days": 23.457280092592594,
   "avg_concept_lead_time_days": null,
@@ -89,10 +91,10 @@
   "github_url": "https://github.com/fcicq",
   "commit_history": {
     "2013": {
-      "Build & CI (DevOps)": 1.0,
-      "Core Libs": 2.0,
-      "Node & RPC (App/Interface)": 1.0,
-      "P2P Network (Infrastructure)": 1.0
+      "Build & CI": 1.0,
+      "Node & RPC": 1.0,
+      "P2P Network": 1.0,
+      "Utilities": 2.0
     }
   }
 }

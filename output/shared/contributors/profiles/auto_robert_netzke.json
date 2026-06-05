@@ -18,8 +18,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Tests (QA)",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Tests",
   "total_commits": 6.0,
   "authored_commits": 6.0,
   "merge_commits": 0.0,
@@ -32,19 +32,21 @@
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": 997.1041435185184,
-  "reviews_count": 9.0,
-  "avg_approval_latency_days": 55.252285879629625,
-  "approvals_count": 2.0,
-  "p2016_reviews_count": 9.0,
-  "modern_reviews_count": 9.0,
-  "prs_authored": 11.0,
-  "avg_pr_ack_velocity_days": 0.6599560185185185,
-  "avg_concept_lead_time_days": 0.23024305555555555,
-  "review_reciprocity": 0.8181818181818182,
-  "hybrid_score": 0.1789,
-  "p2016_hybrid_score": 0.1789,
-  "modern_hybrid_score": 0.1789,
+  "avg_review_latency_days": 1145.8444064153439,
+  "reviews_count": 10.0,
+  "avg_approval_latency_days": 66.40676311728394,
+  "approvals_count": 3.0,
+  "p2016_reviews_count": 10.0,
+  "modern_reviews_count": 10.0,
+  "first_review_date": "2025-10-15T14:08:26+00:00",
+  "last_review_date": "2026-06-03T17:07:52+00:00",
+  "prs_authored": 12.0,
+  "avg_pr_ack_velocity_days": 0.6967920524691357,
+  "avg_concept_lead_time_days": 0.5556076388888889,
+  "review_reciprocity": 0.8333333333333334,
+  "hybrid_score": 0.1822,
+  "p2016_hybrid_score": 0.1822,
+  "modern_hybrid_score": 0.1822,
   "impact_score": 10.0,
   "p2016_impact_score": 10.0,
   "modern_impact_score": 10.0,
@@ -94,13 +96,13 @@
   "github_url": "https://github.com/rustaceanrob",
   "commit_history": {
     "2025": {
-      "Consensus (Domain Logic)": 0.5,
-      "Core Libs": 0.5,
-      "Tests (QA)": 1.0
+      "Consensus": 0.5,
+      "Tests": 1.0,
+      "Utilities": 0.5
     },
     "2026": {
-      "Node & RPC (App/Interface)": 0.5,
-      "Utilities (Shared Libs)": 0.5
+      "Node & RPC": 0.5,
+      "Utilities": 0.5
     }
   },
   "first_message": {

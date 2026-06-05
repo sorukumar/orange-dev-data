@@ -18,10 +18,10 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Wallet (Client App)",
-  "total_commits": 423.0,
-  "authored_commits": 423.0,
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Wallet",
+  "total_commits": 424.0,
+  "authored_commits": 424.0,
   "merge_commits": 0.0,
   "total_additions": 5931.0,
   "total_deletions": 3546.0,
@@ -38,6 +38,8 @@
   "approvals_count": 1612.0,
   "p2016_reviews_count": 2324.0,
   "modern_reviews_count": 3.0,
+  "first_review_date": "2015-09-19T22:34:23+00:00",
+  "last_review_date": "2024-10-04T10:28:43+00:00",
   "prs_authored": 307.0,
   "avg_pr_ack_velocity_days": 6.0283318751822685,
   "avg_concept_lead_time_days": 6.466917350589226,
@@ -64,17 +66,19 @@
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.026,
-      "Infrastructure": 0.698,
+      "Consensus": 0.02,
+      "Infrastructure": 0.697,
+      "Mempool": 0.0,
       "Network": 0.013,
+      "Script": 0.006,
       "Wallet": 0.263
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.026,
-    "Infrastructure": 0.698,
+    "Consensus": 0.02,
+    "Infrastructure": 0.6977,
     "Network": 0.013,
-    "Wallet": 0.263
+    "Wallet": 0.2633
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -94,74 +98,74 @@
   "github_url": "https://github.com/promag",
   "commit_history": {
     "2015": {
-      "Core Libs": 1.0,
-      "Node & RPC (App/Interface)": 1.0
+      "Node & RPC": 1.0,
+      "Utilities": 1.0
     },
     "2016": {
-      "Consensus (Domain Logic)": 0.5,
-      "Core Libs": 2.33,
-      "GUI (Presentation Layer)": 0.33,
-      "Node & RPC (App/Interface)": 1.0,
-      "Wallet (Client App)": 3.83
+      "Consensus": 0.5,
+      "GUI": 0.33,
+      "Node & RPC": 1.0,
+      "Utilities": 2.33,
+      "Wallet": 3.83
     },
     "2017": {
-      "Consensus (Domain Logic)": 1.0,
-      "Core Libs": 4.0,
+      "Consensus": 1.0,
       "Documentation": 1.0,
-      "GUI (Presentation Layer)": 1.5,
-      "Node & RPC (App/Interface)": 2.0,
-      "P2P Network (Infrastructure)": 2.0,
-      "Tests (QA)": 14.5,
-      "Wallet (Client App)": 8.0
+      "GUI": 1.5,
+      "Node & RPC": 2.0,
+      "P2P Network": 2.0,
+      "Tests": 14.5,
+      "Utilities": 4.0,
+      "Wallet": 8.0
     },
     "2018": {
-      "Build & CI (DevOps)": 1.34,
-      "Consensus (Domain Logic)": 5.31,
-      "Core Libs": 8.59,
+      "Build & CI": 1.32,
+      "Consensus": 4.29,
       "Documentation": 3.0,
-      "GUI (Presentation Layer)": 26.01,
-      "Node & RPC (App/Interface)": 16.43,
-      "P2P Network (Infrastructure)": 0.31,
-      "Tests (QA)": 21.73,
-      "Utilities (Shared Libs)": 0.5,
-      "Wallet (Client App)": 28.78
+      "GUI": 25.99,
+      "Mempool": 0.12,
+      "Node & RPC": 16.28,
+      "P2P Network": 0.29,
+      "Script": 1.12,
+      "Tests": 21.71,
+      "Utilities": 9.07,
+      "Wallet": 28.78
     },
     "2019": {
-      "Build & CI (DevOps)": 1.0,
-      "Consensus (Domain Logic)": 1.0,
-      "Core Libs": 6.5,
+      "Build & CI": 1.0,
+      "Consensus": 1.0,
       "Documentation": 8.33,
-      "GUI (Presentation Layer)": 42.33,
-      "Node & RPC (App/Interface)": 5.0,
-      "Tests (QA)": 18.17,
-      "Utilities (Shared Libs)": 0.5,
-      "Wallet (Client App)": 26.17
+      "GUI": 42.33,
+      "Node & RPC": 5.0,
+      "Tests": 18.17,
+      "Utilities": 7.0,
+      "Wallet": 26.17
     },
     "2020": {
-      "Build & CI (DevOps)": 1.0,
-      "Consensus (Domain Logic)": 1.0,
-      "Core Libs": 6.0,
+      "Build & CI": 1.0,
       "Documentation": 1.0,
-      "GUI (Presentation Layer)": 11.5,
-      "Node & RPC (App/Interface)": 3.5,
-      "Tests (QA)": 8.5,
-      "Wallet (Client App)": 19.5
+      "GUI": 11.5,
+      "Node & RPC": 3.5,
+      "Script": 1.0,
+      "Tests": 8.5,
+      "Utilities": 6.0,
+      "Wallet": 19.5
     },
     "2021": {
-      "Build & CI (DevOps)": 2.0,
-      "Core Libs": 1.0,
+      "Build & CI": 2.0,
       "Documentation": 0.33,
-      "GUI (Presentation Layer)": 8.0,
-      "Node & RPC (App/Interface)": 1.83,
-      "P2P Network (Infrastructure)": 2.0,
-      "Tests (QA)": 2.33,
-      "Wallet (Client App)": 1.5
+      "GUI": 8.0,
+      "Node & RPC": 1.83,
+      "P2P Network": 2.0,
+      "Tests": 2.33,
+      "Utilities": 1.0,
+      "Wallet": 1.5
     },
     "2022": {
-      "Core Libs": 0.5,
-      "GUI (Presentation Layer)": 0.5,
-      "Tests (QA)": 0.5,
-      "Wallet (Client App)": 1.5
+      "GUI": 0.5,
+      "Tests": 0.5,
+      "Utilities": 0.5,
+      "Wallet": 1.5
     }
   }
 }

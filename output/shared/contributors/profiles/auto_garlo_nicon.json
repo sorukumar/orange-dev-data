@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
+  "last_seen": "2026-06-04T00:00:00",
   "technical_focus": "testing-devtools",
   "total_commits": 0.0,
   "authored_commits": 0.0,
@@ -38,24 +38,26 @@
   "approvals_count": null,
   "p2016_reviews_count": null,
   "modern_reviews_count": null,
+  "first_review_date": null,
+  "last_review_date": null,
   "prs_authored": null,
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": null,
-  "hybrid_score": 0.0365,
-  "p2016_hybrid_score": 0.0604,
-  "modern_hybrid_score": 0.2071,
+  "hybrid_score": 0.0402,
+  "p2016_hybrid_score": 0.0662,
+  "modern_hybrid_score": 0.2302,
   "impact_score": 2.0,
   "p2016_impact_score": 4.0,
-  "modern_impact_score": 12.0,
+  "modern_impact_score": 13.0,
   "threads_started": 18.0,
-  "replies_sent": 48.0,
+  "replies_sent": 50.0,
   "ml_threads": 0.0,
   "delving_threads": 18.0,
-  "ml_responses": 28.0,
+  "ml_responses": 30.0,
   "delving_responses": 20.0,
   "first_active": "2024-04-08T14:11:53",
-  "last_active": "2026-05-16T16:41:03.989000",
+  "last_active": "2026-06-02T11:22:54",
   "dev_type": "Participant",
   "expertise_domains": [
     "Mining",
@@ -71,14 +73,14 @@
     "Mempool": 0.455,
     "Mining": 0.545
   },
-  "p2016_posts": 66.0,
-  "modern_posts": 66.0,
-  "p2016_ml_posts": 28.0,
+  "p2016_posts": 68.0,
+  "modern_posts": 68.0,
+  "p2016_ml_posts": 30.0,
   "p2016_delving_posts": 38.0,
-  "modern_ml_posts": 28.0,
+  "modern_ml_posts": 30.0,
   "modern_delving_posts": 38.0,
   "global_first_active": "2024-04-08T14:11:53",
-  "global_last_active": "2026-05-16T16:41:03.988999936",
+  "global_last_active": "2026-06-02T11:22:54",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -94,10 +96,10 @@
     "link": "https://gnusha.org/pi/bitcoindev/6733b634-e6da-4bb3-a3b6-bffa41395e9cn@googlegroups.com"
   },
   "last_message": {
-    "source": "delving",
-    "subject": "Re: Replay protection conditions/solutions",
-    "date": "2026-05-16",
-    "link": "https://delvingbitcoin.org/t/replay-protection-conditions-solutions/2506/2"
+    "source": "mailing_list",
+    "subject": "Re: [bitcoindev] [BIP Draft] Testnet 5",
+    "date": "2026-06-02",
+    "link": "https://gnusha.org/pi/bitcoindev/CAN7kyNiH_8hnBmxBR8rPc+wYwbKPRy51yif3jRXofHbFFKsSgQ@mail.gmail.com"
   },
   "social_history": {
     "2024": {
@@ -127,10 +129,10 @@
       "covenants": 2,
       "mempool-fees": 2,
       "mining": 1,
-      "quantum": 5,
+      "quantum": 6,
       "script-opcodes": 2,
       "taproot": 1,
-      "testing-devtools": 3
+      "testing-devtools": 4
     }
   }
 }

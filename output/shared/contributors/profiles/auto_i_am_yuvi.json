@@ -1,6 +1,6 @@
 {
   "display_name": "i-am-yuvi",
-  "github_login_final": "yuvicc",
+  "github_login_final": "i-am-yuvi",
   "delving_username_final": null,
   "uuid": "auto_i_am_yuvi",
   "badges": {
@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
+  "last_seen": "2026-06-04T00:00:00",
   "technical_focus": "code",
   "total_commits": 15.0,
   "authored_commits": 15.0,
@@ -38,13 +38,15 @@
   "approvals_count": 85.0,
   "p2016_reviews_count": 93.0,
   "modern_reviews_count": 93.0,
+  "first_review_date": "2024-08-25T20:37:31+00:00",
+  "last_review_date": "2026-05-27T10:11:20+00:00",
   "prs_authored": 9.0,
   "avg_pr_ack_velocity_days": 5.141673611111111,
   "avg_concept_lead_time_days": 14.95716724537037,
   "review_reciprocity": 10.333333333333334,
-  "hybrid_score": 0.2923,
-  "p2016_hybrid_score": 0.2923,
-  "modern_hybrid_score": 0.2923,
+  "hybrid_score": 0.2984,
+  "p2016_hybrid_score": 0.2984,
+  "modern_hybrid_score": 0.2984,
   "impact_score": 16.0,
   "p2016_impact_score": 16.0,
   "modern_impact_score": 16.0,
@@ -63,13 +65,13 @@
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.166,
-      "Infrastructure": 0.834
+      "Consensus": 0.204,
+      "Infrastructure": 0.796
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.166,
-    "Infrastructure": 0.834
+    "Consensus": 0.204,
+    "Infrastructure": 0.796
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -79,24 +81,24 @@
   "modern_delving_posts": 0.0,
   "global_first_active": "2025-01-03T13:39:03",
   "global_last_active": "2026-05-18T13:58:09",
-  "github_location": "Remote",
+  "github_location": null,
   "github_company": null,
-  "github_bio": "PGP: 0F78 77ED BA29 0958 5996 1FC0 82A4 2715 E616 42E7",
-  "github_twitter": "hey_yuvicc",
-  "github_blog": "https://yuvicc.dev/",
-  "github_followers": 48.0,
+  "github_bio": null,
+  "github_twitter": null,
+  "github_blog": null,
+  "github_followers": null,
   "is_top_50": false,
-  "github_url": "https://github.com/yuvicc",
+  "github_url": "https://github.com/i-am-yuvi",
   "commit_history": {
     "2025": {
-      "Consensus (Domain Logic)": 0.83,
-      "Core Libs": 0.33,
-      "Tests (QA)": 3.83
+      "Consensus": 0.83,
+      "Tests": 3.83,
+      "Utilities": 0.33
     },
     "2026": {
-      "Consensus (Domain Logic)": 0.5,
-      "Core Libs": 0.5,
-      "Tests (QA)": 2.0
+      "Consensus": 1.0,
+      "Tests": 2.5,
+      "Utilities": 0.5
     }
   }
 }

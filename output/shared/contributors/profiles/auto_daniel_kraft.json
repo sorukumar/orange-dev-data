@@ -18,8 +18,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Core Libs",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Utilities",
   "total_commits": 77.0,
   "authored_commits": 77.0,
   "merge_commits": 0.0,
@@ -38,6 +38,8 @@
   "approvals_count": 25.0,
   "p2016_reviews_count": 37.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": "2015-07-09T18:19:41+00:00",
+  "last_review_date": "2019-03-07T13:20:09+00:00",
   "prs_authored": 65.0,
   "avg_pr_ack_velocity_days": 7.31027447089947,
   "avg_concept_lead_time_days": 37.339106125356125,
@@ -65,7 +67,8 @@
   "expertise_by_source": {
     "code": {
       "Consensus": 0.049,
-      "Infrastructure": 0.891,
+      "Infrastructure": 0.868,
+      "Mempool": 0.023,
       "Wallet": 0.06
     },
     "discussion": {
@@ -74,7 +77,8 @@
   },
   "expertise_domain_scores": {
     "Consensus": 0.4294,
-    "Infrastructure": 0.5346,
+    "Infrastructure": 0.5208,
+    "Mempool": 0.0138,
     "Wallet": 0.036
   },
   "p2016_posts": 0.0,
@@ -95,48 +99,49 @@
   "github_url": "https://github.com/domob1812",
   "commit_history": {
     "2014": {
-      "Consensus (Domain Logic)": 0.33,
-      "Core Libs": 12.17,
+      "Consensus": 0.33,
       "Documentation": 0.33,
-      "Node & RPC (App/Interface)": 1.17
+      "Mempool": 0.83,
+      "Node & RPC": 0.33,
+      "Utilities": 12.17
     },
     "2015": {
-      "Consensus (Domain Logic)": 1.0,
-      "Core Libs": 6.0,
-      "Tests (QA)": 2.0,
-      "Utilities (Shared Libs)": 1.0,
-      "Wallet (Client App)": 1.0
+      "Consensus": 1.0,
+      "Tests": 2.0,
+      "Utilities": 7.0,
+      "Wallet": 1.0
     },
     "2016": {
-      "Build & CI (DevOps)": 1.0,
-      "Core Libs": 1.83,
-      "Node & RPC (App/Interface)": 0.83,
-      "Tests (QA)": 1.33,
-      "Wallet (Client App)": 1.0
+      "Build & CI": 1.0,
+      "Mempool": 0.5,
+      "Node & RPC": 0.33,
+      "Tests": 1.33,
+      "Utilities": 1.83,
+      "Wallet": 1.0
     },
     "2018": {
-      "Build & CI (DevOps)": 1.25,
-      "Consensus (Domain Logic)": 1.0,
-      "Core Libs": 0.5,
+      "Build & CI": 1.25,
+      "Consensus": 1.0,
       "Documentation": 0.25,
-      "Node & RPC (App/Interface)": 4.25,
-      "Tests (QA)": 7.75,
-      "Wallet (Client App)": 1.0
+      "Node & RPC": 4.25,
+      "Tests": 7.75,
+      "Utilities": 0.5,
+      "Wallet": 1.0
     },
     "2019": {
-      "Build & CI (DevOps)": 2.0,
-      "Node & RPC (App/Interface)": 1.0,
-      "Tests (QA)": 1.0
+      "Build & CI": 2.0,
+      "Node & RPC": 1.0,
+      "Tests": 1.0
     },
     "2020": {
-      "Consensus (Domain Logic)": 0.5,
-      "Node & RPC (App/Interface)": 2.0,
-      "Tests (QA)": 2.0,
-      "Wallet (Client App)": 0.5
+      "Consensus": 0.5,
+      "Node & RPC": 2.0,
+      "Tests": 2.0,
+      "Wallet": 0.5
     },
     "2021": {
-      "Node & RPC (App/Interface)": 1.0,
-      "Tests (QA)": 1.0
+      "Node & RPC": 1.0,
+      "Tests": 1.0
     }
   },
   "first_message": {

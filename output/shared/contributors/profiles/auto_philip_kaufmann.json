@@ -16,10 +16,10 @@
   },
   "roles": [],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
+  "last_seen": "2026-06-04T00:00:00",
   "technical_focus": "None",
-  "total_commits": 805.0,
-  "authored_commits": 805.0,
+  "total_commits": 806.0,
+  "authored_commits": 806.0,
   "merge_commits": 0.0,
   "total_additions": 224410.0,
   "total_deletions": 113252.0,
@@ -36,8 +36,10 @@
   "approvals_count": 171.0,
   "p2016_reviews_count": 0.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": "2012-03-19T15:30:42+00:00",
+  "last_review_date": "2015-10-31T09:25:29+00:00",
   "prs_authored": 657.0,
-  "avg_pr_ack_velocity_days": 13.138952843915343,
+  "avg_pr_ack_velocity_days": 13.102731349583202,
   "avg_concept_lead_time_days": 25.208329199735452,
   "review_reciprocity": 0.8401826484018264,
   "hybrid_score": 0.6175,
@@ -58,21 +60,23 @@
   "expertise_domains": [
     "Infrastructure",
     "Network",
-    "Consensus"
+    "Wallet"
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.012,
+      "Consensus": 0.007,
       "Cryptography": 0.001,
-      "Infrastructure": 0.908,
-      "Network": 0.07,
+      "Infrastructure": 0.904,
+      "Mempool": 0.004,
+      "Network": 0.069,
+      "Script": 0.004,
       "Wallet": 0.01
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.012,
-    "Infrastructure": 0.9071,
-    "Network": 0.0699
+    "Infrastructure": 0.9049,
+    "Network": 0.0691,
+    "Wallet": 0.01
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -92,47 +96,49 @@
   "github_url": "https://github.com/Diapolo",
   "commit_history": {
     "2012": {
-      "Build & CI (DevOps)": 2.0,
-      "Core Libs": 58.08,
-      "Database (Persistence)": 1.0,
+      "Build & CI": 2.0,
+      "Database": 1.0,
       "Documentation": 4.83,
-      "GUI (Presentation Layer)": 122.75,
-      "Node & RPC (App/Interface)": 17.92,
-      "P2P Network (Infrastructure)": 11.5,
-      "Tests (QA)": 0.92
+      "GUI": 122.75,
+      "Node & RPC": 17.92,
+      "P2P Network": 11.5,
+      "Tests": 0.92,
+      "Utilities": 58.08
     },
     "2013": {
-      "Build & CI (DevOps)": 4.33,
-      "Consensus (Domain Logic)": 0.33,
-      "Core Libs": 35.08,
+      "Build & CI": 4.33,
+      "Consensus": 0.33,
       "Documentation": 3.33,
-      "GUI (Presentation Layer)": 123.75,
-      "Node & RPC (App/Interface)": 19.25,
-      "P2P Network (Infrastructure)": 4.67,
-      "Tests (QA)": 2.25
+      "GUI": 123.75,
+      "Node & RPC": 19.25,
+      "P2P Network": 4.67,
+      "Tests": 2.25,
+      "Utilities": 35.08
     },
     "2014": {
-      "Build & CI (DevOps)": 2.28,
-      "Consensus (Domain Logic)": 5.95,
-      "Core Libs": 48.2,
-      "Cryptography (Primitives)": 0.67,
+      "Build & CI": 2.26,
+      "Consensus": 3.88,
+      "Cryptography": 0.64,
       "Documentation": 1.0,
-      "GUI (Presentation Layer)": 67.08,
-      "Node & RPC (App/Interface)": 15.0,
-      "P2P Network (Infrastructure)": 19.12,
-      "Tests (QA)": 3.2,
-      "Utilities (Shared Libs)": 1.5
+      "GUI": 67.06,
+      "Mempool": 1.99,
+      "Node & RPC": 13.4,
+      "P2P Network": 19.02,
+      "Script": 1.98,
+      "Tests": 3.18,
+      "Utilities": 49.6
     },
     "2015": {
-      "Consensus (Domain Logic)": 1.25,
-      "Core Libs": 5.58,
-      "Database (Persistence)": 0.33,
-      "GUI (Presentation Layer)": 34.0,
-      "Node & RPC (App/Interface)": 2.5,
-      "P2P Network (Infrastructure)": 9.17,
-      "Tests (QA)": 3.33,
-      "Utilities (Shared Libs)": 0.42,
-      "Wallet (Client App)": 6.42
+      "Consensus": 0.53,
+      "Database": 0.33,
+      "GUI": 34.0,
+      "Mempool": 0.33,
+      "Node & RPC": 2.53,
+      "P2P Network": 9.2,
+      "Script": 0.5,
+      "Tests": 3.33,
+      "Utilities": 5.7,
+      "Wallet": 6.53
     }
   }
 }

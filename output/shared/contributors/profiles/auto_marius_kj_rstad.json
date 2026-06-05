@@ -18,10 +18,10 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
+  "last_seen": "2026-06-04T00:00:00",
   "technical_focus": "Documentation",
-  "total_commits": 17.0,
-  "authored_commits": 17.0,
+  "total_commits": 18.0,
+  "authored_commits": 18.0,
   "merge_commits": 0.0,
   "total_additions": 279.0,
   "total_deletions": 289.0,
@@ -38,6 +38,8 @@
   "approvals_count": 6.0,
   "p2016_reviews_count": 6.0,
   "modern_reviews_count": 1.0,
+  "first_review_date": "2014-11-05T15:12:55+00:00",
+  "last_review_date": "2023-07-30T16:56:47+00:00",
   "prs_authored": 20.0,
   "avg_pr_ack_velocity_days": 0.2808984375,
   "avg_concept_lead_time_days": null,
@@ -64,17 +66,21 @@
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.012,
-      "Cryptography": 0.012,
-      "Infrastructure": 0.963,
-      "Network": 0.012
+      "Consensus": 0.011,
+      "Cryptography": 0.011,
+      "Infrastructure": 0.944,
+      "Mempool": 0.011,
+      "Network": 0.011,
+      "Script": 0.011
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.012,
-    "Cryptography": 0.012,
-    "Infrastructure": 0.964,
-    "Network": 0.012
+    "Consensus": 0.011,
+    "Cryptography": 0.011,
+    "Infrastructure": 0.9449,
+    "Mempool": 0.011,
+    "Network": 0.011,
+    "Script": 0.011
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -94,19 +100,20 @@
   "github_url": "https://github.com/sandakersmann",
   "commit_history": {
     "2014": {
-      "Consensus (Domain Logic)": 0.11,
-      "Core Libs": 0.11,
-      "Cryptography (Primitives)": 0.11,
-      "Documentation": 2.11,
-      "GUI (Presentation Layer)": 0.11,
-      "Node & RPC (App/Interface)": 0.11,
-      "P2P Network (Infrastructure)": 0.11,
-      "Tests (QA)": 0.11,
-      "Utilities (Shared Libs)": 0.11
+      "Consensus": 0.1,
+      "Cryptography": 0.1,
+      "Documentation": 2.1,
+      "GUI": 0.1,
+      "Mempool": 0.1,
+      "Node & RPC": 0.1,
+      "P2P Network": 0.1,
+      "Script": 0.1,
+      "Tests": 0.1,
+      "Utilities": 0.1
     },
     "2015": {
-      "Core Libs": 3.0,
-      "Documentation": 1.0
+      "Documentation": 1.0,
+      "Utilities": 3.0
     },
     "2019": {
       "Documentation": 2.0

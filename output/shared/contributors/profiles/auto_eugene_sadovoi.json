@@ -16,7 +16,7 @@
   },
   "roles": [],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
+  "last_seen": "2026-06-04T00:00:00",
   "technical_focus": "None",
   "total_commits": 19.0,
   "authored_commits": 19.0,
@@ -36,6 +36,8 @@
   "approvals_count": 0.0,
   "p2016_reviews_count": 0.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": null,
+  "last_review_date": null,
   "prs_authored": 18.0,
   "avg_pr_ack_velocity_days": 0.4352513227513227,
   "avg_concept_lead_time_days": null,
@@ -57,20 +59,24 @@
   "dev_type": "Builder",
   "expertise_domains": [
     "Infrastructure",
-    "Consensus",
-    "Network"
+    "Script",
+    "Consensus"
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.256,
-      "Infrastructure": 0.718,
-      "Network": 0.025
+      "Consensus": 0.025,
+      "Infrastructure": 0.693,
+      "Mempool": 0.025,
+      "Network": 0.025,
+      "Script": 0.231
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.2563,
-    "Infrastructure": 0.7187,
-    "Network": 0.025
+    "Consensus": 0.025,
+    "Infrastructure": 0.6937,
+    "Mempool": 0.025,
+    "Network": 0.025,
+    "Script": 0.2312
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -90,11 +96,13 @@
   "github_url": "https://github.com/ENikS",
   "commit_history": {
     "2014": {
-      "Consensus (Domain Logic)": 3.33,
-      "Core Libs": 7.17,
-      "Node & RPC (App/Interface)": 0.67,
-      "P2P Network (Infrastructure)": 0.33,
-      "Tests (QA)": 1.5
+      "Consensus": 0.33,
+      "Mempool": 0.33,
+      "Node & RPC": 0.33,
+      "P2P Network": 0.33,
+      "Script": 3.0,
+      "Tests": 1.5,
+      "Utilities": 7.17
     }
   }
 }

@@ -18,8 +18,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "GUI (Presentation Layer)",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "GUI",
   "total_commits": 36.0,
   "authored_commits": 36.0,
   "merge_commits": 0.0,
@@ -37,14 +37,16 @@
   "avg_approval_latency_days": 25.55305132296536,
   "approvals_count": 270.0,
   "p2016_reviews_count": 403.0,
-  "modern_reviews_count": 40.0,
+  "modern_reviews_count": 39.0,
+  "first_review_date": "2020-11-19T01:46:03+00:00",
+  "last_review_date": "2026-04-01T19:09:58+00:00",
   "prs_authored": 16.0,
   "avg_pr_ack_velocity_days": 1.4120006613756613,
   "avg_concept_lead_time_days": 1.0659275793650793,
   "review_reciprocity": 25.1875,
   "hybrid_score": 0.4255,
   "p2016_hybrid_score": 0.4255,
-  "modern_hybrid_score": 0.1404,
+  "modern_hybrid_score": 0.1396,
   "impact_score": 23.0,
   "p2016_impact_score": 23.0,
   "modern_impact_score": 8.0,
@@ -92,16 +94,16 @@
       "Documentation": 2.0
     },
     "2021": {
-      "Build & CI (DevOps)": 3.0,
-      "Consensus (Domain Logic)": 1.0,
+      "Build & CI": 3.0,
+      "Consensus": 1.0,
       "Documentation": 3.0,
-      "GUI (Presentation Layer)": 15.0,
-      "Node & RPC (App/Interface)": 5.0,
-      "Tests (QA)": 3.0
+      "GUI": 15.0,
+      "Node & RPC": 5.0,
+      "Tests": 3.0
     },
     "2022": {
       "Documentation": 3.0,
-      "GUI (Presentation Layer)": 1.0
+      "GUI": 1.0
     }
   }
 }

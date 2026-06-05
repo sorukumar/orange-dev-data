@@ -18,33 +18,35 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
+  "last_seen": "2026-06-04T00:00:00",
   "technical_focus": "P2P Network (Infrastructure)",
-  "total_commits": 526.0,
-  "authored_commits": 526.0,
+  "total_commits": 528.0,
+  "authored_commits": 528.0,
   "merge_commits": 0.0,
   "total_additions": 8081.0,
   "total_deletions": 3926.0,
   "first_commit": "2019-01-26T22:34:00",
   "last_commit": "2026-03-09T09:40:24",
   "p2016_authored_commits": 400.0,
-  "modern_authored_commits": 142.0,
+  "modern_authored_commits": 139.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": 84.83418581009717,
-  "reviews_count": 538.0,
-  "avg_approval_latency_days": 65.82194301310906,
-  "approvals_count": 341.0,
-  "p2016_reviews_count": 538.0,
-  "modern_reviews_count": 297.0,
-  "prs_authored": 145.0,
-  "avg_pr_ack_velocity_days": 7.9229323450223275,
-  "avg_concept_lead_time_days": 10.9440924232159,
-  "review_reciprocity": 3.7103448275862068,
-  "hybrid_score": 0.5773,
-  "p2016_hybrid_score": 0.5773,
-  "modern_hybrid_score": 0.514,
+  "avg_review_latency_days": 79.98922276655216,
+  "reviews_count": 599.0,
+  "avg_approval_latency_days": 60.94673659844055,
+  "approvals_count": 390.0,
+  "p2016_reviews_count": 599.0,
+  "modern_reviews_count": 295.0,
+  "first_review_date": "2019-02-13T01:10:30+00:00",
+  "last_review_date": "2026-05-28T16:13:29+00:00",
+  "prs_authored": 184.0,
+  "avg_pr_ack_velocity_days": 7.071555437853108,
+  "avg_concept_lead_time_days": 9.963669312169312,
+  "review_reciprocity": 3.255434782608696,
+  "hybrid_score": 0.5818,
+  "p2016_hybrid_score": 0.5818,
+  "modern_hybrid_score": 0.5156,
   "impact_score": 29.0,
   "p2016_impact_score": 29.0,
   "modern_impact_score": 27.0,
@@ -55,7 +57,7 @@
   "ml_responses": 0.0,
   "delving_responses": 0.0,
   "first_active": "2021-04-14T15:59:35",
-  "last_active": "2026-02-25T13:20:05.693000",
+  "last_active": null,
   "dev_type": "Builder",
   "expertise_domains": [
     "Network",
@@ -65,7 +67,8 @@
   "expertise_by_source": {
     "code": {
       "Consensus": 0.086,
-      "Infrastructure": 0.65,
+      "Infrastructure": 0.644,
+      "Mempool": 0.007,
       "Network": 0.251,
       "Wallet": 0.013
     },
@@ -76,9 +79,9 @@
   },
   "expertise_domain_scores": {
     "Consensus": 0.0516,
-    "Infrastructure": 0.39,
-    "Mining": 0.098,
-    "Network": 0.4526
+    "Infrastructure": 0.3862,
+    "Mining": 0.0979,
+    "Network": 0.4523
   },
   "p2016_posts": 6.0,
   "modern_posts": 5.0,
@@ -99,72 +102,71 @@
   "delving_url": "https://delvingbitcoin.org/u/mzumsande",
   "commit_history": {
     "2019": {
-      "Build & CI (DevOps)": 1.0,
-      "Consensus (Domain Logic)": 0.2,
-      "Core Libs": 0.2,
+      "Build & CI": 1.0,
+      "Consensus": 0.2,
       "Documentation": 1.2,
-      "Node & RPC (App/Interface)": 0.7,
-      "P2P Network (Infrastructure)": 1.5,
-      "Tests (QA)": 6.2,
-      "Wallet (Client App)": 1.0
+      "Node & RPC": 0.7,
+      "P2P Network": 1.5,
+      "Tests": 6.2,
+      "Utilities": 0.2,
+      "Wallet": 1.0
     },
     "2020": {
-      "Consensus (Domain Logic)": 3.67,
-      "Core Libs": 2.0,
+      "Consensus": 3.5,
       "Documentation": 4.0,
-      "Node & RPC (App/Interface)": 12.5,
-      "P2P Network (Infrastructure)": 31.5,
-      "Tests (QA)": 25.83,
-      "Wallet (Client App)": 0.5
+      "Mempool": 2.83,
+      "Node & RPC": 10.17,
+      "P2P Network": 31.17,
+      "Tests": 25.83,
+      "Utilities": 2.0,
+      "Wallet": 0.5
     },
     "2021": {
-      "Build & CI (DevOps)": 0.33,
-      "Consensus (Domain Logic)": 2.33,
-      "Core Libs": 1.75,
+      "Build & CI": 0.33,
+      "Consensus": 2.33,
       "Documentation": 0.83,
-      "Node & RPC (App/Interface)": 4.42,
-      "P2P Network (Infrastructure)": 27.75,
-      "Tests (QA)": 47.08,
-      "Utilities (Shared Libs)": 3.5,
-      "Wallet (Client App)": 1.0
+      "Node & RPC": 4.42,
+      "P2P Network": 27.75,
+      "Tests": 47.08,
+      "Utilities": 5.25,
+      "Wallet": 1.0
     },
     "2022": {
-      "Build & CI (DevOps)": 0.5,
-      "Consensus (Domain Logic)": 3.83,
-      "Node & RPC (App/Interface)": 11.17,
-      "P2P Network (Infrastructure)": 6.83,
-      "Tests (QA)": 13.67,
-      "Wallet (Client App)": 1.0
+      "Build & CI": 0.5,
+      "Consensus": 3.83,
+      "Node & RPC": 11.17,
+      "P2P Network": 6.83,
+      "Tests": 13.67,
+      "Wallet": 1.0
     },
     "2023": {
-      "Build & CI (DevOps)": 0.5,
-      "Consensus (Domain Logic)": 3.17,
-      "Core Libs": 1.33,
+      "Build & CI": 0.5,
+      "Consensus": 3.17,
       "Documentation": 3.0,
-      "Node & RPC (App/Interface)": 8.83,
-      "P2P Network (Infrastructure)": 24.0,
-      "Tests (QA)": 35.17
+      "Node & RPC": 8.83,
+      "P2P Network": 24.0,
+      "Tests": 35.17,
+      "Utilities": 1.33
     },
     "2024": {
-      "Consensus (Domain Logic)": 16.92,
-      "Core Libs": 1.25,
+      "Consensus": 16.92,
       "Documentation": 2.0,
-      "Node & RPC (App/Interface)": 9.58,
-      "P2P Network (Infrastructure)": 5.0,
-      "Tests (QA)": 27.92,
-      "Utilities (Shared Libs)": 0.33
+      "Node & RPC": 9.58,
+      "P2P Network": 5.0,
+      "Tests": 27.92,
+      "Utilities": 1.58
     },
     "2025": {
-      "Consensus (Domain Logic)": 3.83,
-      "Node & RPC (App/Interface)": 4.33,
-      "P2P Network (Infrastructure)": 4.0,
-      "Tests (QA)": 26.83,
-      "Wallet (Client App)": 1.0
+      "Consensus": 3.83,
+      "Node & RPC": 4.33,
+      "P2P Network": 4.0,
+      "Tests": 26.83,
+      "Wallet": 1.0
     },
     "2026": {
-      "Consensus (Domain Logic)": 0.5,
-      "Tests (QA)": 2.0,
-      "Wallet (Client App)": 0.5
+      "Consensus": 0.5,
+      "Tests": 2.0,
+      "Wallet": 0.5
     }
   },
   "first_message": {

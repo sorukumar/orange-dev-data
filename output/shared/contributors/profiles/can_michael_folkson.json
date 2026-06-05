@@ -19,8 +19,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Tests (QA)",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Tests",
   "total_commits": 3.0,
   "authored_commits": 3.0,
   "merge_commits": 0.0,
@@ -39,13 +39,15 @@
   "approvals_count": 155.0,
   "p2016_reviews_count": 260.0,
   "modern_reviews_count": 11.0,
+  "first_review_date": "2019-06-16T14:37:40+00:00",
+  "last_review_date": "2026-01-12T13:46:45+00:00",
   "prs_authored": 8.0,
   "avg_pr_ack_velocity_days": 0.02502314814814815,
   "avg_concept_lead_time_days": 0.04951388888888889,
   "review_reciprocity": 32.5,
-  "hybrid_score": 0.781,
-  "p2016_hybrid_score": 0.9001,
-  "modern_hybrid_score": 0.3391,
+  "hybrid_score": 0.7809,
+  "p2016_hybrid_score": 0.8997,
+  "modern_hybrid_score": 0.3404,
   "impact_score": 37.0,
   "p2016_impact_score": 42.0,
   "modern_impact_score": 18.0,
@@ -96,18 +98,18 @@
   "delving_url": "https://delvingbitcoin.org/u/michaelfolkson",
   "commit_history": {
     "2019": {
-      "Build & CI (DevOps)": 1.0,
-      "Tests (QA)": 1.0
+      "Build & CI": 1.0,
+      "Tests": 1.0
     },
     "2022": {
-      "Tests (QA)": 1.0
+      "Tests": 1.0
     }
   },
   "bip_list": [
     {
       "number": 343,
       "title": "Mandatory activation of taproot deployment",
-      "status": "Deployed",
+      "status": "Closed",
       "theme": "Consensus & Soft Forks",
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0343.mediawiki"
     }

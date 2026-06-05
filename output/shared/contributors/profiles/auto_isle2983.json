@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
+  "last_seen": "2026-06-04T00:00:00",
   "technical_focus": "code",
   "total_commits": 26.0,
   "authored_commits": 26.0,
@@ -38,12 +38,14 @@
   "approvals_count": 1.0,
   "p2016_reviews_count": 6.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": "2016-08-15T04:03:48+00:00",
+  "last_review_date": "2017-02-20T05:22:34+00:00",
   "prs_authored": 13.0,
   "avg_pr_ack_velocity_days": 2.2821064814814815,
   "avg_concept_lead_time_days": 3.3141087962962965,
   "review_reciprocity": 0.46153846153846156,
   "hybrid_score": 0.2207,
-  "p2016_hybrid_score": 0.2207,
+  "p2016_hybrid_score": 0.2204,
   "modern_hybrid_score": 0.0727,
   "impact_score": 12.0,
   "p2016_impact_score": 12.0,
@@ -59,24 +61,23 @@
   "dev_type": "Builder",
   "expertise_domains": [
     "Infrastructure",
-    "Consensus",
-    "Cryptography"
+    "Mempool",
+    "Consensus"
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.032,
-      "Cryptography": 0.011,
-      "Infrastructure": 0.934,
-      "Network": 0.011,
-      "Wallet": 0.011
+      "Consensus": 0.01,
+      "Cryptography": 0.01,
+      "Infrastructure": 0.915,
+      "Mempool": 0.035,
+      "Network": 0.01,
+      "Script": 0.01,
+      "Wallet": 0.01
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.032,
-    "Cryptography": 0.011,
-    "Infrastructure": 0.9349,
-    "Network": 0.011,
-    "Wallet": 0.011
+    "Infrastructure": 0.915,
+    "Mempool": 0.035
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -96,18 +97,19 @@
   "github_url": "https://github.com/isle2983",
   "commit_history": {
     "2016": {
-      "Build & CI (DevOps)": 0.76,
-      "Consensus (Domain Logic)": 0.26,
-      "Core Libs": 3.76,
-      "Cryptography (Primitives)": 0.09,
-      "Database (Persistence)": 0.09,
+      "Build & CI": 0.78,
+      "Consensus": 0.08,
+      "Cryptography": 0.08,
+      "Database": 0.08,
       "Documentation": 1.5,
-      "GUI (Presentation Layer)": 0.76,
-      "Node & RPC (App/Interface)": 0.09,
-      "P2P Network (Infrastructure)": 0.09,
-      "Tests (QA)": 0.26,
-      "Utilities (Shared Libs)": 0.26,
-      "Wallet (Client App)": 0.09
+      "GUI": 0.78,
+      "Mempool": 0.28,
+      "Node & RPC": 0.08,
+      "P2P Network": 0.08,
+      "Script": 0.08,
+      "Tests": 0.28,
+      "Utilities": 3.78,
+      "Wallet": 0.08
     }
   }
 }

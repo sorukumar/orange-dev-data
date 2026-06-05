@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
+  "last_seen": "2026-06-04T00:00:00",
   "technical_focus": "code",
   "total_commits": 17.0,
   "authored_commits": 17.0,
@@ -38,6 +38,8 @@
   "approvals_count": null,
   "p2016_reviews_count": null,
   "modern_reviews_count": null,
+  "first_review_date": null,
+  "last_review_date": null,
   "prs_authored": null,
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
@@ -88,24 +90,24 @@
   "is_top_50": false,
   "commit_history": {
     "2016": {
-      "Node & RPC (App/Interface)": 1.0
+      "Node & RPC": 1.0
     },
     "2018": {
-      "Core Libs": 0.2,
       "Documentation": 1.0,
-      "GUI (Presentation Layer)": 1.2,
-      "Node & RPC (App/Interface)": 2.2,
-      "P2P Network (Infrastructure)": 1.2,
-      "Tests (QA)": 1.2
+      "GUI": 1.2,
+      "Node & RPC": 2.2,
+      "P2P Network": 1.2,
+      "Tests": 1.2,
+      "Utilities": 0.2
     },
     "2020": {
       "Documentation": 1.0
     },
     "2021": {
-      "Core Libs": 1.0,
       "Documentation": 1.0,
-      "GUI (Presentation Layer)": 1.0,
-      "Node & RPC (App/Interface)": 1.0
+      "GUI": 1.0,
+      "Node & RPC": 1.0,
+      "Utilities": 1.0
     }
   }
 }

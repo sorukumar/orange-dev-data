@@ -1,6 +1,6 @@
 {
   "display_name": "Giuseppe Mazzotta",
-  "github_login_final": null,
+  "github_login_final": "cozz",
   "delving_username_final": null,
   "uuid": "auto_giuseppe_mazzotta",
   "badges": {
@@ -11,43 +11,45 @@
     "is_social_contributor": true,
     "is_sponsored": null,
     "maintainer_status": null,
-    "social_source": "mailing_list",
+    "social_source": "github",
     "sponsor_id": null
   },
   "roles": [
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Core Libs",
-  "total_commits": 2.0,
-  "authored_commits": 2.0,
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "GUI",
+  "total_commits": 98.0,
+  "authored_commits": 98.0,
   "merge_commits": 0.0,
-  "total_additions": 85.0,
-  "total_deletions": 53.0,
-  "first_commit": "2014-06-03T09:40:24",
-  "last_commit": "2014-06-10T09:43:27",
+  "total_additions": 5667.0,
+  "total_deletions": 1008.0,
+  "first_commit": "2013-06-11T03:01:52",
+  "last_commit": "2014-11-28T18:11:49",
   "p2016_authored_commits": 0.0,
   "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": null,
-  "reviews_count": null,
-  "avg_approval_latency_days": null,
-  "approvals_count": null,
-  "p2016_reviews_count": null,
-  "modern_reviews_count": null,
-  "prs_authored": null,
-  "avg_pr_ack_velocity_days": null,
-  "avg_concept_lead_time_days": null,
-  "review_reciprocity": null,
-  "hybrid_score": 0.0704,
-  "p2016_hybrid_score": 0.0,
-  "modern_hybrid_score": 0.0,
-  "impact_score": 4.0,
-  "p2016_impact_score": 0.0,
-  "modern_impact_score": 0.0,
+  "avg_review_latency_days": 33.5600431547619,
+  "reviews_count": 43.0,
+  "avg_approval_latency_days": 0.23732638888888888,
+  "approvals_count": 2.0,
+  "p2016_reviews_count": 0.0,
+  "modern_reviews_count": 0.0,
+  "first_review_date": "2013-06-07T20:01:35+00:00",
+  "last_review_date": "2015-08-08T09:42:33+00:00",
+  "prs_authored": 80.0,
+  "avg_pr_ack_velocity_days": 9.137275205761316,
+  "avg_concept_lead_time_days": 67.7949537037037,
+  "review_reciprocity": 0.5375,
+  "hybrid_score": 0.4144,
+  "p2016_hybrid_score": 0.1339,
+  "modern_hybrid_score": 0.1339,
+  "impact_score": 22.0,
+  "p2016_impact_score": 8.0,
+  "modern_impact_score": 8.0,
   "threads_started": 0.0,
   "replies_sent": 1.0,
   "ml_threads": 0.0,
@@ -59,11 +61,15 @@
   "dev_type": "Builder",
   "expertise_domains": [
     "Infrastructure",
-    "Ecosystem"
+    "Ecosystem",
+    "Network"
   ],
   "expertise_by_source": {
     "code": {
-      "Infrastructure": 1.0
+      "Consensus": 0.005,
+      "Infrastructure": 0.985,
+      "Mempool": 0.003,
+      "Network": 0.007
     },
     "discussion": {
       "Ecosystem": 1.0
@@ -71,7 +77,7 @@
   },
   "expertise_domain_scores": {
     "Ecosystem": 0.4,
-    "Infrastructure": 0.6
+    "Infrastructure": 0.591
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -79,19 +85,32 @@
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
-  "global_first_active": "2014-06-03T09:40:24",
+  "global_first_active": "2013-06-11T03:01:52",
   "global_last_active": "2015-01-28T10:19:55",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
   "github_twitter": null,
   "github_blog": null,
-  "github_followers": null,
+  "github_followers": 28.0,
   "is_top_50": false,
+  "github_url": "https://github.com/cozz",
   "commit_history": {
+    "2013": {
+      "Build & CI": 0.33,
+      "GUI": 1.33,
+      "Utilities": 3.33
+    },
     "2014": {
-      "Core Libs": 1.0,
-      "Documentation": 1.0
+      "Build & CI": 1.0,
+      "Consensus": 0.33,
+      "Documentation": 1.0,
+      "GUI": 35.58,
+      "Mempool": 0.25,
+      "Node & RPC": 3.58,
+      "P2P Network": 0.5,
+      "Tests": 0.33,
+      "Utilities": 24.42
     }
   },
   "first_message": {

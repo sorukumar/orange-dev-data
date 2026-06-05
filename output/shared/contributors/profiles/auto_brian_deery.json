@@ -18,8 +18,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Consensus (Domain Logic)",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Mempool",
   "total_commits": 2.0,
   "authored_commits": 2.0,
   "merge_commits": 0.0,
@@ -38,6 +38,8 @@
   "approvals_count": 0.0,
   "p2016_reviews_count": 0.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": null,
+  "last_review_date": null,
   "prs_authored": 1.0,
   "avg_pr_ack_velocity_days": 0.3082986111111111,
   "avg_concept_lead_time_days": null,
@@ -58,14 +60,14 @@
   "last_active": "2015-04-27T09:53:59",
   "dev_type": "Builder",
   "expertise_domains": [
-    "Consensus",
+    "Mempool",
     "Infrastructure",
     "Network"
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.5,
-      "Infrastructure": 0.5
+      "Infrastructure": 0.5,
+      "Mempool": 0.5
     },
     "discussion": {
       "Network": 0.66,
@@ -73,8 +75,8 @@
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.3,
     "Infrastructure": 0.3,
+    "Mempool": 0.3,
     "Network": 0.264,
     "Wallet": 0.136
   },
@@ -96,8 +98,8 @@
   "github_url": "https://github.com/carryforward",
   "commit_history": {
     "2016": {
-      "Consensus (Domain Logic)": 0.5,
-      "Tests (QA)": 0.5
+      "Mempool": 0.5,
+      "Tests": 0.5
     }
   },
   "first_message": {

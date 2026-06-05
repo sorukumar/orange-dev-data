@@ -18,10 +18,10 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Build & CI (DevOps)",
-  "total_commits": 18.0,
-  "authored_commits": 18.0,
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Build & CI",
+  "total_commits": 17.0,
+  "authored_commits": 17.0,
   "merge_commits": 0.0,
   "total_additions": 207.0,
   "total_deletions": 338.0,
@@ -38,13 +38,15 @@
   "approvals_count": 28.0,
   "p2016_reviews_count": 83.0,
   "modern_reviews_count": 83.0,
+  "first_review_date": "2025-02-02T17:27:31+00:00",
+  "last_review_date": "2026-05-10T06:18:39+00:00",
   "prs_authored": 11.0,
   "avg_pr_ack_velocity_days": 15.92674045138889,
   "avg_concept_lead_time_days": 4.054230324074074,
   "review_reciprocity": 7.545454545454546,
   "hybrid_score": 0.3005,
-  "p2016_hybrid_score": 0.3005,
-  "modern_hybrid_score": 0.3005,
+  "p2016_hybrid_score": 0.3004,
+  "modern_hybrid_score": 0.3004,
   "impact_score": 16.0,
   "p2016_impact_score": 16.0,
   "modern_impact_score": 16.0,
@@ -59,20 +61,22 @@
   "dev_type": "Builder",
   "expertise_domains": [
     "Infrastructure",
-    "Consensus",
-    "Network"
+    "Script",
+    "Consensus"
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.045,
-      "Infrastructure": 0.935,
-      "Network": 0.02
+      "Consensus": 0.02,
+      "Infrastructure": 0.907,
+      "Network": 0.02,
+      "Script": 0.053
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.045,
-    "Infrastructure": 0.935,
-    "Network": 0.02
+    "Consensus": 0.02,
+    "Infrastructure": 0.907,
+    "Network": 0.02,
+    "Script": 0.053
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -92,19 +96,19 @@
   "github_url": "https://github.com/purpleKarrot",
   "commit_history": {
     "2024": {
-      "Build & CI (DevOps)": 0.5,
-      "Core Libs": 0.5
+      "Build & CI": 0.5,
+      "Utilities": 0.5
     },
     "2025": {
-      "Build & CI (DevOps)": 3.0,
-      "Consensus (Domain Logic)": 0.45,
-      "Core Libs": 2.45,
-      "P2P Network (Infrastructure)": 0.2,
-      "Tests (QA)": 1.45,
-      "Utilities (Shared Libs)": 0.45
+      "Build & CI": 3.0,
+      "Consensus": 0.2,
+      "P2P Network": 0.2,
+      "Script": 0.53,
+      "Tests": 1.53,
+      "Utilities": 2.53
     },
     "2026": {
-      "Build & CI (DevOps)": 1.0
+      "Build & CI": 1.0
     }
   }
 }

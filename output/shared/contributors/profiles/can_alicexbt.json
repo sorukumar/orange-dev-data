@@ -16,7 +16,7 @@
   },
   "roles": [],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
+  "last_seen": "2026-06-04T00:00:00",
   "technical_focus": "None",
   "total_commits": 2.0,
   "authored_commits": 2.0,
@@ -36,24 +36,26 @@
   "approvals_count": 51.0,
   "p2016_reviews_count": 78.0,
   "modern_reviews_count": 78.0,
+  "first_review_date": "2023-10-24T01:54:24+00:00",
+  "last_review_date": "2025-07-31T11:10:00+00:00",
   "prs_authored": 5.0,
   "avg_pr_ack_velocity_days": 0.3529513888888889,
   "avg_concept_lead_time_days": 2.553310185185185,
   "review_reciprocity": 15.6,
-  "hybrid_score": 0.3878,
-  "p2016_hybrid_score": 0.5064,
+  "hybrid_score": 0.3877,
+  "p2016_hybrid_score": 0.506,
   "modern_hybrid_score": 0.5087,
   "impact_score": 21.0,
   "p2016_impact_score": 26.0,
   "modern_impact_score": 26.0,
-  "threads_started": 106.0,
-  "replies_sent": 199.0,
+  "threads_started": 107.0,
+  "replies_sent": 200.0,
   "ml_threads": 48.0,
-  "delving_threads": 58.0,
+  "delving_threads": 59.0,
   "ml_responses": 126.0,
-  "delving_responses": 73.0,
+  "delving_responses": 74.0,
   "first_active": "2022-04-08T19:29:14",
-  "last_active": "2026-05-19T21:48:31.532000",
+  "last_active": null,
   "dev_type": "Builder",
   "expertise_domains": [
     "Infrastructure",
@@ -76,14 +78,14 @@
     "Privacy": 0.1371,
     "Script": 0.1715
   },
-  "p2016_posts": 305.0,
-  "modern_posts": 220.0,
+  "p2016_posts": 307.0,
+  "modern_posts": 221.0,
   "p2016_ml_posts": 174.0,
-  "p2016_delving_posts": 131.0,
-  "modern_ml_posts": 89.0,
-  "modern_delving_posts": 131.0,
+  "p2016_delving_posts": 133.0,
+  "modern_ml_posts": 88.0,
+  "modern_delving_posts": 133.0,
   "global_first_active": "2022-03-21T22:19:01",
-  "global_last_active": "2026-05-19T21:48:31.532000",
+  "global_last_active": "2022-06-29T22:08:27",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -95,7 +97,7 @@
   "delving_url": "https://delvingbitcoin.org/u/1440000bytes",
   "commit_history": {
     "2022": {
-      "Node & RPC (App/Interface)": 2.0
+      "Node & RPC": 2.0
     }
   },
   "first_message": {
@@ -107,8 +109,8 @@
   "last_message": {
     "source": "delving",
     "subject": "Re: Public archive for Delving Bitcoin",
-    "date": "2026-05-19",
-    "link": "https://delvingbitcoin.org/t/public-archive-for-delving-bitcoin/87/9"
+    "date": "2026-06-01",
+    "link": "https://delvingbitcoin.org/t/public-archive-for-delving-bitcoin/87/11"
   },
   "social_history": {
     "2022": {
@@ -156,14 +158,14 @@
       "soft-fork-activation": 12
     },
     "2026": {
-      "other": 18,
-      "covenants": 3,
+      "other": 20,
+      "covenants": 4,
       "lightning": 1,
-      "mempool-fees": 5,
+      "mempool-fees": 6,
       "mining": 5,
       "privacy": 5,
       "script-opcodes": 4,
-      "security": 2,
+      "security": 3,
       "soft-fork-activation": 1
     }
   }

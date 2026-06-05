@@ -18,8 +18,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Wallet (Client App)",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Wallet",
   "total_commits": 463.0,
   "authored_commits": 463.0,
   "merge_commits": 0.0,
@@ -28,23 +28,25 @@
   "first_commit": "2020-01-23T22:31:16",
   "last_commit": "2026-03-21T01:07:03",
   "p2016_authored_commits": 353.0,
-  "modern_authored_commits": 187.0,
+  "modern_authored_commits": 185.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": 132.72303978830755,
-  "reviews_count": 386.0,
-  "avg_approval_latency_days": 109.09111791623799,
-  "approvals_count": 280.0,
-  "p2016_reviews_count": 386.0,
-  "modern_reviews_count": 271.0,
+  "avg_review_latency_days": 132.40533115977692,
+  "reviews_count": 388.0,
+  "avg_approval_latency_days": 108.51204618986803,
+  "approvals_count": 282.0,
+  "p2016_reviews_count": 388.0,
+  "modern_reviews_count": 270.0,
+  "first_review_date": "2020-06-01T17:20:58+00:00",
+  "last_review_date": "2026-06-04T13:09:57+00:00",
   "prs_authored": 153.0,
   "avg_pr_ack_velocity_days": 18.88887640542328,
   "avg_concept_lead_time_days": 31.758103885135135,
-  "review_reciprocity": 2.522875816993464,
-  "hybrid_score": 0.5601,
-  "p2016_hybrid_score": 0.5601,
-  "modern_hybrid_score": 0.5244,
+  "review_reciprocity": 2.5359477124183005,
+  "hybrid_score": 0.5603,
+  "p2016_hybrid_score": 0.5603,
+  "modern_hybrid_score": 0.5243,
   "impact_score": 29.0,
   "p2016_impact_score": 29.0,
   "modern_impact_score": 27.0,
@@ -64,9 +66,10 @@
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.006,
+      "Consensus": 0.002,
       "Infrastructure": 0.558,
       "Network": 0.016,
+      "Script": 0.004,
       "Wallet": 0.419
     }
   },
@@ -93,54 +96,52 @@
   "github_url": "https://github.com/furszy",
   "commit_history": {
     "2020": {
-      "GUI (Presentation Layer)": 1.0,
-      "Wallet (Client App)": 1.0
+      "GUI": 1.0,
+      "Wallet": 1.0
     },
     "2022": {
-      "Build & CI (DevOps)": 4.0,
-      "Core Libs": 0.5,
+      "Build & CI": 4.0,
       "Documentation": 1.33,
-      "GUI (Presentation Layer)": 10.83,
-      "Node & RPC (App/Interface)": 2.83,
-      "Tests (QA)": 34.5,
-      "Utilities (Shared Libs)": 0.83,
-      "Wallet (Client App)": 69.17
+      "GUI": 10.83,
+      "Node & RPC": 2.83,
+      "Tests": 34.5,
+      "Utilities": 1.33,
+      "Wallet": 69.17
     },
     "2023": {
-      "Build & CI (DevOps)": 1.33,
-      "Consensus (Domain Logic)": 2.03,
-      "Core Libs": 0.87,
+      "Build & CI": 1.33,
+      "Consensus": 0.53,
       "Documentation": 0.7,
-      "GUI (Presentation Layer)": 7.83,
-      "Node & RPC (App/Interface)": 17.37,
-      "P2P Network (Infrastructure)": 5.5,
-      "Tests (QA)": 45.53,
-      "Utilities (Shared Libs)": 0.5,
-      "Wallet (Client App)": 38.33
+      "GUI": 7.83,
+      "Node & RPC": 17.37,
+      "P2P Network": 5.5,
+      "Script": 1.5,
+      "Tests": 45.53,
+      "Utilities": 1.37,
+      "Wallet": 38.33
     },
     "2024": {
-      "Build & CI (DevOps)": 1.5,
-      "Consensus (Domain Logic)": 0.25,
-      "GUI (Presentation Layer)": 7.83,
-      "Node & RPC (App/Interface)": 1.25,
-      "P2P Network (Infrastructure)": 0.25,
-      "Tests (QA)": 19.58,
-      "Utilities (Shared Libs)": 2.0,
-      "Wallet (Client App)": 28.33
+      "Build & CI": 1.5,
+      "Consensus": 0.25,
+      "GUI": 7.83,
+      "Node & RPC": 1.25,
+      "P2P Network": 0.25,
+      "Tests": 19.58,
+      "Utilities": 2.0,
+      "Wallet": 28.33
     },
     "2025": {
-      "GUI (Presentation Layer)": 1.0,
-      "Node & RPC (App/Interface)": 3.0,
-      "Tests (QA)": 11.5,
-      "Utilities (Shared Libs)": 0.5,
-      "Wallet (Client App)": 7.0
+      "GUI": 1.0,
+      "Node & RPC": 3.0,
+      "Tests": 11.5,
+      "Utilities": 0.5,
+      "Wallet": 7.0
     },
     "2026": {
-      "Core Libs": 3.0,
-      "Node & RPC (App/Interface)": 1.0,
-      "Tests (QA)": 12.5,
-      "Utilities (Shared Libs)": 2.5,
-      "Wallet (Client App)": 4.0
+      "Node & RPC": 1.0,
+      "Tests": 12.5,
+      "Utilities": 5.5,
+      "Wallet": 4.0
     }
   }
 }

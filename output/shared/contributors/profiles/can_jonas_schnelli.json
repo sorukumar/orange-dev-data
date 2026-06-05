@@ -12,7 +12,11 @@
     "is_sponsored": null,
     "maintainer_status": "emeritus",
     "social_source": "mailing_list",
-    "sponsor_id": null
+    "sponsor_id": null,
+    "maintainer_title": "GUI Maintainer",
+    "maintainer_primary_area": "GUI / Core",
+    "maintainer_appointed": "2015-11-13",
+    "maintainer_stepped_down": "2021-10-21"
   },
   "roles": [
     "GUI Maintainer",
@@ -20,10 +24,10 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
+  "last_seen": "2026-06-04T00:00:00",
   "technical_focus": "Merge",
-  "total_commits": 966.0,
-  "authored_commits": 717.0,
+  "total_commits": 964.0,
+  "authored_commits": 715.0,
   "merge_commits": 249.0,
   "total_additions": 21558.0,
   "total_deletions": 12294.0,
@@ -40,13 +44,15 @@
   "approvals_count": 1619.0,
   "p2016_reviews_count": 1689.0,
   "modern_reviews_count": 2.0,
-  "prs_authored": 413.0,
+  "first_review_date": "2013-04-05T19:05:53+00:00",
+  "last_review_date": "2025-02-26T01:46:52+00:00",
+  "prs_authored": 416.0,
   "avg_pr_ack_velocity_days": 13.961257142229256,
   "avg_concept_lead_time_days": 37.47512433087384,
-  "review_reciprocity": 5.1791767554479415,
-  "hybrid_score": 2.7328,
-  "p2016_hybrid_score": 1.8195,
-  "modern_hybrid_score": 0.2521,
+  "review_reciprocity": 5.141826923076923,
+  "hybrid_score": 2.7327,
+  "p2016_hybrid_score": 1.8192,
+  "modern_hybrid_score": 0.252,
   "impact_score": 81.0,
   "p2016_impact_score": 66.0,
   "modern_impact_score": 14.0,
@@ -70,10 +76,12 @@
       "Network": 0.2
     },
     "code": {
-      "Consensus": 0.02,
+      "Consensus": 0.019,
       "Cryptography": 0.003,
-      "Infrastructure": 0.765,
+      "Infrastructure": 0.763,
+      "Mempool": 0.003,
       "Network": 0.041,
+      "Script": 0.001,
       "Wallet": 0.171
     },
     "discussion": {
@@ -82,8 +90,8 @@
     }
   },
   "expertise_domain_scores": {
-    "Infrastructure": 0.6295,
-    "Network": 0.2523,
+    "Infrastructure": 0.6287,
+    "Network": 0.2522,
     "Wallet": 0.1113
   },
   "p2016_posts": 98.0,
@@ -104,97 +112,99 @@
   "github_url": "https://github.com/jonasschnelli",
   "commit_history": {
     "2013": {
-      "Build & CI (DevOps)": 1.0,
-      "Core Libs": 3.33,
+      "Build & CI": 1.0,
       "Documentation": 6.33,
-      "GUI (Presentation Layer)": 11.33,
-      "Merge": 2.0
+      "GUI": 11.33,
+      "Merge": 2.0,
+      "Utilities": 3.33
     },
     "2014": {
-      "Build & CI (DevOps)": 0.87,
-      "Core Libs": 14.7,
+      "Build & CI": 0.87,
       "Documentation": 7.17,
-      "GUI (Presentation Layer)": 12.37,
-      "Node & RPC (App/Interface)": 0.7,
-      "Tests (QA)": 0.2
+      "GUI": 12.37,
+      "Node & RPC": 0.7,
+      "Tests": 0.2,
+      "Utilities": 14.7
     },
     "2015": {
-      "Build & CI (DevOps)": 7.22,
-      "Consensus (Domain Logic)": 1.33,
-      "Core Libs": 62.73,
-      "Documentation": 10.12,
-      "GUI (Presentation Layer)": 41.83,
+      "Build & CI": 7.24,
+      "Consensus": 1.0,
+      "Documentation": 10.14,
+      "GUI": 41.84,
+      "Mempool": 1.0,
       "Merge": 11.0,
-      "Node & RPC (App/Interface)": 13.06,
-      "P2P Network (Infrastructure)": 8.33,
-      "Tests (QA)": 13.72,
-      "Utilities (Shared Libs)": 2.96,
-      "Wallet (Client App)": 8.69
+      "Node & RPC": 12.08,
+      "P2P Network": 8.33,
+      "Script": 0.33,
+      "Tests": 13.91,
+      "Utilities": 65.41,
+      "Wallet": 8.71
     },
     "2016": {
-      "Build & CI (DevOps)": 5.95,
-      "Consensus (Domain Logic)": 2.5,
-      "Core Libs": 19.98,
+      "Build & CI": 5.95,
+      "Consensus": 2.0,
       "Documentation": 3.33,
-      "GUI (Presentation Layer)": 31.62,
+      "GUI": 31.62,
+      "Mempool": 0.5,
       "Merge": 50.0,
-      "Node & RPC (App/Interface)": 7.9,
-      "P2P Network (Infrastructure)": 2.0,
-      "Tests (QA)": 2.57,
-      "Wallet (Client App)": 31.15
+      "Node & RPC": 7.9,
+      "P2P Network": 2.0,
+      "Tests": 2.57,
+      "Utilities": 19.98,
+      "Wallet": 31.15
     },
     "2017": {
-      "Build & CI (DevOps)": 3.5,
-      "Consensus (Domain Logic)": 2.33,
-      "Core Libs": 9.0,
+      "Build & CI": 3.5,
+      "Consensus": 2.33,
       "Documentation": 2.0,
-      "GUI (Presentation Layer)": 26.0,
+      "GUI": 26.0,
       "Merge": 49.0,
-      "Node & RPC (App/Interface)": 2.5,
-      "P2P Network (Infrastructure)": 6.0,
-      "Tests (QA)": 11.33,
-      "Wallet (Client App)": 41.33
+      "Node & RPC": 2.5,
+      "P2P Network": 6.0,
+      "Tests": 11.33,
+      "Utilities": 9.0,
+      "Wallet": 41.33
     },
     "2018": {
-      "Build & CI (DevOps)": 0.5,
-      "Consensus (Domain Logic)": 0.92,
-      "Core Libs": 4.08,
-      "Cryptography (Primitives)": 0.5,
+      "Build & CI": 0.5,
+      "Consensus": 0.92,
+      "Cryptography": 0.5,
       "Documentation": 1.0,
-      "GUI (Presentation Layer)": 9.58,
+      "GUI": 9.58,
       "Merge": 42.0,
-      "Node & RPC (App/Interface)": 8.08,
-      "P2P Network (Infrastructure)": 1.0,
-      "Tests (QA)": 9.5,
-      "Wallet (Client App)": 3.83
+      "Node & RPC": 8.08,
+      "P2P Network": 1.0,
+      "Tests": 9.5,
+      "Utilities": 4.08,
+      "Wallet": 3.83
     },
     "2019": {
-      "Build & CI (DevOps)": 2.33,
-      "Consensus (Domain Logic)": 2.0,
-      "Core Libs": 0.33,
-      "Cryptography (Primitives)": 1.17,
+      "Build & CI": 2.33,
+      "Consensus": 2.0,
+      "Cryptography": 1.17,
       "Documentation": 0.5,
-      "GUI (Presentation Layer)": 3.5,
+      "GUI": 3.5,
       "Merge": 36.0,
-      "Node & RPC (App/Interface)": 2.0,
-      "P2P Network (Infrastructure)": 4.5,
-      "Tests (QA)": 7.67,
-      "Wallet (Client App)": 2.0
+      "Node & RPC": 2.0,
+      "P2P Network": 4.5,
+      "Tests": 7.67,
+      "Utilities": 0.33,
+      "Wallet": 2.0
     },
     "2020": {
-      "Build & CI (DevOps)": 4.0,
-      "Consensus (Domain Logic)": 1.5,
-      "Core Libs": 1.0,
-      "GUI (Presentation Layer)": 3.5,
+      "Build & CI": 4.0,
+      "Consensus": 1.5,
+      "GUI": 3.5,
       "Merge": 50.0,
-      "Node & RPC (App/Interface)": 2.5,
-      "Tests (QA)": 4.5,
-      "Wallet (Client App)": 3.0
+      "Node & RPC": 2.5,
+      "Tests": 4.5,
+      "Utilities": 1.0,
+      "Wallet": 3.0
     },
     "2021": {
       "Merge": 9.0,
-      "Node & RPC (App/Interface)": 1.0,
-      "Tests (QA)": 2.0
+      "Node & RPC": 1.0,
+      "Tests": 2.0
     }
   },
   "bip_list": [

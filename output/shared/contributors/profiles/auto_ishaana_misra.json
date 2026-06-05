@@ -18,8 +18,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Tests (QA)",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Tests",
   "total_commits": 54.0,
   "authored_commits": 54.0,
   "merge_commits": 0.0,
@@ -38,6 +38,8 @@
   "approvals_count": 35.0,
   "p2016_reviews_count": 42.0,
   "modern_reviews_count": 15.0,
+  "first_review_date": "2022-05-25T19:17:37+00:00",
+  "last_review_date": "2025-07-25T16:48:50+00:00",
   "prs_authored": 19.0,
   "avg_pr_ack_velocity_days": 20.025159143518522,
   "avg_concept_lead_time_days": 18.096899594907406,
@@ -60,18 +62,18 @@
   "expertise_domains": [
     "Infrastructure",
     "Wallet",
-    "Consensus"
+    "Mempool"
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.013,
       "Infrastructure": 0.542,
+      "Mempool": 0.013,
       "Wallet": 0.445
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.013,
     "Infrastructure": 0.542,
+    "Mempool": 0.013,
     "Wallet": 0.445
   },
   "p2016_posts": 0.0,
@@ -92,26 +94,26 @@
   "github_url": "https://github.com/ishaanam",
   "commit_history": {
     "2022": {
-      "Core Libs": 0.25,
       "Documentation": 0.33,
-      "Node & RPC (App/Interface)": 1.75,
-      "Tests (QA)": 6.08,
-      "Wallet (Client App)": 3.58
+      "Node & RPC": 1.75,
+      "Tests": 6.08,
+      "Utilities": 0.25,
+      "Wallet": 3.58
     },
     "2023": {
-      "Tests (QA)": 6.5,
-      "Wallet (Client App)": 6.5
+      "Tests": 6.5,
+      "Wallet": 6.5
     },
     "2024": {
       "Documentation": 0.33,
-      "Tests (QA)": 1.33,
-      "Wallet (Client App)": 0.33
+      "Tests": 1.33,
+      "Wallet": 0.33
     },
     "2025": {
-      "Consensus (Domain Logic)": 0.5,
       "Documentation": 1.0,
-      "Tests (QA)": 3.0,
-      "Wallet (Client App)": 6.5
+      "Mempool": 0.5,
+      "Tests": 3.0,
+      "Wallet": 6.5
     }
   }
 }

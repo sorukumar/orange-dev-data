@@ -18,10 +18,10 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Tests (QA)",
-  "total_commits": 16.0,
-  "authored_commits": 16.0,
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Tests",
+  "total_commits": 17.0,
+  "authored_commits": 17.0,
   "merge_commits": 0.0,
   "total_additions": 286.0,
   "total_deletions": 183.0,
@@ -38,12 +38,14 @@
   "approvals_count": 4.0,
   "p2016_reviews_count": 5.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": "2018-05-31T02:24:58+00:00",
+  "last_review_date": "2018-11-10T00:16:04+00:00",
   "prs_authored": 10.0,
   "avg_pr_ack_velocity_days": 63.69233651620371,
   "avg_concept_lead_time_days": 99.25902777777779,
   "review_reciprocity": 0.5,
   "hybrid_score": 0.2324,
-  "p2016_hybrid_score": 0.2369,
+  "p2016_hybrid_score": 0.237,
   "modern_hybrid_score": 0.0646,
   "impact_score": 13.0,
   "p2016_impact_score": 13.0,
@@ -64,9 +66,10 @@
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.308,
-      "Infrastructure": 0.634,
-      "Network": 0.033,
+      "Consensus": 0.225,
+      "Infrastructure": 0.625,
+      "Network": 0.025,
+      "Script": 0.1,
       "Wallet": 0.025
     },
     "discussion": {
@@ -74,10 +77,11 @@
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.1848,
-    "Infrastructure": 0.3804,
+    "Consensus": 0.135,
+    "Infrastructure": 0.375,
     "Mining": 0.4,
-    "Network": 0.0198,
+    "Network": 0.015,
+    "Script": 0.06,
     "Wallet": 0.015
   },
   "p2016_posts": 3.0,
@@ -98,12 +102,13 @@
   "github_url": "https://github.com/lucash-dev",
   "commit_history": {
     "2018": {
-      "Consensus (Domain Logic)": 3.08,
-      "Core Libs": 0.25,
-      "Node & RPC (App/Interface)": 0.25,
-      "P2P Network (Infrastructure)": 0.33,
-      "Tests (QA)": 5.83,
-      "Wallet (Client App)": 0.25
+      "Consensus": 2.25,
+      "Node & RPC": 0.25,
+      "P2P Network": 0.25,
+      "Script": 1.0,
+      "Tests": 5.75,
+      "Utilities": 0.25,
+      "Wallet": 0.25
     }
   },
   "first_message": {

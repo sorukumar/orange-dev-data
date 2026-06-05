@@ -19,8 +19,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Core Libs",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Utilities",
   "total_commits": 25.0,
   "authored_commits": 25.0,
   "merge_commits": 0.0,
@@ -39,6 +39,8 @@
   "approvals_count": 4.0,
   "p2016_reviews_count": 0.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": "2011-11-13T11:00:36+00:00",
+  "last_review_date": "2015-10-12T16:06:54+00:00",
   "prs_authored": 15.0,
   "avg_pr_ack_velocity_days": 12.924140046296296,
   "avg_concept_lead_time_days": null,
@@ -102,28 +104,28 @@
   "github_url": "https://github.com/mikehearn",
   "commit_history": {
     "2012": {
-      "Build & CI (DevOps)": 0.2,
-      "Core Libs": 0.2,
-      "Database (Persistence)": 0.2,
+      "Build & CI": 0.2,
+      "Database": 0.2,
       "Documentation": 0.2,
-      "Tests (QA)": 0.2
+      "Tests": 0.2,
+      "Utilities": 0.2
     },
     "2013": {
-      "Build & CI (DevOps)": 0.14,
-      "Consensus (Domain Logic)": 0.14,
-      "Core Libs": 4.14,
-      "GUI (Presentation Layer)": 0.14,
-      "Node & RPC (App/Interface)": 1.14,
-      "P2P Network (Infrastructure)": 0.64,
-      "Tests (QA)": 0.64
+      "Build & CI": 0.14,
+      "Consensus": 0.14,
+      "GUI": 0.14,
+      "Node & RPC": 1.14,
+      "P2P Network": 0.64,
+      "Tests": 0.64,
+      "Utilities": 4.14
     },
     "2014": {
-      "Core Libs": 1.5,
-      "P2P Network (Infrastructure)": 0.5
+      "P2P Network": 0.5,
+      "Utilities": 1.5
     },
     "2015": {
-      "GUI (Presentation Layer)": 0.5,
-      "P2P Network (Infrastructure)": 0.5
+      "GUI": 0.5,
+      "P2P Network": 0.5
     }
   },
   "bip_list": [

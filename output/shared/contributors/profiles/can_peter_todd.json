@@ -19,10 +19,10 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Core Libs",
-  "total_commits": 129.0,
-  "authored_commits": 129.0,
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Utilities",
+  "total_commits": 132.0,
+  "authored_commits": 132.0,
   "merge_commits": 0.0,
   "total_additions": 4830.0,
   "total_deletions": 846.0,
@@ -39,8 +39,10 @@
   "approvals_count": 253.0,
   "p2016_reviews_count": 159.0,
   "modern_reviews_count": 31.0,
+  "first_review_date": "2012-12-19T17:39:21+00:00",
+  "last_review_date": "2026-01-30T21:28:35+00:00",
   "prs_authored": 99.0,
-  "avg_pr_ack_velocity_days": 15.444967830882353,
+  "avg_pr_ack_velocity_days": 15.469712661030595,
   "avg_concept_lead_time_days": 24.905620659722224,
   "review_reciprocity": 4.292929292929293,
   "hybrid_score": 1.6547,
@@ -60,19 +62,20 @@
   "dev_type": "Protocol Designer",
   "expertise_domains": [
     "Infrastructure",
-    "Mining",
-    "Consensus"
+    "Consensus",
+    "Mempool"
   ],
   "expertise_by_source": {
     "bips": {
       "Consensus": 0.25,
-      "Infrastructure": 0.5,
-      "Mining": 0.25
+      "Infrastructure": 0.75
     },
     "code": {
-      "Consensus": 0.123,
-      "Infrastructure": 0.801,
+      "Consensus": 0.041,
+      "Infrastructure": 0.798,
+      "Mempool": 0.003,
       "Network": 0.027,
+      "Script": 0.082,
       "Wallet": 0.05
     },
     "discussion": {
@@ -81,17 +84,18 @@
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.1619,
-    "Infrastructure": 0.4902,
-    "Mempool": 0.1154,
-    "Mining": 0.2095,
+    "Consensus": 0.1373,
+    "Infrastructure": 0.6142,
+    "Mempool": 0.1163,
+    "Mining": 0.0846,
+    "Script": 0.0246,
     "Wallet": 0.015
   },
   "p2016_posts": 543.0,
-  "modern_posts": 161.0,
+  "modern_posts": 159.0,
   "p2016_ml_posts": 543.0,
   "p2016_delving_posts": 0.0,
-  "modern_ml_posts": 161.0,
+  "modern_ml_posts": 159.0,
   "modern_delving_posts": 0.0,
   "global_first_active": "2012-04-26T10:49:28",
   "global_last_active": "2025-12-10T07:57:55",
@@ -105,51 +109,54 @@
   "github_url": "https://github.com/petertodd",
   "commit_history": {
     "2012": {
-      "Core Libs": 1.0,
-      "Documentation": 1.0
+      "Documentation": 1.0,
+      "Utilities": 1.0
     },
     "2013": {
-      "Core Libs": 10.0,
       "Documentation": 1.0,
-      "GUI (Presentation Layer)": 1.0,
-      "P2P Network (Infrastructure)": 1.0,
-      "Tests (QA)": 5.0
+      "GUI": 1.0,
+      "P2P Network": 1.0,
+      "Tests": 5.0,
+      "Utilities": 10.0
     },
     "2014": {
-      "Consensus (Domain Logic)": 8.5,
-      "Core Libs": 14.33,
+      "Consensus": 0.5,
       "Documentation": 1.0,
-      "GUI (Presentation Layer)": 0.33,
-      "P2P Network (Infrastructure)": 1.0,
-      "Tests (QA)": 12.83
+      "GUI": 0.33,
+      "Mempool": 0.33,
+      "P2P Network": 1.0,
+      "Script": 7.83,
+      "Tests": 12.67,
+      "Utilities": 14.33
     },
     "2015": {
-      "Consensus (Domain Logic)": 1.0,
-      "Core Libs": 21.08,
+      "Consensus": 0.33,
       "Documentation": 3.5,
-      "GUI (Presentation Layer)": 0.25,
-      "P2P Network (Infrastructure)": 0.83,
-      "Tests (QA)": 1.08,
-      "Wallet (Client App)": 5.25
+      "GUI": 0.25,
+      "P2P Network": 0.83,
+      "Script": 0.83,
+      "Tests": 1.08,
+      "Utilities": 20.92,
+      "Wallet": 5.25
     },
     "2016": {
-      "Consensus (Domain Logic)": 1.0,
-      "Core Libs": 6.0,
-      "Documentation": 2.0
+      "Consensus": 1.0,
+      "Documentation": 2.0,
+      "Utilities": 6.0
     },
     "2017": {
-      "Consensus (Domain Logic)": 1.0,
-      "Core Libs": 1.0
+      "Consensus": 1.0,
+      "Utilities": 1.0
     },
     "2023": {
-      "Consensus (Domain Logic)": 1.5,
-      "Tests (QA)": 0.5
+      "Consensus": 1.5,
+      "Tests": 0.5
     },
     "2024": {
       "Documentation": 1.0
     },
     "2025": {
-      "Tests (QA)": 1.0
+      "Tests": 1.0
     }
   },
   "bip_list": [
@@ -178,7 +185,7 @@
       "number": 125,
       "title": "Opt-in Full Replace-by-Fee Signaling",
       "status": "Deployed",
-      "theme": "Mining",
+      "theme": "Other",
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0125.mediawiki"
     }
   ],

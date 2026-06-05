@@ -18,10 +18,10 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Core Libs",
-  "total_commits": 25.0,
-  "authored_commits": 25.0,
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Utilities",
+  "total_commits": 24.0,
+  "authored_commits": 24.0,
   "merge_commits": 0.0,
   "total_additions": 181.0,
   "total_deletions": 96.0,
@@ -38,12 +38,14 @@
   "approvals_count": 8.0,
   "p2016_reviews_count": 15.0,
   "modern_reviews_count": 1.0,
+  "first_review_date": "2018-03-22T04:35:26+00:00",
+  "last_review_date": "2025-05-06T11:37:27+00:00",
   "prs_authored": 21.0,
   "avg_pr_ack_velocity_days": 7.919098875661376,
   "avg_concept_lead_time_days": 0.5703395061728395,
   "review_reciprocity": 0.7142857142857143,
   "hybrid_score": 0.2745,
-  "p2016_hybrid_score": 0.2744,
+  "p2016_hybrid_score": 0.2745,
   "modern_hybrid_score": 0.0911,
   "impact_score": 15.0,
   "p2016_impact_score": 15.0,
@@ -65,14 +67,14 @@
   "expertise_by_source": {
     "code": {
       "Consensus": 0.014,
-      "Infrastructure": 0.954,
-      "Wallet": 0.032
+      "Infrastructure": 0.948,
+      "Wallet": 0.038
     }
   },
   "expertise_domain_scores": {
     "Consensus": 0.014,
-    "Infrastructure": 0.954,
-    "Wallet": 0.032
+    "Infrastructure": 0.948,
+    "Wallet": 0.038
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -92,19 +94,18 @@
   "github_url": "https://github.com/murrayn",
   "commit_history": {
     "2018": {
-      "Build & CI (DevOps)": 2.5,
-      "Consensus (Domain Logic)": 0.2,
-      "Core Libs": 3.28,
+      "Build & CI": 2.5,
+      "Consensus": 0.2,
       "Documentation": 3.5,
-      "GUI (Presentation Layer)": 0.2,
-      "Node & RPC (App/Interface)": 0.78,
-      "Tests (QA)": 0.83,
-      "Utilities (Shared Libs)": 0.25,
-      "Wallet (Client App)": 0.45
+      "GUI": 0.2,
+      "Node & RPC": 0.87,
+      "Tests": 0.83,
+      "Utilities": 3.37,
+      "Wallet": 0.53
     },
     "2022": {
-      "Core Libs": 1.0,
-      "Documentation": 1.0
+      "Documentation": 1.0,
+      "Utilities": 1.0
     }
   }
 }

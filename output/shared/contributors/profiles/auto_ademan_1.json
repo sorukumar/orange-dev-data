@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
+  "last_seen": "2026-06-04T00:00:00",
   "technical_focus": "None",
   "total_commits": 0.0,
   "authored_commits": 0.0,
@@ -38,6 +38,8 @@
   "approvals_count": null,
   "p2016_reviews_count": null,
   "modern_reviews_count": null,
+  "first_review_date": null,
+  "last_review_date": null,
   "prs_authored": null,
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
@@ -49,39 +51,36 @@
   "p2016_impact_score": 0.0,
   "modern_impact_score": 0.0,
   "threads_started": 6.0,
-  "replies_sent": 1.0,
+  "replies_sent": 2.0,
   "ml_threads": 0.0,
   "delving_threads": 6.0,
   "ml_responses": 0.0,
-  "delving_responses": 1.0,
-  "first_active": "2025-01-04T22:35:51.202000",
-  "last_active": "2026-05-28T21:46:45.143000",
+  "delving_responses": 2.0,
+  "first_active": null,
+  "last_active": null,
   "dev_type": "Participant",
   "expertise_domains": [
     "Script",
-    "Mempool",
-    "L2"
+    "Mempool"
   ],
   "expertise_by_source": {
     "discussion": {
-      "L2": 0.2,
-      "Mempool": 0.262,
-      "Script": 0.538
+      "Mempool": 0.231,
+      "Script": 0.769
     }
   },
   "expertise_domain_scores": {
-    "L2": 0.2,
-    "Mempool": 0.262,
-    "Script": 0.538
+    "Mempool": 0.231,
+    "Script": 0.769
   },
-  "p2016_posts": 7.0,
-  "modern_posts": 7.0,
+  "p2016_posts": 8.0,
+  "modern_posts": 8.0,
   "p2016_ml_posts": 0.0,
-  "p2016_delving_posts": 7.0,
+  "p2016_delving_posts": 8.0,
   "modern_ml_posts": 0.0,
-  "modern_delving_posts": 7.0,
-  "global_first_active": "2025-01-04T22:35:51.201999872",
-  "global_last_active": "2026-05-28T21:46:45.143000064",
+  "modern_delving_posts": 8.0,
+  "global_first_active": null,
+  "global_last_active": null,
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -99,8 +98,8 @@
   "last_message": {
     "source": "delving",
     "subject": "Re: CTV-only Vault Concept v0.1.0 release",
-    "date": "2026-05-28",
-    "link": "https://delvingbitcoin.org/t/ctv-only-vault-concept-v0-1-0-release/2539/3"
+    "date": "2026-05-30",
+    "link": "https://delvingbitcoin.org/t/ctv-only-vault-concept-v0-1-0-release/2539/5"
   },
   "social_history": {
     "2025": {
@@ -112,8 +111,8 @@
       "taproot": 1
     },
     "2026": {
-      "covenants": 4,
-      "vaults": 2
+      "covenants": 5,
+      "vaults": 3
     }
   }
 }

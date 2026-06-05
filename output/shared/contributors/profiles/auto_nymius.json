@@ -19,7 +19,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
+  "last_seen": "2026-06-04T00:00:00",
   "technical_focus": "None",
   "total_commits": 0.0,
   "authored_commits": 0.0,
@@ -39,6 +39,8 @@
   "approvals_count": 4.0,
   "p2016_reviews_count": 12.0,
   "modern_reviews_count": 12.0,
+  "first_review_date": "2024-10-24T18:51:12+00:00",
+  "last_review_date": "2026-05-11T13:40:00+00:00",
   "prs_authored": 3.0,
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
@@ -55,17 +57,16 @@
   "delving_threads": 2.0,
   "ml_responses": 0.0,
   "delving_responses": 1.0,
-  "first_active": "2025-10-27T17:29:31.287000",
-  "last_active": "2026-01-16T13:40:24.859000",
+  "first_active": null,
+  "last_active": null,
   "dev_type": "Reviewer",
   "expertise_domains": [
-    "Infrastructure",
     "Privacy",
     "Wallet"
   ],
   "expertise_by_source": {
     "bips": {
-      "Infrastructure": 1.0
+      "Privacy": 1.0
     },
     "discussion": {
       "Privacy": 0.566,
@@ -73,8 +74,7 @@
     }
   },
   "expertise_domain_scores": {
-    "Infrastructure": 0.7143,
-    "Privacy": 0.1617,
+    "Privacy": 0.876,
     "Wallet": 0.124
   },
   "p2016_posts": 4.0,
@@ -83,8 +83,8 @@
   "p2016_delving_posts": 3.0,
   "modern_ml_posts": 1.0,
   "modern_delving_posts": 3.0,
-  "global_first_active": "2025-10-27T17:29:31.287000064",
-  "global_last_active": "2026-01-16T13:40:24.859000064",
+  "global_first_active": null,
+  "global_last_active": null,
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -99,7 +99,7 @@
       "number": 376,
       "title": "Spending Silent Payment outputs with PSBTs",
       "status": "Draft",
-      "theme": "Other",
+      "theme": "Privacy",
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0376.mediawiki"
     }
   ],

@@ -18,10 +18,10 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Build & CI (DevOps)",
-  "total_commits": 59.0,
-  "authored_commits": 59.0,
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Build & CI",
+  "total_commits": 58.0,
+  "authored_commits": 58.0,
   "merge_commits": 0.0,
   "total_additions": 6076.0,
   "total_deletions": 4516.0,
@@ -38,6 +38,8 @@
   "approvals_count": 101.0,
   "p2016_reviews_count": 155.0,
   "modern_reviews_count": 28.0,
+  "first_review_date": "2018-02-01T22:51:09+00:00",
+  "last_review_date": "2025-07-03T10:55:22+00:00",
   "prs_authored": 58.0,
   "avg_pr_ack_velocity_days": 0.878945987654321,
   "avg_concept_lead_time_days": 2.7713310185185183,
@@ -64,14 +66,14 @@
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.004,
-      "Infrastructure": 0.97,
-      "Network": 0.026
+      "Consensus": 0.005,
+      "Infrastructure": 0.968,
+      "Network": 0.027
     }
   },
   "expertise_domain_scores": {
-    "Infrastructure": 0.97,
-    "Network": 0.026
+    "Infrastructure": 0.968,
+    "Network": 0.027
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -91,35 +93,34 @@
   "github_url": "https://github.com/sipsorcery",
   "commit_history": {
     "2017": {
-      "Consensus (Domain Logic)": 0.2,
-      "Core Libs": 0.2,
+      "Consensus": 0.25,
       "Documentation": 3.0,
-      "P2P Network (Infrastructure)": 0.2,
-      "Tests (QA)": 1.2,
-      "Utilities (Shared Libs)": 0.2
+      "P2P Network": 0.25,
+      "Tests": 1.25,
+      "Utilities": 0.25
     },
     "2018": {
-      "Build & CI (DevOps)": 1.0,
-      "Core Libs": 1.0,
-      "P2P Network (Infrastructure)": 1.0
+      "Build & CI": 1.0,
+      "P2P Network": 1.0,
+      "Utilities": 1.0
     },
     "2019": {
-      "Build & CI (DevOps)": 14.0,
-      "Core Libs": 3.0,
+      "Build & CI": 14.0,
       "Documentation": 1.0,
-      "Tests (QA)": 1.0
+      "Tests": 1.0,
+      "Utilities": 3.0
     },
     "2020": {
-      "Build & CI (DevOps)": 4.0,
-      "Core Libs": 8.0,
-      "Documentation": 1.0
+      "Build & CI": 4.0,
+      "Documentation": 1.0,
+      "Utilities": 8.0
     },
     "2021": {
-      "Build & CI (DevOps)": 3.0,
-      "Core Libs": 3.0
+      "Build & CI": 3.0,
+      "Utilities": 3.0
     },
     "2023": {
-      "Build & CI (DevOps)": 1.0
+      "Build & CI": 1.0
     }
   }
 }

@@ -16,7 +16,7 @@
   },
   "roles": [],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
+  "last_seen": "2026-06-04T00:00:00",
   "technical_focus": "None",
   "total_commits": 17.0,
   "authored_commits": 17.0,
@@ -36,6 +36,8 @@
   "approvals_count": 0.0,
   "p2016_reviews_count": 0.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": null,
+  "last_review_date": null,
   "prs_authored": 28.0,
   "avg_pr_ack_velocity_days": 7.969882897603486,
   "avg_concept_lead_time_days": 17.90134259259259,
@@ -62,15 +64,17 @@
   ],
   "expertise_by_source": {
     "code": {
-      "Infrastructure": 0.733,
+      "Infrastructure": 0.667,
+      "Mempool": 0.067,
       "Network": 0.067,
       "Wallet": 0.2
     }
   },
   "expertise_domain_scores": {
-    "Infrastructure": 0.733,
-    "Network": 0.067,
-    "Wallet": 0.2
+    "Infrastructure": 0.6663,
+    "Mempool": 0.0669,
+    "Network": 0.0669,
+    "Wallet": 0.1998
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -90,26 +94,26 @@
   "github_url": "https://github.com/Bushstar",
   "commit_history": {
     "2019": {
-      "Build & CI (DevOps)": 1.0,
-      "Core Libs": 2.0,
-      "Node & RPC (App/Interface)": 1.0,
-      "Wallet (Client App)": 2.0
+      "Build & CI": 1.0,
+      "Node & RPC": 1.0,
+      "Utilities": 2.0,
+      "Wallet": 2.0
     },
     "2020": {
-      "Build & CI (DevOps)": 3.0,
-      "Core Libs": 1.0,
+      "Build & CI": 3.0,
       "Documentation": 1.0,
-      "GUI (Presentation Layer)": 0.5,
-      "Tests (QA)": 0.5
+      "GUI": 0.5,
+      "Tests": 0.5,
+      "Utilities": 1.0
     },
     "2021": {
-      "P2P Network (Infrastructure)": 1.0
+      "P2P Network": 1.0
     },
     "2022": {
-      "Node & RPC (App/Interface)": 1.0
+      "Mempool": 1.0
     },
     "2023": {
-      "Wallet (Client App)": 1.0
+      "Wallet": 1.0
     }
   }
 }

@@ -19,7 +19,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
+  "last_seen": "2026-06-04T00:00:00",
   "technical_focus": "Documentation",
   "total_commits": 17.0,
   "authored_commits": 17.0,
@@ -39,11 +39,13 @@
   "approvals_count": 30.0,
   "p2016_reviews_count": 77.0,
   "modern_reviews_count": 7.0,
+  "first_review_date": "2014-04-27T00:27:21+00:00",
+  "last_review_date": "2025-06-10T18:49:19+00:00",
   "prs_authored": 24.0,
   "avg_pr_ack_velocity_days": 8.296097709551658,
   "avg_concept_lead_time_days": 0.613275462962963,
   "review_reciprocity": 3.4583333333333335,
-  "hybrid_score": 0.911,
+  "hybrid_score": 0.9107,
   "p2016_hybrid_score": 0.6723,
   "modern_hybrid_score": 0.458,
   "impact_score": 42.0,
@@ -59,13 +61,13 @@
   "last_active": "2025-11-19T00:25:27",
   "dev_type": "Builder",
   "expertise_domains": [
-    "Mining",
     "Infrastructure",
-    "Mempool"
+    "Mempool",
+    "Mining"
   ],
   "expertise_by_source": {
     "bips": {
-      "Mining": 1.0
+      "Infrastructure": 1.0
     },
     "code": {
       "Infrastructure": 0.882,
@@ -78,17 +80,17 @@
     }
   },
   "expertise_domain_scores": {
-    "Infrastructure": 0.2646,
+    "Infrastructure": 0.7646,
     "L2": 0.047,
     "Mempool": 0.0942,
-    "Mining": 0.5588,
+    "Mining": 0.0588,
     "Wallet": 0.0354
   },
   "p2016_posts": 236.0,
-  "modern_posts": 126.0,
+  "modern_posts": 125.0,
   "p2016_ml_posts": 151.0,
   "p2016_delving_posts": 85.0,
-  "modern_ml_posts": 41.0,
+  "modern_ml_posts": 40.0,
   "modern_delving_posts": 85.0,
   "global_first_active": "2014-04-29T18:34:41",
   "global_last_active": "2025-11-19T00:25:27",
@@ -103,19 +105,19 @@
   "delving_url": "https://delvingbitcoin.org/u/harding",
   "commit_history": {
     "2014": {
-      "Core Libs": 1.0
+      "Utilities": 1.0
     },
     "2015": {
       "Documentation": 1.0
     },
     "2018": {
       "Documentation": 2.0,
-      "Node & RPC (App/Interface)": 1.0
+      "Node & RPC": 1.0
     },
     "2019": {
       "Documentation": 8.0,
-      "Node & RPC (App/Interface)": 2.0,
-      "Wallet (Client App)": 2.0
+      "Node & RPC": 2.0,
+      "Wallet": 2.0
     }
   },
   "bip_list": [
@@ -123,7 +125,7 @@
       "number": 125,
       "title": "Opt-in Full Replace-by-Fee Signaling",
       "status": "Deployed",
-      "theme": "Mining",
+      "theme": "Other",
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0125.mediawiki"
     }
   ],

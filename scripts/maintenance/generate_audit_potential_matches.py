@@ -36,6 +36,7 @@ PROFILES_PATH         = "metadata/github_profiles.json"
 DELVING_PARQUET       = "data/raw/social_delving.parquet"
 ML_PARQUET            = "data/raw/social_mailing_list.parquet"
 COMMITS_PARQUET       = "data/raw/core_commits.parquet"
+REGISTRY_INDEX_PATH   = "output/shared/contributors/registry_index.json"
 OUTPUT_PATH           = "metadata/audit_potential_matches.json"
 
 # Minimum similarity for fuzzy name match
@@ -68,8 +69,32 @@ def _initial_match(n1, n2):
         return True
     return False
 
+STOP_TOKENS = {
+    "auto",
+    "noreply",
+    "github",
+    "com",
+    "users",
+    "merge",
+    "script",
+    "core",
+    "inc",
+    "team",
+    "the",
+    "and",
+    "of",
+    "for",
+}
+TOKEN_RE = re.compile(r"[a-z0-9]{3,}")
+
+
 def _fuzzy(a, b):
     return difflib.SequenceMatcher(None, a.lower(), b.lower()).ratio()
+
+
+def _tokenize_name(name):
+    tokens = set(TOKEN_RE.findall(name.lower()))
+    return {t for t in tokens if t not in STOP_TOKENS}
 
 
 # ── Main ───────────────────────────────────────────────────────────────────────
@@ -214,6 +239,103 @@ def main():
     print(f"    Multi-source merges:   {summary['multi_source_identities']:,}")
     print(f"    Delving mapped:        {dlv_mapped}/{len(dlv_raw_users)}")
     print(f"    Mailing list mapped:   {ml_mapped}/{len(ml_raw_emails)}")
+
+    registry_by_uuid = {}
+    if os.path.exists(REGISTRY_INDEX_PATH):
+        print(f"\nLoading contributor registry metrics from {REGISTRY_INDEX_PATH}...")
+        with open(REGISTRY_INDEX_PATH) as f:
+            registry_data = json.load(f)
+        for c in registry_data.get("contributors", []):
+            registry_by_uuid[c["uuid"]] = c
+        print(f"  {len(registry_by_uuid):,} registry contributors loaded")
+
+    # ── Section 0: Unresolved auto identities missing GitHub IDs ───────────────
+    unresolved_auto_identities = []
+    for r in identities:
+        if not r["uuid"].startswith("auto_"):
+            continue
+        platforms = r.get("platforms", {})
+        if platforms.get("github_id"):
+            continue
+        unresolved_auto_identities.append({
+            "uuid": r["uuid"],
+            "display_name": r.get("display_name"),
+            "platforms": {
+                "github": platforms.get("github"),
+                "github_id": platforms.get("github_id"),
+                "delving": platforms.get("delving"),
+            },
+            "total_commits": registry_by_uuid.get(r["uuid"], {}).get("total_commits", r.get("total_commits")),
+            "authored_commits": registry_by_uuid.get(r["uuid"], {}).get("authored_commits", r.get("authored_commits")),
+            "merge_commits": registry_by_uuid.get(r["uuid"], {}).get("merge_commits", r.get("merge_commits")),
+            "impact_score": registry_by_uuid.get(r["uuid"], {}).get("impact_score", r.get("impact_score")),
+            "first_commit": registry_by_uuid.get(r["uuid"], {}).get("first_commit", r.get("first_commit")),
+            "last_commit": registry_by_uuid.get(r["uuid"], {}).get("last_commit", r.get("last_commit")),
+            "first_review_date": r.get("first_review_date"),
+            "last_review_date": r.get("last_review_date"),
+            "sources": r.get("sources", []),
+            "sample_names": r.get("git_signatures", {}).get("names", [])[:3],
+            "sample_emails": r.get("git_signatures", {}).get("emails", [])[:3],
+        })
+
+    registry_extra_auto_ids = []
+    for uuid, reg in registry_by_uuid.items():
+        if not uuid.startswith("auto_") or uuid in by_uuid:
+            continue
+        if reg.get("login") or (reg.get("github") and reg["github"].get("login")):
+            continue
+        registry_extra_auto_ids.append({
+            "uuid": uuid,
+            "display_name": reg.get("display_name"),
+            "platforms": {
+                "github": reg.get("github"),
+                "github_id": None,
+                "delving": None,
+            },
+            "total_commits": reg.get("total_commits"),
+            "authored_commits": reg.get("authored_commits"),
+            "merge_commits": reg.get("merge_commits"),
+            "impact_score": reg.get("impact_score"),
+            "first_commit": reg.get("first_commit"),
+            "last_commit": reg.get("last_commit"),
+            "first_review_date": reg.get("first_review_date"),
+            "last_review_date": reg.get("last_review_date"),
+            "sources": [],
+            "sample_names": [],
+            "sample_emails": [],
+            "profile_filename": reg.get("profile_filename"),
+        })
+    unresolved_auto_identities.extend(registry_extra_auto_ids)
+
+    unresolved_auto_identities.sort(
+        key=lambda x: (
+            (x.get("total_commits") or 0),
+            (x.get("merge_commits") or 0),
+            (x.get("impact_score") or 0),
+            x.get("last_commit") or "",
+            x.get("display_name") or "",
+        ),
+        reverse=True,
+    )
+    unresolved_auto_summary = {
+        "total_auto_identities": sum(1 for r in identities if r["uuid"].startswith("auto_")),
+        "auto_missing_github_id": len(unresolved_auto_identities),
+        "registry_only_auto_identities": len(registry_extra_auto_ids),
+        "top_unresolved_auto_identities": [
+            {
+                "uuid": x["uuid"],
+                "display_name": x["display_name"],
+                "total_commits": x["total_commits"],
+                "merge_commits": x["merge_commits"],
+                "first_commit": x["first_commit"],
+                "last_commit": x["last_commit"],
+                "sources": x["sources"],
+            }
+            for x in unresolved_auto_identities[:100]
+        ],
+    }
+
+    print(f"    Auto ids missing github_id: {unresolved_auto_summary['auto_missing_github_id']:,}")
 
     # ── Load GitHub profiles ───────────────────────────────────────────────────
     profiles_by_login = {}
@@ -391,6 +513,9 @@ def main():
     # ── Section 3: Fuzzy name matches across all identities ───────────────────
     print("\nRunning fuzzy name audit across all identities...")
     records = []
+    token_buckets = defaultdict(set)
+    initial_buckets = defaultdict(set)
+
     for r in identities:
         names = set([r["display_name"]])
         names.update(r.get("git_signatures", {}).get("names", []))
@@ -401,18 +526,44 @@ def main():
             else:
                 names.add(gh)
         clean = [n for n in names if n and len(n) > 2]
-        if clean:
-            records.append({
-                "uuid": r["uuid"],
-                "display": r["display_name"],
-                "names": clean,
-                "sources": r.get("sources", []),
-            })
+        if not clean:
+            continue
+
+        tokens = set()
+        initials = set()
+        for name in clean:
+            tokens.update(_tokenize_name(name))
+            if name:
+                initials.add(name.strip()[0].lower())
+
+        record_index = len(records)
+        records.append({
+            "uuid": r["uuid"],
+            "display": r["display_name"],
+            "names": clean,
+            "sources": r.get("sources", []),
+            "tokens": tokens,
+            "initials": initials,
+        })
+        for token in tokens:
+            token_buckets[token].add(record_index)
+        for initial in initials:
+            initial_buckets[initial].add(record_index)
 
     fuzzy_matches = []
-    for i in range(len(records)):
-        r1 = records[i]
-        for j in range(i + 1, len(records)):
+    total_records = len(records)
+    for i, r1 in enumerate(records):
+        candidate_indexes = set()
+        if r1["tokens"]:
+            for token in r1["tokens"]:
+                candidate_indexes.update(token_buckets[token])
+        else:
+            for initial in r1["initials"]:
+                candidate_indexes.update(initial_buckets[initial])
+
+        for j in sorted(candidate_indexes):
+            if j <= i:
+                continue
             r2 = records[j]
             found = False
             for n1 in r1["names"]:
@@ -424,6 +575,8 @@ def main():
                         score = 0.95
                     else:
                         if abs(len(n1l) - len(n2l)) > 6:
+                            continue
+                        if n1l[0] != n2l[0] and len(n1l) > 3 and len(n2l) > 3:
                             continue
                         score = _fuzzy(n1l, n2l)
                     if score >= FUZZY_THRESHOLD:
@@ -444,6 +597,8 @@ def main():
     output = {
         "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "summary": summary,
+        "unresolved_auto_identities_summary": unresolved_auto_summary,
+        "unresolved_auto_identities": unresolved_auto_identities[:100],
         "delving_already_mapped": delving_already_mapped,
         "delving_github_candidates": delving_github_candidates,
         "ml_github_candidates": ml_github_candidates,

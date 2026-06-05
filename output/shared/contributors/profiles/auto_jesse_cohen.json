@@ -18,8 +18,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Tests (QA)",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Tests",
   "total_commits": 21.0,
   "authored_commits": 21.0,
   "merge_commits": 0.0,
@@ -38,6 +38,8 @@
   "approvals_count": 11.0,
   "p2016_reviews_count": 24.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": "2018-04-11T16:51:24+00:00",
+  "last_review_date": "2018-08-28T12:53:58+00:00",
   "prs_authored": 15.0,
   "avg_pr_ack_velocity_days": 17.05916351010101,
   "avg_concept_lead_time_days": 15.954730489417988,
@@ -92,12 +94,12 @@
   "github_url": "https://github.com/skeees",
   "commit_history": {
     "2018": {
-      "Build & CI (DevOps)": 0.5,
-      "Consensus (Domain Logic)": 1.5,
-      "Core Libs": 4.5,
-      "Node & RPC (App/Interface)": 0.83,
-      "P2P Network (Infrastructure)": 3.33,
-      "Tests (QA)": 4.33
+      "Build & CI": 0.5,
+      "Consensus": 1.5,
+      "Node & RPC": 0.83,
+      "P2P Network": 3.33,
+      "Tests": 4.33,
+      "Utilities": 4.5
     }
   }
 }

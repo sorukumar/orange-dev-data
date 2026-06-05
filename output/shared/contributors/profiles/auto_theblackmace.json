@@ -18,16 +18,16 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "None",
-  "total_commits": 0.0,
-  "authored_commits": 0.0,
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Utilities",
+  "total_commits": 1.0,
+  "authored_commits": 1.0,
   "merge_commits": 0.0,
-  "total_additions": null,
-  "total_deletions": null,
-  "first_commit": null,
-  "last_commit": null,
-  "p2016_authored_commits": 0.0,
+  "total_additions": 1.0,
+  "total_deletions": 1.0,
+  "first_commit": "2023-06-01T18:05:10",
+  "last_commit": "2023-06-01T18:05:10",
+  "p2016_authored_commits": 1.0,
   "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
@@ -38,16 +38,18 @@
   "approvals_count": 0.0,
   "p2016_reviews_count": 0.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": null,
+  "last_review_date": null,
   "prs_authored": 1.0,
   "avg_pr_ack_velocity_days": 0.05704861111111111,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 0.0,
-  "hybrid_score": 0.0146,
-  "p2016_hybrid_score": 0.0146,
-  "modern_hybrid_score": 0.0146,
-  "impact_score": 1.0,
-  "p2016_impact_score": 1.0,
-  "modern_impact_score": 1.0,
+  "hybrid_score": 0.0546,
+  "p2016_hybrid_score": 0.0546,
+  "modern_hybrid_score": 0.0546,
+  "impact_score": 3.0,
+  "p2016_impact_score": 3.0,
+  "modern_impact_score": 3.0,
   "threads_started": 0.0,
   "replies_sent": 0.0,
   "ml_threads": 0.0,
@@ -56,11 +58,15 @@
   "delving_responses": 0.0,
   "first_active": null,
   "last_active": null,
-  "dev_type": "Participant",
+  "dev_type": "Builder",
   "expertise_domains": [
     "Infrastructure"
   ],
-  "expertise_by_source": {},
+  "expertise_by_source": {
+    "code": {
+      "Infrastructure": 1.0
+    }
+  },
   "expertise_domain_scores": {
     "Infrastructure": 1.0
   },
@@ -70,8 +76,8 @@
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
-  "global_first_active": null,
-  "global_last_active": null,
+  "global_first_active": "2023-06-01T18:05:10",
+  "global_last_active": "2023-06-01T18:05:10",
   "github_location": null,
   "github_company": "Aarc",
   "github_bio": null,
@@ -79,5 +85,10 @@
   "github_blog": null,
   "github_followers": 18.0,
   "is_top_50": false,
-  "github_url": "https://github.com/theblackmace"
+  "github_url": "https://github.com/theblackmace",
+  "commit_history": {
+    "2023": {
+      "Utilities": 1.0
+    }
+  }
 }

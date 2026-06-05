@@ -11,15 +11,15 @@
     "is_social_contributor": true,
     "is_sponsored": null,
     "maintainer_status": null,
-    "social_source": "delving",
+    "social_source": "Mixed",
     "sponsor_id": null
   },
   "roles": [
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Tests (QA)",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Tests",
   "total_commits": 28.0,
   "authored_commits": 28.0,
   "merge_commits": 0.0,
@@ -32,64 +32,66 @@
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": 84.57118789521229,
-  "reviews_count": 60.0,
-  "avg_approval_latency_days": 116.59472044159544,
-  "approvals_count": 45.0,
-  "p2016_reviews_count": 60.0,
-  "modern_reviews_count": 60.0,
+  "avg_review_latency_days": 78.82700840643275,
+  "reviews_count": 65.0,
+  "avg_approval_latency_days": 109.06609672619048,
+  "approvals_count": 50.0,
+  "p2016_reviews_count": 65.0,
+  "modern_reviews_count": 65.0,
+  "first_review_date": "2024-10-29T12:22:59+00:00",
+  "last_review_date": "2026-06-04T15:39:40+00:00",
   "prs_authored": 18.0,
   "avg_pr_ack_velocity_days": 49.7020848765432,
-  "avg_concept_lead_time_days": 61.114818672839505,
-  "review_reciprocity": 3.3333333333333335,
-  "hybrid_score": 0.3132,
-  "p2016_hybrid_score": 0.3132,
-  "modern_hybrid_score": 0.3132,
-  "impact_score": 17.0,
-  "p2016_impact_score": 17.0,
-  "modern_impact_score": 17.0,
-  "threads_started": 2.0,
-  "replies_sent": 1.0,
-  "ml_threads": 0.0,
+  "avg_concept_lead_time_days": 59.1168011039886,
+  "review_reciprocity": 3.611111111111111,
+  "hybrid_score": 0.3275,
+  "p2016_hybrid_score": 0.3322,
+  "modern_hybrid_score": 0.3553,
+  "impact_score": 18.0,
+  "p2016_impact_score": 18.0,
+  "modern_impact_score": 19.0,
+  "threads_started": 3.0,
+  "replies_sent": 3.0,
+  "ml_threads": 1.0,
   "delving_threads": 2.0,
-  "ml_responses": 0.0,
+  "ml_responses": 2.0,
   "delving_responses": 1.0,
-  "first_active": "2025-11-21T21:50:29.998000",
-  "last_active": "2026-05-07T09:00:42.400000",
+  "first_active": null,
+  "last_active": "2026-06-02T11:48:56",
   "dev_type": "Builder",
   "expertise_domains": [
     "Infrastructure",
     "Network",
-    "L2"
+    "Mining"
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.099,
-      "Infrastructure": 0.836,
-      "Wallet": 0.065
+      "Consensus": 0.078,
+      "Infrastructure": 0.838,
+      "Mempool": 0.026,
+      "Wallet": 0.057
     },
     "discussion": {
-      "L2": 0.246,
-      "Mempool": 0.246,
-      "Network": 0.509
+      "Mining": 0.32,
+      "Network": 0.68
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.0594,
-    "Infrastructure": 0.5014,
-    "L2": 0.0984,
-    "Mempool": 0.0984,
-    "Network": 0.2035,
-    "Wallet": 0.039
+    "Consensus": 0.0468,
+    "Infrastructure": 0.5031,
+    "Mempool": 0.0156,
+    "Mining": 0.1281,
+    "Network": 0.2722,
+    "Wallet": 0.0342
   },
-  "p2016_posts": 3.0,
-  "modern_posts": 3.0,
-  "p2016_ml_posts": 0.0,
+  "p2016_posts": 6.0,
+  "modern_posts": 6.0,
+  "p2016_ml_posts": 3.0,
   "p2016_delving_posts": 3.0,
-  "modern_ml_posts": 0.0,
+  "modern_ml_posts": 3.0,
   "modern_delving_posts": 3.0,
   "global_first_active": "2025-03-04T11:10:52",
-  "global_last_active": "2026-05-07T09:00:42.400000",
+  "global_last_active": "2026-06-02T11:48:56",
   "github_location": "BCN",
   "github_company": "UAB",
   "github_bio": "PhD student researching Bitcoin and the Lightning Network \u26a1 at UAB |||\r\n\r\n\r\nPGP: 2847 0907 B40B F26D",
@@ -101,20 +103,21 @@
   "delving_url": "https://delvingbitcoin.org/u/polespinasa",
   "commit_history": {
     "2025": {
-      "Consensus (Domain Logic)": 1.48,
-      "Core Libs": 0.14,
+      "Consensus": 1.25,
       "Documentation": 2.0,
-      "GUI (Presentation Layer)": 0.14,
-      "Node & RPC (App/Interface)": 0.64,
-      "Tests (QA)": 3.48,
-      "Utilities (Shared Libs)": 0.14,
-      "Wallet (Client App)": 0.98
+      "GUI": 0.17,
+      "Mempool": 0.42,
+      "Node & RPC": 0.67,
+      "Tests": 3.42,
+      "Utilities": 0.17,
+      "Wallet": 0.92
     },
     "2026": {
-      "Build & CI (DevOps)": 1.5,
-      "Core Libs": 0.5,
+      "Build & CI": 1.5,
       "Documentation": 2.0,
-      "Tests (QA)": 2.0
+      "GUI": 0.5,
+      "Tests": 2.5,
+      "Utilities": 0.5
     }
   },
   "first_message": {
@@ -124,10 +127,10 @@
     "link": "https://delvingbitcoin.org/t/stats-on-compact-block-reconstructions/1052/48"
   },
   "last_message": {
-    "source": "delving",
-    "subject": "Re: Protocol for zero-conf transactions",
-    "date": "2026-05-07",
-    "link": "https://delvingbitcoin.org/t/protocol-for-zero-conf-transactions/2475/4"
+    "source": "mailing_list",
+    "subject": "Re: [bitcoindev] [BIP Draft] Testnet 5",
+    "date": "2026-06-02",
+    "link": "https://gnusha.org/pi/bitcoindev/ZjV9FwOf2ShRUaaQWs6LZoHTDjbF8WmfmDptSF3x-V6rNducvUu7IRoXKfz7ZYnkxX9b4r8rIsKXcpMTgVNA7QS8qALJqCYEVRyaXrmwaXA=@protonmail.com"
   },
   "social_history": {
     "2025": {
@@ -138,7 +141,10 @@
       "taproot": 2
     },
     "2026": {
-      "l2-bridges": 1
+      "consensus-cleanup": 1,
+      "other": 2,
+      "mining": 2,
+      "testing-devtools": 3
     }
   }
 }

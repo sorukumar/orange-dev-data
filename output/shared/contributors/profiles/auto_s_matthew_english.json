@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
+  "last_seen": "2026-06-04T00:00:00",
   "technical_focus": "Documentation",
   "total_commits": 6.0,
   "authored_commits": 6.0,
@@ -38,6 +38,8 @@
   "approvals_count": null,
   "p2016_reviews_count": null,
   "modern_reviews_count": null,
+  "first_review_date": null,
+  "last_review_date": null,
   "prs_authored": null,
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
@@ -59,17 +61,17 @@
   "dev_type": "Builder",
   "expertise_domains": [
     "Infrastructure",
-    "Consensus"
+    "Mempool"
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.167,
-      "Infrastructure": 0.833
+      "Infrastructure": 0.833,
+      "Mempool": 0.167
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.167,
-    "Infrastructure": 0.833
+    "Infrastructure": 0.833,
+    "Mempool": 0.167
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -88,10 +90,10 @@
   "is_top_50": false,
   "commit_history": {
     "2016": {
-      "Consensus (Domain Logic)": 1.0,
       "Documentation": 2.0,
-      "Node & RPC (App/Interface)": 2.0,
-      "Tests (QA)": 1.0
+      "Mempool": 1.0,
+      "Node & RPC": 2.0,
+      "Tests": 1.0
     }
   }
 }

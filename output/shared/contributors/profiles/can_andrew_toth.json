@@ -19,33 +19,35 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Tests (QA)",
-  "total_commits": 121.0,
-  "authored_commits": 121.0,
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Tests",
+  "total_commits": 123.0,
+  "authored_commits": 123.0,
   "merge_commits": 0.0,
-  "total_additions": 3112.0,
-  "total_deletions": 633.0,
+  "total_additions": 3257.0,
+  "total_deletions": 650.0,
   "first_commit": "2018-12-01T18:00:00",
-  "last_commit": "2026-03-21T15:21:27",
-  "p2016_authored_commits": 91.0,
-  "modern_authored_commits": 64.0,
+  "last_commit": "2026-06-02T13:45:32",
+  "p2016_authored_commits": 93.0,
+  "modern_authored_commits": 66.0,
   "bips_authored": 2.0,
   "p2016_bips_authored": 2.0,
   "modern_bips_authored": 2.0,
-  "avg_review_latency_days": 399.78526165960994,
-  "reviews_count": 152.0,
-  "avg_approval_latency_days": 383.89295932077187,
-  "approvals_count": 87.0,
-  "p2016_reviews_count": 152.0,
-  "modern_reviews_count": 122.0,
-  "prs_authored": 59.0,
+  "avg_review_latency_days": 390.1285618691608,
+  "reviews_count": 157.0,
+  "avg_approval_latency_days": 374.0036041824137,
+  "approvals_count": 90.0,
+  "p2016_reviews_count": 157.0,
+  "modern_reviews_count": 127.0,
+  "first_review_date": "2018-12-08T16:14:40+00:00",
+  "last_review_date": "2026-06-03T20:50:16+00:00",
+  "prs_authored": 60.0,
   "avg_pr_ack_velocity_days": 17.677450617283952,
   "avg_concept_lead_time_days": 25.780489174836603,
-  "review_reciprocity": 2.5762711864406778,
-  "hybrid_score": 1.0101,
-  "p2016_hybrid_score": 1.0139,
-  "modern_hybrid_score": 1.01,
+  "review_reciprocity": 2.6166666666666667,
+  "hybrid_score": 1.0112,
+  "p2016_hybrid_score": 1.0149,
+  "modern_hybrid_score": 1.0113,
   "impact_score": 45.0,
   "p2016_impact_score": 46.0,
   "modern_impact_score": 45.0,
@@ -55,8 +57,8 @@
   "delving_threads": 9.0,
   "ml_responses": 2.0,
   "delving_responses": 25.0,
-  "first_active": "2024-05-20T17:55:19.232000",
-  "last_active": "2026-04-08T15:38:12.011000",
+  "first_active": null,
+  "last_active": null,
   "dev_type": "Builder",
   "expertise_domains": [
     "Infrastructure",
@@ -65,7 +67,8 @@
   ],
   "expertise_by_source": {
     "bips": {
-      "Infrastructure": 1.0
+      "Infrastructure": 0.5,
+      "Privacy": 0.5
     },
     "code": {
       "Consensus": 0.255,
@@ -80,8 +83,8 @@
   },
   "expertise_domain_scores": {
     "Consensus": 0.0765,
-    "Infrastructure": 0.6989,
-    "Privacy": 0.1334,
+    "Infrastructure": 0.4489,
+    "Privacy": 0.3834,
     "Wallet": 0.0813
   },
   "p2016_posts": 39.0,
@@ -91,7 +94,7 @@
   "modern_ml_posts": 5.0,
   "modern_delving_posts": 34.0,
   "global_first_active": "2018-12-01T18:00:00",
-  "global_last_active": "2026-04-08T15:38:12.011000064",
+  "global_last_active": "2026-06-02T13:45:32",
   "github_location": "Toronto",
   "github_company": null,
   "github_bio": null,
@@ -103,63 +106,62 @@
   "delving_url": "https://delvingbitcoin.org/u/andrewtoth",
   "commit_history": {
     "2018": {
-      "Tests (QA)": 1.0,
-      "Wallet (Client App)": 1.0
+      "Tests": 1.0,
+      "Wallet": 1.0
     },
     "2019": {
-      "Core Libs": 1.0,
-      "Node & RPC (App/Interface)": 1.0,
-      "Wallet (Client App)": 2.0
+      "Node & RPC": 1.0,
+      "Utilities": 1.0,
+      "Wallet": 2.0
     },
     "2020": {
-      "Core Libs": 0.5,
       "Documentation": 1.0,
-      "Node & RPC (App/Interface)": 0.5,
-      "Tests (QA)": 1.0,
-      "Wallet (Client App)": 1.0
+      "Node & RPC": 0.5,
+      "Tests": 1.0,
+      "Utilities": 0.5,
+      "Wallet": 1.0
     },
     "2021": {
       "Documentation": 1.0,
-      "Node & RPC (App/Interface)": 0.5,
-      "Tests (QA)": 1.0,
-      "Wallet (Client App)": 0.5
+      "Node & RPC": 0.5,
+      "Tests": 1.0,
+      "Wallet": 0.5
     },
     "2022": {
-      "Consensus (Domain Logic)": 0.5,
-      "Core Libs": 2.0,
+      "Consensus": 0.5,
       "Documentation": 1.0,
-      "Node & RPC (App/Interface)": 6.5,
-      "Tests (QA)": 2.0
+      "Node & RPC": 6.5,
+      "Tests": 2.0,
+      "Utilities": 2.0
     },
     "2023": {
-      "Build & CI (DevOps)": 0.5,
-      "Consensus (Domain Logic)": 2.0,
-      "Tests (QA)": 1.5
+      "Build & CI": 0.5,
+      "Consensus": 2.0,
+      "Tests": 1.5
     },
     "2024": {
-      "Build & CI (DevOps)": 0.5,
-      "Consensus (Domain Logic)": 12.17,
-      "Core Libs": 1.67,
+      "Build & CI": 0.5,
+      "Consensus": 12.17,
       "Documentation": 1.0,
-      "Node & RPC (App/Interface)": 3.0,
-      "P2P Network (Infrastructure)": 2.0,
-      "Tests (QA)": 5.67
+      "Node & RPC": 3.0,
+      "P2P Network": 2.0,
+      "Tests": 5.67,
+      "Utilities": 1.67
     },
     "2025": {
-      "Consensus (Domain Logic)": 2.5,
-      "Node & RPC (App/Interface)": 2.5,
-      "Tests (QA)": 4.0
+      "Consensus": 2.5,
+      "Node & RPC": 2.5,
+      "Tests": 4.0
     },
     "2026": {
-      "Consensus (Domain Logic)": 6.0,
-      "Core Libs": 0.83,
-      "Database (Persistence)": 2.0,
+      "Consensus": 6.0,
+      "Database": 2.0,
       "Documentation": 3.0,
-      "GUI (Presentation Layer)": 1.0,
-      "Node & RPC (App/Interface)": 1.67,
-      "P2P Network (Infrastructure)": 1.0,
-      "Tests (QA)": 11.0,
-      "Utilities (Shared Libs)": 0.5
+      "GUI": 1.0,
+      "Node & RPC": 1.67,
+      "P2P Network": 1.0,
+      "Tests": 11.0,
+      "Utilities": 1.33
     }
   },
   "bip_list": [
@@ -174,7 +176,7 @@
       "number": 375,
       "title": "Sending Silent Payments with PSBTs",
       "status": "Draft",
-      "theme": "Other",
+      "theme": "Privacy",
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0375.mediawiki"
     }
   ],

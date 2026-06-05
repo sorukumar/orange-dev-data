@@ -8,6 +8,8 @@ try:
 except ImportError:
     METADATA_DIR = Path("metadata")
 
+_NOREPLY_EMAIL_RE = re.compile(r'^(?:\d+)\+([^@]+)@users\.noreply\.github\.com$', re.I)
+
 IDENTITIES_FILE = METADATA_DIR / "identities.json"
 
 class IdentityResolver:
@@ -72,6 +74,18 @@ class IdentityResolver:
             
         return slug
 
+    def _extract_noreply_login(self, email):
+        if not email:
+            return None
+        email = email.strip().lower()
+        m = _NOREPLY_EMAIL_RE.match(email)
+        if m:
+            return m.group(1)
+        parts = email.split('@', 1)
+        if len(parts) == 2 and parts[1] == 'users.noreply.github.com':
+            return parts[0]
+        return None
+
     def _mint_stateless_uuid(self, identifier):
         """Returns a generic UUID for unrecognized developers without mutating the DB."""
         slug = self._slugify(identifier)
@@ -115,6 +129,14 @@ class IdentityResolver:
             lookup = f"email:{email.lower()}"
             if lookup in self._uuid_map:
                 return self._uuid_map[lookup]
+            noreply_login = self._extract_noreply_login(email)
+            if noreply_login:
+                github_lookup = f"github:{noreply_login.lower()}"
+                if github_lookup in self._uuid_map:
+                    return self._uuid_map[github_lookup]
+                name_lookup = f"name:{noreply_login.lower()}"
+                if name_lookup in self._uuid_map:
+                    return self._uuid_map[name_lookup]
 
         if name:
             clean_name = name

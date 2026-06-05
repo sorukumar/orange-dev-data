@@ -19,10 +19,10 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Consensus (Domain Logic)",
-  "total_commits": 344.0,
-  "authored_commits": 344.0,
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Mempool",
+  "total_commits": 340.0,
+  "authored_commits": 340.0,
   "merge_commits": 0.0,
   "total_additions": 7756.0,
   "total_deletions": 3846.0,
@@ -39,13 +39,15 @@
   "approvals_count": 193.0,
   "p2016_reviews_count": 239.0,
   "modern_reviews_count": 0.0,
-  "prs_authored": 126.0,
+  "first_review_date": "2014-11-03T20:44:48+00:00",
+  "last_review_date": "2021-02-15T19:55:47+00:00",
+  "prs_authored": 128.0,
   "avg_pr_ack_velocity_days": 7.71497756254061,
   "avg_concept_lead_time_days": 20.93245827950043,
-  "review_reciprocity": 2.634920634920635,
+  "review_reciprocity": 2.59375,
   "hybrid_score": 0.9362,
   "p2016_hybrid_score": 0.9013,
-  "modern_hybrid_score": 0.15,
+  "modern_hybrid_score": 0.1506,
   "impact_score": 43.0,
   "p2016_impact_score": 42.0,
   "modern_impact_score": 9.0,
@@ -59,19 +61,21 @@
   "last_active": "2022-01-13T13:25:48",
   "dev_type": "Builder",
   "expertise_domains": [
-    "Mining",
     "Infrastructure",
-    "Mempool"
+    "Mempool",
+    "Mining"
   ],
   "expertise_by_source": {
     "bips": {
-      "Mining": 1.0
+      "Infrastructure": 1.0
     },
     "code": {
-      "Consensus": 0.27,
-      "Infrastructure": 0.552,
+      "Consensus": 0.113,
+      "Infrastructure": 0.472,
+      "Mempool": 0.236,
       "Network": 0.022,
-      "Wallet": 0.157
+      "Script": 0.001,
+      "Wallet": 0.156
     },
     "discussion": {
       "Mempool": 0.583,
@@ -79,11 +83,11 @@
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.081,
-    "Infrastructure": 0.1656,
-    "Mempool": 0.1166,
-    "Mining": 0.5832,
-    "Wallet": 0.0471
+    "Consensus": 0.0339,
+    "Infrastructure": 0.6416,
+    "Mempool": 0.1874,
+    "Mining": 0.0834,
+    "Wallet": 0.0468
   },
   "p2016_posts": 15.0,
   "modern_posts": 0.0,
@@ -103,41 +107,44 @@
   "github_url": "https://github.com/morcos",
   "commit_history": {
     "2014": {
-      "Build & CI (DevOps)": 0.2,
-      "Consensus (Domain Logic)": 0.2,
-      "Core Libs": 0.7,
-      "Node & RPC (App/Interface)": 3.7,
-      "Tests (QA)": 0.2
+      "Build & CI": 0.25,
+      "Mempool": 3.75,
+      "Tests": 0.25,
+      "Utilities": 0.75
     },
     "2015": {
-      "Consensus (Domain Logic)": 4.33,
-      "Core Libs": 21.17,
-      "GUI (Presentation Layer)": 0.5,
-      "Node & RPC (App/Interface)": 8.17,
-      "P2P Network (Infrastructure)": 1.0,
-      "Tests (QA)": 9.33,
-      "Wallet (Client App)": 1.5
+      "Consensus": 2.45,
+      "GUI": 0.5,
+      "Mempool": 7.95,
+      "Node & RPC": 1.83,
+      "P2P Network": 1.0,
+      "Script": 0.2,
+      "Tests": 9.28,
+      "Utilities": 21.28,
+      "Wallet": 1.5
     },
     "2016": {
-      "Build & CI (DevOps)": 0.5,
-      "Consensus (Domain Logic)": 14.95,
-      "Core Libs": 16.5,
+      "Build & CI": 0.5,
+      "Consensus": 7.08,
       "Documentation": 2.0,
-      "GUI (Presentation Layer)": 3.03,
-      "Node & RPC (App/Interface)": 6.78,
-      "P2P Network (Infrastructure)": 2.17,
-      "Tests (QA)": 3.62,
-      "Wallet (Client App)": 8.45
+      "GUI": 3.03,
+      "Mempool": 11.45,
+      "Node & RPC": 3.2,
+      "P2P Network": 2.17,
+      "Tests": 3.62,
+      "Utilities": 16.5,
+      "Wallet": 8.45
     },
     "2017": {
-      "Consensus (Domain Logic)": 36.85,
-      "Core Libs": 5.78,
+      "Consensus": 14.03,
       "Documentation": 2.0,
-      "GUI (Presentation Layer)": 5.37,
-      "Node & RPC (App/Interface)": 19.52,
-      "P2P Network (Infrastructure)": 1.4,
-      "Tests (QA)": 6.32,
-      "Wallet (Client App)": 22.77
+      "GUI": 5.37,
+      "Mempool": 26.2,
+      "Node & RPC": 16.15,
+      "P2P Network": 1.37,
+      "Tests": 6.48,
+      "Utilities": 5.67,
+      "Wallet": 22.73
     }
   },
   "bip_list": [
@@ -145,7 +152,7 @@
       "number": 133,
       "title": "feefilter message",
       "status": "Deployed",
-      "theme": "Mining",
+      "theme": "Other",
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0133.mediawiki"
     }
   ],

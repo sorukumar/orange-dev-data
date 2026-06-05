@@ -19,8 +19,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Core Libs",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "P2P Network",
   "total_commits": 2.0,
   "authored_commits": 2.0,
   "merge_commits": 0.0,
@@ -33,21 +33,23 @@
   "bips_authored": 5.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": 52.43388573232323,
-  "reviews_count": 6.0,
+  "avg_review_latency_days": 44.255859788359786,
+  "reviews_count": 9.0,
   "avg_approval_latency_days": null,
   "approvals_count": 0.0,
-  "p2016_reviews_count": 0.0,
+  "p2016_reviews_count": 1.0,
   "modern_reviews_count": 0.0,
-  "prs_authored": 5.0,
-  "avg_pr_ack_velocity_days": 45.18333333333333,
+  "first_review_date": "2011-03-08T14:27:56+00:00",
+  "last_review_date": "2016-08-09T22:39:15+00:00",
+  "prs_authored": 6.0,
+  "avg_pr_ack_velocity_days": 22.616585648148146,
   "avg_concept_lead_time_days": null,
-  "review_reciprocity": 1.2,
-  "hybrid_score": 1.1876,
-  "p2016_hybrid_score": 0.0825,
-  "modern_hybrid_score": 0.0452,
+  "review_reciprocity": 1.5,
+  "hybrid_score": 1.1988,
+  "p2016_hybrid_score": 0.0953,
+  "modern_hybrid_score": 0.05,
   "impact_score": 51.0,
-  "p2016_impact_score": 5.0,
+  "p2016_impact_score": 6.0,
   "modern_impact_score": 3.0,
   "threads_started": 51.0,
   "replies_sent": 67.0,
@@ -101,10 +103,10 @@
   "github_url": "https://github.com/genjix",
   "commit_history": {
     "2013": {
-      "Core Libs": 1.0
+      "Utilities": 1.0
     },
     "2014": {
-      "P2P Network (Infrastructure)": 1.0
+      "P2P Network": 1.0
     }
   },
   "bip_list": [

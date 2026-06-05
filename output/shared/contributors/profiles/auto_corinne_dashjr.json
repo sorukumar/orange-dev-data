@@ -18,8 +18,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Consensus (Domain Logic)",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Consensus",
   "total_commits": 7.0,
   "authored_commits": 7.0,
   "merge_commits": 0.0,
@@ -38,6 +38,8 @@
   "approvals_count": null,
   "p2016_reviews_count": null,
   "modern_reviews_count": null,
+  "first_review_date": null,
+  "last_review_date": null,
   "prs_authored": null,
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
@@ -93,13 +95,13 @@
   "is_top_50": false,
   "commit_history": {
     "2015": {
-      "Consensus (Domain Logic)": 0.14,
-      "Core Libs": 0.14,
+      "Consensus": 0.14,
       "Documentation": 0.14,
-      "GUI (Presentation Layer)": 0.14,
-      "Node & RPC (App/Interface)": 0.14,
-      "P2P Network (Infrastructure)": 0.14,
-      "Wallet (Client App)": 0.14
+      "GUI": 0.14,
+      "Node & RPC": 0.14,
+      "P2P Network": 0.14,
+      "Utilities": 0.14,
+      "Wallet": 0.14
     }
   }
 }

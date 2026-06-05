@@ -23,13 +23,18 @@ def unify():
     with open(IDENTITIES_JSON, 'r') as f:
         identities_data = json.load(f)['identities']
     
+    def github_final(g):
+        if isinstance(g, list):
+            return g[0] if len(g) else None
+        return g
+
     # Base unified DataFrame from identities list
     base_rows = []
     for identity in identities_data:
         base_rows.append({
             'uuid': identity['uuid'],
             'display_name': identity['display_name'],
-            'github_login_final': (lambda g: g[0] if isinstance(g, list) else g)(identity.get('platforms', {}).get('github')),
+            'github_login_final': github_final(identity.get('platforms', {}).get('github')),
             'delving_username_final': identity.get('platforms', {}).get('delving')
         })
     df_id = pd.DataFrame(base_rows)

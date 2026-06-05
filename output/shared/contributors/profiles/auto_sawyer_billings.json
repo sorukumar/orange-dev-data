@@ -18,10 +18,10 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Core Libs",
-  "total_commits": 6.0,
-  "authored_commits": 6.0,
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Cryptography",
+  "total_commits": 5.0,
+  "authored_commits": 5.0,
   "merge_commits": 0.0,
   "total_additions": 19.0,
   "total_deletions": 19.0,
@@ -38,12 +38,14 @@
   "approvals_count": 1.0,
   "p2016_reviews_count": 1.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": "2021-01-04T16:43:49+00:00",
+  "last_review_date": "2021-01-04T16:43:49+00:00",
   "prs_authored": 1.0,
   "avg_pr_ack_velocity_days": 0.2578472222222222,
   "avg_concept_lead_time_days": 0.2578472222222222,
   "review_reciprocity": 1.0,
   "hybrid_score": 0.073,
-  "p2016_hybrid_score": 0.0736,
+  "p2016_hybrid_score": 0.073,
   "modern_hybrid_score": 0.0146,
   "impact_score": 4.0,
   "p2016_impact_score": 4.0,
@@ -63,13 +65,13 @@
   ],
   "expertise_by_source": {
     "code": {
-      "Cryptography": 0.167,
-      "Infrastructure": 0.833
+      "Cryptography": 0.2,
+      "Infrastructure": 0.8
     }
   },
   "expertise_domain_scores": {
-    "Cryptography": 0.167,
-    "Infrastructure": 0.833
+    "Cryptography": 0.2,
+    "Infrastructure": 0.8
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -89,12 +91,11 @@
   "github_url": "https://github.com/sbilling",
   "commit_history": {
     "2020": {
-      "Core Libs": 0.17,
-      "Cryptography (Primitives)": 0.17,
-      "Documentation": 0.17,
-      "GUI (Presentation Layer)": 0.17,
-      "Tests (QA)": 0.17,
-      "Utilities (Shared Libs)": 0.17
+      "Cryptography": 0.2,
+      "Documentation": 0.2,
+      "GUI": 0.2,
+      "Tests": 0.2,
+      "Utilities": 0.2
     }
   }
 }

@@ -1,20 +1,26 @@
 {
   "display_name": "Satoshi Nakamoto",
-  "github_login_final": "crypomen9",
+  "github_login_final": "SatoshiNT0",
   "delving_username_final": null,
   "uuid": "can_satoshi_nakamoto",
   "badges": {
     "is_bip_author": null,
     "is_core_committer": null,
     "is_core_contributor": true,
-    "is_maintainer": null,
+    "is_maintainer": true,
     "is_social_contributor": null,
     "is_sponsored": null,
-    "maintainer_status": null,
+    "maintainer_status": "historical",
     "social_source": null,
-    "sponsor_id": null
+    "sponsor_id": null,
+    "maintainer_title": "Project Founder / Lead Maintainer",
+    "maintainer_primary_area": "Initial Implementation",
+    "maintainer_appointed": "2009-01-03",
+    "maintainer_stepped_down": "2011-09-13"
   },
-  "roles": [],
+  "roles": [
+    "Project Founder / Lead Maintainer"
+  ],
   "first_seen": "2026-04-17T00:00:00",
   "last_seen": "2026-04-17T00:00:00",
   "technical_focus": "None",
@@ -36,6 +42,8 @@
   "approvals_count": 0.0,
   "p2016_reviews_count": 0.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": null,
+  "last_review_date": null,
   "prs_authored": 11.0,
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
@@ -79,24 +87,24 @@
   "modern_delving_posts": 0.0,
   "global_first_active": "2009-10-21T01:08:05",
   "global_last_active": "2015-12-10T06:54:46",
-  "github_location": null,
-  "github_company": null,
-  "github_bio": null,
-  "github_twitter": null,
-  "github_blog": null,
-  "github_followers": 0.0,
+  "github_location": "Cyberspace",
+  "github_company": "\u20bfitcoin",
+  "github_bio": "I created \u20bfitcoin\ud83d\udfe0.\r\n",
+  "github_twitter": "SatoshiNT0",
+  "github_blog": "https://github.com/SatoshiNT0/SatoshiNT0/releases/tag/Satoshi",
+  "github_followers": 14.0,
   "is_top_50": false,
-  "github_url": "https://github.com/crypomen9",
+  "github_url": "https://github.com/SatoshiNT0",
   "commit_history": {
     "2009": {
-      "Build & CI (DevOps)": 5.0,
-      "Core Libs": 43.0,
-      "Documentation": 8.0
+      "Build & CI": 5.0,
+      "Documentation": 8.0,
+      "Utilities": 43.0
     },
     "2010": {
-      "Build & CI (DevOps)": 30.83,
-      "Core Libs": 172.33,
-      "Documentation": 19.83
+      "Build & CI": 30.83,
+      "Documentation": 19.83,
+      "Utilities": 172.33
     }
   },
   "first_message": {

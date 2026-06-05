@@ -18,10 +18,10 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Node & RPC (App/Interface)",
-  "total_commits": 4.0,
-  "authored_commits": 4.0,
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Mempool",
+  "total_commits": 6.0,
+  "authored_commits": 6.0,
   "merge_commits": 0.0,
   "total_additions": 26.0,
   "total_deletions": 36.0,
@@ -38,12 +38,14 @@
   "approvals_count": 0.0,
   "p2016_reviews_count": 2.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": "2020-10-31T10:03:59+00:00",
+  "last_review_date": "2021-02-17T09:51:55+00:00",
   "prs_authored": 1.0,
   "avg_pr_ack_velocity_days": 0.0021643518518518518,
   "avg_concept_lead_time_days": 0.0021643518518518518,
   "review_reciprocity": 2.0,
   "hybrid_score": 0.1252,
-  "p2016_hybrid_score": 0.1252,
+  "p2016_hybrid_score": 0.125,
   "modern_hybrid_score": 0.0146,
   "impact_score": 7.0,
   "p2016_impact_score": 7.0,
@@ -58,15 +60,18 @@
   "last_active": null,
   "dev_type": "Builder",
   "expertise_domains": [
+    "Mempool",
     "Infrastructure"
   ],
   "expertise_by_source": {
     "code": {
-      "Infrastructure": 1.0
+      "Infrastructure": 0.388,
+      "Mempool": 0.612
     }
   },
   "expertise_domain_scores": {
-    "Infrastructure": 1.0
+    "Infrastructure": 0.388,
+    "Mempool": 0.612
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -86,8 +91,9 @@
   "github_url": "https://github.com/ellemouton",
   "commit_history": {
     "2020": {
-      "Node & RPC (App/Interface)": 2.5,
-      "Tests (QA)": 0.5
+      "Mempool": 1.83,
+      "Node & RPC": 0.83,
+      "Tests": 0.33
     }
   }
 }

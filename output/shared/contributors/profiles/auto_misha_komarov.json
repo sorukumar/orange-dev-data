@@ -1,7 +1,7 @@
 {
   "display_name": "Misha Komarov",
   "github_login_final": null,
-  "delving_username_final": "nemothenoone",
+  "delving_username_final": "mishakomarov",
   "uuid": "auto_misha_komarov",
   "badges": {
     "is_bip_author": null,
@@ -11,14 +11,14 @@
     "is_social_contributor": true,
     "is_sponsored": null,
     "maintainer_status": null,
-    "social_source": "delving",
+    "social_source": "Mixed",
     "sponsor_id": null
   },
   "roles": [
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
+  "last_seen": "2026-06-04T00:00:00",
   "technical_focus": "bitvm",
   "total_commits": 0.0,
   "authored_commits": 0.0,
@@ -38,6 +38,8 @@
   "approvals_count": null,
   "p2016_reviews_count": null,
   "modern_reviews_count": null,
+  "first_review_date": null,
+  "last_review_date": null,
   "prs_authored": null,
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
@@ -49,39 +51,36 @@
   "p2016_impact_score": 0.0,
   "modern_impact_score": 0.0,
   "threads_started": 3.0,
-  "replies_sent": 1.0,
+  "replies_sent": 0.0,
   "ml_threads": 1.0,
   "delving_threads": 2.0,
   "ml_responses": 0.0,
-  "delving_responses": 1.0,
-  "first_active": "2026-02-12T16:51:45.622000",
-  "last_active": "2026-02-23T14:08:38.604000",
+  "delving_responses": 0.0,
+  "first_active": null,
+  "last_active": "2026-02-23T13:25:41",
   "dev_type": "Participant",
   "expertise_domains": [
-    "L2",
-    "Wallet",
-    "Ecosystem"
+    "Script",
+    "Consensus"
   ],
   "expertise_by_source": {
     "discussion": {
-      "Ecosystem": 0.25,
-      "L2": 0.5,
-      "Wallet": 0.25
+      "Consensus": 0.333,
+      "Script": 0.667
     }
   },
   "expertise_domain_scores": {
-    "Ecosystem": 0.25,
-    "L2": 0.5,
-    "Wallet": 0.25
+    "Consensus": 0.333,
+    "Script": 0.667
   },
-  "p2016_posts": 4.0,
-  "modern_posts": 4.0,
+  "p2016_posts": 3.0,
+  "modern_posts": 3.0,
   "p2016_ml_posts": 1.0,
-  "p2016_delving_posts": 3.0,
+  "p2016_delving_posts": 2.0,
   "modern_ml_posts": 1.0,
-  "modern_delving_posts": 3.0,
-  "global_first_active": "2026-02-12T16:51:45.622000128",
-  "global_last_active": "2026-02-23T14:08:38.604000",
+  "modern_delving_posts": 2.0,
+  "global_first_active": null,
+  "global_last_active": "2026-02-23T13:25:41",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -89,27 +88,26 @@
   "github_blog": null,
   "github_followers": null,
   "is_top_50": false,
-  "delving_url": "https://delvingbitcoin.org/u/nemothenoone",
+  "delving_url": "https://delvingbitcoin.org/u/mishakomarov",
   "first_message": {
     "source": "delving",
-    "subject": "Bitcoin PIPEs v2",
-    "date": "2026-02-12",
-    "link": "https://delvingbitcoin.org/t/bitcoin-pipes-v2/2249/1"
+    "subject": "Bitcoin PIPEs: Introducting Covenants without Soft Forks",
+    "date": "2024-10-07",
+    "link": "https://delvingbitcoin.org/t/bitcoin-pipes-introducting-covenants-without-soft-forks/1183/1"
   },
   "last_message": {
-    "source": "delving",
-    "subject": "Re: Bitcoin PIPEs v2",
+    "source": "mailing_list",
+    "subject": "[bitcoindev] Bitcoin PIPEs v2. Overview and feedback request.",
     "date": "2026-02-23",
-    "link": "https://delvingbitcoin.org/t/bitcoin-pipes-v2/2249/10"
+    "link": "https://gnusha.org/pi/bitcoindev/fcf7d14c-6860-4493-80d5-9959d3760cd1n@googlegroups.com"
   },
   "social_history": {
+    "2024": {
+      "covenants": 2,
+      "soft-fork-activation": 2
+    },
     "2026": {
-      "bitvm": 3,
-      "covenants": 3,
-      "multisig-threshold": 3,
-      "other": 1,
-      "tokens-runes": 3,
-      "vaults": 3
+      "other": 1
     }
   }
 }

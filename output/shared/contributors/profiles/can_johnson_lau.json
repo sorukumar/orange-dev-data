@@ -19,10 +19,10 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Consensus (Domain Logic)",
-  "total_commits": 42.0,
-  "authored_commits": 42.0,
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Utilities",
+  "total_commits": 48.0,
+  "authored_commits": 48.0,
   "merge_commits": 0.0,
   "total_additions": 2193.0,
   "total_deletions": 185.0,
@@ -39,12 +39,14 @@
   "approvals_count": 35.0,
   "p2016_reviews_count": 75.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": "2015-07-17T04:52:21+00:00",
+  "last_review_date": "2019-01-20T11:16:38+00:00",
   "prs_authored": 93.0,
   "avg_pr_ack_velocity_days": 13.103833333333332,
   "avg_concept_lead_time_days": 22.354290123456792,
   "review_reciprocity": 0.8494623655913979,
-  "hybrid_score": 1.6,
-  "p2016_hybrid_score": 1.3716,
+  "hybrid_score": 1.5998,
+  "p2016_hybrid_score": 1.3713,
   "modern_hybrid_score": 0.1392,
   "impact_score": 62.0,
   "p2016_impact_score": 56.0,
@@ -61,16 +63,18 @@
   "expertise_domains": [
     "Consensus",
     "Infrastructure",
-    "Network"
+    "Script"
   ],
   "expertise_by_source": {
     "bips": {
       "Consensus": 1.0
     },
     "code": {
-      "Consensus": 0.361,
-      "Infrastructure": 0.617,
+      "Consensus": 0.117,
+      "Infrastructure": 0.595,
+      "Mempool": 0.106,
       "Network": 0.011,
+      "Script": 0.161,
       "Wallet": 0.011
     },
     "discussion": {
@@ -78,8 +82,10 @@
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.8083,
-    "Infrastructure": 0.1851
+    "Consensus": 0.7349,
+    "Infrastructure": 0.1784,
+    "Mempool": 0.0318,
+    "Script": 0.0483
   },
   "p2016_posts": 162.0,
   "modern_posts": 0.0,
@@ -99,25 +105,31 @@
   "github_url": "https://github.com/jl2012",
   "commit_history": {
     "2016": {
-      "Consensus (Domain Logic)": 4.5,
-      "Core Libs": 8.5,
+      "Consensus": 1.0,
       "Documentation": 0.5,
-      "Node & RPC (App/Interface)": 3.0,
-      "Tests (QA)": 2.5
+      "Mempool": 2.0,
+      "Node & RPC": 3.0,
+      "Script": 2.0,
+      "Tests": 2.0,
+      "Utilities": 8.5
     },
     "2017": {
-      "Consensus (Domain Logic)": 2.5,
-      "Core Libs": 1.0,
-      "Tests (QA)": 2.5
+      "Consensus": 1.5,
+      "Script": 1.0,
+      "Tests": 2.5,
+      "Utilities": 1.0
     },
     "2018": {
-      "Consensus (Domain Logic)": 1.83,
-      "P2P Network (Infrastructure)": 0.33,
-      "Tests (QA)": 0.5,
-      "Wallet (Client App)": 0.33
+      "Consensus": 0.5,
+      "Mempool": 1.17,
+      "P2P Network": 0.33,
+      "Script": 0.33,
+      "Tests": 0.33,
+      "Wallet": 0.33
     },
     "2020": {
-      "Consensus (Domain Logic)": 2.0
+      "Consensus": 0.5,
+      "Script": 1.5
     }
   },
   "bip_list": [

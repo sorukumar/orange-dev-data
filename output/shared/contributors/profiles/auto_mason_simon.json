@@ -18,8 +18,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Tests (QA)",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Tests",
   "total_commits": 8.0,
   "authored_commits": 8.0,
   "merge_commits": 0.0,
@@ -38,6 +38,8 @@
   "approvals_count": 0.0,
   "p2016_reviews_count": 0.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": null,
+  "last_review_date": null,
   "prs_authored": 7.0,
   "avg_pr_ack_velocity_days": 10.753184799382716,
   "avg_concept_lead_time_days": 0.3851967592592593,
@@ -89,11 +91,11 @@
   "github_url": "https://github.com/masonicboom",
   "commit_history": {
     "2018": {
-      "Core Libs": 0.33,
       "Documentation": 1.0,
-      "Node & RPC (App/Interface)": 0.33,
-      "Tests (QA)": 3.33,
-      "Wallet (Client App)": 1.0
+      "Node & RPC": 0.33,
+      "Tests": 3.33,
+      "Utilities": 0.33,
+      "Wallet": 1.0
     }
   }
 }

@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
+  "last_seen": "2026-06-04T00:00:00",
   "technical_focus": "None",
   "total_commits": 0.0,
   "authored_commits": 0.0,
@@ -38,24 +38,26 @@
   "approvals_count": 0.0,
   "p2016_reviews_count": 4.0,
   "modern_reviews_count": 4.0,
+  "first_review_date": "2023-10-27T01:02:48+00:00",
+  "last_review_date": "2026-04-15T01:37:38+00:00",
   "prs_authored": 2.0,
   "avg_pr_ack_velocity_days": 0.09181712962962962,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 2.0,
-  "hybrid_score": 0.1638,
-  "p2016_hybrid_score": 0.2298,
+  "hybrid_score": 0.1637,
+  "p2016_hybrid_score": 0.2296,
   "modern_hybrid_score": 0.4146,
   "impact_score": 9.0,
   "p2016_impact_score": 13.0,
   "modern_impact_score": 22.0,
-  "threads_started": 15.0,
+  "threads_started": 17.0,
   "replies_sent": 84.0,
   "ml_threads": 2.0,
-  "delving_threads": 13.0,
+  "delving_threads": 15.0,
   "ml_responses": 70.0,
   "delving_responses": 14.0,
-  "first_active": "2023-11-22T01:40:54.064000",
-  "last_active": "2026-05-28T13:37:10",
+  "first_active": null,
+  "last_active": null,
   "dev_type": "Participant",
   "expertise_domains": [
     "Cryptography",
@@ -64,24 +66,24 @@
   ],
   "expertise_by_source": {
     "discussion": {
-      "Consensus": 0.148,
-      "Cryptography": 0.721,
-      "Script": 0.131
+      "Consensus": 0.161,
+      "Cryptography": 0.71,
+      "Script": 0.129
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.148,
-    "Cryptography": 0.721,
-    "Script": 0.131
+    "Consensus": 0.161,
+    "Cryptography": 0.71,
+    "Script": 0.129
   },
-  "p2016_posts": 99.0,
-  "modern_posts": 99.0,
+  "p2016_posts": 101.0,
+  "modern_posts": 101.0,
   "p2016_ml_posts": 72.0,
-  "p2016_delving_posts": 27.0,
+  "p2016_delving_posts": 29.0,
   "modern_ml_posts": 72.0,
-  "modern_delving_posts": 27.0,
-  "global_first_active": "2023-11-22T01:40:54.064000",
-  "global_last_active": "2026-05-28T13:37:10",
+  "modern_delving_posts": 29.0,
+  "global_first_active": null,
+  "global_last_active": null,
   "github_location": null,
   "github_company": null,
   "github_bio": "Pseudonymous freelance cypherpunk",
@@ -98,10 +100,10 @@
     "link": "https://delvingbitcoin.org/t/off-chain-dlc-ticketing-systems/214/1"
   },
   "last_message": {
-    "source": "mailing_list",
-    "subject": "Re: [bitcoindev] PQC: Lattice-based signatures",
-    "date": "2026-05-28",
-    "link": "https://gnusha.org/pi/bitcoindev/gykF8zbGCmjgSr4Je8XH-al1Uge3Uk1t7L9mrNDmLcIeJM48s6ujL84IPctqF1C8t9doEtYscjjGGeE2s-AqK9eAl7suRdsCPs2OBAgWurU=@proton.me"
+    "source": "delving",
+    "subject": "Re: [BIP Draft] Witness Version 3: ML-DSA-65 Post-Quantum Key-Path Spending",
+    "date": "2026-06-01",
+    "link": "https://delvingbitcoin.org/t/bip-draft-witness-version-3-ml-dsa-65-post-quantum-key-path-spending/2422/3"
   },
   "social_history": {
     "2023": {
@@ -116,20 +118,22 @@
     "2025": {
       "bitvm": 1,
       "covenants": 7,
-      "other": 10,
+      "other": 9,
       "quantum": 33,
       "script-opcodes": 4,
+      "signatures-sighash": 1,
       "taproot": 4,
       "wallet-keys": 1
     },
     "2026": {
       "bitvm": 10,
       "covenants": 9,
-      "other": 33,
+      "other": 29,
       "multisig-threshold": 6,
-      "quantum": 38,
+      "quantum": 39,
       "script-opcodes": 9,
-      "taproot": 17,
+      "signatures-sighash": 7,
+      "taproot": 19,
       "wallet-keys": 12
     }
   }

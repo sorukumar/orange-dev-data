@@ -98,6 +98,12 @@ def calculate_review_metrics():
         modern_reviews_count=('pr_number', 'nunique')
     ).reset_index()
 
+    # Capture review activity range for frontend timelines
+    review_date_range = df_active.groupby('user').agg(
+        first_review_date=('timestamp', 'min'),
+        last_review_date=('timestamp', 'max')
+    ).reset_index()
+
     print("Aggregating reviewer metrics...")
     # 1. Reviewer Performance (Interaction Speed)
     reviewer_perf = df_active.groupby('user').agg(
@@ -114,6 +120,7 @@ def calculate_review_metrics():
     reviewer_metrics = reviewer_perf.merge(approval_perf, on='user', how='left')
     reviewer_metrics = reviewer_metrics.merge(p2016_reviewer_counts, on='user', how='left')
     reviewer_metrics = reviewer_metrics.merge(modern_reviewer_counts, on='user', how='left')
+    reviewer_metrics = reviewer_metrics.merge(review_date_range, on='user', how='left')
     
     # 3. Author Clout (Time-to-ACK for their PRs)
     print("Aggregating author metrics...")

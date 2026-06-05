@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
+  "last_seen": "2026-06-04T00:00:00",
   "technical_focus": "Documentation",
   "total_commits": 12.0,
   "authored_commits": 12.0,
@@ -38,13 +38,15 @@
   "approvals_count": 10.0,
   "p2016_reviews_count": 12.0,
   "modern_reviews_count": 11.0,
+  "first_review_date": "2022-12-12T09:52:55+00:00",
+  "last_review_date": "2025-03-21T14:44:43+00:00",
   "prs_authored": 4.0,
   "avg_pr_ack_velocity_days": 1.482505787037037,
   "avg_concept_lead_time_days": 0.29470679012345674,
   "review_reciprocity": 3.0,
   "hybrid_score": 0.2152,
   "p2016_hybrid_score": 0.2178,
-  "modern_hybrid_score": 0.2199,
+  "modern_hybrid_score": 0.2197,
   "impact_score": 12.0,
   "p2016_impact_score": 12.0,
   "modern_impact_score": 12.0,
@@ -54,18 +56,19 @@
   "delving_threads": 4.0,
   "ml_responses": 0.0,
   "delving_responses": 4.0,
-  "first_active": "2024-02-14T14:18:22.962000",
-  "last_active": "2025-03-03T14:01:18.346000",
+  "first_active": null,
+  "last_active": null,
   "dev_type": "Builder",
   "expertise_domains": [
     "Infrastructure",
     "Network",
-    "Mining"
+    "Mempool"
   ],
   "expertise_by_source": {
     "code": {
       "Consensus": 0.117,
-      "Infrastructure": 0.883
+      "Infrastructure": 0.85,
+      "Mempool": 0.033
     },
     "discussion": {
       "Mempool": 0.226,
@@ -75,8 +78,8 @@
   },
   "expertise_domain_scores": {
     "Consensus": 0.0702,
-    "Infrastructure": 0.5298,
-    "Mempool": 0.0904,
+    "Infrastructure": 0.51,
+    "Mempool": 0.1102,
     "Mining": 0.1032,
     "Network": 0.2064
   },
@@ -87,7 +90,7 @@
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 8.0,
   "global_first_active": "2022-11-18T12:56:46",
-  "global_last_active": "2025-03-03T14:01:18.345999872",
+  "global_last_active": "2024-08-27T04:46:55",
   "github_location": "Earth",
   "github_company": null,
   "github_bio": "Bitcoin researcher and developer",
@@ -99,19 +102,19 @@
   "delving_url": "https://delvingbitcoin.org/u/virtu",
   "commit_history": {
     "2022": {
-      "Consensus (Domain Logic)": 0.2,
-      "Core Libs": 0.2,
+      "Consensus": 0.2,
       "Documentation": 0.2,
-      "Node & RPC (App/Interface)": 0.2,
-      "Tests (QA)": 0.2
+      "Mempool": 0.2,
+      "Tests": 0.2,
+      "Utilities": 0.2
     },
     "2023": {
-      "Tests (QA)": 1.0
+      "Tests": 1.0
     },
     "2024": {
-      "Consensus (Domain Logic)": 0.5,
-      "Core Libs": 1.5,
-      "Documentation": 2.0
+      "Consensus": 0.5,
+      "Documentation": 2.0,
+      "Utilities": 1.5
     }
   },
   "first_message": {

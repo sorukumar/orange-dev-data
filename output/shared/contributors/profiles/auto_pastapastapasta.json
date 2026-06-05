@@ -18,10 +18,10 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
+  "last_seen": "2026-06-04T00:00:00",
   "technical_focus": "Core Libs",
-  "total_commits": 26.0,
-  "authored_commits": 26.0,
+  "total_commits": 24.0,
+  "authored_commits": 24.0,
   "merge_commits": 0.0,
   "total_additions": 172.0,
   "total_deletions": 179.0,
@@ -38,12 +38,14 @@
   "approvals_count": 28.0,
   "p2016_reviews_count": 49.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": "2018-11-15T05:20:34+00:00",
+  "last_review_date": "2022-05-13T15:12:04+00:00",
   "prs_authored": 13.0,
   "avg_pr_ack_velocity_days": 33.225411706349206,
   "avg_concept_lead_time_days": 0.43708912037037034,
   "review_reciprocity": 3.769230769230769,
   "hybrid_score": 0.2723,
-  "p2016_hybrid_score": 0.2724,
+  "p2016_hybrid_score": 0.2725,
   "modern_hybrid_score": 0.0727,
   "impact_score": 15.0,
   "p2016_impact_score": 15.0,
@@ -66,17 +68,19 @@
     "code": {
       "Consensus": 0.062,
       "Cryptography": 0.021,
-      "Infrastructure": 0.71,
-      "Network": 0.042,
-      "Wallet": 0.164
+      "Infrastructure": 0.676,
+      "Network": 0.052,
+      "Script": 0.021,
+      "Wallet": 0.167
     }
   },
   "expertise_domain_scores": {
     "Consensus": 0.0621,
     "Cryptography": 0.021,
-    "Infrastructure": 0.7107,
-    "Network": 0.042,
-    "Wallet": 0.1642
+    "Infrastructure": 0.6767,
+    "Network": 0.0521,
+    "Script": 0.021,
+    "Wallet": 0.1672
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -96,27 +100,26 @@
   "github_url": "https://github.com/PastaPastaPasta",
   "commit_history": {
     "2020": {
-      "Wallet (Client App)": 1.0
+      "Wallet": 1.0
     },
     "2021": {
-      "Build & CI (DevOps)": 0.5,
-      "Consensus (Domain Logic)": 0.17,
-      "Core Libs": 0.17,
-      "Cryptography (Primitives)": 0.17,
+      "Build & CI": 0.5,
+      "Consensus": 0.17,
+      "Cryptography": 0.17,
       "Documentation": 1.5,
-      "Tests (QA)": 0.17,
-      "Utilities (Shared Libs)": 1.17,
-      "Wallet (Client App)": 0.17
+      "Script": 0.17,
+      "Tests": 0.17,
+      "Utilities": 1.17,
+      "Wallet": 0.17
     },
     "2022": {
-      "Consensus (Domain Logic)": 0.33,
-      "Core Libs": 0.68,
-      "Database (Persistence)": 0.14,
-      "Node & RPC (App/Interface)": 0.34,
-      "P2P Network (Infrastructure)": 0.34,
-      "Tests (QA)": 0.68,
-      "Utilities (Shared Libs)": 0.34,
-      "Wallet (Client App)": 0.14
+      "Consensus": 0.33,
+      "Database": 0.17,
+      "Node & RPC": 0.42,
+      "P2P Network": 0.42,
+      "Tests": 0.75,
+      "Utilities": 0.75,
+      "Wallet": 0.17
     }
   }
 }

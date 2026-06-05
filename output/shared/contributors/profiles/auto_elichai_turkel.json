@@ -18,8 +18,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Tests (QA)",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Tests",
   "total_commits": 17.0,
   "authored_commits": 17.0,
   "merge_commits": 0.0,
@@ -38,6 +38,8 @@
   "approvals_count": 38.0,
   "p2016_reviews_count": 80.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": "2019-06-17T01:15:04+00:00",
+  "last_review_date": "2022-10-04T15:00:38+00:00",
   "prs_authored": 22.0,
   "avg_pr_ack_velocity_days": 2.197314091435185,
   "avg_concept_lead_time_days": 3.7905423280423283,
@@ -64,9 +66,10 @@
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.133,
+      "Consensus": 0.067,
       "Cryptography": 0.067,
       "Infrastructure": 0.767,
+      "Script": 0.067,
       "Wallet": 0.033
     },
     "discussion": {
@@ -75,10 +78,11 @@
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.2798,
+    "Consensus": 0.2401,
     "Cryptography": 0.0402,
-    "Infrastructure": 0.4602,
-    "Mining": 0.2,
+    "Infrastructure": 0.4599,
+    "Mining": 0.1999,
+    "Script": 0.0402,
     "Wallet": 0.0198
   },
   "p2016_posts": 3.0,
@@ -102,19 +106,19 @@
       "Documentation": 1.0
     },
     "2019": {
-      "Core Libs": 1.5,
       "Documentation": 1.0,
-      "Tests (QA)": 3.5,
-      "Utilities (Shared Libs)": 0.5,
-      "Wallet (Client App)": 0.5
+      "Tests": 3.5,
+      "Utilities": 2.0,
+      "Wallet": 0.5
     },
     "2020": {
-      "Consensus (Domain Logic)": 2.0,
-      "Core Libs": 1.0,
-      "Tests (QA)": 3.0
+      "Consensus": 1.0,
+      "Script": 1.0,
+      "Tests": 3.0,
+      "Utilities": 1.0
     },
     "2022": {
-      "Cryptography (Primitives)": 1.0
+      "Cryptography": 1.0
     }
   },
   "first_message": {

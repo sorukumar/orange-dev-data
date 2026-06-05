@@ -19,8 +19,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Core Libs",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Utilities",
   "total_commits": 27.0,
   "authored_commits": 27.0,
   "merge_commits": 0.0,
@@ -33,19 +33,21 @@
   "bips_authored": 4.0,
   "p2016_bips_authored": 1.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": 701.0935565762087,
-  "reviews_count": 165.0,
+  "avg_review_latency_days": 720.9251599596391,
+  "reviews_count": 166.0,
   "avg_approval_latency_days": 801.2592908653846,
   "approvals_count": 94.0,
-  "p2016_reviews_count": 155.0,
-  "modern_reviews_count": 20.0,
+  "p2016_reviews_count": 156.0,
+  "modern_reviews_count": 21.0,
+  "first_review_date": "2013-09-15T18:38:35+00:00",
+  "last_review_date": "2026-05-31T08:50:29+00:00",
   "prs_authored": 30.0,
   "avg_pr_ack_velocity_days": 4.439086371527778,
   "avg_concept_lead_time_days": 18.04989351851852,
-  "review_reciprocity": 5.5,
-  "hybrid_score": 1.2796,
-  "p2016_hybrid_score": 0.8446,
-  "modern_hybrid_score": 0.2057,
+  "review_reciprocity": 5.533333333333333,
+  "hybrid_score": 1.2798,
+  "p2016_hybrid_score": 0.8447,
+  "modern_hybrid_score": 0.2059,
   "impact_score": 54.0,
   "p2016_impact_score": 40.0,
   "modern_impact_score": 12.0,
@@ -105,26 +107,26 @@
   "github_url": "https://github.com/prusnak",
   "commit_history": {
     "2015": {
-      "Core Libs": 0.83,
-      "Node & RPC (App/Interface)": 0.33,
-      "P2P Network (Infrastructure)": 0.83
+      "Node & RPC": 0.33,
+      "P2P Network": 0.83,
+      "Utilities": 0.83
     },
     "2017": {
-      "Core Libs": 1.0
+      "Utilities": 1.0
     },
     "2020": {
-      "Node & RPC (App/Interface)": 1.0
+      "Node & RPC": 1.0
     },
     "2021": {
-      "GUI (Presentation Layer)": 1.0
+      "GUI": 1.0
     },
     "2022": {
-      "Build & CI (DevOps)": 2.33,
-      "Core Libs": 3.67,
-      "Cryptography (Primitives)": 2.0,
+      "Build & CI": 2.33,
+      "Cryptography": 2.0,
       "Documentation": 2.33,
-      "Node & RPC (App/Interface)": 0.33,
-      "Tests (QA)": 0.33
+      "Node & RPC": 0.33,
+      "Tests": 0.33,
+      "Utilities": 3.67
     }
   },
   "bip_list": [

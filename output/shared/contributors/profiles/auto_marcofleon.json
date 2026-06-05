@@ -18,10 +18,10 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
+  "last_seen": "2026-06-04T00:00:00",
   "technical_focus": "code",
-  "total_commits": 112.0,
-  "authored_commits": 112.0,
+  "total_commits": 119.0,
+  "authored_commits": 119.0,
   "merge_commits": 0.0,
   "total_additions": 1659.0,
   "total_deletions": 1945.0,
@@ -32,19 +32,21 @@
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": 57.040511017864155,
-  "reviews_count": 159.0,
-  "avg_approval_latency_days": 49.806158629514606,
-  "approvals_count": 137.0,
-  "p2016_reviews_count": 159.0,
-  "modern_reviews_count": 159.0,
+  "avg_review_latency_days": 56.702284689959995,
+  "reviews_count": 163.0,
+  "avg_approval_latency_days": 49.23040523373984,
+  "approvals_count": 140.0,
+  "p2016_reviews_count": 163.0,
+  "modern_reviews_count": 163.0,
+  "first_review_date": "2024-02-23T00:30:17+00:00",
+  "last_review_date": "2026-06-04T11:24:36+00:00",
   "prs_authored": 27.0,
   "avg_pr_ack_velocity_days": 1.5875333867521368,
   "avg_concept_lead_time_days": 2.1178276353276355,
-  "review_reciprocity": 5.888888888888889,
-  "hybrid_score": 0.4183,
-  "p2016_hybrid_score": 0.4183,
-  "modern_hybrid_score": 0.4183,
+  "review_reciprocity": 6.037037037037037,
+  "hybrid_score": 0.4201,
+  "p2016_hybrid_score": 0.4201,
+  "modern_hybrid_score": 0.4201,
   "impact_score": 22.0,
   "p2016_impact_score": 22.0,
   "modern_impact_score": 22.0,
@@ -64,17 +66,19 @@
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.112,
-      "Infrastructure": 0.67,
-      "Network": 0.157,
-      "Wallet": 0.061
+      "Consensus": 0.103,
+      "Infrastructure": 0.626,
+      "Mempool": 0.061,
+      "Network": 0.151,
+      "Wallet": 0.058
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.112,
-    "Infrastructure": 0.67,
-    "Network": 0.157,
-    "Wallet": 0.061
+    "Consensus": 0.1031,
+    "Infrastructure": 0.6266,
+    "Mempool": 0.0611,
+    "Network": 0.1512,
+    "Wallet": 0.0581
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -94,29 +98,28 @@
   "github_url": "https://github.com/marcofleon",
   "commit_history": {
     "2024": {
-      "Build & CI (DevOps)": 1.5,
-      "Consensus (Domain Logic)": 0.5,
-      "Core Libs": 2.0,
+      "Build & CI": 1.5,
+      "Consensus": 0.5,
       "Documentation": 2.0,
-      "P2P Network (Infrastructure)": 2.0,
-      "Tests (QA)": 8.5,
-      "Utilities (Shared Libs)": 0.5,
-      "Wallet (Client App)": 1.0
+      "P2P Network": 2.0,
+      "Tests": 8.5,
+      "Utilities": 2.5,
+      "Wallet": 1.0
     },
     "2025": {
-      "Consensus (Domain Logic)": 4.34,
-      "Core Libs": 2.16,
-      "GUI (Presentation Layer)": 2.17,
-      "Node & RPC (App/Interface)": 4.16,
-      "P2P Network (Infrastructure)": 6.66,
-      "Tests (QA)": 8.83,
-      "Utilities (Shared Libs)": 2.34,
-      "Wallet (Client App)": 2.34
+      "Consensus": 3.94,
+      "GUI": 2.14,
+      "Mempool": 3.44,
+      "Node & RPC": 2.75,
+      "P2P Network": 6.45,
+      "Tests": 8.09,
+      "Utilities": 3.92,
+      "Wallet": 2.27
     },
     "2026": {
-      "Consensus (Domain Logic)": 1.33,
-      "Node & RPC (App/Interface)": 0.33,
-      "Tests (QA)": 2.33
+      "Consensus": 1.33,
+      "Node & RPC": 0.33,
+      "Tests": 3.33
     }
   }
 }

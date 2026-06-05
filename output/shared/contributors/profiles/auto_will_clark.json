@@ -18,33 +18,35 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
+  "last_seen": "2026-06-04T00:00:00",
   "technical_focus": "None",
-  "total_commits": 140.0,
-  "authored_commits": 140.0,
+  "total_commits": 142.0,
+  "authored_commits": 142.0,
   "merge_commits": 0.0,
-  "total_additions": 2048.0,
-  "total_deletions": 918.0,
+  "total_additions": 2184.0,
+  "total_deletions": 933.0,
   "first_commit": "2022-01-14T10:34:17",
-  "last_commit": "2026-05-26T18:39:03",
-  "p2016_authored_commits": 119.0,
-  "modern_authored_commits": 98.0,
+  "last_commit": "2026-06-03T10:25:11",
+  "p2016_authored_commits": 121.0,
+  "modern_authored_commits": 100.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": 81.53902497247628,
-  "reviews_count": 369.0,
-  "avg_approval_latency_days": 57.966113029970764,
-  "approvals_count": 286.0,
-  "p2016_reviews_count": 369.0,
-  "modern_reviews_count": 301.0,
-  "prs_authored": 104.0,
-  "avg_pr_ack_velocity_days": 6.93210843373494,
-  "avg_concept_lead_time_days": 10.878446869488537,
-  "review_reciprocity": 3.548076923076923,
-  "hybrid_score": 0.2325,
-  "p2016_hybrid_score": 0.5159,
-  "modern_hybrid_score": 0.4813,
+  "avg_review_latency_days": 82.89850954130208,
+  "reviews_count": 375.0,
+  "avg_approval_latency_days": 59.162878484154255,
+  "approvals_count": 292.0,
+  "p2016_reviews_count": 375.0,
+  "modern_reviews_count": 305.0,
+  "first_review_date": "2020-05-18T08:20:24+00:00",
+  "last_review_date": "2026-06-04T12:51:33+00:00",
+  "prs_authored": 108.0,
+  "avg_pr_ack_velocity_days": 6.70384555340224,
+  "avg_concept_lead_time_days": 10.625574127906978,
+  "review_reciprocity": 3.4722222222222223,
+  "hybrid_score": 0.2331,
+  "p2016_hybrid_score": 0.5185,
+  "modern_hybrid_score": 0.4841,
   "impact_score": 13.0,
   "p2016_impact_score": 27.0,
   "modern_impact_score": 25.0,
@@ -55,7 +57,7 @@
   "ml_responses": 0.0,
   "delving_responses": 1.0,
   "first_active": "2020-05-08T07:31:06",
-  "last_active": "2026-05-18T14:52:14.130000",
+  "last_active": null,
   "dev_type": "Reviewer",
   "expertise_domains": [
     "Infrastructure",
@@ -64,8 +66,9 @@
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.022,
-      "Infrastructure": 0.961,
+      "Consensus": 0.013,
+      "Infrastructure": 0.962,
+      "Mempool": 0.008,
       "Wallet": 0.017
     },
     "discussion": {
@@ -74,9 +77,8 @@
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.0132,
-    "Infrastructure": 0.5766,
-    "Mempool": 0.2244,
+    "Infrastructure": 0.5772,
+    "Mempool": 0.2292,
     "Mining": 0.1756,
     "Wallet": 0.0102
   },
@@ -87,7 +89,7 @@
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 6.0,
   "global_first_active": "2020-05-08T07:31:06",
-  "global_last_active": "2026-05-26T18:39:03",
+  "global_last_active": "2026-06-03T10:25:11",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -99,44 +101,42 @@
   "delving_url": "https://delvingbitcoin.org/u/willcl-ark",
   "commit_history": {
     "2022": {
-      "Consensus (Domain Logic)": 0.5,
-      "Core Libs": 3.0,
+      "Consensus": 0.5,
       "Documentation": 3.0,
-      "Node & RPC (App/Interface)": 1.5,
-      "Tests (QA)": 1.0
+      "Node & RPC": 1.5,
+      "Tests": 1.0,
+      "Utilities": 3.0
     },
     "2023": {
-      "Build & CI (DevOps)": 1.5,
-      "Consensus (Domain Logic)": 1.0,
+      "Build & CI": 1.5,
+      "Consensus": 1.0,
       "Documentation": 4.0,
-      "GUI (Presentation Layer)": 0.5,
-      "Node & RPC (App/Interface)": 1.5,
-      "Tests (QA)": 2.5,
-      "Utilities (Shared Libs)": 2.0,
-      "Wallet (Client App)": 1.0
+      "GUI": 0.5,
+      "Node & RPC": 1.5,
+      "Tests": 2.5,
+      "Utilities": 2.0,
+      "Wallet": 1.0
     },
     "2024": {
-      "Build & CI (DevOps)": 1.5,
-      "Consensus (Domain Logic)": 1.0,
-      "Core Libs": 4.5,
+      "Build & CI": 1.5,
       "Documentation": 2.83,
-      "GUI (Presentation Layer)": 3.0,
-      "Node & RPC (App/Interface)": 5.17,
-      "Tests (QA)": 8.33,
-      "Utilities (Shared Libs)": 1.67,
-      "Wallet (Client App)": 1.0
+      "GUI": 3.0,
+      "Mempool": 1.0,
+      "Node & RPC": 5.17,
+      "Tests": 8.33,
+      "Utilities": 6.17,
+      "Wallet": 1.0
     },
     "2025": {
-      "Build & CI (DevOps)": 31.5,
-      "Core Libs": 3.0,
+      "Build & CI": 31.5,
       "Documentation": 3.5,
-      "Tests (QA)": 6.0,
-      "Utilities (Shared Libs)": 3.0
+      "Tests": 6.0,
+      "Utilities": 6.0
     },
     "2026": {
-      "Build & CI (DevOps)": 9.33,
-      "Core Libs": 0.33,
-      "Tests (QA)": 6.33
+      "Build & CI": 11.33,
+      "Tests": 7.33,
+      "Utilities": 1.33
     }
   },
   "first_message": {

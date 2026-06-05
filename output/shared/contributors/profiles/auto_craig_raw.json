@@ -19,7 +19,7 @@
     "BIP Author"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
+  "last_seen": "2026-06-04T00:00:00",
   "technical_focus": "None",
   "total_commits": 0.0,
   "authored_commits": 0.0,
@@ -38,14 +38,16 @@
   "avg_approval_latency_days": 148.73193055555555,
   "approvals_count": 4.0,
   "p2016_reviews_count": 20.0,
-  "modern_reviews_count": 14.0,
+  "modern_reviews_count": 13.0,
+  "first_review_date": "2020-12-19T07:12:35+00:00",
+  "last_review_date": "2026-04-07T05:25:57+00:00",
   "prs_authored": 6.0,
   "avg_pr_ack_velocity_days": 44.95344328703704,
   "avg_concept_lead_time_days": 89.69445601851852,
   "review_reciprocity": 3.3333333333333335,
   "hybrid_score": 0.8593,
-  "p2016_hybrid_score": 0.8882,
-  "modern_hybrid_score": 0.777,
+  "p2016_hybrid_score": 0.8881,
+  "modern_hybrid_score": 0.7744,
   "impact_score": 40.0,
   "p2016_impact_score": 41.0,
   "modern_impact_score": 37.0,
@@ -59,12 +61,13 @@
   "last_active": "2026-04-14T01:27:16",
   "dev_type": "Reviewer",
   "expertise_domains": [
-    "Privacy",
-    "Wallet"
+    "Script",
+    "Wallet",
+    "Privacy"
   ],
   "expertise_by_source": {
     "bips": {
-      "Privacy": 0.667,
+      "Script": 0.667,
       "Wallet": 0.333
     },
     "discussion": {
@@ -73,7 +76,8 @@
     }
   },
   "expertise_domain_scores": {
-    "Privacy": 0.5443,
+    "Privacy": 0.0677,
+    "Script": 0.4766,
     "Wallet": 0.4557
   },
   "p2016_posts": 24.0,
@@ -105,14 +109,14 @@
       "number": 392,
       "title": "Silent Payment Output Script Descriptors",
       "status": "Draft",
-      "theme": "Privacy",
+      "theme": "Script & Smart Contracts",
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0392.mediawiki"
     },
     {
       "number": 393,
       "title": "Output Script Descriptor Annotations",
       "status": "Draft",
-      "theme": "Privacy",
+      "theme": "Script & Smart Contracts",
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0393.mediawiki"
     }
   ],

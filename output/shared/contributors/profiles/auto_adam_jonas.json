@@ -18,10 +18,10 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Tests (QA)",
-  "total_commits": 21.0,
-  "authored_commits": 21.0,
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Tests",
+  "total_commits": 20.0,
+  "authored_commits": 20.0,
   "merge_commits": 0.0,
   "total_additions": 400.0,
   "total_deletions": 149.0,
@@ -38,6 +38,8 @@
   "approvals_count": 20.0,
   "p2016_reviews_count": 111.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": "2019-10-16T18:06:22+00:00",
+  "last_review_date": "2022-10-13T12:39:01+00:00",
   "prs_authored": 13.0,
   "avg_pr_ack_velocity_days": 1.1705635683760685,
   "avg_concept_lead_time_days": 0.41560185185185183,
@@ -64,17 +66,17 @@
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.018,
-      "Infrastructure": 0.601,
+      "Consensus": 0.024,
+      "Infrastructure": 0.596,
       "Network": 0.179,
       "Wallet": 0.202
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.018,
-    "Infrastructure": 0.601,
-    "Network": 0.179,
-    "Wallet": 0.202
+    "Consensus": 0.024,
+    "Infrastructure": 0.5954,
+    "Network": 0.1788,
+    "Wallet": 0.2018
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -94,20 +96,19 @@
   "github_url": "https://github.com/adamjonas",
   "commit_history": {
     "2019": {
-      "Consensus (Domain Logic)": 0.25,
-      "Core Libs": 0.25,
-      "Node & RPC (App/Interface)": 0.58,
-      "Tests (QA)": 3.08,
-      "Wallet (Client App)": 2.83
+      "Consensus": 0.33,
+      "Node & RPC": 0.67,
+      "Tests": 3.17,
+      "Wallet": 2.83
     },
     "2020": {
-      "Core Libs": 2.0,
-      "Node & RPC (App/Interface)": 0.5,
-      "P2P Network (Infrastructure)": 2.5
+      "Node & RPC": 0.5,
+      "P2P Network": 2.5,
+      "Utilities": 2.0
     },
     "2021": {
-      "Core Libs": 1.0,
-      "Documentation": 1.0
+      "Documentation": 1.0,
+      "Utilities": 1.0
     }
   }
 }

@@ -6,25 +6,27 @@
   "badges": {
     "is_bip_author": null,
     "is_core_committer": null,
-    "is_core_contributor": null,
+    "is_core_contributor": true,
     "is_maintainer": null,
-    "is_social_contributor": null,
+    "is_social_contributor": true,
     "is_sponsored": null,
     "maintainer_status": null,
-    "social_source": null,
+    "social_source": "github",
     "sponsor_id": null
   },
-  "roles": [],
+  "roles": [
+    "Researcher"
+  ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "None",
-  "total_commits": 0.0,
-  "authored_commits": 0.0,
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Documentation",
+  "total_commits": 5.0,
+  "authored_commits": 5.0,
   "merge_commits": 0.0,
-  "total_additions": null,
-  "total_deletions": null,
-  "first_commit": null,
-  "last_commit": null,
+  "total_additions": 17.0,
+  "total_deletions": 10.0,
+  "first_commit": "2014-06-25T00:23:05",
+  "last_commit": "2014-09-30T17:48:40",
   "p2016_authored_commits": 0.0,
   "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
@@ -36,14 +38,16 @@
   "approvals_count": 0.0,
   "p2016_reviews_count": 0.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": null,
+  "last_review_date": null,
   "prs_authored": 20.0,
   "avg_pr_ack_velocity_days": 0.2486496913580247,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 0.0,
-  "hybrid_score": 0.0865,
+  "hybrid_score": 0.1899,
   "p2016_hybrid_score": 0.0865,
   "modern_hybrid_score": 0.0865,
-  "impact_score": 5.0,
+  "impact_score": 11.0,
   "p2016_impact_score": 5.0,
   "modern_impact_score": 5.0,
   "threads_started": 1.0,
@@ -54,17 +58,22 @@
   "delving_responses": 0.0,
   "first_active": "2015-10-02T14:03:05",
   "last_active": "2015-10-02T14:03:05",
-  "dev_type": "Participant",
+  "dev_type": "Builder",
   "expertise_domains": [
+    "Infrastructure",
     "Consensus"
   ],
   "expertise_by_source": {
+    "code": {
+      "Infrastructure": 1.0
+    },
     "discussion": {
       "Consensus": 1.0
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 1.0
+    "Consensus": 0.4,
+    "Infrastructure": 0.6
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -72,7 +81,7 @@
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
-  "global_first_active": "2015-10-02T14:03:05",
+  "global_first_active": "2014-06-25T00:23:05",
   "global_last_active": "2015-10-02T14:03:05",
   "github_location": "Los Angeles, CA",
   "github_company": null,
@@ -82,6 +91,13 @@
   "github_followers": 42.0,
   "is_top_50": false,
   "github_url": "https://github.com/whitj00",
+  "commit_history": {
+    "2014": {
+      "Documentation": 2.0,
+      "GUI": 2.0,
+      "Utilities": 1.0
+    }
+  },
   "first_message": {
     "source": "mailing_list",
     "subject": "[bitcoin-dev] BIP Proposal:",

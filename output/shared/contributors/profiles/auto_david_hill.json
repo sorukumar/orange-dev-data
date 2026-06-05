@@ -18,8 +18,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Consensus (Domain Logic)",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "P2P Network",
   "total_commits": 3.0,
   "authored_commits": 3.0,
   "merge_commits": 0.0,
@@ -38,6 +38,8 @@
   "approvals_count": 0.0,
   "p2016_reviews_count": 0.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": "2014-08-08T15:54:10+00:00",
+  "last_review_date": "2015-08-26T14:03:10+00:00",
   "prs_authored": 5.0,
   "avg_pr_ack_velocity_days": 3.6573784722222222,
   "avg_concept_lead_time_days": 0.05912037037037037,
@@ -60,19 +62,19 @@
   "expertise_domains": [
     "Network",
     "Infrastructure",
-    "Consensus"
+    "Script"
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.333,
       "Infrastructure": 0.333,
-      "Network": 0.333
+      "Network": 0.333,
+      "Script": 0.333
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.3333,
     "Infrastructure": 0.3333,
-    "Network": 0.3333
+    "Network": 0.3333,
+    "Script": 0.3333
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -92,13 +94,13 @@
   "github_url": "https://github.com/dajohi",
   "commit_history": {
     "2013": {
-      "P2P Network (Infrastructure)": 1.0
+      "P2P Network": 1.0
     },
     "2014": {
-      "Core Libs": 1.0
+      "Utilities": 1.0
     },
     "2015": {
-      "Consensus (Domain Logic)": 1.0
+      "Script": 1.0
     }
   }
 }

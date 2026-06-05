@@ -12,17 +12,21 @@
     "is_sponsored": true,
     "maintainer_status": "emeritus",
     "social_source": "Mixed",
-    "sponsor_id": "spiral"
+    "sponsor_id": "spiral",
+    "maintainer_title": "Build / Security Maintainer",
+    "maintainer_primary_area": "Build System / Guix",
+    "maintainer_appointed": "2018-09-04",
+    "maintainer_stepped_down": "2024-02-14"
   },
   "roles": [
     "Build / Security Maintainer",
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Core Libs",
-  "total_commits": 718.0,
-  "authored_commits": 718.0,
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Utilities",
+  "total_commits": 730.0,
+  "authored_commits": 730.0,
   "merge_commits": 0.0,
   "total_additions": 14643.0,
   "total_deletions": 6995.0,
@@ -39,6 +43,8 @@
   "approvals_count": 133.0,
   "p2016_reviews_count": 254.0,
   "modern_reviews_count": 4.0,
+  "first_review_date": "2018-02-05T02:58:38+00:00",
+  "last_review_date": "2025-11-05T03:55:45+00:00",
   "prs_authored": 142.0,
   "avg_pr_ack_velocity_days": 6.7681894465488215,
   "avg_concept_lead_time_days": 9.136084150326797,
@@ -56,7 +62,7 @@
   "ml_responses": 1.0,
   "delving_responses": 0.0,
   "first_active": "2019-11-18T10:44:00",
-  "last_active": "2026-05-12T19:18:49.397000",
+  "last_active": null,
   "dev_type": "Builder",
   "expertise_domains": [
     "Infrastructure",
@@ -65,9 +71,11 @@
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.159,
-      "Infrastructure": 0.81,
-      "Network": 0.029,
+      "Consensus": 0.156,
+      "Infrastructure": 0.793,
+      "Mempool": 0.018,
+      "Network": 0.028,
+      "Script": 0.003,
       "Wallet": 0.002
     },
     "discussion": {
@@ -75,9 +83,10 @@
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.0954,
-    "Infrastructure": 0.486,
-    "Network": 0.4174
+    "Consensus": 0.0936,
+    "Infrastructure": 0.4758,
+    "Mempool": 0.0108,
+    "Network": 0.4168
   },
   "p2016_posts": 2.0,
   "modern_posts": 1.0,
@@ -86,7 +95,7 @@
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 1.0,
   "global_first_active": "2017-07-19T04:17:39",
-  "global_last_active": "2026-05-12T19:18:49.396999936",
+  "global_last_active": "2022-09-01T17:39:47",
   "github_location": "New York",
   "github_company": null,
   "github_bio": "Bitcoin, UNIX, systems engineering.",
@@ -101,48 +110,50 @@
       "Documentation": 2.0
     },
     "2018": {
-      "Build & CI (DevOps)": 0.5,
-      "Core Libs": 2.0,
+      "Build & CI": 0.5,
       "Documentation": 2.0,
-      "Node & RPC (App/Interface)": 1.0,
-      "Tests (QA)": 3.5,
-      "Wallet (Client App)": 1.0
+      "Node & RPC": 1.0,
+      "Tests": 3.5,
+      "Utilities": 2.0,
+      "Wallet": 1.0
     },
     "2019": {
-      "Build & CI (DevOps)": 24.83,
-      "Core Libs": 15.83,
+      "Build & CI": 24.83,
       "Documentation": 8.33,
-      "Node & RPC (App/Interface)": 0.33,
-      "P2P Network (Infrastructure)": 6.83,
-      "Tests (QA)": 4.83
+      "Node & RPC": 0.33,
+      "P2P Network": 6.83,
+      "Tests": 4.83,
+      "Utilities": 15.83
     },
     "2020": {
-      "Build & CI (DevOps)": 38.83,
-      "Consensus (Domain Logic)": 42.28,
-      "Core Libs": 41.78,
+      "Build & CI": 38.83,
+      "Consensus": 42.42,
       "Documentation": 12.5,
-      "Node & RPC (App/Interface)": 19.2,
-      "P2P Network (Infrastructure)": 5.03,
-      "Tests (QA)": 19.37
+      "Mempool": 3.92,
+      "Node & RPC": 15.92,
+      "P2P Network": 4.92,
+      "Tests": 19.08,
+      "Utilities": 41.42
     },
     "2021": {
-      "Build & CI (DevOps)": 15.25,
-      "Consensus (Domain Logic)": 12.92,
-      "Core Libs": 68.83,
+      "Build & CI": 15.25,
+      "Consensus": 12.62,
       "Documentation": 11.0,
-      "Node & RPC (App/Interface)": 40.42,
-      "P2P Network (Infrastructure)": 1.25,
-      "Tests (QA)": 10.33,
-      "Utilities (Shared Libs)": 1.0
+      "Mempool": 1.78,
+      "Node & RPC": 39.03,
+      "P2P Network": 1.2,
+      "Tests": 10.33,
+      "Utilities": 69.78
     },
     "2022": {
-      "Build & CI (DevOps)": 10.03,
-      "Consensus (Domain Logic)": 25.95,
-      "Core Libs": 8.7,
-      "Node & RPC (App/Interface)": 31.95,
-      "P2P Network (Infrastructure)": 1.67,
-      "Tests (QA)": 18.2,
-      "Utilities (Shared Libs)": 0.5
+      "Build & CI": 9.97,
+      "Consensus": 24.67,
+      "Mempool": 3.33,
+      "Node & RPC": 29.08,
+      "P2P Network": 1.58,
+      "Script": 1.45,
+      "Tests": 18.08,
+      "Utilities": 8.83
     }
   },
   "first_message": {

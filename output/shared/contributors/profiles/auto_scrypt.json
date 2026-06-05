@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
+  "last_seen": "2026-06-04T00:00:00",
   "technical_focus": "covenants",
   "total_commits": 0.0,
   "authored_commits": 0.0,
@@ -38,6 +38,8 @@
   "approvals_count": null,
   "p2016_reviews_count": null,
   "modern_reviews_count": null,
+  "first_review_date": null,
+  "last_review_date": null,
   "prs_authored": null,
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
@@ -48,14 +50,14 @@
   "impact_score": 0.0,
   "p2016_impact_score": 0.0,
   "modern_impact_score": 0.0,
-  "threads_started": 10.0,
+  "threads_started": 1.0,
   "replies_sent": 3.0,
   "ml_threads": 0.0,
-  "delving_threads": 10.0,
+  "delving_threads": 1.0,
   "ml_responses": 0.0,
   "delving_responses": 3.0,
-  "first_active": "2024-04-11T22:14:30.668000",
-  "last_active": "2026-01-20T09:09:18.801000",
+  "first_active": null,
+  "last_active": null,
   "dev_type": "Participant",
   "expertise_domains": [
     "Script",
@@ -63,22 +65,22 @@
   ],
   "expertise_by_source": {
     "discussion": {
-      "Mempool": 0.119,
-      "Script": 0.881
+      "Mempool": 0.254,
+      "Script": 0.746
     }
   },
   "expertise_domain_scores": {
-    "Mempool": 0.119,
-    "Script": 0.881
+    "Mempool": 0.254,
+    "Script": 0.746
   },
-  "p2016_posts": 13.0,
-  "modern_posts": 13.0,
+  "p2016_posts": 4.0,
+  "modern_posts": 4.0,
   "p2016_ml_posts": 0.0,
-  "p2016_delving_posts": 13.0,
+  "p2016_delving_posts": 4.0,
   "modern_ml_posts": 0.0,
-  "modern_delving_posts": 13.0,
-  "global_first_active": "2024-04-11T22:14:30.668000",
-  "global_last_active": "2026-01-20T09:09:18.800999936",
+  "modern_delving_posts": 4.0,
+  "global_first_active": null,
+  "global_last_active": null,
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -95,29 +97,22 @@
   },
   "last_message": {
     "source": "delving",
-    "subject": "OP_CAT and Bitcoin\u2019s Path to Quantum Resistance",
-    "date": "2026-01-20",
-    "link": "https://delvingbitcoin.org/t/op-cat-and-bitcoin-s-path-to-quantum-resistance/2207/1"
+    "subject": "Re: Betting on Bitcoin Upgrades: A Smart Contract Wager on OP_CAT Activation",
+    "date": "2025-04-23",
+    "link": "https://delvingbitcoin.org/t/betting-on-bitcoin-upgrades-a-smart-contract-wager-on-op-cat-activation/1632/8"
   },
   "social_history": {
     "2024": {
       "bitvm": 1,
-      "covenants": 7,
       "lightning": 1,
-      "mempool-fees": 3,
-      "mining": 2,
-      "other": 3,
-      "script-opcodes": 3,
-      "taproot": 2
+      "mempool-fees": 1,
+      "mining": 1,
+      "taproot": 1
     },
     "2025": {
-      "covenants": 4,
-      "script-opcodes": 4,
-      "spam-filtering": 4
-    },
-    "2026": {
-      "covenants": 1,
-      "other": 1
+      "covenants": 3,
+      "script-opcodes": 3,
+      "spam-filtering": 3
     }
   }
 }

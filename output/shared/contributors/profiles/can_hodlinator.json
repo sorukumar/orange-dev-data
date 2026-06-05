@@ -18,10 +18,10 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
+  "last_seen": "2026-06-04T00:00:00",
   "technical_focus": "Tests (QA)",
-  "total_commits": 163.0,
-  "authored_commits": 163.0,
+  "total_commits": 161.0,
+  "authored_commits": 161.0,
   "merge_commits": 0.0,
   "total_additions": 2854.0,
   "total_deletions": 1964.0,
@@ -32,18 +32,20 @@
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": 107.83852031958615,
+  "avg_review_latency_days": 107.74278858516159,
   "reviews_count": 251.0,
   "avg_approval_latency_days": 83.39505131442631,
   "approvals_count": 207.0,
   "p2016_reviews_count": 251.0,
   "modern_reviews_count": 251.0,
-  "prs_authored": 48.0,
-  "avg_pr_ack_velocity_days": 13.794248474326599,
+  "first_review_date": "2024-06-19T08:52:03+00:00",
+  "last_review_date": "2026-06-02T08:13:42+00:00",
+  "prs_authored": 50.0,
+  "avg_pr_ack_velocity_days": 13.200784017713364,
   "avg_concept_lead_time_days": 28.989427083333332,
-  "review_reciprocity": 5.229166666666667,
-  "hybrid_score": 0.4879,
-  "p2016_hybrid_score": 0.4905,
+  "review_reciprocity": 5.02,
+  "hybrid_score": 0.488,
+  "p2016_hybrid_score": 0.4906,
   "modern_hybrid_score": 0.504,
   "impact_score": 25.0,
   "p2016_impact_score": 25.0,
@@ -55,7 +57,7 @@
   "ml_responses": 2.0,
   "delving_responses": 0.0,
   "first_active": "2025-06-02T07:40:34",
-  "last_active": "2026-05-12T17:35:39.700000",
+  "last_active": null,
   "dev_type": "Builder",
   "expertise_domains": [
     "Infrastructure",
@@ -64,9 +66,10 @@
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.097,
+      "Consensus": 0.018,
       "Infrastructure": 0.845,
       "Network": 0.039,
+      "Script": 0.079,
       "Wallet": 0.02
     },
     "discussion": {
@@ -75,11 +78,12 @@
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.0582,
+    "Consensus": 0.0108,
     "Ecosystem": 0.2666,
     "Infrastructure": 0.5067,
     "Mempool": 0.1331,
     "Network": 0.0234,
+    "Script": 0.0474,
     "Wallet": 0.012
   },
   "p2016_posts": 5.0,
@@ -89,7 +93,7 @@
   "modern_ml_posts": 2.0,
   "modern_delving_posts": 3.0,
   "global_first_active": "2024-07-05T19:56:30",
-  "global_last_active": "2026-05-12T17:35:39.700000",
+  "global_last_active": "2026-04-23T14:58:16",
   "github_location": "Cyberspace",
   "github_company": null,
   "github_bio": "Bitcoin will cool off the human economy and provide time to stop SkyNet.\r\n\r\nSupported by @opensats.\r\n@chaincodelabs 2024 FOSS alum.",
@@ -101,33 +105,32 @@
   "delving_url": "https://delvingbitcoin.org/u/hodlinator",
   "commit_history": {
     "2024": {
-      "Consensus (Domain Logic)": 2.08,
-      "Core Libs": 7.42,
-      "GUI (Presentation Layer)": 0.33,
-      "Node & RPC (App/Interface)": 3.83,
-      "P2P Network (Infrastructure)": 3.75,
-      "Tests (QA)": 29.58,
-      "Utilities (Shared Libs)": 1.5,
-      "Wallet (Client App)": 1.5
+      "Consensus": 2.08,
+      "GUI": 0.33,
+      "Node & RPC": 3.83,
+      "P2P Network": 3.75,
+      "Tests": 29.58,
+      "Utilities": 8.92,
+      "Wallet": 1.5
     },
     "2025": {
-      "Build & CI (DevOps)": 4.0,
-      "Consensus (Domain Logic)": 7.7,
-      "Core Libs": 2.7,
+      "Build & CI": 4.0,
+      "Consensus": 0.2,
       "Documentation": 0.7,
-      "GUI (Presentation Layer)": 0.5,
-      "Node & RPC (App/Interface)": 0.5,
-      "P2P Network (Infrastructure)": 1.2,
-      "Tests (QA)": 33.7,
-      "Wallet (Client App)": 1.0
+      "GUI": 0.5,
+      "Node & RPC": 0.5,
+      "P2P Network": 1.2,
+      "Script": 7.5,
+      "Tests": 33.7,
+      "Utilities": 2.7,
+      "Wallet": 1.0
     },
     "2026": {
-      "Build & CI (DevOps)": 1.0,
-      "Consensus (Domain Logic)": 2.5,
-      "Core Libs": 1.5,
-      "Node & RPC (App/Interface)": 2.0,
-      "Tests (QA)": 17.0,
-      "Utilities (Shared Libs)": 1.0
+      "Build & CI": 1.0,
+      "Node & RPC": 2.0,
+      "Script": 2.5,
+      "Tests": 17.0,
+      "Utilities": 2.5
     }
   },
   "first_message": {

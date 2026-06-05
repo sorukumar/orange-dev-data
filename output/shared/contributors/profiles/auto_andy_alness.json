@@ -18,8 +18,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Consensus (Domain Logic)",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Script",
   "total_commits": 1.0,
   "authored_commits": 1.0,
   "merge_commits": 0.0,
@@ -38,11 +38,13 @@
   "approvals_count": 4.0,
   "p2016_reviews_count": 1.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": "2014-04-13T17:30:25+00:00",
+  "last_review_date": "2016-03-18T16:48:06+00:00",
   "prs_authored": 7.0,
   "avg_pr_ack_velocity_days": 27.557123842592596,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 1.2857142857142858,
-  "hybrid_score": 0.1441,
+  "hybrid_score": 0.144,
   "p2016_hybrid_score": 0.0615,
   "modern_hybrid_score": 0.0542,
   "impact_score": 8.0,
@@ -58,13 +60,13 @@
   "last_active": "2014-06-24T14:34:03",
   "dev_type": "Builder",
   "expertise_domains": [
-    "Consensus",
+    "Script",
     "Ecosystem",
     "Mempool"
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 1.0
+      "Script": 1.0
     },
     "discussion": {
       "Ecosystem": 0.859,
@@ -72,9 +74,9 @@
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.6,
     "Ecosystem": 0.3436,
-    "Mempool": 0.0564
+    "Mempool": 0.0564,
+    "Script": 0.6
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -94,7 +96,7 @@
   "github_url": "https://github.com/aalness",
   "commit_history": {
     "2014": {
-      "Consensus (Domain Logic)": 1.0
+      "Script": 1.0
     }
   },
   "first_message": {

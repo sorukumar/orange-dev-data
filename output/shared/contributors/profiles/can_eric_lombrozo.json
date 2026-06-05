@@ -16,7 +16,7 @@
   },
   "roles": [],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
+  "last_seen": "2026-06-04T00:00:00",
   "technical_focus": "None",
   "total_commits": 49.0,
   "authored_commits": 49.0,
@@ -36,12 +36,14 @@
   "approvals_count": 45.0,
   "p2016_reviews_count": 38.0,
   "modern_reviews_count": 1.0,
+  "first_review_date": "2012-12-24T06:55:01+00:00",
+  "last_review_date": "2025-09-22T11:19:22+00:00",
   "prs_authored": 42.0,
-  "avg_pr_ack_velocity_days": 140.19762118736384,
+  "avg_pr_ack_velocity_days": 132.47327867798356,
   "avg_concept_lead_time_days": 15.186357060185186,
   "review_reciprocity": 1.4285714285714286,
-  "hybrid_score": 1.5378,
-  "p2016_hybrid_score": 0.7499,
+  "hybrid_score": 1.5377,
+  "p2016_hybrid_score": 0.7498,
   "modern_hybrid_score": 0.1131,
   "impact_score": 60.0,
   "p2016_impact_score": 36.0,
@@ -101,22 +103,22 @@
   "github_url": "https://github.com/CodeShark",
   "commit_history": {
     "2013": {
-      "Build & CI (DevOps)": 0.5,
-      "Core Libs": 19.42,
+      "Build & CI": 0.5,
       "Documentation": 0.33,
-      "GUI (Presentation Layer)": 0.58,
-      "Node & RPC (App/Interface)": 3.08,
-      "P2P Network (Infrastructure)": 2.33,
-      "Tests (QA)": 0.75
+      "GUI": 0.58,
+      "Node & RPC": 3.08,
+      "P2P Network": 2.33,
+      "Tests": 0.75,
+      "Utilities": 19.42
     },
     "2014": {
-      "Core Libs": 0.5,
-      "Node & RPC (App/Interface)": 0.5
+      "Node & RPC": 0.5,
+      "Utilities": 0.5
     },
     "2015": {
-      "Consensus (Domain Logic)": 1.0,
-      "Core Libs": 1.0,
-      "Tests (QA)": 2.0
+      "Consensus": 1.0,
+      "Tests": 2.0,
+      "Utilities": 1.0
     }
   },
   "bip_list": [

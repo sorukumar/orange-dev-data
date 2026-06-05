@@ -18,8 +18,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Wallet (Client App)",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Wallet",
   "total_commits": 11.0,
   "authored_commits": 11.0,
   "merge_commits": 0.0,
@@ -38,6 +38,8 @@
   "approvals_count": 1.0,
   "p2016_reviews_count": 4.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": "2016-04-06T11:30:32+00:00",
+  "last_review_date": "2018-06-05T09:57:18+00:00",
   "prs_authored": 7.0,
   "avg_pr_ack_velocity_days": 0.5441342592592593,
   "avg_concept_lead_time_days": 1.175865162037037,
@@ -92,15 +94,15 @@
   "github_url": "https://github.com/pedrobranco",
   "commit_history": {
     "2016": {
-      "Consensus (Domain Logic)": 0.25,
-      "Core Libs": 0.75,
-      "Node & RPC (App/Interface)": 0.25,
-      "Wallet (Client App)": 1.75
+      "Consensus": 0.25,
+      "Node & RPC": 0.25,
+      "Utilities": 0.75,
+      "Wallet": 1.75
     },
     "2017": {
-      "Node & RPC (App/Interface)": 0.5,
-      "Tests (QA)": 0.5,
-      "Wallet (Client App)": 1.0
+      "Node & RPC": 0.5,
+      "Tests": 0.5,
+      "Wallet": 1.0
     }
   }
 }

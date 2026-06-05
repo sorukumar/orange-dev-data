@@ -10,12 +10,53 @@ UNIFIED_INPUT = "data/enriched/contributors_unified.parquet"
 OUTPUT_DIR = "output/shared/contributors" # Shared Source of Truth for all apps
 REGISTRY_FILE = os.path.join(OUTPUT_DIR, "registry_index.json")
 PROFILES_DIR = os.path.join(OUTPUT_DIR, "profiles")
+MAINTAINERS_FILE = "metadata/maintainers.json"
 
 # Enriched files produced by 02_process/ scripts — consumed here for profile shards
 COMMIT_HISTORY_PATH    = "data/enriched/contributor_commit_history.json"
 CONTRIBUTOR_BIPS_PATH  = "data/enriched/contributor_bips.json"
 BOOKMARKS_PATH         = "data/enriched/contributor_message_bookmarks.json"
 SOCIAL_HISTORY_PATH    = "data/enriched/contributor_social_history.json"
+
+def load_maintainers():
+    if not os.path.exists(MAINTAINERS_FILE):
+        return {}
+    with open(MAINTAINERS_FILE) as f:
+        data = json.load(f)
+    maintainers = {}
+    for m in data.get('maintainers', []):
+        login = m.get('github')
+        if login:
+            maintainers[login.strip().lower()] = m
+        name = m.get('name')
+        if name:
+            maintainers[name.strip().lower()] = m
+    return maintainers
+
+
+def load_identity_email_presence(identity_path='metadata/identities.json'):
+    if not os.path.exists(identity_path):
+        return {}
+    with open(identity_path) as f:
+        data = json.load(f)
+
+    email_presence = {}
+    for record in data.get('identities', []):
+        uuid = record.get('uuid')
+        if not uuid:
+            continue
+        emails = record.get('git_signatures', {}).get('emails', []) or []
+        has_real_email = False
+        for email in emails:
+            if not email:
+                continue
+            if 'users.noreply.github.com' in email.lower():
+                continue
+            has_real_email = True
+            break
+        email_presence[uuid] = has_real_email
+    return email_presence
+
 
 def deliver():
     print("Delivering UI artifacts...")
@@ -50,13 +91,50 @@ def deliver():
         return obj
 
     from datetime import datetime
-    
+    identity_email_presence = load_identity_email_presence()
+
     # Convert dataframe to list of dicts with serialization-friendly types
+    maintainers = load_maintainers()
     records = []
+    filtered_count = 0
     for _, row in df.iterrows():
         rec = {}
         for col in df.columns:
             rec[col] = clean_object(row[col])
+
+        impact_score = rec.get('impact_score')
+        has_github = bool(rec.get('github_login_final') or (rec.get('github') or {}).get('login'))
+        has_delving = bool(rec.get('delving_username_final') or rec.get('delving_username'))
+        has_real_email = bool(identity_email_presence.get(rec.get('uuid')))
+
+        if (impact_score is None or impact_score == 0) and not has_github and not has_delving and not has_real_email:
+            filtered_count += 1
+            continue
+
+        # Enrich maintainer timeline metadata from manual whitelist
+        maintainer = None
+        login = rec.get('github_login_final') or (rec.get('github') or {}).get('login')
+        if login:
+            maintainer = maintainers.get(str(login).strip().lower())
+        if not maintainer:
+            display_name = rec.get('display_name')
+            if display_name:
+                maintainer = maintainers.get(str(display_name).strip().lower())
+        if maintainer:
+            rec.setdefault('badges', {})
+            rec['badges']['is_maintainer'] = True
+            rec['badges']['maintainer_status'] = maintainer.get('status') or rec['badges'].get('maintainer_status')
+            if maintainer.get('role'):
+                rec['badges']['maintainer_title'] = maintainer['role'].get('title')
+                rec['badges']['maintainer_primary_area'] = maintainer['role'].get('primary_area')
+                rec['badges']['maintainer_appointed'] = maintainer['role'].get('appointed')
+                rec['badges']['maintainer_stepped_down'] = maintainer['role'].get('stepped_down')
+                title = maintainer['role'].get('title')
+                if title:
+                    rec.setdefault('roles', [])
+                    if title not in rec['roles']:
+                        rec['roles'].append(title)
+
         records.append(rec)
 
     # --- Load enriched per-contributor data ---
@@ -104,6 +182,9 @@ def deliver():
     print("Generating profiles and tracking filenames...")
     sharded_count = 0
     id_to_filename = {}
+
+    if filtered_count:
+        print(f"  Filtered out {filtered_count} low-impact identities with no GitHub, no Delving, and no real email.")
 
     for rec in records:
         rec['is_top_50'] = False  # legacy field kept for compatibility
@@ -172,11 +253,12 @@ def deliver():
 
     # 2. Prepare Registry (Compact for Table)
     registry_cols = [
-        'uuid', 'id', 'display_name', 'github', 'roles', 'is_top_50',
+        'uuid', 'id', 'display_name', 'github', 'roles', 'badges', 'is_top_50',
         'dev_type',
         'total_commits', 'authored_commits', 'merge_commits', 'p2016_authored_commits', 'modern_authored_commits', 'prs_authored', 'reviews_count', 'p2016_reviews_count', 'modern_reviews_count', 'hybrid_score', 'impact_score', 'p2016_impact_score', 'modern_impact_score', 'bips_authored', 'p2016_bips_authored', 'modern_bips_authored', 'review_reciprocity',
         'first_seen', 'last_seen', 'global_first_active', 'global_last_active',
         'first_commit', 'last_commit', 'first_active', 'last_active',
+        'first_review_date', 'last_review_date',
         'expertise_domains', 'expertise_by_source', 'expertise_domain_scores',
         'modern_hybrid_score', 'p2016_hybrid_score',
         'avg_approval_latency_days',
@@ -227,7 +309,7 @@ def deliver():
     # so they are JSON-stringified here and JSON.parse()'d back in directory.js.
     # The metadata JSON tells the JS which columns are nested, so no hardcoding
     # of column names is needed in the frontend.
-    NESTED_JSON_COLS = {'expertise_domain_scores', 'expertise_domains', 'expertise_by_source', 'roles', 'github'}
+    NESTED_JSON_COLS = {'expertise_domain_scores', 'expertise_domains', 'expertise_by_source', 'roles', 'github', 'badges'}
     parquet_rows = []
     for entry in registry_list:
         flat = {}

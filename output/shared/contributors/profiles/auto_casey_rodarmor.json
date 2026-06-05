@@ -18,8 +18,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Core Libs",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Utilities",
   "total_commits": 20.0,
   "authored_commits": 20.0,
   "merge_commits": 0.0,
@@ -38,6 +38,8 @@
   "approvals_count": 2.0,
   "p2016_reviews_count": 7.0,
   "modern_reviews_count": 4.0,
+  "first_review_date": "2015-07-31T18:32:06+00:00",
+  "last_review_date": "2026-02-25T20:21:01+00:00",
   "prs_authored": 18.0,
   "avg_pr_ack_velocity_days": 1.1209995039682539,
   "avg_concept_lead_time_days": 1.7558564814814817,
@@ -64,7 +66,8 @@
   ],
   "expertise_by_source": {
     "code": {
-      "Infrastructure": 1.0
+      "Infrastructure": 0.933,
+      "Mempool": 0.067
     },
     "discussion": {
       "Ecosystem": 0.85,
@@ -73,7 +76,8 @@
   },
   "expertise_domain_scores": {
     "Ecosystem": 0.34,
-    "Infrastructure": 0.6,
+    "Infrastructure": 0.5598,
+    "Mempool": 0.0402,
     "Privacy": 0.06
   },
   "p2016_posts": 12.0,
@@ -95,12 +99,13 @@
   "delving_url": "https://delvingbitcoin.org/u/rodarmor",
   "commit_history": {
     "2015": {
-      "Build & CI (DevOps)": 0.83,
-      "Core Libs": 7.33,
+      "Build & CI": 0.83,
       "Documentation": 2.0,
-      "GUI (Presentation Layer)": 1.0,
-      "Node & RPC (App/Interface)": 2.0,
-      "Tests (QA)": 1.83
+      "GUI": 1.0,
+      "Mempool": 1.0,
+      "Node & RPC": 1.0,
+      "Tests": 1.83,
+      "Utilities": 7.33
     }
   },
   "first_message": {

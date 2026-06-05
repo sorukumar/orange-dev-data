@@ -19,10 +19,10 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Node & RPC (App/Interface)",
-  "total_commits": 39.0,
-  "authored_commits": 39.0,
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Node & RPC",
+  "total_commits": 40.0,
+  "authored_commits": 40.0,
   "merge_commits": 0.0,
   "total_additions": 586.0,
   "total_deletions": 645.0,
@@ -39,6 +39,8 @@
   "approvals_count": 18.0,
   "p2016_reviews_count": 34.0,
   "modern_reviews_count": 6.0,
+  "first_review_date": "2017-03-09T15:18:02+00:00",
+  "last_review_date": "2025-03-24T12:39:08+00:00",
   "prs_authored": 18.0,
   "avg_pr_ack_velocity_days": 3.803017618312757,
   "avg_concept_lead_time_days": 3.930528067129629,
@@ -68,9 +70,10 @@
       "Wallet": 1.0
     },
     "code": {
-      "Consensus": 0.026,
-      "Infrastructure": 0.644,
+      "Consensus": 0.006,
+      "Infrastructure": 0.64,
       "Network": 0.229,
+      "Script": 0.024,
       "Wallet": 0.101
     },
     "discussion": {
@@ -80,8 +83,8 @@
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.0646,
-    "Infrastructure": 0.1932,
+    "Consensus": 0.0586,
+    "Infrastructure": 0.192,
     "Mining": 0.0864,
     "Network": 0.0687,
     "Wallet": 0.5871
@@ -104,15 +107,16 @@
   "github_url": "https://github.com/benma",
   "commit_history": {
     "2017": {
-      "Consensus (Domain Logic)": 0.46,
-      "Core Libs": 2.33,
-      "Database (Persistence)": 0.33,
+      "Consensus": 0.11,
+      "Database": 0.31,
       "Documentation": 1.0,
-      "GUI (Presentation Layer)": 1.66,
-      "Node & RPC (App/Interface)": 5.66,
-      "P2P Network (Infrastructure)": 4.12,
-      "Tests (QA)": 0.62,
-      "Wallet (Client App)": 1.82
+      "GUI": 1.64,
+      "Node & RPC": 5.64,
+      "P2P Network": 4.11,
+      "Script": 0.44,
+      "Tests": 0.61,
+      "Utilities": 2.31,
+      "Wallet": 1.81
     }
   },
   "bip_list": [

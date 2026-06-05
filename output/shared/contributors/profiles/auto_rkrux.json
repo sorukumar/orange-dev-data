@@ -18,36 +18,38 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Wallet (Client App)",
-  "total_commits": 66.0,
-  "authored_commits": 66.0,
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Tests",
+  "total_commits": 69.0,
+  "authored_commits": 69.0,
   "merge_commits": 0.0,
-  "total_additions": 444.0,
-  "total_deletions": 495.0,
+  "total_additions": 448.0,
+  "total_deletions": 500.0,
   "first_commit": "2025-02-21T11:00:09",
-  "last_commit": "2026-05-27T15:31:22",
-  "p2016_authored_commits": 55.0,
-  "modern_authored_commits": 55.0,
+  "last_commit": "2026-05-28T14:11:58",
+  "p2016_authored_commits": 58.0,
+  "modern_authored_commits": 58.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": 160.62162335568325,
-  "reviews_count": 333.0,
-  "avg_approval_latency_days": 128.4468564656627,
-  "approvals_count": 294.0,
-  "p2016_reviews_count": 333.0,
-  "modern_reviews_count": 333.0,
-  "prs_authored": 50.0,
-  "avg_pr_ack_velocity_days": 7.173684225383921,
+  "avg_review_latency_days": 159.840003889778,
+  "reviews_count": 336.0,
+  "avg_approval_latency_days": 127.73803722557399,
+  "approvals_count": 296.0,
+  "p2016_reviews_count": 336.0,
+  "modern_reviews_count": 336.0,
+  "first_review_date": "2024-03-19T10:05:05+00:00",
+  "last_review_date": "2026-06-04T10:10:33+00:00",
+  "prs_authored": 53.0,
+  "avg_pr_ack_velocity_days": 7.54249434754522,
   "avg_concept_lead_time_days": 8.001207912457913,
-  "review_reciprocity": 6.66,
-  "hybrid_score": 0.4236,
-  "p2016_hybrid_score": 0.4236,
-  "modern_hybrid_score": 0.4236,
-  "impact_score": 22.0,
-  "p2016_impact_score": 22.0,
-  "modern_impact_score": 22.0,
+  "review_reciprocity": 6.339622641509434,
+  "hybrid_score": 0.448,
+  "p2016_hybrid_score": 0.448,
+  "modern_hybrid_score": 0.448,
+  "impact_score": 24.0,
+  "p2016_impact_score": 24.0,
+  "modern_impact_score": 24.0,
   "threads_started": 0.0,
   "replies_sent": 0.0,
   "ml_threads": 0.0,
@@ -60,19 +62,20 @@
   "expertise_domains": [
     "Infrastructure",
     "Wallet",
-    "Consensus"
+    "Script"
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.039,
-      "Infrastructure": 0.592,
-      "Wallet": 0.368
+      "Consensus": 0.009,
+      "Infrastructure": 0.655,
+      "Script": 0.017,
+      "Wallet": 0.319
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.039,
-    "Infrastructure": 0.5926,
-    "Wallet": 0.3684
+    "Infrastructure": 0.655,
+    "Script": 0.017,
+    "Wallet": 0.319
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -81,7 +84,7 @@
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
   "global_first_active": "2025-02-21T11:00:09",
-  "global_last_active": "2026-05-27T15:31:22",
+  "global_last_active": "2026-05-28T14:11:58",
   "github_location": "Mempool",
   "github_company": "@bitcoin-core ",
   "github_bio": "pron. /\u02ccare \u02c8crux/\r\n\r\nE00F\u00a0A95E\u00a0EDFE\u00a033EE\u00a085C1\u00a0D3AA\u00a08614\u00a0B8BD\u00a02E14\u00a04C6D",
@@ -92,19 +95,19 @@
   "github_url": "https://github.com/rkrux",
   "commit_history": {
     "2025": {
-      "Consensus (Domain Logic)": 1.0,
-      "Core Libs": 3.5,
       "Documentation": 2.0,
-      "Node & RPC (App/Interface)": 1.5,
-      "Tests (QA)": 3.0,
-      "Wallet (Client App)": 7.0
+      "Node & RPC": 1.5,
+      "Script": 1.0,
+      "Tests": 3.0,
+      "Utilities": 3.5,
+      "Wallet": 7.0
     },
     "2026": {
-      "Consensus (Domain Logic)": 0.5,
-      "Documentation": 3.0,
-      "Node & RPC (App/Interface)": 1.5,
-      "Tests (QA)": 8.0,
-      "Wallet (Client App)": 7.0
+      "Consensus": 0.5,
+      "Documentation": 5.0,
+      "Node & RPC": 1.5,
+      "Tests": 21.5,
+      "Wallet": 11.5
     }
   }
 }

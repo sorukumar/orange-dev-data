@@ -18,10 +18,10 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Tests (QA)",
-  "total_commits": 278.0,
-  "authored_commits": 278.0,
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Utilities",
+  "total_commits": 281.0,
+  "authored_commits": 281.0,
   "merge_commits": 0.0,
   "total_additions": 2845.0,
   "total_deletions": 2204.0,
@@ -38,13 +38,15 @@
   "approvals_count": 362.0,
   "p2016_reviews_count": 611.0,
   "modern_reviews_count": 29.0,
+  "first_review_date": "2018-02-07T07:43:17+00:00",
+  "last_review_date": "2024-12-05T20:04:27+00:00",
   "prs_authored": 178.0,
   "avg_pr_ack_velocity_days": 26.139669067215365,
   "avg_concept_lead_time_days": 14.48161128917379,
   "review_reciprocity": 3.432584269662921,
   "hybrid_score": 0.5311,
   "p2016_hybrid_score": 0.5337,
-  "modern_hybrid_score": 0.2654,
+  "modern_hybrid_score": 0.2655,
   "impact_score": 27.0,
   "p2016_impact_score": 27.0,
   "modern_impact_score": 15.0,
@@ -64,9 +66,11 @@
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.115,
-      "Infrastructure": 0.669,
+      "Consensus": 0.037,
+      "Infrastructure": 0.662,
+      "Mempool": 0.01,
       "Network": 0.039,
+      "Script": 0.076,
       "Wallet": 0.177
     },
     "discussion": {
@@ -74,10 +78,11 @@
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.469,
-    "Infrastructure": 0.4014,
+    "Consensus": 0.4219,
+    "Infrastructure": 0.397,
     "Network": 0.0234,
-    "Wallet": 0.1062
+    "Script": 0.0456,
+    "Wallet": 0.1061
   },
   "p2016_posts": 2.0,
   "modern_posts": 0.0,
@@ -97,60 +102,63 @@
   "github_url": "https://github.com/Empact",
   "commit_history": {
     "2018": {
-      "Build & CI (DevOps)": 2.42,
-      "Consensus (Domain Logic)": 9.6,
-      "Core Libs": 18.52,
-      "GUI (Presentation Layer)": 1.0,
-      "Node & RPC (App/Interface)": 5.52,
-      "P2P Network (Infrastructure)": 1.5,
-      "Tests (QA)": 21.1,
-      "Wallet (Client App)": 18.35
+      "Build & CI": 2.42,
+      "Consensus": 3.98,
+      "GUI": 1.0,
+      "Mempool": 0.81,
+      "Node & RPC": 5.43,
+      "P2P Network": 1.5,
+      "Script": 5.34,
+      "Tests": 21.01,
+      "Utilities": 18.26,
+      "Wallet": 18.26
     },
     "2019": {
-      "Build & CI (DevOps)": 5.5,
-      "Consensus (Domain Logic)": 1.25,
-      "Core Libs": 9.17,
+      "Build & CI": 5.5,
+      "Consensus": 0.67,
       "Documentation": 0.5,
-      "Node & RPC (App/Interface)": 2.58,
-      "P2P Network (Infrastructure)": 1.75,
-      "Tests (QA)": 6.33,
-      "Utilities (Shared Libs)": 1.0,
-      "Wallet (Client App)": 3.92
+      "Mempool": 0.5,
+      "Node & RPC": 2.42,
+      "P2P Network": 1.75,
+      "Script": 0.25,
+      "Tests": 6.33,
+      "Utilities": 10.17,
+      "Wallet": 3.92
     },
     "2020": {
-      "Build & CI (DevOps)": 1.5,
-      "Consensus (Domain Logic)": 5.37,
-      "Core Libs": 4.53,
-      "GUI (Presentation Layer)": 1.5,
-      "Node & RPC (App/Interface)": 3.2,
-      "P2P Network (Infrastructure)": 1.2,
-      "Tests (QA)": 4.83,
-      "Utilities (Shared Libs)": 2.67,
-      "Wallet (Client App)": 2.2
+      "Build & CI": 1.5,
+      "Consensus": 0.5,
+      "GUI": 1.53,
+      "Mempool": 0.25,
+      "Node & RPC": 3.15,
+      "P2P Network": 1.2,
+      "Script": 4.87,
+      "Tests": 4.78,
+      "Utilities": 6.98,
+      "Wallet": 2.23
     },
     "2021": {
-      "Tests (QA)": 1.0
+      "Tests": 1.0
     },
     "2022": {
-      "Consensus (Domain Logic)": 0.67,
-      "Core Libs": 1.17,
-      "Node & RPC (App/Interface)": 0.67,
-      "P2P Network (Infrastructure)": 0.17,
-      "Tests (QA)": 2.67,
-      "Utilities (Shared Libs)": 0.67,
-      "Wallet (Client App)": 2.0
+      "Node & RPC": 0.7,
+      "P2P Network": 0.2,
+      "Script": 0.7,
+      "Tests": 2.7,
+      "Utilities": 1.7,
+      "Wallet": 2.0
     },
     "2023": {
-      "Build & CI (DevOps)": 0.28,
-      "Consensus (Domain Logic)": 0.31,
-      "Core Libs": 0.48,
-      "Database (Persistence)": 0.11,
-      "GUI (Presentation Layer)": 0.28,
-      "Node & RPC (App/Interface)": 0.48,
-      "P2P Network (Infrastructure)": 1.2,
-      "Tests (QA)": 0.28,
-      "Utilities (Shared Libs)": 0.48,
-      "Wallet (Client App)": 0.11
+      "Build & CI": 0.33,
+      "Consensus": 0.33,
+      "Database": 0.12,
+      "GUI": 0.33,
+      "Node & RPC": 0.53,
+      "P2P Network": 1.2,
+      "Script": 0.2,
+      "Tests": 0.33,
+      "Utilities": 0.53,
+      "Wallet": 0.12
     }
   },
   "first_message": {

@@ -18,8 +18,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Core Libs",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Utilities",
   "total_commits": 9.0,
   "authored_commits": 9.0,
   "merge_commits": 0.0,
@@ -38,6 +38,8 @@
   "approvals_count": 0.0,
   "p2016_reviews_count": 0.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": "2014-05-12T15:58:55+00:00",
+  "last_review_date": "2015-07-11T10:19:52+00:00",
   "prs_authored": 6.0,
   "avg_pr_ack_velocity_days": 15.555082947530865,
   "avg_concept_lead_time_days": 16.326944444444443,
@@ -64,7 +66,8 @@
   ],
   "expertise_by_source": {
     "code": {
-      "Infrastructure": 1.0
+      "Infrastructure": 0.945,
+      "Mempool": 0.055
     },
     "discussion": {
       "Consensus": 0.5,
@@ -73,7 +76,8 @@
   },
   "expertise_domain_scores": {
     "Consensus": 0.2,
-    "Infrastructure": 0.6,
+    "Infrastructure": 0.567,
+    "Mempool": 0.033,
     "Mining": 0.2
   },
   "p2016_posts": 0.0,
@@ -94,14 +98,14 @@
   "github_url": "https://github.com/ashleyholman",
   "commit_history": {
     "2014": {
-      "Build & CI (DevOps)": 0.5,
-      "Core Libs": 3.0,
-      "GUI (Presentation Layer)": 1.5
+      "Build & CI": 0.5,
+      "GUI": 1.5,
+      "Utilities": 3.0
     },
     "2015": {
-      "Core Libs": 0.33,
-      "Node & RPC (App/Interface)": 0.33,
-      "Tests (QA)": 0.33
+      "Mempool": 0.33,
+      "Tests": 0.33,
+      "Utilities": 0.33
     }
   },
   "first_message": {

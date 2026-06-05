@@ -19,8 +19,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "P2P Network (Infrastructure)",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "P2P Network",
   "total_commits": 112.0,
   "authored_commits": 112.0,
   "merge_commits": 0.0,
@@ -39,6 +39,8 @@
   "approvals_count": 47.0,
   "p2016_reviews_count": 66.0,
   "modern_reviews_count": 1.0,
+  "first_review_date": "2012-01-07T06:50:38+00:00",
+  "last_review_date": "2025-08-01T22:07:36+00:00",
   "prs_authored": 92.0,
   "avg_pr_ack_velocity_days": 5.0146055480884115,
   "avg_concept_lead_time_days": 6.917857434640522,
@@ -68,9 +70,9 @@
       "Network": 1.0
     },
     "code": {
-      "Consensus": 0.034,
       "Infrastructure": 0.418,
       "Network": 0.375,
+      "Script": 0.034,
       "Wallet": 0.172
     },
     "discussion": {
@@ -79,10 +81,11 @@
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.1102,
+    "Consensus": 0.1,
     "Infrastructure": 0.1254,
     "L2": 0.1,
     "Network": 0.6127,
+    "Script": 0.0102,
     "Wallet": 0.0516
   },
   "p2016_posts": 1.0,
@@ -103,43 +106,43 @@
   "github_url": "https://github.com/pstratem",
   "commit_history": {
     "2013": {
-      "Core Libs": 2.5,
-      "P2P Network (Infrastructure)": 0.5
+      "P2P Network": 0.5,
+      "Utilities": 2.5
     },
     "2015": {
-      "Core Libs": 8.83,
       "Documentation": 1.0,
-      "Node & RPC (App/Interface)": 4.83,
-      "P2P Network (Infrastructure)": 19.33
+      "Node & RPC": 4.83,
+      "P2P Network": 19.33,
+      "Utilities": 8.83
     },
     "2016": {
-      "Build & CI (DevOps)": 0.83,
-      "Consensus (Domain Logic)": 3.0,
-      "Core Libs": 3.0,
+      "Build & CI": 0.83,
       "Documentation": 0.33,
-      "GUI (Presentation Layer)": 0.5,
-      "Node & RPC (App/Interface)": 2.67,
-      "P2P Network (Infrastructure)": 2.33,
-      "Tests (QA)": 4.33,
-      "Wallet (Client App)": 14.0
+      "GUI": 0.5,
+      "Node & RPC": 2.67,
+      "P2P Network": 2.33,
+      "Script": 3.0,
+      "Tests": 4.33,
+      "Utilities": 3.0,
+      "Wallet": 14.0
     },
     "2017": {
-      "Core Libs": 1.0,
-      "Wallet (Client App)": 1.0
+      "Utilities": 1.0,
+      "Wallet": 1.0
     },
     "2018": {
-      "Core Libs": 0.5,
-      "Node & RPC (App/Interface)": 1.0,
-      "P2P Network (Infrastructure)": 9.5
+      "Node & RPC": 1.0,
+      "P2P Network": 9.5,
+      "Utilities": 0.5
     },
     "2019": {
-      "Node & RPC (App/Interface)": 1.0,
-      "P2P Network (Infrastructure)": 1.0
+      "Node & RPC": 1.0,
+      "P2P Network": 1.0
     },
     "2020": {
-      "Core Libs": 0.5,
-      "Node & RPC (App/Interface)": 0.5,
-      "Tests (QA)": 3.0
+      "Node & RPC": 0.5,
+      "Tests": 3.0,
+      "Utilities": 0.5
     }
   },
   "bip_list": [

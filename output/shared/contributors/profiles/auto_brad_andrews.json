@@ -18,8 +18,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Core Libs",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Utilities",
   "total_commits": 24.0,
   "authored_commits": 24.0,
   "merge_commits": 0.0,
@@ -38,6 +38,8 @@
   "approvals_count": 10.0,
   "p2016_reviews_count": 13.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": "2015-01-29T19:59:36+00:00",
+  "last_review_date": "2016-12-01T17:39:26+00:00",
   "prs_authored": 11.0,
   "avg_pr_ack_velocity_days": 0.26094381313131315,
   "avg_concept_lead_time_days": 0.2937114197530864,
@@ -92,20 +94,20 @@
   "github_url": "https://github.com/mrbandrews",
   "commit_history": {
     "2014": {
-      "Core Libs": 3.0
+      "Utilities": 3.0
     },
     "2015": {
-      "Consensus (Domain Logic)": 0.33,
-      "Core Libs": 1.33,
+      "Consensus": 0.33,
       "Documentation": 1.0,
-      "Node & RPC (App/Interface)": 0.33
+      "Node & RPC": 0.33,
+      "Utilities": 1.33
     },
     "2016": {
-      "Consensus (Domain Logic)": 0.25,
-      "Core Libs": 7.58,
+      "Consensus": 0.25,
       "Documentation": 0.25,
-      "Node & RPC (App/Interface)": 2.58,
-      "Wallet (Client App)": 0.33
+      "Node & RPC": 2.58,
+      "Utilities": 7.58,
+      "Wallet": 0.33
     }
   }
 }

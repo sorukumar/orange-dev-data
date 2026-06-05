@@ -18,8 +18,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Tests (QA)",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Tests",
   "total_commits": 8.0,
   "authored_commits": 8.0,
   "merge_commits": 0.0,
@@ -38,6 +38,8 @@
   "approvals_count": 0.0,
   "p2016_reviews_count": 0.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": null,
+  "last_review_date": null,
   "prs_authored": 3.0,
   "avg_pr_ack_velocity_days": 4.4165470679012335,
   "avg_concept_lead_time_days": 0.07741898148148148,
@@ -89,18 +91,18 @@
   "github_url": "https://github.com/sstone",
   "commit_history": {
     "2021": {
-      "Tests (QA)": 0.5,
-      "Wallet (Client App)": 0.5
+      "Tests": 0.5,
+      "Wallet": 0.5
     },
     "2022": {
-      "Build & CI (DevOps)": 0.25,
+      "Build & CI": 0.25,
       "Documentation": 0.25,
-      "Node & RPC (App/Interface)": 0.25,
-      "Tests (QA)": 0.25
+      "Node & RPC": 0.25,
+      "Tests": 0.25
     },
     "2026": {
-      "Node & RPC (App/Interface)": 0.5,
-      "Tests (QA)": 0.5
+      "Node & RPC": 0.5,
+      "Tests": 0.5
     }
   }
 }

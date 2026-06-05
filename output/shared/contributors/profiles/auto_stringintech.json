@@ -18,17 +18,17 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Tests (QA)",
-  "total_commits": 7.0,
-  "authored_commits": 7.0,
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Tests",
+  "total_commits": 9.0,
+  "authored_commits": 9.0,
   "merge_commits": 0.0,
-  "total_additions": 215.0,
-  "total_deletions": 43.0,
+  "total_additions": 228.0,
+  "total_deletions": 67.0,
   "first_commit": "2025-06-18T19:26:32",
-  "last_commit": "2025-12-17T22:36:57",
-  "p2016_authored_commits": 6.0,
-  "modern_authored_commits": 6.0,
+  "last_commit": "2026-05-18T06:04:39",
+  "p2016_authored_commits": 7.0,
+  "modern_authored_commits": 7.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
@@ -38,13 +38,15 @@
   "approvals_count": 18.0,
   "p2016_reviews_count": 22.0,
   "modern_reviews_count": 22.0,
+  "first_review_date": "2025-03-08T18:37:40+00:00",
+  "last_review_date": "2026-05-22T05:57:28+00:00",
   "prs_authored": 6.0,
   "avg_pr_ack_velocity_days": 0.7812013888888889,
   "avg_concept_lead_time_days": 2.407340277777778,
   "review_reciprocity": 3.6666666666666665,
-  "hybrid_score": 0.2298,
-  "p2016_hybrid_score": 0.2298,
-  "modern_hybrid_score": 0.2298,
+  "hybrid_score": 0.2375,
+  "p2016_hybrid_score": 0.2375,
+  "modern_hybrid_score": 0.2375,
   "impact_score": 13.0,
   "p2016_impact_score": 13.0,
   "modern_impact_score": 13.0,
@@ -64,15 +66,15 @@
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.25,
-      "Infrastructure": 0.583,
-      "Network": 0.167
+      "Consensus": 0.286,
+      "Infrastructure": 0.571,
+      "Network": 0.143
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.25,
-    "Infrastructure": 0.583,
-    "Network": 0.167
+    "Consensus": 0.286,
+    "Infrastructure": 0.571,
+    "Network": 0.143
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -81,7 +83,7 @@
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
   "global_first_active": "2025-06-18T19:26:32",
-  "global_last_active": "2025-12-17T22:36:57",
+  "global_last_active": "2026-05-18T06:04:39",
   "github_location": null,
   "github_company": null,
   "github_bio": "Exploring Bitcoin Core | PGP: 2F141C4C650FEF2A",
@@ -92,10 +94,14 @@
   "github_url": "https://github.com/stringintech",
   "commit_history": {
     "2025": {
-      "Consensus (Domain Logic)": 1.5,
-      "Core Libs": 1.0,
-      "P2P Network (Infrastructure)": 1.0,
-      "Tests (QA)": 2.5
+      "Consensus": 1.5,
+      "P2P Network": 1.0,
+      "Tests": 2.5,
+      "Utilities": 1.0
+    },
+    "2026": {
+      "Consensus": 0.5,
+      "Tests": 0.5
     }
   }
 }

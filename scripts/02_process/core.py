@@ -679,27 +679,31 @@ class MetricGenerators:
         
         # --- NEW: Risk & Radar Profile ---
         # 1. Define Weights & Mapping
+        # Weights reflect security/consensus impact of changes in that area.
+        # Category names match CATEGORY_RULES in scripts/01_ingest/core.py exactly.
         RISK_WEIGHTS = {
-            "Consensus (Domain Logic)": 50,
-            "Cryptography (Primitives)": 50,
-            "Core Libs": 50,
-            "P2P Network (Infrastructure)": 40,
-            "Database (Persistence)": 30,
-            "Utilities (Shared Libs)": 30,
-            "Node & RPC (App/Interface)": 10,
-            "GUI (Presentation Layer)": 10,
-            "Wallet (Client App)": 20,
-            "Tests (QA)": 5,
-            "Build & CI (DevOps)": 5,
+            "Consensus":    50,  # Chain validation — highest impact
+            "Script":       45,  # Opcode interpreter, covenant surface
+            "Cryptography": 50,  # Primitives: secp256k1, hash functions
+            "Mining":       40,  # Block assembly, template logic
+            "Mempool":      35,  # Fee policy, RBF, standardness rules
+            "P2P Network":  40,  # Eclipse/sybil attack surface
+            "Database":     30,  # Data integrity, corruption risk
+            "Utilities":    30,  # Shared libs — bugs propagate broadly
+            "Wallet":       20,  # Client-side, lower consensus risk
+            "Node & RPC":   10,  # Application interface layer
+            "GUI":          10,  # Presentation layer
+            "Tests":         5,  # QA
+            "Build & CI":    5,  # DevOps
             "Documentation": 1
         }
-        
+
         RADAR_AXES = {
-            "Security": ["Consensus (Domain Logic)", "Cryptography (Primitives)", "Core Libs"],
-            "Resilience": ["P2P Network (Infrastructure)", "Database (Persistence)", "Utilities (Shared Libs)"],
-            "Usability": ["GUI (Presentation Layer)", "Node & RPC (App/Interface)", "Wallet (Client App)"],
-            "Quality": ["Tests (QA)", "Build & CI (DevOps)"],
-            "Education": ["Documentation"]
+            "Security":   ["Consensus", "Script", "Cryptography"],
+            "Resilience": ["P2P Network", "Database", "Utilities"],
+            "Operations": ["Mempool", "Mining", "Node & RPC"],
+            "Usability":  ["Wallet", "GUI"],
+            "Quality":    ["Tests", "Build & CI", "Documentation"]
         }
         
         # 2. Calculate Aggregated Risk Score per Author

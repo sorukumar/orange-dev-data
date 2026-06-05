@@ -12,7 +12,11 @@
     "is_sponsored": null,
     "maintainer_status": "historical",
     "social_source": "mailing_list",
-    "sponsor_id": null
+    "sponsor_id": null,
+    "maintainer_title": "Lead Maintainer",
+    "maintainer_primary_area": "General",
+    "maintainer_appointed": "2010-10-11",
+    "maintainer_stepped_down": "2016-05-02"
   },
   "roles": [
     "Lead Maintainer",
@@ -20,10 +24,10 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
+  "last_seen": "2026-06-04T00:00:00",
   "technical_focus": "Merge",
-  "total_commits": 1350.0,
-  "authored_commits": 734.0,
+  "total_commits": 1353.0,
+  "authored_commits": 737.0,
   "merge_commits": 616.0,
   "total_additions": 65630.0,
   "total_deletions": 76777.0,
@@ -40,13 +44,15 @@
   "approvals_count": 439.0,
   "p2016_reviews_count": 15.0,
   "modern_reviews_count": 0.0,
-  "prs_authored": 228.0,
-  "avg_pr_ack_velocity_days": 6.985001385628586,
+  "first_review_date": "2010-12-22T14:25:45+00:00",
+  "last_review_date": "2022-09-30T19:12:54+00:00",
+  "prs_authored": 230.0,
+  "avg_pr_ack_velocity_days": 6.939252622377622,
   "avg_concept_lead_time_days": 11.238645833333333,
-  "review_reciprocity": 3.741228070175439,
-  "hybrid_score": 3.2983,
-  "p2016_hybrid_score": 0.7135,
-  "modern_hybrid_score": 0.1711,
+  "review_reciprocity": 3.708695652173913,
+  "hybrid_score": 3.2984,
+  "p2016_hybrid_score": 0.7136,
+  "modern_hybrid_score": 0.1714,
   "impact_score": 86.0,
   "p2016_impact_score": 35.0,
   "modern_impact_score": 10.0,
@@ -73,7 +79,8 @@
     },
     "code": {
       "Consensus": 0.004,
-      "Infrastructure": 0.964,
+      "Infrastructure": 0.96,
+      "Mempool": 0.004,
       "Network": 0.031,
       "Wallet": 0.001
     },
@@ -85,7 +92,7 @@
   "expertise_domain_scores": {
     "Consensus": 0.3251,
     "Ecosystem": 0.0846,
-    "Infrastructure": 0.3727,
+    "Infrastructure": 0.3715,
     "Network": 0.1758,
     "Script": 0.0415
   },
@@ -107,65 +114,68 @@
   "github_url": "https://github.com/gavinandresen",
   "commit_history": {
     "2010": {
-      "Build & CI (DevOps)": 2.83,
-      "Core Libs": 28.33,
+      "Build & CI": 2.83,
       "Documentation": 4.83,
-      "Merge": 42.0
+      "Merge": 42.0,
+      "Utilities": 28.33
     },
     "2011": {
-      "Build & CI (DevOps)": 10.25,
-      "Core Libs": 102.42,
+      "Build & CI": 10.25,
       "Documentation": 19.0,
-      "GUI (Presentation Layer)": 1.33,
+      "GUI": 1.33,
       "Merge": 141.0,
-      "Node & RPC (App/Interface)": 3.25,
-      "P2P Network (Infrastructure)": 6.75,
-      "Tests (QA)": 9.0
+      "Node & RPC": 3.25,
+      "P2P Network": 6.75,
+      "Tests": 9.0,
+      "Utilities": 102.42
     },
     "2012": {
-      "Build & CI (DevOps)": 14.67,
-      "Core Libs": 81.2,
-      "Database (Persistence)": 0.33,
+      "Build & CI": 14.67,
+      "Database": 0.33,
       "Documentation": 8.03,
-      "GUI (Presentation Layer)": 4.87,
+      "GUI": 4.87,
       "Merge": 157.0,
-      "Node & RPC (App/Interface)": 12.28,
-      "P2P Network (Infrastructure)": 2.53,
-      "Tests (QA)": 15.08
+      "Node & RPC": 12.28,
+      "P2P Network": 2.53,
+      "Tests": 15.08,
+      "Utilities": 81.2
     },
     "2013": {
-      "Build & CI (DevOps)": 7.5,
-      "Consensus (Domain Logic)": 1.08,
-      "Core Libs": 64.53,
+      "Build & CI": 7.42,
+      "Consensus": 1.08,
       "Documentation": 4.83,
-      "GUI (Presentation Layer)": 10.62,
+      "GUI": 10.62,
+      "Mempool": 0.5,
       "Merge": 209.0,
-      "Node & RPC (App/Interface)": 6.37,
-      "P2P Network (Infrastructure)": 5.62,
-      "Tests (QA)": 11.45
+      "Node & RPC": 6.03,
+      "P2P Network": 5.62,
+      "Tests": 11.45,
+      "Utilities": 64.45
     },
     "2014": {
-      "Build & CI (DevOps)": 1.0,
-      "Consensus (Domain Logic)": 1.0,
-      "Core Libs": 32.5,
-      "Documentation": 5.83,
-      "GUI (Presentation Layer)": 1.67,
+      "Build & CI": 1.0,
+      "Consensus": 1.0,
+      "Documentation": 5.75,
+      "GUI": 1.58,
+      "Mempool": 1.25,
       "Merge": 64.0,
-      "Node & RPC (App/Interface)": 2.5,
-      "Tests (QA)": 2.5
+      "Node & RPC": 1.58,
+      "Tests": 2.5,
+      "Utilities": 32.33
     },
     "2015": {
-      "Build & CI (DevOps)": 3.83,
-      "Core Libs": 5.0,
-      "GUI (Presentation Layer)": 0.5,
+      "Build & CI": 3.83,
+      "GUI": 0.5,
+      "Mempool": 0.33,
       "Merge": 3.0,
-      "Node & RPC (App/Interface)": 2.33,
-      "P2P Network (Infrastructure)": 0.83,
-      "Tests (QA)": 4.0,
-      "Wallet (Client App)": 0.5
+      "Node & RPC": 2.0,
+      "P2P Network": 0.83,
+      "Tests": 4.0,
+      "Utilities": 5.0,
+      "Wallet": 0.5
     },
     "2016": {
-      "Tests (QA)": 1.0
+      "Tests": 1.0
     }
   },
   "bip_list": [

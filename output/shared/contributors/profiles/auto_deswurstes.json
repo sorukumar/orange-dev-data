@@ -1,5 +1,5 @@
 {
-  "display_name": "DesWurstes",
+  "display_name": "deswurstes",
   "github_login_final": "DesWurstes",
   "delving_username_final": null,
   "uuid": "auto_deswurstes",
@@ -18,8 +18,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Core Libs",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Utilities",
   "total_commits": 5.0,
   "authored_commits": 5.0,
   "merge_commits": 0.0,
@@ -38,6 +38,8 @@
   "approvals_count": 1.0,
   "p2016_reviews_count": 5.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": "2018-06-02T13:29:15+00:00",
+  "last_review_date": "2019-08-21T07:21:32+00:00",
   "prs_authored": 9.0,
   "avg_pr_ack_velocity_days": 0.18422067901234565,
   "avg_concept_lead_time_days": 0.4229513888888889,
@@ -86,9 +88,9 @@
   "github_url": "https://github.com/DesWurstes",
   "commit_history": {
     "2018": {
-      "Core Libs": 2.0,
-      "Node & RPC (App/Interface)": 0.5,
-      "Tests (QA)": 0.5
+      "Node & RPC": 0.5,
+      "Tests": 0.5,
+      "Utilities": 2.0
     }
   }
 }

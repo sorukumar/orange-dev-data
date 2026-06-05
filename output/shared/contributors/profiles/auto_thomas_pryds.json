@@ -18,8 +18,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Core Libs",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "GUI",
   "total_commits": 3.0,
   "authored_commits": 3.0,
   "merge_commits": 0.0,
@@ -38,11 +38,13 @@
   "approvals_count": 0.0,
   "p2016_reviews_count": 0.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": null,
+  "last_review_date": null,
   "prs_authored": 1.0,
   "avg_pr_ack_velocity_days": 0.01912037037037037,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 0.0,
-  "hybrid_score": 0.0622,
+  "hybrid_score": 0.0621,
   "p2016_hybrid_score": 0.0146,
   "modern_hybrid_score": 0.0146,
   "impact_score": 4.0,
@@ -86,9 +88,9 @@
   "github_url": "https://github.com/pryds",
   "commit_history": {
     "2014": {
-      "Core Libs": 0.33,
-      "GUI (Presentation Layer)": 0.33,
-      "Node & RPC (App/Interface)": 0.33
+      "GUI": 0.33,
+      "Node & RPC": 0.33,
+      "Utilities": 0.33
     }
   },
   "first_message": {

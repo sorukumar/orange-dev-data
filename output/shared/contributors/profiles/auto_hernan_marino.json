@@ -18,8 +18,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "GUI (Presentation Layer)",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "GUI",
   "total_commits": 7.0,
   "authored_commits": 7.0,
   "merge_commits": 0.0,
@@ -38,6 +38,8 @@
   "approvals_count": 67.0,
   "p2016_reviews_count": 71.0,
   "modern_reviews_count": 35.0,
+  "first_review_date": "2021-10-27T16:53:23+00:00",
+  "last_review_date": "2024-04-12T23:45:15+00:00",
   "prs_authored": 4.0,
   "avg_pr_ack_velocity_days": 3.626605902777778,
   "avg_concept_lead_time_days": 3.156736111111111,
@@ -59,17 +61,17 @@
   "dev_type": "Builder",
   "expertise_domains": [
     "Infrastructure",
-    "Consensus"
+    "Script"
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.083,
-      "Infrastructure": 0.917
+      "Infrastructure": 0.917,
+      "Script": 0.083
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.083,
-    "Infrastructure": 0.917
+    "Infrastructure": 0.917,
+    "Script": 0.083
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -89,12 +91,12 @@
   "github_url": "https://github.com/hernanmarino",
   "commit_history": {
     "2023": {
-      "Consensus (Domain Logic)": 0.5,
-      "GUI (Presentation Layer)": 3.0,
-      "Tests (QA)": 0.5
+      "GUI": 3.0,
+      "Script": 0.5,
+      "Tests": 0.5
     },
     "2024": {
-      "Tests (QA)": 2.0
+      "Tests": 2.0
     }
   }
 }

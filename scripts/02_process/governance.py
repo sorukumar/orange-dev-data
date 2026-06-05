@@ -12,17 +12,40 @@ COMMITS_PATH = "data/raw/core_commits.parquet"
 COMMIT_MSGS_PATH = "data/raw/core_messages.parquet"
 OUTPUT_BIPS_ENRICHED = "data/enriched/bips_refined.parquet"
 OUTPUT_THEMES_JSON = "data/enriched/bips_themes.json"
+EXPERTISE_DOMAINS_PATH = "metadata/expertise_domains.json"
 
-# --- Theme Definitions (The "First Pass" Taxonomy) ---
-THEMES = {
-    "Consensus & Soft Forks": [r"segwit", r"taproot", r"soft fork", r"hard fork", r"consensus", r"witness", r"bip 141", r"bip 341", r"covenants"],
-    "Privacy": [r"privacy", r"coinjoin", r"stealth", r"confidential", r"tor", r"i2p", r"p2pkh", r"p2tr"],
-    "Scaling & Lightning": [r"lightning", r"layer 2", r"channels", r"micropayment", r"scaling", r"compression", r"compact block"],
-    "P2P Network": [r"p2p", r"protocol", r"handshake", r"relay", r"mempool", r"addrman", r"discovery"],
-    "Wallet & Keys": [r"wallet", r"descriptor", r"hd wallet", r"mnemonic", r"bip 32", r"bip 39", r"bip 44", r"multisig", r"miniscript"],
-    "Script & Smart Contracts": [r"script", r"opcode", r"cltv", r"csv", r"miniscript", r"tapscript", r"sighash"],
-    "Mining": [r"mining", r"stratum", r"block template", r"fee", r"hashrate", r"pow", r"asic"]
-}
+def _load_themes_from_domains() -> dict:
+    """Build the BIP theme → keyword pattern dict from expertise_domains.json.
+
+    This is the single source of truth for both:
+      - the theme name string (the bip_themes[0] value)
+      - the keyword patterns used to assign that theme to a BIP
+
+    governance.py assigns theme strings; influence.py maps them to domain IDs.
+    Both use expertise_domains.json so the theme names can never desync.
+    """
+    if not os.path.exists(EXPERTISE_DOMAINS_PATH):
+        raise FileNotFoundError(
+            f"{EXPERTISE_DOMAINS_PATH} not found. "
+            "This file is required for BIP theme assignment."
+        )
+    with open(EXPERTISE_DOMAINS_PATH) as f:
+        domains = json.load(f).get("domains", [])
+
+    themes = {}
+    for d in domains:
+        bip_themes = d.get("bip_themes", [])
+        keywords = d.get("bip_keywords", [])
+        if bip_themes and keywords:
+            # Use the first bip_theme string as the canonical theme name.
+            themes[bip_themes[0]] = keywords
+
+    return themes  # {"Consensus & Soft Forks": ["segwit", ...], ...}
+
+
+# THEMES is now derived — do not edit patterns here.
+# Edit bip_keywords in metadata/expertise_domains.json instead.
+THEMES = _load_themes_from_domains()
 
 def categorize(text):
     if not text: return "Other"

@@ -18,8 +18,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Node & RPC (App/Interface)",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Node & RPC",
   "total_commits": 21.0,
   "authored_commits": 21.0,
   "merge_commits": 0.0,
@@ -38,6 +38,8 @@
   "approvals_count": 539.0,
   "p2016_reviews_count": 434.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": "2014-07-09T12:07:14+00:00",
+  "last_review_date": "2018-05-29T23:58:17+00:00",
   "prs_authored": 19.0,
   "avg_pr_ack_velocity_days": 36.446147937710435,
   "avg_concept_lead_time_days": 0.31408564814814816,
@@ -92,18 +94,18 @@
   "github_url": "https://github.com/dcousens",
   "commit_history": {
     "2015": {
-      "Core Libs": 0.83,
-      "GUI (Presentation Layer)": 0.33,
-      "Node & RPC (App/Interface)": 3.83
+      "GUI": 0.33,
+      "Node & RPC": 3.83,
+      "Utilities": 0.83
     },
     "2016": {
-      "Build & CI (DevOps)": 0.17,
-      "Consensus (Domain Logic)": 2.0,
-      "Core Libs": 0.5,
-      "GUI (Presentation Layer)": 0.17,
-      "Node & RPC (App/Interface)": 1.5,
-      "Tests (QA)": 1.17,
-      "Wallet (Client App)": 0.5
+      "Build & CI": 0.17,
+      "Consensus": 2.0,
+      "GUI": 0.17,
+      "Node & RPC": 1.5,
+      "Tests": 1.17,
+      "Utilities": 0.5,
+      "Wallet": 0.5
     }
   }
 }

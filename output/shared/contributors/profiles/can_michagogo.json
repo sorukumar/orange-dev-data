@@ -18,8 +18,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Core Libs",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Documentation",
   "total_commits": 26.0,
   "authored_commits": 26.0,
   "merge_commits": 0.0,
@@ -38,6 +38,8 @@
   "approvals_count": 4.0,
   "p2016_reviews_count": 7.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": "2013-08-15T18:55:03+00:00",
+  "last_review_date": "2018-04-19T07:49:26+00:00",
   "prs_authored": 33.0,
   "avg_pr_ack_velocity_days": 6.91661948005698,
   "avg_concept_lead_time_days": null,
@@ -89,20 +91,20 @@
   "github_url": "https://github.com/Michagogo",
   "commit_history": {
     "2013": {
-      "Core Libs": 5.0,
-      "Documentation": 7.0
+      "Documentation": 7.0,
+      "Utilities": 5.0
     },
     "2014": {
-      "Core Libs": 5.5,
       "Documentation": 2.5,
-      "Node & RPC (App/Interface)": 1.0,
-      "P2P Network (Infrastructure)": 1.0
+      "Node & RPC": 1.0,
+      "P2P Network": 1.0,
+      "Utilities": 5.5
     },
     "2015": {
       "Documentation": 2.0
     },
     "2016": {
-      "Core Libs": 1.0
+      "Utilities": 1.0
     }
   }
 }

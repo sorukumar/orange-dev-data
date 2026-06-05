@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-05-29T10:12:18.182226",
+  "generated_at": "2026-06-04T12:06:06.382683",
   "windows": {
     "30d": {
       "window_days": 30,
-      "total_messages": 221,
-      "total_threads": 117,
-      "unique_voices": 88,
+      "total_messages": 225,
+      "total_threads": 122,
+      "unique_voices": 83,
       "themes": [
         {
           "category": "quantum",
           "label": "Quantum Resistance",
           "msgs": 71,
-          "threads": 36,
-          "voices": 32,
-          "share": 34.1,
+          "threads": 35,
+          "voices": 30,
+          "share": 34.0,
           "trend": "rising"
         },
         {
@@ -28,28 +28,37 @@
         {
           "category": "core-dev",
           "label": "Core Dev",
-          "msgs": 19,
+          "msgs": 18,
           "threads": 2,
-          "voices": 13,
-          "share": 9.1,
+          "voices": 12,
+          "share": 8.6,
           "trend": "rising"
+        },
+        {
+          "category": "consensus-cleanup",
+          "label": "Consensus Cleanup",
+          "msgs": 12,
+          "threads": 9,
+          "voices": 7,
+          "share": 5.7,
+          "trend": "new"
+        },
+        {
+          "category": "testing-devtools",
+          "label": "Dev Tooling",
+          "msgs": 12,
+          "threads": 4,
+          "voices": 8,
+          "share": 5.7,
+          "trend": "fading"
         },
         {
           "category": "covenants",
           "label": "Covenants & Vaults",
           "msgs": 11,
-          "threads": 5,
-          "voices": 8,
+          "threads": 4,
+          "voices": 7,
           "share": 5.3,
-          "trend": "fading"
-        },
-        {
-          "category": "taproot",
-          "label": "Taproot",
-          "msgs": 9,
-          "threads": 6,
-          "voices": 5,
-          "share": 4.3,
           "trend": "fading"
         },
         {
@@ -62,40 +71,31 @@
           "trend": "steady"
         },
         {
-          "category": "consensus-cleanup",
-          "label": "Consensus Cleanup",
-          "msgs": 8,
-          "threads": 4,
-          "voices": 5,
-          "share": 3.8,
-          "trend": "new"
-        },
-        {
           "category": "security",
           "label": "Security",
-          "msgs": 6,
+          "msgs": 7,
           "threads": 3,
           "voices": 5,
-          "share": 2.9,
+          "share": 3.3,
           "trend": "new"
         },
         {
-          "category": "testing-devtools",
-          "label": "Dev Tooling",
+          "category": "taproot",
+          "label": "Taproot",
           "msgs": 6,
-          "threads": 1,
+          "threads": 5,
           "voices": 3,
           "share": 2.9,
           "trend": "fading"
         },
         {
-          "category": "p2p-network",
-          "label": "P2P Network",
-          "msgs": 6,
-          "threads": 2,
+          "category": "segwit",
+          "label": "SegWit",
+          "msgs": 5,
+          "threads": 1,
           "voices": 3,
-          "share": 2.9,
-          "trend": "steady"
+          "share": 2.4,
+          "trend": "new"
         }
       ],
       "hot_threads": [
@@ -139,19 +139,6 @@
           "snippet": "While @willcl-ark and I were discussing\nDid the number of reachable nodes in residential ISPs increase since Bitcoin Core v30.0? -\u2026"
         },
         {
-          "thread_id": "<123e5545-2eda-4eca-9532-4f4cea2b83ecn@googlegroups.com>",
-          "subject": "[BIP-0054] 64-Byte Transactions and Potential\n Legitimate Uses",
-          "category": "consensus-cleanup",
-          "label": "Consensus Cleanup",
-          "reply_count": 4,
-          "unique_authors": 5,
-          "score": 20,
-          "last_post": "2026-05-06",
-          "source": "mailing_list",
-          "link": "https://gnusha.org/pi/bitcoindev/A-Yiqh9r08Wd0V1KwMr7MlVObsiW3esWqySZZzm7aZBV3xBpL0qVJSpF07GfQBoq9YFpBLdlo0k2_tGU5CZ-i0_91MEketsaN8V4FpUnno0=@protonmail.com",
-          "snippet": "For fun, let's start with a pop-quiz:  Select all that apply: There can exist a transaction of ___ bytes  serialized size that\u2026"
-        },
-        {
           "thread_id": "<46a49975-dbaa-48d5-b50f-36c649041933n@googlegroups.com>",
           "subject": "What if we let Quantum Hunters get Bitcoin rewards ?",
           "category": "quantum",
@@ -165,6 +152,19 @@
           "snippet": "Hi all,  I'd like to share a draft Informational BIP as an alternative framework to  BIP-361's proposed coin freeze.  The core argument:\u2026"
         },
         {
+          "thread_id": "<CACgYNOKGG1ht-2deT3jP81BzMrcqYd8tTL-tXeX-Z5sugUngJw@mail.gmail.com>",
+          "subject": "[BIP Draft] Testnet 5",
+          "category": "testing-devtools",
+          "label": "Dev Tooling",
+          "reply_count": 3,
+          "unique_authors": 3,
+          "score": 9,
+          "last_post": "2026-06-02",
+          "source": "mailing_list",
+          "link": "https://gnusha.org/pi/bitcoindev/FJTfAMGEfN5PH0phIMiQ--jMyFCzpSHQpZb8eg8ZMVKFqTMZtzjYrPz2qB6HIvAl81ZSuMCH88i3_B_vYcCmhmi8laRxbgOtFEBh0h24GK8=@protonmail.com",
+          "snippet": "nan"
+        },
+        {
           "thread_id": "topic_2466",
           "subject": "Fingerprinting nodes: Possible Solutions",
           "category": "testing-devtools",
@@ -175,7 +175,7 @@
           "last_post": "2026-05-15",
           "source": "delving",
           "link": "https://delvingbitcoin.org/t/fingerprinting-nodes-possible-solutions/2466/6",
-          "snippet": "This is an update on the  Addr fingerprinting attack and potential mitigation strategies. It\u2019s still a work in progress, so if you see\u2026"
+          "snippet": "Thanks for sharing the various solutions we\u2019ve been considering \nRegarding fuzzing: I think it makes sense to only fuzz to make the\u2026"
         },
         {
           "thread_id": "topic_2530",
@@ -191,17 +191,17 @@
           "snippet": "Hello Bitcoin Community!\nThis is the revised proposal for post quantum bitcoin using lightweight Winternitz signatures.\nI would like to\u2026"
         },
         {
-          "thread_id": "<CmNC-9nAajMwaJi6dHTdlpgjzLZazPlMjGAxNT8DJXAnyw2sUKCygJJU4BLqaF8OYw3carG_pt1Rriqu66OG3wQ8u2itVlJCFo1AhI3V4es=@protonmail.com>",
-          "subject": "Re: [BIP Draft] P2P UTXO Set Sharing",
-          "category": "utxo-sync",
-          "label": "UTXO & Sync",
+          "thread_id": "<d3648bd4-03d3-4b98-92bf-d845302be349n@googlegroups.com>",
+          "subject": "One Time Signatures as an Advantage?",
+          "category": "quantum",
+          "label": "Quantum Resistance",
           "reply_count": 2,
           "unique_authors": 3,
           "score": 6,
-          "last_post": "2026-05-19",
+          "last_post": "2026-05-28",
           "source": "mailing_list",
-          "link": "https://gnusha.org/pi/bitcoindev/8661e699-47d8-46e4-a561-41c5d2fdc0e6n@googlegroups.com",
-          "snippet": "Dear list,  I am sharing a BIP draft for sharing the UTXO set over the P2P network, an old idea that makes it possible to utilize\u2026"
+          "link": "https://gnusha.org/pi/bitcoindev/ec83d322-c7e7-4d12-a1ac-2768db4515a3@murch.one",
+          "snippet": "NIST is standardizing SLH-DSA as a stateless, post-quantum-secure  hash-based signature scheme. However, to achieve the stateless\u2026"
         }
       ],
       "top_bips": [
@@ -218,12 +218,12 @@
         {
           "bip_id": "54",
           "title": "Consensus Cleanup",
-          "mentions": 8
+          "mentions": 6
         },
         {
           "bip_id": "361",
           "title": "Post Quantum Migration and Legacy Signature Sunset",
-          "mentions": 7
+          "mentions": 6
         },
         {
           "bip_id": "324",
@@ -231,15 +231,15 @@
           "mentions": 6
         },
         {
-          "bip_id": "158",
-          "title": "Compact Block Filters for Light Clients",
+          "bip_id": "3",
+          "title": "Updated BIP Process",
           "mentions": 5
         }
       ],
       "top_voices": [
         {
           "name": "conduition",
-          "posts": 14
+          "posts": 16
         },
         {
           "name": "Murch",
@@ -247,14 +247,10 @@
         },
         {
           "name": "Eric Voskuil",
-          "posts": 13
+          "posts": 12
         },
         {
-          "name": "Adam Gibson",
-          "posts": 9
-        },
-        {
-          "name": "Fabian",
+          "name": "Pieter Wuille",
           "posts": 8
         },
         {
@@ -262,65 +258,69 @@
           "posts": 8
         },
         {
+          "name": "Fabian",
+          "posts": 8
+        },
+        {
           "name": "0xB10C",
           "posts": 7
         },
         {
-          "name": "jeremy",
+          "name": "Adam Gibson",
           "posts": 7
         }
       ],
       "source_pct": {
-        "delving": 50.2,
-        "mailing_list": 49.8
+        "mailing_list": 51.6,
+        "delving": 48.4
       },
       "source_counts": {
-        "delving": 111,
-        "mailing_list": 110
+        "mailing_list": 116,
+        "delving": 109
       },
       "mailing_list_stale": false,
       "mailing_list_days_since": null
     },
     "90d": {
       "window_days": 90,
-      "total_messages": 640,
-      "total_threads": 316,
-      "unique_voices": 183,
+      "total_messages": 668,
+      "total_threads": 328,
+      "unique_voices": 185,
       "themes": [
         {
           "category": "quantum",
           "label": "Quantum Resistance",
-          "msgs": 143,
-          "threads": 76,
-          "voices": 53,
-          "share": 25.0,
+          "msgs": 148,
+          "threads": 78,
+          "voices": 54,
+          "share": 24.8,
           "trend": "rising"
         },
         {
           "category": "testing-devtools",
           "label": "Dev Tooling",
-          "msgs": 63,
-          "threads": 6,
-          "voices": 28,
-          "share": 11.0,
+          "msgs": 68,
+          "threads": 9,
+          "voices": 30,
+          "share": 11.4,
           "trend": "fading"
         },
         {
           "category": "covenants",
           "label": "Covenants & Vaults",
-          "msgs": 48,
+          "msgs": 50,
           "threads": 19,
-          "voices": 15,
+          "voices": 16,
           "share": 8.4,
           "trend": "fading"
         },
         {
           "category": "taproot",
           "label": "Taproot",
-          "msgs": 39,
-          "threads": 29,
-          "voices": 19,
-          "share": 6.8,
+          "msgs": 36,
+          "threads": 28,
+          "voices": 17,
+          "share": 6.0,
           "trend": "fading"
         },
         {
@@ -329,7 +329,7 @@
           "msgs": 32,
           "threads": 7,
           "voices": 16,
-          "share": 5.6,
+          "share": 5.4,
           "trend": "steady"
         },
         {
@@ -338,7 +338,7 @@
           "msgs": 28,
           "threads": 21,
           "voices": 11,
-          "share": 4.9,
+          "share": 4.7,
           "trend": "rising"
         },
         {
@@ -347,7 +347,7 @@
           "msgs": 23,
           "threads": 7,
           "voices": 17,
-          "share": 4.0,
+          "share": 3.9,
           "trend": "fading"
         },
         {
@@ -356,17 +356,8 @@
           "msgs": 22,
           "threads": 5,
           "voices": 15,
-          "share": 3.8,
+          "share": 3.7,
           "trend": "rising"
-        },
-        {
-          "category": "p2p-network",
-          "label": "P2P Network",
-          "msgs": 22,
-          "threads": 7,
-          "voices": 7,
-          "share": 3.8,
-          "trend": "steady"
         },
         {
           "category": "wallet-keys",
@@ -374,7 +365,16 @@
           "msgs": 21,
           "threads": 13,
           "voices": 13,
-          "share": 3.7,
+          "share": 3.5,
+          "trend": "fading"
+        },
+        {
+          "category": "mempool-fees",
+          "label": "Mempool & Fees",
+          "msgs": 20,
+          "threads": 13,
+          "voices": 17,
+          "share": 3.4,
           "trend": "fading"
         }
       ],
@@ -419,6 +419,19 @@
           "snippet": "Background\nBOLT 4 acknowledges that onion message routing is inherently unreliable and recommends that implementations apply rate\u2026"
         },
         {
+          "thread_id": "topic_2360",
+          "subject": "BIP-110 update: v0.4.1 release and implementation submitted to Bitcoin Core",
+          "category": "spam-filtering",
+          "label": "Spam Filtering",
+          "reply_count": 6,
+          "unique_authors": 5,
+          "score": 30,
+          "last_post": "2026-06-01",
+          "source": "delving",
+          "link": "https://delvingbitcoin.org/t/bip-110-update-v0-4-1-release-and-implementation-submitted-to-bitcoin-core/2360/16",
+          "snippet": "BIP-110 update: v0.4.1 release and implementation submitted to Bitcoin Core\nHi all,\nFollowing up on the BIP-110 proposal from October, I\u2026"
+        },
+        {
           "thread_id": "topic_2498",
           "subject": "QCAP: A Bitcoin-Native Quantum Canary Alert",
           "category": "quantum",
@@ -443,19 +456,6 @@
           "source": "delving",
           "link": "https://delvingbitcoin.org/t/tcp-hole-punching-for-bitcoin-nodes-behind-home-nats/2497/17",
           "snippet": "While @willcl-ark and I were discussing\nDid the number of reachable nodes in residential ISPs increase since Bitcoin Core v30.0? -\u2026"
-        },
-        {
-          "thread_id": "topic_2360",
-          "subject": "BIP-110 update: v0.4.1 release and implementation submitted to Bitcoin Core",
-          "category": "spam-filtering",
-          "label": "Spam Filtering",
-          "reply_count": 5,
-          "unique_authors": 4,
-          "score": 20,
-          "last_post": "2026-04-10",
-          "source": "delving",
-          "link": "https://delvingbitcoin.org/t/bip-110-update-v0-4-1-release-and-implementation-submitted-to-bitcoin-core/2360/10",
-          "snippet": "BIP-110 update: v0.4.1 release and implementation submitted to Bitcoin Core\nHi all,\nFollowing up on the BIP-110 proposal from October, I\u2026"
         },
         {
           "thread_id": "<123e5545-2eda-4eca-9532-4f4cea2b83ecn@googlegroups.com>",
@@ -501,6 +501,11 @@
           "mentions": 18
         },
         {
+          "bip_id": "54",
+          "title": "Consensus Cleanup",
+          "mentions": 16
+        },
+        {
           "bip_id": "118",
           "title": "SIGHASH_ANYPREVOUT for Taproot Scripts",
           "mentions": 16
@@ -509,21 +514,16 @@
           "bip_id": "360",
           "title": "Pay-to-Merkle-Root (P2MR)",
           "mentions": 15
-        },
-        {
-          "bip_id": "324",
-          "title": "Version 2 P2P Encrypted Transport Protocol",
-          "mentions": 15
         }
       ],
       "top_voices": [
         {
           "name": "conduition",
-          "posts": 39
+          "posts": 41
         },
         {
           "name": "Antoine Poinsot",
-          "posts": 26
+          "posts": 28
         },
         {
           "name": "AaronZhang",
@@ -534,16 +534,16 @@
           "posts": 22
         },
         {
-          "name": "Adam Gibson",
-          "posts": 17
-        },
-        {
           "name": "Murch",
-          "posts": 17
+          "posts": 19
         },
         {
           "name": "0xB10C",
-          "posts": 16
+          "posts": 17
+        },
+        {
+          "name": "Adam Gibson",
+          "posts": 17
         },
         {
           "name": "Eric Voskuil",
@@ -551,12 +551,12 @@
         }
       ],
       "source_pct": {
-        "delving": 53.4,
-        "mailing_list": 46.6
+        "delving": 52.8,
+        "mailing_list": 47.2
       },
       "source_counts": {
-        "delving": 342,
-        "mailing_list": 298
+        "delving": 353,
+        "mailing_list": 315
       },
       "mailing_list_stale": false,
       "mailing_list_days_since": null

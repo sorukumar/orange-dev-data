@@ -18,8 +18,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "GUI (Presentation Layer)",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "GUI",
   "total_commits": 31.0,
   "authored_commits": 31.0,
   "merge_commits": 0.0,
@@ -38,6 +38,8 @@
   "approvals_count": 42.0,
   "p2016_reviews_count": 47.0,
   "modern_reviews_count": 6.0,
+  "first_review_date": "2022-11-01T17:04:58+00:00",
+  "last_review_date": "2025-11-18T15:33:39+00:00",
   "prs_authored": 13.0,
   "avg_pr_ack_velocity_days": 2.304972643097643,
   "avg_concept_lead_time_days": 1.0186612654320988,
@@ -89,23 +91,22 @@
   "github_url": "https://github.com/john-moffett",
   "commit_history": {
     "2022": {
-      "GUI (Presentation Layer)": 2.5,
-      "Tests (QA)": 1.0,
-      "Utilities (Shared Libs)": 2.0,
-      "Wallet (Client App)": 0.5
+      "GUI": 2.5,
+      "Tests": 1.0,
+      "Utilities": 2.0,
+      "Wallet": 0.5
     },
     "2023": {
-      "Core Libs": 2.0,
       "Documentation": 3.0,
-      "GUI (Presentation Layer)": 5.83,
-      "Tests (QA)": 2.0,
-      "Utilities (Shared Libs)": 0.33,
-      "Wallet (Client App)": 1.83
+      "GUI": 5.83,
+      "Tests": 2.0,
+      "Utilities": 2.33,
+      "Wallet": 1.83
     },
     "2025": {
-      "GUI (Presentation Layer)": 1.0,
-      "Node & RPC (App/Interface)": 1.0,
-      "Tests (QA)": 1.0
+      "GUI": 1.0,
+      "Node & RPC": 1.0,
+      "Tests": 1.0
     }
   }
 }

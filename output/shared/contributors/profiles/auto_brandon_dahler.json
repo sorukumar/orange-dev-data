@@ -18,10 +18,10 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Core Libs",
-  "total_commits": 13.0,
-  "authored_commits": 13.0,
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Utilities",
+  "total_commits": 14.0,
+  "authored_commits": 14.0,
   "merge_commits": 0.0,
   "total_additions": 2086.0,
   "total_deletions": 1668.0,
@@ -38,6 +38,8 @@
   "approvals_count": 1.0,
   "p2016_reviews_count": 1.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": "2013-11-13T04:55:29+00:00",
+  "last_review_date": "2016-09-07T02:46:22+00:00",
   "prs_authored": 6.0,
   "avg_pr_ack_velocity_days": 37.71083622685185,
   "avg_concept_lead_time_days": null,
@@ -60,19 +62,21 @@
   "expertise_domains": [
     "Infrastructure",
     "Consensus",
-    "Network"
+    "Mempool"
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.035,
-      "Infrastructure": 0.93,
-      "Network": 0.035
+      "Consensus": 0.03,
+      "Infrastructure": 0.909,
+      "Mempool": 0.03,
+      "Network": 0.03
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.035,
-    "Infrastructure": 0.93,
-    "Network": 0.035
+    "Consensus": 0.03,
+    "Infrastructure": 0.9099,
+    "Mempool": 0.03,
+    "Network": 0.03
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -92,18 +96,19 @@
   "github_url": "https://github.com/brandondahler",
   "commit_history": {
     "2013": {
-      "Build & CI (DevOps)": 0.64,
-      "Consensus (Domain Logic)": 0.14,
-      "Core Libs": 1.14,
+      "Build & CI": 0.62,
+      "Consensus": 0.12,
       "Documentation": 0.5,
-      "GUI (Presentation Layer)": 0.14,
-      "Node & RPC (App/Interface)": 0.14,
-      "P2P Network (Infrastructure)": 0.14,
-      "Tests (QA)": 0.14
+      "GUI": 0.12,
+      "Mempool": 0.12,
+      "Node & RPC": 0.12,
+      "P2P Network": 0.12,
+      "Tests": 0.12,
+      "Utilities": 1.12
     },
     "2014": {
-      "Core Libs": 0.5,
-      "GUI (Presentation Layer)": 0.5
+      "GUI": 0.5,
+      "Utilities": 0.5
     }
   }
 }

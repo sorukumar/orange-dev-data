@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
+  "last_seen": "2026-06-04T00:00:00",
   "technical_focus": "Tests (QA)",
   "total_commits": 3.0,
   "authored_commits": 3.0,
@@ -38,6 +38,8 @@
   "approvals_count": 0.0,
   "p2016_reviews_count": 0.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": null,
+  "last_review_date": null,
   "prs_authored": 3.0,
   "avg_pr_ack_velocity_days": 0.07010416666666666,
   "avg_concept_lead_time_days": 0.07010416666666666,
@@ -89,9 +91,9 @@
   "github_url": "https://github.com/brokenprogrammer",
   "commit_history": {
     "2022": {
-      "Tests (QA)": 0.5,
-      "Utilities (Shared Libs)": 1.0,
-      "Wallet (Client App)": 0.5
+      "Tests": 0.5,
+      "Utilities": 1.0,
+      "Wallet": 0.5
     }
   }
 }

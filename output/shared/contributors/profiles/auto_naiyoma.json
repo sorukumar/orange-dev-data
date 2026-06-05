@@ -20,19 +20,21 @@
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": 156.986903140886,
-  "reviews_count": 56.0,
-  "avg_approval_latency_days": 101.71377004794974,
-  "approvals_count": 43.0,
-  "p2016_reviews_count": 56.0,
-  "modern_reviews_count": 56.0,
+  "avg_review_latency_days": 163.62263932564642,
+  "reviews_count": 59.0,
+  "avg_approval_latency_days": 99.94649425287356,
+  "approvals_count": 45.0,
+  "p2016_reviews_count": 59.0,
+  "modern_reviews_count": 59.0,
+  "first_review_date": "2023-08-30T11:44:53+00:00",
+  "last_review_date": "2026-06-02T13:36:03+00:00",
   "prs_authored": 14.0,
   "avg_pr_ack_velocity_days": 1.8254145622895626,
   "avg_concept_lead_time_days": 2.092711226851852,
-  "review_reciprocity": 4.0,
-  "hybrid_score": 0.15,
-  "p2016_hybrid_score": 0.3023,
-  "modern_hybrid_score": 0.3023,
+  "review_reciprocity": 4.214285714285714,
+  "hybrid_score": 0.1517,
+  "p2016_hybrid_score": 0.3039,
+  "modern_hybrid_score": 0.3039,
   "impact_score": 9.0,
   "p2016_impact_score": 17.0,
   "modern_impact_score": 17.0,
@@ -74,12 +76,12 @@
   "github_url": "https://github.com/naiyoma",
   "commit_history": {
     "2024": {
-      "Node & RPC (App/Interface)": 0.5,
-      "Tests (QA)": 4.0,
-      "Utilities (Shared Libs)": 0.5
+      "Node & RPC": 0.5,
+      "Tests": 4.0,
+      "Utilities": 0.5
     },
     "2025": {
-      "Tests (QA)": 8.0
+      "Tests": 8.0
     }
   }
 }

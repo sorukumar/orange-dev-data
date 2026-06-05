@@ -18,8 +18,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Build & CI (DevOps)",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Build & CI",
   "total_commits": 7.0,
   "authored_commits": 7.0,
   "merge_commits": 0.0,
@@ -38,6 +38,8 @@
   "approvals_count": 0.0,
   "p2016_reviews_count": 0.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": null,
+  "last_review_date": null,
   "prs_authored": 1.0,
   "avg_pr_ack_velocity_days": 0.006469907407407408,
   "avg_concept_lead_time_days": null,
@@ -59,20 +61,20 @@
   "dev_type": "Builder",
   "expertise_domains": [
     "Infrastructure",
-    "Consensus",
+    "Mempool",
     "Network"
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.143,
       "Infrastructure": 0.571,
+      "Mempool": 0.143,
       "Network": 0.143,
       "Wallet": 0.143
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.143,
     "Infrastructure": 0.571,
+    "Mempool": 0.143,
     "Network": 0.143,
     "Wallet": 0.143
   },
@@ -94,13 +96,13 @@
   "github_url": "https://github.com/vlajos",
   "commit_history": {
     "2015": {
-      "Build & CI (DevOps)": 0.14,
-      "Consensus (Domain Logic)": 0.14,
-      "Core Libs": 0.14,
-      "GUI (Presentation Layer)": 0.14,
-      "P2P Network (Infrastructure)": 0.14,
-      "Tests (QA)": 0.14,
-      "Wallet (Client App)": 0.14
+      "Build & CI": 0.14,
+      "GUI": 0.14,
+      "Mempool": 0.14,
+      "P2P Network": 0.14,
+      "Tests": 0.14,
+      "Utilities": 0.14,
+      "Wallet": 0.14
     }
   }
 }

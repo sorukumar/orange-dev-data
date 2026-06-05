@@ -19,10 +19,10 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Tests (QA)",
-  "total_commits": 435.0,
-  "authored_commits": 435.0,
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Tests",
+  "total_commits": 442.0,
+  "authored_commits": 442.0,
   "merge_commits": 0.0,
   "total_additions": 8856.0,
   "total_deletions": 2482.0,
@@ -33,30 +33,32 @@
   "bips_authored": 4.0,
   "p2016_bips_authored": 4.0,
   "modern_bips_authored": 3.0,
-  "avg_review_latency_days": 153.32616413835913,
-  "reviews_count": 957.0,
-  "avg_approval_latency_days": 61.79195359020651,
-  "approvals_count": 678.0,
-  "p2016_reviews_count": 931.0,
-  "modern_reviews_count": 268.0,
-  "prs_authored": 248.0,
-  "avg_pr_ack_velocity_days": 7.943192084681769,
-  "avg_concept_lead_time_days": 15.636972402597403,
-  "review_reciprocity": 3.8588709677419355,
-  "hybrid_score": 1.5309,
-  "p2016_hybrid_score": 1.6289,
-  "modern_hybrid_score": 1.5389,
+  "avg_review_latency_days": 153.0434788817512,
+  "reviews_count": 959.0,
+  "avg_approval_latency_days": 61.70076986685206,
+  "approvals_count": 680.0,
+  "p2016_reviews_count": 933.0,
+  "modern_reviews_count": 270.0,
+  "first_review_date": "2014-03-08T17:28:56+00:00",
+  "last_review_date": "2026-06-03T17:28:37+00:00",
+  "prs_authored": 251.0,
+  "avg_pr_ack_velocity_days": 7.904872349704777,
+  "avg_concept_lead_time_days": 15.253510021097048,
+  "review_reciprocity": 3.8207171314741037,
+  "hybrid_score": 1.5317,
+  "p2016_hybrid_score": 1.6301,
+  "modern_hybrid_score": 1.539,
   "impact_score": 60.0,
   "p2016_impact_score": 62.0,
   "modern_impact_score": 60.0,
   "threads_started": 70.0,
-  "replies_sent": 234.0,
+  "replies_sent": 235.0,
   "ml_threads": 5.0,
   "delving_threads": 65.0,
-  "ml_responses": 126.0,
+  "ml_responses": 127.0,
   "delving_responses": 108.0,
   "first_active": "2014-08-03T12:23:07",
-  "last_active": "2026-05-28T09:04:24",
+  "last_active": "2026-06-02T07:36:55",
   "dev_type": "Protocol Designer",
   "expertise_domains": [
     "Consensus",
@@ -69,9 +71,11 @@
       "Infrastructure": 0.25
     },
     "code": {
-      "Consensus": 0.104,
-      "Infrastructure": 0.722,
+      "Consensus": 0.041,
+      "Infrastructure": 0.697,
+      "Mempool": 0.059,
       "Network": 0.037,
+      "Script": 0.029,
       "Wallet": 0.137
     },
     "discussion": {
@@ -81,22 +85,22 @@
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.4062,
-    "Infrastructure": 0.3416,
+    "Consensus": 0.3873,
+    "Infrastructure": 0.3341,
     "L2": 0.0448,
-    "Mempool": 0.1062,
+    "Mempool": 0.1239,
     "Network": 0.0111,
-    "Script": 0.049,
+    "Script": 0.0577,
     "Wallet": 0.0411
   },
-  "p2016_posts": 300.0,
-  "modern_posts": 202.0,
-  "p2016_ml_posts": 127.0,
+  "p2016_posts": 301.0,
+  "modern_posts": 199.0,
+  "p2016_ml_posts": 128.0,
   "p2016_delving_posts": 173.0,
-  "modern_ml_posts": 29.0,
+  "modern_ml_posts": 26.0,
   "modern_delving_posts": 173.0,
   "global_first_active": "2014-08-03T12:23:07",
-  "global_last_active": "2026-05-28T09:04:24",
+  "global_last_active": "2026-06-02T07:36:55",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -108,99 +112,110 @@
   "delving_url": "https://delvingbitcoin.org/u/instagibbs",
   "commit_history": {
     "2015": {
-      "Build & CI (DevOps)": 0.33,
-      "Core Libs": 1.33,
-      "Node & RPC (App/Interface)": 0.33
+      "Build & CI": 0.33,
+      "Node & RPC": 0.33,
+      "Utilities": 1.33
     },
     "2016": {
-      "Core Libs": 8.08,
-      "GUI (Presentation Layer)": 0.5,
-      "Node & RPC (App/Interface)": 9.92,
-      "P2P Network (Infrastructure)": 3.0,
-      "Tests (QA)": 3.58,
-      "Wallet (Client App)": 7.92
+      "GUI": 0.5,
+      "Mempool": 1.33,
+      "Node & RPC": 8.58,
+      "P2P Network": 3.0,
+      "Tests": 3.58,
+      "Utilities": 8.08,
+      "Wallet": 7.92
     },
     "2017": {
-      "Build & CI (DevOps)": 1.0,
-      "Consensus (Domain Logic)": 2.0,
-      "GUI (Presentation Layer)": 0.5,
-      "Node & RPC (App/Interface)": 3.5,
-      "P2P Network (Infrastructure)": 1.0,
-      "Tests (QA)": 3.5,
-      "Wallet (Client App)": 9.5
+      "Build & CI": 1.0,
+      "GUI": 0.5,
+      "Node & RPC": 3.5,
+      "P2P Network": 1.0,
+      "Script": 2.0,
+      "Tests": 3.5,
+      "Wallet": 9.5
     },
     "2018": {
-      "Consensus (Domain Logic)": 4.0,
-      "Core Libs": 0.5,
       "Documentation": 1.0,
-      "GUI (Presentation Layer)": 1.0,
-      "Node & RPC (App/Interface)": 4.0,
-      "Tests (QA)": 9.5,
-      "Wallet (Client App)": 11.0
+      "GUI": 1.0,
+      "Node & RPC": 4.0,
+      "Script": 4.0,
+      "Tests": 9.5,
+      "Utilities": 0.5,
+      "Wallet": 11.0
     },
     "2019": {
-      "Consensus (Domain Logic)": 2.67,
-      "Core Libs": 2.75,
+      "Consensus": 1.5,
       "Documentation": 1.25,
-      "GUI (Presentation Layer)": 3.17,
-      "Node & RPC (App/Interface)": 3.25,
-      "P2P Network (Infrastructure)": 0.5,
-      "Tests (QA)": 17.42,
-      "Wallet (Client App)": 13.0
+      "GUI": 3.17,
+      "Mempool": 2.25,
+      "Node & RPC": 1.67,
+      "P2P Network": 0.5,
+      "Script": 0.67,
+      "Tests": 17.42,
+      "Utilities": 2.67,
+      "Wallet": 12.92
     },
     "2020": {
-      "Consensus (Domain Logic)": 1.25,
-      "Core Libs": 0.75,
+      "Consensus": 0.2,
       "Documentation": 0.5,
-      "GUI (Presentation Layer)": 1.0,
-      "Node & RPC (App/Interface)": 0.75,
-      "Tests (QA)": 12.5,
-      "Wallet (Client App)": 1.25
+      "GUI": 1.0,
+      "Mempool": 0.2,
+      "Node & RPC": 0.7,
+      "Script": 1.0,
+      "Tests": 12.5,
+      "Utilities": 0.7,
+      "Wallet": 1.2
     },
     "2021": {
-      "Wallet (Client App)": 2.0
+      "Wallet": 2.0
     },
     "2022": {
-      "Consensus (Domain Logic)": 1.5,
-      "Core Libs": 0.5,
+      "Consensus": 0.33,
       "Documentation": 1.0,
-      "Node & RPC (App/Interface)": 0.5,
-      "Tests (QA)": 1.5
+      "Mempool": 0.33,
+      "Node & RPC": 0.5,
+      "Script": 1.0,
+      "Tests": 1.33,
+      "Utilities": 0.5
     },
     "2023": {
-      "Build & CI (DevOps)": 0.5,
-      "Consensus (Domain Logic)": 3.37,
-      "Core Libs": 1.2,
+      "Build & CI": 0.5,
+      "Consensus": 0.83,
       "Documentation": 1.33,
-      "Node & RPC (App/Interface)": 5.03,
-      "P2P Network (Infrastructure)": 6.5,
-      "Tests (QA)": 15.37,
-      "Wallet (Client App)": 0.7
+      "Mempool": 2.83,
+      "Node & RPC": 3.53,
+      "P2P Network": 6.5,
+      "Script": 1.2,
+      "Tests": 15.37,
+      "Utilities": 1.2,
+      "Wallet": 0.7
     },
     "2024": {
-      "Build & CI (DevOps)": 2.33,
-      "Consensus (Domain Logic)": 17.17,
-      "Core Libs": 1.0,
+      "Build & CI": 2.25,
+      "Consensus": 8.42,
       "Documentation": 8.0,
-      "Node & RPC (App/Interface)": 6.5,
-      "P2P Network (Infrastructure)": 0.83,
-      "Tests (QA)": 66.67,
-      "Utilities (Shared Libs)": 3.5
+      "Mempool": 11.25,
+      "Node & RPC": 4.33,
+      "P2P Network": 0.83,
+      "Tests": 66.42,
+      "Utilities": 4.5
     },
     "2025": {
-      "Consensus (Domain Logic)": 2.17,
-      "Core Libs": 6.67,
+      "Consensus": 1.67,
       "Documentation": 2.33,
-      "Node & RPC (App/Interface)": 0.83,
-      "P2P Network (Infrastructure)": 0.67,
-      "Tests (QA)": 23.33
+      "Mempool": 0.67,
+      "Node & RPC": 0.83,
+      "P2P Network": 0.67,
+      "Tests": 23.17,
+      "Utilities": 6.67
     },
     "2026": {
-      "Consensus (Domain Logic)": 1.0,
+      "Consensus": 1.0,
       "Documentation": 1.0,
-      "Node & RPC (App/Interface)": 1.5,
-      "Tests (QA)": 1.5,
-      "Wallet (Client App)": 1.0
+      "Mempool": 1.0,
+      "Node & RPC": 0.5,
+      "Tests": 1.5,
+      "Wallet": 1.0
     }
   },
   "bip_list": [
@@ -241,9 +256,9 @@
   },
   "last_message": {
     "source": "mailing_list",
-    "subject": "[bitcoindev] Re: Mapping the design space of sibling-aware covenants",
-    "date": "2026-05-28",
-    "link": "https://gnusha.org/pi/bitcoindev/c00f0fdf-950b-4ff8-a502-eeb1be02c510n@googlegroups.com"
+    "subject": "Re: [bitcoindev] Prohibit Merkle Internal Node Preimages That Encode\n Minimal 64-Byte Transactions",
+    "date": "2026-06-02",
+    "link": "https://gnusha.org/pi/bitcoindev/923b3d65-3472-4d7d-9b13-da44753fe5f8n@googlegroups.com"
   },
   "social_history": {
     "2014": {
@@ -331,7 +346,7 @@
       "testing-devtools": 21
     },
     "2026": {
-      "other": 9,
+      "other": 10,
       "covenants": 3,
       "lightning": 6,
       "mempool-fees": 2,

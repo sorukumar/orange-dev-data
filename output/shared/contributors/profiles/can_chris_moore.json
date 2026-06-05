@@ -12,15 +12,19 @@
     "is_sponsored": null,
     "maintainer_status": "historical",
     "social_source": "mailing_list",
-    "sponsor_id": null
+    "sponsor_id": null,
+    "maintainer_title": "Core Maintainer",
+    "maintainer_primary_area": "General",
+    "maintainer_appointed": "2011-01-21",
+    "maintainer_stepped_down": "2011-03-31"
   },
   "roles": [
     "Core Maintainer",
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Core Libs",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Utilities",
   "total_commits": 42.0,
   "authored_commits": 39.0,
   "merge_commits": 3.0,
@@ -39,12 +43,14 @@
   "approvals_count": 1.0,
   "p2016_reviews_count": 11.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": "2011-02-02T04:40:48+00:00",
+  "last_review_date": "2023-02-06T23:19:07+00:00",
   "prs_authored": 48.0,
   "avg_pr_ack_velocity_days": 94.30479370915033,
   "avg_concept_lead_time_days": 5.010969650205762,
   "review_reciprocity": 0.3333333333333333,
   "hybrid_score": 1.387,
-  "p2016_hybrid_score": 0.3009,
+  "p2016_hybrid_score": 0.3008,
   "modern_hybrid_score": 0.1161,
   "impact_score": 56.0,
   "p2016_impact_score": 17.0,
@@ -97,37 +103,37 @@
   "github_url": "https://github.com/dooglus",
   "commit_history": {
     "2011": {
-      "Core Libs": 9.0,
       "Documentation": 1.0,
-      "GUI (Presentation Layer)": 1.0,
-      "Merge": 3.0
+      "GUI": 1.0,
+      "Merge": 3.0,
+      "Utilities": 9.0
     },
     "2012": {
-      "Core Libs": 5.5,
       "Documentation": 1.0,
-      "GUI (Presentation Layer)": 0.5,
-      "Node & RPC (App/Interface)": 0.5,
-      "Tests (QA)": 2.5
+      "GUI": 0.5,
+      "Node & RPC": 0.5,
+      "Tests": 2.5,
+      "Utilities": 5.5
     },
     "2015": {
-      "Wallet (Client App)": 1.0
+      "Wallet": 1.0
     },
     "2016": {
-      "Core Libs": 1.5,
-      "Node & RPC (App/Interface)": 1.0,
-      "Wallet (Client App)": 2.5
+      "Node & RPC": 1.0,
+      "Utilities": 1.5,
+      "Wallet": 2.5
     },
     "2017": {
-      "GUI (Presentation Layer)": 1.33,
-      "Node & RPC (App/Interface)": 0.33,
-      "Wallet (Client App)": 0.33
+      "GUI": 1.33,
+      "Node & RPC": 0.33,
+      "Wallet": 0.33
     },
     "2018": {
-      "GUI (Presentation Layer)": 1.0
+      "GUI": 1.0
     },
     "2019": {
-      "GUI (Presentation Layer)": 1.0,
-      "Node & RPC (App/Interface)": 1.0
+      "GUI": 1.0,
+      "Node & RPC": 1.0
     }
   },
   "first_message": {

@@ -7,21 +7,26 @@
     "is_bip_author": null,
     "is_core_committer": null,
     "is_core_contributor": null,
-    "is_maintainer": null,
+    "is_maintainer": true,
     "is_social_contributor": true,
     "is_sponsored": null,
-    "maintainer_status": null,
+    "maintainer_status": "historical",
     "social_source": "github",
-    "sponsor_id": null
+    "sponsor_id": null,
+    "maintainer_title": "Core Maintainer",
+    "maintainer_primary_area": "Consensus / Cryptography",
+    "maintainer_appointed": "2012-02-11",
+    "maintainer_stepped_down": "2015-12-17"
   },
   "roles": [
-    "Researcher"
+    "Researcher",
+    "Core Maintainer"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
+  "last_seen": "2026-06-04T00:00:00",
   "technical_focus": "code",
-  "total_commits": 342.0,
-  "authored_commits": 238.0,
+  "total_commits": 346.0,
+  "authored_commits": 242.0,
   "merge_commits": 104.0,
   "total_additions": 2615.0,
   "total_deletions": 1910.0,
@@ -38,13 +43,15 @@
   "approvals_count": 678.0,
   "p2016_reviews_count": 892.0,
   "modern_reviews_count": 33.0,
-  "prs_authored": 158.0,
+  "first_review_date": "2011-06-23T15:49:16+00:00",
+  "last_review_date": "2026-04-25T02:38:04+00:00",
+  "prs_authored": 159.0,
   "avg_pr_ack_velocity_days": 4.3671314571150095,
   "avg_concept_lead_time_days": 14.436305076628354,
-  "review_reciprocity": 9.683544303797468,
+  "review_reciprocity": 9.622641509433961,
   "hybrid_score": 2.4937,
   "p2016_hybrid_score": 1.1957,
-  "modern_hybrid_score": 0.5205,
+  "modern_hybrid_score": 0.5207,
   "impact_score": 78.0,
   "p2016_impact_score": 51.0,
   "modern_impact_score": 27.0,
@@ -55,7 +62,7 @@
   "ml_responses": 784.0,
   "delving_responses": 31.0,
   "first_active": "2011-06-30T21:07:50",
-  "last_active": "2026-02-07T17:38:38.269000",
+  "last_active": null,
   "dev_type": "Protocol Designer",
   "expertise_domains": [
     "Infrastructure",
@@ -68,9 +75,11 @@
       "Infrastructure": 0.5
     },
     "code": {
-      "Consensus": 0.089,
-      "Infrastructure": 0.674,
+      "Consensus": 0.068,
+      "Infrastructure": 0.659,
+      "Mempool": 0.03,
       "Network": 0.175,
+      "Script": 0.006,
       "Wallet": 0.062
     },
     "discussion": {
@@ -79,11 +88,11 @@
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.2767,
-    "Infrastructure": 0.4522,
+    "Consensus": 0.2704,
+    "Infrastructure": 0.4477,
     "Mining": 0.12,
     "Network": 0.0525,
-    "Script": 0.08,
+    "Script": 0.0818,
     "Wallet": 0.0186
   },
   "p2016_posts": 319.0,
@@ -93,7 +102,7 @@
   "modern_ml_posts": 60.0,
   "modern_delving_posts": 47.0,
   "global_first_active": "2011-06-30T21:07:50",
-  "global_last_active": "2026-02-07T17:38:38.268999936",
+  "global_last_active": "2019-02-17T03:38:08",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -105,69 +114,74 @@
   "delving_url": "https://delvingbitcoin.org/u/gmaxwell",
   "commit_history": {
     "2012": {
-      "Build & CI (DevOps)": 0.33,
-      "Core Libs": 17.83,
+      "Build & CI": 0.33,
       "Documentation": 1.33,
       "Merge": 61.0,
-      "Node & RPC (App/Interface)": 1.0,
-      "P2P Network (Infrastructure)": 2.5
+      "Node & RPC": 1.0,
+      "P2P Network": 2.5,
+      "Utilities": 17.83
     },
     "2013": {
-      "Core Libs": 14.83,
       "Documentation": 1.5,
-      "GUI (Presentation Layer)": 1.33,
+      "GUI": 1.33,
       "Merge": 14.0,
-      "Node & RPC (App/Interface)": 1.83,
-      "P2P Network (Infrastructure)": 0.5,
-      "Tests (QA)": 2.0
+      "Node & RPC": 1.83,
+      "P2P Network": 0.5,
+      "Tests": 2.0,
+      "Utilities": 14.83
     },
     "2014": {
-      "Consensus (Domain Logic)": 1.0,
-      "Core Libs": 9.83,
+      "Consensus": 1.0,
       "Documentation": 2.0,
-      "GUI (Presentation Layer)": 0.5,
+      "GUI": 0.5,
+      "Mempool": 1.0,
       "Merge": 8.0,
-      "Node & RPC (App/Interface)": 3.33,
-      "P2P Network (Infrastructure)": 2.33
+      "Node & RPC": 2.33,
+      "P2P Network": 2.33,
+      "Utilities": 9.83
     },
     "2015": {
-      "Build & CI (DevOps)": 0.25,
-      "Consensus (Domain Logic)": 3.0,
-      "Core Libs": 10.75,
+      "Build & CI": 0.25,
+      "Consensus": 0.67,
+      "Mempool": 2.67,
       "Merge": 21.0,
-      "Node & RPC (App/Interface)": 3.0,
-      "P2P Network (Infrastructure)": 5.75,
-      "Tests (QA)": 1.25,
-      "Wallet (Client App)": 3.0
+      "Node & RPC": 3.0,
+      "P2P Network": 5.75,
+      "Tests": 1.25,
+      "Utilities": 10.42,
+      "Wallet": 3.0
     },
     "2016": {
-      "Build & CI (DevOps)": 0.53,
-      "Consensus (Domain Logic)": 2.01,
-      "Core Libs": 14.71,
-      "Database (Persistence)": 0.14,
+      "Build & CI": 0.53,
+      "Consensus": 1.99,
+      "Database": 0.12,
       "Documentation": 2.33,
-      "GUI (Presentation Layer)": 1.68,
-      "Node & RPC (App/Interface)": 3.21,
-      "P2P Network (Infrastructure)": 13.01,
-      "Tests (QA)": 3.03,
-      "Wallet (Client App)": 1.34
+      "GUI": 1.66,
+      "Mempool": 0.96,
+      "Node & RPC": 2.36,
+      "P2P Network": 12.99,
+      "Tests": 3.03,
+      "Utilities": 14.69,
+      "Wallet": 1.32
     },
     "2017": {
-      "Consensus (Domain Logic)": 6.42,
-      "Core Libs": 2.75,
+      "Consensus": 5.37,
       "Documentation": 1.33,
-      "Node & RPC (App/Interface)": 3.92,
-      "P2P Network (Infrastructure)": 2.0,
-      "Tests (QA)": 2.75,
-      "Wallet (Client App)": 5.83
+      "Mempool": 0.2,
+      "Node & RPC": 3.87,
+      "P2P Network": 2.0,
+      "Script": 1.0,
+      "Tests": 2.7,
+      "Utilities": 2.7,
+      "Wallet": 5.83
     },
     "2018": {
-      "Consensus (Domain Logic)": 1.0,
-      "Core Libs": 0.5,
-      "P2P Network (Infrastructure)": 2.5
+      "Consensus": 1.0,
+      "P2P Network": 2.5,
+      "Utilities": 0.5
     },
     "2019": {
-      "Consensus (Domain Logic)": 1.0
+      "Consensus": 1.0
     }
   },
   "bip_list": [

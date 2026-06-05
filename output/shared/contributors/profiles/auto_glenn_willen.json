@@ -18,8 +18,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Core Libs",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Utilities",
   "total_commits": 55.0,
   "authored_commits": 55.0,
   "merge_commits": 0.0,
@@ -38,6 +38,8 @@
   "approvals_count": 18.0,
   "p2016_reviews_count": 29.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": "2015-01-07T03:18:24+00:00",
+  "last_review_date": "2020-10-09T09:08:09+00:00",
   "prs_authored": 10.0,
   "avg_pr_ack_velocity_days": 2.2321656378600827,
   "avg_concept_lead_time_days": 0.34205439814814814,
@@ -60,18 +62,18 @@
   "expertise_domains": [
     "Infrastructure",
     "Wallet",
-    "Consensus"
+    "Script"
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.071,
       "Infrastructure": 0.765,
+      "Script": 0.071,
       "Wallet": 0.164
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.071,
     "Infrastructure": 0.765,
+    "Script": 0.071,
     "Wallet": 0.164
   },
   "p2016_posts": 0.0,
@@ -92,31 +94,29 @@
   "github_url": "https://github.com/gwillen",
   "commit_history": {
     "2014": {
-      "Core Libs": 1.0
+      "Utilities": 1.0
     },
     "2018": {
-      "Consensus (Domain Logic)": 1.75,
-      "Node & RPC (App/Interface)": 1.25,
-      "Tests (QA)": 1.75,
-      "Wallet (Client App)": 2.25
+      "Node & RPC": 1.25,
+      "Script": 1.75,
+      "Tests": 1.75,
+      "Wallet": 2.25
     },
     "2019": {
-      "Build & CI (DevOps)": 1.17,
-      "Consensus (Domain Logic)": 0.17,
-      "Core Libs": 3.67,
+      "Build & CI": 1.17,
       "Documentation": 1.0,
-      "Node & RPC (App/Interface)": 2.67,
-      "Tests (QA)": 1.67,
-      "Utilities (Shared Libs)": 1.0,
-      "Wallet (Client App)": 1.67
+      "Node & RPC": 2.67,
+      "Script": 0.17,
+      "Tests": 1.67,
+      "Utilities": 4.67,
+      "Wallet": 1.67
     },
     "2020": {
-      "Build & CI (DevOps)": 1.33,
-      "Core Libs": 0.33,
-      "GUI (Presentation Layer)": 1.83,
-      "Tests (QA)": 1.5,
-      "Utilities (Shared Libs)": 0.5,
-      "Wallet (Client App)": 0.5
+      "Build & CI": 1.33,
+      "GUI": 1.83,
+      "Tests": 1.5,
+      "Utilities": 0.83,
+      "Wallet": 0.5
     }
   }
 }

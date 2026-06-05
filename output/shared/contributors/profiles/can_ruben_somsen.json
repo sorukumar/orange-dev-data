@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
+  "last_seen": "2026-06-04T00:00:00",
   "technical_focus": "None",
   "total_commits": 0.0,
   "authored_commits": 0.0,
@@ -38,13 +38,15 @@
   "approvals_count": 3.0,
   "p2016_reviews_count": 12.0,
   "modern_reviews_count": 10.0,
+  "first_review_date": "2022-04-20T08:45:49+00:00",
+  "last_review_date": "2026-02-27T20:44:59+00:00",
   "prs_authored": 0.0,
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": null,
   "hybrid_score": 0.7728,
   "p2016_hybrid_score": 0.869,
-  "modern_hybrid_score": 0.9547,
+  "modern_hybrid_score": 0.9659,
   "impact_score": 37.0,
   "p2016_impact_score": 41.0,
   "modern_impact_score": 44.0,
@@ -55,23 +57,24 @@
   "ml_responses": 76.0,
   "delving_responses": 4.0,
   "first_active": "2018-09-01T12:26:54",
-  "last_active": "2026-01-21T10:41:07.718000",
+  "last_active": null,
   "dev_type": "Reviewer",
   "expertise_domains": [
-    "Infrastructure",
-    "Privacy"
+    "Privacy",
+    "Infrastructure"
   ],
   "expertise_by_source": {
     "bips": {
-      "Infrastructure": 1.0
+      "Infrastructure": 0.5,
+      "Privacy": 0.5
     },
     "discussion": {
       "Privacy": 1.0
     }
   },
   "expertise_domain_scores": {
-    "Infrastructure": 0.7143,
-    "Privacy": 0.2857
+    "Infrastructure": 0.3571,
+    "Privacy": 0.6429
   },
   "p2016_posts": 103.0,
   "modern_posts": 23.0,
@@ -80,7 +83,7 @@
   "modern_ml_posts": 11.0,
   "modern_delving_posts": 12.0,
   "global_first_active": "2018-09-01T12:26:54",
-  "global_last_active": "2026-01-21T10:41:07.718000128",
+  "global_last_active": null,
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -95,7 +98,7 @@
       "number": 352,
       "title": "Silent Payments",
       "status": "Complete",
-      "theme": "Other",
+      "theme": "Privacy",
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0352.mediawiki"
     },
     {

@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
+  "last_seen": "2026-06-04T00:00:00",
   "technical_focus": "code",
   "total_commits": 0.0,
   "authored_commits": 0.0,
@@ -38,13 +38,15 @@
   "approvals_count": null,
   "p2016_reviews_count": null,
   "modern_reviews_count": null,
+  "first_review_date": null,
+  "last_review_date": null,
   "prs_authored": null,
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": null,
   "hybrid_score": 0.3566,
   "p2016_hybrid_score": 0.3602,
-  "modern_hybrid_score": 0.3788,
+  "modern_hybrid_score": 0.3786,
   "impact_score": 19.0,
   "p2016_impact_score": 19.0,
   "modern_impact_score": 20.0,
@@ -58,19 +60,19 @@
   "last_active": "2023-12-17T18:52:44",
   "dev_type": "Participant",
   "expertise_domains": [
-    "Privacy",
+    "Script",
     "Wallet"
   ],
   "expertise_by_source": {
     "bips": {
-      "Privacy": 1.0
+      "Script": 1.0
     },
     "discussion": {
       "Wallet": 1.0
     }
   },
   "expertise_domain_scores": {
-    "Privacy": 0.7143,
+    "Script": 0.7143,
     "Wallet": 0.2857
   },
   "p2016_posts": 2.0,
@@ -93,7 +95,7 @@
       "number": 391,
       "title": "Binary Output Descriptors",
       "status": "Closed",
-      "theme": "Privacy",
+      "theme": "Script & Smart Contracts",
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0391.mediawiki"
     }
   ],

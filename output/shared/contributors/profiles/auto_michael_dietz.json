@@ -18,33 +18,35 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Tests (QA)",
-  "total_commits": 49.0,
-  "authored_commits": 49.0,
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Tests",
+  "total_commits": 50.0,
+  "authored_commits": 50.0,
   "merge_commits": 0.0,
-  "total_additions": 935.0,
-  "total_deletions": 766.0,
+  "total_additions": 937.0,
+  "total_deletions": 767.0,
   "first_commit": "2020-11-13T22:55:20",
-  "last_commit": "2025-01-22T16:12:29",
-  "p2016_authored_commits": 28.0,
-  "modern_authored_commits": 3.0,
+  "last_commit": "2026-06-02T14:28:46",
+  "p2016_authored_commits": 29.0,
+  "modern_authored_commits": 4.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": 62.59575382102994,
-  "reviews_count": 82.0,
-  "avg_approval_latency_days": 58.00220956790124,
-  "approvals_count": 64.0,
-  "p2016_reviews_count": 82.0,
-  "modern_reviews_count": 2.0,
-  "prs_authored": 23.0,
-  "avg_pr_ack_velocity_days": 10.089242173721342,
-  "avg_concept_lead_time_days": 5.240103443287037,
-  "review_reciprocity": 3.5652173913043477,
-  "hybrid_score": 0.3584,
-  "p2016_hybrid_score": 0.3584,
-  "modern_hybrid_score": 0.1764,
+  "avg_review_latency_days": 62.17616118669691,
+  "reviews_count": 83.0,
+  "avg_approval_latency_days": 57.251070449561404,
+  "approvals_count": 65.0,
+  "p2016_reviews_count": 83.0,
+  "modern_reviews_count": 3.0,
+  "first_review_date": "2020-10-29T02:03:43+00:00",
+  "last_review_date": "2026-06-03T20:19:57+00:00",
+  "prs_authored": 25.0,
+  "avg_pr_ack_velocity_days": 9.301018015297906,
+  "avg_concept_lead_time_days": 4.989197984749455,
+  "review_reciprocity": 3.32,
+  "hybrid_score": 0.3591,
+  "p2016_hybrid_score": 0.3591,
+  "modern_hybrid_score": 0.1811,
   "impact_score": 19.0,
   "p2016_impact_score": 19.0,
   "modern_impact_score": 10.0,
@@ -60,18 +62,18 @@
   "expertise_domains": [
     "Infrastructure",
     "Wallet",
-    "Consensus"
+    "Script"
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.013,
       "Infrastructure": 0.929,
+      "Script": 0.013,
       "Wallet": 0.058
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.013,
     "Infrastructure": 0.929,
+    "Script": 0.013,
     "Wallet": 0.058
   },
   "p2016_posts": 0.0,
@@ -81,7 +83,7 @@
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
   "global_first_active": "2020-11-13T22:55:20",
-  "global_last_active": "2025-01-22T16:12:29",
+  "global_last_active": "2026-06-02T14:28:46",
   "github_location": "ATX",
   "github_company": "@wayaai ",
   "github_bio": "CTO @ Bird Buddy",
@@ -92,27 +94,27 @@
   "github_url": "https://github.com/mjdietzx",
   "commit_history": {
     "2020": {
-      "GUI (Presentation Layer)": 1.0,
-      "Tests (QA)": 5.0
+      "GUI": 1.0,
+      "Tests": 5.0
     },
     "2021": {
-      "Consensus (Domain Logic)": 0.37,
-      "Core Libs": 2.78,
       "Documentation": 5.17,
-      "Node & RPC (App/Interface)": 1.78,
-      "Tests (QA)": 7.28,
-      "Wallet (Client App)": 1.62
+      "Node & RPC": 1.78,
+      "Script": 0.37,
+      "Tests": 7.28,
+      "Utilities": 2.78,
+      "Wallet": 1.62
     },
     "2023": {
       "Documentation": 0.5,
-      "Tests (QA)": 0.5
+      "Tests": 0.5
     },
     "2024": {
-      "Node & RPC (App/Interface)": 1.0
+      "Node & RPC": 1.0
     },
     "2025": {
       "Documentation": 0.5,
-      "Tests (QA)": 0.5
+      "Tests": 0.5
     }
   }
 }

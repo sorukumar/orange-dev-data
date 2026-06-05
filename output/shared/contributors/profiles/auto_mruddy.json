@@ -18,10 +18,10 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Node & RPC (App/Interface)",
-  "total_commits": 39.0,
-  "authored_commits": 39.0,
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Node & RPC",
+  "total_commits": 41.0,
+  "authored_commits": 41.0,
   "merge_commits": 0.0,
   "total_additions": 770.0,
   "total_deletions": 167.0,
@@ -38,12 +38,14 @@
   "approvals_count": 13.0,
   "p2016_reviews_count": 22.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": "2015-06-22T13:20:20+00:00",
+  "last_review_date": "2022-11-01T01:44:17+00:00",
   "prs_authored": 33.0,
   "avg_pr_ack_velocity_days": 23.387453177609427,
   "avg_concept_lead_time_days": 5.658373842592593,
   "review_reciprocity": 0.8181818181818182,
   "hybrid_score": 0.3126,
-  "p2016_hybrid_score": 0.296,
+  "p2016_hybrid_score": 0.2961,
   "modern_hybrid_score": 0.1032,
   "impact_score": 17.0,
   "p2016_impact_score": 16.0,
@@ -64,15 +66,16 @@
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.125,
-      "Infrastructure": 0.775,
+      "Consensus": 0.135,
+      "Infrastructure": 0.755,
       "Network": 0.05,
+      "Script": 0.01,
       "Wallet": 0.05
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.125,
-    "Infrastructure": 0.775,
+    "Consensus": 0.135,
+    "Infrastructure": 0.755,
     "Network": 0.05,
     "Wallet": 0.05
   },
@@ -94,35 +97,37 @@
   "github_url": "https://github.com/mruddy",
   "commit_history": {
     "2014": {
-      "Consensus (Domain Logic)": 1.0,
-      "Core Libs": 1.0
+      "Consensus": 1.0,
+      "Utilities": 1.0
     },
     "2015": {
-      "Consensus (Domain Logic)": 0.25,
-      "Core Libs": 0.75,
-      "Documentation": 0.75,
-      "Tests (QA)": 0.25
+      "Consensus": 0.2,
+      "Documentation": 0.7,
+      "Script": 0.2,
+      "Tests": 0.2,
+      "Utilities": 0.7
     },
     "2016": {
-      "Core Libs": 1.83,
+      "Consensus": 0.25,
       "Documentation": 2.0,
-      "Node & RPC (App/Interface)": 2.33,
-      "P2P Network (Infrastructure)": 1.0,
-      "Tests (QA)": 0.83
+      "Node & RPC": 2.25,
+      "P2P Network": 1.0,
+      "Tests": 0.75,
+      "Utilities": 1.75
     },
     "2018": {
-      "Build & CI (DevOps)": 0.33,
-      "Core Libs": 0.25,
+      "Build & CI": 0.33,
       "Documentation": 2.08,
-      "Node & RPC (App/Interface)": 2.08,
-      "Tests (QA)": 0.25,
-      "Wallet (Client App)": 1.0
+      "Node & RPC": 2.08,
+      "Tests": 0.25,
+      "Utilities": 0.25,
+      "Wallet": 1.0
     },
     "2022": {
-      "Build & CI (DevOps)": 0.25,
-      "Consensus (Domain Logic)": 1.25,
-      "Node & RPC (App/Interface)": 0.25,
-      "Tests (QA)": 0.25
+      "Build & CI": 0.25,
+      "Consensus": 1.25,
+      "Node & RPC": 0.25,
+      "Tests": 0.25
     }
   }
 }

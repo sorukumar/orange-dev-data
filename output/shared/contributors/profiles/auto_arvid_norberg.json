@@ -18,8 +18,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Consensus (Domain Logic)",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Consensus",
   "total_commits": 6.0,
   "authored_commits": 6.0,
   "merge_commits": 0.0,
@@ -38,6 +38,8 @@
   "approvals_count": 0.0,
   "p2016_reviews_count": 9.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": "2017-07-21T23:18:41+00:00",
+  "last_review_date": "2020-01-14T13:57:15+00:00",
   "prs_authored": 3.0,
   "avg_pr_ack_velocity_days": 0.26562885802469133,
   "avg_concept_lead_time_days": null,
@@ -89,11 +91,11 @@
   "github_url": "https://github.com/arvidn",
   "commit_history": {
     "2018": {
-      "Consensus (Domain Logic)": 1.2,
-      "Core Libs": 0.2,
-      "GUI (Presentation Layer)": 0.2,
-      "Node & RPC (App/Interface)": 0.2,
-      "Tests (QA)": 0.2
+      "Consensus": 1.2,
+      "GUI": 0.2,
+      "Node & RPC": 0.2,
+      "Tests": 0.2,
+      "Utilities": 0.2
     }
   }
 }

@@ -18,10 +18,10 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
+  "last_seen": "2026-06-04T00:00:00",
   "technical_focus": "None",
-  "total_commits": 163.0,
-  "authored_commits": 163.0,
+  "total_commits": 166.0,
+  "authored_commits": 166.0,
   "merge_commits": 0.0,
   "total_additions": 2102.0,
   "total_deletions": 892.0,
@@ -32,19 +32,21 @@
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": 113.23615031940857,
+  "avg_review_latency_days": 113.04780164230962,
   "reviews_count": 227.0,
   "avg_approval_latency_days": 74.31721572382183,
   "approvals_count": 197.0,
   "p2016_reviews_count": 227.0,
   "modern_reviews_count": 219.0,
+  "first_review_date": "2023-03-14T16:51:35+00:00",
+  "last_review_date": "2026-05-29T14:54:50+00:00",
   "prs_authored": 58.0,
   "avg_pr_ack_velocity_days": 20.391767381416503,
   "avg_concept_lead_time_days": 31.02442785493827,
   "review_reciprocity": 3.913793103448276,
-  "hybrid_score": 0.4773,
-  "p2016_hybrid_score": 0.4842,
-  "modern_hybrid_score": 0.5218,
+  "hybrid_score": 0.4778,
+  "p2016_hybrid_score": 0.4848,
+  "modern_hybrid_score": 0.5222,
   "impact_score": 25.0,
   "p2016_impact_score": 25.0,
   "modern_impact_score": 27.0,
@@ -54,7 +56,7 @@
   "delving_threads": 12.0,
   "ml_responses": 4.0,
   "delving_responses": 13.0,
-  "first_active": "2023-12-20T21:33:06.179000",
+  "first_active": null,
   "last_active": "2026-05-17T03:50:00",
   "dev_type": "Builder",
   "expertise_domains": [
@@ -64,10 +66,11 @@
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.184,
-      "Infrastructure": 0.736,
+      "Consensus": 0.066,
+      "Infrastructure": 0.699,
+      "Mempool": 0.157,
       "Network": 0.001,
-      "Wallet": 0.078
+      "Wallet": 0.077
     },
     "discussion": {
       "L2": 0.065,
@@ -76,12 +79,12 @@
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.1105,
-    "Infrastructure": 0.4419,
+    "Consensus": 0.0396,
+    "Infrastructure": 0.4194,
     "L2": 0.026,
-    "Mempool": 0.2441,
-    "Mining": 0.1301,
-    "Wallet": 0.0468
+    "Mempool": 0.3382,
+    "Mining": 0.13,
+    "Wallet": 0.0462
   },
   "p2016_posts": 29.0,
   "modern_posts": 29.0,
@@ -102,39 +105,39 @@
   "delving_url": "https://delvingbitcoin.org/u/ismaelsadeeq",
   "commit_history": {
     "2023": {
-      "Build & CI (DevOps)": 0.75,
-      "Consensus (Domain Logic)": 8.25,
-      "Core Libs": 1.08,
+      "Build & CI": 0.7,
+      "Consensus": 3.65,
       "Documentation": 1.0,
-      "Node & RPC (App/Interface)": 6.75,
-      "Tests (QA)": 16.42,
-      "Wallet (Client App)": 0.75
+      "Mempool": 7.73,
+      "Node & RPC": 3.98,
+      "Tests": 16.15,
+      "Utilities": 1.08,
+      "Wallet": 0.7
     },
     "2024": {
-      "Consensus (Domain Logic)": 1.0,
-      "Core Libs": 0.5,
       "Documentation": 1.0,
-      "Node & RPC (App/Interface)": 6.0,
-      "Tests (QA)": 10.17,
-      "Utilities (Shared Libs)": 1.33,
-      "Wallet (Client App)": 6.0
+      "Mempool": 1.0,
+      "Node & RPC": 6.0,
+      "Tests": 10.17,
+      "Utilities": 1.83,
+      "Wallet": 6.0
     },
     "2025": {
-      "Build & CI (DevOps)": 0.38,
-      "Consensus (Domain Logic)": 4.66,
-      "Core Libs": 1.0,
+      "Build & CI": 0.38,
       "Documentation": 5.0,
-      "GUI (Presentation Layer)": 0.12,
-      "Node & RPC (App/Interface)": 9.41,
-      "P2P Network (Infrastructure)": 0.12,
-      "Tests (QA)": 10.41,
-      "Utilities (Shared Libs)": 0.82,
-      "Wallet (Client App)": 1.07
+      "GUI": 0.12,
+      "Mempool": 4.66,
+      "Node & RPC": 9.41,
+      "P2P Network": 0.12,
+      "Tests": 10.41,
+      "Utilities": 1.82,
+      "Wallet": 1.07
     },
     "2026": {
-      "Consensus (Domain Logic)": 4.5,
-      "Node & RPC (App/Interface)": 1.0,
-      "Utilities (Shared Libs)": 0.5
+      "Consensus": 3.0,
+      "Mempool": 2.5,
+      "Tests": 1.0,
+      "Utilities": 0.5
     }
   },
   "first_message": {

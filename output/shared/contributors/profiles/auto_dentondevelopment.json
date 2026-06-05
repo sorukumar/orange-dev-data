@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
+  "last_seen": "2026-06-04T00:00:00",
   "technical_focus": "code",
   "total_commits": 0.0,
   "authored_commits": 0.0,
@@ -38,12 +38,14 @@
   "approvals_count": null,
   "p2016_reviews_count": null,
   "modern_reviews_count": null,
+  "first_review_date": null,
+  "last_review_date": null,
   "prs_authored": null,
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": null,
   "hybrid_score": 0.3617,
-  "p2016_hybrid_score": 0.0213,
+  "p2016_hybrid_score": 0.0212,
   "modern_hybrid_score": 0.0,
   "impact_score": 20.0,
   "p2016_impact_score": 1.0,
@@ -58,18 +60,20 @@
   "last_active": "2021-02-24T08:02:00",
   "dev_type": "Participant",
   "expertise_domains": [
+    "Script",
     "Wallet"
   ],
   "expertise_by_source": {
     "bips": {
-      "Wallet": 1.0
+      "Script": 1.0
     },
     "discussion": {
       "Wallet": 1.0
     }
   },
   "expertise_domain_scores": {
-    "Wallet": 1.0
+    "Script": 0.7143,
+    "Wallet": 0.2857
   },
   "p2016_posts": 5.0,
   "modern_posts": 0.0,
@@ -91,7 +95,7 @@
       "number": 48,
       "title": "Multi-Script Hierarchy for Multi-Sig Wallets",
       "status": "Deployed",
-      "theme": "Wallet & Keys",
+      "theme": "Script & Smart Contracts",
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0048.mediawiki"
     }
   ],

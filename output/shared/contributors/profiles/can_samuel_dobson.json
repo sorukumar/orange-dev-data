@@ -12,17 +12,21 @@
     "is_sponsored": null,
     "maintainer_status": "emeritus",
     "social_source": "github",
-    "sponsor_id": null
+    "sponsor_id": null,
+    "maintainer_title": "Wallet Maintainer",
+    "maintainer_primary_area": "Wallet",
+    "maintainer_appointed": "2018-12-06",
+    "maintainer_stepped_down": "2021-12-09"
   },
   "roles": [
     "Wallet Maintainer",
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
+  "last_seen": "2026-06-04T00:00:00",
   "technical_focus": "Merge",
-  "total_commits": 384.0,
-  "authored_commits": 206.0,
+  "total_commits": 386.0,
+  "authored_commits": 208.0,
   "merge_commits": 178.0,
   "total_additions": 9368.0,
   "total_deletions": 7803.0,
@@ -39,6 +43,8 @@
   "approvals_count": 597.0,
   "p2016_reviews_count": 732.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": "2017-06-28T13:19:03+00:00",
+  "last_review_date": "2022-02-07T23:29:54+00:00",
   "prs_authored": 76.0,
   "avg_pr_ack_velocity_days": 7.4440962009803915,
   "avg_concept_lead_time_days": 13.756708622685187,
@@ -61,21 +67,24 @@
   "expertise_domains": [
     "Infrastructure",
     "Wallet",
-    "Consensus"
+    "Script"
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.028,
+      "Consensus": 0.011,
       "Cryptography": 0.001,
-      "Infrastructure": 0.709,
-      "Network": 0.003,
+      "Infrastructure": 0.707,
+      "Mempool": 0.002,
+      "Network": 0.002,
+      "Script": 0.016,
       "Wallet": 0.26
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.028,
-    "Infrastructure": 0.7083,
-    "Wallet": 0.2597
+    "Consensus": 0.011,
+    "Infrastructure": 0.7077,
+    "Script": 0.016,
+    "Wallet": 0.2603
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -95,53 +104,54 @@
   "github_url": "https://github.com/meshcollider",
   "commit_history": {
     "2017": {
-      "Build & CI (DevOps)": 1.75,
-      "Consensus (Domain Logic)": 1.52,
-      "Core Libs": 10.8,
-      "Cryptography (Primitives)": 0.1,
-      "Database (Persistence)": 0.1,
+      "Build & CI": 1.75,
+      "Consensus": 1.34,
+      "Cryptography": 0.09,
+      "Database": 0.09,
       "Documentation": 4.83,
-      "GUI (Presentation Layer)": 3.72,
-      "Node & RPC (App/Interface)": 4.55,
-      "P2P Network (Infrastructure)": 0.35,
-      "Tests (QA)": 10.55,
-      "Utilities (Shared Libs)": 0.1,
-      "Wallet (Client App)": 12.63
+      "GUI": 3.71,
+      "Mempool": 0.09,
+      "Node & RPC": 4.54,
+      "P2P Network": 0.34,
+      "Script": 0.26,
+      "Tests": 10.54,
+      "Utilities": 10.79,
+      "Wallet": 12.62
     },
     "2018": {
-      "Consensus (Domain Logic)": 1.0,
       "Documentation": 3.0,
-      "GUI (Presentation Layer)": 0.5,
+      "GUI": 0.5,
       "Merge": 6.0,
-      "Node & RPC (App/Interface)": 1.0,
-      "Tests (QA)": 7.5,
-      "Utilities (Shared Libs)": 1.0,
-      "Wallet (Client App)": 4.0
+      "Node & RPC": 1.0,
+      "Script": 1.0,
+      "Tests": 7.5,
+      "Utilities": 1.0,
+      "Wallet": 4.0
     },
     "2019": {
-      "Consensus (Domain Logic)": 1.0,
-      "Core Libs": 1.5,
       "Documentation": 1.0,
-      "GUI (Presentation Layer)": 1.0,
+      "GUI": 1.0,
       "Merge": 62.0,
-      "Tests (QA)": 3.0,
-      "Utilities (Shared Libs)": 0.5
+      "Script": 1.0,
+      "Tests": 3.0,
+      "Utilities": 2.0
     },
     "2020": {
-      "Core Libs": 1.0,
       "Merge": 64.0,
-      "Tests (QA)": 1.0
+      "Tests": 1.0,
+      "Utilities": 1.0
     },
     "2021": {
-      "Build & CI (DevOps)": 4.2,
-      "Consensus (Domain Logic)": 0.33,
-      "Core Libs": 9.7,
+      "Build & CI": 4.2,
+      "Consensus": 0.25,
       "Documentation": 6.0,
-      "GUI (Presentation Layer)": 2.5,
+      "GUI": 2.5,
+      "Mempool": 0.25,
       "Merge": 46.0,
-      "Node & RPC (App/Interface)": 2.53,
-      "Tests (QA)": 15.2,
-      "Wallet (Client App)": 19.53
+      "Node & RPC": 2.45,
+      "Tests": 15.2,
+      "Utilities": 9.7,
+      "Wallet": 19.45
     }
   }
 }

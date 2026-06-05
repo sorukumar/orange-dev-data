@@ -19,8 +19,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Tests (QA)",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Tests",
   "total_commits": 21.0,
   "authored_commits": 21.0,
   "merge_commits": 0.0,
@@ -33,19 +33,21 @@
   "bips_authored": 2.0,
   "p2016_bips_authored": 2.0,
   "modern_bips_authored": 2.0,
-  "avg_review_latency_days": 1484.8037917768959,
-  "reviews_count": 30.0,
+  "avg_review_latency_days": 1499.022344974181,
+  "reviews_count": 29.0,
   "avg_approval_latency_days": 76.3419201388889,
   "approvals_count": 8.0,
   "p2016_reviews_count": 29.0,
   "modern_reviews_count": 12.0,
-  "prs_authored": 18.0,
-  "avg_pr_ack_velocity_days": 36.03384910300926,
-  "avg_concept_lead_time_days": 50.93259645061729,
-  "review_reciprocity": 1.6666666666666667,
-  "hybrid_score": 0.9784,
-  "p2016_hybrid_score": 1.0687,
-  "modern_hybrid_score": 1.0962,
+  "first_review_date": "2016-08-26T15:20:27+00:00",
+  "last_review_date": "2026-04-30T15:20:05+00:00",
+  "prs_authored": 19.0,
+  "avg_pr_ack_velocity_days": 33.950623638344226,
+  "avg_concept_lead_time_days": 45.90123842592593,
+  "review_reciprocity": 1.5263157894736843,
+  "hybrid_score": 0.9778,
+  "p2016_hybrid_score": 1.0688,
+  "modern_hybrid_score": 1.097,
   "impact_score": 44.0,
   "p2016_impact_score": 47.0,
   "modern_impact_score": 48.0,
@@ -103,30 +105,30 @@
   "delving_url": "https://delvingbitcoin.org/u/ethanheilman",
   "commit_history": {
     "2015": {
-      "Build & CI (DevOps)": 0.33,
-      "P2P Network (Infrastructure)": 0.83,
-      "Tests (QA)": 0.83
+      "Build & CI": 0.33,
+      "P2P Network": 0.83,
+      "Tests": 0.83
     },
     "2016": {
-      "Build & CI (DevOps)": 0.33,
-      "Core Libs": 0.33,
-      "P2P Network (Infrastructure)": 1.17,
-      "Tests (QA)": 3.17
+      "Build & CI": 0.33,
+      "P2P Network": 1.17,
+      "Tests": 3.17,
+      "Utilities": 0.33
     },
     "2018": {
-      "P2P Network (Infrastructure)": 1.0
+      "P2P Network": 1.0
     },
     "2020": {
-      "Core Libs": 1.0
+      "Utilities": 1.0
     },
     "2021": {
-      "Build & CI (DevOps)": 1.0
+      "Build & CI": 1.0
     },
     "2023": {
-      "Build & CI (DevOps)": 1.0
+      "Build & CI": 1.0
     },
     "2025": {
-      "Tests (QA)": 2.0
+      "Tests": 2.0
     }
   },
   "bip_list": [

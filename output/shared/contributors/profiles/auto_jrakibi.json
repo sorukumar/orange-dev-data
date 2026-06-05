@@ -18,8 +18,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Documentation",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Cryptography",
   "total_commits": 3.0,
   "authored_commits": 3.0,
   "merge_commits": 0.0,
@@ -38,16 +38,18 @@
   "approvals_count": 1.0,
   "p2016_reviews_count": 1.0,
   "modern_reviews_count": 1.0,
+  "first_review_date": "2024-07-20T11:34:04+00:00",
+  "last_review_date": "2024-07-20T11:34:04+00:00",
   "prs_authored": 3.0,
   "avg_pr_ack_velocity_days": 11.774864969135804,
   "avg_concept_lead_time_days": 17.652991898148148,
   "review_reciprocity": 0.3333333333333333,
-  "hybrid_score": 0.1086,
-  "p2016_hybrid_score": 0.1086,
-  "modern_hybrid_score": 0.1086,
-  "impact_score": 6.0,
-  "p2016_impact_score": 6.0,
-  "modern_impact_score": 6.0,
+  "hybrid_score": 0.1252,
+  "p2016_hybrid_score": 0.1252,
+  "modern_hybrid_score": 0.1252,
+  "impact_score": 7.0,
+  "p2016_impact_score": 7.0,
+  "modern_impact_score": 7.0,
   "threads_started": 0.0,
   "replies_sent": 0.0,
   "ml_threads": 0.0,
@@ -58,15 +60,18 @@
   "last_active": null,
   "dev_type": "Builder",
   "expertise_domains": [
-    "Infrastructure"
+    "Infrastructure",
+    "Cryptography"
   ],
   "expertise_by_source": {
     "code": {
-      "Infrastructure": 1.0
+      "Cryptography": 0.333,
+      "Infrastructure": 0.667
     }
   },
   "expertise_domain_scores": {
-    "Infrastructure": 1.0
+    "Cryptography": 0.333,
+    "Infrastructure": 0.667
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -87,7 +92,10 @@
   "commit_history": {
     "2024": {
       "Documentation": 1.0,
-      "Tests (QA)": 1.0
+      "Tests": 1.0
+    },
+    "2026": {
+      "Cryptography": 1.0
     }
   }
 }

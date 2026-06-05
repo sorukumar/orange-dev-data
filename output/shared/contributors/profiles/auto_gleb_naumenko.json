@@ -19,8 +19,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "P2P Network (Infrastructure)",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "P2P Network",
   "total_commits": 68.0,
   "authored_commits": 68.0,
   "merge_commits": 0.0,
@@ -39,12 +39,14 @@
   "approvals_count": 266.0,
   "p2016_reviews_count": 312.0,
   "modern_reviews_count": 57.0,
+  "first_review_date": "2018-10-26T23:32:13+00:00",
+  "last_review_date": "2024-11-27T08:34:48+00:00",
   "prs_authored": 29.0,
   "avg_pr_ack_velocity_days": 27.0624751984127,
   "avg_concept_lead_time_days": 42.84460099902534,
   "review_reciprocity": 10.758620689655173,
   "hybrid_score": 0.7902,
-  "p2016_hybrid_score": 0.8008,
+  "p2016_hybrid_score": 0.8007,
   "modern_hybrid_score": 0.1545,
   "impact_score": 38.0,
   "p2016_impact_score": 38.0,
@@ -100,36 +102,35 @@
   "github_url": "https://github.com/naumenkogs",
   "commit_history": {
     "2018": {
-      "Consensus (Domain Logic)": 0.5,
-      "P2P Network (Infrastructure)": 0.5
+      "Consensus": 0.5,
+      "P2P Network": 0.5
     },
     "2019": {
-      "Build & CI (DevOps)": 0.75,
-      "Core Libs": 0.5,
-      "Node & RPC (App/Interface)": 0.75,
-      "P2P Network (Infrastructure)": 3.58,
-      "Tests (QA)": 0.58,
-      "Utilities (Shared Libs)": 0.83
+      "Build & CI": 0.75,
+      "Node & RPC": 0.75,
+      "P2P Network": 3.58,
+      "Tests": 0.58,
+      "Utilities": 1.33
     },
     "2020": {
-      "Build & CI (DevOps)": 0.25,
-      "Core Libs": 0.25,
+      "Build & CI": 0.25,
       "Documentation": 0.25,
-      "P2P Network (Infrastructure)": 10.5,
-      "Tests (QA)": 3.75
+      "P2P Network": 10.5,
+      "Tests": 3.75,
+      "Utilities": 0.25
     },
     "2021": {
-      "Build & CI (DevOps)": 0.5,
-      "Node & RPC (App/Interface)": 1.0,
-      "P2P Network (Infrastructure)": 4.0,
-      "Tests (QA)": 0.5
+      "Build & CI": 0.5,
+      "Node & RPC": 1.0,
+      "P2P Network": 4.0,
+      "Tests": 0.5
     },
     "2022": {
-      "Build & CI (DevOps)": 0.25,
-      "Core Libs": 1.0,
-      "Node & RPC (App/Interface)": 2.42,
-      "P2P Network (Infrastructure)": 1.92,
-      "Tests (QA)": 7.42
+      "Build & CI": 0.25,
+      "Node & RPC": 2.42,
+      "P2P Network": 1.92,
+      "Tests": 7.42,
+      "Utilities": 1.0
     }
   },
   "bip_list": [

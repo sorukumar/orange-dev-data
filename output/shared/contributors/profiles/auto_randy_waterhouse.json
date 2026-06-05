@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
+  "last_seen": "2026-06-04T00:00:00",
   "technical_focus": "other",
   "total_commits": 21.0,
   "authored_commits": 21.0,
@@ -38,6 +38,8 @@
   "approvals_count": 7.0,
   "p2016_reviews_count": 3.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": "2014-08-17T23:12:51+00:00",
+  "last_review_date": "2016-09-22T00:25:55+00:00",
   "prs_authored": 15.0,
   "avg_pr_ack_velocity_days": 4.010990547839506,
   "avg_concept_lead_time_days": 0.006423611111111111,
@@ -91,19 +93,19 @@
   "github_url": "https://github.com/randy-waterhouse",
   "commit_history": {
     "2014": {
-      "Build & CI (DevOps)": 5.0,
-      "Core Libs": 2.5,
+      "Build & CI": 5.0,
       "Documentation": 1.0,
-      "Tests (QA)": 0.5
+      "Tests": 0.5,
+      "Utilities": 2.5
     },
     "2015": {
-      "Build & CI (DevOps)": 1.5,
-      "Core Libs": 1.5
+      "Build & CI": 1.5,
+      "Utilities": 1.5
     },
     "2016": {
-      "Build & CI (DevOps)": 1.0,
-      "Core Libs": 0.5,
-      "Documentation": 0.5
+      "Build & CI": 1.0,
+      "Documentation": 0.5,
+      "Utilities": 0.5
     }
   },
   "first_message": {

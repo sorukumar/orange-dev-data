@@ -18,10 +18,10 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Wallet (Client App)",
-  "total_commits": 10.0,
-  "authored_commits": 10.0,
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Wallet",
+  "total_commits": 11.0,
+  "authored_commits": 11.0,
   "merge_commits": 0.0,
   "total_additions": 63.0,
   "total_deletions": 63.0,
@@ -38,12 +38,14 @@
   "approvals_count": 0.0,
   "p2016_reviews_count": 0.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": null,
+  "last_review_date": null,
   "prs_authored": 4.0,
   "avg_pr_ack_velocity_days": 0.21344328703703702,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 0.0,
   "hybrid_score": 0.103,
-  "p2016_hybrid_score": 0.1028,
+  "p2016_hybrid_score": 0.103,
   "modern_hybrid_score": 0.0396,
   "impact_score": 6.0,
   "p2016_impact_score": 6.0,
@@ -64,17 +66,19 @@
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.055,
-      "Cryptography": 0.055,
-      "Infrastructure": 0.332,
-      "Wallet": 0.558
+      "Consensus": 0.05,
+      "Cryptography": 0.05,
+      "Infrastructure": 0.3,
+      "Mempool": 0.05,
+      "Wallet": 0.55
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.055,
-    "Cryptography": 0.055,
-    "Infrastructure": 0.332,
-    "Wallet": 0.558
+    "Consensus": 0.05,
+    "Cryptography": 0.05,
+    "Infrastructure": 0.3,
+    "Mempool": 0.05,
+    "Wallet": 0.55
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -94,18 +98,19 @@
   "github_url": "https://github.com/dimitris-t",
   "commit_history": {
     "2017": {
-      "Consensus (Domain Logic)": 0.11,
-      "Core Libs": 0.11,
-      "Cryptography (Primitives)": 0.11,
-      "Database (Persistence)": 0.11,
-      "Documentation": 0.11,
-      "GUI (Presentation Layer)": 0.11,
-      "Node & RPC (App/Interface)": 0.11,
-      "Tests (QA)": 0.11,
-      "Wallet (Client App)": 0.11
+      "Consensus": 0.1,
+      "Cryptography": 0.1,
+      "Database": 0.1,
+      "Documentation": 0.1,
+      "GUI": 0.1,
+      "Mempool": 0.1,
+      "Node & RPC": 0.1,
+      "Tests": 0.1,
+      "Utilities": 0.1,
+      "Wallet": 0.1
     },
     "2022": {
-      "Wallet (Client App)": 1.0
+      "Wallet": 1.0
     }
   }
 }

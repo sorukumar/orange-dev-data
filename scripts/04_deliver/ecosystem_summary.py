@@ -8,38 +8,20 @@ BIPS_INPUT = "output/tracker/bips_ui.json"
 SOCIAL_THREADS_INPUT = "data/enriched/social_threads.parquet"
 CONTRIBUTORS_UNIFIED_INPUT = "data/enriched/contributors_unified.parquet"
 OUTPUT_FILE = "output/shared/ecosystem_summary.json"
+SUBSYSTEMS_INPUT = "metadata/subsystems.json"
 
-# Human-readable labels for discussion categories (matches THEME_MAPPING in visualization.js)
-CATEGORY_LABELS = {
-    'quantum':            'Quantum Resistance',
-    'covenants':          'Covenants & Vaults',
-    'taproot':            'Taproot',
-    'mining':             'Mining Protocol',
-    'mempool-fees':       'Mempool & Fees',
-    'privacy':            'Privacy',
-    'lightning':          'Lightning / L2',
-    'bitvm':              'BitVM',
-    'p2p-network':        'P2P Network',
-    'bip-process':        'BIP Process',
-    'testing-devtools':   'Dev Tooling',
-    'soft-fork-activation': 'Soft Fork Activation',
-    'segwit':             'SegWit',
-    'script-opcodes':     'Script & Opcodes',
-    'ecash':              'eCash',
-    'silent-payments':    'Silent Payments',
-    'signatures-sighash': 'Signatures & Sighash',
-    'scaling':            'Scaling',
-    'spam-filtering':     'Spam Filtering',
-    'utxo-sync':          'UTXO & Sync',
-    'payment-protocol':   'Payment Protocol',
-    'vaults':             'Vaults',
-    'dlc':                'DLCs',
-    'atomic-swaps':       'Atomic Swaps',
-    'multisig-threshold': 'Multisig',
-    'wallet-keys':        'Wallet & Keys',
-    'core-dev':           'Core Dev',
-    'nostr':              'Nostr',
-}
+def _load_category_labels() -> dict:
+    """Load human-readable labels from subsystems.json (single source of truth).
+    Falls back to the slug itself if the file is missing.
+    """
+    if not os.path.exists(SUBSYSTEMS_INPUT):
+        return {}
+    with open(SUBSYSTEMS_INPUT) as f:
+        subsystems = json.load(f)
+    return {slug: data.get("name", slug) for slug, data in subsystems.items()}
+
+# Populated at module load; keyed by subsystem slug → human-readable label.
+CATEGORY_LABELS = _load_category_labels()
 
 def generate_ecosystem_summary():
     print("Generating Ecosystem Summary (Pure Python)...")

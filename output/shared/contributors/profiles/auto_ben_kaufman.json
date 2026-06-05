@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
+  "last_seen": "2026-06-04T00:00:00",
   "technical_focus": "Documentation",
   "total_commits": 1.0,
   "authored_commits": 1.0,
@@ -38,6 +38,8 @@
   "approvals_count": 2.0,
   "p2016_reviews_count": 3.0,
   "modern_reviews_count": 2.0,
+  "first_review_date": "2021-09-12T16:32:38+00:00",
+  "last_review_date": "2025-05-15T22:43:35+00:00",
   "prs_authored": 5.0,
   "avg_pr_ack_velocity_days": 1.363833912037037,
   "avg_concept_lead_time_days": 1.1939872685185184,
@@ -48,42 +50,42 @@
   "impact_score": 6.0,
   "p2016_impact_score": 6.0,
   "modern_impact_score": 4.0,
-  "threads_started": 2.0,
+  "threads_started": 3.0,
   "replies_sent": 0.0,
   "ml_threads": 0.0,
-  "delving_threads": 2.0,
+  "delving_threads": 3.0,
   "ml_responses": 0.0,
   "delving_responses": 0.0,
-  "first_active": "2025-05-04T06:43:00.108000",
-  "last_active": "2025-05-04T17:23:24.207000",
+  "first_active": null,
+  "last_active": null,
   "dev_type": "Builder",
   "expertise_domains": [
     "Infrastructure",
     "Wallet",
-    "Privacy"
+    "Script"
   ],
   "expertise_by_source": {
     "code": {
       "Infrastructure": 1.0
     },
     "discussion": {
-      "Privacy": 0.25,
+      "Script": 0.25,
       "Wallet": 0.75
     }
   },
   "expertise_domain_scores": {
     "Infrastructure": 0.6,
-    "Privacy": 0.1,
+    "Script": 0.1,
     "Wallet": 0.3
   },
-  "p2016_posts": 2.0,
-  "modern_posts": 2.0,
+  "p2016_posts": 3.0,
+  "modern_posts": 3.0,
   "p2016_ml_posts": 0.0,
-  "p2016_delving_posts": 2.0,
+  "p2016_delving_posts": 3.0,
   "modern_ml_posts": 0.0,
-  "modern_delving_posts": 2.0,
+  "modern_delving_posts": 3.0,
   "global_first_active": "2021-01-23T08:01:31",
-  "global_last_active": "2025-05-04T17:23:24.207000064",
+  "global_last_active": "2021-01-23T08:01:31",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -106,15 +108,19 @@
   },
   "last_message": {
     "source": "delving",
-    "subject": "Re: Avoiding xpub+derivation reuse across wallets, in a UX-friendly manner",
-    "date": "2025-05-04",
-    "link": "https://delvingbitcoin.org/t/avoiding-xpub-derivation-reuse-across-wallets-in-a-ux-friendly-manner/1644/5"
+    "subject": "Re: QR-based signing flow payloads in Miniscript context",
+    "date": "2026-05-29",
+    "link": "https://delvingbitcoin.org/t/qr-based-signing-flow-payloads-in-miniscript-context/2464/5"
   },
   "social_history": {
     "2025": {
       "multisig-threshold": 2,
       "privacy": 2,
       "wallet-keys": 2
+    },
+    "2026": {
+      "mempool-fees": 1,
+      "script-opcodes": 1
     }
   }
 }

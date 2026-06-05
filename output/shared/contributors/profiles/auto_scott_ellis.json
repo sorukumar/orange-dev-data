@@ -18,8 +18,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "GUI (Presentation Layer)",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "GUI",
   "total_commits": 17.0,
   "authored_commits": 17.0,
   "merge_commits": 0.0,
@@ -38,6 +38,8 @@
   "approvals_count": 0.0,
   "p2016_reviews_count": 0.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": "2012-02-17T13:33:57+00:00",
+  "last_review_date": "2012-02-18T12:52:35+00:00",
   "prs_authored": 8.0,
   "avg_pr_ack_velocity_days": 254.1823759920635,
   "avg_concept_lead_time_days": null,
@@ -89,21 +91,21 @@
   "github_url": "https://github.com/sje397",
   "commit_history": {
     "2011": {
-      "Build & CI (DevOps)": 0.25,
-      "Core Libs": 0.25,
+      "Build & CI": 0.25,
       "Documentation": 0.25,
-      "GUI (Presentation Layer)": 0.25
+      "GUI": 0.25,
+      "Utilities": 0.25
     },
     "2012": {
-      "Core Libs": 1.33,
       "Documentation": 0.33,
-      "GUI (Presentation Layer)": 3.33
+      "GUI": 3.33,
+      "Utilities": 1.33
     },
     "2013": {
-      "Build & CI (DevOps)": 0.25,
-      "Core Libs": 0.25,
-      "GUI (Presentation Layer)": 0.25,
-      "P2P Network (Infrastructure)": 0.25
+      "Build & CI": 0.25,
+      "GUI": 0.25,
+      "P2P Network": 0.25,
+      "Utilities": 0.25
     }
   }
 }

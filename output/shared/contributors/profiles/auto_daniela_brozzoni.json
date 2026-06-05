@@ -18,8 +18,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "P2P Network (Infrastructure)",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "P2P Network",
   "total_commits": 23.0,
   "authored_commits": 23.0,
   "merge_commits": 0.0,
@@ -32,19 +32,21 @@
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": 277.36266093474427,
-  "reviews_count": 102.0,
-  "avg_approval_latency_days": 152.5028981906218,
-  "approvals_count": 88.0,
-  "p2016_reviews_count": 102.0,
-  "modern_reviews_count": 91.0,
+  "avg_review_latency_days": 302.54155054267846,
+  "reviews_count": 105.0,
+  "avg_approval_latency_days": 151.29208964646463,
+  "approvals_count": 89.0,
+  "p2016_reviews_count": 105.0,
+  "modern_reviews_count": 94.0,
+  "first_review_date": "2022-03-08T14:24:20+00:00",
+  "last_review_date": "2026-06-03T17:12:35+00:00",
   "prs_authored": 9.0,
   "avg_pr_ack_velocity_days": 7.928420138888889,
   "avg_concept_lead_time_days": 10.603233796296298,
-  "review_reciprocity": 11.333333333333334,
-  "hybrid_score": 0.3287,
-  "p2016_hybrid_score": 0.3287,
-  "modern_hybrid_score": 0.3171,
+  "review_reciprocity": 11.666666666666666,
+  "hybrid_score": 0.3297,
+  "p2016_hybrid_score": 0.3297,
+  "modern_hybrid_score": 0.3182,
   "impact_score": 18.0,
   "p2016_impact_score": 18.0,
   "modern_impact_score": 17.0,
@@ -92,18 +94,18 @@
   "github_url": "https://github.com/danielabrozzoni",
   "commit_history": {
     "2022": {
-      "Tests (QA)": 2.0
+      "Tests": 2.0
     },
     "2024": {
       "Documentation": 2.0
     },
     "2025": {
-      "Consensus (Domain Logic)": 1.83,
-      "Core Libs": 2.17,
+      "Consensus": 1.83,
       "Documentation": 0.5,
-      "Node & RPC (App/Interface)": 0.33,
-      "P2P Network (Infrastructure)": 3.5,
-      "Tests (QA)": 2.67
+      "Node & RPC": 0.33,
+      "P2P Network": 3.5,
+      "Tests": 2.67,
+      "Utilities": 2.17
     }
   }
 }

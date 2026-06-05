@@ -119,7 +119,7 @@ def extract_network():
     # Load expertise domain definitions (single source of truth for domain metadata).
     EXPERTISE_DOMAINS_PATH = 'metadata/expertise_domains.json'
     expertise_domains_def = []
-    commit_cat_to_domain = {}   # "Tests (QA)" → "Infrastructure"
+    commit_cat_to_domain = {}   # e.g. "Script" → "Script", "Tests" → "Infrastructure"
     bip_theme_to_domain = {}    # "Consensus & Soft Forks" → "Consensus"
     if os.path.exists(EXPERTISE_DOMAINS_PATH):
         with open(EXPERTISE_DOMAINS_PATH) as _f:
@@ -792,20 +792,39 @@ def extract_network():
             for node in members:
                 node_to_community[node] = cid
 
-    # Label each community by majority theme of its members.
-    community_topic_votes: dict = {}
+    # Label each community by the dominant discussion category of its members.
+    # Social clusters should reflect what the group is talking about, not just
+    # the primary expertise domain of each person.
+    def get_social_label(category_slug):
+        if not category_slug or category_slug == 'other':
+            return 'Social Community'
+        entry = sub_resolver.subsystems.get(category_slug, {})
+        return entry.get('name') or category_slug.replace('-', ' ').title()
+
+    community_category_votes: dict = {}
     for n in visible_nodes:
         cid = node_to_community.get(n['id'], -1)
-        # Use synthesized expertise_domains[0] if available; fall back to top_category slug → domain.
-        theme = (n.get('expertise_domains') or [None])[0]
-        if not theme:
-            raw_topic = n.get('top_category', 'other')
-            theme = sub_resolver.get_expertise_domain(raw_topic) if raw_topic not in ('other', 'code') else 'Ecosystem'
-        community_topic_votes.setdefault(cid, Counter())[theme] += 1
-    community_labels = {
-        cid: votes.most_common(1)[0][0]
-        for cid, votes in community_topic_votes.items()
-    }
+        counts = node_metadata.get(n['id'], {}).get('categories', Counter())
+        if counts:
+            for topic, weight in counts.items():
+                community_category_votes.setdefault(cid, Counter())[topic] += weight
+        else:
+            topic = n.get('top_category', 'other')
+            community_category_votes.setdefault(cid, Counter())[topic] += 1
+
+    community_labels = {}
+    for cid, votes in community_category_votes.items():
+        if not votes:
+            community_labels[cid] = 'Social Community'
+            continue
+
+        topic, _ = votes.most_common(1)[0]
+        if topic == 'other':
+            non_other = [(t, c) for t, c in votes.items() if t != 'other']
+            if non_other:
+                topic = sorted(non_other, key=lambda x: -x[1])[0][0]
+
+        community_labels[cid] = get_social_label(topic)
 
     # Seed spring_layout with community-aware initial positions so the solver
     # starts with clusters already pre-separated — this biases the layout toward

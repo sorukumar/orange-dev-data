@@ -19,8 +19,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Consensus (Domain Logic)",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Consensus",
   "total_commits": 3.0,
   "authored_commits": 3.0,
   "merge_commits": 0.0,
@@ -39,16 +39,18 @@
   "approvals_count": 3.0,
   "p2016_reviews_count": 10.0,
   "modern_reviews_count": 0.0,
-  "prs_authored": 14.0,
+  "first_review_date": "2017-03-19T19:22:32+00:00",
+  "last_review_date": "2020-06-24T15:00:53+00:00",
+  "prs_authored": 16.0,
   "avg_pr_ack_velocity_days": 0.022291666666666668,
   "avg_concept_lead_time_days": null,
-  "review_reciprocity": 0.7142857142857143,
-  "hybrid_score": 0.8728,
-  "p2016_hybrid_score": 0.8991,
-  "modern_hybrid_score": 0.075,
+  "review_reciprocity": 0.625,
+  "hybrid_score": 0.8747,
+  "p2016_hybrid_score": 0.901,
+  "modern_hybrid_score": 0.0792,
   "impact_score": 41.0,
   "p2016_impact_score": 42.0,
-  "modern_impact_score": 4.0,
+  "modern_impact_score": 5.0,
   "threads_started": 6.0,
   "replies_sent": 10.0,
   "ml_threads": 6.0,
@@ -100,9 +102,9 @@
   "github_url": "https://github.com/shaolinfry",
   "commit_history": {
     "2017": {
-      "Consensus (Domain Logic)": 0.33,
-      "Node & RPC (App/Interface)": 0.33,
-      "Tests (QA)": 0.33
+      "Consensus": 0.33,
+      "Node & RPC": 0.33,
+      "Tests": 0.33
     }
   },
   "bip_list": [

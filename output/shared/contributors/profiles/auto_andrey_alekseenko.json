@@ -16,7 +16,7 @@
   },
   "roles": [],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
+  "last_seen": "2026-06-04T00:00:00",
   "technical_focus": "Core Libs",
   "total_commits": 4.0,
   "authored_commits": 4.0,
@@ -36,6 +36,8 @@
   "approvals_count": 0.0,
   "p2016_reviews_count": 0.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": null,
+  "last_review_date": null,
   "prs_authored": 3.0,
   "avg_pr_ack_velocity_days": 57.58454861111111,
   "avg_concept_lead_time_days": null,
@@ -84,9 +86,9 @@
   "github_url": "https://github.com/al42and",
   "commit_history": {
     "2012": {
-      "Core Libs": 1.5,
-      "GUI (Presentation Layer)": 1.0,
-      "Tests (QA)": 0.5
+      "GUI": 1.0,
+      "Tests": 0.5,
+      "Utilities": 1.5
     }
   }
 }

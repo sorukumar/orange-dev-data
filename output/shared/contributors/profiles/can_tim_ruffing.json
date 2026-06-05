@@ -19,8 +19,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Documentation",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Utilities",
   "total_commits": 14.0,
   "authored_commits": 14.0,
   "merge_commits": 0.0,
@@ -33,19 +33,21 @@
   "bips_authored": 3.0,
   "p2016_bips_authored": 3.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": 1194.237175525285,
-  "reviews_count": 102.0,
+  "avg_review_latency_days": 1189.6673886494252,
+  "reviews_count": 103.0,
   "avg_approval_latency_days": 1000.9090772537648,
   "approvals_count": 59.0,
-  "p2016_reviews_count": 102.0,
-  "modern_reviews_count": 55.0,
+  "p2016_reviews_count": 103.0,
+  "modern_reviews_count": 56.0,
+  "first_review_date": "2018-08-05T00:31:52+00:00",
+  "last_review_date": "2026-06-01T09:48:59+00:00",
   "prs_authored": 18.0,
   "avg_pr_ack_velocity_days": 1.6427713477366257,
   "avg_concept_lead_time_days": 0.7549614197530864,
-  "review_reciprocity": 5.666666666666667,
-  "hybrid_score": 1.0996,
-  "p2016_hybrid_score": 1.1479,
-  "modern_hybrid_score": 0.4267,
+  "review_reciprocity": 5.722222222222222,
+  "hybrid_score": 1.0999,
+  "p2016_hybrid_score": 1.1482,
+  "modern_hybrid_score": 0.4262,
   "impact_score": 48.0,
   "p2016_impact_score": 50.0,
   "modern_impact_score": 23.0,
@@ -56,7 +58,7 @@
   "ml_responses": 57.0,
   "delving_responses": 7.0,
   "first_active": "2014-08-06T17:22:31",
-  "last_active": "2026-02-27T10:52:17.147000",
+  "last_active": null,
   "dev_type": "Protocol Designer",
   "expertise_domains": [
     "Infrastructure",
@@ -92,7 +94,7 @@
   "modern_ml_posts": 16.0,
   "modern_delving_posts": 12.0,
   "global_first_active": "2014-08-06T17:22:31",
-  "global_last_active": "2026-02-27T10:52:17.147000064",
+  "global_last_active": "2025-10-23T12:20:17",
   "github_location": "Germany",
   "github_company": null,
   "github_bio": "full-stack cryptographer",
@@ -104,24 +106,24 @@
   "delving_url": "https://delvingbitcoin.org/u/real-or-random",
   "commit_history": {
     "2018": {
-      "Core Libs": 0.33,
-      "GUI (Presentation Layer)": 1.33,
-      "Node & RPC (App/Interface)": 0.33,
-      "Wallet (Client App)": 2.0
+      "GUI": 1.33,
+      "Node & RPC": 0.33,
+      "Utilities": 0.33,
+      "Wallet": 2.0
     },
     "2019": {
-      "Utilities (Shared Libs)": 2.0
+      "Utilities": 2.0
     },
     "2021": {
       "Documentation": 1.0
     },
     "2023": {
       "Documentation": 1.0,
-      "P2P Network (Infrastructure)": 1.5,
-      "Tests (QA)": 0.5
+      "P2P Network": 1.5,
+      "Tests": 0.5
     },
     "2025": {
-      "Tests (QA)": 1.0
+      "Tests": 1.0
     }
   },
   "bip_list": [

@@ -18,10 +18,10 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "GUI (Presentation Layer)",
-  "total_commits": 11.0,
-  "authored_commits": 11.0,
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "GUI",
+  "total_commits": 10.0,
+  "authored_commits": 10.0,
   "merge_commits": 0.0,
   "total_additions": 25.0,
   "total_deletions": 16.0,
@@ -38,12 +38,14 @@
   "approvals_count": 3.0,
   "p2016_reviews_count": 0.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": "2015-03-08T13:11:16+00:00",
+  "last_review_date": "2015-03-14T05:33:07+00:00",
   "prs_authored": 9.0,
   "avg_pr_ack_velocity_days": 0.05784027777777778,
   "avg_concept_lead_time_days": 0.00866898148148148,
   "review_reciprocity": 0.3333333333333333,
   "hybrid_score": 0.1895,
-  "p2016_hybrid_score": 0.1253,
+  "p2016_hybrid_score": 0.1249,
   "modern_hybrid_score": 0.0615,
   "impact_score": 11.0,
   "p2016_impact_score": 7.0,
@@ -59,17 +61,20 @@
   "dev_type": "Builder",
   "expertise_domains": [
     "Infrastructure",
-    "Cryptography"
+    "Cryptography",
+    "Mempool"
   ],
   "expertise_by_source": {
     "code": {
-      "Cryptography": 0.028,
-      "Infrastructure": 0.972
+      "Cryptography": 0.033,
+      "Infrastructure": 0.933,
+      "Mempool": 0.033
     }
   },
   "expertise_domain_scores": {
-    "Cryptography": 0.028,
-    "Infrastructure": 0.972
+    "Cryptography": 0.033,
+    "Infrastructure": 0.9339,
+    "Mempool": 0.033
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -89,16 +94,15 @@
   "github_url": "https://github.com/fsb4000",
   "commit_history": {
     "2015": {
-      "Core Libs": 2.0,
-      "GUI (Presentation Layer)": 2.0
+      "GUI": 2.0,
+      "Utilities": 2.0
     },
     "2016": {
-      "Core Libs": 0.17,
-      "Cryptography (Primitives)": 0.17,
-      "GUI (Presentation Layer)": 1.17,
-      "Node & RPC (App/Interface)": 0.17,
-      "Tests (QA)": 0.17,
-      "Utilities (Shared Libs)": 0.17
+      "Cryptography": 0.2,
+      "GUI": 1.2,
+      "Mempool": 0.2,
+      "Tests": 0.2,
+      "Utilities": 0.2
     }
   }
 }

@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
+  "last_seen": "2026-06-04T00:00:00",
   "technical_focus": "Documentation",
   "total_commits": 16.0,
   "authored_commits": 16.0,
@@ -38,6 +38,8 @@
   "approvals_count": 4.0,
   "p2016_reviews_count": 7.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": "2019-01-19T08:08:46+00:00",
+  "last_review_date": "2021-01-22T12:09:19+00:00",
   "prs_authored": 13.0,
   "avg_pr_ack_velocity_days": 0.46482060185185187,
   "avg_concept_lead_time_days": 0.4741377314814815,
@@ -60,20 +62,24 @@
   "expertise_domains": [
     "Infrastructure",
     "Consensus",
-    "Network"
+    "Mempool"
   ],
   "expertise_by_source": {
     "code": {
       "Consensus": 0.017,
-      "Infrastructure": 0.948,
+      "Infrastructure": 0.914,
+      "Mempool": 0.017,
       "Network": 0.017,
+      "Script": 0.017,
       "Wallet": 0.017
     }
   },
   "expertise_domain_scores": {
     "Consensus": 0.017,
-    "Infrastructure": 0.9489,
+    "Infrastructure": 0.9149,
+    "Mempool": 0.017,
     "Network": 0.017,
+    "Script": 0.017,
     "Wallet": 0.017
   },
   "p2016_posts": 0.0,
@@ -94,26 +100,26 @@
   "github_url": "https://github.com/rex4539",
   "commit_history": {
     "2018": {
-      "Consensus (Domain Logic)": 0.12,
-      "Core Libs": 0.12,
+      "Consensus": 0.12,
       "Documentation": 3.0,
-      "GUI (Presentation Layer)": 0.12,
-      "Node & RPC (App/Interface)": 0.12,
-      "P2P Network (Infrastructure)": 0.12,
-      "Tests (QA)": 0.12,
-      "Utilities (Shared Libs)": 0.12,
-      "Wallet (Client App)": 0.12
+      "GUI": 0.12,
+      "Mempool": 0.12,
+      "P2P Network": 0.12,
+      "Script": 0.12,
+      "Tests": 0.12,
+      "Utilities": 0.12,
+      "Wallet": 0.12
     },
     "2019": {
-      "Build & CI (DevOps)": 0.5,
+      "Build & CI": 0.5,
       "Documentation": 0.5
     },
     "2021": {
-      "Build & CI (DevOps)": 0.5,
-      "Tests (QA)": 0.5
+      "Build & CI": 0.5,
+      "Tests": 0.5
     },
     "2022": {
-      "Build & CI (DevOps)": 1.0
+      "Build & CI": 1.0
     }
   }
 }

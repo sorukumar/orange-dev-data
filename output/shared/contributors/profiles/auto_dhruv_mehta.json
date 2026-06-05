@@ -19,8 +19,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Tests (QA)",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Tests",
   "total_commits": 43.0,
   "authored_commits": 43.0,
   "merge_commits": 0.0,
@@ -39,6 +39,8 @@
   "approvals_count": 20.0,
   "p2016_reviews_count": 32.0,
   "modern_reviews_count": 1.0,
+  "first_review_date": "2020-08-18T22:28:29+00:00",
+  "last_review_date": "2023-09-20T11:44:55+00:00",
   "prs_authored": 24.0,
   "avg_pr_ack_velocity_days": 10.208455504115227,
   "avg_concept_lead_time_days": 13.579748456790123,
@@ -95,28 +97,28 @@
   "github_url": "https://github.com/dhruv",
   "commit_history": {
     "2020": {
-      "Build & CI (DevOps)": 0.5,
-      "Core Libs": 1.5,
-      "Node & RPC (App/Interface)": 0.67,
-      "P2P Network (Infrastructure)": 0.67,
-      "Tests (QA)": 3.67
+      "Build & CI": 0.5,
+      "Node & RPC": 0.67,
+      "P2P Network": 0.67,
+      "Tests": 3.67,
+      "Utilities": 1.5
     },
     "2021": {
-      "Build & CI (DevOps)": 2.0,
-      "Consensus (Domain Logic)": 2.83,
-      "Cryptography (Primitives)": 0.5,
-      "Node & RPC (App/Interface)": 1.17,
-      "P2P Network (Infrastructure)": 1.83,
-      "Tests (QA)": 7.67
+      "Build & CI": 2.0,
+      "Consensus": 2.83,
+      "Cryptography": 0.5,
+      "Node & RPC": 1.17,
+      "P2P Network": 1.83,
+      "Tests": 7.67
     },
     "2022": {
-      "Build & CI (DevOps)": 1.0,
-      "Core Libs": 0.5,
-      "P2P Network (Infrastructure)": 0.5,
-      "Tests (QA)": 1.0
+      "Build & CI": 1.0,
+      "P2P Network": 0.5,
+      "Tests": 1.0,
+      "Utilities": 0.5
     },
     "2023": {
-      "Tests (QA)": 1.0
+      "Tests": 1.0
     }
   }
 }

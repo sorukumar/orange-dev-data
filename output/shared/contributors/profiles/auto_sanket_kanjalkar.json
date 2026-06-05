@@ -19,8 +19,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Consensus (Domain Logic)",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Tests",
   "total_commits": 6.0,
   "authored_commits": 6.0,
   "merge_commits": 0.0,
@@ -39,13 +39,15 @@
   "approvals_count": 16.0,
   "p2016_reviews_count": 24.0,
   "modern_reviews_count": 3.0,
+  "first_review_date": "2018-10-23T07:15:37+00:00",
+  "last_review_date": "2024-06-16T22:31:32+00:00",
   "prs_authored": 12.0,
   "avg_pr_ack_velocity_days": 124.43330687830687,
   "avg_concept_lead_time_days": 2.968283179012346,
   "review_reciprocity": 2.0,
   "hybrid_score": 0.5946,
   "p2016_hybrid_score": 0.6011,
-  "modern_hybrid_score": 0.4931,
+  "modern_hybrid_score": 0.4933,
   "impact_score": 30.0,
   "p2016_impact_score": 30.0,
   "modern_impact_score": 26.0,
@@ -56,20 +58,21 @@
   "ml_responses": 6.0,
   "delving_responses": 3.0,
   "first_active": "2020-12-10T05:28:23",
-  "last_active": "2025-08-15T05:09:15.910000",
+  "last_active": null,
   "dev_type": "Builder",
   "expertise_domains": [
-    "Wallet",
-    "Consensus",
-    "Infrastructure"
+    "Script",
+    "Infrastructure",
+    "Mempool"
   ],
   "expertise_by_source": {
     "bips": {
-      "Wallet": 1.0
+      "Script": 1.0
     },
     "code": {
-      "Consensus": 0.5,
-      "Infrastructure": 0.5
+      "Infrastructure": 0.5,
+      "Mempool": 0.167,
+      "Script": 0.333
     },
     "discussion": {
       "Consensus": 0.19,
@@ -78,11 +81,11 @@
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.188,
+    "Consensus": 0.038,
     "Cryptography": 0.0428,
     "Infrastructure": 0.15,
-    "Script": 0.119,
-    "Wallet": 0.5001
+    "Mempool": 0.0501,
+    "Script": 0.719
   },
   "p2016_posts": 17.0,
   "modern_posts": 15.0,
@@ -91,7 +94,7 @@
   "modern_ml_posts": 4.0,
   "modern_delving_posts": 11.0,
   "global_first_active": "2018-09-15T09:32:12",
-  "global_last_active": "2025-08-15T05:09:15.910000128",
+  "global_last_active": "2021-07-11T08:59:27",
   "github_location": "Seattle, WA",
   "github_company": "Blockstream",
   "github_bio": "Bitcoin minimalist. Bitcoin @squareup ",
@@ -103,14 +106,15 @@
   "delving_url": "https://delvingbitcoin.org/u/sanket1729",
   "commit_history": {
     "2018": {
-      "Tests (QA)": 1.0
+      "Tests": 1.0
     },
     "2020": {
-      "Consensus (Domain Logic)": 2.0,
-      "Tests (QA)": 2.0
+      "Mempool": 1.0,
+      "Script": 1.0,
+      "Tests": 2.0
     },
     "2021": {
-      "Consensus (Domain Logic)": 1.0
+      "Script": 1.0
     }
   },
   "bip_list": [
@@ -118,7 +122,7 @@
       "number": 379,
       "title": "Miniscript",
       "status": "Draft",
-      "theme": "Wallet & Keys",
+      "theme": "Script & Smart Contracts",
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0379.mediawiki"
     }
   ],

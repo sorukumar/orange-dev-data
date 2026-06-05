@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
+  "last_seen": "2026-06-04T00:00:00",
   "technical_focus": "Documentation",
   "total_commits": 16.0,
   "authored_commits": 16.0,
@@ -38,6 +38,8 @@
   "approvals_count": 8.0,
   "p2016_reviews_count": 26.0,
   "modern_reviews_count": 1.0,
+  "first_review_date": "2015-08-25T15:54:56+00:00",
+  "last_review_date": "2024-02-13T21:25:13+00:00",
   "prs_authored": 18.0,
   "avg_pr_ack_velocity_days": 5.737404927248677,
   "avg_concept_lead_time_days": 14.754984567901234,
@@ -94,21 +96,21 @@
   "github_url": "https://github.com/droark",
   "commit_history": {
     "2014": {
-      "GUI (Presentation Layer)": 1.0
+      "GUI": 1.0
     },
     "2016": {
-      "Build & CI (DevOps)": 2.0,
-      "Core Libs": 1.0,
+      "Build & CI": 2.0,
       "Documentation": 2.0,
-      "Tests (QA)": 1.0
+      "Tests": 1.0,
+      "Utilities": 1.0
     },
     "2017": {
-      "Core Libs": 0.5,
       "Documentation": 0.5,
-      "P2P Network (Infrastructure)": 1.0
+      "P2P Network": 1.0,
+      "Utilities": 0.5
     },
     "2018": {
-      "Build & CI (DevOps)": 2.0
+      "Build & CI": 2.0
     },
     "2019": {
       "Documentation": 2.0

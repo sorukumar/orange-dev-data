@@ -19,8 +19,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Core Libs",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Utilities",
   "total_commits": 160.0,
   "authored_commits": 160.0,
   "merge_commits": 0.0,
@@ -39,12 +39,14 @@
   "approvals_count": 49.0,
   "p2016_reviews_count": 90.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": "2017-08-17T19:33:18+00:00",
+  "last_review_date": "2020-05-27T21:07:06+00:00",
   "prs_authored": 29.0,
   "avg_pr_ack_velocity_days": 12.9543359375,
   "avg_concept_lead_time_days": 9.54938425925926,
   "review_reciprocity": 3.103448275862069,
   "hybrid_score": 0.831,
-  "p2016_hybrid_score": 0.8749,
+  "p2016_hybrid_score": 0.8747,
   "modern_hybrid_score": 0.0989,
   "impact_score": 39.0,
   "p2016_impact_score": 41.0,
@@ -68,10 +70,12 @@
       "Infrastructure": 1.0
     },
     "code": {
-      "Consensus": 0.08,
+      "Consensus": 0.051,
       "Cryptography": 0.002,
-      "Infrastructure": 0.854,
-      "Network": 0.06,
+      "Infrastructure": 0.851,
+      "Mempool": 0.003,
+      "Network": 0.059,
+      "Script": 0.029,
       "Wallet": 0.005
     },
     "discussion": {
@@ -80,10 +84,10 @@
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.024,
-    "Infrastructure": 0.756,
+    "Consensus": 0.0153,
+    "Infrastructure": 0.7553,
     "L2": 0.0632,
-    "Network": 0.1548
+    "Network": 0.1545
   },
   "p2016_posts": 35.0,
   "modern_posts": 0.0,
@@ -103,41 +107,42 @@
   "github_url": "https://github.com/jimpo",
   "commit_history": {
     "2017": {
-      "Build & CI (DevOps)": 1.5,
-      "Consensus (Domain Logic)": 3.0,
-      "Core Libs": 3.0,
-      "Database (Persistence)": 0.5,
-      "Node & RPC (App/Interface)": 4.5,
-      "P2P Network (Infrastructure)": 1.0,
-      "Tests (QA)": 2.5
+      "Build & CI": 1.5,
+      "Consensus": 0.5,
+      "Database": 0.5,
+      "Node & RPC": 4.5,
+      "P2P Network": 1.0,
+      "Script": 2.5,
+      "Tests": 2.5,
+      "Utilities": 3.0
     },
     "2018": {
-      "Build & CI (DevOps)": 5.09,
-      "Consensus (Domain Logic)": 1.42,
-      "Core Libs": 16.75,
-      "Cryptography (Primitives)": 0.14,
-      "Database (Persistence)": 0.11,
+      "Build & CI": 5.23,
+      "Consensus": 1.4,
+      "Cryptography": 0.14,
+      "Database": 0.09,
       "Documentation": 2.0,
-      "GUI (Presentation Layer)": 0.11,
-      "Node & RPC (App/Interface)": 11.25,
-      "P2P Network (Infrastructure)": 0.25,
-      "Tests (QA)": 11.75,
-      "Utilities (Shared Libs)": 0.67,
-      "Wallet (Client App)": 0.44
+      "GUI": 0.09,
+      "Mempool": 0.23,
+      "Node & RPC": 11.09,
+      "P2P Network": 0.23,
+      "Script": 0.09,
+      "Tests": 11.73,
+      "Utilities": 17.23,
+      "Wallet": 0.42
     },
     "2019": {
-      "Build & CI (DevOps)": 0.75,
-      "Consensus (Domain Logic)": 2.58,
-      "Core Libs": 5.08,
-      "Node & RPC (App/Interface)": 1.58,
-      "P2P Network (Infrastructure)": 2.0,
-      "Tests (QA)": 1.5,
-      "Utilities (Shared Libs)": 0.5
+      "Build & CI": 0.75,
+      "Consensus": 2.58,
+      "Node & RPC": 1.58,
+      "P2P Network": 2.0,
+      "Tests": 1.5,
+      "Utilities": 5.58
     },
     "2020": {
-      "Node & RPC (App/Interface)": 2.0,
-      "P2P Network (Infrastructure)": 2.0,
-      "Tests (QA)": 4.0
+      "Node & RPC": 2.0,
+      "P2P Network": 2.0,
+      "Tests": 4.0
     }
   },
   "bip_list": [

@@ -1,6 +1,6 @@
 {
   "display_name": "Oghenovo Usiwoma",
-  "github_login_final": "josibake",
+  "github_login_final": "Eunovo",
   "delving_username_final": "eunovo",
   "uuid": "auto_oghenovo_usiwoma",
   "badges": {
@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
+  "last_seen": "2026-06-04T00:00:00",
   "technical_focus": "Tests (QA)",
   "total_commits": 94.0,
   "authored_commits": 94.0,
@@ -32,19 +32,21 @@
   "bips_authored": 2.0,
   "p2016_bips_authored": 2.0,
   "modern_bips_authored": 2.0,
-  "avg_review_latency_days": 528.1081224329014,
+  "avg_review_latency_days": 526.8240135293911,
   "reviews_count": 199.0,
-  "avg_approval_latency_days": 208.284634762901,
+  "avg_approval_latency_days": 209.8163044125557,
   "approvals_count": 167.0,
   "p2016_reviews_count": 199.0,
   "modern_reviews_count": 111.0,
+  "first_review_date": "2021-07-26T12:06:17+00:00",
+  "last_review_date": "2026-06-03T15:15:40+00:00",
   "prs_authored": 52.0,
   "avg_pr_ack_velocity_days": 18.635317299006324,
   "avg_concept_lead_time_days": 35.18340231481481,
   "review_reciprocity": 3.826923076923077,
   "hybrid_score": 1.0287,
-  "p2016_hybrid_score": 1.0441,
-  "modern_hybrid_score": 1.1147,
+  "p2016_hybrid_score": 1.044,
+  "modern_hybrid_score": 1.1142,
   "impact_score": 46.0,
   "p2016_impact_score": 47.0,
   "modern_impact_score": 49.0,
@@ -58,18 +60,18 @@
   "last_active": "2025-12-14T14:30:17",
   "dev_type": "Builder",
   "expertise_domains": [
+    "Privacy",
     "Infrastructure",
-    "Wallet",
-    "Privacy"
+    "Wallet"
   ],
   "expertise_by_source": {
     "bips": {
-      "Infrastructure": 1.0
+      "Privacy": 1.0
     },
     "code": {
-      "Consensus": 0.026,
       "Infrastructure": 0.808,
       "Network": 0.013,
+      "Script": 0.026,
       "Wallet": 0.154
     },
     "discussion": {
@@ -78,8 +80,8 @@
     }
   },
   "expertise_domain_scores": {
-    "Infrastructure": 0.7422,
-    "Privacy": 0.0962,
+    "Infrastructure": 0.2423,
+    "Privacy": 0.596,
     "Wallet": 0.15
   },
   "p2016_posts": 14.0,
@@ -90,48 +92,47 @@
   "modern_delving_posts": 5.0,
   "global_first_active": "2021-06-09T13:31:48",
   "global_last_active": "2025-12-14T14:30:17",
-  "github_location": null,
-  "github_company": "@2140-dev ",
-  "github_bio": "bitcoin core developer; nerdy projects on the side",
-  "github_twitter": "josibake",
-  "github_blog": "josibake.io",
-  "github_followers": 333.0,
+  "github_location": "Lagos State, Nigeria",
+  "github_company": null,
+  "github_bio": null,
+  "github_twitter": "Eunovo9",
+  "github_blog": null,
+  "github_followers": 75.0,
   "is_top_50": false,
-  "github_url": "https://github.com/josibake",
+  "github_url": "https://github.com/Eunovo",
   "delving_url": "https://delvingbitcoin.org/u/eunovo",
   "commit_history": {
     "2021": {
-      "Build & CI (DevOps)": 0.5,
-      "Core Libs": 2.5,
+      "Build & CI": 0.5,
       "Documentation": 3.0,
-      "Node & RPC (App/Interface)": 2.5,
-      "P2P Network (Infrastructure)": 1.0,
-      "Tests (QA)": 9.5
+      "Node & RPC": 2.5,
+      "P2P Network": 1.0,
+      "Tests": 9.5,
+      "Utilities": 2.5
     },
     "2022": {
-      "Build & CI (DevOps)": 1.5,
-      "Core Libs": 1.5,
-      "Tests (QA)": 17.0,
-      "Utilities (Shared Libs)": 2.0,
-      "Wallet (Client App)": 5.0
+      "Build & CI": 1.5,
+      "Tests": 17.0,
+      "Utilities": 3.5,
+      "Wallet": 5.0
     },
     "2023": {
-      "Core Libs": 1.0,
       "Documentation": 1.0,
-      "Node & RPC (App/Interface)": 2.0,
-      "Tests (QA)": 3.5,
-      "Wallet (Client App)": 2.5
+      "Node & RPC": 2.0,
+      "Tests": 3.5,
+      "Utilities": 1.0,
+      "Wallet": 2.5
     },
     "2024": {
-      "Core Libs": 4.0,
-      "Tests (QA)": 6.0,
-      "Wallet (Client App)": 2.0
+      "Tests": 6.0,
+      "Utilities": 4.0,
+      "Wallet": 2.0
     },
     "2025": {
-      "Build & CI (DevOps)": 1.0,
-      "Consensus (Domain Logic)": 2.0,
-      "Tests (QA)": 4.5,
-      "Wallet (Client App)": 2.5
+      "Build & CI": 1.0,
+      "Script": 2.0,
+      "Tests": 4.5,
+      "Wallet": 2.5
     }
   },
   "bip_list": [
@@ -139,14 +140,14 @@
       "number": 352,
       "title": "Silent Payments",
       "status": "Complete",
-      "theme": "Other",
+      "theme": "Privacy",
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0352.mediawiki"
     },
     {
       "number": 375,
       "title": "Sending Silent Payments with PSBTs",
       "status": "Draft",
-      "theme": "Other",
+      "theme": "Privacy",
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0375.mediawiki"
     }
   ],

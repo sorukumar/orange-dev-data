@@ -18,10 +18,10 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Wallet (Client App)",
-  "total_commits": 74.0,
-  "authored_commits": 74.0,
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Wallet",
+  "total_commits": 75.0,
+  "authored_commits": 75.0,
   "merge_commits": 0.0,
   "total_additions": 1445.0,
   "total_deletions": 1073.0,
@@ -32,30 +32,32 @@
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": 222.42389233973418,
-  "reviews_count": 285.0,
+  "avg_review_latency_days": 228.2775379050926,
+  "reviews_count": 286.0,
   "avg_approval_latency_days": 73.79426510764297,
   "approvals_count": 178.0,
-  "p2016_reviews_count": 285.0,
-  "modern_reviews_count": 60.0,
+  "p2016_reviews_count": 286.0,
+  "modern_reviews_count": 61.0,
+  "first_review_date": "2019-04-18T14:26:57+00:00",
+  "last_review_date": "2026-06-03T00:52:39+00:00",
   "prs_authored": 45.0,
   "avg_pr_ack_velocity_days": 6.211141975308642,
   "avg_concept_lead_time_days": 12.437359664351852,
-  "review_reciprocity": 6.333333333333333,
-  "hybrid_score": 0.6783,
-  "p2016_hybrid_score": 0.7836,
-  "modern_hybrid_score": 0.5096,
+  "review_reciprocity": 6.355555555555555,
+  "hybrid_score": 0.6784,
+  "p2016_hybrid_score": 0.7837,
+  "modern_hybrid_score": 0.51,
   "impact_score": 33.0,
   "p2016_impact_score": 38.0,
   "modern_impact_score": 26.0,
   "threads_started": 106.0,
-  "replies_sent": 299.0,
+  "replies_sent": 300.0,
   "ml_threads": 51.0,
   "delving_threads": 55.0,
-  "ml_responses": 293.0,
+  "ml_responses": 294.0,
   "delving_responses": 6.0,
   "first_active": "2020-02-09T16:32:41",
-  "last_active": "2026-05-13T20:38:14",
+  "last_active": "2026-06-02T20:05:30",
   "dev_type": "Builder",
   "expertise_domains": [
     "Infrastructure",
@@ -64,8 +66,9 @@
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.034,
-      "Infrastructure": 0.474,
+      "Consensus": 0.053,
+      "Infrastructure": 0.451,
+      "Mempool": 0.004,
       "Network": 0.067,
       "Wallet": 0.426
     },
@@ -76,22 +79,22 @@
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.0204,
-    "Infrastructure": 0.2842,
+    "Consensus": 0.0318,
+    "Infrastructure": 0.2704,
     "L2": 0.0999,
-    "Mempool": 0.1799,
+    "Mempool": 0.1823,
     "Network": 0.0402,
     "Script": 0.1199,
     "Wallet": 0.2554
   },
-  "p2016_posts": 405.0,
-  "modern_posts": 247.0,
-  "p2016_ml_posts": 344.0,
+  "p2016_posts": 406.0,
+  "modern_posts": 248.0,
+  "p2016_ml_posts": 345.0,
   "p2016_delving_posts": 61.0,
-  "modern_ml_posts": 186.0,
+  "modern_ml_posts": 187.0,
   "modern_delving_posts": 61.0,
   "global_first_active": "2018-08-20T23:46:34",
-  "global_last_active": "2026-05-13T20:38:14",
+  "global_last_active": "2026-06-02T20:05:30",
   "github_location": null,
   "github_company": null,
   "github_bio": "A5A6 868D 7AA9 1DD0 0AC1 A67F 817F FA02 8EF6 1C94",
@@ -103,31 +106,32 @@
   "delving_url": "https://delvingbitcoin.org/u/ariard",
   "commit_history": {
     "2018": {
-      "Node & RPC (App/Interface)": 1.0
+      "Node & RPC": 1.0
     },
     "2019": {
-      "Consensus (Domain Logic)": 0.45,
-      "Core Libs": 2.2,
+      "Consensus": 1.45,
       "Documentation": 1.0,
-      "Node & RPC (App/Interface)": 3.28,
-      "P2P Network (Infrastructure)": 0.33,
-      "Tests (QA)": 6.45,
-      "Wallet (Client App)": 21.28
+      "Node & RPC": 3.28,
+      "P2P Network": 0.33,
+      "Tests": 6.45,
+      "Utilities": 1.2,
+      "Wallet": 21.28
     },
     "2020": {
-      "P2P Network (Infrastructure)": 3.0,
-      "Tests (QA)": 4.0
+      "P2P Network": 3.0,
+      "Tests": 4.0
     },
     "2021": {
-      "Consensus (Domain Logic)": 1.0,
-      "Tests (QA)": 2.0
+      "Consensus": 1.0,
+      "Tests": 2.0
     },
     "2022": {
-      "Consensus (Domain Logic)": 0.25,
-      "Core Libs": 0.25,
+      "Consensus": 0.2,
       "Documentation": 1.5,
-      "Node & RPC (App/Interface)": 1.25,
-      "Tests (QA)": 0.75
+      "Mempool": 0.2,
+      "Node & RPC": 1.2,
+      "Tests": 0.7,
+      "Utilities": 0.2
     }
   },
   "first_message": {
@@ -138,9 +142,9 @@
   },
   "last_message": {
     "source": "mailing_list",
-    "subject": "[bitcoindev] Re: Garbled Circuit and Channel Jamming",
-    "date": "2026-05-13",
-    "link": "https://gnusha.org/pi/bitcoindev/CALZpt+HJ-iRD9dZQMwmbVuov8sbk9nSkyzPcBS09U9qzxXpzsQ@mail.gmail.com"
+    "subject": "Re: [bitcoindev] Prohibit Merkle Internal Node Preimages That Encode\n Minimal 64-Byte Transactions",
+    "date": "2026-06-02",
+    "link": "https://gnusha.org/pi/bitcoindev/8c49d0d1-7f87-4e4c-9636-1e631562bc8dn@googlegroups.com"
   },
   "social_history": {
     "2020": {
@@ -207,10 +211,10 @@
     },
     "2026": {
       "other": 20,
-      "consensus-cleanup": 7,
+      "consensus-cleanup": 8,
       "covenants": 1,
       "lightning": 3,
-      "mempool-fees": 1,
+      "mempool-fees": 2,
       "mining": 7,
       "script-opcodes": 2,
       "security": 1,

@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
+  "last_seen": "2026-06-04T00:00:00",
   "technical_focus": "code",
   "total_commits": 5.0,
   "authored_commits": 5.0,
@@ -38,6 +38,8 @@
   "approvals_count": 0.0,
   "p2016_reviews_count": 1.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": "2015-07-09T02:22:34+00:00",
+  "last_review_date": "2019-11-19T23:12:13+00:00",
   "prs_authored": 3.0,
   "avg_pr_ack_velocity_days": 1.3064699074074073,
   "avg_concept_lead_time_days": 0.08556712962962963,
@@ -59,17 +61,17 @@
   "dev_type": "Builder",
   "expertise_domains": [
     "Infrastructure",
-    "Consensus"
+    "Script"
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.125,
-      "Infrastructure": 0.875
+      "Infrastructure": 0.875,
+      "Script": 0.125
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.125,
-    "Infrastructure": 0.875
+    "Infrastructure": 0.875,
+    "Script": 0.125
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -89,13 +91,13 @@
   "github_url": "https://github.com/mb300sd",
   "commit_history": {
     "2013": {
-      "Core Libs": 1.0
+      "Utilities": 1.0
     },
     "2015": {
-      "Consensus (Domain Logic)": 0.25,
-      "Core Libs": 0.25,
       "Documentation": 0.25,
-      "Tests (QA)": 0.25
+      "Script": 0.25,
+      "Tests": 0.25,
+      "Utilities": 0.25
     }
   }
 }

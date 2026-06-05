@@ -6,22 +6,22 @@
   "badges": {
     "is_bip_author": null,
     "is_core_committer": null,
-    "is_core_contributor": null,
+    "is_core_contributor": true,
     "is_maintainer": null,
     "is_social_contributor": true,
-    "is_sponsored": null,
+    "is_sponsored": true,
     "maintainer_status": null,
-    "social_source": "github",
-    "sponsor_id": null
+    "social_source": "mailing_list",
+    "sponsor_id": "opensats"
   },
   "roles": [
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "code",
-  "total_commits": 882.0,
-  "authored_commits": 882.0,
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Tests",
+  "total_commits": 881.0,
+  "authored_commits": 881.0,
   "merge_commits": 0.0,
   "total_additions": 17675.0,
   "total_deletions": 13857.0,
@@ -32,65 +32,68 @@
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": 687.705861424598,
-  "reviews_count": 2061.0,
-  "avg_approval_latency_days": 420.8771469533015,
-  "approvals_count": 1409.0,
-  "p2016_reviews_count": 2061.0,
-  "modern_reviews_count": 778.0,
-  "prs_authored": 383.0,
+  "avg_review_latency_days": 693.1789426684966,
+  "reviews_count": 2068.0,
+  "avg_approval_latency_days": 426.2916036303462,
+  "approvals_count": 1413.0,
+  "p2016_reviews_count": 2068.0,
+  "modern_reviews_count": 784.0,
+  "first_review_date": "2019-03-06T22:22:01+00:00",
+  "last_review_date": "2026-06-04T15:09:20+00:00",
+  "prs_authored": 384.0,
   "avg_pr_ack_velocity_days": 5.150061815231631,
   "avg_concept_lead_time_days": 8.091741302423747,
-  "review_reciprocity": 5.381201044386423,
-  "hybrid_score": 0.6681,
-  "p2016_hybrid_score": 0.6754,
+  "review_reciprocity": 5.385416666666667,
+  "hybrid_score": 0.6682,
+  "p2016_hybrid_score": 0.6755,
   "modern_hybrid_score": 0.5621,
   "impact_score": 33.0,
   "p2016_impact_score": 33.0,
   "modern_impact_score": 29.0,
-  "threads_started": 0.0,
+  "threads_started": 1.0,
   "replies_sent": 7.0,
-  "ml_threads": 0.0,
+  "ml_threads": 1.0,
   "delving_threads": 0.0,
   "ml_responses": 7.0,
   "delving_responses": 0.0,
   "first_active": "2024-03-11T11:48:04",
-  "last_active": "2025-11-28T10:34:50",
+  "last_active": "2026-06-01T16:25:24",
   "dev_type": "Builder",
   "expertise_domains": [
     "Infrastructure",
     "Ecosystem",
-    "Wallet"
+    "Network"
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.031,
+      "Consensus": 0.028,
       "Infrastructure": 0.802,
+      "Mempool": 0.003,
       "Network": 0.11,
+      "Script": 0.0,
       "Wallet": 0.057
     },
     "discussion": {
-      "Cryptography": 0.14,
-      "Ecosystem": 0.721,
-      "Wallet": 0.14
+      "Cryptography": 0.164,
+      "Ecosystem": 0.836
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.0186,
-    "Cryptography": 0.056,
-    "Ecosystem": 0.2883,
-    "Infrastructure": 0.481,
+    "Consensus": 0.0168,
+    "Cryptography": 0.0656,
+    "Ecosystem": 0.3344,
+    "Infrastructure": 0.4812,
     "Network": 0.066,
-    "Wallet": 0.0902
+    "Wallet": 0.0342
   },
-  "p2016_posts": 7.0,
-  "modern_posts": 7.0,
-  "p2016_ml_posts": 7.0,
+  "p2016_posts": 8.0,
+  "modern_posts": 8.0,
+  "p2016_ml_posts": 8.0,
   "p2016_delving_posts": 0.0,
-  "modern_ml_posts": 7.0,
+  "modern_ml_posts": 8.0,
   "modern_delving_posts": 0.0,
   "global_first_active": "2019-03-15T13:23:40",
-  "global_last_active": "2025-11-28T10:34:50",
+  "global_last_active": "2026-06-01T16:25:24",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -101,74 +104,74 @@
   "github_url": "https://github.com/jonatack",
   "commit_history": {
     "2019": {
-      "Build & CI (DevOps)": 4.0,
-      "Core Libs": 1.0,
+      "Build & CI": 4.0,
       "Documentation": 16.33,
-      "GUI (Presentation Layer)": 3.0,
-      "Node & RPC (App/Interface)": 6.33,
-      "P2P Network (Infrastructure)": 0.33,
-      "Tests (QA)": 25.67,
-      "Wallet (Client App)": 8.33
+      "GUI": 3.0,
+      "Node & RPC": 6.33,
+      "P2P Network": 0.33,
+      "Tests": 25.67,
+      "Utilities": 1.0,
+      "Wallet": 8.33
     },
     "2020": {
-      "Build & CI (DevOps)": 0.5,
-      "Consensus (Domain Logic)": 2.2,
-      "Core Libs": 5.0,
+      "Build & CI": 0.5,
+      "Consensus": 0.87,
       "Documentation": 17.7,
-      "GUI (Presentation Layer)": 9.0,
-      "Node & RPC (App/Interface)": 51.7,
-      "P2P Network (Infrastructure)": 22.53,
-      "Tests (QA)": 69.2,
-      "Utilities (Shared Libs)": 0.5,
-      "Wallet (Client App)": 21.67
+      "GUI": 9.0,
+      "Mempool": 1.33,
+      "Node & RPC": 51.7,
+      "P2P Network": 22.53,
+      "Tests": 69.2,
+      "Utilities": 5.5,
+      "Wallet": 21.67
     },
     "2021": {
-      "Build & CI (DevOps)": 4.0,
-      "Consensus (Domain Logic)": 6.73,
-      "Core Libs": 12.14,
+      "Build & CI": 4.0,
+      "Consensus": 6.5,
       "Documentation": 21.83,
-      "GUI (Presentation Layer)": 15.81,
-      "Node & RPC (App/Interface)": 39.06,
-      "P2P Network (Infrastructure)": 39.56,
-      "Tests (QA)": 82.73,
-      "Utilities (Shared Libs)": 3.14,
-      "Wallet (Client App)": 4.0
+      "GUI": 15.83,
+      "Mempool": 0.5,
+      "Node & RPC": 38.58,
+      "P2P Network": 39.58,
+      "Script": 0.25,
+      "Tests": 82.75,
+      "Utilities": 15.17,
+      "Wallet": 4.0
     },
     "2022": {
-      "Build & CI (DevOps)": 3.0,
-      "Consensus (Domain Logic)": 9.71,
-      "Core Libs": 13.88,
+      "Build & CI": 3.0,
+      "Consensus": 9.71,
       "Documentation": 26.62,
-      "GUI (Presentation Layer)": 12.62,
-      "Node & RPC (App/Interface)": 26.54,
-      "P2P Network (Infrastructure)": 2.79,
-      "Tests (QA)": 26.38,
-      "Wallet (Client App)": 1.46
+      "GUI": 12.62,
+      "Node & RPC": 26.54,
+      "P2P Network": 2.79,
+      "Tests": 26.38,
+      "Utilities": 13.88,
+      "Wallet": 1.46
     },
     "2023": {
-      "Build & CI (DevOps)": 3.5,
-      "Consensus (Domain Logic)": 0.5,
-      "Core Libs": 5.67,
+      "Build & CI": 3.5,
+      "Consensus": 0.5,
       "Documentation": 9.33,
-      "Node & RPC (App/Interface)": 6.17,
-      "P2P Network (Infrastructure)": 12.33,
-      "Tests (QA)": 23.0,
-      "Utilities (Shared Libs)": 1.0,
-      "Wallet (Client App)": 4.5
+      "Node & RPC": 6.17,
+      "P2P Network": 12.33,
+      "Tests": 23.0,
+      "Utilities": 6.67,
+      "Wallet": 4.5
     },
     "2024": {
-      "Consensus (Domain Logic)": 0.25,
-      "Core Libs": 2.25,
       "Documentation": 1.0,
-      "Node & RPC (App/Interface)": 3.0,
-      "P2P Network (Infrastructure)": 0.25,
-      "Tests (QA)": 1.25
+      "Mempool": 0.25,
+      "Node & RPC": 3.0,
+      "P2P Network": 0.25,
+      "Tests": 1.25,
+      "Utilities": 2.25
     },
     "2025": {
-      "Consensus (Domain Logic)": 2.5,
-      "Core Libs": 4.5,
+      "Consensus": 2.5,
       "Documentation": 3.0,
-      "Node & RPC (App/Interface)": 6.0
+      "Node & RPC": 6.0,
+      "Utilities": 4.5
     }
   },
   "first_message": {
@@ -179,9 +182,9 @@
   },
   "last_message": {
     "source": "mailing_list",
-    "subject": "Re: [bitcoindev] Motion to Activate BIP 3",
-    "date": "2025-11-28",
-    "link": "https://gnusha.org/pi/bitcoindev/9b8c8573-cafb-447e-9923-b9a3b9e10950n@googlegroups.com"
+    "subject": "[bitcoindev] [BIP127] announcements: removal of Proof File Format and\n update status to Complete",
+    "date": "2026-06-01",
+    "link": "https://gnusha.org/pi/bitcoindev/cc16f691-d34b-486d-a9b9-7c27c4ca5933n@googlegroups.com"
   },
   "social_history": {
     "2024": {
@@ -193,6 +196,9 @@
     "2025": {
       "bip-process": 4,
       "core-dev": 1
+    },
+    "2026": {
+      "other": 1
     }
   }
 }

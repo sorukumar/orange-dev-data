@@ -19,10 +19,10 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Core Libs",
-  "total_commits": 33.0,
-  "authored_commits": 33.0,
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Utilities",
+  "total_commits": 36.0,
+  "authored_commits": 36.0,
   "merge_commits": 0.0,
   "total_additions": 794.0,
   "total_deletions": 418.0,
@@ -39,13 +39,15 @@
   "approvals_count": 25.0,
   "p2016_reviews_count": 39.0,
   "modern_reviews_count": 4.0,
-  "prs_authored": 36.0,
+  "first_review_date": "2013-07-22T21:16:34+00:00",
+  "last_review_date": "2026-01-20T23:03:59+00:00",
+  "prs_authored": 37.0,
   "avg_pr_ack_velocity_days": 13.248227237654321,
   "avg_concept_lead_time_days": 23.853353587962964,
-  "review_reciprocity": 2.2222222222222223,
-  "hybrid_score": 1.674,
-  "p2016_hybrid_score": 1.1515,
-  "modern_hybrid_score": 0.2197,
+  "review_reciprocity": 2.1621621621621623,
+  "hybrid_score": 1.6742,
+  "p2016_hybrid_score": 1.1514,
+  "modern_hybrid_score": 0.2202,
   "impact_score": 63.0,
   "p2016_impact_score": 50.0,
   "modern_impact_score": 12.0,
@@ -68,8 +70,10 @@
       "Consensus": 1.0
     },
     "code": {
-      "Consensus": 0.283,
-      "Infrastructure": 0.717
+      "Consensus": 0.099,
+      "Infrastructure": 0.694,
+      "Mempool": 0.066,
+      "Script": 0.142
     },
     "discussion": {
       "Consensus": 0.524,
@@ -77,9 +81,10 @@
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.6897,
-    "Infrastructure": 0.2151,
-    "Script": 0.0952
+    "Consensus": 0.6343,
+    "Infrastructure": 0.2081,
+    "Mempool": 0.0198,
+    "Script": 0.1378
   },
   "p2016_posts": 68.0,
   "modern_posts": 2.0,
@@ -99,41 +104,44 @@
   "github_url": "https://github.com/maaku",
   "commit_history": {
     "2012": {
-      "Core Libs": 1.0
+      "Utilities": 1.0
     },
     "2013": {
-      "Core Libs": 1.0,
-      "Documentation": 1.0
+      "Documentation": 1.0,
+      "Utilities": 1.0
     },
     "2014": {
-      "Build & CI (DevOps)": 0.17,
-      "Consensus (Domain Logic)": 0.17,
-      "Core Libs": 2.67,
-      "GUI (Presentation Layer)": 0.67,
-      "Node & RPC (App/Interface)": 0.17,
-      "Tests (QA)": 0.17
+      "Build & CI": 0.14,
+      "Consensus": 0.14,
+      "GUI": 0.64,
+      "Mempool": 0.14,
+      "Node & RPC": 0.14,
+      "Tests": 0.14,
+      "Utilities": 2.64
     },
     "2015": {
-      "Consensus (Domain Logic)": 3.0,
-      "Core Libs": 1.5,
-      "Tests (QA)": 2.5
+      "Consensus": 0.83,
+      "Mempool": 1.17,
+      "Script": 1.33,
+      "Tests": 2.33,
+      "Utilities": 1.33
     },
     "2017": {
-      "Consensus (Domain Logic)": 1.0,
-      "Core Libs": 0.5,
-      "Tests (QA)": 0.5
+      "Script": 1.0,
+      "Tests": 0.5,
+      "Utilities": 0.5
     },
     "2018": {
-      "Consensus (Domain Logic)": 0.5,
-      "Tests (QA)": 0.5
+      "Script": 0.5,
+      "Tests": 0.5
     },
     "2022": {
-      "Build & CI (DevOps)": 0.5,
-      "Tests (QA)": 0.5
+      "Build & CI": 0.5,
+      "Tests": 0.5
     },
     "2023": {
-      "Consensus (Domain Logic)": 1.0,
-      "Core Libs": 1.0
+      "Consensus": 1.0,
+      "Utilities": 1.0
     }
   },
   "bip_list": [

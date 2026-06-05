@@ -19,8 +19,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Consensus (Domain Logic)",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Mempool",
   "total_commits": 6.0,
   "authored_commits": 6.0,
   "merge_commits": 0.0,
@@ -39,11 +39,13 @@
   "approvals_count": 0.0,
   "p2016_reviews_count": 3.0,
   "modern_reviews_count": 1.0,
+  "first_review_date": "2017-02-15T21:38:08+00:00",
+  "last_review_date": "2023-11-16T17:38:09+00:00",
   "prs_authored": 7.0,
   "avg_pr_ack_velocity_days": 3.7797384259259252,
   "avg_concept_lead_time_days": 9.431030092592591,
   "review_reciprocity": 0.42857142857142855,
-  "hybrid_score": 0.7518,
+  "hybrid_score": 0.7517,
   "p2016_hybrid_score": 0.7709,
   "modern_hybrid_score": 0.0615,
   "impact_score": 36.0,
@@ -61,15 +63,15 @@
   "expertise_domains": [
     "Consensus",
     "Infrastructure",
-    "L2"
+    "Mempool"
   ],
   "expertise_by_source": {
     "bips": {
       "Consensus": 1.0
     },
     "code": {
-      "Consensus": 0.251,
-      "Infrastructure": 0.749
+      "Infrastructure": 0.667,
+      "Mempool": 0.333
     },
     "discussion": {
       "Consensus": 0.261,
@@ -78,9 +80,10 @@
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.6275,
-    "Infrastructure": 0.2247,
+    "Consensus": 0.5522,
+    "Infrastructure": 0.2001,
     "L2": 0.0956,
+    "Mempool": 0.0999,
     "Script": 0.0522
   },
   "p2016_posts": 25.0,
@@ -101,12 +104,11 @@
   "github_url": "https://github.com/CryptAxe",
   "commit_history": {
     "2017": {
-      "Consensus (Domain Logic)": 1.0,
-      "Core Libs": 1.0,
       "Documentation": 0.33,
-      "GUI (Presentation Layer)": 1.0,
-      "Node & RPC (App/Interface)": 0.33,
-      "Tests (QA)": 0.33
+      "GUI": 1.0,
+      "Mempool": 1.33,
+      "Tests": 0.33,
+      "Utilities": 1.0
     }
   },
   "bip_list": [

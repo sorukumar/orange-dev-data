@@ -1,32 +1,46 @@
 {
-  "display_name": "Luke",
-  "github_login_final": null,
+  "display_name": "luke",
+  "github_login_final": "luke",
   "delving_username_final": null,
   "uuid": "auto_luke",
-  "badges": null,
-  "roles": null,
-  "first_seen": null,
-  "last_seen": null,
-  "technical_focus": null,
-  "total_commits": 1.0,
-  "authored_commits": 1.0,
+  "badges": {
+    "is_bip_author": null,
+    "is_core_committer": null,
+    "is_core_contributor": null,
+    "is_maintainer": null,
+    "is_social_contributor": true,
+    "is_sponsored": null,
+    "maintainer_status": null,
+    "social_source": "github",
+    "sponsor_id": null
+  },
+  "roles": [
+    "Researcher"
+  ],
+  "first_seen": "2026-04-18T00:00:00",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "code",
+  "total_commits": 0.0,
+  "authored_commits": 0.0,
   "merge_commits": 0.0,
-  "total_additions": 1.0,
-  "total_deletions": 1.0,
-  "first_commit": "2014-10-13T15:57:09",
-  "last_commit": "2014-10-13T15:57:09",
+  "total_additions": null,
+  "total_deletions": null,
+  "first_commit": null,
+  "last_commit": null,
   "p2016_authored_commits": 0.0,
   "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
   "avg_review_latency_days": null,
-  "reviews_count": null,
+  "reviews_count": 0.0,
   "avg_approval_latency_days": null,
-  "approvals_count": null,
-  "p2016_reviews_count": null,
-  "modern_reviews_count": null,
-  "prs_authored": null,
+  "approvals_count": 0.0,
+  "p2016_reviews_count": 0.0,
+  "modern_reviews_count": 0.0,
+  "first_review_date": null,
+  "last_review_date": null,
+  "prs_authored": 0.0,
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": null,
@@ -48,11 +62,7 @@
   "expertise_domains": [
     "Infrastructure"
   ],
-  "expertise_by_source": {
-    "code": {
-      "Infrastructure": 1.0
-    }
-  },
+  "expertise_by_source": {},
   "expertise_domain_scores": {
     "Infrastructure": 1.0
   },
@@ -62,8 +72,8 @@
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
-  "global_first_active": "2014-10-13T15:57:09",
-  "global_last_active": "2014-10-13T15:57:09",
+  "global_first_active": null,
+  "global_last_active": null,
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -71,9 +81,5 @@
   "github_blog": null,
   "github_followers": null,
   "is_top_50": false,
-  "commit_history": {
-    "2014": {
-      "Tests (QA)": 1.0
-    }
-  }
+  "github_url": "https://github.com/luke"
 }

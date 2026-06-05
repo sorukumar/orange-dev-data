@@ -18,8 +18,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Tests (QA)",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Tests",
   "total_commits": 32.0,
   "authored_commits": 32.0,
   "merge_commits": 0.0,
@@ -38,6 +38,8 @@
   "approvals_count": 28.0,
   "p2016_reviews_count": 33.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": "2020-05-19T17:59:44+00:00",
+  "last_review_date": "2021-01-08T22:13:47+00:00",
   "prs_authored": 10.0,
   "avg_pr_ack_velocity_days": 2.161952546296296,
   "avg_concept_lead_time_days": 2.120713734567901,
@@ -89,11 +91,11 @@
   "github_url": "https://github.com/troygiorshev",
   "commit_history": {
     "2020": {
-      "Core Libs": 0.5,
       "Documentation": 1.0,
-      "Node & RPC (App/Interface)": 1.0,
-      "P2P Network (Infrastructure)": 7.5,
-      "Tests (QA)": 12.0
+      "Node & RPC": 1.0,
+      "P2P Network": 7.5,
+      "Tests": 12.0,
+      "Utilities": 0.5
     }
   }
 }

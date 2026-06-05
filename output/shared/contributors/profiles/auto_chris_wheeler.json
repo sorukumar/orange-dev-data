@@ -18,8 +18,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Consensus (Domain Logic)",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "GUI",
   "total_commits": 6.0,
   "authored_commits": 6.0,
   "merge_commits": 0.0,
@@ -38,6 +38,8 @@
   "approvals_count": 1.0,
   "p2016_reviews_count": 3.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": "2016-02-29T20:19:34+00:00",
+  "last_review_date": "2017-09-28T20:12:41+00:00",
   "prs_authored": 4.0,
   "avg_pr_ack_velocity_days": 0.32806134259259256,
   "avg_concept_lead_time_days": null,
@@ -59,20 +61,20 @@
   "dev_type": "Builder",
   "expertise_domains": [
     "Infrastructure",
-    "Consensus",
+    "Mempool",
     "Network"
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.167,
       "Infrastructure": 0.5,
+      "Mempool": 0.167,
       "Network": 0.167,
       "Wallet": 0.167
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.1668,
     "Infrastructure": 0.4995,
+    "Mempool": 0.1668,
     "Network": 0.1668,
     "Wallet": 0.1668
   },
@@ -94,12 +96,12 @@
   "github_url": "https://github.com/chriswheeler",
   "commit_history": {
     "2016": {
-      "Consensus (Domain Logic)": 0.17,
-      "Core Libs": 0.17,
-      "GUI (Presentation Layer)": 0.17,
-      "P2P Network (Infrastructure)": 0.17,
-      "Tests (QA)": 0.17,
-      "Wallet (Client App)": 0.17
+      "GUI": 0.17,
+      "Mempool": 0.17,
+      "P2P Network": 0.17,
+      "Tests": 0.17,
+      "Utilities": 0.17,
+      "Wallet": 0.17
     }
   }
 }

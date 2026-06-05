@@ -19,10 +19,10 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Consensus (Domain Logic)",
-  "total_commits": 1.0,
-  "authored_commits": 1.0,
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Consensus",
+  "total_commits": 2.0,
+  "authored_commits": 2.0,
   "merge_commits": 0.0,
   "total_additions": 12.0,
   "total_deletions": 3.0,
@@ -39,13 +39,15 @@
   "approvals_count": 1.0,
   "p2016_reviews_count": 10.0,
   "modern_reviews_count": 9.0,
+  "first_review_date": "2019-07-02T15:09:39+00:00",
+  "last_review_date": "2026-05-04T17:21:32+00:00",
   "prs_authored": 4.0,
   "avg_pr_ack_velocity_days": 0.011944444444444445,
   "avg_concept_lead_time_days": 170.01446759259258,
   "review_reciprocity": 2.5,
   "hybrid_score": 0.5121,
   "p2016_hybrid_score": 0.5323,
-  "modern_hybrid_score": 0.5182,
+  "modern_hybrid_score": 0.5188,
   "impact_score": 26.0,
   "p2016_impact_score": 27.0,
   "modern_impact_score": 27.0,
@@ -56,7 +58,7 @@
   "ml_responses": 22.0,
   "delving_responses": 2.0,
   "first_active": "2018-11-06T09:50:38",
-  "last_active": "2026-04-15T01:18:36.415000",
+  "last_active": null,
   "dev_type": "Builder",
   "expertise_domains": [
     "Infrastructure",
@@ -68,7 +70,8 @@
       "Infrastructure": 1.0
     },
     "code": {
-      "Consensus": 1.0
+      "Consensus": 0.5,
+      "Script": 0.5
     },
     "discussion": {
       "Consensus": 0.085,
@@ -77,10 +80,11 @@
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.3169,
+    "Consensus": 0.167,
     "Infrastructure": 0.4999,
     "Mempool": 0.0306,
-    "Privacy": 0.1526
+    "Privacy": 0.1526,
+    "Script": 0.15
   },
   "p2016_posts": 31.0,
   "modern_posts": 17.0,
@@ -89,7 +93,7 @@
   "modern_ml_posts": 12.0,
   "modern_delving_posts": 5.0,
   "global_first_active": "2018-11-06T09:50:38",
-  "global_last_active": "2026-04-15T01:18:36.415000064",
+  "global_last_active": "2020-02-07T19:10:31",
   "github_location": null,
   "github_company": "spiral",
   "github_bio": null,
@@ -101,7 +105,8 @@
   "delving_url": "https://delvingbitcoin.org/u/nothingmuch",
   "commit_history": {
     "2020": {
-      "Consensus (Domain Logic)": 1.0
+      "Consensus": 0.5,
+      "Script": 0.5
     }
   },
   "bip_list": [

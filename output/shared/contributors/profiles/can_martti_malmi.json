@@ -12,15 +12,19 @@
     "is_sponsored": null,
     "maintainer_status": "historical",
     "social_source": "github",
-    "sponsor_id": null
+    "sponsor_id": null,
+    "maintainer_title": "Core Maintainer",
+    "maintainer_primary_area": "Infrastructure / SVN",
+    "maintainer_appointed": "2009-08-30",
+    "maintainer_stepped_down": "2011-09-13"
   },
   "roles": [
     "Core Maintainer",
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Core Libs",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Utilities",
   "total_commits": 42.0,
   "authored_commits": 42.0,
   "merge_commits": 0.0,
@@ -39,6 +43,8 @@
   "approvals_count": null,
   "p2016_reviews_count": null,
   "modern_reviews_count": null,
+  "first_review_date": null,
+  "last_review_date": null,
   "prs_authored": null,
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
@@ -86,13 +92,13 @@
   "is_top_50": false,
   "commit_history": {
     "2009": {
-      "Build & CI (DevOps)": 1.33,
-      "Core Libs": 16.33,
-      "Documentation": 6.33
+      "Build & CI": 1.33,
+      "Documentation": 6.33,
+      "Utilities": 16.33
     },
     "2010": {
-      "Build & CI (DevOps)": 1.0,
-      "Core Libs": 1.0
+      "Build & CI": 1.0,
+      "Utilities": 1.0
     }
   }
 }

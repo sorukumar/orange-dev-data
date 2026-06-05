@@ -18,8 +18,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Core Libs",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Utilities",
   "total_commits": 47.0,
   "authored_commits": 47.0,
   "merge_commits": 0.0,
@@ -38,6 +38,8 @@
   "approvals_count": 17.0,
   "p2016_reviews_count": 159.0,
   "modern_reviews_count": 4.0,
+  "first_review_date": "2012-03-20T16:46:25+00:00",
+  "last_review_date": "2025-08-19T11:15:02+00:00",
   "prs_authored": 156.0,
   "avg_pr_ack_velocity_days": 30.438769353369764,
   "avg_concept_lead_time_days": 5.282907763532763,
@@ -96,28 +98,28 @@
   "github_url": "https://github.com/rebroad",
   "commit_history": {
     "2012": {
-      "Build & CI (DevOps)": 0.5,
-      "Core Libs": 6.33,
-      "Node & RPC (App/Interface)": 2.83,
-      "P2P Network (Infrastructure)": 3.33
+      "Build & CI": 0.5,
+      "Node & RPC": 2.83,
+      "P2P Network": 3.33,
+      "Utilities": 6.33
     },
     "2014": {
-      "Core Libs": 12.67,
-      "GUI (Presentation Layer)": 1.0,
-      "Node & RPC (App/Interface)": 0.67,
-      "P2P Network (Infrastructure)": 0.67
+      "GUI": 1.0,
+      "Node & RPC": 0.67,
+      "P2P Network": 0.67,
+      "Utilities": 12.67
     },
     "2015": {
-      "Core Libs": 1.0
+      "Utilities": 1.0
     },
     "2016": {
-      "Core Libs": 3.0,
-      "GUI (Presentation Layer)": 1.83,
-      "Node & RPC (App/Interface)": 0.33,
-      "P2P Network (Infrastructure)": 0.83
+      "GUI": 1.83,
+      "Node & RPC": 0.33,
+      "P2P Network": 0.83,
+      "Utilities": 3.0
     },
     "2021": {
-      "P2P Network (Infrastructure)": 1.0
+      "P2P Network": 1.0
     }
   },
   "first_message": {

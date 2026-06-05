@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
+  "last_seen": "2026-06-04T00:00:00",
   "technical_focus": "covenants",
   "total_commits": 0.0,
   "authored_commits": 0.0,
@@ -38,24 +38,26 @@
   "approvals_count": null,
   "p2016_reviews_count": null,
   "modern_reviews_count": null,
+  "first_review_date": null,
+  "last_review_date": null,
   "prs_authored": null,
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": null,
-  "hybrid_score": 0.0232,
-  "p2016_hybrid_score": 0.0359,
-  "modern_hybrid_score": 0.1134,
+  "hybrid_score": 0.0234,
+  "p2016_hybrid_score": 0.0362,
+  "modern_hybrid_score": 0.1136,
   "impact_score": 1.0,
   "p2016_impact_score": 2.0,
   "modern_impact_score": 7.0,
-  "threads_started": 4.0,
-  "replies_sent": 9.0,
+  "threads_started": 5.0,
+  "replies_sent": 10.0,
   "ml_threads": 0.0,
-  "delving_threads": 4.0,
+  "delving_threads": 5.0,
   "ml_responses": 7.0,
-  "delving_responses": 2.0,
-  "first_active": "2026-03-17T14:38:00.510000",
-  "last_active": "2026-05-12T10:04:24",
+  "delving_responses": 3.0,
+  "first_active": null,
+  "last_active": null,
   "dev_type": "Participant",
   "expertise_domains": [
     "Script",
@@ -63,22 +65,22 @@
   ],
   "expertise_by_source": {
     "discussion": {
-      "Script": 0.542,
-      "Wallet": 0.458
+      "Script": 0.545,
+      "Wallet": 0.455
     }
   },
   "expertise_domain_scores": {
-    "Script": 0.542,
-    "Wallet": 0.458
+    "Script": 0.545,
+    "Wallet": 0.455
   },
-  "p2016_posts": 13.0,
-  "modern_posts": 13.0,
+  "p2016_posts": 15.0,
+  "modern_posts": 15.0,
   "p2016_ml_posts": 7.0,
-  "p2016_delving_posts": 6.0,
+  "p2016_delving_posts": 8.0,
   "modern_ml_posts": 7.0,
-  "modern_delving_posts": 6.0,
-  "global_first_active": "2026-03-17T14:38:00.510000128",
-  "global_last_active": "2026-05-12T10:04:24",
+  "modern_delving_posts": 8.0,
+  "global_first_active": null,
+  "global_last_active": null,
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -94,17 +96,16 @@
     "link": "https://delvingbitcoin.org/t/btsl-bitcoin-transaction-schema-language-a-declarative-validation-schema-for-psbt-workflows/2338/1"
   },
   "last_message": {
-    "source": "mailing_list",
-    "subject": "Re: [bitcoindev] Against Allowing Quantum Recovery of Bitcoin",
-    "date": "2026-05-12",
-    "link": "https://gnusha.org/pi/bitcoindev/9564EAA8-807A-4448-8A92-FEEAC92D4709@gmail.com"
+    "source": "delving",
+    "subject": "Re: A Bitcoin-native LLM: dataset, architecture and open questions",
+    "date": "2026-06-03",
+    "link": "https://delvingbitcoin.org/t/a-bitcoin-native-llm-dataset-architecture-and-open-questions/2550/3"
   },
   "social_history": {
     "2026": {
       "covenants": 6,
       "multisig-threshold": 1,
-      "ordinals-inscriptions": 1,
-      "other": 3,
+      "other": 6,
       "quantum": 2,
       "script-opcodes": 5,
       "security": 5,

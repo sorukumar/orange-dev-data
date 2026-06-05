@@ -19,8 +19,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Consensus (Domain Logic)",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Script",
   "total_commits": 6.0,
   "authored_commits": 6.0,
   "merge_commits": 0.0,
@@ -39,6 +39,8 @@
   "approvals_count": 32.0,
   "p2016_reviews_count": 39.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": "2015-06-14T18:45:12+00:00",
+  "last_review_date": "2021-11-08T17:33:24+00:00",
   "prs_authored": 14.0,
   "avg_pr_ack_velocity_days": 0.9868229166666668,
   "avg_concept_lead_time_days": 0.6678009259259259,
@@ -69,9 +71,9 @@
       "Script": 0.5
     },
     "code": {
-      "Consensus": 0.25,
       "Infrastructure": 0.5,
-      "Network": 0.25
+      "Network": 0.25,
+      "Script": 0.25
     },
     "discussion": {
       "Script": 0.389,
@@ -79,10 +81,10 @@
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.325,
+    "Consensus": 0.25,
     "Infrastructure": 0.15,
     "Network": 0.075,
-    "Script": 0.3278,
+    "Script": 0.4028,
     "Wallet": 0.1222
   },
   "p2016_posts": 7.0,
@@ -106,13 +108,13 @@
       "Documentation": 1.0
     },
     "2016": {
-      "Consensus (Domain Logic)": 0.5,
-      "P2P Network (Infrastructure)": 1.0,
-      "Tests (QA)": 0.5
+      "P2P Network": 1.0,
+      "Script": 0.5,
+      "Tests": 0.5
     },
     "2018": {
-      "Consensus (Domain Logic)": 0.5,
-      "Tests (QA)": 0.5
+      "Script": 0.5,
+      "Tests": 0.5
     }
   },
   "bip_list": [

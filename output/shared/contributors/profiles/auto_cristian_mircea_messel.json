@@ -18,8 +18,8 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-05-29T00:00:00",
-  "technical_focus": "Tests (QA)",
+  "last_seen": "2026-06-04T00:00:00",
+  "technical_focus": "Tests",
   "total_commits": 13.0,
   "authored_commits": 13.0,
   "merge_commits": 0.0,
@@ -38,6 +38,8 @@
   "approvals_count": 14.0,
   "p2016_reviews_count": 18.0,
   "modern_reviews_count": 0.0,
+  "first_review_date": "2017-08-23T16:27:51+00:00",
+  "last_review_date": "2018-07-24T21:50:55+00:00",
   "prs_authored": 15.0,
   "avg_pr_ack_velocity_days": 1.5049842171717174,
   "avg_concept_lead_time_days": 5.08630787037037,
@@ -86,15 +88,15 @@
   "github_url": "https://github.com/mess110",
   "commit_history": {
     "2017": {
-      "Build & CI (DevOps)": 0.33,
-      "Core Libs": 0.33,
-      "GUI (Presentation Layer)": 1.33,
-      "Node & RPC (App/Interface)": 0.5,
-      "Tests (QA)": 5.5
+      "Build & CI": 0.33,
+      "GUI": 1.33,
+      "Node & RPC": 0.5,
+      "Tests": 5.5,
+      "Utilities": 0.33
     },
     "2018": {
       "Documentation": 1.0,
-      "GUI (Presentation Layer)": 1.0
+      "GUI": 1.0
     }
   }
 }
