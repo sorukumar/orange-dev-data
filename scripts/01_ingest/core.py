@@ -111,8 +111,7 @@ def get_git_log(repo_path):
         "master",
         "--format=COMMIT_Start^|^%H^|^%at^|^%an^|^%ae^|^%cn^|^%ce^|^%ct^|^%P^|^%ai^|^%s",
         # "--numstat", # Temporarily disable numstat to isolate the issue? No, keep it.
-        "--numstat",
-        "-m" 
+        "--numstat"
     ]
     
     # Increase buffer size and ensure text mode
@@ -366,8 +365,9 @@ def process_commit(meta, stats, commits_list):
             "hour_utc": dt_utc.hour,
             "timezone_offset_minutes": tz_offset_minutes,
             
-            "author_name": meta["author_name"],
-            "author_email": meta["author_email"].lower(),
+            # By default use author identity
+            "author_name": meta["committer_name"] if is_merge or "merge" in meta["author_name"].lower() else meta["author_name"],
+            "author_email": meta["committer_email"].lower() if is_merge or "merge" in meta["author_name"].lower() else meta["author_email"].lower(),
             "author_domain": domain,
             
             "committer_name": meta["committer_name"],

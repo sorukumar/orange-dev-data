@@ -27,8 +27,12 @@ def save_state(state):
     with open(STATE_PATH, 'w') as f:
         json.dump(state, f, indent=2)
 
-def map_author(name, email_addr):
-    return resolver.resolve_git(name, email_addr)
+def map_author(name, email_addr, dt=None):
+    cid = resolver.resolve_git(name, email_addr)
+    # Impersonation Filter: Satoshi Nakamoto disappeared in 2011.
+    if cid == "can_satoshi_nakamoto" and dt and dt.year > 2011:
+        return "auto_satoshi_impersonator"
+    return cid
 
 def parse_email_content(content):
     try:
@@ -173,7 +177,7 @@ def main():
             
             res = parse_email_content(content)
             if res and res['message_id'] not in existing_ids:
-                res["canonical_id"] = map_author(res["author_name"], res["author_email"])
+                res["canonical_id"] = map_author(res["author_name"], res["author_email"], res["date"])
                 all_records.append(res)
                 processed += 1
                 

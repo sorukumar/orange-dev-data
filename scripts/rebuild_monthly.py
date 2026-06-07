@@ -259,6 +259,9 @@ def main():
     # Both must run after build_identities.py and before merge_social.py.
     run("python3 scripts/identity/restamp_social_ids.py", cwd=root_dir)
     run("python3 scripts/identity/restamp_delving_ids.py", cwd=root_dir)
+    
+    # Resolve commits with canonical identities and classify sponsors
+    run("python3 scripts/02_process/resolve_commits.py", cwd=root_dir)
     # Audit report: only run on demand (--audit flag) — it writes metadata/audit_potential_matches.json
     # for human curation review but is not consumed by any downstream pipeline step.
     if run_audit:
@@ -267,7 +270,6 @@ def main():
 
     run("python3 scripts/02_process/reviews.py", cwd=root_dir)
     run("python3 scripts/02_process/github_social.py", cwd=root_dir)
-    run("python3 scripts/02_process/core.py", cwd=root_dir)
     run("python3 scripts/02_process/merge_social.py", cwd=root_dir)
     run("python3 scripts/02_process/governance.py", cwd=root_dir)
     
@@ -282,13 +284,14 @@ def main():
     run("python3 scripts/03_analyze/influence.py", cwd=root_dir)
     count_step("After influence — social stats computed", root_dir)
     run("python3 scripts/03_analyze/expertise.py", cwd=root_dir)
-    run("python3 scripts/02_process/unify_contributors.py", cwd=root_dir)
+    run("python3 scripts/03_analyze/unify_contributors.py", cwd=root_dir)
     count_step("After unify_contributors — grand join complete", root_dir)
 
     # PHASE 4: Delivery (Enriched -> Output)
     print("\n--- PHASE 4: Artifact Generation ---")
     run("python3 scripts/04_deliver/generate_regional_evolution.py", cwd=root_dir)
     run("python3 scripts/04_deliver/registry.py", cwd=root_dir)
+    run("python3 scripts/04_deliver/tracker_artifacts.py", cwd=root_dir)
     run("python3 scripts/04_deliver/ui_artifacts.py", cwd=root_dir)
     run("python3 scripts/04_deliver/ecosystem_summary.py", cwd=root_dir)
     run("python3 scripts/04_deliver/discussions_pulse.py", cwd=root_dir)

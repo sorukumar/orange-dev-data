@@ -121,7 +121,8 @@ def deliver():
             if display_name:
                 maintainer = maintainers.get(str(display_name).strip().lower())
         if maintainer:
-            rec.setdefault('badges', {})
+            if not rec.get('badges'):
+                rec['badges'] = {}
             rec['badges']['is_maintainer'] = True
             rec['badges']['maintainer_status'] = maintainer.get('status') or rec['badges'].get('maintainer_status')
             if maintainer.get('role'):
@@ -131,7 +132,8 @@ def deliver():
                 rec['badges']['maintainer_stepped_down'] = maintainer['role'].get('stepped_down')
                 title = maintainer['role'].get('title')
                 if title:
-                    rec.setdefault('roles', [])
+                    if not rec.get('roles'):
+                        rec['roles'] = []
                     if title not in rec['roles']:
                         rec['roles'].append(title)
 
@@ -274,11 +276,16 @@ def deliver():
         if login:
             entry['github_url'] = f"https://github.com/{login}"
             # Update the github object for legacy compatibility in registry
+            # FIX: Ensure we propagate the scraped location data!
+            gh_loc = rec.get('github_location')
+            loc_val = gh_loc if pd.notna(gh_loc) and gh_loc else "Undisclosed"
+            
             if 'github' not in entry or not isinstance(entry['github'], dict):
-                entry['github'] = {"login": login, "location": "Undisclosed"}
+                entry['github'] = {"login": login, "location": loc_val}
             else:
                 entry['github']['login'] = login
-        
+                entry['github']['location'] = loc_val
+
         delving_user = rec.get('delving_username_final')
         if delving_user:
             entry['delving_url'] = f"https://delvingbitcoin.org/u/{delving_user}"

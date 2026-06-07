@@ -10,7 +10,7 @@ from scripts.utils.identity import resolver
 
 # --- Configuration ---
 CONTRIBUTORS_REGISTRY = "metadata/contributors.json"
-COMMITS_PARQUET = "data/raw/core_commits.parquet"
+COMMITS_PARQUET = "data/enriched/commits_resolved.parquet"
 EFFICIENCY_PARQUET = "data/enriched/contributor_review_metrics.parquet"
 SOCIAL_STATS_JSON = "data/enriched/social_stats.json"
 BIPS_PARQUET = "data/enriched/bips_refined.parquet"
@@ -47,12 +47,9 @@ def unify():
     
     # 1. Discover from Commits
     df_commits = pd.read_parquet(COMMITS_PARQUET)
-    
-    def map_author(row):
-        return resolver.resolve_git(str(row.get('author_name', '')), str(row.get('author_email', '')))
 
     if not df_commits.empty and 'hash' in df_commits.columns:
-        df_commits['canonical_id'] = df_commits.apply(map_author, axis=1)
+        # canonical_id is already provided in commits_resolved.parquet
         
         if 'is_merge' in df_commits.columns:
             df_commits['is_auth'] = (~df_commits['is_merge']).astype(int)
@@ -61,23 +58,28 @@ def unify():
             df_commits['is_auth'] = 1
             df_commits['is_merg'] = 0
             
-        commit_stats = df_commits.groupby('canonical_id').agg(
+        # Drop duplicate hashes for a single contributor to prevent double-counting category-exploded rows
+        df_commits_dedup = df_commits.drop_duplicates(subset=['canonical_id', 'hash'])
+        
+        commit_stats = df_commits_dedup.groupby('canonical_id').agg(
             total_commits=('hash', 'count'),
             authored_commits=('is_auth', 'sum'),
             merge_commits=('is_merg', 'sum'),
-            total_additions=('additions', 'sum'),
-            total_deletions=('deletions', 'sum'),
+            # For additions/deletions, since we drop duplicates, we should use the commit-level totals 
+            # if they exist, otherwise fallback to additions. But commit_total_adds is the true per-commit sum.
+            total_additions=('commit_total_adds', 'sum') if 'commit_total_adds' in df_commits_dedup.columns else ('additions', 'sum'),
+            total_deletions=('commit_total_dels', 'sum') if 'commit_total_dels' in df_commits_dedup.columns else ('deletions', 'sum'),
             first_commit=('date_utc', 'min'),
             last_commit=('date_utc', 'max')
         ).reset_index()
 
         # Era-specific authored commit counts
-        dates_utc = pd.to_datetime(df_commits['date_utc'], utc=True, errors='coerce')
+        dates_utc = pd.to_datetime(df_commits_dedup['date_utc'], utc=True, errors='coerce')
         p2016_start = pd.Timestamp('2016-01-01', tz='UTC')
         modern_cutoff = dates_utc.max() - pd.DateOffset(years=3)
-        mask_auth = df_commits['is_auth'] == 1
-        p2016_auth = df_commits[mask_auth & (dates_utc >= p2016_start)].groupby('canonical_id')['hash'].nunique().rename('p2016_authored_commits').reset_index()
-        modern_auth = df_commits[mask_auth & (dates_utc >= modern_cutoff)].groupby('canonical_id')['hash'].nunique().rename('modern_authored_commits').reset_index()
+        mask_auth = df_commits_dedup['is_auth'] == 1
+        p2016_auth = df_commits_dedup[mask_auth & (dates_utc >= p2016_start)].groupby('canonical_id')['hash'].nunique().rename('p2016_authored_commits').reset_index()
+        modern_auth = df_commits_dedup[mask_auth & (dates_utc >= modern_cutoff)].groupby('canonical_id')['hash'].nunique().rename('modern_authored_commits').reset_index()
         commit_stats = commit_stats.merge(p2016_auth, on='canonical_id', how='left')
         commit_stats = commit_stats.merge(modern_auth, on='canonical_id', how='left')
 
@@ -131,12 +133,22 @@ def unify():
     
     df_reg['first_seen'] = pd.to_datetime(df_reg['first_seen'], errors='coerce')
     df_reg['last_seen'] = pd.to_datetime(df_reg['last_seen'], errors='coerce')
+    
+    def first_non_null(series):
+        for val in series:
+            if val is None:
+                continue
+            if isinstance(val, float) and np.isnan(val):
+                continue
+            return val
+        return None
+
     df_reg_agg = df_reg.groupby('uuid').agg({
-        'badges': 'first',
-        'roles': 'first',
+        'badges': first_non_null,
+        'roles': first_non_null,
         'first_seen': 'min',
         'last_seen': 'max',
-        'technical_focus': 'first'
+        'technical_focus': first_non_null
     }).reset_index()
 
     df_unified = df_unified.merge(df_reg_agg, on='uuid', how='left')
@@ -277,6 +289,20 @@ def unify():
         df_unified['expertise_domain_scores'] = df_unified['expertise_domain_scores'].apply(
             lambda x: x if isinstance(x, dict) else {}
         )
+
+    # --- Bot Exclusion ---
+    # Filter out known automation bots from the human developer dataset
+    KNOWN_BOTS = {
+        'auto_bitcoin_core_merge_script',
+        'auto_github_actions_bot',
+        'auto_drahtbot',
+        'auto_dependabot',
+        'auto_dependabot_bot',
+        'auto_inclusive_coding_bot',
+        'auto_pull_bot',
+        'auto_github_project_automation_bot'
+    }
+    df_unified = df_unified[~df_unified['uuid'].isin(KNOWN_BOTS)]
 
     os.makedirs(os.path.dirname(OUTPUT_PARQUET), exist_ok=True)
     df_unified.to_parquet(OUTPUT_PARQUET, index=False)
