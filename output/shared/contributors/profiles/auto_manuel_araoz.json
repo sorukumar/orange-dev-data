@@ -1,5 +1,5 @@
 {
-  "display_name": "Manuel Araoz",
+  "display_name": "manuel araoz",
   "github_login_final": "maraoz",
   "delving_username_final": null,
   "uuid": "auto_manuel_araoz",
@@ -11,7 +11,7 @@
     "is_social_contributor": true,
     "is_sponsored": null,
     "maintainer_status": null,
-    "social_source": "github",
+    "social_source": "mailing_list",
     "sponsor_id": null
   },
   "roles": [
@@ -19,10 +19,10 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-04T00:00:00",
+  "last_seen": "2026-06-06T00:00:00",
   "technical_focus": "Tests",
-  "total_commits": 6.0,
-  "authored_commits": 6.0,
+  "total_commits": 5.0,
+  "authored_commits": 5.0,
   "merge_commits": 0.0,
   "total_additions": 619.0,
   "total_deletions": 56.0,
@@ -45,31 +45,36 @@
   "avg_pr_ack_velocity_days": 18.56082175925926,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 1.7142857142857142,
-  "hybrid_score": 0.5545,
+  "hybrid_score": 0.5659,
   "p2016_hybrid_score": 0.0848,
   "modern_hybrid_score": 0.0542,
-  "impact_score": 28.0,
+  "impact_score": 29.0,
   "p2016_impact_score": 5.0,
   "modern_impact_score": 3.0,
-  "threads_started": 0.0,
-  "replies_sent": 0.0,
-  "ml_threads": 0.0,
+  "threads_started": 1.0,
+  "replies_sent": 2.0,
+  "ml_threads": 1.0,
   "delving_threads": 0.0,
-  "ml_responses": 0.0,
+  "ml_responses": 2.0,
   "delving_responses": 0.0,
-  "first_active": null,
-  "last_active": null,
+  "first_active": "2014-04-25T17:27:45",
+  "last_active": "2015-09-01T13:22:51",
   "dev_type": "Builder",
   "expertise_domains": [
-    "Infrastructure"
+    "Infrastructure",
+    "Wallet"
   ],
   "expertise_by_source": {
     "code": {
       "Infrastructure": 1.0
+    },
+    "discussion": {
+      "Wallet": 1.0
     }
   },
   "expertise_domain_scores": {
-    "Infrastructure": 1.0
+    "Infrastructure": 0.6,
+    "Wallet": 0.4
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -78,7 +83,7 @@
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
   "global_first_active": "2014-03-28T19:28:13",
-  "global_last_active": "2014-12-16T19:26:07",
+  "global_last_active": "2015-09-01T13:22:51",
   "github_location": "Planet Earth",
   "github_company": null,
   "github_bio": null,
@@ -91,6 +96,29 @@
     "2014": {
       "Build & CI": 0.5,
       "Tests": 4.5
+    }
+  },
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "[Bitcoin-development] New BIP32 structure for P2SH multisig wallets",
+    "date": "2014-04-25",
+    "link": "https://gnusha.org/pi/bitcoindev/CABQSq2Q98K5zbUbQAqSE4OYez2QuOaWTt+9n5iZmSR2boynf_Q@mail.gmail.com"
+  },
+  "last_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoin-dev] push tx fuzzing",
+    "date": "2015-09-01",
+    "link": "https://gnusha.org/pi/bitcoindev/CABQSq2RgdrFyHw36k96FDL+uFCRuEedTLWUrXM+VtrYY_Ng8fg@mail.gmail.com"
+  },
+  "social_history": {
+    "2014": {
+      "multisig-threshold": 2,
+      "privacy": 1,
+      "script-opcodes": 2,
+      "wallet-keys": 2
+    },
+    "2015": {
+      "testing-devtools": 1
     }
   }
 }

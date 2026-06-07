@@ -1,0 +1,301 @@
+{
+  "display_name": "Drak",
+  "github_login_final": "btcdrak",
+  "delving_username_final": null,
+  "uuid": "can_drak",
+  "badges": {
+    "is_bip_author": null,
+    "is_core_committer": null,
+    "is_core_contributor": true,
+    "is_maintainer": null,
+    "is_social_contributor": true,
+    "is_sponsored": null,
+    "maintainer_status": null,
+    "social_source": "mailing_list",
+    "sponsor_id": null
+  },
+  "roles": [
+    "Researcher"
+  ],
+  "first_seen": "2026-04-17T00:00:00",
+  "last_seen": "2026-06-06T00:00:00",
+  "technical_focus": "Core Libs",
+  "total_commits": 91.0,
+  "authored_commits": 91.0,
+  "merge_commits": 0.0,
+  "total_additions": 1881.0,
+  "total_deletions": 2094.0,
+  "first_commit": "2012-01-02T07:27:41",
+  "last_commit": "2022-06-07T15:16:25",
+  "p2016_authored_commits": 55.0,
+  "modern_authored_commits": 0.0,
+  "bips_authored": 7.0,
+  "p2016_bips_authored": 4.0,
+  "modern_bips_authored": 0.0,
+  "avg_review_latency_days": 259.74117273282127,
+  "reviews_count": 788.0,
+  "avg_approval_latency_days": 151.5615071557172,
+  "approvals_count": 430.0,
+  "p2016_reviews_count": 540.0,
+  "modern_reviews_count": 16.0,
+  "first_review_date": "2011-09-09T21:06:45+00:00",
+  "last_review_date": "2025-10-28T23:57:28+00:00",
+  "prs_authored": 283.0,
+  "avg_pr_ack_velocity_days": 21.557172480209218,
+  "avg_concept_lead_time_days": 11.904771312260536,
+  "review_reciprocity": 2.784452296819788,
+  "hybrid_score": 1.8394,
+  "p2016_hybrid_score": 1.2326,
+  "modern_hybrid_score": 0.1827,
+  "impact_score": 67.0,
+  "p2016_impact_score": 52.0,
+  "modern_impact_score": 10.0,
+  "threads_started": 73.0,
+  "replies_sent": 189.0,
+  "ml_threads": 73.0,
+  "delving_threads": 0.0,
+  "ml_responses": 189.0,
+  "delving_responses": 0.0,
+  "first_active": "2013-11-05T16:15:27",
+  "last_active": "2022-03-01T22:45:58",
+  "dev_type": "Protocol Designer",
+  "expertise_domains": [
+    "Consensus",
+    "Mining",
+    "Infrastructure"
+  ],
+  "expertise_by_source": {
+    "bips": {
+      "Consensus": 0.857,
+      "Infrastructure": 0.143
+    },
+    "discussion": {
+      "Consensus": 0.591,
+      "Mining": 0.409
+    }
+  },
+  "expertise_domain_scores": {
+    "Consensus": 0.781,
+    "Infrastructure": 0.1021,
+    "Mining": 0.1169
+  },
+  "p2016_posts": 101.0,
+  "modern_posts": 0.0,
+  "p2016_ml_posts": 101.0,
+  "p2016_delving_posts": 0.0,
+  "modern_ml_posts": 0.0,
+  "modern_delving_posts": 0.0,
+  "global_first_active": "2012-01-02T07:27:41",
+  "global_last_active": "2022-06-07T15:16:25",
+  "github_location": null,
+  "github_company": null,
+  "github_bio": null,
+  "github_twitter": null,
+  "github_blog": "twitter.com/btcdrak",
+  "github_followers": 539.0,
+  "is_top_50": false,
+  "github_url": "https://github.com/btcdrak",
+  "commit_history": {
+    "2012": {
+      "GUI": 1.0,
+      "Tests": 0.5,
+      "Utilities": 2.5
+    },
+    "2014": {
+      "Build & CI": 1.0,
+      "Consensus": 1.0,
+      "Documentation": 7.0,
+      "GUI": 1.0,
+      "Tests": 2.0,
+      "Utilities": 8.0
+    },
+    "2015": {
+      "Documentation": 2.0,
+      "GUI": 2.25,
+      "Node & RPC": 0.5,
+      "P2P Network": 2.75,
+      "Tests": 0.25,
+      "Utilities": 4.25
+    },
+    "2016": {
+      "Build & CI": 2.33,
+      "Consensus": 3.5,
+      "Documentation": 4.58,
+      "GUI": 1.75,
+      "Mempool": 0.83,
+      "Node & RPC": 2.75,
+      "Script": 2.25,
+      "Tests": 4.08,
+      "Utilities": 11.92
+    },
+    "2017": {
+      "Build & CI": 1.0,
+      "Documentation": 1.0,
+      "GUI": 1.0,
+      "P2P Network": 1.0,
+      "Tests": 1.0,
+      "Utilities": 1.0
+    },
+    "2018": {
+      "Build & CI": 0.08,
+      "Consensus": 0.08,
+      "Cryptography": 0.08,
+      "Database": 0.08,
+      "Documentation": 1.0,
+      "GUI": 0.08,
+      "Mempool": 0.08,
+      "Node & RPC": 0.58,
+      "P2P Network": 0.33,
+      "Script": 0.08,
+      "Tests": 0.33,
+      "Utilities": 0.83,
+      "Wallet": 0.33
+    },
+    "2019": {
+      "Consensus": 1.0
+    },
+    "2020": {
+      "Documentation": 1.0,
+      "Tests": 2.0
+    },
+    "2021": {
+      "Consensus": 1.5,
+      "Documentation": 1.0,
+      "GUI": 2.0,
+      "Tests": 0.5,
+      "Wallet": 1.0
+    },
+    "2022": {
+      "Consensus": 0.5,
+      "Mempool": 0.5
+    }
+  },
+  "bip_list": [
+    {
+      "number": 68,
+      "title": "Relative lock-time using consensus-enforced sequence numbers",
+      "status": "Deployed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0068.mediawiki"
+    },
+    {
+      "number": 98,
+      "title": "Fast Merkle Trees",
+      "status": "Draft",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0098.mediawiki"
+    },
+    {
+      "number": 105,
+      "title": "Consensus based block size retargeting algorithm",
+      "status": "Closed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0105.mediawiki"
+    },
+    {
+      "number": 112,
+      "title": "CHECKSEQUENCEVERIFY",
+      "status": "Deployed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0112.mediawiki"
+    },
+    {
+      "number": 116,
+      "title": "MERKLEBRANCHVERIFY",
+      "status": "Draft",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0116.mediawiki"
+    },
+    {
+      "number": 117,
+      "title": "Tail Call Execution Semantics",
+      "status": "Draft",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0117.mediawiki"
+    },
+    {
+      "number": 320,
+      "title": "nVersion bits for general purpose use",
+      "status": "Draft",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0320.mediawiki"
+    }
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "Re: [Bitcoin-development] Possible Solution To SM Attack",
+    "date": "2013-11-05",
+    "link": "https://gnusha.org/pi/bitcoindev/CANAnSg2sUfRH0mYEir_XKUz-iOYRpdzNgM-AJ7t-H=SOa4wBig@mail.gmail.com"
+  },
+  "last_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoin-dev] Decentralized BIP 47 payment code directory",
+    "date": "2022-03-01",
+    "link": "https://gnusha.org/pi/bitcoindev/Mx7wjMe--3-2@tutanota.de"
+  },
+  "social_history": {
+    "2013": {
+      "other": 29,
+      "mining": 2
+    },
+    "2014": {
+      "bip-process": 2,
+      "other": 32,
+      "mempool-fees": 3,
+      "privacy": 7,
+      "script-opcodes": 4
+    },
+    "2015": {
+      "bip-process": 6,
+      "other": 42,
+      "hard-fork-block-size": 37,
+      "mempool-fees": 4,
+      "mining": 21,
+      "privacy": 2,
+      "script-opcodes": 16,
+      "soft-fork-activation": 4
+    },
+    "2016": {
+      "bip-process": 4,
+      "other": 5,
+      "hard-fork-block-size": 1,
+      "mining": 2,
+      "script-opcodes": 2,
+      "soft-fork-activation": 2
+    },
+    "2017": {
+      "hard-fork-block-size": 4,
+      "mining": 2,
+      "other": 2,
+      "soft-fork-activation": 4
+    },
+    "2018": {
+      "mining": 1,
+      "soft-fork-activation": 1
+    },
+    "2020": {
+      "mempool-fees": 3,
+      "other": 5,
+      "privacy": 3
+    },
+    "2021": {
+      "bip-process": 3,
+      "other": 37,
+      "hard-fork-block-size": 1,
+      "mempool-fees": 7,
+      "mining": 10,
+      "privacy": 4,
+      "script-opcodes": 2,
+      "soft-fork-activation": 6
+    },
+    "2022": {
+      "bip-process": 1,
+      "other": 19,
+      "mempool-fees": 5,
+      "mining": 2,
+      "privacy": 3,
+      "script-opcodes": 3,
+      "soft-fork-activation": 8
+    }
+  }
+}

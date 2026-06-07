@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-04T00:00:00",
+  "last_seen": "2026-06-06T00:00:00",
   "technical_focus": "None",
   "total_commits": 0.0,
   "authored_commits": 0.0,
@@ -44,18 +44,18 @@
   "avg_pr_ack_velocity_days": 0.09181712962962962,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 2.0,
-  "hybrid_score": 0.1637,
-  "p2016_hybrid_score": 0.2296,
+  "hybrid_score": 0.1688,
+  "p2016_hybrid_score": 0.2388,
   "modern_hybrid_score": 0.4146,
-  "impact_score": 9.0,
+  "impact_score": 10.0,
   "p2016_impact_score": 13.0,
   "modern_impact_score": 22.0,
-  "threads_started": 17.0,
-  "replies_sent": 84.0,
-  "ml_threads": 2.0,
+  "threads_started": 18.0,
+  "replies_sent": 89.0,
+  "ml_threads": 3.0,
   "delving_threads": 15.0,
-  "ml_responses": 70.0,
-  "delving_responses": 14.0,
+  "ml_responses": 73.0,
+  "delving_responses": 16.0,
   "first_active": null,
   "last_active": null,
   "dev_type": "Participant",
@@ -66,22 +66,22 @@
   ],
   "expertise_by_source": {
     "discussion": {
-      "Consensus": 0.161,
-      "Cryptography": 0.71,
-      "Script": 0.129
+      "Consensus": 0.18,
+      "Cryptography": 0.705,
+      "Script": 0.115
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.161,
-    "Cryptography": 0.71,
-    "Script": 0.129
+    "Consensus": 0.18,
+    "Cryptography": 0.705,
+    "Script": 0.115
   },
-  "p2016_posts": 101.0,
-  "modern_posts": 101.0,
-  "p2016_ml_posts": 72.0,
-  "p2016_delving_posts": 29.0,
-  "modern_ml_posts": 72.0,
-  "modern_delving_posts": 29.0,
+  "p2016_posts": 107.0,
+  "modern_posts": 107.0,
+  "p2016_ml_posts": 76.0,
+  "p2016_delving_posts": 31.0,
+  "modern_ml_posts": 76.0,
+  "modern_delving_posts": 31.0,
   "global_first_active": null,
   "global_last_active": null,
   "github_location": null,
@@ -101,9 +101,9 @@
   },
   "last_message": {
     "source": "delving",
-    "subject": "Re: [BIP Draft] Witness Version 3: ML-DSA-65 Post-Quantum Key-Path Spending",
-    "date": "2026-06-01",
-    "link": "https://delvingbitcoin.org/t/bip-draft-witness-version-3-ml-dsa-65-post-quantum-key-path-spending/2422/3"
+    "subject": "Re: Bird of Prey 2: non-malleable Schnorr + PQ signatures",
+    "date": "2026-06-06",
+    "link": "https://delvingbitcoin.org/t/bird-of-prey-2-non-malleable-schnorr-pq-signatures/2514/8"
   },
   "social_history": {
     "2023": {
@@ -126,14 +126,14 @@
       "wallet-keys": 1
     },
     "2026": {
-      "bitvm": 10,
+      "bitvm": 11,
       "covenants": 9,
-      "other": 29,
+      "other": 34,
       "multisig-threshold": 6,
-      "quantum": 39,
+      "quantum": 42,
       "script-opcodes": 9,
-      "signatures-sighash": 7,
-      "taproot": 19,
+      "signatures-sighash": 9,
+      "taproot": 21,
       "wallet-keys": 12
     }
   }

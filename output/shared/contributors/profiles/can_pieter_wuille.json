@@ -24,10 +24,10 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-04T00:00:00",
+  "last_seen": "2026-06-06T00:00:00",
   "technical_focus": "Utilities",
-  "total_commits": 3604.0,
-  "authored_commits": 3021.0,
+  "total_commits": 2391.0,
+  "authored_commits": 1808.0,
   "merge_commits": 583.0,
   "total_additions": 213336.0,
   "total_deletions": 80822.0,
@@ -43,7 +43,7 @@
   "avg_approval_latency_days": 120.61540550653788,
   "approvals_count": 2419.0,
   "p2016_reviews_count": 2802.0,
-  "modern_reviews_count": 444.0,
+  "modern_reviews_count": 440.0,
   "first_review_date": "2011-04-23T14:06:52+00:00",
   "last_review_date": "2026-06-02T22:30:40+00:00",
   "prs_authored": 933.0,
@@ -52,16 +52,16 @@
   "review_reciprocity": 4.566988210075027,
   "hybrid_score": 3.7867,
   "p2016_hybrid_score": 2.5203,
-  "modern_hybrid_score": 1.4867,
+  "modern_hybrid_score": 1.4866,
   "impact_score": 90.0,
   "p2016_impact_score": 78.0,
   "modern_impact_score": 59.0,
   "threads_started": 140.0,
-  "replies_sent": 552.0,
+  "replies_sent": 554.0,
   "ml_threads": 66.0,
   "delving_threads": 74.0,
-  "ml_responses": 451.0,
-  "delving_responses": 101.0,
+  "ml_responses": 452.0,
+  "delving_responses": 102.0,
   "first_active": "2011-06-17T05:31:25",
   "last_active": null,
   "dev_type": "Protocol Designer",
@@ -101,12 +101,12 @@
     "Script": 0.1489,
     "Wallet": 0.0245
   },
-  "p2016_posts": 347.0,
-  "modern_posts": 195.0,
-  "p2016_ml_posts": 172.0,
-  "p2016_delving_posts": 175.0,
-  "modern_ml_posts": 20.0,
-  "modern_delving_posts": 175.0,
+  "p2016_posts": 349.0,
+  "modern_posts": 197.0,
+  "p2016_ml_posts": 173.0,
+  "p2016_delving_posts": 176.0,
+  "modern_ml_posts": 21.0,
+  "modern_delving_posts": 176.0,
   "global_first_active": "2011-03-17T21:51:59",
   "global_last_active": "2026-03-10T18:09:27",
   "github_location": null,
@@ -523,8 +523,8 @@
   "last_message": {
     "source": "delving",
     "subject": "Re: Bird of Prey 2: non-malleable Schnorr + PQ signatures",
-    "date": "2026-06-01",
-    "link": "https://delvingbitcoin.org/t/bird-of-prey-2-non-malleable-schnorr-pq-signatures/2514/5"
+    "date": "2026-06-06",
+    "link": "https://delvingbitcoin.org/t/bird-of-prey-2-non-malleable-schnorr-pq-signatures/2514/7"
   },
   "social_history": {
     "2011": {
@@ -649,12 +649,13 @@
       "taproot": 11
     },
     "2026": {
-      "other": 30,
+      "other": 32,
+      "hard-fork-block-size": 1,
       "mempool-fees": 5,
       "mining": 2,
       "script-opcodes": 8,
-      "segwit": 3,
-      "taproot": 6
+      "segwit": 5,
+      "taproot": 8
     }
   }
 }
