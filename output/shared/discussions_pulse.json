@@ -1,28 +1,37 @@
 {
-  "generated_at": "2026-06-06T23:22:28.909360",
+  "generated_at": "2026-06-09T12:31:53.219109",
   "windows": {
     "30d": {
       "window_days": 30,
-      "total_messages": 242,
-      "total_threads": 135,
-      "unique_voices": 95,
+      "total_messages": 264,
+      "total_threads": 141,
+      "unique_voices": 99,
       "themes": [
         {
           "category": "quantum",
           "label": "Quantum Resistance",
-          "msgs": 69,
+          "msgs": 81,
           "threads": 34,
-          "voices": 26,
-          "share": 33.0,
+          "voices": 29,
+          "share": 36.2,
+          "trend": "rising"
+        },
+        {
+          "category": "consensus-cleanup",
+          "label": "Consensus Cleanup",
+          "msgs": 23,
+          "threads": 10,
+          "voices": 11,
+          "share": 10.3,
           "trend": "rising"
         },
         {
           "category": "utxo-sync",
           "label": "UTXO & Sync",
-          "msgs": 21,
-          "threads": 18,
-          "voices": 7,
-          "share": 10.0,
+          "msgs": 22,
+          "threads": 19,
+          "voices": 8,
+          "share": 9.8,
           "trend": "rising"
         },
         {
@@ -31,7 +40,7 @@
           "msgs": 18,
           "threads": 2,
           "voices": 12,
-          "share": 8.6,
+          "share": 8.0,
           "trend": "rising"
         },
         {
@@ -40,35 +49,17 @@
           "msgs": 14,
           "threads": 6,
           "voices": 6,
-          "share": 6.7,
+          "share": 6.2,
           "trend": "steady"
         },
         {
           "category": "testing-devtools",
           "label": "Dev Tooling",
-          "msgs": 13,
-          "threads": 5,
-          "voices": 9,
-          "share": 6.2,
-          "trend": "fading"
-        },
-        {
-          "category": "consensus-cleanup",
-          "label": "Consensus Cleanup",
           "msgs": 12,
-          "threads": 7,
-          "voices": 8,
-          "share": 5.7,
-          "trend": "rising"
-        },
-        {
-          "category": "mining",
-          "label": "Mining Protocol",
-          "msgs": 11,
           "threads": 5,
-          "voices": 6,
-          "share": 5.3,
-          "trend": "new"
+          "voices": 8,
+          "share": 5.4,
+          "trend": "fading"
         },
         {
           "category": "privacy",
@@ -76,7 +67,7 @@
           "msgs": 9,
           "threads": 3,
           "voices": 6,
-          "share": 4.3,
+          "share": 4.0,
           "trend": "steady"
         },
         {
@@ -85,7 +76,7 @@
           "msgs": 9,
           "threads": 4,
           "voices": 6,
-          "share": 4.3,
+          "share": 4.0,
           "trend": "fading"
         },
         {
@@ -94,11 +85,33 @@
           "msgs": 6,
           "threads": 4,
           "voices": 2,
-          "share": 2.9,
+          "share": 2.7,
+          "trend": "new"
+        },
+        {
+          "category": "security",
+          "label": "Security",
+          "msgs": 5,
+          "threads": 2,
+          "voices": 3,
+          "share": 2.2,
           "trend": "new"
         }
       ],
       "hot_threads": [
+        {
+          "thread_id": "topic_2603",
+          "subject": "Public key recovery for EC leaves in P2MR (BIP-360)",
+          "category": "quantum",
+          "label": "Quantum Resistance",
+          "reply_count": 10,
+          "unique_authors": 5,
+          "score": 50,
+          "last_post": "2026-06-09",
+          "source": "delving",
+          "link": "https://delvingbitcoin.org/t/public-key-recovery-for-ec-leaves-in-p2mr-bip-360/2603/13",
+          "snippet": "Public key recovery for EC leaves in P2MR\nThis note describes a possible BIP-360 optimization using EC public key recovery.\nThe idea is\u2026"
+        },
         {
           "thread_id": "topic_2215",
           "subject": "Disposing of \"dust attack\" UTXOs",
@@ -167,14 +180,14 @@
         {
           "thread_id": "topic_2591",
           "subject": "Default signet reorg history \u2014 was the fork at height 287766 (depth 19) deliberate?",
-          "category": "mining",
-          "label": "Mining Protocol",
-          "reply_count": 3,
+          "category": "consensus-cleanup",
+          "label": "Consensus Cleanup",
+          "reply_count": 4,
           "unique_authors": 3,
-          "score": 9,
-          "last_post": "2026-06-05",
+          "score": 12,
+          "last_post": "2026-06-08",
           "source": "delving",
-          "link": "https://delvingbitcoin.org/t/default-signet-reorg-history-was-the-fork-at-height-287766-depth-19-deliberate/2591/7",
+          "link": "https://delvingbitcoin.org/t/default-signet-reorg-history-was-the-fork-at-height-287766-depth-19-deliberate/2591/9",
           "snippet": "We run a Bitcoin L2 and use the default signet as our primary testnet, so I\u2019m trying to understand how often and how deep the default\u2026"
         },
         {
@@ -189,26 +202,28 @@
           "source": "mailing_list",
           "link": "https://gnusha.org/pi/bitcoindev/FJTfAMGEfN5PH0phIMiQ--jMyFCzpSHQpZb8eg8ZMVKFqTMZtzjYrPz2qB6HIvAl81ZSuMCH88i3_B_vYcCmhmi8laRxbgOtFEBh0h24GK8=@protonmail.com",
           "snippet": "nan"
-        },
-        {
-          "thread_id": "topic_2466",
-          "subject": "Fingerprinting nodes: Possible Solutions",
-          "category": "testing-devtools",
-          "label": "Dev Tooling",
-          "reply_count": 3,
-          "unique_authors": 3,
-          "score": 9,
-          "last_post": "2026-05-15",
-          "source": "delving",
-          "link": "https://delvingbitcoin.org/t/fingerprinting-nodes-possible-solutions/2466/6",
-          "snippet": "I may be missing something obvious, but would it not be an option to restrict GETADDR to only return entries corresponding to the\u2026"
         }
       ],
       "top_bips": [
         {
           "bip_id": "360",
           "title": "Pay-to-Merkle-Root (P2MR)",
-          "mentions": 12
+          "mentions": 24
+        },
+        {
+          "bip_id": "54",
+          "title": "Consensus Cleanup",
+          "mentions": 15
+        },
+        {
+          "bip_id": "32",
+          "title": "Hierarchical Deterministic Wallets",
+          "mentions": 14
+        },
+        {
+          "bip_id": "39",
+          "title": "Mnemonic code for generating deterministic keys",
+          "mentions": 13
         },
         {
           "bip_id": "340",
@@ -219,31 +234,20 @@
           "bip_id": "451",
           "title": "Dust UTXO Disposal Protocol",
           "mentions": 7
-        },
-        {
-          "bip_id": "3",
-          "title": "Updated BIP Process",
-          "mentions": 6
-        },
-        {
-          "bip_id": "361",
-          "title": "Post Quantum Migration and Legacy Signature Sunset",
-          "mentions": 5
-        },
-        {
-          "bip_id": "54",
-          "title": "Consensus Cleanup",
-          "mentions": 5
         }
       ],
       "top_voices": [
         {
           "name": "conduition",
-          "posts": 22
+          "posts": 23
+        },
+        {
+          "name": "Pieter Wuille",
+          "posts": 16
         },
         {
           "name": "Anthony Towns",
-          "posts": 13
+          "posts": 15
         },
         {
           "name": "Murch",
@@ -254,46 +258,42 @@
           "posts": 11
         },
         {
-          "name": "Pieter Wuille",
-          "posts": 10
-        },
-        {
           "name": "opus lux",
-          "posts": 9
+          "posts": 11
         },
         {
           "name": "0xB10C",
           "posts": 8
         },
         {
-          "name": "Adam Gibson",
-          "posts": 6
+          "name": "Nagaev Boris",
+          "posts": 7
         }
       ],
       "source_pct": {
-        "delving": 53.7,
-        "mailing_list": 46.3
+        "delving": 54.9,
+        "mailing_list": 45.1
       },
       "source_counts": {
-        "delving": 130,
-        "mailing_list": 112
+        "delving": 145,
+        "mailing_list": 119
       },
       "mailing_list_stale": false,
       "mailing_list_days_since": null
     },
     "90d": {
       "window_days": 90,
-      "total_messages": 710,
-      "total_threads": 352,
-      "unique_voices": 203,
+      "total_messages": 727,
+      "total_threads": 358,
+      "unique_voices": 207,
       "themes": [
         {
           "category": "quantum",
           "label": "Quantum Resistance",
-          "msgs": 158,
-          "threads": 84,
-          "voices": 55,
-          "share": 25.4,
+          "msgs": 173,
+          "threads": 85,
+          "voices": 58,
+          "share": 27.4,
           "trend": "rising"
         },
         {
@@ -302,25 +302,25 @@
           "msgs": 69,
           "threads": 9,
           "voices": 31,
-          "share": 11.1,
+          "share": 10.9,
           "trend": "fading"
         },
         {
           "category": "covenants",
           "label": "Covenants & Vaults",
-          "msgs": 50,
+          "msgs": 47,
           "threads": 19,
-          "voices": 16,
-          "share": 8.0,
+          "voices": 15,
+          "share": 7.4,
           "trend": "fading"
         },
         {
           "category": "taproot",
           "label": "Taproot",
-          "msgs": 44,
+          "msgs": 43,
           "threads": 29,
           "voices": 20,
-          "share": 7.1,
+          "share": 6.8,
           "trend": "steady"
         },
         {
@@ -329,15 +329,24 @@
           "msgs": 33,
           "threads": 8,
           "voices": 17,
-          "share": 5.3,
+          "share": 5.2,
           "trend": "steady"
+        },
+        {
+          "category": "consensus-cleanup",
+          "label": "Consensus Cleanup",
+          "msgs": 32,
+          "threads": 14,
+          "voices": 14,
+          "share": 5.1,
+          "trend": "rising"
         },
         {
           "category": "utxo-sync",
           "label": "UTXO & Sync",
-          "msgs": 29,
-          "threads": 21,
-          "voices": 11,
+          "msgs": 30,
+          "threads": 22,
+          "voices": 12,
           "share": 4.7,
           "trend": "rising"
         },
@@ -347,17 +356,8 @@
           "msgs": 23,
           "threads": 7,
           "voices": 17,
-          "share": 3.7,
+          "share": 3.6,
           "trend": "fading"
-        },
-        {
-          "category": "consensus-cleanup",
-          "label": "Consensus Cleanup",
-          "msgs": 22,
-          "threads": 12,
-          "voices": 11,
-          "share": 3.5,
-          "trend": "rising"
         },
         {
           "category": "core-dev",
@@ -374,7 +374,7 @@
           "msgs": 21,
           "threads": 13,
           "voices": 13,
-          "share": 3.4,
+          "share": 3.3,
           "trend": "fading"
         }
       ],
@@ -417,6 +417,19 @@
           "source": "delving",
           "link": "https://delvingbitcoin.org/t/onion-message-jamming-in-the-lightning-network/2414/15",
           "snippet": "Background\nBOLT 4 acknowledges that onion message routing is inherently unreliable and recommends that implementations apply rate\u2026"
+        },
+        {
+          "thread_id": "topic_2603",
+          "subject": "Public key recovery for EC leaves in P2MR (BIP-360)",
+          "category": "quantum",
+          "label": "Quantum Resistance",
+          "reply_count": 10,
+          "unique_authors": 5,
+          "score": 50,
+          "last_post": "2026-06-09",
+          "source": "delving",
+          "link": "https://delvingbitcoin.org/t/public-key-recovery-for-ec-leaves-in-p2mr-bip-360/2603/13",
+          "snippet": "Public key recovery for EC leaves in P2MR\nThis note describes a possible BIP-360 optimization using EC public key recovery.\nThe idea is\u2026"
         },
         {
           "thread_id": "topic_2360",
@@ -469,31 +482,23 @@
           "source": "mailing_list",
           "link": "https://gnusha.org/pi/bitcoindev/A-Yiqh9r08Wd0V1KwMr7MlVObsiW3esWqySZZzm7aZBV3xBpL0qVJSpF07GfQBoq9YFpBLdlo0k2_tGU5CZ-i0_91MEketsaN8V4FpUnno0=@protonmail.com",
           "snippet": "For fun, let's start with a pop-quiz:  Select all that apply: There can exist a transaction of ___ bytes  serialized size that\u2026"
-        },
-        {
-          "thread_id": "<0vqF88LoOnY4GiUB4vf-MdeZpTAtR70tokS3cLwt2DX0e6_fD1X_wyhPwWEdIdm6R88AULObIU08CWsb5QfeoaM5c4yXPqN5wHyCrqMCtfQ=@protonmail.com>",
-          "subject": "In defense of a PQ output type",
-          "category": "quantum",
-          "label": "Quantum Resistance",
-          "reply_count": 4,
-          "unique_authors": 4,
-          "score": 16,
-          "last_post": "2026-04-15",
-          "source": "mailing_list",
-          "link": "https://gnusha.org/pi/bitcoindev/b1Rnhsv35QTZwTeWM9R6Z9MGYw950zAXhs1QCuavxI64Y5CmSkYSXEP5bZgI3l1OY6V7PfBtBBAjXF1ACMznCg4VNrHJ1rMTD7qQM2hgtz8=@protonmail.com",
-          "snippet": "Many of us appear to be in favour of introducing post-quantum signatures to Bitcoin via a new Tapscript operation, conditioning the CRQC\u2026"
         }
       ],
       "top_bips": [
         {
           "bip_id": "32",
           "title": "Hierarchical Deterministic Wallets",
-          "mentions": 27
+          "mentions": 40
         },
         {
           "bip_id": "360",
           "title": "Pay-to-Merkle-Root (P2MR)",
-          "mentions": 20
+          "mentions": 31
+        },
+        {
+          "bip_id": "54",
+          "title": "Consensus Cleanup",
+          "mentions": 26
         },
         {
           "bip_id": "451",
@@ -506,35 +511,30 @@
           "mentions": 18
         },
         {
-          "bip_id": "54",
-          "title": "Consensus Cleanup",
-          "mentions": 17
-        },
-        {
-          "bip_id": "118",
-          "title": "SIGHASH_ANYPREVOUT for Taproot Scripts",
-          "mentions": 16
+          "bip_id": "39",
+          "title": "Mnemonic code for generating deterministic keys",
+          "mentions": 15
         }
       ],
       "top_voices": [
         {
           "name": "conduition",
-          "posts": 47
+          "posts": 51
         },
         {
           "name": "Antoine Poinsot",
-          "posts": 30
-        },
-        {
-          "name": "AaronZhang",
-          "posts": 26
-        },
-        {
-          "name": "Matt Corallo",
-          "posts": 22
+          "posts": 27
         },
         {
           "name": "Anthony Towns",
+          "posts": 24
+        },
+        {
+          "name": "AaronZhang",
+          "posts": 23
+        },
+        {
+          "name": "Matt Corallo",
           "posts": 22
         },
         {
@@ -551,12 +551,12 @@
         }
       ],
       "source_pct": {
-        "delving": 53.5,
-        "mailing_list": 46.5
+        "delving": 53.6,
+        "mailing_list": 46.4
       },
       "source_counts": {
-        "delving": 380,
-        "mailing_list": 330
+        "delving": 390,
+        "mailing_list": 337
       },
       "mailing_list_stale": false,
       "mailing_list_days_since": null

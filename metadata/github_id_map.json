@@ -1,9 +1,9 @@
 {
-  "generated": "2026-06-07T03:25:30Z",
-  "total_entries": 1613,
-  "real_email_entries": 902,
+  "generated": "2026-06-09T17:24:00Z",
+  "total_entries": 1614,
+  "real_email_entries": 903,
   "noreply_only_entries": 711,
-  "curated_entries": 25,
+  "curated_entries": 26,
   "corroboration_min": 2,
   "entries": [
     {
@@ -2809,20 +2809,6 @@
           "corroboration_count": null,
           "example_sha": null,
           "example_pr": null
-        }
-      ]
-    },
-    {
-      "github_id": "134175231",
-      "login": "bitcoinfinancier",
-      "emails": [
-        {
-          "email": "satoshinakamoto@financier.com",
-          "email_type": "real",
-          "source": "head_sha_event",
-          "corroboration_count": 3,
-          "example_sha": "8611c1fc9033c4deba895758607f87c358430db8",
-          "example_pr": 28135
         }
       ]
     },
@@ -6780,7 +6766,7 @@
           "email": "jose.edil@gmail.com",
           "email_type": "real",
           "source": "head_sha_event",
-          "corroboration_count": 4,
+          "corroboration_count": 5,
           "example_sha": "0ead466a0c72bef0a8622749b84e9c7c5c37144f",
           "example_pr": 29782
         }
@@ -7387,7 +7373,7 @@
           "email_type": "real",
           "source": "head_sha_event",
           "corroboration_count": 2,
-          "example_sha": "43dc84da070a282e3ed90bceefe616baa4a6c4c5",
+          "example_sha": "295ebcaeeb9f71f39c53623d33728975da8ec2e6",
           "example_pr": 35301
         }
       ]
@@ -9666,7 +9652,7 @@
           "email": "hao.xu@linux.dev",
           "email_type": "real",
           "source": "head_sha_event",
-          "corroboration_count": 12,
+          "corroboration_count": 14,
           "example_sha": "ae1fbae2f4ec4612a08ecfb891c938e0c052e40c",
           "example_pr": 32692
         }
@@ -16203,6 +16189,20 @@
       ]
     },
     {
+      "github_id": "280077999",
+      "login": "opus-lux",
+      "emails": [
+        {
+          "email": "opusluxofficial@proton.me",
+          "email_type": "real",
+          "source": "head_sha_event",
+          "corroboration_count": 2,
+          "example_sha": "c33d98383f8218e9d3945e8764991a30bacfaa02",
+          "example_pr": 35488
+        }
+      ]
+    },
+    {
       "github_id": "242526317",
       "login": "orbisai0security",
       "emails": [
@@ -16292,6 +16292,20 @@
       "emails": [
         {
           "email": "32423863+osem23@users.noreply.github.com",
+          "email_type": "noreply",
+          "source": "head_sha_event",
+          "corroboration_count": null,
+          "example_sha": null,
+          "example_pr": null
+        }
+      ]
+    },
+    {
+      "github_id": "175096749",
+      "login": "OSINTv96",
+      "emails": [
+        {
+          "email": "175096749+osintv96@users.noreply.github.com",
           "email_type": "noreply",
           "source": "head_sha_event",
           "corroboration_count": null,
@@ -19325,6 +19339,30 @@
       "login": "SatoshiNakamotoBitcoin",
       "emails": [
         {
+          "email": "bbytelordd@gmail.com",
+          "email_type": "real",
+          "source": "curated",
+          "corroboration_count": null,
+          "example_sha": null,
+          "example_pr": null
+        },
+        {
+          "email": "satoshinakamoto@financier.com",
+          "email_type": "real",
+          "source": "curated",
+          "corroboration_count": null,
+          "example_sha": null,
+          "example_pr": null
+        },
+        {
+          "email": "satoshinakamoto0158@gmail.com",
+          "email_type": "real",
+          "source": "curated",
+          "corroboration_count": null,
+          "example_sha": null,
+          "example_pr": null
+        },
+        {
           "email": "65907137+satoshinakamotobitcoin@users.noreply.github.com",
           "email_type": "noreply",
           "source": "head_sha_event",
@@ -20878,7 +20916,7 @@
           "email": "stringintech@gmail.com",
           "email_type": "real",
           "source": "head_sha_event",
-          "corroboration_count": 6,
+          "corroboration_count": 7,
           "example_sha": "61e800e75cffa256ccdbc2ffc7a1739c00880ce0",
           "example_pr": 32677
         }
@@ -21640,7 +21678,7 @@
           "email": "sebastian.falbesoner@gmail.com",
           "email_type": "real",
           "source": "head_sha_event",
-          "corroboration_count": 441,
+          "corroboration_count": 442,
           "example_sha": "71e08ab22d5b795de86782ca2a94db1a4e61a70f",
           "example_pr": 16742
         }

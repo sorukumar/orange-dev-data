@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-06T00:00:00",
+  "last_seen": "2026-06-09T00:00:00",
   "technical_focus": "Utilities",
   "total_commits": 5.0,
   "authored_commits": 5.0,
@@ -60,11 +60,18 @@
   "last_active": null,
   "dev_type": "Builder",
   "expertise_domains": [
-    "Infrastructure"
+    "Infrastructure",
+    "Network"
   ],
-  "expertise_by_source": {},
+  "expertise_by_source": {
+    "code": {
+      "Infrastructure": 0.9,
+      "Network": 0.1
+    }
+  },
   "expertise_domain_scores": {
-    "Infrastructure": 1.0
+    "Infrastructure": 0.9,
+    "Network": 0.1
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,

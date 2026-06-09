@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-06T00:00:00",
+  "last_seen": "2026-06-09T00:00:00",
   "technical_focus": "Mempool",
   "total_commits": 1.0,
   "authored_commits": 1.0,
@@ -44,20 +44,20 @@
   "avg_pr_ack_velocity_days": 0.19991898148148146,
   "avg_concept_lead_time_days": 0.1012037037037037,
   "review_reciprocity": 1.0,
-  "hybrid_score": 0.1886,
-  "p2016_hybrid_score": 0.2537,
+  "hybrid_score": 0.188,
+  "p2016_hybrid_score": 0.2527,
   "modern_hybrid_score": 0.4515,
   "impact_score": 11.0,
   "p2016_impact_score": 14.0,
   "modern_impact_score": 24.0,
   "threads_started": 2.0,
-  "replies_sent": 49.0,
+  "replies_sent": 51.0,
   "ml_threads": 1.0,
   "delving_threads": 1.0,
-  "ml_responses": 49.0,
-  "delving_responses": 0.0,
+  "ml_responses": 50.0,
+  "delving_responses": 1.0,
   "first_active": "2023-10-21T09:21:48",
-  "last_active": null,
+  "last_active": "2026-06-08T17:20:18",
   "dev_type": "Builder",
   "expertise_domains": [
     "Mempool",
@@ -68,22 +68,22 @@
       "Mempool": 1.0
     },
     "discussion": {
-      "Cryptography": 0.733,
-      "Mempool": 0.267
+      "Cryptography": 0.75,
+      "Mempool": 0.25
     }
   },
   "expertise_domain_scores": {
-    "Cryptography": 0.2932,
-    "Mempool": 0.7068
+    "Cryptography": 0.3,
+    "Mempool": 0.7
   },
-  "p2016_posts": 51.0,
-  "modern_posts": 51.0,
-  "p2016_ml_posts": 50.0,
-  "p2016_delving_posts": 1.0,
-  "modern_ml_posts": 50.0,
-  "modern_delving_posts": 1.0,
+  "p2016_posts": 53.0,
+  "modern_posts": 53.0,
+  "p2016_ml_posts": 51.0,
+  "p2016_delving_posts": 2.0,
+  "modern_ml_posts": 51.0,
+  "modern_delving_posts": 2.0,
   "global_first_active": "2023-10-21T09:21:48",
-  "global_last_active": "2024-12-31T03:04:20",
+  "global_last_active": "2026-06-08T17:20:18",
   "github_location": "Earth",
   "github_company": null,
   "github_bio": "Developer",
@@ -105,10 +105,10 @@
     "link": "https://gnusha.org/pi/bitcoindev/CAFC_Vt4-DXkEPZEfXzZQET7P9KSyOrgojGqr8w-xvTECeRn7Zw@mail.gmail.com"
   },
   "last_message": {
-    "source": "delving",
-    "subject": "Public key recovery for EC leaves in P2MR (BIP-360)",
-    "date": "2026-06-06",
-    "link": "https://delvingbitcoin.org/t/public-key-recovery-for-ec-leaves-in-p2mr-bip-360/2603/1"
+    "source": "mailing_list",
+    "subject": "Re: [bitcoindev] [BIP] P2WOTS: 64 Slot Winternitz UTXO's (witness\n version three)",
+    "date": "2026-06-08",
+    "link": "https://gnusha.org/pi/bitcoindev/CAFC_Vt6x=wM61NTFyn00JntRFJPWUt8_x9yxPcrGgPfpDCo_+Q@mail.gmail.com"
   },
   "social_history": {
     "2023": {
@@ -138,9 +138,9 @@
       "spam-filtering": 4
     },
     "2026": {
-      "other": 6,
+      "other": 13,
       "mempool-fees": 1,
-      "quantum": 4
+      "quantum": 6
     }
   }
 }

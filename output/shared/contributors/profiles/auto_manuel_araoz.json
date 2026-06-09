@@ -19,7 +19,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-06T00:00:00",
+  "last_seen": "2026-06-09T00:00:00",
   "technical_focus": "Tests",
   "total_commits": 5.0,
   "authored_commits": 5.0,
@@ -30,7 +30,7 @@
   "last_commit": "2014-12-16T19:26:07",
   "p2016_authored_commits": 0.0,
   "modern_authored_commits": 0.0,
-  "bips_authored": 0.0,
+  "bips_authored": 1.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
   "avg_review_latency_days": 850.1969615009746,
@@ -45,7 +45,7 @@
   "avg_pr_ack_velocity_days": 18.56082175925926,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 1.7142857142857142,
-  "hybrid_score": 0.5659,
+  "hybrid_score": 0.566,
   "p2016_hybrid_score": 0.0848,
   "modern_hybrid_score": 0.0542,
   "impact_score": 29.0,
@@ -61,10 +61,13 @@
   "last_active": "2015-09-01T13:22:51",
   "dev_type": "Builder",
   "expertise_domains": [
-    "Infrastructure",
-    "Wallet"
+    "Wallet",
+    "Infrastructure"
   ],
   "expertise_by_source": {
+    "bips": {
+      "Wallet": 1.0
+    },
     "code": {
       "Infrastructure": 1.0
     },
@@ -73,8 +76,8 @@
     }
   },
   "expertise_domain_scores": {
-    "Infrastructure": 0.6,
-    "Wallet": 0.4
+    "Infrastructure": 0.3,
+    "Wallet": 0.7
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -98,6 +101,15 @@
       "Tests": 4.5
     }
   },
+  "bip_list": [
+    {
+      "number": 45,
+      "title": "Structure for Deterministic P2SH Multisignature Wallets",
+      "status": "Complete",
+      "theme": "Wallet & Keys",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0045.mediawiki"
+    }
+  ],
   "first_message": {
     "source": "mailing_list",
     "subject": "[Bitcoin-development] New BIP32 structure for P2SH multisig wallets",

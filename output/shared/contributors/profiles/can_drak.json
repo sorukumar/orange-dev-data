@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-06T00:00:00",
+  "last_seen": "2026-06-09T00:00:00",
   "technical_focus": "Core Libs",
   "total_commits": 91.0,
   "authored_commits": 91.0,
@@ -45,10 +45,10 @@
   "avg_concept_lead_time_days": 11.904771312260536,
   "review_reciprocity": 2.784452296819788,
   "hybrid_score": 1.8394,
-  "p2016_hybrid_score": 1.2326,
+  "p2016_hybrid_score": 1.4648,
   "modern_hybrid_score": 0.1827,
   "impact_score": 67.0,
-  "p2016_impact_score": 52.0,
+  "p2016_impact_score": 58.0,
   "modern_impact_score": 10.0,
   "threads_started": 73.0,
   "replies_sent": 189.0,
@@ -61,13 +61,22 @@
   "dev_type": "Protocol Designer",
   "expertise_domains": [
     "Consensus",
-    "Mining",
-    "Infrastructure"
+    "Infrastructure",
+    "Mining"
   ],
   "expertise_by_source": {
     "bips": {
       "Consensus": 0.857,
       "Infrastructure": 0.143
+    },
+    "code": {
+      "Consensus": 0.083,
+      "Cryptography": 0.001,
+      "Infrastructure": 0.815,
+      "Mempool": 0.016,
+      "Network": 0.045,
+      "Script": 0.026,
+      "Wallet": 0.015
     },
     "discussion": {
       "Consensus": 0.591,
@@ -75,9 +84,10 @@
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.781,
-    "Infrastructure": 0.1021,
-    "Mining": 0.1169
+    "Consensus": 0.5714,
+    "Infrastructure": 0.3159,
+    "Mining": 0.0818,
+    "Network": 0.0135
   },
   "p2016_posts": 101.0,
   "modern_posts": 0.0,

@@ -12,7 +12,7 @@
     "is_sponsored": true,
     "maintainer_status": "emeritus",
     "social_source": "mailing_list",
-    "sponsor_id": "chaincode",
+    "sponsor_id": null,
     "maintainer_title": "Core Maintainer",
     "maintainer_primary_area": "Consensus / Cryptography",
     "maintainer_appointed": "2011-05-01",
@@ -24,7 +24,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-06T00:00:00",
+  "last_seen": "2026-06-09T00:00:00",
   "technical_focus": "Utilities",
   "total_commits": 2391.0,
   "authored_commits": 1808.0,
@@ -38,30 +38,30 @@
   "bips_authored": 27.0,
   "p2016_bips_authored": 17.0,
   "modern_bips_authored": 2.0,
-  "avg_review_latency_days": 127.1425218912873,
-  "reviews_count": 4261.0,
+  "avg_review_latency_days": 127.12721005726652,
+  "reviews_count": 4262.0,
   "avg_approval_latency_days": 120.61540550653788,
   "approvals_count": 2419.0,
-  "p2016_reviews_count": 2802.0,
-  "modern_reviews_count": 440.0,
+  "p2016_reviews_count": 2803.0,
+  "modern_reviews_count": 441.0,
   "first_review_date": "2011-04-23T14:06:52+00:00",
-  "last_review_date": "2026-06-02T22:30:40+00:00",
+  "last_review_date": "2026-06-08T20:12:01+00:00",
   "prs_authored": 933.0,
   "avg_pr_ack_velocity_days": 9.566204014914403,
   "avg_concept_lead_time_days": 11.095038614388725,
-  "review_reciprocity": 4.566988210075027,
+  "review_reciprocity": 4.568060021436227,
   "hybrid_score": 3.7867,
   "p2016_hybrid_score": 2.5203,
   "modern_hybrid_score": 1.4866,
   "impact_score": 90.0,
   "p2016_impact_score": 78.0,
   "modern_impact_score": 59.0,
-  "threads_started": 140.0,
-  "replies_sent": 554.0,
+  "threads_started": 141.0,
+  "replies_sent": 559.0,
   "ml_threads": 66.0,
-  "delving_threads": 74.0,
+  "delving_threads": 75.0,
   "ml_responses": 452.0,
-  "delving_responses": 102.0,
+  "delving_responses": 107.0,
   "first_active": "2011-06-17T05:31:25",
   "last_active": null,
   "dev_type": "Protocol Designer",
@@ -101,12 +101,12 @@
     "Script": 0.1489,
     "Wallet": 0.0245
   },
-  "p2016_posts": 349.0,
-  "modern_posts": 197.0,
+  "p2016_posts": 355.0,
+  "modern_posts": 203.0,
   "p2016_ml_posts": 173.0,
-  "p2016_delving_posts": 176.0,
+  "p2016_delving_posts": 182.0,
   "modern_ml_posts": 21.0,
-  "modern_delving_posts": 176.0,
+  "modern_delving_posts": 182.0,
   "global_first_active": "2011-03-17T21:51:59",
   "global_last_active": "2026-03-10T18:09:27",
   "github_location": null,
@@ -522,9 +522,9 @@
   },
   "last_message": {
     "source": "delving",
-    "subject": "Re: Bird of Prey 2: non-malleable Schnorr + PQ signatures",
-    "date": "2026-06-06",
-    "link": "https://delvingbitcoin.org/t/bird-of-prey-2-non-malleable-schnorr-pq-signatures/2514/7"
+    "subject": "Re: Public key recovery for EC leaves in P2MR (BIP-360)",
+    "date": "2026-06-08",
+    "link": "https://delvingbitcoin.org/t/public-key-recovery-for-ec-leaves-in-p2mr-bip-360/2603/12"
   },
   "social_history": {
     "2011": {
@@ -534,30 +534,30 @@
       "script-opcodes": 4
     },
     "2012": {
-      "other": 44,
+      "other": 53,
       "mempool-fees": 2,
       "mining": 11,
-      "p2p-network": 11,
       "script-opcodes": 4,
-      "segwit": 1
+      "segwit": 1,
+      "wallet-keys": 2
     },
     "2013": {
       "other": 47,
       "hard-fork-block-size": 4,
       "mempool-fees": 3,
       "mining": 6,
-      "p2p-network": 4,
       "script-opcodes": 2,
-      "taproot": 2
+      "taproot": 2,
+      "wallet-keys": 4
     },
     "2014": {
-      "other": 64,
+      "other": 53,
       "mempool-fees": 12,
       "mining": 5,
-      "p2p-network": 1,
       "script-opcodes": 19,
       "segwit": 9,
-      "taproot": 1
+      "taproot": 1,
+      "wallet-keys": 12
     },
     "2015": {
       "other": 85,
@@ -569,93 +569,92 @@
       "taproot": 1
     },
     "2016": {
-      "other": 15,
+      "other": 19,
       "hard-fork-block-size": 1,
       "mempool-fees": 2,
-      "p2p-network": 5,
       "script-opcodes": 4,
       "segwit": 5,
-      "taproot": 1
+      "taproot": 1,
+      "wallet-keys": 1
     },
     "2017": {
-      "other": 16,
+      "other": 18,
       "hard-fork-block-size": 1,
       "mining": 1,
-      "p2p-network": 2,
       "segwit": 6,
       "taproot": 1
     },
     "2018": {
-      "other": 28,
+      "other": 20,
       "mempool-fees": 2,
-      "p2p-network": 3,
       "script-opcodes": 1,
       "segwit": 3,
-      "taproot": 7
+      "taproot": 7,
+      "wallet-keys": 11
     },
     "2019": {
       "mining": 1,
-      "other": 5,
-      "p2p-network": 1,
+      "other": 6,
       "script-opcodes": 5,
       "segwit": 8,
       "taproot": 11
     },
     "2020": {
       "mining": 2,
-      "other": 11,
+      "other": 10,
       "segwit": 8,
-      "taproot": 7
+      "taproot": 7,
+      "wallet-keys": 1
     },
     "2021": {
       "other": 17,
       "mempool-fees": 3,
       "mining": 1,
-      "p2p-network": 3,
       "segwit": 8,
-      "taproot": 7
+      "taproot": 7,
+      "wallet-keys": 3
     },
     "2022": {
-      "other": 5,
+      "other": 8,
       "mempool-fees": 2,
-      "p2p-network": 3,
       "taproot": 2
     },
     "2023": {
-      "other": 14,
+      "other": 13,
       "mempool-fees": 24,
       "mining": 1,
-      "p2p-network": 3,
       "script-opcodes": 6,
-      "taproot": 6
+      "taproot": 6,
+      "wallet-keys": 4
     },
     "2024": {
       "other": 40,
       "hard-fork-block-size": 4,
       "mempool-fees": 25,
       "mining": 14,
-      "p2p-network": 5,
       "script-opcodes": 7,
       "segwit": 1,
-      "taproot": 4
+      "taproot": 4,
+      "wallet-keys": 5
     },
     "2025": {
-      "other": 79,
+      "other": 83,
       "hard-fork-block-size": 9,
       "mempool-fees": 61,
       "mining": 67,
-      "p2p-network": 6,
       "script-opcodes": 10,
-      "taproot": 11
+      "taproot": 11,
+      "wallet-keys": 2
     },
     "2026": {
-      "other": 32,
+      "other": 44,
       "hard-fork-block-size": 1,
       "mempool-fees": 5,
       "mining": 2,
       "script-opcodes": 8,
       "segwit": 5,
-      "taproot": 8
+      "taproot": 14,
+      "wallet-keys": 6
     }
   }
 }

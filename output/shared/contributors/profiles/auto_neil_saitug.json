@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-06T00:00:00",
+  "last_seen": "2026-06-09T00:00:00",
   "technical_focus": "None",
   "total_commits": 1.0,
   "authored_commits": 1.0,
@@ -45,10 +45,10 @@
   "avg_concept_lead_time_days": 31.716712962962962,
   "review_reciprocity": 0.6666666666666666,
   "hybrid_score": 0.1124,
-  "p2016_hybrid_score": 0.0852,
+  "p2016_hybrid_score": 0.1252,
   "modern_hybrid_score": 0.0452,
   "impact_score": 7.0,
-  "p2016_impact_score": 5.0,
+  "p2016_impact_score": 7.0,
   "modern_impact_score": 3.0,
   "threads_started": 2.0,
   "replies_sent": 1.0,
@@ -60,11 +60,14 @@
   "last_active": "2023-04-24T11:06:59",
   "dev_type": "Builder",
   "expertise_domains": [
+    "Infrastructure",
     "Mempool",
-    "L2",
-    "Mining"
+    "L2"
   ],
   "expertise_by_source": {
+    "code": {
+      "Infrastructure": 1.0
+    },
     "discussion": {
       "L2": 0.287,
       "Mempool": 0.426,
@@ -72,9 +75,10 @@
     }
   },
   "expertise_domain_scores": {
-    "L2": 0.287,
-    "Mempool": 0.426,
-    "Mining": 0.287
+    "Infrastructure": 0.6,
+    "L2": 0.1148,
+    "Mempool": 0.1704,
+    "Mining": 0.1148
   },
   "p2016_posts": 3.0,
   "modern_posts": 0.0,

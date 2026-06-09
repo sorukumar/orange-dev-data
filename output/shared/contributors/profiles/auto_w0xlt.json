@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-06T00:00:00",
+  "last_seen": "2026-06-09T00:00:00",
   "technical_focus": "None",
   "total_commits": 83.0,
   "authored_commits": 83.0,
@@ -32,24 +32,24 @@
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": 130.98379597479422,
-  "reviews_count": 492.0,
-  "avg_approval_latency_days": 60.1660377240647,
-  "approvals_count": 472.0,
-  "p2016_reviews_count": 492.0,
-  "modern_reviews_count": 248.0,
+  "avg_review_latency_days": 132.3526538326301,
+  "reviews_count": 495.0,
+  "avg_approval_latency_days": 60.43548853855953,
+  "approvals_count": 475.0,
+  "p2016_reviews_count": 495.0,
+  "modern_reviews_count": 251.0,
   "first_review_date": "2021-11-17T15:11:38+00:00",
-  "last_review_date": "2026-06-06T06:30:48+00:00",
-  "prs_authored": 94.0,
-  "avg_pr_ack_velocity_days": 10.179741636798088,
-  "avg_concept_lead_time_days": 6.943714774557166,
-  "review_reciprocity": 5.23404255319149,
-  "hybrid_score": 0.4942,
-  "p2016_hybrid_score": 0.2457,
-  "modern_hybrid_score": 0.2052,
+  "last_review_date": "2026-06-09T03:30:21+00:00",
+  "prs_authored": 97.0,
+  "avg_pr_ack_velocity_days": 10.023192607289829,
+  "avg_concept_lead_time_days": 6.802724093774626,
+  "review_reciprocity": 5.103092783505154,
+  "hybrid_score": 0.4945,
+  "p2016_hybrid_score": 0.5017,
+  "modern_hybrid_score": 0.411,
   "impact_score": 26.0,
-  "p2016_impact_score": 14.0,
-  "modern_impact_score": 12.0,
+  "p2016_impact_score": 26.0,
+  "modern_impact_score": 22.0,
   "threads_started": 4.0,
   "replies_sent": 3.0,
   "ml_threads": 4.0,
@@ -60,18 +60,30 @@
   "last_active": "2022-10-23T02:00:07",
   "dev_type": "Builder",
   "expertise_domains": [
+    "Infrastructure",
     "Privacy",
-    "L2"
+    "Wallet"
   ],
   "expertise_by_source": {
+    "code": {
+      "Consensus": 0.084,
+      "Infrastructure": 0.633,
+      "Network": 0.088,
+      "Script": 0.006,
+      "Wallet": 0.189
+    },
     "discussion": {
       "L2": 0.122,
       "Privacy": 0.878
     }
   },
   "expertise_domain_scores": {
-    "L2": 0.122,
-    "Privacy": 0.878
+    "Consensus": 0.0504,
+    "Infrastructure": 0.3798,
+    "L2": 0.0488,
+    "Network": 0.0528,
+    "Privacy": 0.3512,
+    "Wallet": 0.1134
   },
   "p2016_posts": 7.0,
   "modern_posts": 0.0,

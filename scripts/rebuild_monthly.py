@@ -154,6 +154,17 @@ def count_step(label, root_dir):
         print(f"    {'  cross-source (2+ signal types)':<45} {n_cross:>7,}")
         print()
 
+    # ── enriched_prs.parquet ──────────────────────────────────────────────────
+    prs_path = os.path.join(root_dir, "data", "enriched", "enriched_prs.parquet")
+    if os.path.exists(prs_path):
+        df_prs = pd.read_parquet(prs_path)
+        n_total_prs = len(df_prs)
+        n_matched = df_prs['uuid'].notna().sum()
+        pct = (n_matched / n_total_prs * 100) if n_total_prs > 0 else 0
+        print(f"    {'enriched_prs — total PRs':<45} {n_total_prs:>7,}")
+        print(f"    {'  matched to unified UUID':<45} {n_matched:>7,} ({pct:.1f}%)")
+        print()
+
     # ── ecosystem_summary.json ────────────────────────────────────────────────
     eco_path = os.path.join(root_dir, "output", "shared", "ecosystem_summary.json")
     if os.path.exists(eco_path):
@@ -270,6 +281,8 @@ def main():
 
     run("python3 scripts/02_process/reviews.py", cwd=root_dir)
     run("python3 scripts/02_process/github_social.py", cwd=root_dir)
+    run("python3 scripts/02_process/enrich_prs.py", cwd=root_dir)
+    run("python3 scripts/02_process/enrich_reviews.py", cwd=root_dir)
     run("python3 scripts/02_process/merge_social.py", cwd=root_dir)
     run("python3 scripts/02_process/governance.py", cwd=root_dir)
     

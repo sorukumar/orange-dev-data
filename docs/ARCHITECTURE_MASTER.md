@@ -268,6 +268,8 @@ These scripts resolve raw identifiers to UUIDs and aggregate activity per UUID.
 | `core.py` | `core_commits.parquet` | `data/enriched/core_contributors.parquet` + multiple `output/tracker/*.json` | commits, additions, deletions per UUID; JSON stats for dashboard |
 | `reviews.py` | `data/raw/core_messages.parquet` (commit message bodies) | `data/raw/core_reviews.parquet` + `output/tracker/reviewers_summary.json` | Parses ACK/NACK/utACK trailers from git commit messages to extract reviewer signals |
 | `github_social.py` | `data/sources/bitcoin-github-metadata/` JSON files | `data/enriched/github_social_stats.parquet` | Per-login label expertise and PR participation counts (offline, no API) |
+| `enrich_prs.py` | `data/raw/github_pr_metadata.parquet` | `data/enriched/enriched_prs.parquet` | Attaches resolved UUIDs to PR lifecycle records using central resolver |
+| `enrich_reviews.py` | `data/raw/github_review_events.parquet` | `data/enriched/enriched_reviews.parquet` | Attaches resolved UUIDs to review records using central resolver |
 | `merge_social.py` | `social_mailing_list.parquet`, `social_delving.parquet` | `data/raw/social_combined.parquet` | Concatenates mailing list + Delving into one flat file; adds mailing-list message links |
 | `categorize.py` | `data/raw/social_combined.parquet` | `data/enriched/social_threads.parquet` | Assigns BIP references and rich multi-label categories to every thread |
 | `governance.py` | `bips.parquet`, `social_combined.parquet`, `core_commits.parquet`, `core_messages.parquet` | `data/enriched/bips_refined.parquet` + `data/enriched/bips_themes.json` | BIP authorship per UUID; links BIPs to social discussion and commit mentions |

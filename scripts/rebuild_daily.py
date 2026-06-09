@@ -61,6 +61,8 @@ def main():
     run("python3 scripts/02_process/resolve_commits.py", cwd=root_dir)
     run("python3 scripts/02_process/reviews.py", cwd=root_dir)
     run("python3 scripts/02_process/github_social.py", cwd=root_dir)
+    run("python3 scripts/02_process/enrich_prs.py", cwd=root_dir)
+    run("python3 scripts/02_process/enrich_reviews.py", cwd=root_dir)
     run("python3 scripts/02_process/merge_social.py", cwd=root_dir)
     run("python3 scripts/02_process/governance.py", cwd=root_dir)
     

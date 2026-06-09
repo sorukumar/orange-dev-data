@@ -99,15 +99,15 @@
     "authors": "Amir Taaki"
   },
   {
-    "bip_id": "75",
-    "title": "Out of Band Address Exchange using Payment Protocol Encryption",
+    "bip_id": "158",
+    "title": "Compact Block Filters for Light Clients",
     "status": "Deployed",
-    "theme": "P2P Network",
+    "theme": "Scaling & Lightning",
     "maturity_score": 0.19,
-    "social_mention_count": 9,
-    "revision_count": 89,
-    "code_mention_count": 0,
-    "authors": "Justin Newton, Matt David, Aaron Voisine, James MacWhyte"
+    "social_mention_count": 84,
+    "revision_count": 30,
+    "code_mention_count": 12,
+    "authors": "Olaoluwa Osuntokun, Alex Akselrod"
   },
   {
     "bip_id": "141",
@@ -121,37 +121,15 @@
     "authors": "Eric Lombrozo, Johnson Lau, Pieter Wuille"
   },
   {
-    "bip_id": "158",
-    "title": "Compact Block Filters for Light Clients",
+    "bip_id": "75",
+    "title": "Out of Band Address Exchange using Payment Protocol Encryption",
     "status": "Deployed",
-    "theme": "Scaling & Lightning",
+    "theme": "P2P Network",
     "maturity_score": 0.19,
-    "social_mention_count": 84,
-    "revision_count": 30,
-    "code_mention_count": 12,
-    "authors": "Olaoluwa Osuntokun, Alex Akselrod"
-  },
-  {
-    "bip_id": "342",
-    "title": "Validation of Taproot Scripts",
-    "status": "Deployed",
-    "theme": "Consensus & Soft Forks",
-    "maturity_score": 0.18,
-    "social_mention_count": 0,
-    "revision_count": 88,
-    "code_mention_count": 7,
-    "authors": "Pieter Wuille, Jonas Nick, Anthony Towns"
-  },
-  {
-    "bip_id": "21",
-    "title": "URI Scheme",
-    "status": "Closed",
-    "theme": "Other",
-    "maturity_score": 0.18,
-    "social_mention_count": 66,
-    "revision_count": 40,
-    "code_mention_count": 16,
-    "authors": "Nils Schneider, Matt Corallo"
+    "social_mention_count": 9,
+    "revision_count": 89,
+    "code_mention_count": 0,
+    "authors": "Justin Newton, Matt David, Aaron Voisine, James MacWhyte"
   },
   {
     "bip_id": "151",
@@ -165,6 +143,17 @@
     "authors": "Jonas Schnelli"
   },
   {
+    "bip_id": "342",
+    "title": "Validation of Taproot Scripts",
+    "status": "Deployed",
+    "theme": "Consensus & Soft Forks",
+    "maturity_score": 0.18,
+    "social_mention_count": 0,
+    "revision_count": 88,
+    "code_mention_count": 7,
+    "authors": "Pieter Wuille, Jonas Nick, Anthony Towns"
+  },
+  {
     "bip_id": "3",
     "title": "Updated BIP Process",
     "status": "Deployed",
@@ -176,6 +165,17 @@
     "authors": "Murch"
   },
   {
+    "bip_id": "21",
+    "title": "URI Scheme",
+    "status": "Closed",
+    "theme": "Other",
+    "maturity_score": 0.18,
+    "social_mention_count": 66,
+    "revision_count": 40,
+    "code_mention_count": 16,
+    "authors": "Nils Schneider, Matt Corallo"
+  },
+  {
     "bip_id": "352",
     "title": "Silent Payments",
     "status": "Complete",
@@ -185,6 +185,17 @@
     "revision_count": 32,
     "code_mention_count": 4,
     "authors": "josibake, Ruben Somsen, Sebastian Falbesoner"
+  },
+  {
+    "bip_id": "322",
+    "title": "Generic Signed Message Format",
+    "status": "Complete",
+    "theme": "Other",
+    "maturity_score": 0.16,
+    "social_mention_count": 33,
+    "revision_count": 52,
+    "code_mention_count": 1,
+    "authors": "Karl-Johan Alm, Oliver Gugger"
   },
   {
     "bip_id": "148",
@@ -220,17 +231,6 @@
     "authors": "Jeremy Rubin"
   },
   {
-    "bip_id": "322",
-    "title": "Generic Signed Message Format",
-    "status": "Complete",
-    "theme": "Other",
-    "maturity_score": 0.16,
-    "social_mention_count": 33,
-    "revision_count": 52,
-    "code_mention_count": 1,
-    "authors": "Karl-Johan Alm, Oliver Gugger"
-  },
-  {
     "bip_id": "9",
     "title": "Version bits with timeout and delay",
     "status": "Deployed",
@@ -242,26 +242,15 @@
     "authors": "Pieter Wuille, Peter Todd, Greg Maxwell, Rusty Russell"
   },
   {
-    "bip_id": "78",
-    "title": "A Simple Payjoin Proposal",
-    "status": "Deployed",
-    "theme": "Other",
-    "maturity_score": 0.13,
-    "social_mention_count": 0,
-    "revision_count": 64,
+    "bip_id": "360",
+    "title": "Pay-to-Merkle-Root (P2MR)",
+    "status": "Draft",
+    "theme": "Consensus & Soft Forks",
+    "maturity_score": 0.14,
+    "social_mention_count": 89,
+    "revision_count": 2,
     "code_mention_count": 0,
-    "authors": "Nicolas Dorier"
-  },
-  {
-    "bip_id": "48",
-    "title": "Multi-Script Hierarchy for Multi-Sig Wallets",
-    "status": "Deployed",
-    "theme": "Script & Smart Contracts",
-    "maturity_score": 0.13,
-    "social_mention_count": 10,
-    "revision_count": 59,
-    "code_mention_count": 0,
-    "authors": "Fontaine"
+    "authors": "Hunter Beast, Ethan Heilman, Isabel Foxen Duke"
   },
   {
     "bip_id": "347",
@@ -275,6 +264,28 @@
     "authors": "Ethan Heilman, Armin Sabouri"
   },
   {
+    "bip_id": "48",
+    "title": "Multi-Script Hierarchy for Multi-Sig Wallets",
+    "status": "Deployed",
+    "theme": "Script & Smart Contracts",
+    "maturity_score": 0.13,
+    "social_mention_count": 10,
+    "revision_count": 59,
+    "code_mention_count": 0,
+    "authors": "Fontaine"
+  },
+  {
+    "bip_id": "78",
+    "title": "A Simple Payjoin Proposal",
+    "status": "Deployed",
+    "theme": "Other",
+    "maturity_score": 0.13,
+    "social_mention_count": 0,
+    "revision_count": 64,
+    "code_mention_count": 0,
+    "authors": "Nicolas Dorier"
+  },
+  {
     "bip_id": "123",
     "title": "BIP Classification",
     "status": "Deployed",
@@ -284,17 +295,6 @@
     "revision_count": 59,
     "code_mention_count": 0,
     "authors": "Eric Lombrozo"
-  },
-  {
-    "bip_id": "173",
-    "title": "Base32 address format for native v0-16 witness outputs",
-    "status": "Deployed",
-    "theme": "Consensus & Soft Forks",
-    "maturity_score": 0.12,
-    "social_mention_count": 54,
-    "revision_count": 20,
-    "code_mention_count": 15,
-    "authors": "Pieter Wuille, Greg Maxwell"
   },
   {
     "bip_id": "54",
@@ -308,6 +308,17 @@
     "authors": "Antoine Poinsot, Matt Corallo"
   },
   {
+    "bip_id": "173",
+    "title": "Base32 address format for native v0-16 witness outputs",
+    "status": "Deployed",
+    "theme": "Consensus & Soft Forks",
+    "maturity_score": 0.12,
+    "social_mention_count": 54,
+    "revision_count": 20,
+    "code_mention_count": 15,
+    "authors": "Pieter Wuille, Greg Maxwell"
+  },
+  {
     "bip_id": "324",
     "title": "Version 2 P2P Encrypted Transport Protocol",
     "status": "Deployed",
@@ -317,17 +328,6 @@
     "revision_count": 20,
     "code_mention_count": 55,
     "authors": "Dhruv Mehta, Tim Ruffing, Jonas Schnelli, Pieter Wuille"
-  },
-  {
-    "bip_id": "360",
-    "title": "Pay-to-Merkle-Root (P2MR)",
-    "status": "Draft",
-    "theme": "Consensus & Soft Forks",
-    "maturity_score": 0.12,
-    "social_mention_count": 77,
-    "revision_count": 2,
-    "code_mention_count": 0,
-    "authors": "Hunter Beast, Ethan Heilman, Isabel Foxen Duke"
   },
   {
     "bip_id": "8",
@@ -1183,7 +1183,7 @@
     "theme": "Other",
     "maturity_score": 0.03,
     "social_mention_count": 0,
-    "revision_count": 13,
+    "revision_count": 14,
     "code_mention_count": 0,
     "authors": "Dan Gould, Yuval Kogman"
   },

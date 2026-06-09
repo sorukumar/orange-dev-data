@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-06T00:00:00",
+  "last_seen": "2026-06-09T00:00:00",
   "technical_focus": "Tests",
   "total_commits": 275.0,
   "authored_commits": 275.0,
@@ -32,28 +32,28 @@
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": 80.73487347664184,
-  "reviews_count": 544.0,
-  "avg_approval_latency_days": 64.17371502849002,
+  "avg_review_latency_days": 80.60460570726977,
+  "reviews_count": 545.0,
+  "avg_approval_latency_days": 64.0525208049307,
   "approvals_count": 355.0,
-  "p2016_reviews_count": 544.0,
-  "modern_reviews_count": 544.0,
+  "p2016_reviews_count": 545.0,
+  "modern_reviews_count": 545.0,
   "first_review_date": "2023-08-03T16:49:58+00:00",
-  "last_review_date": "2026-06-06T18:31:07+00:00",
+  "last_review_date": "2026-06-09T12:07:07+00:00",
   "prs_authored": 193.0,
   "avg_pr_ack_velocity_days": 16.03114737654321,
   "avg_concept_lead_time_days": 21.520577813390315,
-  "review_reciprocity": 2.8186528497409324,
+  "review_reciprocity": 2.8238341968911915,
   "hybrid_score": 0.5575,
   "p2016_hybrid_score": 0.5575,
   "modern_hybrid_score": 0.5575,
   "impact_score": 28.0,
   "p2016_impact_score": 28.0,
   "modern_impact_score": 28.0,
-  "threads_started": 2.0,
+  "threads_started": 4.0,
   "replies_sent": 0.0,
   "ml_threads": 0.0,
-  "delving_threads": 2.0,
+  "delving_threads": 4.0,
   "ml_responses": 0.0,
   "delving_responses": 0.0,
   "first_active": null,
@@ -61,8 +61,8 @@
   "dev_type": "Builder",
   "expertise_domains": [
     "Infrastructure",
-    "L2",
-    "Consensus"
+    "Consensus",
+    "Network"
   ],
   "expertise_by_source": {
     "code": {
@@ -73,24 +73,23 @@
       "Network": 0.024,
       "Script": 0.011,
       "Wallet": 0.019
-    },
-    "discussion": {
-      "L2": 1.0
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.0756,
-    "Infrastructure": 0.4776,
-    "L2": 0.4,
-    "Network": 0.0144,
-    "Wallet": 0.0114
+    "Consensus": 0.126,
+    "Cryptography": 0.013,
+    "Infrastructure": 0.796,
+    "Mempool": 0.011,
+    "Network": 0.024,
+    "Script": 0.011,
+    "Wallet": 0.019
   },
-  "p2016_posts": 2.0,
-  "modern_posts": 2.0,
+  "p2016_posts": 4.0,
+  "modern_posts": 4.0,
   "p2016_ml_posts": 0.0,
-  "p2016_delving_posts": 2.0,
+  "p2016_delving_posts": 4.0,
   "modern_ml_posts": 0.0,
-  "modern_delving_posts": 2.0,
+  "modern_delving_posts": 4.0,
   "global_first_active": "2024-02-19T12:43:49",
   "global_last_active": "2026-05-06T12:27:13",
   "github_location": null,
@@ -155,9 +154,9 @@
   },
   "last_message": {
     "source": "delving",
-    "subject": "Re: Using AI tooling for code review",
-    "date": "2026-03-11",
-    "link": "https://delvingbitcoin.org/t/using-ai-tooling-for-code-review/2277/8"
+    "subject": "Re: A Bitcoin-native LLM: dataset, architecture and open questions",
+    "date": "2026-06-08",
+    "link": "https://delvingbitcoin.org/t/a-bitcoin-native-llm-dataset-architecture-and-open-questions/2550/6"
   },
   "social_history": {
     "2025": {
@@ -166,6 +165,7 @@
     "2026": {
       "lightning": 1,
       "mining": 1,
+      "other": 2,
       "security": 1
     }
   }

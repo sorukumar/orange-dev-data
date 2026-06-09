@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-06-06T23:22:53.684372",
-  "contributors_tracked": 7263,
+  "generated_at": "2026-06-09T12:32:15.602468",
+  "contributors_tracked": 7269,
   "window_reference": {
-    "anchor_timestamp": "2026-06-07T02:03:59+00:00",
-    "current_window_start": "2026-05-08T02:03:59+00:00",
-    "previous_window_start": "2026-04-08T02:03:59+00:00",
+    "anchor_timestamp": "2026-06-09T16:40:05+00:00",
+    "current_window_start": "2026-05-10T16:40:05+00:00",
+    "previous_window_start": "2026-04-10T16:40:05+00:00",
     "window_days": 30
   },
   "widgets": {
     "active_contributors_30d": {
-      "value": 56,
-      "previous_30d": 40,
-      "delta_30d": 16,
+      "value": 62,
+      "previous_30d": 35,
+      "delta_30d": 27,
       "window_days": 30,
       "definition": "Contributors with global_last_active in current 30-day window, compared to the previous 30-day window.",
-      "latest_activity_date": "2026-06-06"
+      "latest_activity_date": "2026-06-09"
     },
     "top_reviewers_30d": {
       "window_days": 30,
@@ -23,37 +23,37 @@
         {
           "uuid": "auto_sebastian_kung",
           "display_name": "Sebastian Kung",
-          "reviews_30d": 139,
-          "previous_30d": 104,
-          "delta_30d": 35
+          "reviews_30d": 151,
+          "previous_30d": 113,
+          "delta_30d": 38
         },
         {
           "uuid": "can_marcofalke",
           "display_name": "MarcoFalke",
           "reviews_30d": 113,
-          "previous_30d": 83,
-          "delta_30d": 30
+          "previous_30d": 80,
+          "delta_30d": 33
         },
         {
           "uuid": "can_michael_ford",
           "display_name": "Michael Ford",
-          "reviews_30d": 106,
-          "previous_30d": 48,
-          "delta_30d": 58
+          "reviews_30d": 101,
+          "previous_30d": 49,
+          "delta_30d": 52
         },
         {
           "uuid": "auto_w0xlt",
           "display_name": "w0xlt",
-          "reviews_30d": 56,
-          "previous_30d": 27,
-          "delta_30d": 29
+          "reviews_30d": 60,
+          "previous_30d": 20,
+          "delta_30d": 40
         },
         {
-          "uuid": "can_lorinc_pap",
-          "display_name": "Lorinc Pap",
-          "reviews_30d": 50,
-          "previous_30d": 45,
-          "delta_30d": 5
+          "uuid": "can_mark_erhardt",
+          "display_name": "Mark Erhardt",
+          "reviews_30d": 49,
+          "previous_30d": 30,
+          "delta_30d": 19
         }
       ],
       "aliases_collapsed": 0
@@ -67,43 +67,43 @@
           "title": "Pay-to-Merkle-Root (P2MR)",
           "primary_author": "Hunter Beast",
           "primary_author_uuid": "auto_hunter_beast",
-          "mentions_30d": 12,
-          "previous_30d": 5,
-          "delta_30d": 7
+          "mentions_30d": 24,
+          "previous_30d": 4,
+          "delta_30d": 20
         },
         {
-          "bip_id": "340",
-          "title": "Schnorr Signatures for secp256k1",
+          "bip_id": "54",
+          "title": "Consensus Cleanup",
+          "primary_author": "Antoine Poinsot",
+          "primary_author_uuid": "can_antoine_poinsot",
+          "mentions_30d": 15,
+          "previous_30d": 9,
+          "delta_30d": 6
+        },
+        {
+          "bip_id": "32",
+          "title": "Hierarchical Deterministic Wallets",
           "primary_author": "Pieter Wuille",
           "primary_author_uuid": "can_pieter_wuille",
-          "mentions_30d": 9,
-          "previous_30d": 0,
-          "delta_30d": 9
-        },
-        {
-          "bip_id": "451",
-          "title": "Dust UTXO Disposal Protocol",
-          "primary_author": "bubb1es",
-          "primary_author_uuid": "auto_bubb1es",
-          "mentions_30d": 7,
-          "previous_30d": 3,
-          "delta_30d": 4
+          "mentions_30d": 14,
+          "previous_30d": 11,
+          "delta_30d": 3
         }
       ]
     },
     "research_activity_30d": {
-      "messages_30d": 242,
-      "previous_30d": 300,
-      "delta_30d": -58,
-      "momentum": "cooling",
+      "messages_30d": 264,
+      "previous_30d": 243,
+      "delta_30d": 21,
+      "momentum": "steady",
       "definition": "Combined Delving Bitcoin and mailing list discussion volume in current 30 days versus previous 30 days."
     },
     "discussion_voices_30d": {
-      "value": 95,
-      "previous_30d": 110,
-      "delta_30d": -15,
-      "messages_30d": 242,
-      "messages_previous_30d": 300
+      "value": 99,
+      "previous_30d": 93,
+      "delta_30d": 6,
+      "messages_30d": 264,
+      "messages_previous_30d": 243
     },
     "topic_momentum_30d": {
       "window_days": 30,
@@ -112,16 +112,23 @@
         {
           "topic": "quantum",
           "label": "Quantum",
-          "mentions_30d": 69,
-          "previous_30d": 67,
-          "delta_30d": 2
+          "mentions_30d": 81,
+          "previous_30d": 55,
+          "delta_30d": 26
+        },
+        {
+          "topic": "consensus-cleanup",
+          "label": "Consensus Cleanup",
+          "mentions_30d": 23,
+          "previous_30d": 8,
+          "delta_30d": 15
         },
         {
           "topic": "utxo-sync",
           "label": "Utxo Sync",
-          "mentions_30d": 21,
+          "mentions_30d": 22,
           "previous_30d": 5,
-          "delta_30d": 16
+          "delta_30d": 17
         },
         {
           "topic": "core-dev",
@@ -134,15 +141,8 @@
           "topic": "taproot",
           "label": "Taproot",
           "mentions_30d": 14,
-          "previous_30d": 11,
-          "delta_30d": 3
-        },
-        {
-          "topic": "testing-devtools",
-          "label": "Testing Devtools",
-          "mentions_30d": 13,
-          "previous_30d": 40,
-          "delta_30d": -27
+          "previous_30d": 10,
+          "delta_30d": 4
         }
       ]
     }

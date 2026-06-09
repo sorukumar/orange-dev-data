@@ -12,13 +12,13 @@
     "is_sponsored": true,
     "maintainer_status": null,
     "social_source": "delving",
-    "sponsor_id": "brink"
+    "sponsor_id": null
   },
   "roles": [
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-06T00:00:00",
+  "last_seen": "2026-06-09T00:00:00",
   "technical_focus": "Tests",
   "total_commits": 52.0,
   "authored_commits": 52.0,
@@ -45,7 +45,7 @@
   "avg_concept_lead_time_days": 15.921902913943354,
   "review_reciprocity": 6.970588235294118,
   "hybrid_score": 0.4454,
-  "p2016_hybrid_score": 0.4569,
+  "p2016_hybrid_score": 0.457,
   "modern_hybrid_score": 0.386,
   "impact_score": 23.0,
   "p2016_impact_score": 24.0,
@@ -73,17 +73,17 @@
       "Wallet": 0.006
     },
     "discussion": {
-      "Mempool": 0.333,
-      "Mining": 0.244,
-      "Network": 0.422
+      "Mempool": 0.341,
+      "Mining": 0.227,
+      "Network": 0.432
     }
   },
   "expertise_domain_scores": {
     "Consensus": 0.018,
-    "Infrastructure": 0.5165,
-    "Mempool": 0.1368,
-    "Mining": 0.0976,
-    "Network": 0.2276
+    "Infrastructure": 0.5163,
+    "Mempool": 0.1399,
+    "Mining": 0.0907,
+    "Network": 0.2315
   },
   "p2016_posts": 66.0,
   "modern_posts": 60.0,
@@ -197,7 +197,7 @@
       "taproot": 9
     },
     "2026": {
-      "other": 17,
+      "other": 18,
       "core-dev": 11,
       "hard-fork-block-size": 1,
       "mempool-fees": 11,

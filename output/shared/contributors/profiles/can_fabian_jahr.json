@@ -12,14 +12,14 @@
     "is_sponsored": true,
     "maintainer_status": null,
     "social_source": "Mixed",
-    "sponsor_id": "brink"
+    "sponsor_id": null
   },
   "roles": [
     "BIP Author",
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-06T00:00:00",
+  "last_seen": "2026-06-09T00:00:00",
   "technical_focus": "Tests",
   "total_commits": 289.0,
   "authored_commits": 289.0,
@@ -45,20 +45,20 @@
   "avg_pr_ack_velocity_days": 12.6440988372093,
   "avg_concept_lead_time_days": 27.34062605218855,
   "review_reciprocity": 3.481012658227848,
-  "hybrid_score": 0.9321,
-  "p2016_hybrid_score": 0.9492,
-  "modern_hybrid_score": 0.9843,
+  "hybrid_score": 0.9315,
+  "p2016_hybrid_score": 0.9482,
+  "modern_hybrid_score": 0.9809,
   "impact_score": 43.0,
   "p2016_impact_score": 43.0,
-  "modern_impact_score": 45.0,
+  "modern_impact_score": 44.0,
   "threads_started": 11.0,
-  "replies_sent": 21.0,
+  "replies_sent": 22.0,
   "ml_threads": 3.0,
   "delving_threads": 8.0,
-  "ml_responses": 17.0,
+  "ml_responses": 18.0,
   "delving_responses": 4.0,
   "first_active": "2023-01-14T14:34:38",
-  "last_active": "2026-05-24T18:50:28",
+  "last_active": "2026-06-07T16:52:03",
   "dev_type": "Builder",
   "expertise_domains": [
     "Infrastructure",
@@ -84,14 +84,14 @@
     "Infrastructure": 0.9385,
     "Wallet": 0.0206
   },
-  "p2016_posts": 32.0,
-  "modern_posts": 31.0,
-  "p2016_ml_posts": 20.0,
+  "p2016_posts": 33.0,
+  "modern_posts": 32.0,
+  "p2016_ml_posts": 21.0,
   "p2016_delving_posts": 12.0,
-  "modern_ml_posts": 19.0,
+  "modern_ml_posts": 20.0,
   "modern_delving_posts": 12.0,
   "global_first_active": "2019-07-10T19:44:26",
-  "global_last_active": "2026-05-24T18:50:28",
+  "global_last_active": "2026-06-07T16:52:03",
   "github_location": "Berlin",
   "github_company": "Freelancer",
   "github_bio": "B45A B6D2 0861 AC21 D276  B826 F13D 1E9D 8907 98CD",
@@ -194,9 +194,9 @@
   },
   "last_message": {
     "source": "mailing_list",
-    "subject": "Re: [bitcoindev] Re: [BIP Draft] P2P UTXO Set Sharing",
-    "date": "2026-05-24",
-    "link": "https://gnusha.org/pi/bitcoindev/qASxp5RkHoZo6U9wmZuUlemOWYZkMfXSIDOSz-Km8opsbZDlWDZ8UP7DFLTNrEZE0XNaHjGHArFm6rT4KpV_viBWb1ybXf7SLdL-AMZmmOg=@protonmail.com"
+    "subject": "Re: [bitcoindev] [BIP Draft] Testnet 5",
+    "date": "2026-06-07",
+    "link": "https://gnusha.org/pi/bitcoindev/DJs9JYTbROCHQIg0XGSnLLI1edzOYp0i3i96a_YFXuxqmhZq8nYyhHq5_upeVXcu-gPiOZHMzChmCOSBVe3kOk5pdlxDYWNFvtRy5JX89bo=@protonmail.com"
   },
   "social_history": {
     "2023": {
@@ -225,10 +225,11 @@
       "utxo-sync": 1
     },
     "2026": {
+      "other": 2,
       "core-dev": 1,
       "p2p-network": 3,
-      "utxo-sync": 8,
-      "other": 1
+      "testing-devtools": 1,
+      "utxo-sync": 8
     }
   }
 }
