@@ -216,6 +216,31 @@ def generate_snapshot():
         reverse=True,
     )[:5]
 
+    import random
+    # 3 years threshold
+    retired_threshold = anchor - pd.Timedelta(days=1095)
+    retired_pool = []
+    for c in human_contributors:
+        last_act = pd.to_datetime(c.get('global_last_active'), utc=True, errors='coerce')
+        if pd.isna(last_act) or last_act < retired_threshold:
+            impact = c.get('impact_score')
+            if impact is not None and impact > 0:
+                retired_pool.append(c)
+    
+    retired_pool = sorted(retired_pool, key=lambda x: x.get('impact_score', 0), reverse=True)[:50]
+    
+    # Pick 3-5 random legends to feature each time this runs
+    num_legends = min(random.randint(3, 5), len(retired_pool))
+    sampled_legends = random.sample(retired_pool, num_legends)
+    
+    historical_legends = []
+    for c in sampled_legends:
+        historical_legends.append({
+            'uuid': c.get('uuid'),
+            'display_name': c.get('display_name') or 'Unknown',
+            'impact_score': c.get('impact_score')
+        })
+
     # Recent BIPs with period-over-period mention deltas.
     bips_index = {str(item.get('bip_id')): item for item in bips_ui if item.get('bip_id') is not None}
     author_index = build_author_index(human_contributors)
@@ -382,6 +407,10 @@ def generate_snapshot():
                 'window_days': WINDOW_DAYS,
                 'definition': 'Most active research topics in current 30-day discussion window versus previous 30-day baseline.',
                 'items': topic_items,
+            },
+            'historical_legends': {
+                'definition': 'Random selection of top retired contributors by impact score to feature as ecosystem veterans.',
+                'items': historical_legends,
             },
         },
         'quality': {

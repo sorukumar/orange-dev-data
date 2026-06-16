@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-19T00:00:00",
-  "last_seen": "2026-06-09T00:00:00",
+  "last_seen": "2026-06-15T00:00:00",
   "technical_focus": "p2p-network",
   "total_commits": 0.0,
   "authored_commits": 0.0,
@@ -60,15 +60,18 @@
   "last_active": null,
   "dev_type": "Participant",
   "expertise_domains": [
-    "Network"
+    "Network",
+    "Privacy"
   ],
   "expertise_by_source": {
     "discussion": {
-      "Network": 1.0
+      "Network": 0.67,
+      "Privacy": 0.33
     }
   },
   "expertise_domain_scores": {
-    "Network": 1.0
+    "Network": 0.67,
+    "Privacy": 0.33
   },
   "p2016_posts": 6.0,
   "modern_posts": 6.0,
@@ -100,7 +103,8 @@
   },
   "social_history": {
     "2026": {
-      "p2p-network": 6
+      "p2p-network": 6,
+      "privacy": 6
     }
   }
 }

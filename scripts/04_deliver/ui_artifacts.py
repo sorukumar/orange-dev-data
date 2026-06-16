@@ -23,14 +23,25 @@ def load_maintainers():
         return {}
     with open(MAINTAINERS_FILE) as f:
         data = json.load(f)
+        
+    from scripts.utils.identity import IdentityResolver
+    resolver = IdentityResolver()
+    
     maintainers = {}
     for m in data.get('maintainers', []):
+        # Resolve to canonical identity using resolver
+        uuid = resolver.resolve_git(m.get('name'), None)
+        record = next((r for r in resolver._identities if r["uuid"] == uuid), None)
+        canonical_name = record["display_name"] if record else m.get('name')
+        
+        if canonical_name:
+            maintainers[canonical_name.strip().lower()] = m
+            
+        # Also keep github login as fallback lookup
         login = m.get('github')
         if login:
             maintainers[login.strip().lower()] = m
-        name = m.get('name')
-        if name:
-            maintainers[name.strip().lower()] = m
+
     return maintainers
 
 

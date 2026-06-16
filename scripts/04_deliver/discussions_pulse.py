@@ -177,7 +177,7 @@ def _compute_window(df, window_days):
     name_map = {cid: _best_name(grp) for cid, grp in w.groupby('canonical_id')}
     voice_counts = w.groupby('canonical_id').size().sort_values(ascending=False)
     top_voices = [
-        {"name": name_map.get(cid, cid), "posts": int(count)}
+        {"name": name_map.get(cid, cid), "uuid": str(cid), "posts": int(count)}
         for cid, count in voice_counts.head(8).items()
     ]
 

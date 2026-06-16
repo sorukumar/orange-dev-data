@@ -35,18 +35,27 @@ def main():
     # Map for easy lookup [ID (Canonical Name) -> Record]
     reg_map = {c['id']: c for c in registry.get('contributors', [])}
 
+    # 3c. Initialize Identity Hub (The Brain)
+    resolver = IdentityResolver()
+
     # 2. Load Manual Intelligence (Directly from consolidated metadata)
     maintainers = {}
     if os.path.exists(MAINTAINERS_PATH):
         with open(MAINTAINERS_PATH, 'r') as f:
             for m in json.load(f).get('maintainers', []):
-                maintainers[m['name'].lower()] = m
+                uuid = resolver.resolve_git(m['name'], None)
+                record = next((r for r in resolver._identities if r["uuid"] == uuid), None)
+                canonical_name = record["display_name"] if record else m['name']
+                maintainers[canonical_name.lower()] = m
                 
     sponsored = {}
     if os.path.exists(SPONSORS_PATH):
         with open(SPONSORS_PATH, 'r') as f:
             for s in json.load(f).get('sponsored_developers', []):
-                sponsored[s['canonical_name'].lower()] = s
+                uuid = resolver.resolve_git(s['canonical_name'], None)
+                record = next((r for r in resolver._identities if r["uuid"] == uuid), None)
+                canonical_name = record["display_name"] if record else s['canonical_name']
+                sponsored[canonical_name.lower()] = s
 
     # 3. Load Fresh Builds (Discovery Data)
     discovered_people = []
@@ -75,8 +84,7 @@ def main():
             except:
                 print("⚠️ Warning: Could not parse BIPS data.")
 
-    # 3c. Initialize Identity Hub (The Brain)
-    resolver = IdentityResolver()
+
 
     # 4. Bootstrap from Identities Map (The full 4,000+ list)
     # We now trust the resolver's internal state

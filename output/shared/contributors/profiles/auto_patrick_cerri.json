@@ -8,16 +8,18 @@
     "is_core_committer": null,
     "is_core_contributor": null,
     "is_maintainer": null,
-    "is_social_contributor": null,
+    "is_social_contributor": true,
     "is_sponsored": null,
     "maintainer_status": null,
-    "social_source": null,
+    "social_source": "mailing_list",
     "sponsor_id": null
   },
-  "roles": [],
+  "roles": [
+    "Researcher"
+  ],
   "first_seen": "2026-06-09T00:00:00",
-  "last_seen": null,
-  "technical_focus": null,
+  "last_seen": "2026-06-15T00:00:00",
+  "technical_focus": "other",
   "total_commits": 0.0,
   "authored_commits": 0.0,
   "merge_commits": 0.0,
@@ -42,20 +44,20 @@
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": null,
-  "hybrid_score": 0.0,
-  "p2016_hybrid_score": 0.0,
-  "modern_hybrid_score": 0.0,
+  "hybrid_score": 0.0068,
+  "p2016_hybrid_score": 0.0104,
+  "modern_hybrid_score": 0.0296,
   "impact_score": 0.0,
-  "p2016_impact_score": 0.0,
-  "modern_impact_score": 0.0,
+  "p2016_impact_score": 1.0,
+  "modern_impact_score": 2.0,
   "threads_started": 1.0,
-  "replies_sent": 0.0,
+  "replies_sent": 2.0,
   "ml_threads": 1.0,
   "delving_threads": 0.0,
-  "ml_responses": 0.0,
+  "ml_responses": 2.0,
   "delving_responses": 0.0,
   "first_active": "2026-06-09T04:02:33",
-  "last_active": "2026-06-09T04:02:33",
+  "last_active": "2026-06-10T05:14:45",
   "dev_type": "Participant",
   "expertise_domains": [
     "Infrastructure"
@@ -64,14 +66,14 @@
   "expertise_domain_scores": {
     "Infrastructure": 1.0
   },
-  "p2016_posts": 1.0,
-  "modern_posts": 1.0,
-  "p2016_ml_posts": 1.0,
+  "p2016_posts": 3.0,
+  "modern_posts": 3.0,
+  "p2016_ml_posts": 3.0,
   "p2016_delving_posts": 0.0,
-  "modern_ml_posts": 1.0,
+  "modern_ml_posts": 3.0,
   "modern_delving_posts": 0.0,
   "global_first_active": "2026-06-09T04:02:33",
-  "global_last_active": "2026-06-09T04:02:33",
+  "global_last_active": "2026-06-10T05:14:45",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -87,13 +89,13 @@
   },
   "last_message": {
     "source": "mailing_list",
-    "subject": "[bitcoindev] A look at SHRINCS",
-    "date": "2026-06-09",
-    "link": "https://gnusha.org/pi/bitcoindev/CAOWv0+Ux1AiLbUagF8eWsmvMQ-xvu438WsOJ+r0MzsqbHWerOQ@mail.gmail.com"
+    "subject": "Re: [bitcoindev] A look at SHRINCS",
+    "date": "2026-06-10",
+    "link": "https://gnusha.org/pi/bitcoindev/CAOWv0+XTFgWLZ9AwSJouyoy8gZ0iGwcKpUBMmXTWLoKehZ+fzA@mail.gmail.com"
   },
   "social_history": {
     "2026": {
-      "other": 1
+      "other": 3
     }
   }
 }

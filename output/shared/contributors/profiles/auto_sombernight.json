@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-09T00:00:00",
+  "last_seen": "2026-06-15T00:00:00",
   "technical_focus": "Script",
   "total_commits": 2.0,
   "authored_commits": 2.0,
@@ -45,19 +45,19 @@
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 3.25,
   "hybrid_score": 0.1781,
-  "p2016_hybrid_score": 0.1855,
-  "modern_hybrid_score": 0.1214,
+  "p2016_hybrid_score": 0.1854,
+  "modern_hybrid_score": 0.1423,
   "impact_score": 10.0,
   "p2016_impact_score": 11.0,
-  "modern_impact_score": 7.0,
+  "modern_impact_score": 8.0,
   "threads_started": 4.0,
-  "replies_sent": 1.0,
+  "replies_sent": 2.0,
   "ml_threads": 4.0,
   "delving_threads": 0.0,
-  "ml_responses": 1.0,
+  "ml_responses": 2.0,
   "delving_responses": 0.0,
   "first_active": "2018-11-08T04:37:50",
-  "last_active": "2021-03-14T10:13:32",
+  "last_active": "2026-06-12T01:52:53",
   "dev_type": "Builder",
   "expertise_domains": [
     "Wallet",
@@ -70,23 +70,25 @@
       "Wallet": 0.5
     },
     "discussion": {
-      "Privacy": 0.377,
-      "Wallet": 0.623
+      "Mempool": 0.197,
+      "Privacy": 0.303,
+      "Wallet": 0.5
     }
   },
   "expertise_domain_scores": {
-    "Privacy": 0.1508,
+    "Mempool": 0.0788,
+    "Privacy": 0.1212,
     "Script": 0.3,
-    "Wallet": 0.5492
+    "Wallet": 0.5
   },
-  "p2016_posts": 5.0,
-  "modern_posts": 0.0,
-  "p2016_ml_posts": 5.0,
+  "p2016_posts": 6.0,
+  "modern_posts": 1.0,
+  "p2016_ml_posts": 6.0,
   "p2016_delving_posts": 0.0,
-  "modern_ml_posts": 0.0,
+  "modern_ml_posts": 1.0,
   "modern_delving_posts": 0.0,
   "global_first_active": "2018-11-08T04:37:50",
-  "global_last_active": "2026-02-11T16:16:50",
+  "global_last_active": "2026-06-12T01:52:53",
   "github_location": null,
   "github_company": null,
   "github_bio": "Bitcoin related things.\r\n// GPG:\r\n4AD6 4339 DFA0 5E20 B3F6\r\nAD51 E7B7 48CD AF5E 5ED9",
@@ -111,9 +113,9 @@
   },
   "last_message": {
     "source": "mailing_list",
-    "subject": "Re: [bitcoin-dev] Signature and Script Independent Hierarchy for\n\tDeterministic Wallets.",
-    "date": "2021-03-14",
-    "link": "https://gnusha.org/pi/bitcoindev/z1Vokp3jct_xwR8wt3n6r8t24DqtMpnrogF22YFc0_V3riIMWEq3WBiOriJOm2kVrVgtsu5p7wDTMrN3dLdA8DilhITMXb4tHY6wCnk3y1g=@protonmail.com"
+    "subject": "Re: [bitcoindev] [BIP Proposal] Removal of BIP 125 RBF signalling in\n wallet transactions",
+    "date": "2026-06-12",
+    "link": "https://gnusha.org/pi/bitcoindev/uscVpXZgwC16jogiUouq2bY8y65G8BeiPWHizgCnU-IYtLwZyHY1bRC-VlpwTATpHTOuvQJ_c8KtSkipAsRhieC1wTlR6CDflgz9gwdIv_Q=@protonmail.com"
   },
   "social_history": {
     "2018": {
@@ -129,6 +131,9 @@
     "2021": {
       "multisig-threshold": 1,
       "wallet-keys": 1
+    },
+    "2026": {
+      "mempool-fees": 1
     }
   }
 }

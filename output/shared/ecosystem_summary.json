@@ -1,38 +1,38 @@
 {
-  "generated_at": "2026-06-09T12:31:50.892101",
+  "generated_at": "2026-06-15T17:34:57.781110",
   "groups": {
-    "committers": 1128,
-    "reviewers": 4875,
-    "research": 1641,
+    "committers": 1131,
+    "reviewers": 4883,
+    "research": 1644,
     "standards": 158,
-    "total_active": 6163,
-    "total_registry": 7269
+    "total_active": 6173,
+    "total_registry": 7279
   },
   "venn_4": {
     "0001": 15,
-    "0010": 1170,
+    "0010": 1172,
     "0011": 24,
-    "0100": 3643,
+    "0100": 3649,
     "0101": 5,
-    "0110": 140,
+    "0110": 139,
     "0111": 38,
     "1000": 70,
     "1001": 1,
     "1010": 7,
     "1011": 1,
-    "1100": 786,
+    "1100": 787,
     "1101": 2,
-    "1110": 189,
+    "1110": 191,
     "1111": 72
   },
   "venn_summary": {
     "code_only": 70,
-    "review_only": 3643,
-    "research_only": 1170,
+    "review_only": 3649,
+    "research_only": 1172,
     "standards_only": 15,
     "all_four": 72,
-    "code_review": 786,
-    "review_research": 140,
+    "code_review": 787,
+    "review_research": 139,
     "research_standards": 24
   },
   "rd_focus": {},
@@ -40,18 +40,34 @@
     "title": "Trending BIP Discussions",
     "value": "BIP 70"
   },
+  "spotlight": {
+    "name": "codeabysss",
+    "uuid": "auto_codeabysss",
+    "description": "First-time contributor recently merged 1 commit."
+  },
   "onboarding": {
-    "new_coders_90d": 16,
-    "new_discussants_90d": 96,
+    "new_coders_90d": 17,
+    "new_discussants_90d": 91,
     "window_days": 90
+  },
+  "prs": {
+    "total_merged": 16562,
+    "merged_30d": 122
+  },
+  "commits": {
+    "commits_30d": 273
+  },
+  "bips": {
+    "total": 209,
+    "active_recently": 97
   },
   "discussion_pulse": {
     "topics": [
       {
         "category": "quantum",
         "label": "Quantum",
-        "count": 173,
-        "share": 27.4
+        "count": 176,
+        "share": 27.8
       },
       {
         "category": "testing-devtools",
@@ -62,8 +78,8 @@
       {
         "category": "covenants",
         "label": "Covenants",
-        "count": 47,
-        "share": 7.4
+        "count": 45,
+        "share": 7.1
       }
     ],
     "top_bips": [
@@ -82,7 +98,7 @@
       {
         "bip_id": "39",
         "title": "Mnemonic code for generating deterministic keys",
-        "mentions": 213,
+        "mentions": 216,
         "theme": "Wallet & Keys"
       }
     ],

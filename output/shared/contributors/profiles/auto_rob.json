@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-09T00:00:00",
+  "last_seen": "2026-06-15T00:00:00",
   "technical_focus": "utxo-sync",
   "total_commits": 0.0,
   "authored_commits": 0.0,
@@ -61,17 +61,17 @@
   "dev_type": "Participant",
   "expertise_domains": [
     "Network",
-    "Wallet"
+    "Privacy"
   ],
   "expertise_by_source": {
     "discussion": {
-      "Network": 0.833,
-      "Wallet": 0.167
+      "Network": 0.662,
+      "Privacy": 0.338
     }
   },
   "expertise_domain_scores": {
-    "Network": 0.833,
-    "Wallet": 0.167
+    "Network": 0.662,
+    "Privacy": 0.338
   },
   "p2016_posts": 7.0,
   "modern_posts": 7.0,
@@ -113,7 +113,8 @@
       "utxo-sync": 1
     },
     "2026": {
-      "p2p-network": 3
+      "p2p-network": 3,
+      "privacy": 3
     }
   }
 }

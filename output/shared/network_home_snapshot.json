@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-06-09T12:32:15.602468",
-  "contributors_tracked": 7269,
+  "generated_at": "2026-06-16T10:26:07.238222",
+  "contributors_tracked": 7279,
   "window_reference": {
-    "anchor_timestamp": "2026-06-09T16:40:05+00:00",
-    "current_window_start": "2026-05-10T16:40:05+00:00",
-    "previous_window_start": "2026-04-10T16:40:05+00:00",
+    "anchor_timestamp": "2026-06-15T21:43:09+00:00",
+    "current_window_start": "2026-05-16T21:43:09+00:00",
+    "previous_window_start": "2026-04-16T21:43:09+00:00",
     "window_days": 30
   },
   "widgets": {
     "active_contributors_30d": {
-      "value": 62,
-      "previous_30d": 35,
-      "delta_30d": 27,
+      "value": 64,
+      "previous_30d": 36,
+      "delta_30d": 28,
       "window_days": 30,
       "definition": "Contributors with global_last_active in current 30-day window, compared to the previous 30-day window.",
-      "latest_activity_date": "2026-06-09"
+      "latest_activity_date": "2026-06-15"
     },
     "top_reviewers_30d": {
       "window_days": 30,
@@ -23,37 +23,37 @@
         {
           "uuid": "auto_sebastian_kung",
           "display_name": "Sebastian Kung",
-          "reviews_30d": 151,
-          "previous_30d": 113,
-          "delta_30d": 38
+          "reviews_30d": 139,
+          "previous_30d": 143,
+          "delta_30d": -4
         },
         {
           "uuid": "can_marcofalke",
           "display_name": "MarcoFalke",
-          "reviews_30d": 113,
-          "previous_30d": 80,
-          "delta_30d": 33
+          "reviews_30d": 112,
+          "previous_30d": 90,
+          "delta_30d": 22
         },
         {
           "uuid": "can_michael_ford",
           "display_name": "Michael Ford",
-          "reviews_30d": 101,
-          "previous_30d": 49,
-          "delta_30d": 52
+          "reviews_30d": 100,
+          "previous_30d": 52,
+          "delta_30d": 48
         },
         {
           "uuid": "auto_w0xlt",
           "display_name": "w0xlt",
-          "reviews_30d": 60,
-          "previous_30d": 20,
-          "delta_30d": 40
+          "reviews_30d": 74,
+          "previous_30d": 21,
+          "delta_30d": 53
         },
         {
           "uuid": "can_mark_erhardt",
           "display_name": "Mark Erhardt",
-          "reviews_30d": 49,
-          "previous_30d": 30,
-          "delta_30d": 19
+          "reviews_30d": 52,
+          "previous_30d": 22,
+          "delta_30d": 30
         }
       ],
       "aliases_collapsed": 0
@@ -67,43 +67,43 @@
           "title": "Pay-to-Merkle-Root (P2MR)",
           "primary_author": "Hunter Beast",
           "primary_author_uuid": "auto_hunter_beast",
-          "mentions_30d": 24,
-          "previous_30d": 4,
-          "delta_30d": 20
+          "mentions_30d": 28,
+          "previous_30d": 1,
+          "delta_30d": 27
         },
         {
-          "bip_id": "54",
-          "title": "Consensus Cleanup",
-          "primary_author": "Antoine Poinsot",
-          "primary_author_uuid": "can_antoine_poinsot",
-          "mentions_30d": 15,
-          "previous_30d": 9,
-          "delta_30d": 6
+          "bip_id": "39",
+          "title": "Mnemonic code for generating deterministic keys",
+          "primary_author": "Marek Palatinus",
+          "primary_author_uuid": "can_marek_palatinus",
+          "mentions_30d": 19,
+          "previous_30d": 0,
+          "delta_30d": 19
         },
         {
           "bip_id": "32",
           "title": "Hierarchical Deterministic Wallets",
           "primary_author": "Pieter Wuille",
           "primary_author_uuid": "can_pieter_wuille",
-          "mentions_30d": 14,
-          "previous_30d": 11,
-          "delta_30d": 3
+          "mentions_30d": 17,
+          "previous_30d": 5,
+          "delta_30d": 12
         }
       ]
     },
     "research_activity_30d": {
-      "messages_30d": 264,
-      "previous_30d": 243,
-      "delta_30d": 21,
-      "momentum": "steady",
+      "messages_30d": 248,
+      "previous_30d": 200,
+      "delta_30d": 48,
+      "momentum": "rising",
       "definition": "Combined Delving Bitcoin and mailing list discussion volume in current 30 days versus previous 30 days."
     },
     "discussion_voices_30d": {
-      "value": 99,
-      "previous_30d": 93,
-      "delta_30d": 6,
-      "messages_30d": 264,
-      "messages_previous_30d": 243
+      "value": 84,
+      "previous_30d": 88,
+      "delta_30d": -4,
+      "messages_30d": 248,
+      "messages_previous_30d": 200
     },
     "topic_momentum_30d": {
       "window_days": 30,
@@ -112,9 +112,9 @@
         {
           "topic": "quantum",
           "label": "Quantum",
-          "mentions_30d": 81,
-          "previous_30d": 55,
-          "delta_30d": 26
+          "mentions_30d": 79,
+          "previous_30d": 44,
+          "delta_30d": 35
         },
         {
           "topic": "consensus-cleanup",
@@ -126,23 +126,53 @@
         {
           "topic": "utxo-sync",
           "label": "Utxo Sync",
-          "mentions_30d": 22,
-          "previous_30d": 5,
-          "delta_30d": 17
-        },
-        {
-          "topic": "core-dev",
-          "label": "Core Dev",
-          "mentions_30d": 18,
-          "previous_30d": 3,
-          "delta_30d": 15
+          "mentions_30d": 16,
+          "previous_30d": 12,
+          "delta_30d": 4
         },
         {
           "topic": "taproot",
           "label": "Taproot",
           "mentions_30d": 14,
-          "previous_30d": 10,
-          "delta_30d": 4
+          "previous_30d": 0,
+          "delta_30d": 14
+        },
+        {
+          "topic": "payment-protocol",
+          "label": "Payment Protocol",
+          "mentions_30d": 12,
+          "previous_30d": 2,
+          "delta_30d": 10
+        }
+      ]
+    },
+    "historical_legends": {
+      "definition": "Random selection of top retired contributors by impact score to feature as ecosystem veterans.",
+      "items": [
+        {
+          "uuid": "can_eric_lombrozo",
+          "display_name": "Eric Lombrozo",
+          "impact_score": 60.0
+        },
+        {
+          "uuid": "auto_philip_kaufmann",
+          "display_name": "Philip Kaufmann",
+          "impact_score": 31.0
+        },
+        {
+          "uuid": "auto_nicolas_dorier",
+          "display_name": "Nicolas Dorier",
+          "impact_score": 45.0
+        },
+        {
+          "uuid": "can_amir_taaki",
+          "display_name": "Amir Taaki",
+          "impact_score": 51.0
+        },
+        {
+          "uuid": "can_ruben_somsen",
+          "display_name": "Ruben Somsen",
+          "impact_score": 37.0
         }
       ]
     }

@@ -18,17 +18,17 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-09T00:00:00",
-  "technical_focus": "None",
-  "total_commits": 0.0,
-  "authored_commits": 0.0,
+  "last_seen": "2026-06-15T00:00:00",
+  "technical_focus": "Node & RPC",
+  "total_commits": 2.0,
+  "authored_commits": 2.0,
   "merge_commits": 0.0,
-  "total_additions": null,
-  "total_deletions": null,
-  "first_commit": null,
-  "last_commit": null,
-  "p2016_authored_commits": 0.0,
-  "modern_authored_commits": 0.0,
+  "total_additions": 17.0,
+  "total_deletions": 6.0,
+  "first_commit": "2026-02-20T12:18:54",
+  "last_commit": "2026-05-04T19:21:29",
+  "p2016_authored_commits": 2.0,
+  "modern_authored_commits": 2.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
@@ -44,12 +44,12 @@
   "avg_pr_ack_velocity_days": 0.028043981481481482,
   "avg_concept_lead_time_days": 0.028043981481481482,
   "review_reciprocity": 10.0,
-  "hybrid_score": 0.0881,
-  "p2016_hybrid_score": 0.0881,
-  "modern_hybrid_score": 0.0812,
-  "impact_score": 5.0,
-  "p2016_impact_score": 5.0,
-  "modern_impact_score": 5.0,
+  "hybrid_score": 0.1515,
+  "p2016_hybrid_score": 0.1515,
+  "modern_hybrid_score": 0.1446,
+  "impact_score": 9.0,
+  "p2016_impact_score": 9.0,
+  "modern_impact_score": 8.0,
   "threads_started": 0.0,
   "replies_sent": 1.0,
   "ml_threads": 0.0,
@@ -58,17 +58,22 @@
   "delving_responses": 1.0,
   "first_active": null,
   "last_active": null,
-  "dev_type": "Reviewer",
+  "dev_type": "Builder",
   "expertise_domains": [
+    "Infrastructure",
     "Consensus"
   ],
   "expertise_by_source": {
+    "code": {
+      "Infrastructure": 1.0
+    },
     "discussion": {
       "Consensus": 1.0
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 1.0
+    "Consensus": 0.4,
+    "Infrastructure": 0.6
   },
   "p2016_posts": 1.0,
   "modern_posts": 1.0,
@@ -76,8 +81,8 @@
   "p2016_delving_posts": 1.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 1.0,
-  "global_first_active": null,
-  "global_last_active": null,
+  "global_first_active": "2026-02-20T12:18:54",
+  "global_last_active": "2026-05-04T19:21:29",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -87,6 +92,11 @@
   "is_top_50": false,
   "github_url": "https://github.com/svanstaa",
   "delving_url": "https://delvingbitcoin.org/u/svanstaa",
+  "commit_history": {
+    "2026": {
+      "Node & RPC": 2.0
+    }
+  },
   "first_message": {
     "source": "delving",
     "subject": "Re: Consensus Cleanup: demo of slow blocks on Signet",

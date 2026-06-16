@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-09T00:00:00",
+  "last_seen": "2026-06-15T00:00:00",
   "technical_focus": "Tests",
   "total_commits": 69.0,
   "authored_commits": 69.0,
@@ -28,36 +28,36 @@
   "first_commit": "2014-09-13T00:09:18",
   "last_commit": "2026-03-20T22:19:52",
   "p2016_authored_commits": 65.0,
-  "modern_authored_commits": 49.0,
+  "modern_authored_commits": 44.0,
   "bips_authored": 1.0,
   "p2016_bips_authored": 1.0,
   "modern_bips_authored": 1.0,
-  "avg_review_latency_days": 1666.3662513059871,
-  "reviews_count": 656.0,
+  "avg_review_latency_days": 1670.0718535541973,
+  "reviews_count": 659.0,
   "avg_approval_latency_days": 1090.8670698385617,
   "approvals_count": 273.0,
-  "p2016_reviews_count": 656.0,
+  "p2016_reviews_count": 659.0,
   "modern_reviews_count": 551.0,
   "first_review_date": "2016-01-03T22:44:22+00:00",
-  "last_review_date": "2026-06-09T01:22:04+00:00",
+  "last_review_date": "2026-06-14T19:14:31+00:00",
   "prs_authored": 64.0,
   "avg_pr_ack_velocity_days": 41.61851181773879,
   "avg_concept_lead_time_days": 52.503098806042885,
-  "review_reciprocity": 10.25,
-  "hybrid_score": 0.9548,
-  "p2016_hybrid_score": 1.0404,
+  "review_reciprocity": 10.296875,
+  "hybrid_score": 0.9634,
+  "p2016_hybrid_score": 1.0596,
   "modern_hybrid_score": 1.162,
   "impact_score": 44.0,
-  "p2016_impact_score": 46.0,
+  "p2016_impact_score": 47.0,
   "modern_impact_score": 50.0,
   "threads_started": 23.0,
-  "replies_sent": 87.0,
+  "replies_sent": 90.0,
   "ml_threads": 7.0,
   "delving_threads": 16.0,
-  "ml_responses": 57.0,
+  "ml_responses": 60.0,
   "delving_responses": 30.0,
   "first_active": "2016-09-21T07:58:25",
-  "last_active": "2026-06-01T17:54:36",
+  "last_active": "2026-06-11T13:28:54",
   "dev_type": "Builder",
   "expertise_domains": [
     "Infrastructure",
@@ -74,26 +74,26 @@
       "Wallet": 0.351
     },
     "discussion": {
-      "Ecosystem": 0.359,
-      "Mempool": 0.359,
-      "Mining": 0.282
+      "Ecosystem": 0.35,
+      "Mempool": 0.375,
+      "Mining": 0.275
     }
   },
   "expertise_domain_scores": {
-    "Ecosystem": 0.0718,
+    "Ecosystem": 0.07,
     "Infrastructure": 0.6794,
-    "Mempool": 0.0871,
-    "Mining": 0.0564,
+    "Mempool": 0.0903,
+    "Mining": 0.055,
     "Wallet": 0.1053
   },
-  "p2016_posts": 110.0,
-  "modern_posts": 103.0,
-  "p2016_ml_posts": 64.0,
+  "p2016_posts": 113.0,
+  "modern_posts": 106.0,
+  "p2016_ml_posts": 67.0,
   "p2016_delving_posts": 46.0,
-  "modern_ml_posts": 57.0,
+  "modern_ml_posts": 60.0,
   "modern_delving_posts": 46.0,
   "global_first_active": "2014-09-13T00:09:18",
-  "global_last_active": "2026-06-01T17:54:36",
+  "global_last_active": "2026-06-11T13:28:54",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -160,9 +160,9 @@
   },
   "last_message": {
     "source": "mailing_list",
-    "subject": "Re: [bitcoindev] BIP 3 and issues on BIPs",
-    "date": "2026-06-01",
-    "link": "https://gnusha.org/pi/bitcoindev/06d94f73-eb1e-4072-8135-81f8d38260b9@murch.one"
+    "subject": "Re: [bitcoindev] [BIP Proposal] Removal of BIP 125 RBF signalling in\n wallet transactions",
+    "date": "2026-06-11",
+    "link": "https://gnusha.org/pi/bitcoindev/0710406e-e91a-480e-82e4-938d1894f66d@murch.one"
   },
   "social_history": {
     "2016": {
@@ -208,13 +208,13 @@
     "2026": {
       "bip-process": 8,
       "consensus-cleanup": 2,
-      "other": 34,
-      "mempool-fees": 5,
+      "other": 35,
+      "mempool-fees": 6,
       "mining": 5,
       "script-opcodes": 7,
       "security": 1,
       "soft-fork-activation": 3,
-      "testing-devtools": 2
+      "testing-devtools": 3
     }
   }
 }

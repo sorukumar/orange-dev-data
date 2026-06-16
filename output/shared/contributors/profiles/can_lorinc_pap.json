@@ -18,7 +18,7 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-09T00:00:00",
+  "last_seen": "2026-06-15T00:00:00",
   "technical_focus": "Tests",
   "total_commits": 275.0,
   "authored_commits": 275.0,
@@ -32,21 +32,21 @@
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": 80.60460570726977,
-  "reviews_count": 545.0,
-  "avg_approval_latency_days": 64.0525208049307,
-  "approvals_count": 355.0,
-  "p2016_reviews_count": 545.0,
-  "modern_reviews_count": 545.0,
+  "avg_review_latency_days": 80.26387310676772,
+  "reviews_count": 548.0,
+  "avg_approval_latency_days": 63.62407580049608,
+  "approvals_count": 358.0,
+  "p2016_reviews_count": 548.0,
+  "modern_reviews_count": 548.0,
   "first_review_date": "2023-08-03T16:49:58+00:00",
-  "last_review_date": "2026-06-09T12:07:07+00:00",
-  "prs_authored": 193.0,
+  "last_review_date": "2026-06-15T10:40:24+00:00",
+  "prs_authored": 194.0,
   "avg_pr_ack_velocity_days": 16.03114737654321,
   "avg_concept_lead_time_days": 21.520577813390315,
-  "review_reciprocity": 2.8238341968911915,
-  "hybrid_score": 0.5575,
-  "p2016_hybrid_score": 0.5575,
-  "modern_hybrid_score": 0.5575,
+  "review_reciprocity": 2.8247422680412373,
+  "hybrid_score": 0.5577,
+  "p2016_hybrid_score": 0.5577,
+  "modern_hybrid_score": 0.5577,
   "impact_score": 28.0,
   "p2016_impact_score": 28.0,
   "modern_impact_score": 28.0,
@@ -61,8 +61,8 @@
   "dev_type": "Builder",
   "expertise_domains": [
     "Infrastructure",
-    "Consensus",
-    "Network"
+    "Ecosystem",
+    "Consensus"
   ],
   "expertise_by_source": {
     "code": {
@@ -73,16 +73,17 @@
       "Network": 0.024,
       "Script": 0.011,
       "Wallet": 0.019
+    },
+    "discussion": {
+      "Ecosystem": 1.0
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.126,
-    "Cryptography": 0.013,
-    "Infrastructure": 0.796,
-    "Mempool": 0.011,
-    "Network": 0.024,
-    "Script": 0.011,
-    "Wallet": 0.019
+    "Consensus": 0.0756,
+    "Ecosystem": 0.4,
+    "Infrastructure": 0.4776,
+    "Network": 0.0144,
+    "Wallet": 0.0114
   },
   "p2016_posts": 4.0,
   "modern_posts": 4.0,
@@ -165,7 +166,7 @@
     "2026": {
       "lightning": 1,
       "mining": 1,
-      "other": 2,
+      "payment-protocol": 2,
       "security": 1
     }
   }

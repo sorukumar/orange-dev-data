@@ -18,38 +18,38 @@
     "Researcher"
   ],
   "first_seen": "2026-04-20T00:00:00",
-  "last_seen": "2026-06-09T00:00:00",
+  "last_seen": "2026-06-15T00:00:00",
   "technical_focus": "Consensus (Domain Logic)",
-  "total_commits": 1.0,
-  "authored_commits": 1.0,
+  "total_commits": 4.0,
+  "authored_commits": 4.0,
   "merge_commits": 0.0,
-  "total_additions": 14.0,
-  "total_deletions": 2.0,
-  "first_commit": "2026-04-23T10:46:39",
-  "last_commit": "2026-04-23T10:46:39",
-  "p2016_authored_commits": 1.0,
-  "modern_authored_commits": 1.0,
+  "total_additions": 36.0,
+  "total_deletions": 13.0,
+  "first_commit": "2026-04-20T11:57:10",
+  "last_commit": "2026-05-12T19:24:19",
+  "p2016_authored_commits": 4.0,
+  "modern_authored_commits": 4.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": null,
-  "reviews_count": 0.0,
-  "avg_approval_latency_days": null,
-  "approvals_count": 0.0,
-  "p2016_reviews_count": 0.0,
-  "modern_reviews_count": 0.0,
-  "first_review_date": null,
-  "last_review_date": null,
-  "prs_authored": 5.0,
-  "avg_pr_ack_velocity_days": 0.3000636574074074,
-  "avg_concept_lead_time_days": 0.5236805555555556,
-  "review_reciprocity": 0.0,
-  "hybrid_score": 0.0852,
-  "p2016_hybrid_score": 0.0852,
-  "modern_hybrid_score": 0.0852,
-  "impact_score": 5.0,
-  "p2016_impact_score": 5.0,
-  "modern_impact_score": 5.0,
+  "avg_review_latency_days": 0.7153973765432099,
+  "reviews_count": 2.0,
+  "avg_approval_latency_days": 1.1763541666666666,
+  "approvals_count": 1.0,
+  "p2016_reviews_count": 2.0,
+  "modern_reviews_count": 2.0,
+  "first_review_date": "2026-06-11T06:08:24+00:00",
+  "last_review_date": "2026-06-14T07:38:20+00:00",
+  "prs_authored": 6.0,
+  "avg_pr_ack_velocity_days": 0.4617916666666667,
+  "avg_concept_lead_time_days": 0.7186882716049383,
+  "review_reciprocity": 0.3333333333333333,
+  "hybrid_score": 0.1575,
+  "p2016_hybrid_score": 0.1575,
+  "modern_hybrid_score": 0.1575,
+  "impact_score": 9.0,
+  "p2016_impact_score": 9.0,
+  "modern_impact_score": 9.0,
   "threads_started": 0.0,
   "replies_sent": 0.0,
   "ml_threads": 0.0,
@@ -60,18 +60,21 @@
   "last_active": null,
   "dev_type": "Builder",
   "expertise_domains": [
-    "Consensus",
-    "Infrastructure"
+    "Infrastructure",
+    "Cryptography",
+    "Consensus"
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.5,
-      "Infrastructure": 0.5
+      "Consensus": 0.125,
+      "Cryptography": 0.25,
+      "Infrastructure": 0.625
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.5,
-    "Infrastructure": 0.5
+    "Consensus": 0.125,
+    "Cryptography": 0.25,
+    "Infrastructure": 0.625
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -79,8 +82,8 @@
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
-  "global_first_active": "2026-04-23T10:46:39",
-  "global_last_active": "2026-04-23T10:46:39",
+  "global_first_active": "2026-04-20T11:57:10",
+  "global_last_active": "2026-05-12T19:24:19",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -92,7 +95,9 @@
   "commit_history": {
     "2026": {
       "Consensus": 0.5,
-      "Tests": 0.5
+      "Cryptography": 1.0,
+      "Tests": 1.0,
+      "Utilities": 1.5
     }
   }
 }

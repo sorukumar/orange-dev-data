@@ -1074,7 +1074,10 @@ class MetricGenerators:
         
         for m in maintainers:
             m_id = m.get("id")
-            m_name = m.get("name", m_id)
+            m_name_raw = m.get("name", m_id)
+            uuid = resolver.resolve_git(m_name_raw, None)
+            record = next((r for r in resolver._identities if r["uuid"] == uuid), None)
+            m_name = record["display_name"] if record else m_name_raw
             m_status = m.get("status", "unknown")
             emails = m.get("emails", [])
             
