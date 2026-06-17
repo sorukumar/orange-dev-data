@@ -1102,26 +1102,28 @@ class MetricGenerators:
                             sponsor_name = company
                             break
 
-            # NEW: Calculate active years from commit data
+            # NEW: Calculate active years from explicit maintainers.json dates
+            # Fall back to commit data only if dates are missing (which shouldn't happen)
+            active_years = []
+            
+            # Use explicit segments if available
+            if m.get("segments"):
+                for seg in m["segments"]:
+                    start_yr = int(seg["start"].split('-')[0])
+                    end_yr = int(seg["end"].split('-')[0]) if "end" in seg else commits['date_utc'].max().year
+                    active_years.extend(list(range(start_yr, end_yr + 1)))
+            # Otherwise use role appointed/stepped_down
+            elif m.get("role") and m["role"].get("appointed"):
+                start_yr = int(m["role"]["appointed"].split('-')[0])
+                end_yr = int(m["role"]["stepped_down"].split('-')[0]) if "stepped_down" in m["role"] else commits['date_utc'].max().year
+                active_years.extend(list(range(start_yr, end_yr + 1)))
+                
+            active_years = sorted(list(set(active_years)))
+            
+            # For merge count fallback
             emails_lower = [e.lower() for e in emails]
             m_actions = maintainer_commits[maintainer_commits['committer_email'].str.lower().isin(emails_lower)]
-            
-            # For legacy maintainers, also check early author credit (Satoshi era)
-            if m_status in ['historical', 'emeritus']:
-                 m_early = commits[(commits['date_utc'].dt.year < 2012) & (commits['author_email'].str.lower().isin(emails_lower))]
-                 m_actions = pd.concat([m_actions, m_early])
-            
-            # If still no actions found (e.g. build system maintainers like Cory who push directly/no merges)
-            # check their general authorship across the whole history
-            if m_actions.empty:
-                m_actions = commits[commits['author_email'].str.lower().isin(emails_lower)]
-
-            active_years = sorted(m_actions['year'].unique().tolist()) if not m_actions.empty else []
             merges_count = len(m_actions[m_actions['is_merge'] == True]) if not m_actions.empty else 0
-            
-            # For showing in the relay race even if no merges (recent appointees or emeritus)
-            if not active_years and m_status in ['active', 'emeritus']:
-                 active_years = [commits['date_utc'].max().year]
             
             maintainer_entry = {
                 "id": m_id,

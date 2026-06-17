@@ -245,12 +245,12 @@
       "name": "Luke Dashjr",
       "status": "emeritus",
       "role": {
-        "title": "Core Maintainer",
-        "primary_area": "General",
+        "title": "BIPs / Strategic Maintainer",
+        "primary_area": "BIPs / Knots",
         "appointed": "2011-05-01"
       },
-      "merge_authority": true,
-      "evidence": "Frequent long-time contributor and committer.",
+      "merge_authority": false,
+      "evidence": "Maintained Bitcoin Knots and the BIPs repository, but never held merge authority (Committer keys) for the main Bitcoin Core master branch.",
       "github": "luke-jr",
       "emails": [
         "luke-jr+git@utopios.org",
