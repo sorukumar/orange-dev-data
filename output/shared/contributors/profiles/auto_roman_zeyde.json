@@ -12,44 +12,52 @@
     "is_sponsored": null,
     "maintainer_status": null,
     "social_source": "mailing_list",
-    "sponsor_id": null
+    "sponsor_id": null,
+    "ecosystem_contributor": true,
+    "tier2_commits": 3
   },
   "roles": [
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "Tests",
-  "total_commits": 22.0,
-  "authored_commits": 22.0,
+  "total_commits": 26.0,
+  "authored_commits": 26.0,
+  "tier1_authored_commits": 23.0,
+  "tier2_authored_commits": 3.0,
   "merge_commits": 0.0,
-  "total_additions": 552.0,
-  "total_deletions": 184.0,
-  "first_commit": "2018-03-18T14:25:30",
-  "last_commit": "2025-12-16T22:13:48",
-  "p2016_authored_commits": 22.0,
-  "modern_authored_commits": 18.0,
+  "total_additions": 556.0,
+  "total_deletions": 191.0,
+  "first_core_commit": "2018-03-27T19:31:27+00:00",
+  "last_core_commit": "2025-12-17T15:09:15+00:00",
+  "first_ecosystem_commit": "2019-04-21T22:04:23+00:00",
+  "last_ecosystem_commit": "2026-01-29T23:47:49+00:00",
+  "first_commit": "2018-03-27T19:31:27",
+  "last_commit": "2025-12-17T15:09:15",
+  "p2016_authored_commits": 26.0,
+  "modern_authored_commits": 20.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": 291.24559220679015,
-  "reviews_count": 9.0,
+  "avg_review_latency_days": 316.85671553497946,
+  "reviews_count": 10.0,
   "avg_approval_latency_days": 160.02918055555554,
   "approvals_count": 4.0,
-  "p2016_reviews_count": 9.0,
+  "p2016_reviews_count": 10.0,
   "modern_reviews_count": 8.0,
-  "first_review_date": "2020-08-06T17:17:13+00:00",
+  "first_review_date": "2019-04-28T18:32:05+00:00",
   "last_review_date": "2026-05-31T12:06:42+00:00",
-  "prs_authored": 16.0,
-  "avg_pr_ack_velocity_days": 1.624260085978836,
-  "avg_concept_lead_time_days": 1.0862106481481482,
-  "review_reciprocity": 0.5625,
-  "hybrid_score": 0.2922,
-  "p2016_hybrid_score": 0.2962,
-  "modern_hybrid_score": 0.2721,
-  "impact_score": 16.0,
-  "p2016_impact_score": 16.0,
-  "modern_impact_score": 15.0,
+  "prs_authored": 17.0,
+  "avg_pr_ack_velocity_days": 1.5261010802469137,
+  "avg_concept_lead_time_days": 1.7485300925925926,
+  "review_reciprocity": 0.5882352941176471,
+  "hybrid_score": 0.3043,
+  "p2016_hybrid_score": 0.3428,
+  "modern_hybrid_score": 0.3147,
+  "impact_score": 17.0,
+  "p2016_impact_score": 19.0,
+  "modern_impact_score": 17.0,
   "threads_started": 1.0,
   "replies_sent": 0.0,
   "ml_threads": 1.0,
@@ -61,20 +69,22 @@
   "dev_type": "Builder",
   "expertise_domains": [
     "Infrastructure",
-    "Mempool",
-    "Network"
+    "Wallet",
+    "Mempool"
   ],
   "expertise_by_source": {
     "code": {
-      "Infrastructure": 0.917,
-      "Mempool": 0.045,
-      "Network": 0.038
+      "Infrastructure": 0.861,
+      "Mempool": 0.042,
+      "Network": 0.035,
+      "Wallet": 0.062
     }
   },
   "expertise_domain_scores": {
-    "Infrastructure": 0.917,
-    "Mempool": 0.045,
-    "Network": 0.038
+    "Infrastructure": 0.861,
+    "Mempool": 0.042,
+    "Network": 0.035,
+    "Wallet": 0.062
   },
   "p2016_posts": 1.0,
   "modern_posts": 0.0,
@@ -82,38 +92,46 @@
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
-  "global_first_active": "2018-03-18T14:25:30",
-  "global_last_active": "2025-12-16T22:13:48",
+  "global_first_active": "2018-03-27T19:31:27",
+  "global_last_active": "2025-12-17T15:09:15",
   "github_location": null,
   "github_company": "Trezor",
   "github_bio": "Signing key fingerprint (ssh-ed25519)\r\nSHA256:GifMn7F2swVKyn6MewbQHrYCs4i/bPK7gnwxhuPz/YA\r\n",
   "github_twitter": "roman_zeyde",
   "github_blog": "https://romanzey.de",
   "github_followers": 433.0,
+  "activity_status": "Steady",
   "is_top_50": false,
   "github_url": "https://github.com/romanz",
   "commit_history": {
     "2018": {
-      "Mempool": 1.0,
-      "Tests": 2.5,
-      "Utilities": 0.5
+      "Mempool": 2.0,
+      "Tests": 5.0,
+      "Utilities": 1.0
+    },
+    "2019": {
+      "Utilities": 1.0,
+      "Wallet": 1.0
     },
     "2023": {
-      "Node & RPC": 0.5,
-      "Tests": 0.5
+      "Node & RPC": 1.0,
+      "Tests": 1.0
     },
     "2024": {
-      "Node & RPC": 0.33,
-      "P2P Network": 0.33,
-      "Tests": 0.5,
-      "Utilities": 2.83
+      "Node & RPC": 0.67,
+      "P2P Network": 0.67,
+      "Utilities": 4.67
     },
     "2025": {
-      "Documentation": 3.33,
-      "Node & RPC": 1.83,
-      "P2P Network": 0.5,
-      "Tests": 4.17,
-      "Utilities": 3.17
+      "Documentation": 6.67,
+      "Node & RPC": 3.67,
+      "P2P Network": 1.0,
+      "Tests": 9.33,
+      "Utilities": 7.33,
+      "Wallet": 1.0
+    },
+    "2026": {
+      "Wallet": 1.0
     }
   },
   "first_message": {

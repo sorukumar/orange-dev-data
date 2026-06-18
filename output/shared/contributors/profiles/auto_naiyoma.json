@@ -3,20 +3,29 @@
   "github_login_final": "naiyoma",
   "delving_username_final": null,
   "uuid": "auto_naiyoma",
-  "badges": null,
+  "badges": {
+    "ecosystem_contributor": true,
+    "tier2_commits": 1
+  },
   "roles": null,
   "first_seen": null,
   "last_seen": null,
   "technical_focus": null,
-  "total_commits": 13.0,
-  "authored_commits": 13.0,
+  "total_commits": 14.0,
+  "authored_commits": 14.0,
+  "tier1_authored_commits": 13.0,
+  "tier2_authored_commits": 1.0,
   "merge_commits": 0.0,
-  "total_additions": 216.0,
-  "total_deletions": 167.0,
-  "first_commit": "2024-03-05T11:38:21",
-  "last_commit": "2025-07-30T10:31:41",
-  "p2016_authored_commits": 13.0,
-  "modern_authored_commits": 13.0,
+  "total_additions": 217.0,
+  "total_deletions": 168.0,
+  "first_core_commit": "2024-03-05T14:51:04+00:00",
+  "last_core_commit": "2026-01-27T10:10:41+00:00",
+  "first_ecosystem_commit": "2026-01-30T21:34:06+00:00",
+  "last_ecosystem_commit": "2026-01-30T21:34:06+00:00",
+  "first_commit": "2024-03-05T14:51:04",
+  "last_commit": "2026-01-27T10:10:41",
+  "p2016_authored_commits": 14.0,
+  "modern_authored_commits": 14.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
@@ -33,11 +42,11 @@
   "avg_concept_lead_time_days": 2.092711226851852,
   "review_reciprocity": 4.214285714285714,
   "hybrid_score": 0.1517,
-  "p2016_hybrid_score": 0.3039,
-  "modern_hybrid_score": 0.3039,
+  "p2016_hybrid_score": 0.3439,
+  "modern_hybrid_score": 0.3439,
   "impact_score": 9.0,
-  "p2016_impact_score": 17.0,
-  "modern_impact_score": 17.0,
+  "p2016_impact_score": 19.0,
+  "modern_impact_score": 19.0,
   "threads_started": 0.0,
   "replies_sent": 0.0,
   "ml_threads": 0.0,
@@ -48,15 +57,18 @@
   "last_active": null,
   "dev_type": "Reviewer",
   "expertise_domains": [
-    "Infrastructure"
+    "Infrastructure",
+    "Wallet"
   ],
   "expertise_by_source": {
     "code": {
-      "Infrastructure": 1.0
+      "Infrastructure": 0.963,
+      "Wallet": 0.037
     }
   },
   "expertise_domain_scores": {
-    "Infrastructure": 1.0
+    "Infrastructure": 0.963,
+    "Wallet": 0.037
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -64,24 +76,29 @@
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
-  "global_first_active": "2024-03-05T11:38:21",
-  "global_last_active": "2025-07-30T10:31:41",
+  "global_first_active": "2024-03-05T14:51:04",
+  "global_last_active": "2026-01-27T10:10:41",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
   "github_twitter": null,
   "github_blog": null,
   "github_followers": 52.0,
+  "activity_status": "Steady",
   "is_top_50": false,
   "github_url": "https://github.com/naiyoma",
   "commit_history": {
     "2024": {
-      "Node & RPC": 0.5,
-      "Tests": 4.0,
-      "Utilities": 0.5
+      "Node & RPC": 1.0,
+      "Tests": 6.0,
+      "Utilities": 1.0
     },
     "2025": {
-      "Tests": 8.0
+      "Tests": 12.0
+    },
+    "2026": {
+      "Tests": 6.0,
+      "Wallet": 1.0
     }
   }
 }

@@ -18,37 +18,43 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "Utilities",
   "total_commits": 27.0,
   "authored_commits": 27.0,
+  "tier1_authored_commits": 27.0,
+  "tier2_authored_commits": 0.0,
   "merge_commits": 0.0,
   "total_additions": 2271.0,
   "total_deletions": 1335.0,
-  "first_commit": "2014-11-19T23:13:02",
-  "last_commit": "2020-06-23T10:47:24",
+  "first_core_commit": "2014-11-21T12:50:51+00:00",
+  "last_core_commit": "2020-06-29T04:44:12+00:00",
+  "first_ecosystem_commit": null,
+  "last_ecosystem_commit": null,
+  "first_commit": "2014-11-21T12:50:51",
+  "last_commit": "2020-06-29T04:44:12",
   "p2016_authored_commits": 26.0,
   "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": 42.22034757295174,
-  "reviews_count": 31.0,
-  "avg_approval_latency_days": 37.85741740319865,
-  "approvals_count": 18.0,
-  "p2016_reviews_count": 29.0,
+  "avg_review_latency_days": 247.20962488129155,
+  "reviews_count": 33.0,
+  "avg_approval_latency_days": 266.00840185185183,
+  "approvals_count": 19.0,
+  "p2016_reviews_count": 31.0,
   "modern_reviews_count": 0.0,
   "first_review_date": "2015-01-07T03:18:24+00:00",
   "last_review_date": "2020-10-09T09:08:09+00:00",
   "prs_authored": 10.0,
   "avg_pr_ack_velocity_days": 2.2321656378600827,
   "avg_concept_lead_time_days": 0.34205439814814814,
-  "review_reciprocity": 3.1,
-  "hybrid_score": 0.3225,
-  "p2016_hybrid_score": 0.3184,
+  "review_reciprocity": 3.3,
+  "hybrid_score": 0.3244,
+  "p2016_hybrid_score": 0.3593,
   "modern_hybrid_score": 0.0646,
   "impact_score": 18.0,
-  "p2016_impact_score": 17.0,
+  "p2016_impact_score": 19.0,
   "modern_impact_score": 4.0,
   "threads_started": 0.0,
   "replies_sent": 0.0,
@@ -66,15 +72,15 @@
   ],
   "expertise_by_source": {
     "code": {
-      "Infrastructure": 0.765,
+      "Infrastructure": 0.766,
       "Script": 0.071,
       "Wallet": 0.164
     }
   },
   "expertise_domain_scores": {
-    "Infrastructure": 0.765,
-    "Script": 0.071,
-    "Wallet": 0.164
+    "Infrastructure": 0.7652,
+    "Script": 0.0709,
+    "Wallet": 0.1638
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -82,41 +88,42 @@
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
-  "global_first_active": "2014-11-19T23:13:02",
-  "global_last_active": "2020-06-23T10:47:24",
+  "global_first_active": "2014-11-21T12:50:51",
+  "global_last_active": "2020-06-29T04:44:12",
   "github_location": "SF Bay Area, California",
   "github_company": null,
   "github_bio": "Have you tried turning it off and on again?",
   "github_twitter": null,
   "github_blog": null,
   "github_followers": 121.0,
+  "activity_status": "Retired",
   "is_top_50": false,
   "github_url": "https://github.com/gwillen",
   "commit_history": {
     "2014": {
-      "Utilities": 1.0
+      "Utilities": 2.0
     },
     "2018": {
-      "Node & RPC": 1.25,
-      "Script": 1.75,
-      "Tests": 1.75,
-      "Wallet": 2.25
+      "Node & RPC": 2.5,
+      "Script": 3.5,
+      "Tests": 3.5,
+      "Wallet": 4.5
     },
     "2019": {
-      "Build & CI": 1.17,
-      "Documentation": 1.0,
-      "Node & RPC": 2.67,
-      "Script": 0.17,
-      "Tests": 1.67,
-      "Utilities": 4.67,
-      "Wallet": 1.67
+      "Build & CI": 2.33,
+      "Documentation": 2.0,
+      "Node & RPC": 5.33,
+      "Script": 0.33,
+      "Tests": 3.33,
+      "Utilities": 9.33,
+      "Wallet": 3.33
     },
     "2020": {
-      "Build & CI": 1.33,
-      "GUI": 1.83,
-      "Tests": 1.5,
-      "Utilities": 0.83,
-      "Wallet": 0.5
+      "Build & CI": 2.67,
+      "GUI": 3.67,
+      "Tests": 3.0,
+      "Utilities": 1.67,
+      "Wallet": 1.0
     }
   }
 }

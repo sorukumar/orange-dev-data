@@ -18,14 +18,20 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "Utilities",
   "total_commits": 4.0,
   "authored_commits": 4.0,
+  "tier1_authored_commits": 4.0,
+  "tier2_authored_commits": 0.0,
   "merge_commits": 0.0,
   "total_additions": 19.0,
   "total_deletions": 7.0,
-  "first_commit": "2011-05-01T04:27:15",
+  "first_core_commit": "2011-05-03T15:16:13+00:00",
+  "last_core_commit": "2011-05-05T14:49:20+00:00",
+  "first_ecosystem_commit": null,
+  "last_ecosystem_commit": null,
+  "first_commit": "2011-05-03T15:16:13",
   "last_commit": "2011-05-05T14:49:20",
   "p2016_authored_commits": 0.0,
   "modern_authored_commits": 0.0,
@@ -41,8 +47,8 @@
   "first_review_date": null,
   "last_review_date": null,
   "prs_authored": 2.0,
-  "avg_pr_ack_velocity_days": 0.015416666666666667,
-  "avg_concept_lead_time_days": null,
+  "avg_pr_ack_velocity_days": 0.09935185185185184,
+  "avg_concept_lead_time_days": 0.39336805555555554,
   "review_reciprocity": 0.0,
   "hybrid_score": 0.1179,
   "p2016_hybrid_score": 0.025,
@@ -76,7 +82,7 @@
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
-  "global_first_active": "2011-05-01T04:27:15",
+  "global_first_active": "2011-05-03T15:16:13",
   "global_last_active": "2011-05-05T14:49:20",
   "github_location": null,
   "github_company": null,
@@ -84,11 +90,12 @@
   "github_twitter": null,
   "github_blog": null,
   "github_followers": null,
+  "activity_status": "Steady",
   "is_top_50": false,
   "github_url": "https://github.com/JohnMaguire",
   "commit_history": {
     "2011": {
-      "Utilities": 4.0
+      "Utilities": 8.0
     }
   }
 }

@@ -18,15 +18,21 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "Utilities",
   "total_commits": 6.0,
   "authored_commits": 6.0,
+  "tier1_authored_commits": 6.0,
+  "tier2_authored_commits": 0.0,
   "merge_commits": 0.0,
   "total_additions": 1042.0,
   "total_deletions": 48.0,
-  "first_commit": "2014-01-19T23:59:57",
-  "last_commit": "2015-06-24T08:32:20",
+  "first_core_commit": "2014-02-20T11:31:01+00:00",
+  "last_core_commit": "2015-09-21T12:34:44+00:00",
+  "first_ecosystem_commit": null,
+  "last_ecosystem_commit": null,
+  "first_commit": "2014-02-20T11:31:01",
+  "last_commit": "2015-09-21T12:34:44",
   "p2016_authored_commits": 0.0,
   "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
@@ -66,8 +72,8 @@
   ],
   "expertise_by_source": {
     "code": {
-      "Infrastructure": 0.945,
-      "Mempool": 0.055
+      "Infrastructure": 0.944,
+      "Mempool": 0.056
     },
     "discussion": {
       "Consensus": 0.5,
@@ -76,8 +82,8 @@
   },
   "expertise_domain_scores": {
     "Consensus": 0.2,
-    "Infrastructure": 0.567,
-    "Mempool": 0.033,
+    "Infrastructure": 0.5664,
+    "Mempool": 0.0336,
     "Mining": 0.2
   },
   "p2016_posts": 0.0,
@@ -86,26 +92,27 @@
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
-  "global_first_active": "2014-01-19T23:59:57",
-  "global_last_active": "2015-08-13T04:52:37",
+  "global_first_active": "2014-02-20T11:31:01",
+  "global_last_active": "2015-09-21T12:34:44",
   "github_location": "Sydney, Australia",
   "github_company": null,
   "github_bio": null,
   "github_twitter": null,
   "github_blog": null,
   "github_followers": 21.0,
+  "activity_status": "Retired",
   "is_top_50": false,
   "github_url": "https://github.com/ashleyholman",
   "commit_history": {
     "2014": {
-      "Build & CI": 0.5,
-      "GUI": 1.5,
-      "Utilities": 3.0
+      "Build & CI": 1.0,
+      "GUI": 3.0,
+      "Utilities": 6.0
     },
     "2015": {
-      "Mempool": 0.33,
-      "Tests": 0.33,
-      "Utilities": 0.33
+      "Mempool": 0.67,
+      "Tests": 0.67,
+      "Utilities": 0.67
     }
   },
   "first_message": {

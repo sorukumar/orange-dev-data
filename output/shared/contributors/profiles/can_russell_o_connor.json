@@ -18,38 +18,44 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
-  "technical_focus": "Tests",
-  "total_commits": 5.0,
-  "authored_commits": 5.0,
+  "last_seen": "2026-06-18T00:00:00",
+  "technical_focus": "Utilities",
+  "total_commits": 54.0,
+  "authored_commits": 54.0,
+  "tier1_authored_commits": 54.0,
+  "tier2_authored_commits": 0.0,
   "merge_commits": 0.0,
-  "total_additions": 82.0,
-  "total_deletions": 68.0,
-  "first_commit": "2021-03-01T14:01:48",
-  "last_commit": "2023-02-22T14:06:20",
-  "p2016_authored_commits": 5.0,
-  "modern_authored_commits": 0.0,
+  "total_additions": 18440.0,
+  "total_deletions": 1132.0,
+  "first_core_commit": "2019-02-21T04:15:22+00:00",
+  "last_core_commit": "2024-10-08T00:09:29+00:00",
+  "first_ecosystem_commit": null,
+  "last_ecosystem_commit": null,
+  "first_commit": "2019-02-21T04:15:22",
+  "last_commit": "2024-10-08T00:09:29",
+  "p2016_authored_commits": 54.0,
+  "modern_authored_commits": 4.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": 646.4296657633244,
-  "reviews_count": 13.0,
-  "avg_approval_latency_days": 23.89239583333333,
-  "approvals_count": 1.0,
-  "p2016_reviews_count": 13.0,
-  "modern_reviews_count": 4.0,
+  "avg_review_latency_days": 1182.2892383139188,
+  "reviews_count": 49.0,
+  "avg_approval_latency_days": 859.6471319444445,
+  "approvals_count": 5.0,
+  "p2016_reviews_count": 49.0,
+  "modern_reviews_count": 9.0,
   "first_review_date": "2017-08-26T16:10:45+00:00",
   "last_review_date": "2026-03-06T17:40:39+00:00",
-  "prs_authored": 11.0,
-  "avg_pr_ack_velocity_days": 10.18175462962963,
-  "avg_concept_lead_time_days": 16.68804398148148,
-  "review_reciprocity": 1.1818181818181819,
-  "hybrid_score": 0.4126,
-  "p2016_hybrid_score": 0.5446,
-  "modern_hybrid_score": 0.3685,
-  "impact_score": 22.0,
-  "p2016_impact_score": 28.0,
-  "modern_impact_score": 20.0,
+  "prs_authored": 41.0,
+  "avg_pr_ack_velocity_days": 4.078164457070707,
+  "avg_concept_lead_time_days": 14.419138558201059,
+  "review_reciprocity": 1.1951219512195121,
+  "hybrid_score": 0.5869,
+  "p2016_hybrid_score": 0.7239,
+  "modern_hybrid_score": 0.5157,
+  "impact_score": 30.0,
+  "p2016_impact_score": 35.0,
+  "modern_impact_score": 27.0,
   "threads_started": 22.0,
   "replies_sent": 218.0,
   "ml_threads": 15.0,
@@ -66,8 +72,8 @@
   ],
   "expertise_by_source": {
     "code": {
-      "Infrastructure": 0.733,
-      "Script": 0.267
+      "Infrastructure": 0.955,
+      "Script": 0.045
     },
     "discussion": {
       "Consensus": 0.31,
@@ -76,8 +82,8 @@
   },
   "expertise_domain_scores": {
     "Consensus": 0.124,
-    "Infrastructure": 0.4398,
-    "Script": 0.4362
+    "Infrastructure": 0.573,
+    "Script": 0.303
   },
   "p2016_posts": 235.0,
   "modern_posts": 25.0,
@@ -93,21 +99,34 @@
   "github_twitter": null,
   "github_blog": null,
   "github_followers": null,
+  "activity_status": "Steady",
   "is_top_50": false,
   "github_url": "https://github.com/roconnor",
   "delving_url": "https://delvingbitcoin.org/u/roconnor-blockstream",
   "commit_history": {
+    "2019": {
+      "Utilities": 8.0
+    },
+    "2020": {
+      "Utilities": 3.0
+    },
     "2021": {
-      "Script": 0.5,
-      "Tests": 0.5
+      "Build & CI": 0.5,
+      "Script": 1.0,
+      "Tests": 1.0,
+      "Utilities": 14.5
     },
     "2022": {
-      "Script": 0.83,
-      "Tests": 0.83,
-      "Utilities": 0.33
+      "Build & CI": 0.5,
+      "Utilities": 11.5
     },
     "2023": {
-      "Tests": 2.0
+      "Script": 1.67,
+      "Tests": 5.67,
+      "Utilities": 10.67
+    },
+    "2024": {
+      "Utilities": 1.0
     }
   },
   "first_message": {

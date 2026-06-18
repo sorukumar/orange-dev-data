@@ -18,15 +18,21 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "Documentation",
   "total_commits": 7.0,
   "authored_commits": 7.0,
+  "tier1_authored_commits": 7.0,
+  "tier2_authored_commits": 0.0,
   "merge_commits": 0.0,
   "total_additions": 108.0,
   "total_deletions": 112.0,
-  "first_commit": "2015-10-17T10:10:45",
-  "last_commit": "2018-09-24T04:50:02",
+  "first_core_commit": "2015-10-19T10:00:58+00:00",
+  "last_core_commit": "2018-09-25T17:36:16+00:00",
+  "first_ecosystem_commit": null,
+  "last_ecosystem_commit": null,
+  "first_commit": "2015-10-19T10:00:58",
+  "last_commit": "2018-09-25T17:36:16",
   "p2016_authored_commits": 6.0,
   "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
@@ -45,10 +51,10 @@
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 0.14285714285714285,
   "hybrid_score": 0.1815,
-  "p2016_hybrid_score": 0.1738,
+  "p2016_hybrid_score": 0.2095,
   "modern_hybrid_score": 0.0542,
   "impact_score": 10.0,
-  "p2016_impact_score": 10.0,
+  "p2016_impact_score": 12.0,
   "modern_impact_score": 3.0,
   "threads_started": 0.0,
   "replies_sent": 0.0,
@@ -76,30 +82,31 @@
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
-  "global_first_active": "2015-10-17T10:10:45",
-  "global_last_active": "2018-09-24T04:50:02",
+  "global_first_active": "2015-10-19T10:00:58",
+  "global_last_active": "2018-09-25T17:36:16",
   "github_location": "Aussie in Scotland",
   "github_company": null,
   "github_bio": null,
   "github_twitter": "Mitch_Cash",
   "github_blog": "https://mitchellcash.com",
   "github_followers": 42.0,
+  "activity_status": "Retired",
   "is_top_50": false,
   "github_url": "https://github.com/MitchellCash",
   "commit_history": {
     "2015": {
-      "Documentation": 1.0
+      "Documentation": 2.0
     },
     "2016": {
-      "Build & CI": 1.0,
-      "GUI": 1.0
+      "Build & CI": 2.0,
+      "GUI": 2.0
     },
     "2017": {
-      "Build & CI": 1.0
+      "Build & CI": 2.0
     },
     "2018": {
-      "Documentation": 2.0,
-      "Utilities": 1.0
+      "Documentation": 4.0,
+      "Utilities": 2.0
     }
   }
 }

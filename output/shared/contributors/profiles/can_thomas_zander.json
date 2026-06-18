@@ -18,15 +18,21 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "GUI",
   "total_commits": 4.0,
   "authored_commits": 4.0,
+  "tier1_authored_commits": 4.0,
+  "tier2_authored_commits": 0.0,
   "merge_commits": 0.0,
   "total_additions": 97.0,
   "total_deletions": 29.0,
-  "first_commit": "2014-03-13T17:15:51",
-  "last_commit": "2014-12-28T23:25:18",
+  "first_core_commit": "2014-03-15T06:41:01+00:00",
+  "last_core_commit": "2015-01-08T08:48:18+00:00",
+  "first_ecosystem_commit": null,
+  "last_ecosystem_commit": null,
+  "first_commit": "2014-03-15T06:41:01",
+  "last_commit": "2015-01-08T08:48:18",
   "p2016_authored_commits": 0.0,
   "modern_authored_commits": 0.0,
   "bips_authored": 1.0,
@@ -41,11 +47,11 @@
   "first_review_date": "2014-04-20T07:47:32+00:00",
   "last_review_date": "2017-05-24T21:11:25+00:00",
   "prs_authored": 11.0,
-  "avg_pr_ack_velocity_days": 0.46619984567901224,
+  "avg_pr_ack_velocity_days": 0.683917824074074,
   "avg_concept_lead_time_days": 0.018796296296296297,
   "review_reciprocity": 1.1818181818181819,
-  "hybrid_score": 0.7443,
-  "p2016_hybrid_score": 0.6751,
+  "hybrid_score": 0.7441,
+  "p2016_hybrid_score": 0.6748,
   "modern_hybrid_score": 0.0675,
   "impact_score": 36.0,
   "p2016_impact_score": 33.0,
@@ -87,7 +93,7 @@
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
-  "global_first_active": "2014-03-13T17:15:51",
+  "global_first_active": "2014-03-15T06:41:01",
   "global_last_active": "2017-09-02T16:13:57",
   "github_location": null,
   "github_company": null,
@@ -95,13 +101,17 @@
   "github_twitter": null,
   "github_blog": null,
   "github_followers": null,
+  "activity_status": "Retired",
   "is_top_50": false,
   "github_url": "https://github.com/thedigitalpatriot",
   "commit_history": {
     "2014": {
-      "Documentation": 1.0,
+      "Documentation": 2.0,
       "GUI": 2.0,
-      "Utilities": 1.0
+      "Utilities": 2.0
+    },
+    "2015": {
+      "GUI": 2.0
     }
   },
   "bip_list": [

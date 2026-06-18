@@ -18,15 +18,21 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "Node & RPC",
   "total_commits": 4.0,
   "authored_commits": 4.0,
+  "tier1_authored_commits": 4.0,
+  "tier2_authored_commits": 0.0,
   "merge_commits": 0.0,
   "total_additions": 45.0,
   "total_deletions": 25.0,
-  "first_commit": "2020-05-18T08:14:10",
-  "last_commit": "2022-05-22T05:17:15",
+  "first_core_commit": "2020-05-27T11:15:53+00:00",
+  "last_core_commit": "2022-07-07T16:55:15+00:00",
+  "first_ecosystem_commit": null,
+  "last_ecosystem_commit": null,
+  "first_commit": "2020-05-27T11:15:53",
+  "last_commit": "2022-07-07T16:55:15",
   "p2016_authored_commits": 4.0,
   "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
@@ -45,10 +51,10 @@
   "avg_concept_lead_time_days": 11.41734085648148,
   "review_reciprocity": 0.3333333333333333,
   "hybrid_score": 0.1881,
-  "p2016_hybrid_score": 0.2021,
+  "p2016_hybrid_score": 0.236,
   "modern_hybrid_score": 0.1615,
   "impact_score": 11.0,
-  "p2016_impact_score": 11.0,
+  "p2016_impact_score": 13.0,
   "modern_impact_score": 9.0,
   "threads_started": 4.0,
   "replies_sent": 5.0,
@@ -86,7 +92,7 @@
   "p2016_delving_posts": 1.0,
   "modern_ml_posts": 7.0,
   "modern_delving_posts": 1.0,
-  "global_first_active": "2020-05-18T08:14:10",
+  "global_first_active": "2020-05-27T11:15:53",
   "global_last_active": "2025-08-10T01:58:20",
   "github_location": "seoul",
   "github_company": "\uace0\ub878\ub2ac",
@@ -94,22 +100,23 @@
   "github_twitter": "kcalvinalvinn",
   "github_blog": "meetup.com/KOREASLUG, meetup.com/seoulbitcoin",
   "github_followers": 210.0,
+  "activity_status": "Fading",
   "is_top_50": false,
   "github_url": "https://github.com/kcalvinalvin",
   "delving_url": "https://delvingbitcoin.org/u/kcalvinalvin",
   "commit_history": {
     "2020": {
-      "Consensus": 0.5,
-      "Node & RPC": 0.75,
-      "Script": 0.25,
-      "Tests": 0.25,
-      "Utilities": 0.25
+      "Consensus": 1.0,
+      "Node & RPC": 1.5,
+      "Script": 0.5,
+      "Tests": 0.5,
+      "Utilities": 0.5
     },
     "2021": {
-      "Utilities": 1.0
+      "Utilities": 2.0
     },
     "2022": {
-      "Tests": 1.0
+      "Tests": 2.0
     }
   },
   "first_message": {

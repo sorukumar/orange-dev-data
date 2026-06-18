@@ -13,25 +13,31 @@
     "maintainer_status": "historical",
     "social_source": "github",
     "sponsor_id": null,
-    "maintainer_title": "Core Maintainer",
+    "maintainer_title": "Former Core Maintainer",
     "maintainer_primary_area": "Infrastructure / SVN",
     "maintainer_appointed": "2009-08-30",
     "maintainer_stepped_down": "2011-09-13"
   },
   "roles": [
-    "Core Maintainer",
-    "Researcher"
+    "Researcher",
+    "Former Core Maintainer"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "Utilities",
   "total_commits": 26.0,
   "authored_commits": 26.0,
+  "tier1_authored_commits": 26.0,
+  "tier2_authored_commits": 0.0,
   "merge_commits": 0.0,
   "total_additions": 72018.0,
   "total_deletions": 5126.0,
-  "first_commit": "2009-08-30T03:46:39",
-  "last_commit": "2010-02-04T15:31:46",
+  "first_core_commit": "2011-05-01T13:38:56+00:00",
+  "last_core_commit": "2011-05-01T13:38:56+00:00",
+  "first_ecosystem_commit": null,
+  "last_ecosystem_commit": null,
+  "first_commit": "2011-05-01T13:38:56",
+  "last_commit": "2011-05-01T13:38:56",
   "p2016_authored_commits": 0.0,
   "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
@@ -81,24 +87,21 @@
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
-  "global_first_active": "2009-08-30T03:46:39",
-  "global_last_active": "2010-02-04T15:31:46",
+  "global_first_active": "2011-05-01T13:38:56",
+  "global_last_active": "2011-05-01T13:38:56",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
   "github_twitter": null,
   "github_blog": null,
   "github_followers": null,
+  "activity_status": "Retired",
   "is_top_50": false,
   "commit_history": {
-    "2009": {
-      "Build & CI": 1.33,
-      "Documentation": 6.33,
-      "Utilities": 16.33
-    },
-    "2010": {
-      "Build & CI": 1.0,
-      "Utilities": 1.0
+    "2011": {
+      "Build & CI": 4.67,
+      "Documentation": 12.67,
+      "Utilities": 34.67
     }
   }
 }

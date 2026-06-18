@@ -6,29 +6,37 @@
   "badges": {
     "is_bip_author": null,
     "is_core_committer": null,
-    "is_core_contributor": null,
+    "is_core_contributor": true,
     "is_maintainer": null,
     "is_social_contributor": true,
     "is_sponsored": null,
     "maintainer_status": null,
     "social_source": "github",
-    "sponsor_id": null
+    "sponsor_id": null,
+    "ecosystem_contributor": true,
+    "tier2_commits": 42
   },
   "roles": [
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
-  "technical_focus": "code",
-  "total_commits": 1.0,
-  "authored_commits": 1.0,
+  "last_seen": "2026-06-18T00:00:00",
+  "technical_focus": "Build & CI",
+  "total_commits": 43.0,
+  "authored_commits": 43.0,
+  "tier1_authored_commits": 1.0,
+  "tier2_authored_commits": 42.0,
   "merge_commits": 0.0,
-  "total_additions": 1.0,
+  "total_additions": 1335.0,
   "total_deletions": 0.0,
-  "first_commit": "2021-01-22T17:36:45",
-  "last_commit": "2021-01-22T17:36:45",
-  "p2016_authored_commits": 1.0,
-  "modern_authored_commits": 0.0,
+  "first_core_commit": "2021-01-24T17:57:26+00:00",
+  "last_core_commit": "2021-01-24T17:57:26+00:00",
+  "first_ecosystem_commit": "2021-09-22T13:39:48+00:00",
+  "last_ecosystem_commit": "2025-04-12T19:07:24+00:00",
+  "first_commit": "2021-01-24T17:57:26",
+  "last_commit": "2021-01-24T17:57:26",
+  "p2016_authored_commits": 43.0,
+  "modern_authored_commits": 26.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
@@ -44,12 +52,12 @@
   "avg_pr_ack_velocity_days": 0.059363425925925924,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 0.0,
-  "hybrid_score": 0.0546,
-  "p2016_hybrid_score": 0.0546,
-  "modern_hybrid_score": 0.0146,
-  "impact_score": 3.0,
-  "p2016_impact_score": 3.0,
-  "modern_impact_score": 1.0,
+  "hybrid_score": 0.233,
+  "p2016_hybrid_score": 0.2343,
+  "modern_hybrid_score": 0.2181,
+  "impact_score": 13.0,
+  "p2016_impact_score": 13.0,
+  "modern_impact_score": 12.0,
   "threads_started": 0.0,
   "replies_sent": 0.0,
   "ml_threads": 0.0,
@@ -76,19 +84,33 @@
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
-  "global_first_active": "2021-01-22T17:36:45",
-  "global_last_active": "2021-01-22T17:36:45",
+  "global_first_active": "2021-01-24T17:57:26",
+  "global_last_active": "2021-01-24T17:57:26",
   "github_location": null,
   "github_company": null,
   "github_bio": "Privacy and security advocate",
   "github_twitter": "coinforensics",
   "github_blog": "https://bitcoinissafe.com/",
   "github_followers": 19.0,
+  "activity_status": "Retired",
   "is_top_50": false,
   "github_url": "https://github.com/coinforensics",
   "commit_history": {
     "2021": {
-      "Documentation": 1.0
+      "Build & CI": 2.0,
+      "Documentation": 2.0
+    },
+    "2022": {
+      "Build & CI": 7.0
+    },
+    "2023": {
+      "Build & CI": 15.0
+    },
+    "2024": {
+      "Build & CI": 14.0
+    },
+    "2025": {
+      "Build & CI": 4.0
     }
   }
 }

@@ -12,22 +12,30 @@
     "is_sponsored": null,
     "maintainer_status": null,
     "social_source": "github",
-    "sponsor_id": null
+    "sponsor_id": null,
+    "ecosystem_contributor": true,
+    "tier2_commits": 1
   },
   "roles": [
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
-  "technical_focus": "None",
-  "total_commits": 0.0,
-  "authored_commits": 0.0,
+  "last_seen": "2026-06-18T00:00:00",
+  "technical_focus": "Wallet",
+  "total_commits": 1.0,
+  "authored_commits": 1.0,
+  "tier1_authored_commits": 0.0,
+  "tier2_authored_commits": 1.0,
   "merge_commits": 0.0,
-  "total_additions": null,
-  "total_deletions": null,
-  "first_commit": null,
-  "last_commit": null,
-  "p2016_authored_commits": 0.0,
+  "total_additions": 8.0,
+  "total_deletions": 7.0,
+  "first_core_commit": null,
+  "last_core_commit": null,
+  "first_ecosystem_commit": "2021-01-19T17:55:58+00:00",
+  "last_ecosystem_commit": "2021-01-19T17:55:58+00:00",
+  "first_commit": "2021-01-19T17:55:58",
+  "last_commit": "2021-01-19T17:55:58",
+  "p2016_authored_commits": 1.0,
   "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
@@ -44,11 +52,11 @@
   "avg_pr_ack_velocity_days": 97.92427083333334,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 2.0,
-  "hybrid_score": 0.0452,
-  "p2016_hybrid_score": 0.0452,
+  "hybrid_score": 0.0852,
+  "p2016_hybrid_score": 0.0852,
   "modern_hybrid_score": 0.0146,
-  "impact_score": 3.0,
-  "p2016_impact_score": 3.0,
+  "impact_score": 5.0,
+  "p2016_impact_score": 5.0,
   "modern_impact_score": 1.0,
   "threads_started": 0.0,
   "replies_sent": 0.0,
@@ -58,13 +66,17 @@
   "delving_responses": 0.0,
   "first_active": null,
   "last_active": null,
-  "dev_type": "Participant",
+  "dev_type": "Builder",
   "expertise_domains": [
-    "Infrastructure"
+    "Wallet"
   ],
-  "expertise_by_source": {},
+  "expertise_by_source": {
+    "code": {
+      "Wallet": 1.0
+    }
+  },
   "expertise_domain_scores": {
-    "Infrastructure": 1.0
+    "Wallet": 1.0
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -72,14 +84,20 @@
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
-  "global_first_active": null,
-  "global_last_active": null,
+  "global_first_active": "2021-01-19T17:55:58",
+  "global_last_active": "2021-01-19T17:55:58",
   "github_location": "Hungary",
   "github_company": null,
   "github_bio": "F079 0C08 68BD BAB8 EE33 F9CE 50FB 7FEB 00F9 7588",
   "github_twitter": null,
   "github_blog": null,
   "github_followers": 72.0,
+  "activity_status": "Fading",
   "is_top_50": false,
-  "github_url": "https://github.com/molnard"
+  "github_url": "https://github.com/molnard",
+  "commit_history": {
+    "2021": {
+      "Wallet": 1.0
+    }
+  }
 }

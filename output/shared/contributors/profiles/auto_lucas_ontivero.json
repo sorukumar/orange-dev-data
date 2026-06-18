@@ -12,22 +12,30 @@
     "is_sponsored": null,
     "maintainer_status": null,
     "social_source": "mailing_list",
-    "sponsor_id": null
+    "sponsor_id": null,
+    "ecosystem_contributor": true,
+    "tier2_commits": 2
   },
   "roles": [
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "P2P Network",
-  "total_commits": 2.0,
-  "authored_commits": 2.0,
+  "total_commits": 4.0,
+  "authored_commits": 4.0,
+  "tier1_authored_commits": 2.0,
+  "tier2_authored_commits": 2.0,
   "merge_commits": 0.0,
-  "total_additions": 20.0,
-  "total_deletions": 1.0,
-  "first_commit": "2020-11-16T18:54:24",
-  "last_commit": "2020-12-10T17:26:58",
-  "p2016_authored_commits": 2.0,
+  "total_additions": 156.0,
+  "total_deletions": 3.0,
+  "first_core_commit": "2020-11-17T05:56:11+00:00",
+  "last_core_commit": "2020-12-15T16:51:35+00:00",
+  "first_ecosystem_commit": "2019-05-28T19:31:29+00:00",
+  "last_ecosystem_commit": "2019-07-24T17:27:05+00:00",
+  "first_commit": "2020-11-17T05:56:11",
+  "last_commit": "2020-12-15T16:51:35",
+  "p2016_authored_commits": 4.0,
   "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
@@ -44,11 +52,11 @@
   "avg_pr_ack_velocity_days": 0.4067824074074074,
   "avg_concept_lead_time_days": 0.7687962962962963,
   "review_reciprocity": 3.25,
-  "hybrid_score": 0.1763,
-  "p2016_hybrid_score": 0.1793,
-  "modern_hybrid_score": 0.0783,
-  "impact_score": 10.0,
-  "p2016_impact_score": 10.0,
+  "hybrid_score": 0.2057,
+  "p2016_hybrid_score": 0.2282,
+  "modern_hybrid_score": 0.0781,
+  "impact_score": 12.0,
+  "p2016_impact_score": 13.0,
   "modern_impact_score": 5.0,
   "threads_started": 0.0,
   "replies_sent": 7.0,
@@ -62,12 +70,13 @@
   "expertise_domains": [
     "Network",
     "Privacy",
-    "Infrastructure"
+    "Wallet"
   ],
   "expertise_by_source": {
     "code": {
-      "Infrastructure": 0.25,
-      "Network": 0.75
+      "Infrastructure": 0.167,
+      "Network": 0.5,
+      "Wallet": 0.333
     },
     "discussion": {
       "Consensus": 0.274,
@@ -78,9 +87,10 @@
   "expertise_domain_scores": {
     "Consensus": 0.1096,
     "Ecosystem": 0.0712,
-    "Infrastructure": 0.15,
-    "Network": 0.45,
-    "Privacy": 0.2192
+    "Infrastructure": 0.1002,
+    "Network": 0.3,
+    "Privacy": 0.2192,
+    "Wallet": 0.1998
   },
   "p2016_posts": 7.0,
   "modern_posts": 1.0,
@@ -96,12 +106,16 @@
   "github_twitter": "lontivero",
   "github_blog": "http://geeks.ms/blogs/lontivero",
   "github_followers": 166.0,
+  "activity_status": "Fading",
   "is_top_50": false,
   "github_url": "https://github.com/lontivero",
   "commit_history": {
+    "2019": {
+      "Wallet": 2.0
+    },
     "2020": {
-      "P2P Network": 1.5,
-      "Tests": 0.5
+      "P2P Network": 3.0,
+      "Tests": 1.0
     }
   },
   "first_message": {

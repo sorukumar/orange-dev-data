@@ -18,13 +18,19 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "Utilities",
   "total_commits": 2.0,
   "authored_commits": 2.0,
+  "tier1_authored_commits": 2.0,
+  "tier2_authored_commits": 0.0,
   "merge_commits": 0.0,
   "total_additions": 333.0,
   "total_deletions": 0.0,
+  "first_core_commit": "2011-10-03T21:04:11+00:00",
+  "last_core_commit": "2011-10-03T23:10:03+00:00",
+  "first_ecosystem_commit": null,
+  "last_ecosystem_commit": null,
   "first_commit": "2011-10-03T21:04:11",
   "last_commit": "2011-10-03T23:10:03",
   "p2016_authored_commits": 0.0,
@@ -41,10 +47,10 @@
   "first_review_date": "2011-06-16T16:50:29+00:00",
   "last_review_date": "2011-09-24T00:33:51+00:00",
   "prs_authored": 2.0,
-  "avg_pr_ack_velocity_days": null,
-  "avg_concept_lead_time_days": null,
+  "avg_pr_ack_velocity_days": 0.9073668981481482,
+  "avg_concept_lead_time_days": 0.3268171296296296,
   "review_reciprocity": 1.0,
-  "hybrid_score": 0.1283,
+  "hybrid_score": 0.1282,
   "p2016_hybrid_score": 0.025,
   "modern_hybrid_score": 0.025,
   "impact_score": 7.0,
@@ -84,11 +90,12 @@
   "github_twitter": null,
   "github_blog": "https://focusdisorder.com",
   "github_followers": 24.0,
+  "activity_status": "Steady",
   "is_top_50": false,
   "github_url": "https://github.com/enmaku",
   "commit_history": {
     "2011": {
-      "Utilities": 2.0
+      "Utilities": 4.0
     }
   },
   "first_message": {

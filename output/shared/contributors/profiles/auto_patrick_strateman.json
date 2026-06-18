@@ -19,21 +19,27 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "P2P Network",
   "total_commits": 87.0,
   "authored_commits": 87.0,
+  "tier1_authored_commits": 87.0,
+  "tier2_authored_commits": 0.0,
   "merge_commits": 0.0,
   "total_additions": 2029.0,
   "total_deletions": 1366.0,
-  "first_commit": "2013-08-29T06:53:26",
-  "last_commit": "2020-12-20T23:19:43",
+  "first_core_commit": "2013-10-17T03:12:38+00:00",
+  "last_core_commit": "2022-07-07T16:55:15+00:00",
+  "first_ecosystem_commit": null,
+  "last_ecosystem_commit": null,
+  "first_commit": "2013-10-17T03:12:38",
+  "last_commit": "2022-07-07T16:55:15",
   "p2016_authored_commits": 50.0,
   "modern_authored_commits": 0.0,
   "bips_authored": 1.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": 30.74412246355398,
+  "avg_review_latency_days": 31.904219454242604,
   "reviews_count": 114.0,
   "avg_approval_latency_days": 12.73262111441799,
   "approvals_count": 47.0,
@@ -46,10 +52,10 @@
   "avg_concept_lead_time_days": 6.917857434640522,
   "review_reciprocity": 1.2391304347826086,
   "hybrid_score": 0.8384,
-  "p2016_hybrid_score": 0.4118,
+  "p2016_hybrid_score": 0.4512,
   "modern_hybrid_score": 0.1396,
   "impact_score": 40.0,
-  "p2016_impact_score": 22.0,
+  "p2016_impact_score": 24.0,
   "modern_impact_score": 8.0,
   "threads_started": 0.0,
   "replies_sent": 28.0,
@@ -95,54 +101,60 @@
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
   "global_first_active": "2013-06-05T20:17:30",
-  "global_last_active": "2020-12-20T23:19:43",
+  "global_last_active": "2022-07-07T16:55:15",
   "github_location": "San Francisco",
   "github_company": null,
   "github_bio": null,
   "github_twitter": null,
   "github_blog": "https://strateman.ninja/",
   "github_followers": 80.0,
+  "activity_status": "Retired",
   "is_top_50": false,
   "github_url": "https://github.com/pstratem",
   "commit_history": {
     "2013": {
-      "P2P Network": 0.5,
-      "Utilities": 2.5
+      "P2P Network": 1.0,
+      "Utilities": 5.0
     },
     "2015": {
-      "Documentation": 1.0,
-      "Node & RPC": 4.83,
-      "P2P Network": 19.33,
-      "Utilities": 8.83
+      "Documentation": 2.0,
+      "Node & RPC": 9.67,
+      "P2P Network": 38.67,
+      "Utilities": 17.67
     },
     "2016": {
-      "Build & CI": 0.83,
-      "Documentation": 0.33,
-      "GUI": 0.5,
-      "Node & RPC": 2.67,
-      "P2P Network": 2.33,
-      "Script": 3.0,
-      "Tests": 4.33,
-      "Utilities": 3.0,
-      "Wallet": 14.0
+      "Build & CI": 1.67,
+      "Documentation": 0.67,
+      "GUI": 1.0,
+      "Node & RPC": 5.33,
+      "P2P Network": 4.67,
+      "Script": 6.0,
+      "Tests": 8.67,
+      "Utilities": 6.0,
+      "Wallet": 26.0
     },
     "2017": {
-      "Utilities": 1.0,
-      "Wallet": 1.0
+      "Utilities": 2.0,
+      "Wallet": 4.0
     },
     "2018": {
-      "Node & RPC": 1.0,
-      "P2P Network": 9.5,
-      "Utilities": 0.5
+      "P2P Network": 10.0
     },
     "2019": {
-      "Node & RPC": 1.0,
-      "P2P Network": 1.0
+      "Node & RPC": 4.0,
+      "P2P Network": 9.0,
+      "Utilities": 1.0
     },
     "2020": {
-      "Node & RPC": 0.5,
-      "Tests": 3.0,
-      "Utilities": 0.5
+      "Tests": 2.0
+    },
+    "2021": {
+      "P2P Network": 2.0
+    },
+    "2022": {
+      "Node & RPC": 1.0,
+      "Tests": 4.0,
+      "Utilities": 1.0
     }
   },
   "bip_list": [

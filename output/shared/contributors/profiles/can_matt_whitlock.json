@@ -18,38 +18,44 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "Build & CI",
-  "total_commits": 4.0,
-  "authored_commits": 4.0,
+  "total_commits": 5.0,
+  "authored_commits": 5.0,
+  "tier1_authored_commits": 5.0,
+  "tier2_authored_commits": 0.0,
   "merge_commits": 0.0,
-  "total_additions": 12.0,
-  "total_deletions": 6.0,
+  "total_additions": 15.0,
+  "total_deletions": 7.0,
+  "first_core_commit": "2018-02-23T19:02:37+00:00",
+  "last_core_commit": "2024-08-12T13:04:12+00:00",
+  "first_ecosystem_commit": null,
+  "last_ecosystem_commit": null,
   "first_commit": "2018-02-23T19:02:37",
-  "last_commit": "2024-08-08T02:04:40",
-  "p2016_authored_commits": 4.0,
+  "last_commit": "2024-08-12T13:04:12",
+  "p2016_authored_commits": 5.0,
   "modern_authored_commits": 2.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": 192.87812582671955,
-  "reviews_count": 9.0,
+  "avg_review_latency_days": 1446.942004327697,
+  "reviews_count": 12.0,
   "avg_approval_latency_days": 31.376967592592592,
   "approvals_count": 1.0,
-  "p2016_reviews_count": 9.0,
-  "modern_reviews_count": 6.0,
+  "p2016_reviews_count": 12.0,
+  "modern_reviews_count": 7.0,
   "first_review_date": "2017-12-29T03:56:36+00:00",
   "last_review_date": "2026-02-20T07:56:41+00:00",
-  "prs_authored": 7.0,
+  "prs_authored": 10.0,
   "avg_pr_ack_velocity_days": 28.357586805555556,
   "avg_concept_lead_time_days": 37.649475308641975,
-  "review_reciprocity": 1.2857142857142858,
-  "hybrid_score": 0.368,
-  "p2016_hybrid_score": 0.1867,
-  "modern_hybrid_score": 0.1482,
-  "impact_score": 20.0,
-  "p2016_impact_score": 11.0,
-  "modern_impact_score": 9.0,
+  "review_reciprocity": 1.2,
+  "hybrid_score": 0.3887,
+  "p2016_hybrid_score": 0.2371,
+  "modern_hybrid_score": 0.1959,
+  "impact_score": 21.0,
+  "p2016_impact_score": 13.0,
+  "modern_impact_score": 11.0,
   "threads_started": 5.0,
   "replies_sent": 109.0,
   "ml_threads": 5.0,
@@ -60,16 +66,16 @@
   "last_active": "2015-09-02T14:21:48",
   "dev_type": "Builder",
   "expertise_domains": [
-    "Wallet",
     "Infrastructure",
-    "Network"
+    "Wallet",
+    "Mining"
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.125,
-      "Infrastructure": 0.375,
-      "Mempool": 0.25,
-      "Network": 0.25
+      "Consensus": 0.111,
+      "Infrastructure": 0.444,
+      "Mempool": 0.222,
+      "Network": 0.222
     },
     "discussion": {
       "Mining": 0.345,
@@ -77,12 +83,12 @@
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.075,
-    "Infrastructure": 0.225,
-    "Mempool": 0.15,
-    "Mining": 0.138,
-    "Network": 0.15,
-    "Wallet": 0.262
+    "Consensus": 0.0666,
+    "Infrastructure": 0.2666,
+    "Mempool": 0.1333,
+    "Mining": 0.1381,
+    "Network": 0.1333,
+    "Wallet": 0.2622
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -91,26 +97,30 @@
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
   "global_first_active": "2014-03-29T03:05:17",
-  "global_last_active": "2024-08-08T02:04:40",
+  "global_last_active": "2024-08-12T13:04:12",
   "github_location": "New Hampshire, USA",
   "github_company": null,
   "github_bio": null,
   "github_twitter": null,
   "github_blog": null,
   "github_followers": 38.0,
+  "activity_status": "Steady",
   "is_top_50": false,
   "github_url": "https://github.com/whitslack",
   "commit_history": {
     "2018": {
-      "P2P Network": 1.0
+      "P2P Network": 2.0
     },
     "2021": {
+      "Build & CI": 2.0
+    },
+    "2023": {
       "Build & CI": 1.0
     },
     "2024": {
-      "Consensus": 0.5,
-      "Mempool": 1.0,
-      "Node & RPC": 0.5
+      "Consensus": 1.0,
+      "Mempool": 2.0,
+      "Node & RPC": 1.0
     }
   },
   "first_message": {

@@ -18,15 +18,21 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "Documentation",
   "total_commits": 2.0,
   "authored_commits": 2.0,
+  "tier1_authored_commits": 2.0,
+  "tier2_authored_commits": 0.0,
   "merge_commits": 0.0,
   "total_additions": 16.0,
   "total_deletions": 4.0,
-  "first_commit": "2011-09-06T01:16:46",
-  "last_commit": "2011-09-27T02:22:19",
+  "first_core_commit": "2011-09-06T03:01:55+00:00",
+  "last_core_commit": "2011-09-28T03:47:06+00:00",
+  "first_ecosystem_commit": null,
+  "last_ecosystem_commit": null,
+  "first_commit": "2011-09-06T03:01:55",
+  "last_commit": "2011-09-28T03:47:06",
   "p2016_authored_commits": 0.0,
   "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
@@ -41,8 +47,8 @@
   "first_review_date": "2011-08-29T12:30:22+00:00",
   "last_review_date": "2014-03-28T22:15:40+00:00",
   "prs_authored": 5.0,
-  "avg_pr_ack_velocity_days": 1039.3106481481482,
-  "avg_concept_lead_time_days": null,
+  "avg_pr_ack_velocity_days": 174.66775694444445,
+  "avg_concept_lead_time_days": 0.03965277777777778,
   "review_reciprocity": 5.2,
   "hybrid_score": 0.2009,
   "p2016_hybrid_score": 0.0452,
@@ -81,7 +87,7 @@
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
-  "global_first_active": "2011-09-06T01:16:46",
+  "global_first_active": "2011-09-06T03:01:55",
   "global_last_active": "2011-10-20T00:02:17",
   "github_location": "New York",
   "github_company": "Weekend dirty hacked projects",
@@ -89,11 +95,12 @@
   "github_twitter": null,
   "github_blog": "http://Waters.nyc",
   "github_followers": 76.0,
+  "activity_status": "Steady",
   "is_top_50": false,
   "github_url": "https://github.com/alexwaters",
   "commit_history": {
     "2011": {
-      "Documentation": 2.0
+      "Documentation": 4.0
     }
   },
   "first_message": {

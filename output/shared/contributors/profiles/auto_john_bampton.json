@@ -18,15 +18,21 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "Tests",
   "total_commits": 4.0,
   "authored_commits": 4.0,
+  "tier1_authored_commits": 4.0,
+  "tier2_authored_commits": 0.0,
   "merge_commits": 0.0,
   "total_additions": 417.0,
   "total_deletions": 414.0,
-  "first_commit": "2018-05-10T15:28:27",
-  "last_commit": "2025-04-01T21:20:41",
+  "first_core_commit": "2018-05-11T00:59:36+00:00",
+  "last_core_commit": "2025-04-02T01:49:21+00:00",
+  "first_ecosystem_commit": null,
+  "last_ecosystem_commit": null,
+  "first_commit": "2018-05-11T00:59:36",
+  "last_commit": "2025-04-02T01:49:21",
   "p2016_authored_commits": 4.0,
   "modern_authored_commits": 1.0,
   "bips_authored": 0.0,
@@ -45,11 +51,11 @@
   "avg_concept_lead_time_days": 86.04967592592592,
   "review_reciprocity": 0.0,
   "hybrid_score": 0.1701,
-  "p2016_hybrid_score": 0.1701,
-  "modern_hybrid_score": 0.1172,
+  "p2016_hybrid_score": 0.204,
+  "modern_hybrid_score": 0.1406,
   "impact_score": 10.0,
-  "p2016_impact_score": 10.0,
-  "modern_impact_score": 7.0,
+  "p2016_impact_score": 12.0,
+  "modern_impact_score": 8.0,
   "threads_started": 0.0,
   "replies_sent": 0.0,
   "ml_threads": 0.0,
@@ -76,26 +82,27 @@
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
-  "global_first_active": "2018-05-10T15:28:27",
-  "global_last_active": "2025-04-01T21:20:41",
+  "global_first_active": "2018-05-11T00:59:36",
+  "global_last_active": "2025-04-02T01:49:21",
   "github_location": "Brisbane, Australia",
   "github_company": "@john-bampton @NextCommunity",
   "github_bio": "@apache Committer on CloudStack, OpenOffice and Sedona. Contributor @mruby ",
   "github_twitter": null,
   "github_blog": "https://people.apache.org/phonebook.html?uid=johnbam",
   "github_followers": 428.0,
+  "activity_status": "Fading",
   "is_top_50": false,
   "github_url": "https://github.com/jbampton",
   "commit_history": {
     "2018": {
-      "Tests": 0.5,
-      "Utilities": 0.5
+      "Tests": 1.0,
+      "Utilities": 1.0
     },
     "2019": {
-      "Tests": 2.0
+      "Tests": 4.0
     },
     "2025": {
-      "Tests": 1.0
+      "Tests": 2.0
     }
   }
 }

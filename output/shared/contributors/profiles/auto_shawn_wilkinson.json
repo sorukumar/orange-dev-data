@@ -18,15 +18,21 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "Documentation",
   "total_commits": 16.0,
   "authored_commits": 16.0,
+  "tier1_authored_commits": 16.0,
+  "tier2_authored_commits": 0.0,
   "merge_commits": 0.0,
   "total_additions": 1382.0,
   "total_deletions": 979.0,
-  "first_commit": "2013-05-20T04:30:00",
-  "last_commit": "2015-05-16T16:00:50",
+  "first_core_commit": "2013-05-20T13:25:41+00:00",
+  "last_core_commit": "2015-05-18T05:52:13+00:00",
+  "first_ecosystem_commit": null,
+  "last_ecosystem_commit": null,
+  "first_commit": "2013-05-20T13:25:41",
+  "last_commit": "2015-05-18T05:52:13",
   "p2016_authored_commits": 0.0,
   "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
@@ -82,32 +88,33 @@
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
-  "global_first_active": "2013-05-20T04:30:00",
-  "global_last_active": "2015-05-16T16:00:50",
+  "global_first_active": "2013-05-20T13:25:41",
+  "global_last_active": "2015-05-18T05:52:13",
   "github_location": "Atlanta, GA",
   "github_company": null,
   "github_bio": null,
   "github_twitter": null,
   "github_blog": "http://super3.org",
   "github_followers": 248.0,
+  "activity_status": "Retired",
   "is_top_50": false,
   "github_url": "https://github.com/super3",
   "commit_history": {
     "2013": {
-      "Consensus": 0.2,
-      "Documentation": 8.0,
-      "GUI": 0.2,
-      "Node & RPC": 0.2,
-      "P2P Network": 0.2,
-      "Utilities": 2.2
+      "Consensus": 0.4,
+      "Documentation": 16.0,
+      "GUI": 0.4,
+      "Node & RPC": 0.4,
+      "P2P Network": 0.4,
+      "Utilities": 4.4
     },
     "2014": {
-      "Documentation": 2.5,
-      "Tests": 0.5
+      "Documentation": 5.0,
+      "Tests": 1.0
     },
     "2015": {
-      "Build & CI": 1.0,
-      "Documentation": 1.0
+      "Build & CI": 2.0,
+      "Documentation": 2.0
     }
   }
 }

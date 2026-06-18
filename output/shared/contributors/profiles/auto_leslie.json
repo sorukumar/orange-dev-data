@@ -10,9 +10,15 @@
   "technical_focus": null,
   "total_commits": 0.0,
   "authored_commits": 0.0,
+  "tier1_authored_commits": 0.0,
+  "tier2_authored_commits": 0.0,
   "merge_commits": 0.0,
   "total_additions": null,
   "total_deletions": null,
+  "first_core_commit": null,
+  "last_core_commit": null,
+  "first_ecosystem_commit": null,
+  "last_ecosystem_commit": null,
   "first_commit": null,
   "last_commit": null,
   "p2016_authored_commits": 0.0,
@@ -38,32 +44,35 @@
   "impact_score": 0.0,
   "p2016_impact_score": 0.0,
   "modern_impact_score": 0.0,
-  "threads_started": 1.0,
+  "threads_started": 2.0,
   "replies_sent": 2.0,
   "ml_threads": 0.0,
-  "delving_threads": 1.0,
+  "delving_threads": 2.0,
   "ml_responses": 0.0,
   "delving_responses": 2.0,
   "first_active": null,
   "last_active": null,
   "dev_type": "Participant",
   "expertise_domains": [
+    "Mempool",
     "Consensus"
   ],
   "expertise_by_source": {
     "discussion": {
-      "Consensus": 1.0
+      "Consensus": 0.424,
+      "Mempool": 0.576
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 1.0
+    "Consensus": 0.424,
+    "Mempool": 0.576
   },
-  "p2016_posts": 3.0,
-  "modern_posts": 3.0,
+  "p2016_posts": 4.0,
+  "modern_posts": 4.0,
   "p2016_ml_posts": 0.0,
-  "p2016_delving_posts": 3.0,
+  "p2016_delving_posts": 4.0,
   "modern_ml_posts": 0.0,
-  "modern_delving_posts": 3.0,
+  "modern_delving_posts": 4.0,
   "global_first_active": null,
   "global_last_active": null,
   "github_location": null,
@@ -72,6 +81,7 @@
   "github_twitter": null,
   "github_blog": null,
   "github_followers": null,
+  "activity_status": "",
   "is_top_50": false,
   "delving_url": "https://delvingbitcoin.org/u/0300dbdd1b",
   "first_message": {
@@ -82,15 +92,16 @@
   },
   "last_message": {
     "source": "delving",
-    "subject": "Re: Consensus Cleanup: demo of slow blocks on Signet",
-    "date": "2026-04-09",
-    "link": "https://delvingbitcoin.org/t/consensus-cleanup-demo-of-slow-blocks-on-signet/2367/36"
+    "subject": "Defining 0x50 0x00 as unstructured taproot annex data",
+    "date": "2026-06-16",
+    "link": "https://delvingbitcoin.org/t/defining-0x50-0x00-as-unstructured-taproot-annex-data/2620/1"
   },
   "social_history": {
     "2026": {
       "consensus-cleanup": 3,
       "core-dev": 3,
-      "mempool-fees": 3,
+      "mempool-fees": 4,
+      "taproot": 1,
       "testing-devtools": 3,
       "utxo-sync": 3
     }

@@ -18,38 +18,44 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "Tests",
   "total_commits": 15.0,
   "authored_commits": 15.0,
+  "tier1_authored_commits": 15.0,
+  "tier2_authored_commits": 0.0,
   "merge_commits": 0.0,
   "total_additions": 850.0,
   "total_deletions": 132.0,
-  "first_commit": "2019-09-10T13:53:09",
-  "last_commit": "2024-09-10T03:42:57",
+  "first_core_commit": "2019-09-26T11:37:06+00:00",
+  "last_core_commit": "2024-10-15T10:10:20+00:00",
+  "first_ecosystem_commit": null,
+  "last_ecosystem_commit": null,
+  "first_commit": "2019-09-26T11:37:06",
+  "last_commit": "2024-10-15T10:10:20",
   "p2016_authored_commits": 15.0,
   "modern_authored_commits": 1.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": 96.09527909873188,
-  "reviews_count": 91.0,
-  "avg_approval_latency_days": 79.43868907712657,
-  "approvals_count": 68.0,
-  "p2016_reviews_count": 91.0,
+  "avg_review_latency_days": 195.73705407501413,
+  "reviews_count": 94.0,
+  "avg_approval_latency_days": 207.3773630985784,
+  "approvals_count": 71.0,
+  "p2016_reviews_count": 94.0,
   "modern_reviews_count": 8.0,
   "first_review_date": "2019-05-30T17:16:18+00:00",
   "last_review_date": "2025-07-30T15:48:10+00:00",
   "prs_authored": 26.0,
   "avg_pr_ack_velocity_days": 54.00403356481481,
   "avg_concept_lead_time_days": 64.75381283068783,
-  "review_reciprocity": 3.5,
-  "hybrid_score": 0.3388,
-  "p2016_hybrid_score": 0.3456,
-  "modern_hybrid_score": 0.2031,
+  "review_reciprocity": 3.6153846153846154,
+  "hybrid_score": 0.3398,
+  "p2016_hybrid_score": 0.3849,
+  "modern_hybrid_score": 0.2781,
   "impact_score": 18.0,
-  "p2016_impact_score": 19.0,
-  "modern_impact_score": 11.0,
+  "p2016_impact_score": 21.0,
+  "modern_impact_score": 15.0,
   "threads_started": 1.0,
   "replies_sent": 4.0,
   "ml_threads": 1.0,
@@ -66,10 +72,10 @@
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.055,
+      "Consensus": 0.056,
       "Infrastructure": 0.8,
       "Network": 0.089,
-      "Wallet": 0.055
+      "Wallet": 0.056
     },
     "discussion": {
       "Consensus": 0.667,
@@ -77,11 +83,11 @@
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.3,
-    "Ecosystem": 0.1333,
-    "Infrastructure": 0.4803,
+    "Consensus": 0.3002,
+    "Ecosystem": 0.1331,
+    "Infrastructure": 0.4797,
     "Network": 0.0534,
-    "Wallet": 0.033
+    "Wallet": 0.0336
   },
   "p2016_posts": 5.0,
   "modern_posts": 2.0,
@@ -89,49 +95,53 @@
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 2.0,
   "modern_delving_posts": 0.0,
-  "global_first_active": "2019-09-10T13:53:09",
-  "global_last_active": "2024-09-10T03:42:57",
+  "global_first_active": "2019-09-26T11:37:06",
+  "global_last_active": "2024-10-15T10:10:20",
   "github_location": "Parker, Colorado, USA",
   "github_company": "@Electric-Coin-Company ",
   "github_bio": "I work on Zcash, and also volunteer on Bitcoin Core",
   "github_twitter": "LarryRuane",
   "github_blog": null,
   "github_followers": 82.0,
+  "activity_status": "Fading",
   "is_top_50": false,
   "github_url": "https://github.com/LarryRuane",
   "commit_history": {
     "2019": {
-      "Tests": 0.5,
-      "Utilities": 0.5
+      "Tests": 1.0,
+      "Utilities": 1.0
     },
     "2020": {
-      "Consensus": 0.83,
-      "Node & RPC": 0.33,
-      "Tests": 2.67,
-      "Utilities": 1.17
+      "Node & RPC": 0.67,
+      "Tests": 0.67,
+      "Utilities": 0.67
     },
     "2021": {
-      "Documentation": 1.0,
-      "Node & RPC": 0.83,
-      "P2P Network": 0.33,
-      "Tests": 0.33,
-      "Wallet": 0.5
+      "Documentation": 2.0,
+      "Node & RPC": 1.67,
+      "P2P Network": 0.67,
+      "Tests": 2.67,
+      "Wallet": 1.0
     },
     "2022": {
-      "Build & CI": 0.5,
-      "GUI": 0.5,
-      "Node & RPC": 0.33,
-      "P2P Network": 1.0,
-      "Tests": 1.0,
-      "Utilities": 0.33,
-      "Wallet": 0.33
+      "Build & CI": 1.0,
+      "Consensus": 1.0,
+      "P2P Network": 2.0,
+      "Tests": 3.0,
+      "Utilities": 1.0
     },
     "2023": {
-      "Tests": 1.0
+      "Consensus": 0.67,
+      "Tests": 2.67,
+      "Utilities": 0.67
     },
     "2024": {
-      "Documentation": 0.5,
-      "Tests": 0.5
+      "Documentation": 1.0,
+      "GUI": 1.0,
+      "Node & RPC": 0.67,
+      "Tests": 2.0,
+      "Utilities": 0.67,
+      "Wallet": 0.67
     }
   },
   "first_message": {

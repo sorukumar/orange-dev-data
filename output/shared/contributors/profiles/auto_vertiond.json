@@ -12,23 +12,31 @@
     "is_sponsored": null,
     "maintainer_status": null,
     "social_source": "github",
-    "sponsor_id": null
+    "sponsor_id": null,
+    "ecosystem_contributor": true,
+    "tier2_commits": 33
   },
   "roles": [
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
-  "technical_focus": "None",
-  "total_commits": 0.0,
-  "authored_commits": 0.0,
+  "last_seen": "2026-06-18T00:00:00",
+  "technical_focus": "Build & CI",
+  "total_commits": 33.0,
+  "authored_commits": 33.0,
+  "tier1_authored_commits": 0.0,
+  "tier2_authored_commits": 33.0,
   "merge_commits": 0.0,
-  "total_additions": null,
-  "total_deletions": null,
-  "first_commit": null,
-  "last_commit": null,
-  "p2016_authored_commits": 0.0,
-  "modern_authored_commits": 0.0,
+  "total_additions": 1458.0,
+  "total_deletions": 69.0,
+  "first_core_commit": null,
+  "last_core_commit": null,
+  "first_ecosystem_commit": "2022-04-03T18:38:04+00:00",
+  "last_ecosystem_commit": "2025-10-30T10:05:06+00:00",
+  "first_commit": "2022-04-03T18:38:04",
+  "last_commit": "2025-10-30T10:05:06",
+  "p2016_authored_commits": 33.0,
+  "modern_authored_commits": 3.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
@@ -44,12 +52,12 @@
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 1.0,
-  "hybrid_score": 0.033,
-  "p2016_hybrid_score": 0.033,
-  "modern_hybrid_score": 0.0146,
-  "impact_score": 2.0,
-  "p2016_impact_score": 2.0,
-  "modern_impact_score": 1.0,
+  "hybrid_score": 0.2365,
+  "p2016_hybrid_score": 0.2365,
+  "modern_hybrid_score": 0.1669,
+  "impact_score": 13.0,
+  "p2016_impact_score": 13.0,
+  "modern_impact_score": 10.0,
   "threads_started": 0.0,
   "replies_sent": 0.0,
   "ml_threads": 0.0,
@@ -58,11 +66,15 @@
   "delving_responses": 0.0,
   "first_active": null,
   "last_active": null,
-  "dev_type": "Participant",
+  "dev_type": "Builder",
   "expertise_domains": [
     "Infrastructure"
   ],
-  "expertise_by_source": {},
+  "expertise_by_source": {
+    "code": {
+      "Infrastructure": 1.0
+    }
+  },
   "expertise_domain_scores": {
     "Infrastructure": 1.0
   },
@@ -72,14 +84,26 @@
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
-  "global_first_active": null,
-  "global_last_active": null,
+  "global_first_active": "2022-04-03T18:38:04",
+  "global_last_active": "2025-10-30T10:05:06",
   "github_location": "Central USA",
   "github_company": null,
   "github_bio": null,
   "github_twitter": null,
   "github_blog": null,
   "github_followers": 50.0,
+  "activity_status": "Fading",
   "is_top_50": false,
-  "github_url": "https://github.com/vertiond"
+  "github_url": "https://github.com/vertiond",
+  "commit_history": {
+    "2022": {
+      "Build & CI": 20.0
+    },
+    "2023": {
+      "Build & CI": 11.0
+    },
+    "2025": {
+      "Build & CI": 2.0
+    }
+  }
 }

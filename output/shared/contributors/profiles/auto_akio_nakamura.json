@@ -18,15 +18,21 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "Utilities",
   "total_commits": 17.0,
   "authored_commits": 17.0,
+  "tier1_authored_commits": 17.0,
+  "tier2_authored_commits": 0.0,
   "merge_commits": 0.0,
   "total_additions": 570.0,
   "total_deletions": 258.0,
-  "first_commit": "2017-07-03T07:29:13",
-  "last_commit": "2020-09-08T16:11:20",
+  "first_core_commit": "2017-07-03T12:20:28+00:00",
+  "last_core_commit": "2020-09-12T23:50:18+00:00",
+  "first_ecosystem_commit": null,
+  "last_ecosystem_commit": null,
+  "first_commit": "2017-07-03T12:20:28",
+  "last_commit": "2020-09-12T23:50:18",
   "p2016_authored_commits": 17.0,
   "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
@@ -45,10 +51,10 @@
   "avg_concept_lead_time_days": 20.061587577160495,
   "review_reciprocity": 0.5,
   "hybrid_score": 0.273,
-  "p2016_hybrid_score": 0.2729,
+  "p2016_hybrid_score": 0.3114,
   "modern_hybrid_score": 0.083,
   "impact_score": 15.0,
-  "p2016_impact_score": 15.0,
+  "p2016_impact_score": 17.0,
   "modern_impact_score": 5.0,
   "threads_started": 0.0,
   "replies_sent": 0.0,
@@ -79,37 +85,38 @@
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
-  "global_first_active": "2017-07-03T07:29:13",
-  "global_last_active": "2020-09-08T16:11:20",
+  "global_first_active": "2017-07-03T12:20:28",
+  "global_last_active": "2020-09-12T23:50:18",
   "github_location": "Tokyo, Japan",
   "github_company": null,
   "github_bio": "a programmer, a ultra marathon runner :runner:",
   "github_twitter": "AkioNak",
   "github_blog": null,
   "github_followers": 20.0,
+  "activity_status": "Retired",
   "is_top_50": false,
   "github_url": "https://github.com/AkioNak",
   "commit_history": {
     "2017": {
-      "Node & RPC": 2.0,
-      "Tests": 1.0,
-      "Utilities": 1.5,
-      "Wallet": 1.5
+      "Node & RPC": 4.0,
+      "Tests": 2.0,
+      "Utilities": 1.0,
+      "Wallet": 3.0
     },
     "2018": {
-      "Build & CI": 1.0,
-      "Documentation": 0.5,
-      "Node & RPC": 0.33,
-      "Tests": 2.83,
-      "Utilities": 2.33
+      "Build & CI": 2.0,
+      "Documentation": 1.0,
+      "Node & RPC": 0.67,
+      "Tests": 4.67,
+      "Utilities": 5.67
     },
     "2019": {
-      "Node & RPC": 0.33,
-      "Tests": 1.33,
-      "Utilities": 1.33
+      "Node & RPC": 0.67,
+      "Tests": 3.67,
+      "Utilities": 3.67
     },
     "2020": {
-      "Wallet": 1.0
+      "Wallet": 2.0
     }
   }
 }

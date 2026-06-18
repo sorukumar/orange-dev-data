@@ -18,15 +18,21 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "Utilities",
   "total_commits": 10.0,
   "authored_commits": 10.0,
+  "tier1_authored_commits": 10.0,
+  "tier2_authored_commits": 0.0,
   "merge_commits": 0.0,
   "total_additions": 176.0,
   "total_deletions": 36.0,
-  "first_commit": "2011-04-22T23:16:19",
-  "last_commit": "2012-06-07T17:14:18",
+  "first_core_commit": "2011-04-22T23:26:16+00:00",
+  "last_core_commit": "2012-07-11T23:56:18+00:00",
+  "first_ecosystem_commit": null,
+  "last_ecosystem_commit": null,
+  "first_commit": "2011-04-22T23:26:16",
+  "last_commit": "2012-07-11T23:56:18",
   "p2016_authored_commits": 0.0,
   "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
@@ -41,8 +47,8 @@
   "first_review_date": null,
   "last_review_date": null,
   "prs_authored": 3.0,
-  "avg_pr_ack_velocity_days": 29.168020833333333,
-  "avg_concept_lead_time_days": null,
+  "avg_pr_ack_velocity_days": 0.23737654320987653,
+  "avg_concept_lead_time_days": 0.3651851851851852,
   "review_reciprocity": 0.0,
   "hybrid_score": 0.1714,
   "p2016_hybrid_score": 0.033,
@@ -79,25 +85,26 @@
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
-  "global_first_active": "2011-04-22T23:16:19",
-  "global_last_active": "2012-06-07T17:14:18",
+  "global_first_active": "2011-04-22T23:26:16",
+  "global_last_active": "2012-07-11T23:56:18",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
   "github_twitter": null,
   "github_blog": null,
   "github_followers": 36.0,
+  "activity_status": "Retired",
   "is_top_50": false,
   "github_url": "https://github.com/wizeman",
   "commit_history": {
     "2011": {
-      "Build & CI": 1.0,
-      "Utilities": 1.0
+      "Build & CI": 2.0,
+      "Utilities": 2.0
     },
     "2012": {
-      "P2P Network": 0.5,
-      "Tests": 3.0,
-      "Utilities": 4.5
+      "P2P Network": 1.0,
+      "Tests": 6.0,
+      "Utilities": 9.0
     }
   }
 }

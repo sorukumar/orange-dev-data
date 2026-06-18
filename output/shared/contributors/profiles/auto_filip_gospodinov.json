@@ -12,44 +12,52 @@
     "is_sponsored": null,
     "maintainer_status": null,
     "social_source": "github",
-    "sponsor_id": null
+    "sponsor_id": null,
+    "ecosystem_contributor": true,
+    "tier2_commits": 1
   },
   "roles": [
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "Utilities",
-  "total_commits": 1.0,
-  "authored_commits": 1.0,
+  "total_commits": 2.0,
+  "authored_commits": 2.0,
+  "tier1_authored_commits": 1.0,
+  "tier2_authored_commits": 1.0,
   "merge_commits": 0.0,
-  "total_additions": 4.0,
-  "total_deletions": 4.0,
-  "first_commit": "2020-02-18T07:29:35",
-  "last_commit": "2020-02-18T07:29:35",
-  "p2016_authored_commits": 1.0,
-  "modern_authored_commits": 0.0,
+  "total_additions": 41.0,
+  "total_deletions": 33.0,
+  "first_core_commit": "2020-03-02T16:10:32+00:00",
+  "last_core_commit": "2020-03-02T16:10:32+00:00",
+  "first_ecosystem_commit": "2024-01-17T19:02:28+00:00",
+  "last_ecosystem_commit": "2024-01-17T19:02:28+00:00",
+  "first_commit": "2020-03-02T16:10:32",
+  "last_commit": "2020-03-02T16:10:32",
+  "p2016_authored_commits": 2.0,
+  "modern_authored_commits": 1.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": null,
-  "reviews_count": 0.0,
+  "avg_review_latency_days": 856.32015625,
+  "reviews_count": 1.0,
   "avg_approval_latency_days": null,
   "approvals_count": 0.0,
-  "p2016_reviews_count": 0.0,
+  "p2016_reviews_count": 1.0,
   "modern_reviews_count": 0.0,
-  "first_review_date": null,
-  "last_review_date": null,
+  "first_review_date": "2016-03-09T18:07:27+00:00",
+  "last_review_date": "2016-03-09T18:07:27+00:00",
   "prs_authored": 1.0,
   "avg_pr_ack_velocity_days": 0.20675925925925925,
   "avg_concept_lead_time_days": 0.20675925925925925,
-  "review_reciprocity": 0.0,
-  "hybrid_score": 0.0546,
-  "p2016_hybrid_score": 0.0546,
-  "modern_hybrid_score": 0.0146,
-  "impact_score": 3.0,
-  "p2016_impact_score": 3.0,
-  "modern_impact_score": 1.0,
+  "review_reciprocity": 1.0,
+  "hybrid_score": 0.0964,
+  "p2016_hybrid_score": 0.113,
+  "modern_hybrid_score": 0.0546,
+  "impact_score": 6.0,
+  "p2016_impact_score": 7.0,
+  "modern_impact_score": 3.0,
   "threads_started": 0.0,
   "replies_sent": 0.0,
   "ml_threads": 0.0,
@@ -60,15 +68,18 @@
   "last_active": null,
   "dev_type": "Builder",
   "expertise_domains": [
-    "Infrastructure"
+    "Infrastructure",
+    "Wallet"
   ],
   "expertise_by_source": {
     "code": {
-      "Infrastructure": 1.0
+      "Infrastructure": 0.667,
+      "Wallet": 0.333
     }
   },
   "expertise_domain_scores": {
-    "Infrastructure": 1.0
+    "Infrastructure": 0.667,
+    "Wallet": 0.333
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -76,19 +87,23 @@
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
-  "global_first_active": "2020-02-18T07:29:35",
-  "global_last_active": "2020-02-18T07:29:35",
+  "global_first_active": "2020-03-02T16:10:32",
+  "global_last_active": "2020-03-02T16:10:32",
   "github_location": "Europe",
   "github_company": null,
   "github_bio": null,
   "github_twitter": null,
   "github_blog": "https://www.21analytics.ch",
   "github_followers": 28.0,
+  "activity_status": "Fading",
   "is_top_50": false,
   "github_url": "https://github.com/toxeus",
   "commit_history": {
     "2020": {
-      "Utilities": 1.0
+      "Utilities": 2.0
+    },
+    "2024": {
+      "Wallet": 1.0
     }
   }
 }

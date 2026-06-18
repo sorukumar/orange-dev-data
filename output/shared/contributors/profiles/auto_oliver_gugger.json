@@ -12,24 +12,32 @@
     "is_sponsored": null,
     "maintainer_status": null,
     "social_source": "mailing_list",
-    "sponsor_id": null
+    "sponsor_id": null,
+    "ecosystem_contributor": true,
+    "tier2_commits": 176
   },
   "roles": [
     "Researcher",
     "BIP Author"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
-  "technical_focus": "Tests",
-  "total_commits": 4.0,
-  "authored_commits": 4.0,
+  "last_seen": "2026-06-18T00:00:00",
+  "technical_focus": "Build & CI",
+  "total_commits": 180.0,
+  "authored_commits": 180.0,
+  "tier1_authored_commits": 4.0,
+  "tier2_authored_commits": 176.0,
   "merge_commits": 0.0,
-  "total_additions": 27.0,
+  "total_additions": 4760.0,
   "total_deletions": 3.0,
-  "first_commit": "2020-09-12T15:07:59",
-  "last_commit": "2021-01-05T19:06:33",
-  "p2016_authored_commits": 4.0,
-  "modern_authored_commits": 0.0,
+  "first_core_commit": "2020-09-26T10:55:16+00:00",
+  "last_core_commit": "2021-01-06T07:46:56+00:00",
+  "first_ecosystem_commit": "2021-08-13T00:24:34+00:00",
+  "last_ecosystem_commit": "2026-04-17T20:44:15+00:00",
+  "first_commit": "2020-09-26T10:55:16",
+  "last_commit": "2021-01-06T07:46:56",
+  "p2016_authored_commits": 180.0,
+  "modern_authored_commits": 117.0,
   "bips_authored": 1.0,
   "p2016_bips_authored": 1.0,
   "modern_bips_authored": 0.0,
@@ -42,15 +50,15 @@
   "first_review_date": "2020-08-29T14:41:20+00:00",
   "last_review_date": "2026-06-04T18:28:17+00:00",
   "prs_authored": 10.0,
-  "avg_pr_ack_velocity_days": 0.058576388888888886,
+  "avg_pr_ack_velocity_days": 0.042943672839506175,
   "avg_concept_lead_time_days": 0.060156249999999994,
   "review_reciprocity": 2.2,
-  "hybrid_score": 0.5731,
-  "p2016_hybrid_score": 0.5783,
-  "modern_hybrid_score": 0.144,
-  "impact_score": 29.0,
-  "p2016_impact_score": 29.0,
-  "modern_impact_score": 8.0,
+  "hybrid_score": 0.7802,
+  "p2016_hybrid_score": 0.7866,
+  "modern_hybrid_score": 0.4286,
+  "impact_score": 37.0,
+  "p2016_impact_score": 38.0,
+  "modern_impact_score": 23.0,
   "threads_started": 1.0,
   "replies_sent": 1.0,
   "ml_threads": 1.0,
@@ -85,7 +93,7 @@
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 2.0,
   "modern_delving_posts": 0.0,
-  "global_first_active": "2020-09-12T15:07:59",
+  "global_first_active": "2020-09-26T10:55:16",
   "global_last_active": "2026-04-21T04:16:04",
   "github_location": "Remote",
   "github_company": null,
@@ -93,14 +101,31 @@
   "github_twitter": null,
   "github_blog": "https://keybase.io/guggero",
   "github_followers": 445.0,
+  "activity_status": "Steady",
   "is_top_50": false,
   "github_url": "https://github.com/guggero",
   "commit_history": {
     "2020": {
-      "Tests": 3.0
+      "Tests": 6.0
     },
     "2021": {
-      "Documentation": 1.0
+      "Build & CI": 8.0,
+      "Documentation": 2.0
+    },
+    "2022": {
+      "Build & CI": 30.0
+    },
+    "2023": {
+      "Build & CI": 35.0
+    },
+    "2024": {
+      "Build & CI": 34.0
+    },
+    "2025": {
+      "Build & CI": 45.0
+    },
+    "2026": {
+      "Build & CI": 24.0
     }
   },
   "bip_list": [

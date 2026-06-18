@@ -12,44 +12,52 @@
     "is_sponsored": true,
     "maintainer_status": null,
     "social_source": "delving",
-    "sponsor_id": null
+    "sponsor_id": null,
+    "ecosystem_contributor": true,
+    "tier2_commits": 72
   },
   "roles": [
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
-  "technical_focus": "Tests",
-  "total_commits": 52.0,
-  "authored_commits": 52.0,
+  "last_seen": "2026-06-18T00:00:00",
+  "technical_focus": "Build & CI",
+  "total_commits": 124.0,
+  "authored_commits": 124.0,
+  "tier1_authored_commits": 52.0,
+  "tier2_authored_commits": 72.0,
   "merge_commits": 0.0,
-  "total_additions": 3816.0,
-  "total_deletions": 366.0,
-  "first_commit": "2020-02-17T23:28:06",
-  "last_commit": "2026-05-11T17:04:01",
-  "p2016_authored_commits": 52.0,
-  "modern_authored_commits": 24.0,
+  "total_additions": 6395.0,
+  "total_deletions": 547.0,
+  "first_core_commit": "2020-02-21T18:23:08+00:00",
+  "last_core_commit": "2026-05-15T23:59:46+00:00",
+  "first_ecosystem_commit": "2021-08-04T11:50:34+00:00",
+  "last_ecosystem_commit": "2026-04-17T21:39:02+00:00",
+  "first_commit": "2020-02-21T18:23:08",
+  "last_commit": "2026-05-15T23:59:46",
+  "p2016_authored_commits": 124.0,
+  "modern_authored_commits": 84.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": 89.88241369954743,
-  "reviews_count": 237.0,
-  "avg_approval_latency_days": 58.93336865767501,
-  "approvals_count": 147.0,
-  "p2016_reviews_count": 237.0,
+  "avg_review_latency_days": 138.73642307993381,
+  "reviews_count": 240.0,
+  "avg_approval_latency_days": 88.95538358848906,
+  "approvals_count": 148.0,
+  "p2016_reviews_count": 240.0,
   "modern_reviews_count": 107.0,
   "first_review_date": "2019-05-15T18:34:57+00:00",
   "last_review_date": "2026-06-10T13:34:28+00:00",
   "prs_authored": 34.0,
   "avg_pr_ack_velocity_days": 1.9146200510855684,
   "avg_concept_lead_time_days": 15.921902913943354,
-  "review_reciprocity": 6.970588235294118,
-  "hybrid_score": 0.4454,
-  "p2016_hybrid_score": 0.4569,
-  "modern_hybrid_score": 0.3852,
-  "impact_score": 23.0,
-  "p2016_impact_score": 24.0,
-  "modern_impact_score": 21.0,
+  "review_reciprocity": 7.0588235294117645,
+  "hybrid_score": 0.4953,
+  "p2016_hybrid_score": 0.5269,
+  "modern_hybrid_score": 0.4754,
+  "impact_score": 26.0,
+  "p2016_impact_score": 27.0,
+  "modern_impact_score": 25.0,
   "threads_started": 45.0,
   "replies_sent": 23.0,
   "ml_threads": 1.0,
@@ -66,11 +74,11 @@
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.03,
-      "Infrastructure": 0.861,
-      "Mempool": 0.006,
-      "Network": 0.098,
-      "Wallet": 0.006
+      "Consensus": 0.017,
+      "Infrastructure": 0.918,
+      "Mempool": 0.003,
+      "Network": 0.058,
+      "Wallet": 0.003
     },
     "discussion": {
       "Mempool": 0.341,
@@ -79,11 +87,11 @@
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.018,
-    "Infrastructure": 0.5163,
-    "Mempool": 0.1399,
-    "Mining": 0.0907,
-    "Network": 0.2315
+    "Consensus": 0.0102,
+    "Infrastructure": 0.5511,
+    "Mempool": 0.1383,
+    "Mining": 0.0909,
+    "Network": 0.2077
   },
   "p2016_posts": 68.0,
   "modern_posts": 62.0,
@@ -91,60 +99,65 @@
   "p2016_delving_posts": 60.0,
   "modern_ml_posts": 2.0,
   "modern_delving_posts": 60.0,
-  "global_first_active": "2020-02-17T23:28:06",
-  "global_last_active": "2026-05-11T17:04:01",
+  "global_first_active": "2020-02-21T18:23:08",
+  "global_last_active": "2026-05-15T23:59:46",
   "github_location": "Zurich, CH",
   "github_company": "@bitcoin-noc",
   "github_bio": "Bitcoin developer and observer | gpg\r\n982A193E3CE0EED535E09023188CBB2648416AD5 | donate bc1qls5zwwputhasm4y77kalacac70 yzaek2ukxrf9",
   "github_twitter": "0xB10C",
   "github_blog": "https://b10c.me",
   "github_followers": 455.0,
+  "activity_status": "Steady",
   "is_top_50": false,
   "github_url": "https://github.com/0xB10C",
   "delving_url": "https://delvingbitcoin.org/u/0xb10c",
   "commit_history": {
     "2020": {
-      "Tests": 1.0
+      "Tests": 2.0
     },
     "2021": {
-      "Build & CI": 1.5,
-      "Consensus": 0.67,
-      "Documentation": 4.0,
-      "P2P Network": 0.33,
-      "Utilities": 1.5
-    },
-    "2022": {
-      "Build & CI": 0.5,
-      "Documentation": 3.67,
-      "P2P Network": 1.67,
-      "Tests": 9.67,
-      "Utilities": 1.5
-    },
-    "2023": {
-      "Consensus": 0.29,
-      "Documentation": 0.29,
-      "Mempool": 0.29,
-      "Node & RPC": 0.83,
-      "P2P Network": 1.62,
-      "Tests": 2.12,
-      "Utilities": 1.29,
-      "Wallet": 0.29
-    },
-    "2024": {
-      "Consensus": 0.58,
-      "Documentation": 1.58,
-      "Node & RPC": 1.0,
-      "Tests": 4.58,
-      "Utilities": 1.25
-    },
-    "2025": {
-      "Node & RPC": 1.0,
-      "P2P Network": 1.5,
-      "Tests": 3.5,
+      "Build & CI": 5.0,
+      "Consensus": 1.33,
+      "Documentation": 6.0,
+      "P2P Network": 0.67,
       "Utilities": 2.0
     },
+    "2022": {
+      "Build & CI": 9.0,
+      "Documentation": 4.0,
+      "Tests": 16.0,
+      "Utilities": 2.0
+    },
+    "2023": {
+      "Build & CI": 6.0,
+      "Node & RPC": 0.67,
+      "P2P Network": 2.67,
+      "Tests": 2.67,
+      "Utilities": 2.0
+    },
+    "2024": {
+      "Build & CI": 19.0,
+      "Consensus": 1.74,
+      "Documentation": 2.74,
+      "Mempool": 0.57,
+      "Node & RPC": 3.0,
+      "P2P Network": 0.57,
+      "Tests": 8.74,
+      "Utilities": 4.07,
+      "Wallet": 0.57
+    },
+    "2025": {
+      "Build & CI": 20.0,
+      "Documentation": 6.33,
+      "Node & RPC": 2.0,
+      "P2P Network": 5.33,
+      "Tests": 11.33,
+      "Utilities": 5.0
+    },
     "2026": {
-      "Tests": 2.0
+      "Build & CI": 17.0,
+      "P2P Network": 1.0,
+      "Tests": 5.0
     }
   },
   "first_message": {

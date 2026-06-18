@@ -18,38 +18,44 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "P2P Network",
   "total_commits": 15.0,
   "authored_commits": 15.0,
+  "tier1_authored_commits": 15.0,
+  "tier2_authored_commits": 0.0,
   "merge_commits": 0.0,
   "total_additions": 216.0,
   "total_deletions": 201.0,
-  "first_commit": "2022-04-15T18:34:49",
-  "last_commit": "2025-08-18T09:46:04",
+  "first_core_commit": "2022-05-30T14:57:38+00:00",
+  "last_core_commit": "2026-01-14T19:38:07+00:00",
+  "first_ecosystem_commit": null,
+  "last_ecosystem_commit": null,
+  "first_commit": "2022-05-30T14:57:38",
+  "last_commit": "2026-01-14T19:38:07",
   "p2016_authored_commits": 15.0,
   "modern_authored_commits": 13.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": 349.01411098008384,
+  "avg_review_latency_days": 348.5485523061882,
   "reviews_count": 107.0,
   "avg_approval_latency_days": 187.45791294283416,
   "approvals_count": 92.0,
   "p2016_reviews_count": 107.0,
   "modern_reviews_count": 96.0,
   "first_review_date": "2022-03-08T14:24:20+00:00",
-  "last_review_date": "2026-06-15T13:58:53+00:00",
+  "last_review_date": "2026-06-17T08:53:56+00:00",
   "prs_authored": 9.0,
   "avg_pr_ack_velocity_days": 7.928420138888889,
   "avg_concept_lead_time_days": 10.603233796296298,
   "review_reciprocity": 11.88888888888889,
   "hybrid_score": 0.3303,
-  "p2016_hybrid_score": 0.3303,
-  "modern_hybrid_score": 0.3189,
+  "p2016_hybrid_score": 0.3685,
+  "modern_hybrid_score": 0.3569,
   "impact_score": 18.0,
-  "p2016_impact_score": 18.0,
-  "modern_impact_score": 17.0,
+  "p2016_impact_score": 20.0,
+  "modern_impact_score": 19.0,
   "threads_started": 0.0,
   "replies_sent": 0.0,
   "ml_threads": 0.0,
@@ -67,14 +73,14 @@
   "expertise_by_source": {
     "code": {
       "Consensus": 0.122,
-      "Infrastructure": 0.645,
+      "Infrastructure": 0.644,
       "Network": 0.233
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.122,
-    "Infrastructure": 0.645,
-    "Network": 0.233
+    "Consensus": 0.1221,
+    "Infrastructure": 0.6446,
+    "Network": 0.2332
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -82,30 +88,36 @@
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
-  "global_first_active": "2022-04-15T18:34:49",
-  "global_last_active": "2025-08-18T09:46:04",
+  "global_first_active": "2022-05-30T14:57:38",
+  "global_last_active": "2026-01-14T19:38:07",
   "github_location": "Italy",
   "github_company": null,
   "github_bio": null,
   "github_twitter": "danielabrozzoni",
   "github_blog": "danielabrozzoni.com",
   "github_followers": 512.0,
+  "activity_status": "Steady",
   "is_top_50": false,
   "github_url": "https://github.com/danielabrozzoni",
   "commit_history": {
     "2022": {
-      "Tests": 2.0
+      "Tests": 4.0
     },
     "2024": {
-      "Documentation": 2.0
+      "Documentation": 4.0
     },
     "2025": {
-      "Consensus": 1.83,
-      "Documentation": 0.5,
-      "Node & RPC": 0.33,
-      "P2P Network": 3.5,
-      "Tests": 2.67,
-      "Utilities": 2.17
+      "Documentation": 1.0,
+      "Node & RPC": 0.67,
+      "P2P Network": 2.67,
+      "Tests": 4.67,
+      "Utilities": 1.0
+    },
+    "2026": {
+      "Consensus": 3.67,
+      "P2P Network": 4.33,
+      "Tests": 0.67,
+      "Utilities": 3.33
     }
   }
 }

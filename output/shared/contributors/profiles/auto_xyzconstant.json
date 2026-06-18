@@ -3,20 +3,29 @@
   "github_login_final": "xyzconstant",
   "delving_username_final": null,
   "uuid": "auto_xyzconstant",
-  "badges": null,
+  "badges": {
+    "ecosystem_contributor": true,
+    "tier2_commits": 3
+  },
   "roles": null,
   "first_seen": null,
   "last_seen": null,
   "technical_focus": null,
-  "total_commits": 1.0,
-  "authored_commits": 1.0,
+  "total_commits": 4.0,
+  "authored_commits": 4.0,
+  "tier1_authored_commits": 1.0,
+  "tier2_authored_commits": 3.0,
   "merge_commits": 0.0,
-  "total_additions": 1.0,
+  "total_additions": 92.0,
   "total_deletions": 1.0,
-  "first_commit": "2026-06-01T21:54:01",
-  "last_commit": "2026-06-01T21:54:01",
-  "p2016_authored_commits": 1.0,
-  "modern_authored_commits": 1.0,
+  "first_core_commit": "2026-06-02T10:36:28+00:00",
+  "last_core_commit": "2026-06-02T10:36:28+00:00",
+  "first_ecosystem_commit": "2026-04-17T14:30:44+00:00",
+  "last_ecosystem_commit": "2026-04-20T03:46:24+00:00",
+  "first_commit": "2026-06-02T10:36:28",
+  "last_commit": "2026-06-02T10:36:28",
+  "p2016_authored_commits": 4.0,
+  "modern_authored_commits": 4.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
@@ -33,11 +42,11 @@
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 6.0,
   "hybrid_score": 0.0727,
-  "p2016_hybrid_score": 0.0727,
-  "modern_hybrid_score": 0.0727,
+  "p2016_hybrid_score": 0.1527,
+  "modern_hybrid_score": 0.1527,
   "impact_score": 4.0,
-  "p2016_impact_score": 4.0,
-  "modern_impact_score": 4.0,
+  "p2016_impact_score": 9.0,
+  "modern_impact_score": 9.0,
   "threads_started": 0.0,
   "replies_sent": 0.0,
   "ml_threads": 0.0,
@@ -50,7 +59,11 @@
   "expertise_domains": [
     "Infrastructure"
   ],
-  "expertise_by_source": {},
+  "expertise_by_source": {
+    "code": {
+      "Infrastructure": 1.0
+    }
+  },
   "expertise_domain_scores": {
     "Infrastructure": 1.0
   },
@@ -60,14 +73,20 @@
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
-  "global_first_active": "2026-06-01T21:54:01",
-  "global_last_active": "2026-06-01T21:54:01",
+  "global_first_active": "2026-06-02T10:36:28",
+  "global_last_active": "2026-06-02T10:36:28",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
   "github_twitter": null,
   "github_blog": null,
   "github_followers": null,
+  "activity_status": "New",
   "is_top_50": false,
-  "github_url": "https://github.com/xyzconstant"
+  "github_url": "https://github.com/xyzconstant",
+  "commit_history": {
+    "2026": {
+      "Build & CI": 3.0
+    }
+  }
 }

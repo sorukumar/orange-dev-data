@@ -18,15 +18,21 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "Utilities",
   "total_commits": 10.0,
   "authored_commits": 10.0,
+  "tier1_authored_commits": 10.0,
+  "tier2_authored_commits": 0.0,
   "merge_commits": 0.0,
   "total_additions": 1314.0,
   "total_deletions": 340.0,
+  "first_core_commit": "2011-06-11T06:52:07+00:00",
+  "last_core_commit": "2013-08-07T11:44:57+00:00",
+  "first_ecosystem_commit": null,
+  "last_ecosystem_commit": null,
   "first_commit": "2011-06-11T06:52:07",
-  "last_commit": "2013-08-06T11:52:38",
+  "last_commit": "2013-08-07T11:44:57",
   "p2016_authored_commits": 0.0,
   "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
@@ -41,8 +47,8 @@
   "first_review_date": null,
   "last_review_date": null,
   "prs_authored": 9.0,
-  "avg_pr_ack_velocity_days": 560.3453217592593,
-  "avg_concept_lead_time_days": null,
+  "avg_pr_ack_velocity_days": 8.047587632275132,
+  "avg_concept_lead_time_days": 0.034479166666666665,
   "review_reciprocity": 0.0,
   "hybrid_score": 0.1999,
   "p2016_hybrid_score": 0.0615,
@@ -77,24 +83,25 @@
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
   "global_first_active": "2011-06-11T06:52:07",
-  "global_last_active": "2013-08-06T11:52:38",
+  "global_last_active": "2013-08-07T11:44:57",
   "github_location": "Sweden",
   "github_company": null,
   "github_bio": null,
   "github_twitter": null,
   "github_blog": "https://yap.nu",
   "github_followers": 201.0,
+  "activity_status": "Retired",
   "is_top_50": false,
   "github_url": "https://github.com/codler",
   "commit_history": {
     "2011": {
-      "Documentation": 1.0,
-      "Node & RPC": 1.0,
-      "Utilities": 6.0
+      "Documentation": 2.0,
+      "Node & RPC": 2.0,
+      "Utilities": 12.0
     },
     "2013": {
-      "Documentation": 1.0,
-      "Utilities": 1.0
+      "Documentation": 2.0,
+      "Utilities": 2.0
     }
   }
 }

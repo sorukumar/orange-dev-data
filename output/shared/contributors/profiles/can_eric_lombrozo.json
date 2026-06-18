@@ -16,34 +16,40 @@
   },
   "roles": [],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "None",
-  "total_commits": 32.0,
-  "authored_commits": 32.0,
-  "merge_commits": 0.0,
-  "total_additions": 2876.0,
-  "total_deletions": 1669.0,
-  "first_commit": "2013-01-06T12:30:00",
-  "last_commit": "2015-11-16T01:13:30",
+  "total_commits": 38.0,
+  "authored_commits": 37.0,
+  "tier1_authored_commits": 37.0,
+  "tier2_authored_commits": 0.0,
+  "merge_commits": 1.0,
+  "total_additions": 2985.0,
+  "total_deletions": 1676.0,
+  "first_core_commit": "2013-01-23T17:29:01+00:00",
+  "last_core_commit": "2015-11-17T00:34:42+00:00",
+  "first_ecosystem_commit": null,
+  "last_ecosystem_commit": null,
+  "first_commit": "2013-01-23T17:29:01",
+  "last_commit": "2015-11-17T00:34:42",
   "p2016_authored_commits": 0.0,
   "modern_authored_commits": 0.0,
   "bips_authored": 6.0,
   "p2016_bips_authored": 2.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": 476.2978610402494,
-  "reviews_count": 60.0,
-  "avg_approval_latency_days": 389.96920309653916,
+  "avg_review_latency_days": 430.1480621693122,
+  "reviews_count": 61.0,
+  "avg_approval_latency_days": 363.85600610574346,
   "approvals_count": 45.0,
   "p2016_reviews_count": 38.0,
   "modern_reviews_count": 1.0,
   "first_review_date": "2012-12-24T06:55:01+00:00",
   "last_review_date": "2025-09-22T11:19:22+00:00",
   "prs_authored": 42.0,
-  "avg_pr_ack_velocity_days": 132.47327867798356,
+  "avg_pr_ack_velocity_days": 149.03082465277777,
   "avg_concept_lead_time_days": 13.2615625,
-  "review_reciprocity": 1.4285714285714286,
-  "hybrid_score": 1.5372,
-  "p2016_hybrid_score": 0.7496,
+  "review_reciprocity": 1.4523809523809523,
+  "hybrid_score": 1.5471,
+  "p2016_hybrid_score": 0.7495,
   "modern_hybrid_score": 0.1131,
   "impact_score": 60.0,
   "p2016_impact_score": 36.0,
@@ -69,9 +75,9 @@
       "Script": 0.167
     },
     "code": {
-      "Consensus": 0.031,
-      "Infrastructure": 0.896,
-      "Network": 0.073
+      "Consensus": 0.029,
+      "Infrastructure": 0.903,
+      "Network": 0.068
     },
     "discussion": {
       "Consensus": 0.64,
@@ -79,10 +85,10 @@
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.3873,
-    "Infrastructure": 0.4353,
+    "Consensus": 0.3867,
+    "Infrastructure": 0.4374,
     "Mempool": 0.072,
-    "Network": 0.0219,
+    "Network": 0.0204,
     "Script": 0.0835
   },
   "p2016_posts": 12.0,
@@ -99,26 +105,28 @@
   "github_twitter": null,
   "github_blog": null,
   "github_followers": 218.0,
+  "activity_status": "Retired",
   "is_top_50": false,
   "github_url": "https://github.com/CodeShark",
   "commit_history": {
     "2013": {
-      "Build & CI": 0.5,
-      "Documentation": 0.33,
-      "GUI": 0.58,
-      "Node & RPC": 3.08,
-      "P2P Network": 2.33,
-      "Tests": 0.75,
-      "Utilities": 19.42
+      "Build & CI": 1.0,
+      "Documentation": 0.67,
+      "GUI": 1.17,
+      "Merge": 1.0,
+      "Node & RPC": 6.17,
+      "P2P Network": 4.67,
+      "Tests": 1.5,
+      "Utilities": 39.83
     },
     "2014": {
-      "Node & RPC": 0.5,
-      "Utilities": 0.5
+      "Utilities": 4.0
     },
     "2015": {
-      "Consensus": 1.0,
-      "Tests": 2.0,
-      "Utilities": 1.0
+      "Consensus": 2.0,
+      "Node & RPC": 1.0,
+      "Tests": 4.0,
+      "Utilities": 3.0
     }
   },
   "bip_list": [

@@ -18,15 +18,21 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "Documentation",
   "total_commits": 12.0,
   "authored_commits": 12.0,
+  "tier1_authored_commits": 12.0,
+  "tier2_authored_commits": 0.0,
   "merge_commits": 0.0,
   "total_additions": 300.0,
   "total_deletions": 250.0,
-  "first_commit": "2018-08-14T23:03:43",
-  "last_commit": "2019-09-30T23:03:16",
+  "first_core_commit": "2018-08-15T11:59:13+00:00",
+  "last_core_commit": "2020-01-14T01:44:44+00:00",
+  "first_ecosystem_commit": null,
+  "last_ecosystem_commit": null,
+  "first_commit": "2018-08-15T11:59:13",
+  "last_commit": "2020-01-14T01:44:44",
   "p2016_authored_commits": 12.0,
   "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
@@ -45,10 +51,10 @@
   "avg_concept_lead_time_days": 15.210388558201059,
   "review_reciprocity": 0.9,
   "hybrid_score": 0.2695,
-  "p2016_hybrid_score": 0.2694,
+  "p2016_hybrid_score": 0.3072,
   "modern_hybrid_score": 0.0865,
   "impact_score": 15.0,
-  "p2016_impact_score": 15.0,
+  "p2016_impact_score": 17.0,
   "modern_impact_score": 5.0,
   "threads_started": 0.0,
   "replies_sent": 0.0,
@@ -69,14 +75,14 @@
       "Consensus": 0.083,
       "Infrastructure": 0.764,
       "Script": 0.083,
-      "Wallet": 0.069
+      "Wallet": 0.07
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.0831,
-    "Infrastructure": 0.7648,
-    "Script": 0.0831,
-    "Wallet": 0.0691
+    "Consensus": 0.083,
+    "Infrastructure": 0.764,
+    "Script": 0.083,
+    "Wallet": 0.07
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -84,32 +90,35 @@
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
-  "global_first_active": "2018-08-14T23:03:43",
-  "global_last_active": "2019-09-30T23:03:16",
+  "global_first_active": "2018-08-15T11:59:13",
+  "global_last_active": "2020-01-14T01:44:44",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
   "github_twitter": null,
   "github_blog": null,
   "github_followers": 88.0,
+  "activity_status": "Retired",
   "is_top_50": false,
   "github_url": "https://github.com/ch4ot1c",
   "commit_history": {
     "2018": {
-      "Build & CI": 1.0,
-      "Consensus": 1.0,
-      "Documentation": 1.0,
-      "Node & RPC": 0.83,
-      "Tests": 0.33,
-      "Wallet": 0.83
+      "Build & CI": 2.0,
+      "Consensus": 2.0,
+      "Node & RPC": 1.67,
+      "Tests": 0.67,
+      "Wallet": 1.67
     },
     "2019": {
-      "Build & CI": 0.33,
-      "Documentation": 2.83,
-      "Node & RPC": 0.5,
-      "Script": 1.0,
-      "Tests": 0.5,
-      "Utilities": 1.83
+      "Build & CI": 0.67,
+      "Documentation": 5.67,
+      "Node & RPC": 1.0,
+      "Script": 2.0,
+      "Tests": 1.0,
+      "Utilities": 3.67
+    },
+    "2020": {
+      "Documentation": 2.0
     }
   }
 }

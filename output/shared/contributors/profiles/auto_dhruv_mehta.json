@@ -19,15 +19,21 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "Tests",
   "total_commits": 27.0,
   "authored_commits": 27.0,
+  "tier1_authored_commits": 27.0,
+  "tier2_authored_commits": 0.0,
   "merge_commits": 0.0,
   "total_additions": 763.0,
   "total_deletions": 521.0,
-  "first_commit": "2020-08-15T05:38:27",
-  "last_commit": "2023-04-17T22:04:11",
+  "first_core_commit": "2020-08-20T01:35:59+00:00",
+  "last_core_commit": "2023-10-03T08:56:43+00:00",
+  "first_ecosystem_commit": null,
+  "last_ecosystem_commit": null,
+  "first_commit": "2020-08-20T01:35:59",
+  "last_commit": "2023-10-03T08:56:43",
   "p2016_authored_commits": 27.0,
   "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
@@ -46,11 +52,11 @@
   "avg_concept_lead_time_days": 13.579748456790123,
   "review_reciprocity": 1.3333333333333333,
   "hybrid_score": 0.6796,
-  "p2016_hybrid_score": 0.3296,
-  "modern_hybrid_score": 0.1352,
+  "p2016_hybrid_score": 0.3685,
+  "modern_hybrid_score": 0.2586,
   "impact_score": 33.0,
-  "p2016_impact_score": 18.0,
-  "modern_impact_score": 8.0,
+  "p2016_impact_score": 20.0,
+  "modern_impact_score": 14.0,
   "threads_started": 0.0,
   "replies_sent": 0.0,
   "ml_threads": 0.0,
@@ -69,15 +75,15 @@
     "code": {
       "Consensus": 0.105,
       "Cryptography": 0.019,
-      "Infrastructure": 0.766,
+      "Infrastructure": 0.765,
       "Network": 0.111
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.1049,
+    "Consensus": 0.105,
     "Cryptography": 0.019,
-    "Infrastructure": 0.7652,
-    "Network": 0.1109
+    "Infrastructure": 0.765,
+    "Network": 0.111
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -85,40 +91,40 @@
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
-  "global_first_active": "2020-08-15T05:38:27",
-  "global_last_active": "2023-04-17T22:04:11",
+  "global_first_active": "2020-08-20T01:35:59",
+  "global_last_active": "2023-10-03T08:56:43",
   "github_location": "Earth",
   "github_company": null,
   "github_bio": "PGP fingerprint: 2CF1 A76A 02E8 F65C A9AD 14E8 018A 1363 246B C516",
   "github_twitter": "dhruv",
   "github_blog": "bip324.com",
   "github_followers": 115.0,
+  "activity_status": "Retired",
   "is_top_50": false,
   "github_url": "https://github.com/dhruv",
   "commit_history": {
     "2020": {
-      "Build & CI": 0.5,
-      "Node & RPC": 0.67,
-      "P2P Network": 0.67,
-      "Tests": 3.67,
-      "Utilities": 1.5
+      "Build & CI": 1.0,
+      "Tests": 6.0,
+      "Utilities": 3.0
     },
     "2021": {
-      "Build & CI": 2.0,
-      "Consensus": 2.83,
-      "Cryptography": 0.5,
-      "Node & RPC": 1.17,
-      "P2P Network": 1.83,
-      "Tests": 7.67
+      "Build & CI": 1.0,
+      "Consensus": 5.67,
+      "Cryptography": 1.0,
+      "Node & RPC": 2.33,
+      "P2P Network": 3.67,
+      "Tests": 12.33
     },
     "2022": {
-      "Build & CI": 1.0,
-      "P2P Network": 0.5,
-      "Tests": 1.0,
-      "Utilities": 0.5
+      "Build & CI": 2.0
     },
     "2023": {
-      "Tests": 1.0
+      "Build & CI": 3.0,
+      "Node & RPC": 1.33,
+      "P2P Network": 2.33,
+      "Tests": 8.33,
+      "Utilities": 1.0
     }
   }
 }

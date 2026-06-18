@@ -18,13 +18,19 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "Utilities",
   "total_commits": 8.0,
   "authored_commits": 8.0,
+  "tier1_authored_commits": 8.0,
+  "tier2_authored_commits": 0.0,
   "merge_commits": 0.0,
   "total_additions": 49.0,
   "total_deletions": 30.0,
+  "first_core_commit": "2011-05-14T19:29:54+00:00",
+  "last_core_commit": "2011-05-16T03:45:35+00:00",
+  "first_ecosystem_commit": null,
+  "last_ecosystem_commit": null,
   "first_commit": "2011-05-14T19:29:54",
   "last_commit": "2011-05-16T03:45:35",
   "p2016_authored_commits": 0.0,
@@ -41,8 +47,8 @@
   "first_review_date": null,
   "last_review_date": null,
   "prs_authored": 2.0,
-  "avg_pr_ack_velocity_days": 0.3333159722222222,
-  "avg_concept_lead_time_days": null,
+  "avg_pr_ack_velocity_days": 0.03240162037037037,
+  "avg_concept_lead_time_days": 0.8357060185185186,
   "review_reciprocity": 0.0,
   "hybrid_score": 0.1518,
   "p2016_hybrid_score": 0.025,
@@ -87,13 +93,14 @@
   "github_twitter": "largedatabank",
   "github_blog": "largedatabank.com",
   "github_followers": 472.0,
+  "activity_status": "Retired",
   "is_top_50": false,
   "github_url": "https://github.com/jordanlewis",
   "commit_history": {
     "2011": {
-      "Node & RPC": 2.33,
-      "P2P Network": 1.83,
-      "Utilities": 3.83
+      "Node & RPC": 4.67,
+      "P2P Network": 3.67,
+      "Utilities": 7.67
     }
   }
 }

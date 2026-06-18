@@ -12,44 +12,52 @@
     "is_sponsored": null,
     "maintainer_status": null,
     "social_source": "Mixed",
-    "sponsor_id": null
+    "sponsor_id": null,
+    "ecosystem_contributor": true,
+    "tier2_commits": 1
   },
   "roles": [
     "BIP Author",
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "Documentation",
-  "total_commits": 17.0,
-  "authored_commits": 17.0,
+  "total_commits": 18.0,
+  "authored_commits": 18.0,
+  "tier1_authored_commits": 17.0,
+  "tier2_authored_commits": 1.0,
   "merge_commits": 0.0,
-  "total_additions": 746.0,
+  "total_additions": 754.0,
   "total_deletions": 430.0,
-  "first_commit": "2014-04-29T18:34:41",
-  "last_commit": "2019-08-22T19:22:52",
-  "p2016_authored_commits": 15.0,
+  "first_core_commit": "2014-05-09T10:32:16+00:00",
+  "last_core_commit": "2019-08-24T02:38:12+00:00",
+  "first_ecosystem_commit": "2020-03-11T19:53:54+00:00",
+  "last_ecosystem_commit": "2020-03-11T19:53:54+00:00",
+  "first_commit": "2014-05-09T10:32:16",
+  "last_commit": "2019-08-24T02:38:12",
+  "p2016_authored_commits": 16.0,
   "modern_authored_commits": 0.0,
   "bips_authored": 1.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": 696.4620611006487,
-  "reviews_count": 83.0,
-  "avg_approval_latency_days": 689.9485959545856,
-  "approvals_count": 30.0,
-  "p2016_reviews_count": 77.0,
+  "avg_review_latency_days": 813.3896419134346,
+  "reviews_count": 87.0,
+  "avg_approval_latency_days": 887.8570694444444,
+  "approvals_count": 33.0,
+  "p2016_reviews_count": 81.0,
   "modern_reviews_count": 7.0,
   "first_review_date": "2014-04-27T00:27:21+00:00",
   "last_review_date": "2025-06-10T18:49:19+00:00",
   "prs_authored": 24.0,
-  "avg_pr_ack_velocity_days": 8.296097709551658,
+  "avg_pr_ack_velocity_days": 0.5503285751028807,
   "avg_concept_lead_time_days": 0.613275462962963,
-  "review_reciprocity": 3.4583333333333335,
-  "hybrid_score": 0.9032,
-  "p2016_hybrid_score": 0.6723,
-  "modern_hybrid_score": 0.4361,
+  "review_reciprocity": 3.625,
+  "hybrid_score": 0.9114,
+  "p2016_hybrid_score": 0.7139,
+  "modern_hybrid_score": 0.4354,
   "impact_score": 42.0,
-  "p2016_impact_score": 33.0,
+  "p2016_impact_score": 35.0,
   "modern_impact_score": 23.0,
   "threads_started": 50.0,
   "replies_sent": 194.0,
@@ -70,8 +78,8 @@
       "Infrastructure": 1.0
     },
     "code": {
-      "Infrastructure": 0.882,
-      "Wallet": 0.118
+      "Infrastructure": 0.857,
+      "Wallet": 0.143
     },
     "discussion": {
       "L2": 0.235,
@@ -80,11 +88,11 @@
     }
   },
   "expertise_domain_scores": {
-    "Infrastructure": 0.7646,
+    "Infrastructure": 0.7571,
     "L2": 0.047,
     "Mempool": 0.0942,
     "Mining": 0.0588,
-    "Wallet": 0.0354
+    "Wallet": 0.0429
   },
   "p2016_posts": 236.0,
   "modern_posts": 122.0,
@@ -92,7 +100,7 @@
   "p2016_delving_posts": 85.0,
   "modern_ml_posts": 37.0,
   "modern_delving_posts": 85.0,
-  "global_first_active": "2014-04-29T18:34:41",
+  "global_first_active": "2014-05-09T10:32:16",
   "global_last_active": "2025-11-19T00:25:27",
   "github_location": "Hilo, HI, USA",
   "github_company": null,
@@ -100,24 +108,28 @@
   "github_twitter": "hrdng",
   "github_blog": "http://dtrt.org",
   "github_followers": 771.0,
+  "activity_status": "Steady",
   "is_top_50": false,
   "github_url": "https://github.com/harding",
   "delving_url": "https://delvingbitcoin.org/u/harding",
   "commit_history": {
     "2014": {
-      "Utilities": 1.0
+      "Utilities": 2.0
     },
     "2015": {
-      "Documentation": 1.0
+      "Documentation": 2.0
     },
     "2018": {
-      "Documentation": 2.0,
-      "Node & RPC": 1.0
+      "Documentation": 4.0,
+      "Node & RPC": 2.0
     },
     "2019": {
-      "Documentation": 8.0,
-      "Node & RPC": 2.0,
-      "Wallet": 2.0
+      "Documentation": 16.0,
+      "Node & RPC": 4.0,
+      "Wallet": 4.0
+    },
+    "2020": {
+      "Wallet": 1.0
     }
   },
   "bip_list": [

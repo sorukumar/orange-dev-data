@@ -18,13 +18,19 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "Utilities",
   "total_commits": 6.0,
   "authored_commits": 6.0,
+  "tier1_authored_commits": 6.0,
+  "tier2_authored_commits": 0.0,
   "merge_commits": 0.0,
   "total_additions": 69.0,
   "total_deletions": 6.0,
+  "first_core_commit": "2011-06-26T14:11:56+00:00",
+  "last_core_commit": "2011-07-31T18:01:31+00:00",
+  "first_ecosystem_commit": null,
+  "last_ecosystem_commit": null,
   "first_commit": "2011-06-26T14:11:56",
   "last_commit": "2011-07-31T18:01:31",
   "p2016_authored_commits": 0.0,
@@ -42,7 +48,7 @@
   "last_review_date": null,
   "prs_authored": 3.0,
   "avg_pr_ack_velocity_days": 0.11813657407407407,
-  "avg_concept_lead_time_days": null,
+  "avg_concept_lead_time_days": 0.12546296296296297,
   "review_reciprocity": 0.0,
   "hybrid_score": 0.1453,
   "p2016_hybrid_score": 0.033,
@@ -87,14 +93,15 @@
   "github_twitter": null,
   "github_blog": null,
   "github_followers": 174.0,
+  "activity_status": "Retired",
   "is_top_50": false,
   "github_url": "https://github.com/vegard",
   "commit_history": {
     "2011": {
-      "Build & CI": 0.5,
-      "P2P Network": 1.0,
-      "Tests": 1.5,
-      "Utilities": 3.0
+      "Build & CI": 1.0,
+      "P2P Network": 2.0,
+      "Tests": 3.0,
+      "Utilities": 6.0
     }
   }
 }

@@ -18,15 +18,21 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "Documentation",
   "total_commits": 25.0,
   "authored_commits": 25.0,
+  "tier1_authored_commits": 25.0,
+  "tier2_authored_commits": 0.0,
   "merge_commits": 0.0,
   "total_additions": 518.0,
   "total_deletions": 98.0,
-  "first_commit": "2013-05-25T20:29:28",
-  "last_commit": "2016-10-17T22:07:53",
+  "first_core_commit": "2013-05-30T11:51:07+00:00",
+  "last_core_commit": "2016-10-25T11:24:29+00:00",
+  "first_ecosystem_commit": null,
+  "last_ecosystem_commit": null,
+  "first_commit": "2013-05-30T11:51:07",
+  "last_commit": "2016-10-25T11:24:29",
   "p2016_authored_commits": 1.0,
   "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
@@ -45,10 +51,10 @@
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 1.303030303030303,
   "hybrid_score": 0.336,
-  "p2016_hybrid_score": 0.1554,
+  "p2016_hybrid_score": 0.1788,
   "modern_hybrid_score": 0.1032,
   "impact_score": 18.0,
-  "p2016_impact_score": 9.0,
+  "p2016_impact_score": 10.0,
   "modern_impact_score": 6.0,
   "threads_started": 0.0,
   "replies_sent": 0.0,
@@ -79,32 +85,33 @@
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
-  "global_first_active": "2013-05-25T20:29:28",
-  "global_last_active": "2016-10-17T22:07:53",
+  "global_first_active": "2013-05-30T11:51:07",
+  "global_last_active": "2016-10-25T11:24:29",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
   "github_twitter": null,
   "github_blog": null,
   "github_followers": 15.0,
+  "activity_status": "Retired",
   "is_top_50": false,
   "github_url": "https://github.com/Michagogo",
   "commit_history": {
     "2013": {
-      "Documentation": 7.0,
-      "Utilities": 5.0
+      "Documentation": 14.0,
+      "Utilities": 10.0
     },
     "2014": {
-      "Documentation": 2.5,
-      "Node & RPC": 1.0,
-      "P2P Network": 1.0,
-      "Utilities": 5.5
+      "Documentation": 5.0,
+      "Node & RPC": 2.0,
+      "P2P Network": 2.0,
+      "Utilities": 11.0
     },
     "2015": {
-      "Documentation": 2.0
+      "Documentation": 4.0
     },
     "2016": {
-      "Utilities": 1.0
+      "Utilities": 2.0
     }
   }
 }

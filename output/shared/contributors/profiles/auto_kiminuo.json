@@ -1,5 +1,5 @@
 {
-  "display_name": "kiminuo",
+  "display_name": "Kiminuo",
   "github_login_final": "fyquah",
   "delving_username_final": null,
   "uuid": "auto_kiminuo",
@@ -12,23 +12,31 @@
     "is_sponsored": null,
     "maintainer_status": null,
     "social_source": "mailing_list",
-    "sponsor_id": null
+    "sponsor_id": null,
+    "ecosystem_contributor": true,
+    "tier2_commits": 6
   },
   "roles": [
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "Tests",
-  "total_commits": 47.0,
-  "authored_commits": 47.0,
+  "total_commits": 53.0,
+  "authored_commits": 53.0,
+  "tier1_authored_commits": 47.0,
+  "tier2_authored_commits": 6.0,
   "merge_commits": 0.0,
-  "total_additions": 1532.0,
-  "total_deletions": 1274.0,
-  "first_commit": "2020-02-25T19:05:48",
-  "last_commit": "2023-06-21T19:27:00",
-  "p2016_authored_commits": 47.0,
-  "modern_authored_commits": 1.0,
+  "total_additions": 1580.0,
+  "total_deletions": 1287.0,
+  "first_core_commit": "2020-06-03T14:01:29+00:00",
+  "last_core_commit": "2023-07-19T20:28:24+00:00",
+  "first_ecosystem_commit": "2021-05-25T19:01:52+00:00",
+  "last_ecosystem_commit": "2024-01-30T18:29:31+00:00",
+  "first_commit": "2020-06-03T14:01:29",
+  "last_commit": "2023-07-19T20:28:24",
+  "p2016_authored_commits": 53.0,
+  "modern_authored_commits": 3.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
@@ -41,15 +49,15 @@
   "first_review_date": "2020-03-13T14:22:48+00:00",
   "last_review_date": "2023-01-08T09:43:57+00:00",
   "prs_authored": 32.0,
-  "avg_pr_ack_velocity_days": 4.839795657726692,
+  "avg_pr_ack_velocity_days": 5.00940517526455,
   "avg_concept_lead_time_days": 2.930066550925926,
   "review_reciprocity": 2.0625,
-  "hybrid_score": 0.3895,
-  "p2016_hybrid_score": 0.3931,
-  "modern_hybrid_score": 0.1959,
+  "hybrid_score": 0.3963,
+  "p2016_hybrid_score": 0.436,
+  "modern_hybrid_score": 0.2757,
   "impact_score": 21.0,
-  "p2016_impact_score": 21.0,
-  "modern_impact_score": 11.0,
+  "p2016_impact_score": 23.0,
+  "modern_impact_score": 15.0,
   "threads_started": 0.0,
   "replies_sent": 1.0,
   "ml_threads": 0.0,
@@ -66,11 +74,11 @@
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.029,
-      "Infrastructure": 0.897,
+      "Consensus": 0.028,
+      "Infrastructure": 0.843,
       "Mempool": 0.003,
       "Network": 0.006,
-      "Wallet": 0.065
+      "Wallet": 0.121
     },
     "discussion": {
       "Consensus": 0.33,
@@ -78,10 +86,10 @@
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.1494,
-    "Ecosystem": 0.268,
-    "Infrastructure": 0.5382,
-    "Wallet": 0.039
+    "Consensus": 0.1487,
+    "Ecosystem": 0.2678,
+    "Infrastructure": 0.5055,
+    "Wallet": 0.0726
   },
   "p2016_posts": 1.0,
   "modern_posts": 1.0,
@@ -89,7 +97,7 @@
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 1.0,
   "modern_delving_posts": 0.0,
-  "global_first_active": "2020-02-25T19:05:48",
+  "global_first_active": "2020-06-03T14:01:29",
   "global_last_active": "2023-09-08T09:36:16",
   "github_location": null,
   "github_company": null,
@@ -97,37 +105,43 @@
   "github_twitter": null,
   "github_blog": "https://fyquah.github.io/",
   "github_followers": 75.0,
+  "activity_status": "Retired",
   "is_top_50": false,
   "github_url": "https://github.com/fyquah",
   "commit_history": {
     "2020": {
-      "Build & CI": 0.58,
-      "Documentation": 0.25,
-      "GUI": 0.17,
-      "Node & RPC": 0.17,
-      "P2P Network": 0.17,
-      "Tests": 0.75,
-      "Utilities": 0.75,
-      "Wallet": 0.17
+      "Build & CI": 0.67,
+      "Tests": 0.67,
+      "Utilities": 0.67
     },
     "2021": {
-      "Build & CI": 0.33,
-      "Consensus": 1.38,
-      "Documentation": 1.33,
-      "GUI": 1.38,
-      "Mempool": 0.12,
-      "Node & RPC": 3.62,
-      "P2P Network": 0.12,
-      "Tests": 17.88,
-      "Utilities": 10.96,
-      "Wallet": 2.88
+      "Build & CI": 0.67,
+      "Consensus": 2.75,
+      "Documentation": 2.0,
+      "GUI": 2.75,
+      "Mempool": 0.25,
+      "Node & RPC": 4.58,
+      "P2P Network": 0.25,
+      "Tests": 32.75,
+      "Utilities": 21.25,
+      "Wallet": 5.75
     },
     "2022": {
-      "Node & RPC": 2.0,
-      "Tests": 1.0
+      "Build & CI": 0.5,
+      "Documentation": 1.17,
+      "GUI": 0.33,
+      "Node & RPC": 7.0,
+      "P2P Network": 0.33,
+      "Tests": 5.83,
+      "Utilities": 1.5,
+      "Wallet": 1.33
     },
     "2023": {
-      "Tests": 1.0
+      "Tests": 2.0,
+      "Wallet": 2.0
+    },
+    "2024": {
+      "Wallet": 3.0
     }
   },
   "first_message": {

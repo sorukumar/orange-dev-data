@@ -12,44 +12,52 @@
     "is_sponsored": null,
     "maintainer_status": null,
     "social_source": "github",
-    "sponsor_id": null
+    "sponsor_id": null,
+    "ecosystem_contributor": true,
+    "tier2_commits": 2
   },
   "roles": [
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "Core Libs",
-  "total_commits": 2.0,
-  "authored_commits": 2.0,
+  "total_commits": 4.0,
+  "authored_commits": 4.0,
+  "tier1_authored_commits": 2.0,
+  "tier2_authored_commits": 2.0,
   "merge_commits": 0.0,
-  "total_additions": 23.0,
-  "total_deletions": 6.0,
-  "first_commit": "2022-04-28T17:52:51",
-  "last_commit": "2024-12-17T10:21:56",
-  "p2016_authored_commits": 2.0,
-  "modern_authored_commits": 1.0,
+  "total_additions": 301.0,
+  "total_deletions": 108.0,
+  "first_core_commit": "2022-05-16T19:49:54+00:00",
+  "last_core_commit": "2025-10-27T20:56:45+00:00",
+  "first_ecosystem_commit": "2026-01-30T21:09:34+00:00",
+  "last_ecosystem_commit": "2026-01-30T21:09:34+00:00",
+  "first_commit": "2022-05-16T19:49:54",
+  "last_commit": "2025-10-27T20:56:45",
+  "p2016_authored_commits": 4.0,
+  "modern_authored_commits": 3.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": 1638.9246986655771,
-  "reviews_count": 27.0,
-  "avg_approval_latency_days": 1580.9009717399692,
-  "approvals_count": 14.0,
-  "p2016_reviews_count": 27.0,
-  "modern_reviews_count": 24.0,
+  "avg_review_latency_days": 1561.3020581939466,
+  "reviews_count": 29.0,
+  "avg_approval_latency_days": 1608.5836226851852,
+  "approvals_count": 15.0,
+  "p2016_reviews_count": 29.0,
+  "modern_reviews_count": 25.0,
   "first_review_date": "2020-06-24T09:06:00+00:00",
   "last_review_date": "2026-06-03T10:43:09+00:00",
   "prs_authored": 15.0,
-  "avg_pr_ack_velocity_days": 103.40277943121694,
+  "avg_pr_ack_velocity_days": 29.87887538580247,
   "avg_concept_lead_time_days": 6.639224537037037,
-  "review_reciprocity": 1.8,
-  "hybrid_score": 0.1973,
-  "p2016_hybrid_score": 0.1999,
-  "modern_hybrid_score": 0.1864,
-  "impact_score": 11.0,
-  "p2016_impact_score": 11.0,
-  "modern_impact_score": 11.0,
+  "review_reciprocity": 1.9333333333333333,
+  "hybrid_score": 0.2288,
+  "p2016_hybrid_score": 0.2508,
+  "modern_hybrid_score": 0.2403,
+  "impact_score": 13.0,
+  "p2016_impact_score": 14.0,
+  "modern_impact_score": 13.0,
   "threads_started": 2.0,
   "replies_sent": 1.0,
   "ml_threads": 0.0,
@@ -61,13 +69,13 @@
   "dev_type": "Builder",
   "expertise_domains": [
     "Infrastructure",
-    "Script",
-    "Wallet"
+    "Wallet",
+    "Script"
   ],
   "expertise_by_source": {
     "code": {
-      "Infrastructure": 0.75,
-      "Wallet": 0.25
+      "Infrastructure": 0.5,
+      "Wallet": 0.5
     },
     "discussion": {
       "Cryptography": 0.245,
@@ -77,10 +85,10 @@
   },
   "expertise_domain_scores": {
     "Cryptography": 0.098,
-    "Infrastructure": 0.45,
+    "Infrastructure": 0.3,
     "Mining": 0.098,
     "Script": 0.204,
-    "Wallet": 0.15
+    "Wallet": 0.3
   },
   "p2016_posts": 3.0,
   "modern_posts": 3.0,
@@ -88,24 +96,28 @@
   "p2016_delving_posts": 3.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 3.0,
-  "global_first_active": "2022-04-28T17:52:51",
-  "global_last_active": "2024-12-17T10:21:56",
+  "global_first_active": "2022-05-16T19:49:54",
+  "global_last_active": "2025-10-27T20:56:45",
   "github_location": "ASU",
   "github_company": null,
   "github_bio": null,
   "github_twitter": null,
   "github_blog": null,
   "github_followers": 35.0,
+  "activity_status": "Steady",
   "is_top_50": false,
   "github_url": "https://github.com/scgbckbone",
   "delving_url": "https://delvingbitcoin.org/u/scgbckbone",
   "commit_history": {
     "2022": {
-      "Utilities": 1.0
+      "Utilities": 2.0
     },
-    "2024": {
-      "Tests": 0.5,
-      "Wallet": 0.5
+    "2025": {
+      "Tests": 1.0,
+      "Wallet": 1.0
+    },
+    "2026": {
+      "Wallet": 2.0
     }
   },
   "first_message": {

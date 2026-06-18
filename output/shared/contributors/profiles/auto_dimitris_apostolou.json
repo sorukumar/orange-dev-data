@@ -12,44 +12,52 @@
     "is_sponsored": null,
     "maintainer_status": null,
     "social_source": "github",
-    "sponsor_id": null
+    "sponsor_id": null,
+    "ecosystem_contributor": true,
+    "tier2_commits": 1
   },
   "roles": [
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "Documentation",
-  "total_commits": 7.0,
-  "authored_commits": 7.0,
+  "total_commits": 11.0,
+  "authored_commits": 11.0,
+  "tier1_authored_commits": 10.0,
+  "tier2_authored_commits": 1.0,
   "merge_commits": 0.0,
-  "total_additions": 71.0,
-  "total_deletions": 71.0,
-  "first_commit": "2018-03-02T21:00:25",
-  "last_commit": "2022-01-04T16:26:12",
-  "p2016_authored_commits": 7.0,
+  "total_additions": 449.0,
+  "total_deletions": 449.0,
+  "first_core_commit": "2018-03-03T14:24:28+00:00",
+  "last_core_commit": "2022-01-05T01:15:22+00:00",
+  "first_ecosystem_commit": "2022-02-09T23:43:04+00:00",
+  "last_ecosystem_commit": "2022-02-09T23:43:04+00:00",
+  "first_commit": "2018-03-03T14:24:28",
+  "last_commit": "2022-01-05T01:15:22",
+  "p2016_authored_commits": 11.0,
   "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": 570.346339031339,
-  "reviews_count": 7.0,
+  "avg_review_latency_days": 903.2087467849794,
+  "reviews_count": 8.0,
   "avg_approval_latency_days": 229.14307002314814,
   "approvals_count": 4.0,
-  "p2016_reviews_count": 7.0,
+  "p2016_reviews_count": 8.0,
   "modern_reviews_count": 0.0,
   "first_review_date": "2019-01-19T08:08:46+00:00",
   "last_review_date": "2021-01-22T12:09:19+00:00",
-  "prs_authored": 13.0,
-  "avg_pr_ack_velocity_days": 0.46482060185185187,
+  "prs_authored": 16.0,
+  "avg_pr_ack_velocity_days": 2.3929733796296295,
   "avg_concept_lead_time_days": 0.4741377314814815,
-  "review_reciprocity": 0.5384615384615384,
-  "hybrid_score": 0.2164,
-  "p2016_hybrid_score": 0.2162,
-  "modern_hybrid_score": 0.0727,
-  "impact_score": 12.0,
-  "p2016_impact_score": 12.0,
-  "modern_impact_score": 4.0,
+  "review_reciprocity": 0.5,
+  "hybrid_score": 0.2456,
+  "p2016_hybrid_score": 0.2721,
+  "modern_hybrid_score": 0.0792,
+  "impact_score": 14.0,
+  "p2016_impact_score": 15.0,
+  "modern_impact_score": 5.0,
   "threads_started": 0.0,
   "replies_sent": 0.0,
   "ml_threads": 0.0,
@@ -61,26 +69,26 @@
   "dev_type": "Builder",
   "expertise_domains": [
     "Infrastructure",
-    "Consensus",
-    "Mempool"
+    "Wallet",
+    "Consensus"
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.017,
-      "Infrastructure": 0.914,
-      "Mempool": 0.017,
-      "Network": 0.017,
-      "Script": 0.017,
-      "Wallet": 0.017
+      "Consensus": 0.014,
+      "Infrastructure": 0.875,
+      "Mempool": 0.014,
+      "Network": 0.014,
+      "Script": 0.014,
+      "Wallet": 0.069
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.017,
-    "Infrastructure": 0.9149,
-    "Mempool": 0.017,
-    "Network": 0.017,
-    "Script": 0.017,
-    "Wallet": 0.017
+    "Consensus": 0.014,
+    "Infrastructure": 0.875,
+    "Mempool": 0.014,
+    "Network": 0.014,
+    "Script": 0.014,
+    "Wallet": 0.069
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -88,38 +96,44 @@
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
-  "global_first_active": "2018-03-02T21:00:25",
-  "global_last_active": "2022-01-04T16:26:12",
+  "global_first_active": "2018-03-03T14:24:28",
+  "global_last_active": "2022-01-05T01:15:22",
   "github_location": null,
   "github_company": null,
   "github_bio": "G(r)eek\u00ad",
   "github_twitter": null,
   "github_blog": "https://dimitrisapostolou.eth.limo",
   "github_followers": 124.0,
+  "activity_status": "Retired",
   "is_top_50": false,
   "github_url": "https://github.com/rex4539",
   "commit_history": {
     "2018": {
-      "Consensus": 0.12,
-      "Documentation": 3.0,
-      "GUI": 0.12,
-      "Mempool": 0.12,
-      "P2P Network": 0.12,
-      "Script": 0.12,
-      "Tests": 0.12,
-      "Utilities": 0.12,
-      "Wallet": 0.12
+      "Consensus": 0.25,
+      "Documentation": 6.0,
+      "GUI": 0.25,
+      "Mempool": 0.25,
+      "P2P Network": 0.25,
+      "Script": 0.25,
+      "Tests": 0.25,
+      "Utilities": 1.25,
+      "Wallet": 0.25
     },
     "2019": {
-      "Build & CI": 0.5,
-      "Documentation": 0.5
+      "Build & CI": 1.0,
+      "Documentation": 1.0
+    },
+    "2020": {
+      "Utilities": 1.0
     },
     "2021": {
-      "Build & CI": 0.5,
-      "Tests": 0.5
+      "Build & CI": 1.5,
+      "Tests": 1.0,
+      "Utilities": 0.5
     },
     "2022": {
-      "Build & CI": 1.0
+      "Build & CI": 2.0,
+      "Wallet": 1.0
     }
   }
 }

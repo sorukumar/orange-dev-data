@@ -12,44 +12,52 @@
     "is_sponsored": null,
     "maintainer_status": null,
     "social_source": "delving",
-    "sponsor_id": null
+    "sponsor_id": null,
+    "ecosystem_contributor": true,
+    "tier2_commits": 136
   },
   "roles": [
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
-  "technical_focus": "Documentation",
-  "total_commits": 3.0,
-  "authored_commits": 3.0,
+  "last_seen": "2026-06-18T00:00:00",
+  "technical_focus": "Build & CI",
+  "total_commits": 139.0,
+  "authored_commits": 139.0,
+  "tier1_authored_commits": 3.0,
+  "tier2_authored_commits": 136.0,
   "merge_commits": 0.0,
-  "total_additions": 3.0,
-  "total_deletions": 1.0,
-  "first_commit": "2018-12-15T15:23:46",
-  "last_commit": "2021-04-12T17:55:01",
-  "p2016_authored_commits": 3.0,
-  "modern_authored_commits": 0.0,
+  "total_additions": 4463.0,
+  "total_deletions": 2.0,
+  "first_core_commit": "2019-01-21T18:14:49+00:00",
+  "last_core_commit": "2021-04-13T00:15:55+00:00",
+  "first_ecosystem_commit": "2021-06-05T15:32:36+00:00",
+  "last_ecosystem_commit": "2026-04-17T19:56:36+00:00",
+  "first_commit": "2019-01-21T18:14:49",
+  "last_commit": "2021-04-13T00:15:55",
+  "p2016_authored_commits": 139.0,
+  "modern_authored_commits": 95.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": 37.161078317901236,
-  "reviews_count": 28.0,
-  "avg_approval_latency_days": 25.085990604575162,
-  "approvals_count": 15.0,
-  "p2016_reviews_count": 28.0,
+  "avg_review_latency_days": 174.32962903608737,
+  "reviews_count": 29.0,
+  "avg_approval_latency_days": 294.37592766203704,
+  "approvals_count": 16.0,
+  "p2016_reviews_count": 29.0,
   "modern_reviews_count": 5.0,
   "first_review_date": "2019-04-11T13:01:53+00:00",
   "last_review_date": "2026-02-14T17:07:10+00:00",
   "prs_authored": 4.0,
   "avg_pr_ack_velocity_days": 4.061712962962963,
   "avg_concept_lead_time_days": 12.119282407407407,
-  "review_reciprocity": 7.0,
-  "hybrid_score": 0.2039,
-  "p2016_hybrid_score": 0.2039,
-  "modern_hybrid_score": 0.075,
-  "impact_score": 12.0,
-  "p2016_impact_score": 12.0,
-  "modern_impact_score": 4.0,
+  "review_reciprocity": 7.25,
+  "hybrid_score": 0.4102,
+  "p2016_hybrid_score": 0.4114,
+  "modern_hybrid_score": 0.3468,
+  "impact_score": 22.0,
+  "p2016_impact_score": 22.0,
+  "modern_impact_score": 19.0,
   "threads_started": 0.0,
   "replies_sent": 1.0,
   "ml_threads": 0.0,
@@ -60,21 +68,21 @@
   "last_active": null,
   "dev_type": "Builder",
   "expertise_domains": [
-    "Consensus",
-    "Infrastructure"
+    "Infrastructure",
+    "Consensus"
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.333,
-      "Infrastructure": 0.667
+      "Consensus": 0.014,
+      "Infrastructure": 0.986
     },
     "discussion": {
       "Consensus": 1.0
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.5998,
-    "Infrastructure": 0.4002
+    "Consensus": 0.4084,
+    "Infrastructure": 0.5916
   },
   "p2016_posts": 1.0,
   "modern_posts": 1.0,
@@ -82,26 +90,43 @@
   "p2016_delving_posts": 1.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 1.0,
-  "global_first_active": "2018-12-15T15:23:46",
-  "global_last_active": "2021-04-12T17:55:01",
+  "global_first_active": "2019-01-21T18:14:49",
+  "global_last_active": "2021-04-13T00:15:55",
   "github_location": "Germany",
   "github_company": null,
   "github_bio": null,
   "github_twitter": "emzy",
   "github_blog": "https://emzy.de",
   "github_followers": 205.0,
+  "activity_status": "Retired",
   "is_top_50": false,
   "github_url": "https://github.com/Emzy",
   "delving_url": "https://delvingbitcoin.org/u/emzy",
   "commit_history": {
-    "2018": {
-      "Consensus": 1.0
+    "2019": {
+      "Consensus": 2.0
     },
     "2020": {
-      "Documentation": 1.0
+      "Documentation": 2.0
     },
     "2021": {
-      "Documentation": 1.0
+      "Build & CI": 8.0,
+      "Documentation": 2.0
+    },
+    "2022": {
+      "Build & CI": 18.0
+    },
+    "2023": {
+      "Build & CI": 29.0
+    },
+    "2024": {
+      "Build & CI": 25.0
+    },
+    "2025": {
+      "Build & CI": 36.0
+    },
+    "2026": {
+      "Build & CI": 20.0
     }
   },
   "first_message": {

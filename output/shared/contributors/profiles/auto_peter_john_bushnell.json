@@ -16,38 +16,44 @@
   },
   "roles": [],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "None",
   "total_commits": 15.0,
   "authored_commits": 15.0,
+  "tier1_authored_commits": 15.0,
+  "tier2_authored_commits": 0.0,
   "merge_commits": 0.0,
   "total_additions": 106.0,
   "total_deletions": 81.0,
-  "first_commit": "2019-03-28T07:16:42",
-  "last_commit": "2023-03-20T11:41:52",
+  "first_core_commit": "2019-03-29T17:21:21+00:00",
+  "last_core_commit": "2023-03-31T15:56:51+00:00",
+  "first_ecosystem_commit": null,
+  "last_ecosystem_commit": null,
+  "first_commit": "2019-03-29T17:21:21",
+  "last_commit": "2023-03-31T15:56:51",
   "p2016_authored_commits": 15.0,
   "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": null,
-  "reviews_count": 0.0,
+  "avg_review_latency_days": 2289.385402777778,
+  "reviews_count": 1.0,
   "avg_approval_latency_days": null,
   "approvals_count": 0.0,
-  "p2016_reviews_count": 0.0,
+  "p2016_reviews_count": 1.0,
   "modern_reviews_count": 0.0,
-  "first_review_date": null,
-  "last_review_date": null,
-  "prs_authored": 28.0,
+  "first_review_date": "2020-06-29T15:32:52+00:00",
+  "last_review_date": "2020-06-30T04:30:04+00:00",
+  "prs_authored": 29.0,
   "avg_pr_ack_velocity_days": 7.969882897603486,
   "avg_concept_lead_time_days": 17.90134259259259,
-  "review_reciprocity": 0.0,
-  "hybrid_score": 0.2577,
-  "p2016_hybrid_score": 0.2577,
-  "modern_hybrid_score": 0.1377,
-  "impact_score": 14.0,
-  "p2016_impact_score": 14.0,
-  "modern_impact_score": 8.0,
+  "review_reciprocity": 0.034482758620689655,
+  "hybrid_score": 0.2611,
+  "p2016_hybrid_score": 0.2993,
+  "modern_hybrid_score": 0.1623,
+  "impact_score": 15.0,
+  "p2016_impact_score": 16.0,
+  "modern_impact_score": 9.0,
   "threads_started": 0.0,
   "replies_sent": 0.0,
   "ml_threads": 0.0,
@@ -60,7 +66,7 @@
   "expertise_domains": [
     "Infrastructure",
     "Wallet",
-    "Network"
+    "Mempool"
   ],
   "expertise_by_source": {
     "code": {
@@ -82,38 +88,38 @@
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
-  "global_first_active": "2019-03-28T07:16:42",
-  "global_last_active": "2023-03-20T11:41:52",
+  "global_first_active": "2019-03-29T17:21:21",
+  "global_last_active": "2023-03-31T15:56:51",
   "github_location": "Oxford, UK",
   "github_company": "Blockchain Developer",
   "github_bio": null,
   "github_twitter": "bushstar",
   "github_blog": null,
   "github_followers": 150.0,
+  "activity_status": "Retired",
   "is_top_50": false,
   "github_url": "https://github.com/Bushstar",
   "commit_history": {
     "2019": {
-      "Build & CI": 1.0,
-      "Node & RPC": 1.0,
-      "Utilities": 2.0,
+      "Build & CI": 2.0,
+      "Node & RPC": 2.0,
+      "Utilities": 4.0,
       "Wallet": 2.0
     },
     "2020": {
-      "Build & CI": 3.0,
-      "Documentation": 1.0,
-      "GUI": 0.5,
-      "Tests": 0.5,
-      "Utilities": 1.0
-    },
-    "2021": {
-      "P2P Network": 1.0
+      "Build & CI": 6.0,
+      "Documentation": 2.0,
+      "GUI": 1.0,
+      "Tests": 1.0,
+      "Utilities": 2.0,
+      "Wallet": 2.0
     },
     "2022": {
-      "Mempool": 1.0
+      "Mempool": 2.0,
+      "P2P Network": 2.0
     },
     "2023": {
-      "Wallet": 1.0
+      "Wallet": 2.0
     }
   }
 }

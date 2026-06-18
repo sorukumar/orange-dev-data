@@ -1,5 +1,5 @@
 {
-  "display_name": "udjinm6",
+  "display_name": "UdjinM6",
   "github_login_final": "UdjinM6",
   "delving_username_final": null,
   "uuid": "auto_udjinm6",
@@ -18,38 +18,44 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "GUI",
-  "total_commits": 8.0,
-  "authored_commits": 8.0,
+  "total_commits": 9.0,
+  "authored_commits": 9.0,
+  "tier1_authored_commits": 9.0,
+  "tier2_authored_commits": 0.0,
   "merge_commits": 0.0,
-  "total_additions": 81.0,
-  "total_deletions": 38.0,
-  "first_commit": "2015-01-24T03:30:06",
-  "last_commit": "2025-08-09T09:31:59",
-  "p2016_authored_commits": 7.0,
+  "total_additions": 85.0,
+  "total_deletions": 42.0,
+  "first_core_commit": "2015-02-02T10:55:42+00:00",
+  "last_core_commit": "2025-08-11T14:44:57+00:00",
+  "first_ecosystem_commit": null,
+  "last_ecosystem_commit": null,
+  "first_commit": "2015-02-02T10:55:42",
+  "last_commit": "2025-08-11T14:44:57",
+  "p2016_authored_commits": 8.0,
   "modern_authored_commits": 3.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": 395.2243055555556,
-  "reviews_count": 3.0,
+  "avg_review_latency_days": 1289.8599412393162,
+  "reviews_count": 4.0,
   "avg_approval_latency_days": null,
   "approvals_count": 0.0,
-  "p2016_reviews_count": 3.0,
+  "p2016_reviews_count": 4.0,
   "modern_reviews_count": 0.0,
   "first_review_date": "2016-08-12T17:24:47+00:00",
-  "last_review_date": "2017-01-29T05:51:18+00:00",
-  "prs_authored": 10.0,
+  "last_review_date": "2021-06-15T17:19:34+00:00",
+  "prs_authored": 11.0,
   "avg_pr_ack_velocity_days": 2.3714776234567903,
   "avg_concept_lead_time_days": 4.594375,
-  "review_reciprocity": 0.3,
-  "hybrid_score": 0.206,
-  "p2016_hybrid_score": 0.1992,
-  "modern_hybrid_score": 0.1446,
+  "review_reciprocity": 0.36363636363636365,
+  "hybrid_score": 0.2177,
+  "p2016_hybrid_score": 0.2448,
+  "modern_hybrid_score": 0.1798,
   "impact_score": 12.0,
-  "p2016_impact_score": 11.0,
-  "modern_impact_score": 8.0,
+  "p2016_impact_score": 14.0,
+  "modern_impact_score": 10.0,
   "threads_started": 0.0,
   "replies_sent": 0.0,
   "ml_threads": 0.0,
@@ -65,13 +71,13 @@
   ],
   "expertise_by_source": {
     "code": {
-      "Infrastructure": 0.875,
-      "Wallet": 0.125
+      "Infrastructure": 0.882,
+      "Wallet": 0.118
     }
   },
   "expertise_domain_scores": {
-    "Infrastructure": 0.875,
-    "Wallet": 0.125
+    "Infrastructure": 0.882,
+    "Wallet": 0.118
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -79,31 +85,35 @@
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
-  "global_first_active": "2015-01-24T03:30:06",
-  "global_last_active": "2025-08-09T09:31:59",
+  "global_first_active": "2015-02-02T10:55:42",
+  "global_last_active": "2025-08-11T14:44:57",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
   "github_twitter": "UdjinM6",
   "github_blog": null,
   "github_followers": 135.0,
+  "activity_status": "Fading",
   "is_top_50": false,
   "github_url": "https://github.com/UdjinM6",
   "commit_history": {
     "2015": {
-      "Documentation": 1.0
+      "Documentation": 2.0
     },
     "2016": {
-      "GUI": 1.83,
-      "Node & RPC": 0.83,
-      "Utilities": 1.33
+      "GUI": 3.67,
+      "Node & RPC": 1.67,
+      "Utilities": 2.67
+    },
+    "2021": {
+      "Build & CI": 1.0
     },
     "2024": {
-      "Tests": 1.0,
-      "Wallet": 1.0
+      "Tests": 2.0,
+      "Wallet": 2.0
     },
     "2025": {
-      "Tests": 1.0
+      "Tests": 2.0
     }
   }
 }

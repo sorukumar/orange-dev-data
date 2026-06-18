@@ -18,13 +18,19 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "Utilities",
   "total_commits": 34.0,
   "authored_commits": 32.0,
+  "tier1_authored_commits": 32.0,
+  "tier2_authored_commits": 0.0,
   "merge_commits": 2.0,
   "total_additions": 1043.0,
   "total_deletions": 672.0,
+  "first_core_commit": "2011-06-24T17:26:47+00:00",
+  "last_core_commit": "2012-07-08T21:22:08+00:00",
+  "first_ecosystem_commit": null,
+  "last_ecosystem_commit": null,
   "first_commit": "2011-06-24T17:26:47",
   "last_commit": "2012-07-08T21:22:08",
   "p2016_authored_commits": 0.0,
@@ -41,8 +47,8 @@
   "first_review_date": "2011-12-24T17:56:08+00:00",
   "last_review_date": "2011-12-24T17:56:08+00:00",
   "prs_authored": 9.0,
-  "avg_pr_ack_velocity_days": 0.7578472222222222,
-  "avg_concept_lead_time_days": null,
+  "avg_pr_ack_velocity_days": 0.9772077546296297,
+  "avg_concept_lead_time_days": 1.4806886574074074,
   "review_reciprocity": 0.1111111111111111,
   "hybrid_score": 0.2727,
   "p2016_hybrid_score": 0.0615,
@@ -87,21 +93,22 @@
   "github_twitter": null,
   "github_blog": "https://blog.mortis.eu",
   "github_followers": 57.0,
+  "activity_status": "Retired",
   "is_top_50": false,
   "github_url": "https://github.com/muggenhor",
   "commit_history": {
     "2011": {
-      "Build & CI": 1.33,
-      "P2P Network": 3.83,
-      "Utilities": 15.83
+      "Build & CI": 2.67,
+      "P2P Network": 7.67,
+      "Utilities": 23.67
     },
     "2012": {
-      "Build & CI": 1.5,
-      "GUI": 1.0,
-      "Merge": 2.0,
-      "Node & RPC": 0.83,
-      "P2P Network": 0.83,
-      "Utilities": 6.83
+      "Build & CI": 3.0,
+      "GUI": 2.0,
+      "Merge": 4.0,
+      "Node & RPC": 1.67,
+      "P2P Network": 1.67,
+      "Utilities": 21.67
     }
   }
 }

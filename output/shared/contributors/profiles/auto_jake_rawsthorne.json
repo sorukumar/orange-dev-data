@@ -18,38 +18,44 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "Documentation",
-  "total_commits": 3.0,
-  "authored_commits": 3.0,
+  "total_commits": 4.0,
+  "authored_commits": 4.0,
+  "tier1_authored_commits": 4.0,
+  "tier2_authored_commits": 0.0,
   "merge_commits": 0.0,
-  "total_additions": 151.0,
+  "total_additions": 153.0,
   "total_deletions": 6.0,
-  "first_commit": "2021-02-14T23:09:15",
-  "last_commit": "2021-02-24T18:27:47",
-  "p2016_authored_commits": 3.0,
+  "first_core_commit": "2020-09-02T00:22:11+00:00",
+  "last_core_commit": "2023-10-16T16:50:41+00:00",
+  "first_ecosystem_commit": null,
+  "last_ecosystem_commit": null,
+  "first_commit": "2020-09-02T00:22:11",
+  "last_commit": "2023-10-16T16:50:41",
+  "p2016_authored_commits": 4.0,
   "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": 0.4410648148148148,
-  "reviews_count": 1.0,
+  "avg_review_latency_days": 1277.0411979166668,
+  "reviews_count": 2.0,
   "avg_approval_latency_days": 0.4410648148148148,
   "approvals_count": 1.0,
-  "p2016_reviews_count": 1.0,
+  "p2016_reviews_count": 2.0,
   "modern_reviews_count": 0.0,
-  "first_review_date": "2021-06-20T21:50:11+00:00",
+  "first_review_date": "2020-09-02T12:57:49+00:00",
   "last_review_date": "2021-06-20T21:50:11+00:00",
-  "prs_authored": 2.0,
+  "prs_authored": 3.0,
   "avg_pr_ack_velocity_days": 11.695277777777777,
   "avg_concept_lead_time_days": null,
-  "review_reciprocity": 0.5,
-  "hybrid_score": 0.1196,
-  "p2016_hybrid_score": 0.1196,
-  "modern_hybrid_score": 0.025,
-  "impact_score": 7.0,
-  "p2016_impact_score": 7.0,
-  "modern_impact_score": 1.0,
+  "review_reciprocity": 0.6666666666666666,
+  "hybrid_score": 0.1471,
+  "p2016_hybrid_score": 0.1742,
+  "modern_hybrid_score": 0.1453,
+  "impact_score": 8.0,
+  "p2016_impact_score": 10.0,
+  "modern_impact_score": 8.0,
   "threads_started": 0.0,
   "replies_sent": 0.0,
   "ml_threads": 0.0,
@@ -65,13 +71,13 @@
   ],
   "expertise_by_source": {
     "code": {
-      "Infrastructure": 0.833,
-      "Script": 0.167
+      "Infrastructure": 0.857,
+      "Script": 0.143
     }
   },
   "expertise_domain_scores": {
-    "Infrastructure": 0.833,
-    "Script": 0.167
+    "Infrastructure": 0.857,
+    "Script": 0.143
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -79,21 +85,25 @@
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
-  "global_first_active": "2021-02-14T23:09:15",
-  "global_last_active": "2021-02-24T18:27:47",
+  "global_first_active": "2020-09-02T00:22:11",
+  "global_last_active": "2023-10-16T16:50:41",
   "github_location": "Manchester, UK",
   "github_company": "@couchbase",
   "github_bio": null,
   "github_twitter": null,
   "github_blog": null,
   "github_followers": 32.0,
+  "activity_status": "Steady",
   "is_top_50": false,
   "github_url": "https://github.com/jrawsthorne",
   "commit_history": {
-    "2021": {
-      "Documentation": 2.0,
-      "Script": 0.5,
-      "Tests": 0.5
+    "2020": {
+      "Utilities": 1.0
+    },
+    "2023": {
+      "Documentation": 4.0,
+      "Script": 1.0,
+      "Tests": 1.0
     }
   }
 }

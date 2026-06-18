@@ -18,15 +18,21 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "Utilities",
   "total_commits": 8.0,
   "authored_commits": 8.0,
+  "tier1_authored_commits": 8.0,
+  "tier2_authored_commits": 0.0,
   "merge_commits": 0.0,
   "total_additions": 14.0,
   "total_deletions": 21.0,
-  "first_commit": "2013-11-02T15:29:31",
-  "last_commit": "2013-11-28T02:17:17",
+  "first_core_commit": "2013-11-03T02:36:42+00:00",
+  "last_core_commit": "2013-12-08T12:56:01+00:00",
+  "first_ecosystem_commit": null,
+  "last_ecosystem_commit": null,
+  "first_commit": "2013-11-03T02:36:42",
+  "last_commit": "2013-12-08T12:56:01",
   "p2016_authored_commits": 0.0,
   "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
@@ -76,20 +82,21 @@
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
-  "global_first_active": "2013-11-02T15:29:31",
-  "global_last_active": "2013-11-28T02:17:17",
+  "global_first_active": "2013-11-03T02:36:42",
+  "global_last_active": "2013-12-08T12:56:01",
   "github_location": null,
   "github_company": null,
   "github_bio": "Free and Open Source Software developer. @rust-lang developer.",
   "github_twitter": "josh_triplett",
   "github_blog": "https://joshtriplett.org",
   "github_followers": 1265.0,
+  "activity_status": "Retired",
   "is_top_50": false,
   "github_url": "https://github.com/joshtriplett",
   "commit_history": {
     "2013": {
-      "Build & CI": 2.0,
-      "Utilities": 6.0
+      "Build & CI": 4.0,
+      "Utilities": 12.0
     }
   }
 }

@@ -7,7 +7,7 @@
     "maturity_score": 0.68,
     "social_mention_count": 390,
     "revision_count": 41,
-    "code_mention_count": 49,
+    "code_mention_count": 98,
     "authors": "Gavin Andresen, Mike Hearn"
   },
   {
@@ -18,7 +18,7 @@
     "maturity_score": 0.55,
     "social_mention_count": 277,
     "revision_count": 59,
-    "code_mention_count": 41,
+    "code_mention_count": 96,
     "authors": "Pieter Wuille"
   },
   {
@@ -26,10 +26,10 @@
     "title": "Mnemonic code for generating deterministic keys",
     "status": "Deployed",
     "theme": "Wallet & Keys",
-    "maturity_score": 0.5,
-    "social_mention_count": 216,
+    "maturity_score": 0.51,
+    "social_mention_count": 219,
     "revision_count": 85,
-    "code_mention_count": 1,
+    "code_mention_count": 3,
     "authors": "Marek Palatinus, Pavol Rusnak, Aaron Voisine, Sean Bowe"
   },
   {
@@ -40,7 +40,7 @@
     "maturity_score": 0.43,
     "social_mention_count": 21,
     "revision_count": 198,
-    "code_mention_count": 23,
+    "code_mention_count": 58,
     "authors": "Pieter Wuille, Jonas Nick, Tim Ruffing"
   },
   {
@@ -51,7 +51,7 @@
     "maturity_score": 0.39,
     "social_mention_count": 107,
     "revision_count": 110,
-    "code_mention_count": 21,
+    "code_mention_count": 44,
     "authors": "Ava Chow"
   },
   {
@@ -62,7 +62,7 @@
     "maturity_score": 0.38,
     "social_mention_count": 14,
     "revision_count": 177,
-    "code_mention_count": 35,
+    "code_mention_count": 71,
     "authors": "Pieter Wuille, Jonas Nick, Anthony Towns"
   },
   {
@@ -73,7 +73,7 @@
     "maturity_score": 0.26,
     "social_mention_count": 121,
     "revision_count": 39,
-    "code_mention_count": 19,
+    "code_mention_count": 38,
     "authors": "Peter Todd"
   },
   {
@@ -99,17 +99,6 @@
     "authors": "Amir Taaki"
   },
   {
-    "bip_id": "158",
-    "title": "Compact Block Filters for Light Clients",
-    "status": "Deployed",
-    "theme": "Scaling & Lightning",
-    "maturity_score": 0.19,
-    "social_mention_count": 86,
-    "revision_count": 30,
-    "code_mention_count": 12,
-    "authors": "Olaoluwa Osuntokun, Alex Akselrod"
-  },
-  {
     "bip_id": "141",
     "title": "Segregated Witness (Consensus layer)",
     "status": "Deployed",
@@ -117,7 +106,7 @@
     "maturity_score": 0.19,
     "social_mention_count": 32,
     "revision_count": 70,
-    "code_mention_count": 21,
+    "code_mention_count": 42,
     "authors": "Eric Lombrozo, Johnson Lau, Pieter Wuille"
   },
   {
@@ -132,15 +121,15 @@
     "authors": "Justin Newton, Matt David, Aaron Voisine, James MacWhyte"
   },
   {
-    "bip_id": "151",
-    "title": "Peer-to-Peer Communication Encryption",
-    "status": "Closed",
-    "theme": "Other",
-    "maturity_score": 0.18,
-    "social_mention_count": 88,
-    "revision_count": 20,
-    "code_mention_count": 3,
-    "authors": "Jonas Schnelli"
+    "bip_id": "158",
+    "title": "Compact Block Filters for Light Clients",
+    "status": "Deployed",
+    "theme": "Scaling & Lightning",
+    "maturity_score": 0.19,
+    "social_mention_count": 86,
+    "revision_count": 30,
+    "code_mention_count": 24,
+    "authors": "Olaoluwa Osuntokun, Alex Akselrod"
   },
   {
     "bip_id": "342",
@@ -150,8 +139,19 @@
     "maturity_score": 0.18,
     "social_mention_count": 0,
     "revision_count": 88,
-    "code_mention_count": 7,
+    "code_mention_count": 14,
     "authors": "Pieter Wuille, Jonas Nick, Anthony Towns"
+  },
+  {
+    "bip_id": "151",
+    "title": "Peer-to-Peer Communication Encryption",
+    "status": "Closed",
+    "theme": "Other",
+    "maturity_score": 0.18,
+    "social_mention_count": 88,
+    "revision_count": 20,
+    "code_mention_count": 6,
+    "authors": "Jonas Schnelli"
   },
   {
     "bip_id": "3",
@@ -172,7 +172,7 @@
     "maturity_score": 0.18,
     "social_mention_count": 66,
     "revision_count": 40,
-    "code_mention_count": 16,
+    "code_mention_count": 32,
     "authors": "Nils Schneider, Matt Corallo"
   },
   {
@@ -183,8 +183,19 @@
     "maturity_score": 0.17,
     "social_mention_count": 67,
     "revision_count": 32,
-    "code_mention_count": 4,
+    "code_mention_count": 8,
     "authors": "josibake, Ruben Somsen, Sebastian Falbesoner"
+  },
+  {
+    "bip_id": "125",
+    "title": "Opt-in Full Replace-by-Fee Signaling",
+    "status": "Deployed",
+    "theme": "Other",
+    "maturity_score": 0.17,
+    "social_mention_count": 85,
+    "revision_count": 18,
+    "code_mention_count": 134,
+    "authors": "David A. Harding, Peter Todd"
   },
   {
     "bip_id": "322",
@@ -194,7 +205,7 @@
     "maturity_score": 0.16,
     "social_mention_count": 33,
     "revision_count": 52,
-    "code_mention_count": 1,
+    "code_mention_count": 2,
     "authors": "Karl-Johan Alm, Oliver Gugger"
   },
   {
@@ -207,17 +218,6 @@
     "revision_count": 14,
     "code_mention_count": 0,
     "authors": "Shaolin Fry"
-  },
-  {
-    "bip_id": "125",
-    "title": "Opt-in Full Replace-by-Fee Signaling",
-    "status": "Deployed",
-    "theme": "Other",
-    "maturity_score": 0.16,
-    "social_mention_count": 82,
-    "revision_count": 18,
-    "code_mention_count": 67,
-    "authors": "David A. Harding, Peter Todd"
   },
   {
     "bip_id": "119",
@@ -236,7 +236,7 @@
     "status": "Draft",
     "theme": "Consensus & Soft Forks",
     "maturity_score": 0.15,
-    "social_mention_count": 92,
+    "social_mention_count": 93,
     "revision_count": 2,
     "code_mention_count": 0,
     "authors": "Hunter Beast, Ethan Heilman, Isabel Foxen Duke"
@@ -249,7 +249,7 @@
     "maturity_score": 0.14,
     "social_mention_count": 11,
     "revision_count": 59,
-    "code_mention_count": 46,
+    "code_mention_count": 92,
     "authors": "Pieter Wuille, Peter Todd, Greg Maxwell, Rusty Russell"
   },
   {
@@ -271,7 +271,7 @@
     "maturity_score": 0.13,
     "social_mention_count": 10,
     "revision_count": 59,
-    "code_mention_count": 0,
+    "code_mention_count": 2,
     "authors": "Fontaine"
   },
   {
@@ -304,7 +304,7 @@
     "maturity_score": 0.12,
     "social_mention_count": 42,
     "revision_count": 26,
-    "code_mention_count": 6,
+    "code_mention_count": 12,
     "authors": "Antoine Poinsot, Matt Corallo"
   },
   {
@@ -315,7 +315,7 @@
     "maturity_score": 0.12,
     "social_mention_count": 54,
     "revision_count": 20,
-    "code_mention_count": 15,
+    "code_mention_count": 30,
     "authors": "Pieter Wuille, Greg Maxwell"
   },
   {
@@ -326,7 +326,7 @@
     "maturity_score": 0.12,
     "social_mention_count": 49,
     "revision_count": 20,
-    "code_mention_count": 57,
+    "code_mention_count": 116,
     "authors": "Dhruv Mehta, Tim Ruffing, Jonas Schnelli, Pieter Wuille"
   },
   {
@@ -348,7 +348,7 @@
     "maturity_score": 0.12,
     "social_mention_count": 39,
     "revision_count": 31,
-    "code_mention_count": 2,
+    "code_mention_count": 7,
     "authors": "Marek Palatinus, Pavol Rusnak"
   },
   {
@@ -359,7 +359,7 @@
     "maturity_score": 0.11,
     "social_mention_count": 14,
     "revision_count": 43,
-    "code_mention_count": 11,
+    "code_mention_count": 22,
     "authors": "BtcDrak, Mark Friedenbach, Eric Lombrozo"
   },
   {
@@ -436,7 +436,7 @@
     "maturity_score": 0.09,
     "social_mention_count": 15,
     "revision_count": 31,
-    "code_mention_count": 2,
+    "code_mention_count": 6,
     "authors": "Thomas Kerin, Jean-Pierre Rupp, Ruben de Vries"
   },
   {
@@ -458,7 +458,7 @@
     "maturity_score": 0.09,
     "social_mention_count": 28,
     "revision_count": 23,
-    "code_mention_count": 13,
+    "code_mention_count": 26,
     "authors": "Gavin Andresen"
   },
   {
@@ -469,7 +469,7 @@
     "maturity_score": 0.09,
     "social_mention_count": 32,
     "revision_count": 19,
-    "code_mention_count": 27,
+    "code_mention_count": 54,
     "authors": "Pieter Wuille"
   },
   {
@@ -480,7 +480,7 @@
     "maturity_score": 0.09,
     "social_mention_count": 14,
     "revision_count": 36,
-    "code_mention_count": 29,
+    "code_mention_count": 58,
     "authors": "Mark Friedenbach, BtcDrak, Nicolas Dorier, kinoshitajona"
   },
   {
@@ -502,7 +502,7 @@
     "maturity_score": 0.09,
     "social_mention_count": 31,
     "revision_count": 20,
-    "code_mention_count": 10,
+    "code_mention_count": 20,
     "authors": "Pieter Wuille"
   },
   {
@@ -513,7 +513,7 @@
     "maturity_score": 0.09,
     "social_mention_count": 38,
     "revision_count": 17,
-    "code_mention_count": 0,
+    "code_mention_count": 2,
     "authors": "Marek Palatinus, Pavol Rusnak"
   },
   {
@@ -546,7 +546,7 @@
     "maturity_score": 0.08,
     "social_mention_count": 33,
     "revision_count": 16,
-    "code_mention_count": 2,
+    "code_mention_count": 4,
     "authors": "Gavin Andresen"
   },
   {
@@ -557,7 +557,7 @@
     "maturity_score": 0.08,
     "social_mention_count": 6,
     "revision_count": 33,
-    "code_mention_count": 2,
+    "code_mention_count": 5,
     "authors": "Ava Chow"
   },
   {
@@ -568,7 +568,7 @@
     "maturity_score": 0.07,
     "social_mention_count": 27,
     "revision_count": 16,
-    "code_mention_count": 17,
+    "code_mention_count": 34,
     "authors": "Gavin Andresen"
   },
   {
@@ -579,7 +579,7 @@
     "maturity_score": 0.07,
     "social_mention_count": 3,
     "revision_count": 33,
-    "code_mention_count": 5,
+    "code_mention_count": 10,
     "authors": "Eric Lombrozo, Pieter Wuille"
   },
   {
@@ -590,7 +590,7 @@
     "maturity_score": 0.07,
     "social_mention_count": 24,
     "revision_count": 15,
-    "code_mention_count": 11,
+    "code_mention_count": 22,
     "authors": "Pieter Wuille"
   },
   {
@@ -612,7 +612,7 @@
     "maturity_score": 0.07,
     "social_mention_count": 1,
     "revision_count": 33,
-    "code_mention_count": 23,
+    "code_mention_count": 46,
     "authors": "Matt Corallo"
   },
   {
@@ -634,7 +634,7 @@
     "maturity_score": 0.07,
     "social_mention_count": 1,
     "revision_count": 33,
-    "code_mention_count": 22,
+    "code_mention_count": 44,
     "authors": "Wladimir J. van der Laan"
   },
   {
@@ -645,7 +645,7 @@
     "maturity_score": 0.07,
     "social_mention_count": 0,
     "revision_count": 37,
-    "code_mention_count": 6,
+    "code_mention_count": 12,
     "authors": "Johnson Lau, Pieter Wuille"
   },
   {
@@ -667,7 +667,7 @@
     "maturity_score": 0.07,
     "social_mention_count": 0,
     "revision_count": 33,
-    "code_mention_count": 1,
+    "code_mention_count": 2,
     "authors": "Kristov Atlas"
   },
   {
@@ -755,7 +755,7 @@
     "maturity_score": 0.06,
     "social_mention_count": 22,
     "revision_count": 12,
-    "code_mention_count": 12,
+    "code_mention_count": 24,
     "authors": "Gavin Andresen"
   },
   {
@@ -766,7 +766,7 @@
     "maturity_score": 0.05,
     "social_mention_count": 0,
     "revision_count": 24,
-    "code_mention_count": 2,
+    "code_mention_count": 4,
     "authors": "Luke Dashjr"
   },
   {
@@ -788,7 +788,7 @@
     "maturity_score": 0.05,
     "social_mention_count": 15,
     "revision_count": 12,
-    "code_mention_count": 8,
+    "code_mention_count": 16,
     "authors": "Suhas Daftuar"
   },
   {
@@ -810,7 +810,7 @@
     "maturity_score": 0.05,
     "social_mention_count": 0,
     "revision_count": 26,
-    "code_mention_count": 2,
+    "code_mention_count": 4,
     "authors": "Pieter Wuille, Ava Chow"
   },
   {
@@ -821,7 +821,7 @@
     "maturity_score": 0.05,
     "social_mention_count": 16,
     "revision_count": 14,
-    "code_mention_count": 20,
+    "code_mention_count": 40,
     "authors": "Olaoluwa Osuntokun, Alex Akselrod, Jim Posen"
   },
   {
@@ -832,7 +832,7 @@
     "maturity_score": 0.05,
     "social_mention_count": 15,
     "revision_count": 15,
-    "code_mention_count": 4,
+    "code_mention_count": 8,
     "authors": "Matt Corallo, Peter Todd"
   },
   {
@@ -854,7 +854,7 @@
     "maturity_score": 0.05,
     "social_mention_count": 4,
     "revision_count": 20,
-    "code_mention_count": 7,
+    "code_mention_count": 14,
     "authors": "Jonas Schnelli"
   },
   {
@@ -876,7 +876,7 @@
     "maturity_score": 0.05,
     "social_mention_count": 3,
     "revision_count": 21,
-    "code_mention_count": 5,
+    "code_mention_count": 10,
     "authors": "Thomas Kerin, Mark Friedenbach"
   },
   {
@@ -931,7 +931,7 @@
     "maturity_score": 0.05,
     "social_mention_count": 9,
     "revision_count": 19,
-    "code_mention_count": 6,
+    "code_mention_count": 12,
     "authors": "Luke Dashjr"
   },
   {
@@ -942,7 +942,7 @@
     "maturity_score": 0.05,
     "social_mention_count": 16,
     "revision_count": 14,
-    "code_mention_count": 3,
+    "code_mention_count": 6,
     "authors": "Jeff Garzik"
   },
   {
@@ -964,7 +964,7 @@
     "maturity_score": 0.05,
     "social_mention_count": 5,
     "revision_count": 20,
-    "code_mention_count": 7,
+    "code_mention_count": 14,
     "authors": "Amir Taaki, Patrick Strateman"
   },
   {
@@ -975,7 +975,7 @@
     "maturity_score": 0.04,
     "social_mention_count": 2,
     "revision_count": 19,
-    "code_mention_count": 1,
+    "code_mention_count": 2,
     "authors": "Gavin Andresen"
   },
   {
@@ -986,7 +986,7 @@
     "maturity_score": 0.04,
     "social_mention_count": 1,
     "revision_count": 19,
-    "code_mention_count": 1,
+    "code_mention_count": 2,
     "authors": "Luke Dashjr"
   },
   {
@@ -1008,7 +1008,7 @@
     "maturity_score": 0.04,
     "social_mention_count": 0,
     "revision_count": 19,
-    "code_mention_count": 1,
+    "code_mention_count": 2,
     "authors": "Dmitry Petukhov"
   },
   {
@@ -1019,7 +1019,7 @@
     "maturity_score": 0.04,
     "social_mention_count": 18,
     "revision_count": 8,
-    "code_mention_count": 4,
+    "code_mention_count": 8,
     "authors": "Ava Chow"
   },
   {
@@ -1107,7 +1107,7 @@
     "maturity_score": 0.04,
     "social_mention_count": 0,
     "revision_count": 18,
-    "code_mention_count": 5,
+    "code_mention_count": 10,
     "authors": "Ava Chow"
   },
   {
@@ -1118,7 +1118,7 @@
     "maturity_score": 0.04,
     "social_mention_count": 3,
     "revision_count": 16,
-    "code_mention_count": 23,
+    "code_mention_count": 46,
     "authors": "Mike Hearn, Matt Corallo"
   },
   {
@@ -1129,7 +1129,7 @@
     "maturity_score": 0.04,
     "social_mention_count": 0,
     "revision_count": 20,
-    "code_mention_count": 2,
+    "code_mention_count": 4,
     "authors": "Karl-Johan Alm, Anthony Towns"
   },
   {
@@ -1140,7 +1140,7 @@
     "maturity_score": 0.04,
     "social_mention_count": 0,
     "revision_count": 19,
-    "code_mention_count": 2,
+    "code_mention_count": 6,
     "authors": "Jonas Nick, Tim Ruffing, Elliott Jin"
   },
   {
@@ -1151,7 +1151,7 @@
     "maturity_score": 0.04,
     "social_mention_count": 0,
     "revision_count": 21,
-    "code_mention_count": 2,
+    "code_mention_count": 5,
     "authors": "Ava Chow"
   },
   {
@@ -1217,7 +1217,7 @@
     "maturity_score": 0.03,
     "social_mention_count": 3,
     "revision_count": 11,
-    "code_mention_count": 2,
+    "code_mention_count": 4,
     "authors": "Gavin Andresen"
   },
   {
@@ -1261,7 +1261,7 @@
     "maturity_score": 0.03,
     "social_mention_count": 0,
     "revision_count": 15,
-    "code_mention_count": 4,
+    "code_mention_count": 8,
     "authors": "Pieter Wuille"
   },
   {
@@ -1283,7 +1283,7 @@
     "maturity_score": 0.03,
     "social_mention_count": 0,
     "revision_count": 15,
-    "code_mention_count": 2,
+    "code_mention_count": 4,
     "authors": "Luke Dashjr"
   },
   {
@@ -1294,7 +1294,7 @@
     "maturity_score": 0.03,
     "social_mention_count": 3,
     "revision_count": 15,
-    "code_mention_count": 7,
+    "code_mention_count": 14,
     "authors": "Mike Hearn"
   },
   {
@@ -1305,7 +1305,7 @@
     "maturity_score": 0.03,
     "social_mention_count": 0,
     "revision_count": 14,
-    "code_mention_count": 3,
+    "code_mention_count": 6,
     "authors": "Pieter Wuille"
   },
   {
@@ -1338,7 +1338,7 @@
     "maturity_score": 0.03,
     "social_mention_count": 3,
     "revision_count": 13,
-    "code_mention_count": 2,
+    "code_mention_count": 4,
     "authors": "Johnson Lau"
   },
   {
@@ -1448,7 +1448,7 @@
     "maturity_score": 0.03,
     "social_mention_count": 3,
     "revision_count": 15,
-    "code_mention_count": 1,
+    "code_mention_count": 2,
     "authors": "Ava Chow"
   },
   {
@@ -1470,7 +1470,7 @@
     "maturity_score": 0.03,
     "social_mention_count": 0,
     "revision_count": 16,
-    "code_mention_count": 1,
+    "code_mention_count": 2,
     "authors": "Gleb Naumenko, Pieter Wuille"
   },
   {
@@ -1481,7 +1481,7 @@
     "maturity_score": 0.03,
     "social_mention_count": 0,
     "revision_count": 15,
-    "code_mention_count": 9,
+    "code_mention_count": 18,
     "authors": "Fabian Jahr"
   },
   {
@@ -1514,7 +1514,7 @@
     "maturity_score": 0.03,
     "social_mention_count": 0,
     "revision_count": 16,
-    "code_mention_count": 1,
+    "code_mention_count": 2,
     "authors": "James Hilliard"
   },
   {
@@ -1580,7 +1580,7 @@
     "maturity_score": 0.02,
     "social_mention_count": 0,
     "revision_count": 10,
-    "code_mention_count": 2,
+    "code_mention_count": 4,
     "authors": "Pieter Wuille, Andrew Poelstra, Sanket Kanjalkar, Antoine Poinsot, Ava Chow"
   },
   {
@@ -1613,7 +1613,7 @@
     "maturity_score": 0.02,
     "social_mention_count": 0,
     "revision_count": 11,
-    "code_mention_count": 4,
+    "code_mention_count": 8,
     "authors": "Suhas Daftuar"
   },
   {
@@ -1679,7 +1679,7 @@
     "maturity_score": 0.02,
     "social_mention_count": 0,
     "revision_count": 11,
-    "code_mention_count": 1,
+    "code_mention_count": 2,
     "authors": "Pieter Wuille, Ava Chow"
   },
   {
@@ -1712,7 +1712,7 @@
     "maturity_score": 0.02,
     "social_mention_count": 0,
     "revision_count": 9,
-    "code_mention_count": 4,
+    "code_mention_count": 8,
     "authors": "Ava Chow"
   },
   {
@@ -1723,7 +1723,7 @@
     "maturity_score": 0.02,
     "social_mention_count": 0,
     "revision_count": 10,
-    "code_mention_count": 4,
+    "code_mention_count": 8,
     "authors": "Mike Hearn"
   },
   {
@@ -1811,7 +1811,7 @@
     "maturity_score": 0.02,
     "social_mention_count": 0,
     "revision_count": 12,
-    "code_mention_count": 3,
+    "code_mention_count": 6,
     "authors": "Alex Morcos"
   },
   {
@@ -1822,7 +1822,7 @@
     "maturity_score": 0.02,
     "social_mention_count": 0,
     "revision_count": 12,
-    "code_mention_count": 6,
+    "code_mention_count": 12,
     "authors": "Suhas Daftuar"
   },
   {
@@ -1921,7 +1921,7 @@
     "maturity_score": 0.02,
     "social_mention_count": 1,
     "revision_count": 7,
-    "code_mention_count": 3,
+    "code_mention_count": 6,
     "authors": "Jimmy Song"
   },
   {
@@ -1932,7 +1932,7 @@
     "maturity_score": 0.02,
     "social_mention_count": 0,
     "revision_count": 8,
-    "code_mention_count": 1,
+    "code_mention_count": 2,
     "authors": "Chris Belcher"
   },
   {
@@ -2009,7 +2009,7 @@
     "maturity_score": 0.01,
     "social_mention_count": 0,
     "revision_count": 5,
-    "code_mention_count": 1,
+    "code_mention_count": 2,
     "authors": "Gloria Zhao"
   },
   {
@@ -2064,7 +2064,7 @@
     "maturity_score": 0.01,
     "social_mention_count": 0,
     "revision_count": 7,
-    "code_mention_count": 2,
+    "code_mention_count": 4,
     "authors": "Gloria Zhao"
   },
   {
@@ -2130,7 +2130,7 @@
     "maturity_score": 0.01,
     "social_mention_count": 0,
     "revision_count": 5,
-    "code_mention_count": 4,
+    "code_mention_count": 8,
     "authors": "Anthony Towns"
   },
   {
@@ -2284,7 +2284,7 @@
     "maturity_score": 0.0,
     "social_mention_count": 0,
     "revision_count": 1,
-    "code_mention_count": 2,
+    "code_mention_count": 4,
     "authors": "Matt Corallo"
   },
   {

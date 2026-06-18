@@ -13,47 +13,53 @@
     "maintainer_status": "historical",
     "social_source": "mailing_list",
     "sponsor_id": null,
-    "maintainer_title": "Core Maintainer",
+    "maintainer_title": "Former Core Maintainer",
     "maintainer_primary_area": "General",
     "maintainer_appointed": "2011-01-21",
     "maintainer_stepped_down": "2011-03-31"
   },
   "roles": [
-    "Core Maintainer",
-    "Researcher"
+    "Researcher",
+    "Former Core Maintainer"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "Utilities",
   "total_commits": 35.0,
   "authored_commits": 32.0,
+  "tier1_authored_commits": 32.0,
+  "tier2_authored_commits": 0.0,
   "merge_commits": 3.0,
   "total_additions": 3131.0,
   "total_deletions": 225.0,
-  "first_commit": "2011-01-20T18:49:44",
-  "last_commit": "2019-06-14T02:33:28",
+  "first_core_commit": "2011-05-01T13:38:56+00:00",
+  "last_core_commit": "2019-06-17T17:02:45+00:00",
+  "first_ecosystem_commit": null,
+  "last_ecosystem_commit": null,
+  "first_commit": "2011-05-01T13:38:56",
+  "last_commit": "2019-06-17T17:02:45",
   "p2016_authored_commits": 10.0,
   "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": 145.72388362794612,
-  "reviews_count": 16.0,
-  "avg_approval_latency_days": 0.10998842592592592,
-  "approvals_count": 1.0,
-  "p2016_reviews_count": 11.0,
+  "avg_review_latency_days": 647.1633952969738,
+  "reviews_count": 19.0,
+  "avg_approval_latency_days": 1392.9545684523812,
+  "approvals_count": 3.0,
+  "p2016_reviews_count": 14.0,
   "modern_reviews_count": 0.0,
   "first_review_date": "2011-02-02T04:40:48+00:00",
   "last_review_date": "2023-02-06T23:19:07+00:00",
   "prs_authored": 48.0,
-  "avg_pr_ack_velocity_days": 94.30479370915033,
-  "avg_concept_lead_time_days": 5.010969650205762,
-  "review_reciprocity": 0.3333333333333333,
-  "hybrid_score": 1.3868,
-  "p2016_hybrid_score": 0.3007,
+  "avg_pr_ack_velocity_days": 80.37119539411206,
+  "avg_concept_lead_time_days": 64.58650939542483,
+  "review_reciprocity": 0.3958333333333333,
+  "hybrid_score": 1.3893,
+  "p2016_hybrid_score": 0.3462,
   "modern_hybrid_score": 0.1161,
-  "impact_score": 56.0,
-  "p2016_impact_score": 17.0,
+  "impact_score": 57.0,
+  "p2016_impact_score": 19.0,
   "modern_impact_score": 7.0,
   "threads_started": 2.0,
   "replies_sent": 37.0,
@@ -91,7 +97,7 @@
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
-  "global_first_active": "2011-01-20T18:49:44",
+  "global_first_active": "2011-05-01T13:38:56",
   "global_last_active": "2019-07-26T11:48:36",
   "github_location": "Canada",
   "github_company": null,
@@ -99,41 +105,41 @@
   "github_twitter": null,
   "github_blog": "https://just-dice.com",
   "github_followers": 162.0,
+  "activity_status": "Retired",
   "is_top_50": false,
   "github_url": "https://github.com/dooglus",
   "commit_history": {
     "2011": {
-      "Documentation": 1.0,
-      "GUI": 1.0,
-      "Merge": 3.0,
-      "Utilities": 9.0
+      "Documentation": 2.0,
+      "GUI": 2.0,
+      "Merge": 6.0,
+      "Utilities": 18.0
     },
     "2012": {
-      "Documentation": 1.0,
-      "GUI": 0.5,
-      "Node & RPC": 0.5,
-      "Tests": 2.5,
-      "Utilities": 5.5
-    },
-    "2015": {
-      "Wallet": 1.0
+      "Documentation": 2.0,
+      "GUI": 1.0,
+      "Node & RPC": 1.0,
+      "Tests": 5.0,
+      "Utilities": 11.0
     },
     "2016": {
-      "Node & RPC": 1.0,
-      "Utilities": 1.5,
-      "Wallet": 2.5
+      "Node & RPC": 2.0,
+      "Utilities": 2.0,
+      "Wallet": 6.0
     },
     "2017": {
-      "GUI": 1.33,
-      "Node & RPC": 0.33,
-      "Wallet": 0.33
+      "GUI": 2.0,
+      "Utilities": 1.0,
+      "Wallet": 1.0
     },
     "2018": {
-      "GUI": 1.0
+      "GUI": 2.67,
+      "Node & RPC": 0.67,
+      "Wallet": 0.67
     },
     "2019": {
-      "GUI": 1.0,
-      "Node & RPC": 1.0
+      "GUI": 2.0,
+      "Node & RPC": 2.0
     }
   },
   "first_message": {

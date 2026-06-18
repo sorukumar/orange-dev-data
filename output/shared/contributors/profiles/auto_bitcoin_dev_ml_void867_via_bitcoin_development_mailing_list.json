@@ -18,13 +18,19 @@
     "Researcher"
   ],
   "first_seen": "2026-05-27T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "soft-fork-activation",
   "total_commits": 0.0,
   "authored_commits": 0.0,
+  "tier1_authored_commits": 0.0,
+  "tier2_authored_commits": 0.0,
   "merge_commits": 0.0,
   "total_additions": null,
   "total_deletions": null,
+  "first_core_commit": null,
+  "last_core_commit": null,
+  "first_ecosystem_commit": null,
+  "last_ecosystem_commit": null,
   "first_commit": null,
   "last_commit": null,
   "p2016_authored_commits": 0.0,
@@ -44,49 +50,50 @@
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": null,
-  "hybrid_score": 0.0103,
-  "p2016_hybrid_score": 0.0158,
-  "modern_hybrid_score": 0.0414,
+  "hybrid_score": 0.0098,
+  "p2016_hybrid_score": 0.0151,
+  "modern_hybrid_score": 0.0394,
   "impact_score": 1.0,
   "p2016_impact_score": 1.0,
   "modern_impact_score": 2.0,
   "threads_started": 0.0,
-  "replies_sent": 4.0,
+  "replies_sent": 5.0,
   "ml_threads": 0.0,
   "delving_threads": 0.0,
-  "ml_responses": 4.0,
+  "ml_responses": 5.0,
   "delving_responses": 0.0,
   "first_active": "2024-02-28T05:12:58",
-  "last_active": "2025-03-19T12:03:55",
+  "last_active": "2026-06-16T09:33:01",
   "dev_type": "Participant",
   "expertise_domains": [
-    "Consensus",
-    "Mempool"
+    "Mempool",
+    "Consensus"
   ],
   "expertise_by_source": {
     "discussion": {
-      "Consensus": 0.5,
-      "Mempool": 0.5
+      "Consensus": 0.326,
+      "Mempool": 0.674
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.5,
-    "Mempool": 0.5
+    "Consensus": 0.326,
+    "Mempool": 0.674
   },
-  "p2016_posts": 4.0,
-  "modern_posts": 4.0,
-  "p2016_ml_posts": 4.0,
+  "p2016_posts": 5.0,
+  "modern_posts": 5.0,
+  "p2016_ml_posts": 5.0,
   "p2016_delving_posts": 0.0,
-  "modern_ml_posts": 4.0,
+  "modern_ml_posts": 5.0,
   "modern_delving_posts": 0.0,
   "global_first_active": "2024-02-28T05:12:58",
-  "global_last_active": "2025-03-19T12:03:55",
+  "global_last_active": "2026-06-16T09:33:01",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
   "github_twitter": null,
   "github_blog": null,
   "github_followers": null,
+  "activity_status": "Rising",
   "is_top_50": false,
   "first_message": {
     "source": "mailing_list",
@@ -96,9 +103,9 @@
   },
   "last_message": {
     "source": "mailing_list",
-    "subject": "Re: [bitcoindev] Unbreaking testnet4",
-    "date": "2025-03-19",
-    "link": "https://gnusha.org/pi/bitcoindev/174240385333.6.13961685190897668632.642902301@slmail.me"
+    "subject": "Re: [bitcoindev] [BIP Proposal] Removal of BIP 125 RBF signalling in\n wallet transactions",
+    "date": "2026-06-16",
+    "link": "https://gnusha.org/pi/bitcoindev/178162039498.7.16213177200751410070.1421232845@slmail.me"
   },
   "social_history": {
     "2024": {
@@ -111,6 +118,9 @@
       "soft-fork-activation": 1,
       "spam-filtering": 1,
       "testing-devtools": 1
+    },
+    "2026": {
+      "mempool-fees": 1
     }
   }
 }

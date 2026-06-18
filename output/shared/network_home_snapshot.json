@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-06-16T10:26:07.238222",
-  "contributors_tracked": 7279,
+  "generated_at": "2026-06-18T10:05:23.198966",
+  "contributors_tracked": 7585,
   "window_reference": {
-    "anchor_timestamp": "2026-06-15T21:43:09+00:00",
-    "current_window_start": "2026-05-16T21:43:09+00:00",
-    "previous_window_start": "2026-04-16T21:43:09+00:00",
+    "anchor_timestamp": "2026-06-18T14:14:36+00:00",
+    "current_window_start": "2026-05-19T14:14:36+00:00",
+    "previous_window_start": "2026-04-19T14:14:36+00:00",
     "window_days": 30
   },
   "widgets": {
     "active_contributors_30d": {
-      "value": 64,
-      "previous_30d": 36,
-      "delta_30d": 28,
+      "value": 85,
+      "previous_30d": 28,
+      "delta_30d": 57,
       "window_days": 30,
       "definition": "Contributors with global_last_active in current 30-day window, compared to the previous 30-day window.",
-      "latest_activity_date": "2026-06-15"
+      "latest_activity_date": "2026-06-18"
     },
     "top_reviewers_30d": {
       "window_days": 30,
@@ -23,37 +23,37 @@
         {
           "uuid": "auto_sebastian_kung",
           "display_name": "Sebastian Kung",
-          "reviews_30d": 139,
-          "previous_30d": 143,
-          "delta_30d": -4
+          "reviews_30d": 145,
+          "previous_30d": 130,
+          "delta_30d": 15
         },
         {
           "uuid": "can_marcofalke",
           "display_name": "MarcoFalke",
-          "reviews_30d": 112,
-          "previous_30d": 90,
-          "delta_30d": 22
+          "reviews_30d": 117,
+          "previous_30d": 88,
+          "delta_30d": 29
         },
         {
           "uuid": "can_michael_ford",
           "display_name": "Michael Ford",
-          "reviews_30d": 100,
-          "previous_30d": 52,
-          "delta_30d": 48
+          "reviews_30d": 110,
+          "previous_30d": 54,
+          "delta_30d": 56
         },
         {
-          "uuid": "auto_w0xlt",
-          "display_name": "w0xlt",
-          "reviews_30d": 74,
-          "previous_30d": 21,
-          "delta_30d": 53
+          "uuid": "auto_woltx",
+          "display_name": "woltx",
+          "reviews_30d": 72,
+          "previous_30d": 26,
+          "delta_30d": 46
         },
         {
-          "uuid": "can_mark_erhardt",
-          "display_name": "Mark Erhardt",
-          "reviews_30d": 52,
-          "previous_30d": 22,
-          "delta_30d": 30
+          "uuid": "can_hennadii_stepanov",
+          "display_name": "Hennadii Stepanov",
+          "reviews_30d": 54,
+          "previous_30d": 36,
+          "delta_30d": 18
         }
       ],
       "aliases_collapsed": 0
@@ -76,9 +76,9 @@
           "title": "Mnemonic code for generating deterministic keys",
           "primary_author": "Marek Palatinus",
           "primary_author_uuid": "can_marek_palatinus",
-          "mentions_30d": 19,
+          "mentions_30d": 22,
           "previous_30d": 0,
-          "delta_30d": 19
+          "delta_30d": 22
         },
         {
           "bip_id": "32",
@@ -86,24 +86,24 @@
           "primary_author": "Pieter Wuille",
           "primary_author_uuid": "can_pieter_wuille",
           "mentions_30d": 17,
-          "previous_30d": 5,
-          "delta_30d": 12
+          "previous_30d": 4,
+          "delta_30d": 13
         }
       ]
     },
     "research_activity_30d": {
-      "messages_30d": 248,
-      "previous_30d": 200,
-      "delta_30d": 48,
+      "messages_30d": 254,
+      "previous_30d": 192,
+      "delta_30d": 62,
       "momentum": "rising",
       "definition": "Combined Delving Bitcoin and mailing list discussion volume in current 30 days versus previous 30 days."
     },
     "discussion_voices_30d": {
-      "value": 84,
+      "value": 86,
       "previous_30d": 88,
-      "delta_30d": -4,
-      "messages_30d": 248,
-      "messages_previous_30d": 200
+      "delta_30d": -2,
+      "messages_30d": 254,
+      "messages_previous_30d": 192
     },
     "topic_momentum_30d": {
       "window_days": 30,
@@ -112,37 +112,37 @@
         {
           "topic": "quantum",
           "label": "Quantum",
-          "mentions_30d": 79,
-          "previous_30d": 44,
-          "delta_30d": 35
+          "mentions_30d": 77,
+          "previous_30d": 41,
+          "delta_30d": 36
         },
         {
           "topic": "consensus-cleanup",
           "label": "Consensus Cleanup",
-          "mentions_30d": 23,
+          "mentions_30d": 24,
           "previous_30d": 8,
-          "delta_30d": 15
-        },
-        {
-          "topic": "utxo-sync",
-          "label": "Utxo Sync",
-          "mentions_30d": 16,
-          "previous_30d": 12,
-          "delta_30d": 4
-        },
-        {
-          "topic": "taproot",
-          "label": "Taproot",
-          "mentions_30d": 14,
-          "previous_30d": 0,
-          "delta_30d": 14
+          "delta_30d": 16
         },
         {
           "topic": "payment-protocol",
           "label": "Payment Protocol",
-          "mentions_30d": 12,
+          "mentions_30d": 14,
           "previous_30d": 2,
+          "delta_30d": 12
+        },
+        {
+          "topic": "taproot",
+          "label": "Taproot",
+          "mentions_30d": 13,
+          "previous_30d": 3,
           "delta_30d": 10
+        },
+        {
+          "topic": "utxo-sync",
+          "label": "Utxo Sync",
+          "mentions_30d": 11,
+          "previous_30d": 17,
+          "delta_30d": -6
         }
       ]
     },
@@ -150,35 +150,25 @@
       "definition": "Random selection of top retired contributors by impact score to feature as ecosystem veterans.",
       "items": [
         {
-          "uuid": "can_eric_lombrozo",
-          "display_name": "Eric Lombrozo",
-          "impact_score": 60.0
-        },
-        {
-          "uuid": "auto_philip_kaufmann",
-          "display_name": "Philip Kaufmann",
+          "uuid": "can_jo_o_barbosa",
+          "display_name": "Jo\u00e3o Barbosa",
           "impact_score": 31.0
         },
         {
-          "uuid": "auto_nicolas_dorier",
-          "display_name": "Nicolas Dorier",
-          "impact_score": 45.0
+          "uuid": "can_aaron_voisine",
+          "display_name": "Aaron Voisine",
+          "impact_score": 44.0
         },
         {
-          "uuid": "can_amir_taaki",
-          "display_name": "Amir Taaki",
-          "impact_score": 51.0
-        },
-        {
-          "uuid": "can_ruben_somsen",
-          "display_name": "Ruben Somsen",
-          "impact_score": 37.0
+          "uuid": "can_chris_belcher",
+          "display_name": "Chris Belcher",
+          "impact_score": 38.0
         }
       ]
     }
   },
   "quality": {
-    "bots_excluded": 13,
+    "bots_excluded": 16,
     "bot_filter_tokens": [
       "bot",
       "automerge",

@@ -18,38 +18,44 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "GUI",
   "total_commits": 13.0,
   "authored_commits": 13.0,
+  "tier1_authored_commits": 13.0,
+  "tier2_authored_commits": 0.0,
   "merge_commits": 0.0,
   "total_additions": 164.0,
   "total_deletions": 63.0,
-  "first_commit": "2019-10-30T22:36:33",
-  "last_commit": "2024-03-28T19:39:49",
+  "first_core_commit": "2019-11-01T17:17:24+00:00",
+  "last_core_commit": "2024-07-30T16:56:19+00:00",
+  "first_ecosystem_commit": null,
+  "last_ecosystem_commit": null,
+  "first_commit": "2019-11-01T17:17:24",
+  "last_commit": "2024-07-30T16:56:19",
   "p2016_authored_commits": 13.0,
   "modern_authored_commits": 1.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": 314.70461865079363,
-  "reviews_count": 108.0,
-  "avg_approval_latency_days": 53.32841609589041,
-  "approvals_count": 67.0,
-  "p2016_reviews_count": 108.0,
-  "modern_reviews_count": 39.0,
+  "avg_review_latency_days": 1770.3246093952343,
+  "reviews_count": 185.0,
+  "avg_approval_latency_days": 1032.9559624723229,
+  "approvals_count": 96.0,
+  "p2016_reviews_count": 185.0,
+  "modern_reviews_count": 48.0,
   "first_review_date": "2019-10-27T22:43:56+00:00",
-  "last_review_date": "2026-04-09T14:31:47+00:00",
-  "prs_authored": 41.0,
-  "avg_pr_ack_velocity_days": 1.1111778846153846,
-  "avg_concept_lead_time_days": 0.6513599537037037,
-  "review_reciprocity": 2.6341463414634148,
-  "hybrid_score": 0.3277,
-  "p2016_hybrid_score": 0.1754,
-  "modern_hybrid_score": 0.148,
-  "impact_score": 18.0,
-  "p2016_impact_score": 10.0,
-  "modern_impact_score": 8.0,
+  "last_review_date": "2026-05-12T00:51:19+00:00",
+  "prs_authored": 70.0,
+  "avg_pr_ack_velocity_days": 4.525427414021164,
+  "avg_concept_lead_time_days": 7.545547288359788,
+  "review_reciprocity": 2.642857142857143,
+  "hybrid_score": 0.347,
+  "p2016_hybrid_score": 0.3849,
+  "modern_hybrid_score": 0.2232,
+  "impact_score": 19.0,
+  "p2016_impact_score": 21.0,
+  "modern_impact_score": 13.0,
   "threads_started": 3.0,
   "replies_sent": 0.0,
   "ml_threads": 0.0,
@@ -60,11 +66,17 @@
   "last_active": null,
   "dev_type": "Builder",
   "expertise_domains": [
+    "Infrastructure",
     "Privacy",
-    "Mempool",
     "Consensus"
   ],
   "expertise_by_source": {
+    "code": {
+      "Consensus": 0.01,
+      "Infrastructure": 0.971,
+      "Network": 0.01,
+      "Script": 0.01
+    },
     "discussion": {
       "Consensus": 0.245,
       "Mempool": 0.245,
@@ -72,9 +84,10 @@
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.2452,
-    "Mempool": 0.2452,
-    "Privacy": 0.5095
+    "Consensus": 0.104,
+    "Infrastructure": 0.5825,
+    "Mempool": 0.098,
+    "Privacy": 0.2036
   },
   "p2016_posts": 3.0,
   "modern_posts": 3.0,
@@ -82,43 +95,43 @@
   "p2016_delving_posts": 3.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 3.0,
-  "global_first_active": "2019-10-30T22:36:33",
-  "global_last_active": "2024-03-28T19:39:49",
+  "global_first_active": "2019-11-01T17:17:24",
+  "global_last_active": "2024-07-30T16:56:19",
   "github_location": "\u20bf:8333",
   "github_company": "@bitcoincore-dev ",
   "github_bio": "Operations Specialist @usnavy\r\n\r\nE616FA7221A1613E5B99206297966C06 BB06757B\r\n",
   "github_twitter": "RandyMcMillan",
   "github_blog": "https://www.randymcmillan.net",
   "github_followers": 469.0,
+  "activity_status": "Fading",
   "is_top_50": false,
   "github_url": "https://github.com/RandyMcMillan",
   "delving_url": "https://delvingbitcoin.org/u/randymcmillan",
   "commit_history": {
     "2019": {
-      "Build & CI": 1.0,
-      "Consensus": 0.12,
-      "Documentation": 0.12,
-      "GUI": 0.12,
-      "Node & RPC": 0.12,
-      "P2P Network": 0.12,
-      "Script": 0.12,
-      "Tests": 0.12,
-      "Utilities": 0.12
+      "Build & CI": 2.0,
+      "Consensus": 0.25,
+      "Documentation": 0.25,
+      "GUI": 0.25,
+      "Node & RPC": 0.25,
+      "P2P Network": 0.25,
+      "Script": 0.25,
+      "Tests": 0.25,
+      "Utilities": 0.25
     },
     "2020": {
-      "GUI": 1.0,
-      "Utilities": 1.0
+      "Utilities": 2.0
     },
     "2021": {
-      "GUI": 4.0
+      "GUI": 10.0
     },
     "2022": {
-      "Documentation": 1.0,
-      "GUI": 2.0,
-      "Node & RPC": 1.0
+      "Documentation": 2.0,
+      "GUI": 4.0,
+      "Node & RPC": 2.0
     },
     "2024": {
-      "GUI": 1.0
+      "GUI": 2.0
     }
   },
   "first_message": {

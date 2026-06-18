@@ -18,15 +18,21 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "Utilities",
   "total_commits": 8.0,
   "authored_commits": 8.0,
+  "tier1_authored_commits": 8.0,
+  "tier2_authored_commits": 0.0,
   "merge_commits": 0.0,
   "total_additions": 448.0,
   "total_deletions": 116.0,
-  "first_commit": "2014-07-31T15:56:17",
-  "last_commit": "2015-08-12T23:32:20",
+  "first_core_commit": "2014-09-11T06:56:23+00:00",
+  "last_core_commit": "2015-08-17T14:50:55+00:00",
+  "first_ecosystem_commit": null,
+  "last_ecosystem_commit": null,
+  "first_commit": "2014-09-11T06:56:23",
+  "last_commit": "2015-08-17T14:50:55",
   "p2016_authored_commits": 0.0,
   "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
@@ -44,7 +50,7 @@
   "avg_pr_ack_velocity_days": 1.6857465277777777,
   "avg_concept_lead_time_days": 0.26796296296296296,
   "review_reciprocity": 1.1818181818181819,
-  "hybrid_score": 0.2475,
+  "hybrid_score": 0.2474,
   "p2016_hybrid_score": 0.0675,
   "modern_hybrid_score": 0.0675,
   "impact_score": 14.0,
@@ -81,25 +87,26 @@
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
-  "global_first_active": "2014-07-31T15:56:17",
-  "global_last_active": "2015-08-12T23:32:20",
+  "global_first_active": "2014-09-11T06:56:23",
+  "global_last_active": "2015-08-17T14:50:55",
   "github_location": "Brooklyn, NY",
   "github_company": null,
   "github_bio": "Tinkering...",
   "github_twitter": null,
   "github_blog": null,
   "github_followers": 22.0,
+  "activity_status": "Retired",
   "is_top_50": false,
   "github_url": "https://github.com/ajweiss",
   "commit_history": {
     "2014": {
-      "Documentation": 0.5,
-      "Node & RPC": 0.5,
-      "Utilities": 2.0
+      "Documentation": 1.0,
+      "Node & RPC": 1.0,
+      "Utilities": 4.0
     },
     "2015": {
-      "Node & RPC": 3.0,
-      "Utilities": 2.0
+      "Node & RPC": 6.0,
+      "Utilities": 4.0
     }
   },
   "first_message": {

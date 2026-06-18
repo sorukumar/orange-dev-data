@@ -1,39 +1,39 @@
 {
-  "generated_at": "2026-06-15T17:34:57.781110",
+  "generated_at": "2026-06-18T12:56:12.696990",
   "groups": {
-    "committers": 1131,
-    "reviewers": 4883,
-    "research": 1644,
-    "standards": 158,
-    "total_active": 6173,
-    "total_registry": 7279
+    "committers": 1224,
+    "reviewers": 5106,
+    "research": 1638,
+    "standards": 157,
+    "total_active": 6441,
+    "total_registry": 7585
   },
   "venn_4": {
     "0001": 15,
-    "0010": 1172,
-    "0011": 24,
-    "0100": 3649,
+    "0010": 1167,
+    "0011": 23,
+    "0100": 3838,
     "0101": 5,
-    "0110": 139,
-    "0111": 38,
-    "1000": 70,
+    "0110": 133,
+    "0111": 36,
+    "1000": 118,
     "1001": 1,
-    "1010": 7,
+    "1010": 10,
     "1011": 1,
-    "1100": 787,
+    "1100": 824,
     "1101": 2,
-    "1110": 191,
-    "1111": 72
+    "1110": 194,
+    "1111": 74
   },
   "venn_summary": {
-    "code_only": 70,
-    "review_only": 3649,
-    "research_only": 1172,
+    "code_only": 118,
+    "review_only": 3838,
+    "research_only": 1167,
     "standards_only": 15,
-    "all_four": 72,
-    "code_review": 787,
-    "review_research": 139,
-    "research_standards": 24
+    "all_four": 74,
+    "code_review": 824,
+    "review_research": 133,
+    "research_standards": 23
   },
   "rd_focus": {},
   "hotspot": {
@@ -41,21 +41,24 @@
     "value": "BIP 70"
   },
   "spotlight": {
-    "name": "codeabysss",
-    "uuid": "auto_codeabysss",
-    "description": "First-time contributor recently merged 1 commit."
+    "name": "Sebastian van Staa",
+    "uuid": "auto_sebastian_van_staa",
+    "github_login": "svanstaa",
+    "description": "First-time core contributor recently merged 2 commits."
   },
   "onboarding": {
-    "new_coders_90d": 17,
-    "new_discussants_90d": 91,
+    "new_coders_90d": 26,
+    "new_discussants_90d": 93,
     "window_days": 90
   },
   "prs": {
-    "total_merged": 16562,
-    "merged_30d": 122
+    "total_merged": 17810,
+    "merged_30d": 137,
+    "merged_prev_30d": 88
   },
   "commits": {
-    "commits_30d": 273
+    "commits_30d": 590,
+    "commits_prev_30d": 546
   },
   "bips": {
     "total": 209,
@@ -66,20 +69,20 @@
       {
         "category": "quantum",
         "label": "Quantum",
-        "count": 176,
-        "share": 27.8
+        "count": 175,
+        "share": 27.4
       },
       {
         "category": "testing-devtools",
         "label": "Testing Devtools",
-        "count": 69,
-        "share": 10.9
+        "count": 67,
+        "share": 10.5
       },
       {
         "category": "covenants",
         "label": "Covenants",
-        "count": 45,
-        "share": 7.1
+        "count": 43,
+        "share": 6.7
       }
     ],
     "top_bips": [
@@ -98,7 +101,7 @@
       {
         "bip_id": "39",
         "title": "Mnemonic code for generating deterministic keys",
-        "mentions": 216,
+        "mentions": 219,
         "theme": "Wallet & Keys"
       }
     ],

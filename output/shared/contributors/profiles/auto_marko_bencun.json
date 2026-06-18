@@ -1,5 +1,5 @@
 {
-  "display_name": "Marko Bencun",
+  "display_name": "marko bencun",
   "github_login_final": "benma",
   "delving_username_final": null,
   "uuid": "auto_marko_bencun",
@@ -12,45 +12,53 @@
     "is_sponsored": null,
     "maintainer_status": null,
     "social_source": "mailing_list",
-    "sponsor_id": null
+    "sponsor_id": null,
+    "ecosystem_contributor": true,
+    "tier2_commits": 34
   },
   "roles": [
     "BIP Author",
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
-  "technical_focus": "Node & RPC",
-  "total_commits": 18.0,
-  "authored_commits": 18.0,
+  "last_seen": "2026-06-18T00:00:00",
+  "technical_focus": "Wallet",
+  "total_commits": 57.0,
+  "authored_commits": 57.0,
+  "tier1_authored_commits": 23.0,
+  "tier2_authored_commits": 34.0,
   "merge_commits": 0.0,
-  "total_additions": 586.0,
-  "total_deletions": 645.0,
-  "first_commit": "2017-02-21T08:16:25",
-  "last_commit": "2017-09-11T14:13:52",
-  "p2016_authored_commits": 18.0,
-  "modern_authored_commits": 0.0,
+  "total_additions": 4013.0,
+  "total_deletions": 2206.0,
+  "first_core_commit": "2017-02-22T10:48:35+00:00",
+  "last_core_commit": "2020-01-24T12:34:30+00:00",
+  "first_ecosystem_commit": "2020-07-24T22:54:57+00:00",
+  "last_ecosystem_commit": "2025-09-03T21:21:29+00:00",
+  "first_commit": "2017-02-22T10:48:35",
+  "last_commit": "2020-01-24T12:34:30",
+  "p2016_authored_commits": 57.0,
+  "modern_authored_commits": 4.0,
   "bips_authored": 1.0,
   "p2016_bips_authored": 1.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": 559.9946205781101,
-  "reviews_count": 34.0,
+  "avg_review_latency_days": 1092.3517553748097,
+  "reviews_count": 42.0,
   "avg_approval_latency_days": 245.97767403978054,
   "approvals_count": 18.0,
-  "p2016_reviews_count": 34.0,
-  "modern_reviews_count": 6.0,
+  "p2016_reviews_count": 42.0,
+  "modern_reviews_count": 7.0,
   "first_review_date": "2017-03-09T15:18:02+00:00",
   "last_review_date": "2025-03-24T12:39:08+00:00",
-  "prs_authored": 18.0,
-  "avg_pr_ack_velocity_days": 3.803017618312757,
+  "prs_authored": 25.0,
+  "avg_pr_ack_velocity_days": 3.4317141203703705,
   "avg_concept_lead_time_days": 3.930528067129629,
-  "review_reciprocity": 1.8888888888888888,
-  "hybrid_score": 0.6625,
-  "p2016_hybrid_score": 0.6656,
-  "modern_hybrid_score": 0.1,
-  "impact_score": 33.0,
-  "p2016_impact_score": 33.0,
-  "modern_impact_score": 6.0,
+  "review_reciprocity": 1.68,
+  "hybrid_score": 0.7353,
+  "p2016_hybrid_score": 0.754,
+  "modern_hybrid_score": 0.2018,
+  "impact_score": 36.0,
+  "p2016_impact_score": 36.0,
+  "modern_impact_score": 11.0,
   "threads_started": 0.0,
   "replies_sent": 3.0,
   "ml_threads": 0.0,
@@ -70,11 +78,11 @@
       "Wallet": 1.0
     },
     "code": {
-      "Consensus": 0.006,
-      "Infrastructure": 0.64,
-      "Network": 0.229,
-      "Script": 0.024,
-      "Wallet": 0.101
+      "Consensus": 0.003,
+      "Infrastructure": 0.374,
+      "Network": 0.11,
+      "Script": 0.012,
+      "Wallet": 0.502
     },
     "discussion": {
       "Consensus": 0.284,
@@ -83,11 +91,11 @@
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.0586,
-    "Infrastructure": 0.192,
+    "Consensus": 0.0577,
+    "Infrastructure": 0.1122,
     "Mining": 0.0864,
-    "Network": 0.0687,
-    "Wallet": 0.5871
+    "Network": 0.033,
+    "Wallet": 0.7072
   },
   "p2016_posts": 3.0,
   "modern_posts": 0.0,
@@ -95,7 +103,7 @@
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
-  "global_first_active": "2017-02-21T08:16:25",
+  "global_first_active": "2017-02-22T10:48:35",
   "global_last_active": "2020-03-21T15:29:26",
   "github_location": null,
   "github_company": null,
@@ -103,20 +111,45 @@
   "github_twitter": null,
   "github_blog": null,
   "github_followers": 146.0,
+  "activity_status": "Retired",
   "is_top_50": false,
   "github_url": "https://github.com/benma",
   "commit_history": {
     "2017": {
-      "Consensus": 0.11,
-      "Database": 0.31,
+      "Consensus": 0.22,
+      "Database": 0.62,
+      "Documentation": 2.0,
+      "GUI": 3.29,
+      "Node & RPC": 11.29,
+      "P2P Network": 8.22,
+      "Script": 0.89,
+      "Tests": 1.22,
+      "Utilities": 4.62,
+      "Wallet": 3.62
+    },
+    "2019": {
       "Documentation": 1.0,
-      "GUI": 1.64,
-      "Node & RPC": 5.64,
-      "P2P Network": 4.11,
-      "Script": 0.44,
-      "Tests": 0.61,
-      "Utilities": 2.31,
-      "Wallet": 1.81
+      "Utilities": 1.0
+    },
+    "2020": {
+      "Documentation": 1.0,
+      "Utilities": 2.0,
+      "Wallet": 15.0
+    },
+    "2021": {
+      "Wallet": 14.0
+    },
+    "2022": {
+      "Wallet": 1.0
+    },
+    "2023": {
+      "Wallet": 1.0
+    },
+    "2024": {
+      "Wallet": 1.0
+    },
+    "2025": {
+      "Wallet": 2.0
     }
   },
   "bip_list": [

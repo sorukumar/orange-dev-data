@@ -12,28 +12,36 @@
     "is_sponsored": null,
     "maintainer_status": null,
     "social_source": "mailing_list",
-    "sponsor_id": null
+    "sponsor_id": null,
+    "ecosystem_contributor": true,
+    "tier2_commits": 18
   },
   "roles": [
     "BIP Author",
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
-  "technical_focus": "Documentation",
-  "total_commits": 1.0,
-  "authored_commits": 1.0,
+  "last_seen": "2026-06-18T00:00:00",
+  "technical_focus": "Wallet",
+  "total_commits": 19.0,
+  "authored_commits": 19.0,
+  "tier1_authored_commits": 1.0,
+  "tier2_authored_commits": 18.0,
   "merge_commits": 0.0,
-  "total_additions": 20.0,
-  "total_deletions": 20.0,
-  "first_commit": "2025-07-01T07:20:36",
-  "last_commit": "2025-07-01T07:20:36",
-  "p2016_authored_commits": 1.0,
-  "modern_authored_commits": 1.0,
+  "total_additions": 326.0,
+  "total_deletions": 241.0,
+  "first_core_commit": "2025-07-01T18:56:37+00:00",
+  "last_core_commit": "2025-07-01T18:56:37+00:00",
+  "first_ecosystem_commit": "2022-06-15T16:50:26+00:00",
+  "last_ecosystem_commit": "2026-04-27T18:30:42+00:00",
+  "first_commit": "2025-07-01T18:56:37",
+  "last_commit": "2025-07-01T18:56:37",
+  "p2016_authored_commits": 19.0,
+  "modern_authored_commits": 4.0,
   "bips_authored": 2.0,
   "p2016_bips_authored": 2.0,
   "modern_bips_authored": 1.0,
-  "avg_review_latency_days": 1794.2997254077472,
+  "avg_review_latency_days": 1696.3812132822477,
   "reviews_count": 28.0,
   "avg_approval_latency_days": 1755.761199202675,
   "approvals_count": 9.0,
@@ -42,15 +50,15 @@
   "first_review_date": "2021-04-12T15:39:10+00:00",
   "last_review_date": "2026-05-21T07:33:01+00:00",
   "prs_authored": 12.0,
-  "avg_pr_ack_velocity_days": 8.723671875,
+  "avg_pr_ack_velocity_days": 16.163119212962965,
   "avg_concept_lead_time_days": 0.06405092592592593,
   "review_reciprocity": 2.3333333333333335,
-  "hybrid_score": 0.7613,
-  "p2016_hybrid_score": 0.7895,
-  "modern_hybrid_score": 0.5797,
-  "impact_score": 37.0,
-  "p2016_impact_score": 38.0,
-  "modern_impact_score": 29.0,
+  "hybrid_score": 0.8942,
+  "p2016_hybrid_score": 0.9252,
+  "modern_hybrid_score": 0.6428,
+  "impact_score": 42.0,
+  "p2016_impact_score": 43.0,
+  "modern_impact_score": 32.0,
   "threads_started": 5.0,
   "replies_sent": 21.0,
   "ml_threads": 5.0,
@@ -61,8 +69,8 @@
   "last_active": "2025-01-17T07:02:50",
   "dev_type": "Builder",
   "expertise_domains": [
+    "Wallet",
     "Script",
-    "Infrastructure",
     "Consensus"
   ],
   "expertise_by_source": {
@@ -71,7 +79,8 @@
       "Script": 0.5
     },
     "code": {
-      "Infrastructure": 1.0
+      "Infrastructure": 0.1,
+      "Wallet": 0.9
     },
     "discussion": {
       "Script": 0.41,
@@ -80,9 +89,9 @@
   },
   "expertise_domain_scores": {
     "Consensus": 0.25,
-    "Infrastructure": 0.3,
+    "Infrastructure": 0.03,
     "Script": 0.332,
-    "Wallet": 0.118
+    "Wallet": 0.388
   },
   "p2016_posts": 26.0,
   "modern_posts": 7.0,
@@ -91,18 +100,28 @@
   "modern_ml_posts": 7.0,
   "modern_delving_posts": 0.0,
   "global_first_active": "2020-06-08T04:28:28",
-  "global_last_active": "2025-07-01T07:20:36",
+  "global_last_active": "2025-07-01T18:56:37",
   "github_location": null,
   "github_company": null,
   "github_bio": "\u20bfitcoin",
   "github_twitter": "salvatoshi",
   "github_blog": "https://salvatoshi.com",
   "github_followers": 154.0,
+  "activity_status": "Steady",
   "is_top_50": false,
   "github_url": "https://github.com/bigspider",
   "commit_history": {
+    "2022": {
+      "Wallet": 15.0
+    },
+    "2024": {
+      "Wallet": 2.0
+    },
     "2025": {
-      "Documentation": 1.0
+      "Documentation": 2.0
+    },
+    "2026": {
+      "Wallet": 1.0
     }
   },
   "bip_list": [

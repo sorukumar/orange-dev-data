@@ -12,20 +12,28 @@
     "is_sponsored": null,
     "maintainer_status": null,
     "social_source": null,
-    "sponsor_id": null
+    "sponsor_id": null,
+    "ecosystem_contributor": true,
+    "tier2_commits": 1
   },
   "roles": [],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "None",
-  "total_commits": 0.0,
-  "authored_commits": 0.0,
+  "total_commits": 1.0,
+  "authored_commits": 1.0,
+  "tier1_authored_commits": 0.0,
+  "tier2_authored_commits": 1.0,
   "merge_commits": 0.0,
-  "total_additions": null,
-  "total_deletions": null,
-  "first_commit": null,
-  "last_commit": null,
-  "p2016_authored_commits": 0.0,
+  "total_additions": 2.0,
+  "total_deletions": 5.0,
+  "first_core_commit": null,
+  "last_core_commit": null,
+  "first_ecosystem_commit": "2018-11-27T15:37:20+00:00",
+  "last_ecosystem_commit": "2018-11-27T15:37:20+00:00",
+  "first_commit": "2018-11-27T15:37:20",
+  "last_commit": "2018-11-27T15:37:20",
+  "p2016_authored_commits": 1.0,
   "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
@@ -39,14 +47,14 @@
   "first_review_date": "2022-11-04T11:42:24+00:00",
   "last_review_date": "2023-04-30T13:33:56+00:00",
   "prs_authored": 2.0,
-  "avg_pr_ack_velocity_days": 25.927476851851853,
+  "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 1.0,
-  "hybrid_score": 0.0679,
-  "p2016_hybrid_score": 0.0808,
+  "hybrid_score": 0.1079,
+  "p2016_hybrid_score": 0.1208,
   "modern_hybrid_score": 0.025,
-  "impact_score": 4.0,
-  "p2016_impact_score": 5.0,
+  "impact_score": 6.0,
+  "p2016_impact_score": 7.0,
   "modern_impact_score": 1.0,
   "threads_started": 2.0,
   "replies_sent": 10.0,
@@ -56,20 +64,25 @@
   "delving_responses": 0.0,
   "first_active": "2017-08-28T10:50:23",
   "last_active": "2021-09-17T02:07:48",
-  "dev_type": "Participant",
+  "dev_type": "Builder",
   "expertise_domains": [
+    "Wallet",
     "Network",
     "Privacy"
   ],
   "expertise_by_source": {
+    "code": {
+      "Wallet": 1.0
+    },
     "discussion": {
       "Network": 0.6,
       "Privacy": 0.4
     }
   },
   "expertise_domain_scores": {
-    "Network": 0.6,
-    "Privacy": 0.4
+    "Network": 0.24,
+    "Privacy": 0.16,
+    "Wallet": 0.6
   },
   "p2016_posts": 12.0,
   "modern_posts": 0.0,
@@ -85,8 +98,14 @@
   "github_twitter": null,
   "github_blog": null,
   "github_followers": 257.0,
+  "activity_status": "Fading",
   "is_top_50": false,
   "github_url": "https://github.com/RCasatta",
+  "commit_history": {
+    "2018": {
+      "Wallet": 1.0
+    }
+  },
   "first_message": {
     "source": "mailing_list",
     "subject": "[bitcoin-dev] \"Compressed\" headers stream",

@@ -18,14 +18,20 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "Build & CI",
   "total_commits": 4.0,
   "authored_commits": 4.0,
+  "tier1_authored_commits": 4.0,
+  "tier2_authored_commits": 0.0,
   "merge_commits": 0.0,
   "total_additions": 42.0,
   "total_deletions": 13.0,
-  "first_commit": "2011-07-01T16:58:48",
+  "first_core_commit": "2011-07-01T23:31:33+00:00",
+  "last_core_commit": "2011-07-16T03:38:46+00:00",
+  "first_ecosystem_commit": null,
+  "last_ecosystem_commit": null,
+  "first_commit": "2011-07-01T23:31:33",
   "last_commit": "2011-07-16T03:38:46",
   "p2016_authored_commits": 0.0,
   "modern_authored_commits": 0.0,
@@ -41,8 +47,8 @@
   "first_review_date": "2011-07-05T23:21:47+00:00",
   "last_review_date": "2011-07-05T23:21:47+00:00",
   "prs_authored": 3.0,
-  "avg_pr_ack_velocity_days": 0.020578703703703703,
-  "avg_concept_lead_time_days": null,
+  "avg_pr_ack_velocity_days": 0.1361689814814815,
+  "avg_concept_lead_time_days": 0.2872106481481482,
   "review_reciprocity": 0.3333333333333333,
   "hybrid_score": 0.1381,
   "p2016_hybrid_score": 0.033,
@@ -76,7 +82,7 @@
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
-  "global_first_active": "2011-07-01T16:58:48",
+  "global_first_active": "2011-07-01T23:31:33",
   "global_last_active": "2011-07-16T03:38:46",
   "github_location": null,
   "github_company": null,
@@ -84,11 +90,12 @@
   "github_twitter": null,
   "github_blog": null,
   "github_followers": 7.0,
+  "activity_status": "Steady",
   "is_top_50": false,
   "github_url": "https://github.com/EricJ2190",
   "commit_history": {
     "2011": {
-      "Build & CI": 4.0
+      "Build & CI": 8.0
     }
   }
 }

@@ -18,15 +18,21 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "Tests",
   "total_commits": 53.0,
   "authored_commits": 53.0,
+  "tier1_authored_commits": 53.0,
+  "tier2_authored_commits": 0.0,
   "merge_commits": 0.0,
   "total_additions": 6224.0,
   "total_deletions": 1498.0,
-  "first_commit": "2017-10-17T14:48:02",
-  "last_commit": "2023-12-09T12:19:02",
+  "first_core_commit": "2017-12-23T13:46:20+00:00",
+  "last_core_commit": "2024-09-04T19:04:53+00:00",
+  "first_ecosystem_commit": null,
+  "last_ecosystem_commit": null,
+  "first_commit": "2017-12-23T13:46:20",
+  "last_commit": "2024-09-04T19:04:53",
   "p2016_authored_commits": 53.0,
   "modern_authored_commits": 9.0,
   "bips_authored": 0.0,
@@ -45,11 +51,11 @@
   "avg_concept_lead_time_days": 9.164604166666667,
   "review_reciprocity": 1.3,
   "hybrid_score": 0.3849,
-  "p2016_hybrid_score": 0.3849,
-  "modern_hybrid_score": 0.2838,
+  "p2016_hybrid_score": 0.4244,
+  "modern_hybrid_score": 0.3409,
   "impact_score": 21.0,
-  "p2016_impact_score": 21.0,
-  "modern_impact_score": 16.0,
+  "p2016_impact_score": 22.0,
+  "modern_impact_score": 18.0,
   "threads_started": 0.0,
   "replies_sent": 0.0,
   "ml_threads": 0.0,
@@ -82,49 +88,53 @@
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
-  "global_first_active": "2017-10-17T14:48:02",
-  "global_last_active": "2023-12-09T12:19:02",
+  "global_first_active": "2017-12-23T13:46:20",
+  "global_last_active": "2024-09-04T19:04:53",
   "github_location": "Altenberg bei Linz, Austria",
   "github_company": "@Dynatrace",
   "github_bio": "mostly C++ stuff. I like Bitcoin",
   "github_twitter": null,
   "github_blog": "http://martin.ankerl.com/",
   "github_followers": 407.0,
+  "activity_status": "Steady",
   "is_top_50": false,
   "github_url": "https://github.com/martinus",
   "commit_history": {
     "2017": {
-      "Tests": 2.5,
-      "Utilities": 0.5
+      "Tests": 4.0
     },
     "2018": {
-      "Script": 0.5,
-      "Utilities": 2.0,
-      "Wallet": 0.5
+      "Script": 1.0,
+      "Tests": 1.0,
+      "Utilities": 5.0,
+      "Wallet": 1.0
     },
     "2019": {
-      "Consensus": 1.0
+      "Consensus": 2.0
     },
     "2020": {
-      "Build & CI": 0.25,
-      "Documentation": 0.25,
-      "Tests": 0.25,
-      "Utilities": 0.25
+      "Build & CI": 0.5,
+      "Documentation": 0.5,
+      "Tests": 0.5,
+      "Utilities": 0.5
     },
     "2021": {
-      "Tests": 12.5,
-      "Utilities": 1.5
+      "Tests": 25.0,
+      "Utilities": 3.0
     },
     "2022": {
-      "Build & CI": 2.33,
-      "Consensus": 1.0,
-      "Tests": 8.33,
-      "Utilities": 4.33
+      "Build & CI": 2.0,
+      "Tests": 11.0,
+      "Utilities": 7.0
     },
     "2023": {
-      "Consensus": 1.33,
-      "Tests": 4.33,
-      "Utilities": 9.33
+      "Build & CI": 2.67,
+      "Consensus": 4.67,
+      "Tests": 12.33,
+      "Utilities": 20.33
+    },
+    "2024": {
+      "Tests": 2.0
     }
   }
 }

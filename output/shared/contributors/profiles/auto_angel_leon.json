@@ -18,21 +18,27 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "GUI",
   "total_commits": 5.0,
   "authored_commits": 5.0,
+  "tier1_authored_commits": 5.0,
+  "tier2_authored_commits": 0.0,
   "merge_commits": 0.0,
   "total_additions": 525.0,
   "total_deletions": 91.0,
-  "first_commit": "2014-02-03T14:55:18",
-  "last_commit": "2017-02-19T17:23:04",
+  "first_core_commit": "2014-02-03T20:07:15+00:00",
+  "last_core_commit": "2017-02-22T11:18:29+00:00",
+  "first_ecosystem_commit": null,
+  "last_ecosystem_commit": null,
+  "first_commit": "2014-02-03T20:07:15",
+  "last_commit": "2017-02-22T11:18:29",
   "p2016_authored_commits": 1.0,
   "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": 670.038050925926,
+  "avg_review_latency_days": 528.2778406084656,
   "reviews_count": 2.0,
   "avg_approval_latency_days": null,
   "approvals_count": 0.0,
@@ -45,10 +51,10 @@
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 0.2,
   "hybrid_score": 0.2164,
-  "p2016_hybrid_score": 0.1121,
+  "p2016_hybrid_score": 0.136,
   "modern_hybrid_score": 0.0646,
   "impact_score": 12.0,
-  "p2016_impact_score": 7.0,
+  "p2016_impact_score": 8.0,
   "modern_impact_score": 4.0,
   "threads_started": 5.0,
   "replies_sent": 28.0,
@@ -68,8 +74,8 @@
     "code": {
       "Consensus": 0.1,
       "Infrastructure": 0.8,
-      "Mempool": 0.066,
-      "Network": 0.034
+      "Mempool": 0.067,
+      "Network": 0.033
     },
     "discussion": {
       "Consensus": 0.792,
@@ -79,9 +85,9 @@
   "expertise_domain_scores": {
     "Consensus": 0.3768,
     "Infrastructure": 0.48,
-    "Mempool": 0.0396,
+    "Mempool": 0.0402,
     "Mining": 0.0832,
-    "Network": 0.0204
+    "Network": 0.0198
   },
   "p2016_posts": 3.0,
   "modern_posts": 0.0,
@@ -89,7 +95,7 @@
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
-  "global_first_active": "2014-02-03T14:55:18",
+  "global_first_active": "2014-02-03T20:07:15",
   "global_last_active": "2020-01-15T19:21:52",
   "github_location": "USA",
   "github_company": "frostwire.com",
@@ -97,21 +103,22 @@
   "github_twitter": "gubatron",
   "github_blog": "https://gubatron.com/blog",
   "github_followers": 239.0,
+  "activity_status": "Fading",
   "is_top_50": false,
   "github_url": "https://github.com/gubatron",
   "commit_history": {
     "2014": {
-      "Consensus": 0.17,
-      "Documentation": 1.17,
-      "GUI": 2.17,
-      "Node & RPC": 0.17,
-      "P2P Network": 0.17,
-      "Utilities": 0.17
+      "Consensus": 0.33,
+      "Documentation": 2.33,
+      "GUI": 4.33,
+      "Node & RPC": 0.33,
+      "P2P Network": 0.33,
+      "Utilities": 0.33
     },
     "2017": {
-      "Consensus": 0.33,
-      "Mempool": 0.33,
-      "Node & RPC": 0.33
+      "Consensus": 0.67,
+      "Mempool": 0.67,
+      "Node & RPC": 0.67
     }
   },
   "first_message": {

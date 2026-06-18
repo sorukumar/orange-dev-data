@@ -18,15 +18,21 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "Utilities",
   "total_commits": 13.0,
   "authored_commits": 13.0,
+  "tier1_authored_commits": 13.0,
+  "tier2_authored_commits": 0.0,
   "merge_commits": 0.0,
   "total_additions": 202.0,
   "total_deletions": 181.0,
+  "first_core_commit": "2019-06-05T22:54:11+00:00",
+  "last_core_commit": "2020-03-01T20:33:52+00:00",
+  "first_ecosystem_commit": null,
+  "last_ecosystem_commit": null,
   "first_commit": "2019-06-05T22:54:11",
-  "last_commit": "2020-01-03T19:38:44",
+  "last_commit": "2020-03-01T20:33:52",
   "p2016_authored_commits": 13.0,
   "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
@@ -45,10 +51,10 @@
   "avg_concept_lead_time_days": 34.65790509259259,
   "review_reciprocity": 4.0,
   "hybrid_score": 0.2725,
-  "p2016_hybrid_score": 0.2724,
+  "p2016_hybrid_score": 0.3104,
   "modern_hybrid_score": 0.05,
   "impact_score": 15.0,
-  "p2016_impact_score": 15.0,
+  "p2016_impact_score": 17.0,
   "modern_impact_score": 3.0,
   "threads_started": 0.0,
   "replies_sent": 0.0,
@@ -67,14 +73,14 @@
   "expertise_by_source": {
     "code": {
       "Consensus": 0.165,
-      "Infrastructure": 0.814,
+      "Infrastructure": 0.813,
       "Network": 0.011,
       "Wallet": 0.011
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.1648,
-    "Infrastructure": 0.8132,
+    "Consensus": 0.165,
+    "Infrastructure": 0.813,
     "Network": 0.011,
     "Wallet": 0.011
   },
@@ -85,27 +91,29 @@
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
   "global_first_active": "2019-06-05T22:54:11",
-  "global_last_active": "2020-01-03T19:38:44",
+  "global_last_active": "2020-03-01T20:33:52",
   "github_location": null,
   "github_company": "Spiral",
   "github_bio": null,
   "github_twitter": null,
   "github_blog": null,
   "github_followers": 80.0,
+  "activity_status": "Retired",
   "is_top_50": false,
   "github_url": "https://github.com/jkczyz",
   "commit_history": {
     "2019": {
-      "Build & CI": 0.14,
-      "Consensus": 2.14,
-      "Node & RPC": 0.14,
-      "P2P Network": 0.14,
-      "Tests": 2.14,
-      "Utilities": 6.14,
-      "Wallet": 0.14
+      "Tests": 2.0,
+      "Utilities": 8.0
     },
     "2020": {
-      "Utilities": 2.0
+      "Build & CI": 0.29,
+      "Consensus": 4.29,
+      "Node & RPC": 0.29,
+      "P2P Network": 0.29,
+      "Tests": 2.29,
+      "Utilities": 8.29,
+      "Wallet": 0.29
     }
   }
 }

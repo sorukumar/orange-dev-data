@@ -12,44 +12,52 @@
     "is_sponsored": null,
     "maintainer_status": null,
     "social_source": "github",
-    "sponsor_id": null
+    "sponsor_id": null,
+    "ecosystem_contributor": true,
+    "tier2_commits": 53
   },
   "roles": [
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "code",
-  "total_commits": 2.0,
-  "authored_commits": 2.0,
+  "total_commits": 55.0,
+  "authored_commits": 55.0,
+  "tier1_authored_commits": 2.0,
+  "tier2_authored_commits": 53.0,
   "merge_commits": 0.0,
-  "total_additions": 173.0,
-  "total_deletions": 29.0,
-  "first_commit": "2021-01-11T09:34:27",
-  "last_commit": "2022-03-16T21:26:24",
-  "p2016_authored_commits": 2.0,
-  "modern_authored_commits": 0.0,
+  "total_additions": 2068.0,
+  "total_deletions": 35.0,
+  "first_core_commit": "2021-01-19T16:23:48+00:00",
+  "last_core_commit": "2022-04-02T08:43:14+00:00",
+  "first_ecosystem_commit": "2021-05-27T21:39:12+00:00",
+  "last_ecosystem_commit": "2026-04-26T21:49:14+00:00",
+  "first_commit": "2021-01-19T16:23:48",
+  "last_commit": "2022-04-02T08:43:14",
+  "p2016_authored_commits": 55.0,
+  "modern_authored_commits": 13.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": 44.19563796296297,
-  "reviews_count": 62.0,
-  "avg_approval_latency_days": 42.12747763653484,
-  "approvals_count": 55.0,
-  "p2016_reviews_count": 62.0,
+  "avg_review_latency_days": 106.59901946818613,
+  "reviews_count": 63.0,
+  "avg_approval_latency_days": 120.73502986857827,
+  "approvals_count": 56.0,
+  "p2016_reviews_count": 63.0,
   "modern_reviews_count": 2.0,
   "first_review_date": "2020-04-08T10:52:25+00:00",
   "last_review_date": "2024-09-05T11:18:12+00:00",
   "prs_authored": 5.0,
   "avg_pr_ack_velocity_days": 5.682129629629629,
   "avg_concept_lead_time_days": 11.34376736111111,
-  "review_reciprocity": 12.4,
-  "hybrid_score": 0.2142,
-  "p2016_hybrid_score": 0.2142,
-  "modern_hybrid_score": 0.0615,
-  "impact_score": 12.0,
-  "p2016_impact_score": 12.0,
-  "modern_impact_score": 4.0,
+  "review_reciprocity": 12.6,
+  "hybrid_score": 0.3837,
+  "p2016_hybrid_score": 0.3857,
+  "modern_hybrid_score": 0.2424,
+  "impact_score": 21.0,
+  "p2016_impact_score": 21.0,
+  "modern_impact_score": 14.0,
   "threads_started": 0.0,
   "replies_sent": 0.0,
   "ml_threads": 0.0,
@@ -60,15 +68,18 @@
   "last_active": null,
   "dev_type": "Builder",
   "expertise_domains": [
-    "Infrastructure"
+    "Infrastructure",
+    "Wallet"
   ],
   "expertise_by_source": {
     "code": {
-      "Infrastructure": 1.0
+      "Infrastructure": 0.965,
+      "Wallet": 0.035
     }
   },
   "expertise_domain_scores": {
-    "Infrastructure": 1.0
+    "Infrastructure": 0.965,
+    "Wallet": 0.035
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -76,22 +87,38 @@
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
-  "global_first_active": "2021-01-11T09:34:27",
-  "global_last_active": "2022-03-16T21:26:24",
+  "global_first_active": "2021-01-19T16:23:48",
+  "global_last_active": "2022-04-02T08:43:14",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
   "github_twitter": null,
   "github_blog": "https://www.groestlcoin.org",
   "github_followers": 31.0,
+  "activity_status": "Retired",
   "is_top_50": false,
   "github_url": "https://github.com/gruve-p",
   "commit_history": {
     "2021": {
-      "Utilities": 1.0
+      "Utilities": 2.0,
+      "Wallet": 1.0
     },
     "2022": {
-      "Documentation": 1.0
+      "Build & CI": 29.0,
+      "Documentation": 2.0,
+      "Wallet": 1.0
+    },
+    "2023": {
+      "Build & CI": 17.0
+    },
+    "2024": {
+      "Build & CI": 3.0
+    },
+    "2025": {
+      "Build & CI": 1.0
+    },
+    "2026": {
+      "Build & CI": 1.0
     }
   }
 }

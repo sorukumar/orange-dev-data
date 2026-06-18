@@ -12,44 +12,52 @@
     "is_sponsored": null,
     "maintainer_status": null,
     "social_source": "Mixed",
-    "sponsor_id": null
+    "sponsor_id": null,
+    "ecosystem_contributor": true,
+    "tier2_commits": 84
   },
   "roles": [
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "Tests",
-  "total_commits": 82.0,
-  "authored_commits": 82.0,
+  "total_commits": 166.0,
+  "authored_commits": 166.0,
+  "tier1_authored_commits": 82.0,
+  "tier2_authored_commits": 84.0,
   "merge_commits": 0.0,
-  "total_additions": 2846.0,
-  "total_deletions": 1154.0,
-  "first_commit": "2016-02-16T19:42:14",
-  "last_commit": "2026-05-04T14:37:18",
-  "p2016_authored_commits": 82.0,
-  "modern_authored_commits": 62.0,
+  "total_additions": 5011.0,
+  "total_deletions": 1158.0,
+  "first_core_commit": "2016-02-19T09:36:46+00:00",
+  "last_core_commit": "2026-05-27T14:48:32+00:00",
+  "first_ecosystem_commit": "2024-01-19T17:05:51+00:00",
+  "last_ecosystem_commit": "2026-04-17T17:27:02+00:00",
+  "first_commit": "2016-02-19T09:36:46",
+  "last_commit": "2026-05-27T14:48:32",
+  "p2016_authored_commits": 166.0,
+  "modern_authored_commits": 146.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": 160.02408629362534,
-  "reviews_count": 205.0,
-  "avg_approval_latency_days": 99.90722269570708,
-  "approvals_count": 120.0,
-  "p2016_reviews_count": 205.0,
-  "modern_reviews_count": 147.0,
+  "avg_review_latency_days": 262.9132409318722,
+  "reviews_count": 208.0,
+  "avg_approval_latency_days": 129.95517210596248,
+  "approvals_count": 121.0,
+  "p2016_reviews_count": 208.0,
+  "modern_reviews_count": 150.0,
   "first_review_date": "2017-01-18T16:49:19+00:00",
   "last_review_date": "2026-06-11T12:26:32+00:00",
-  "prs_authored": 52.0,
+  "prs_authored": 53.0,
   "avg_pr_ack_velocity_days": 6.048111111111111,
   "avg_concept_lead_time_days": 10.169788995726496,
-  "review_reciprocity": 3.9423076923076925,
-  "hybrid_score": 0.4617,
-  "p2016_hybrid_score": 0.4684,
-  "modern_hybrid_score": 0.4941,
-  "impact_score": 24.0,
-  "p2016_impact_score": 25.0,
-  "modern_impact_score": 26.0,
+  "review_reciprocity": 3.9245283018867925,
+  "hybrid_score": 0.5026,
+  "p2016_hybrid_score": 0.5323,
+  "modern_hybrid_score": 0.5597,
+  "impact_score": 26.0,
+  "p2016_impact_score": 27.0,
+  "modern_impact_score": 29.0,
   "threads_started": 3.0,
   "replies_sent": 1.0,
   "ml_threads": 1.0,
@@ -66,11 +74,11 @@
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.004,
-      "Infrastructure": 0.84,
-      "Mempool": 0.006,
-      "Network": 0.107,
-      "Wallet": 0.043
+      "Consensus": 0.003,
+      "Infrastructure": 0.894,
+      "Mempool": 0.004,
+      "Network": 0.071,
+      "Wallet": 0.028
     },
     "discussion": {
       "Script": 0.5,
@@ -78,10 +86,10 @@
     }
   },
   "expertise_domain_scores": {
-    "Infrastructure": 0.504,
-    "Network": 0.0642,
+    "Infrastructure": 0.5364,
+    "Network": 0.0426,
     "Script": 0.2,
-    "Wallet": 0.2258
+    "Wallet": 0.2168
   },
   "p2016_posts": 4.0,
   "modern_posts": 4.0,
@@ -89,65 +97,64 @@
   "p2016_delving_posts": 2.0,
   "modern_ml_posts": 2.0,
   "modern_delving_posts": 2.0,
-  "global_first_active": "2016-02-16T19:42:14",
-  "global_last_active": "2026-05-04T14:37:18",
+  "global_first_active": "2016-02-19T09:36:46",
+  "global_last_active": "2026-05-27T14:48:32",
   "github_location": "port 8333",
   "github_company": null,
   "github_bio": "E617\u00a073CD\u00a06E01\u00a0040E\u00a02F1B\r\nD78C\u00a0E7E2\u00a0984B\u00a06289\u00a0C93A",
   "github_twitter": null,
   "github_blog": null,
   "github_followers": 510.0,
+  "activity_status": "Steady",
   "is_top_50": false,
   "github_url": "https://github.com/pinheadmz",
   "delving_url": "https://delvingbitcoin.org/u/pinheadmz",
   "commit_history": {
     "2016": {
-      "Wallet": 1.0
+      "Wallet": 2.0
     },
     "2017": {
-      "Build & CI": 0.5,
-      "Consensus": 0.33,
-      "Node & RPC": 0.33,
-      "Tests": 0.83
+      "Build & CI": 1.0,
+      "Consensus": 0.67,
+      "Node & RPC": 0.67,
+      "Tests": 1.67
     },
     "2020": {
-      "Node & RPC": 1.0
-    },
-    "2022": {
-      "Node & RPC": 1.0
+      "Node & RPC": 2.0
     },
     "2023": {
-      "Build & CI": 1.0,
-      "Documentation": 4.33,
-      "GUI": 1.0,
-      "Node & RPC": 5.83,
-      "P2P Network": 4.17,
-      "Tests": 17.5,
-      "Utilities": 3.17,
-      "Wallet": 1.0
+      "Documentation": 2.0,
+      "Node & RPC": 2.0,
+      "Tests": 20.0,
+      "Wallet": 2.0
     },
     "2024": {
-      "Documentation": 2.33,
-      "Mempool": 0.5,
-      "Node & RPC": 2.83,
-      "P2P Network": 2.0,
-      "Tests": 6.33,
-      "Utilities": 2.0
+      "Build & CI": 14.0,
+      "Documentation": 9.33,
+      "GUI": 2.0,
+      "Node & RPC": 16.33,
+      "P2P Network": 12.33,
+      "Tests": 20.67,
+      "Utilities": 7.33
     },
     "2025": {
-      "GUI": 0.25,
-      "Node & RPC": 3.5,
-      "P2P Network": 2.33,
-      "Tests": 3.58,
-      "Utilities": 1.83,
-      "Wallet": 1.5
+      "Build & CI": 47.0,
+      "Documentation": 2.0,
+      "GUI": 0.5,
+      "Mempool": 1.0,
+      "Node & RPC": 8.0,
+      "P2P Network": 0.67,
+      "Tests": 10.17,
+      "Utilities": 2.67,
+      "Wallet": 3.0
     },
     "2026": {
-      "Documentation": 0.25,
-      "Node & RPC": 0.25,
-      "P2P Network": 0.25,
-      "Tests": 7.5,
-      "Utilities": 1.75
+      "Build & CI": 25.0,
+      "Documentation": 0.5,
+      "Node & RPC": 0.5,
+      "P2P Network": 4.5,
+      "Tests": 19.0,
+      "Utilities": 7.5
     }
   },
   "first_message": {

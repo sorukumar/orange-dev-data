@@ -19,38 +19,44 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "Tests",
   "total_commits": 12.0,
   "authored_commits": 12.0,
+  "tier1_authored_commits": 12.0,
+  "tier2_authored_commits": 0.0,
   "merge_commits": 0.0,
   "total_additions": 273.0,
   "total_deletions": 19.0,
-  "first_commit": "2016-04-25T16:08:10",
-  "last_commit": "2025-08-01T21:33:13",
+  "first_core_commit": "2016-04-26T11:21:31+00:00",
+  "last_core_commit": "2025-12-09T16:11:13+00:00",
+  "first_ecosystem_commit": null,
+  "last_ecosystem_commit": null,
+  "first_commit": "2016-04-26T11:21:31",
+  "last_commit": "2025-12-09T16:11:13",
   "p2016_authored_commits": 12.0,
   "modern_authored_commits": 4.0,
   "bips_authored": 1.0,
   "p2016_bips_authored": 1.0,
   "modern_bips_authored": 1.0,
-  "avg_review_latency_days": 1582.3410295712379,
-  "reviews_count": 51.0,
+  "avg_review_latency_days": 1419.091121886973,
+  "reviews_count": 56.0,
   "avg_approval_latency_days": 513.314119130291,
   "approvals_count": 25.0,
-  "p2016_reviews_count": 51.0,
+  "p2016_reviews_count": 56.0,
   "modern_reviews_count": 31.0,
-  "first_review_date": "2016-09-06T14:16:02+00:00",
+  "first_review_date": "2016-05-21T15:44:24+00:00",
   "last_review_date": "2026-05-01T18:27:16+00:00",
-  "prs_authored": 32.0,
+  "prs_authored": 33.0,
   "avg_pr_ack_velocity_days": 34.872457561728396,
   "avg_concept_lead_time_days": 93.17467206790123,
-  "review_reciprocity": 1.59375,
-  "hybrid_score": 0.7081,
-  "p2016_hybrid_score": 0.7553,
-  "modern_hybrid_score": 0.7146,
+  "review_reciprocity": 1.696969696969697,
+  "hybrid_score": 0.7109,
+  "p2016_hybrid_score": 0.7957,
+  "modern_hybrid_score": 0.7499,
   "impact_score": 35.0,
-  "p2016_impact_score": 36.0,
-  "modern_impact_score": 35.0,
+  "p2016_impact_score": 38.0,
+  "modern_impact_score": 36.0,
   "threads_started": 35.0,
   "replies_sent": 59.0,
   "ml_threads": 9.0,
@@ -88,7 +94,7 @@
   "p2016_delving_posts": 50.0,
   "modern_ml_posts": 12.0,
   "modern_delving_posts": 50.0,
-  "global_first_active": "2016-04-25T16:08:10",
+  "global_first_active": "2016-04-26T11:21:31",
   "global_last_active": "2026-05-02T10:26:15",
   "github_location": null,
   "github_company": null,
@@ -96,27 +102,29 @@
   "github_twitter": null,
   "github_blog": null,
   "github_followers": 106.0,
+  "activity_status": "Steady",
   "is_top_50": false,
   "github_url": "https://github.com/Christewart",
   "delving_url": "https://delvingbitcoin.org/u/chris_stewart_5",
   "commit_history": {
     "2016": {
-      "Tests": 5.0
+      "Tests": 8.0
     },
     "2017": {
-      "Utilities": 1.0
+      "Tests": 2.0,
+      "Utilities": 2.0
     },
     "2018": {
-      "Build & CI": 0.5,
-      "Tests": 1.5
+      "Build & CI": 1.0,
+      "Tests": 3.0
     },
     "2024": {
-      "Documentation": 1.0,
-      "Tests": 1.0
+      "Documentation": 2.0,
+      "Tests": 2.0
     },
     "2025": {
-      "Node & RPC": 0.5,
-      "Tests": 1.5
+      "Node & RPC": 1.0,
+      "Tests": 3.0
     }
   },
   "bip_list": [

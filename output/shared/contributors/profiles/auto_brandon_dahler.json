@@ -18,15 +18,21 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "Utilities",
   "total_commits": 4.0,
   "authored_commits": 4.0,
+  "tier1_authored_commits": 4.0,
+  "tier2_authored_commits": 0.0,
   "merge_commits": 0.0,
   "total_additions": 2086.0,
   "total_deletions": 1668.0,
-  "first_commit": "2013-04-13T05:13:08",
-  "last_commit": "2014-03-24T01:14:43",
+  "first_core_commit": "2013-11-09T17:43:28+00:00",
+  "last_core_commit": "2014-04-01T06:40:01+00:00",
+  "first_ecosystem_commit": null,
+  "last_ecosystem_commit": null,
+  "first_commit": "2013-11-09T17:43:28",
+  "last_commit": "2014-04-01T06:40:01",
   "p2016_authored_commits": 0.0,
   "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
@@ -66,17 +72,17 @@
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 0.03,
-      "Infrastructure": 0.909,
-      "Mempool": 0.03,
-      "Network": 0.03
+      "Consensus": 0.031,
+      "Infrastructure": 0.906,
+      "Mempool": 0.031,
+      "Network": 0.031
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.03,
-    "Infrastructure": 0.9099,
-    "Mempool": 0.03,
-    "Network": 0.03
+    "Consensus": 0.031,
+    "Infrastructure": 0.9069,
+    "Mempool": 0.031,
+    "Network": 0.031
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -84,31 +90,32 @@
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
-  "global_first_active": "2013-04-13T05:13:08",
-  "global_last_active": "2014-03-24T01:14:43",
+  "global_first_active": "2013-11-09T17:43:28",
+  "global_last_active": "2014-04-01T06:40:01",
   "github_location": "Raleigh, NC",
   "github_company": "Amazon Web Services",
   "github_bio": null,
   "github_twitter": null,
   "github_blog": null,
   "github_followers": 33.0,
+  "activity_status": "Steady",
   "is_top_50": false,
   "github_url": "https://github.com/brandondahler",
   "commit_history": {
     "2013": {
-      "Build & CI": 0.62,
-      "Consensus": 0.12,
-      "Documentation": 0.5,
-      "GUI": 0.12,
-      "Mempool": 0.12,
-      "Node & RPC": 0.12,
-      "P2P Network": 0.12,
-      "Tests": 0.12,
-      "Utilities": 1.12
+      "Build & CI": 1.25,
+      "Consensus": 0.25,
+      "Documentation": 1.0,
+      "GUI": 0.25,
+      "Mempool": 0.25,
+      "Node & RPC": 0.25,
+      "P2P Network": 0.25,
+      "Tests": 0.25,
+      "Utilities": 2.25
     },
     "2014": {
-      "GUI": 0.5,
-      "Utilities": 0.5
+      "GUI": 1.0,
+      "Utilities": 1.0
     }
   }
 }

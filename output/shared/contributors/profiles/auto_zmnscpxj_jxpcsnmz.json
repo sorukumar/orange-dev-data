@@ -18,13 +18,19 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "lightning",
   "total_commits": 0.0,
   "authored_commits": 0.0,
+  "tier1_authored_commits": 0.0,
+  "tier2_authored_commits": 0.0,
   "merge_commits": 0.0,
   "total_additions": null,
   "total_deletions": null,
+  "first_core_commit": null,
+  "last_core_commit": null,
+  "first_ecosystem_commit": null,
+  "last_ecosystem_commit": null,
   "first_commit": null,
   "last_commit": null,
   "p2016_authored_commits": 0.0,
@@ -46,39 +52,39 @@
   "review_reciprocity": null,
   "hybrid_score": 0.0052,
   "p2016_hybrid_score": 0.0078,
-  "modern_hybrid_score": 0.0209,
+  "modern_hybrid_score": 0.0208,
   "impact_score": 0.0,
   "p2016_impact_score": 0.0,
   "modern_impact_score": 1.0,
-  "threads_started": 57.0,
-  "replies_sent": 53.0,
+  "threads_started": 58.0,
+  "replies_sent": 54.0,
   "ml_threads": 0.0,
-  "delving_threads": 57.0,
+  "delving_threads": 58.0,
   "ml_responses": 0.0,
-  "delving_responses": 53.0,
+  "delving_responses": 54.0,
   "first_active": null,
   "last_active": null,
   "dev_type": "Participant",
   "expertise_domains": [
     "L2",
-    "Script"
+    "Wallet"
   ],
   "expertise_by_source": {
     "discussion": {
-      "L2": 0.804,
-      "Script": 0.196
+      "L2": 0.822,
+      "Wallet": 0.178
     }
   },
   "expertise_domain_scores": {
-    "L2": 0.804,
-    "Script": 0.196
+    "L2": 0.822,
+    "Wallet": 0.178
   },
-  "p2016_posts": 110.0,
-  "modern_posts": 110.0,
+  "p2016_posts": 112.0,
+  "modern_posts": 112.0,
   "p2016_ml_posts": 0.0,
-  "p2016_delving_posts": 110.0,
+  "p2016_delving_posts": 112.0,
   "modern_ml_posts": 0.0,
-  "modern_delving_posts": 110.0,
+  "modern_delving_posts": 112.0,
   "global_first_active": null,
   "global_last_active": null,
   "github_location": null,
@@ -87,6 +93,7 @@
   "github_twitter": null,
   "github_blog": null,
   "github_followers": null,
+  "activity_status": "Rising",
   "is_top_50": false,
   "delving_url": "https://delvingbitcoin.org/u/zmnscpxj",
   "first_message": {
@@ -97,9 +104,9 @@
   },
   "last_message": {
     "source": "delving",
-    "subject": "Towards A K-of-N Lightning Network Node",
-    "date": "2026-04-08",
-    "link": "https://delvingbitcoin.org/t/towards-a-k-of-n-lightning-network-node/2395/1"
+    "subject": "Re: Towards A K-of-N Lightning Network Node",
+    "date": "2026-06-17",
+    "link": "https://delvingbitcoin.org/t/towards-a-k-of-n-lightning-network-node/2395/4"
   },
   "social_history": {
     "2023": {
@@ -133,8 +140,8 @@
       "other": 13,
       "covenants": 3,
       "l2-bridges": 1,
-      "lightning": 7,
-      "multisig-threshold": 8
+      "lightning": 9,
+      "multisig-threshold": 10
     }
   }
 }

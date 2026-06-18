@@ -19,21 +19,27 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "Build & CI",
   "total_commits": 5.0,
   "authored_commits": 5.0,
+  "tier1_authored_commits": 5.0,
+  "tier2_authored_commits": 0.0,
   "merge_commits": 0.0,
   "total_additions": 54.0,
   "total_deletions": 14.0,
-  "first_commit": "2017-07-27T12:34:09",
-  "last_commit": "2019-09-12T11:07:53",
+  "first_core_commit": "2017-08-07T15:13:49+00:00",
+  "last_core_commit": "2019-09-15T18:06:26+00:00",
+  "first_ecosystem_commit": null,
+  "last_ecosystem_commit": null,
+  "first_commit": "2017-08-07T15:13:49",
+  "last_commit": "2019-09-15T18:06:26",
   "p2016_authored_commits": 5.0,
   "modern_authored_commits": 0.0,
   "bips_authored": 1.0,
   "p2016_bips_authored": 1.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": 216.21750707304528,
+  "avg_review_latency_days": 215.76915547415547,
   "reviews_count": 33.0,
   "avg_approval_latency_days": 16.0171148989899,
   "approvals_count": 11.0,
@@ -46,10 +52,10 @@
   "avg_concept_lead_time_days": 0.10553819444444446,
   "review_reciprocity": 1.65,
   "hybrid_score": 0.651,
-  "p2016_hybrid_score": 0.6904,
+  "p2016_hybrid_score": 0.7253,
   "modern_hybrid_score": 0.0865,
   "impact_score": 32.0,
-  "p2016_impact_score": 34.0,
+  "p2016_impact_score": 35.0,
   "modern_impact_score": 5.0,
   "threads_started": 4.0,
   "replies_sent": 43.0,
@@ -96,19 +102,20 @@
   "github_twitter": null,
   "github_blog": null,
   "github_followers": 162.0,
+  "activity_status": "Retired",
   "is_top_50": false,
   "github_url": "https://github.com/jameshilliard",
   "commit_history": {
     "2017": {
-      "Build & CI": 0.5,
-      "Utilities": 0.5
+      "Build & CI": 1.0,
+      "Utilities": 1.0
     },
     "2018": {
-      "Build & CI": 2.0,
-      "GUI": 1.0
+      "Build & CI": 4.0,
+      "GUI": 2.0
     },
     "2019": {
-      "GUI": 1.0
+      "GUI": 2.0
     }
   },
   "bip_list": [

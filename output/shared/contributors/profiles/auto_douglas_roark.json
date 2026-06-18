@@ -18,37 +18,43 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "Documentation",
   "total_commits": 13.0,
   "authored_commits": 13.0,
+  "tier1_authored_commits": 13.0,
+  "tier2_authored_commits": 0.0,
   "merge_commits": 0.0,
   "total_additions": 180.0,
   "total_deletions": 156.0,
-  "first_commit": "2014-07-30T20:04:40",
-  "last_commit": "2019-03-16T23:33:39",
+  "first_core_commit": "2014-08-04T15:16:00+00:00",
+  "last_core_commit": "2019-03-17T10:05:16+00:00",
+  "first_ecosystem_commit": null,
+  "last_ecosystem_commit": null,
+  "first_commit": "2014-08-04T15:16:00",
+  "last_commit": "2019-03-17T10:05:16",
   "p2016_authored_commits": 12.0,
   "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": 167.10490997942387,
-  "reviews_count": 27.0,
-  "avg_approval_latency_days": 34.19514351851852,
-  "approvals_count": 8.0,
+  "avg_review_latency_days": 186.47504346182916,
+  "reviews_count": 29.0,
+  "avg_approval_latency_days": 143.3663242669753,
+  "approvals_count": 9.0,
   "p2016_reviews_count": 26.0,
   "modern_reviews_count": 1.0,
-  "first_review_date": "2015-08-25T15:54:56+00:00",
+  "first_review_date": "2015-02-02T04:16:12+00:00",
   "last_review_date": "2024-02-13T21:25:13+00:00",
   "prs_authored": 18.0,
   "avg_pr_ack_velocity_days": 5.737404927248677,
   "avg_concept_lead_time_days": 14.754984567901234,
-  "review_reciprocity": 1.5,
-  "hybrid_score": 0.3081,
-  "p2016_hybrid_score": 0.3008,
+  "review_reciprocity": 1.6111111111111112,
+  "hybrid_score": 0.31,
+  "p2016_hybrid_score": 0.3386,
   "modern_hybrid_score": 0.0865,
   "impact_score": 17.0,
-  "p2016_impact_score": 17.0,
+  "p2016_impact_score": 18.0,
   "modern_impact_score": 5.0,
   "threads_started": 1.0,
   "replies_sent": 16.0,
@@ -84,36 +90,35 @@
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
-  "global_first_active": "2014-07-30T20:04:40",
-  "global_last_active": "2019-03-16T23:33:39",
+  "global_first_active": "2014-08-04T15:16:00",
+  "global_last_active": "2019-03-17T10:05:16",
   "github_location": "Austin, TX",
   "github_company": null,
   "github_bio": "Cryptocurrency developer (wallets, core pieces, misc. tools) by day, tech nerd and bike stuff by night.",
   "github_twitter": null,
   "github_blog": "https://www.linkedin.com/in/douglasroarkengineer/",
   "github_followers": 41.0,
+  "activity_status": "Retired",
   "is_top_50": false,
   "github_url": "https://github.com/droark",
   "commit_history": {
     "2014": {
-      "GUI": 1.0
+      "GUI": 2.0
     },
     "2016": {
-      "Build & CI": 2.0,
-      "Documentation": 2.0,
-      "Tests": 1.0,
-      "Utilities": 1.0
+      "Build & CI": 4.0,
+      "Tests": 2.0
     },
     "2017": {
-      "Documentation": 0.5,
-      "P2P Network": 1.0,
-      "Utilities": 0.5
+      "Documentation": 5.0,
+      "P2P Network": 2.0,
+      "Utilities": 3.0
     },
     "2018": {
-      "Build & CI": 2.0
+      "Build & CI": 4.0
     },
     "2019": {
-      "Documentation": 2.0
+      "Documentation": 4.0
     }
   },
   "first_message": {

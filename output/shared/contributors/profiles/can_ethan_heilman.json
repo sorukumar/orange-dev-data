@@ -19,21 +19,27 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "Tests",
   "total_commits": 13.0,
   "authored_commits": 13.0,
+  "tier1_authored_commits": 13.0,
+  "tier2_authored_commits": 0.0,
   "merge_commits": 0.0,
   "total_additions": 1275.0,
   "total_deletions": 93.0,
-  "first_commit": "2015-09-22T19:24:16",
-  "last_commit": "2025-03-20T23:00:34",
+  "first_core_commit": "2015-10-07T12:43:38+00:00",
+  "last_core_commit": "2025-04-21T18:50:48+00:00",
+  "first_ecosystem_commit": null,
+  "last_ecosystem_commit": null,
+  "first_commit": "2015-10-07T12:43:38",
+  "last_commit": "2025-04-21T18:50:48",
   "p2016_authored_commits": 11.0,
   "modern_authored_commits": 2.0,
   "bips_authored": 2.0,
   "p2016_bips_authored": 2.0,
   "modern_bips_authored": 2.0,
-  "avg_review_latency_days": 1534.0881433256172,
+  "avg_review_latency_days": 1422.5611926200565,
   "reviews_count": 30.0,
   "avg_approval_latency_days": 76.3419201388889,
   "approvals_count": 8.0,
@@ -46,11 +52,11 @@
   "avg_concept_lead_time_days": 45.90123842592593,
   "review_reciprocity": 1.5789473684210527,
   "hybrid_score": 0.9783,
-  "p2016_hybrid_score": 1.0684,
-  "modern_hybrid_score": 1.0986,
+  "p2016_hybrid_score": 1.1106,
+  "modern_hybrid_score": 1.1309,
   "impact_score": 44.0,
-  "p2016_impact_score": 47.0,
-  "modern_impact_score": 48.0,
+  "p2016_impact_score": 49.0,
+  "modern_impact_score": 49.0,
   "threads_started": 17.0,
   "replies_sent": 83.0,
   "ml_threads": 13.0,
@@ -100,35 +106,37 @@
   "github_twitter": null,
   "github_blog": "https://ethanheilman.com",
   "github_followers": 274.0,
+  "activity_status": "Steady",
   "is_top_50": false,
   "github_url": "https://github.com/EthanHeilman",
   "delving_url": "https://delvingbitcoin.org/u/ethanheilman",
   "commit_history": {
     "2015": {
-      "Build & CI": 0.33,
-      "P2P Network": 0.83,
-      "Tests": 0.83
+      "Build & CI": 0.67,
+      "P2P Network": 0.67,
+      "Tests": 0.67
     },
     "2016": {
-      "Build & CI": 0.33,
-      "P2P Network": 1.17,
-      "Tests": 3.17,
-      "Utilities": 0.33
+      "Build & CI": 0.67,
+      "P2P Network": 2.33,
+      "Tests": 6.33,
+      "Utilities": 0.67
     },
     "2018": {
-      "P2P Network": 1.0
+      "P2P Network": 3.0,
+      "Tests": 1.0
     },
     "2020": {
-      "Utilities": 1.0
+      "Utilities": 2.0
     },
     "2021": {
-      "Build & CI": 1.0
+      "Build & CI": 2.0
     },
     "2023": {
-      "Build & CI": 1.0
+      "Build & CI": 2.0
     },
     "2025": {
-      "Tests": 2.0
+      "Tests": 4.0
     }
   },
   "bip_list": [

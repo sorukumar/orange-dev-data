@@ -18,15 +18,21 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "Node & RPC",
   "total_commits": 7.0,
   "authored_commits": 7.0,
+  "tier1_authored_commits": 7.0,
+  "tier2_authored_commits": 0.0,
   "merge_commits": 0.0,
   "total_additions": 323.0,
   "total_deletions": 64.0,
-  "first_commit": "2021-09-23T08:37:24",
-  "last_commit": "2023-01-25T19:11:21",
+  "first_core_commit": "2021-09-23T13:07:16+00:00",
+  "last_core_commit": "2023-03-08T07:49:59+00:00",
+  "first_ecosystem_commit": null,
+  "last_ecosystem_commit": null,
+  "first_commit": "2021-09-23T13:07:16",
+  "last_commit": "2023-03-08T07:49:59",
   "p2016_authored_commits": 7.0,
   "modern_authored_commits": 0.0,
   "bips_authored": 0.0,
@@ -45,11 +51,11 @@
   "avg_concept_lead_time_days": 2.246747685185185,
   "review_reciprocity": 0.21428571428571427,
   "hybrid_score": 0.2065,
-  "p2016_hybrid_score": 0.2065,
-  "modern_hybrid_score": 0.115,
+  "p2016_hybrid_score": 0.2428,
+  "modern_hybrid_score": 0.1384,
   "impact_score": 12.0,
-  "p2016_impact_score": 12.0,
-  "modern_impact_score": 7.0,
+  "p2016_impact_score": 14.0,
+  "modern_impact_score": 8.0,
   "threads_started": 0.0,
   "replies_sent": 0.0,
   "ml_threads": 0.0,
@@ -82,30 +88,32 @@
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
-  "global_first_active": "2021-09-23T08:37:24",
-  "global_last_active": "2023-01-25T19:11:21",
+  "global_first_active": "2021-09-23T13:07:16",
+  "global_last_active": "2023-03-08T07:49:59",
   "github_location": "The Ether",
   "github_company": null,
   "github_bio": "Engineer. \r\nAutomate All The Things.",
   "github_twitter": "EfishDoug",
   "github_blog": "https://resume.dougchimento.com/",
   "github_followers": 40.0,
+  "activity_status": "Retired",
   "is_top_50": false,
   "github_url": "https://github.com/dougEfresh",
   "commit_history": {
     "2021": {
-      "Consensus": 1.0,
-      "Documentation": 0.2,
-      "Node & RPC": 0.7,
-      "P2P Network": 1.2,
-      "Tests": 1.7,
-      "Utilities": 0.2
+      "Consensus": 2.0,
+      "Documentation": 0.4,
+      "Node & RPC": 0.4,
+      "P2P Network": 2.4,
+      "Tests": 2.4,
+      "Utilities": 0.4
     },
     "2022": {
-      "Node & RPC": 1.0
+      "Node & RPC": 3.0,
+      "Tests": 1.0
     },
     "2023": {
-      "Node & RPC": 1.0
+      "Node & RPC": 2.0
     }
   }
 }

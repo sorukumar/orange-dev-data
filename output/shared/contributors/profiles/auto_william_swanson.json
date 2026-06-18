@@ -1,5 +1,5 @@
 {
-  "display_name": "william swanson",
+  "display_name": "William Swanson",
   "github_login_final": "swansontec",
   "delving_username_final": null,
   "uuid": "auto_william_swanson",
@@ -19,36 +19,42 @@
     "BIP Author"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
-  "technical_focus": "None",
-  "total_commits": 0.0,
-  "authored_commits": 0.0,
+  "last_seen": "2026-06-18T00:00:00",
+  "technical_focus": "Utilities",
+  "total_commits": 1.0,
+  "authored_commits": 1.0,
+  "tier1_authored_commits": 1.0,
+  "tier2_authored_commits": 0.0,
   "merge_commits": 0.0,
-  "total_additions": null,
-  "total_deletions": null,
-  "first_commit": null,
-  "last_commit": null,
+  "total_additions": 10.0,
+  "total_deletions": 2.0,
+  "first_core_commit": "2014-05-08T18:09:30+00:00",
+  "last_core_commit": "2014-05-08T18:09:30+00:00",
+  "first_ecosystem_commit": null,
+  "last_ecosystem_commit": null,
+  "first_commit": "2014-05-08T18:09:30",
+  "last_commit": "2014-05-08T18:09:30",
   "p2016_authored_commits": 0.0,
   "modern_authored_commits": 0.0,
   "bips_authored": 1.0,
   "p2016_bips_authored": 1.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": 1153.302398148148,
-  "reviews_count": 1.0,
+  "avg_review_latency_days": 856.8866021825397,
+  "reviews_count": 2.0,
   "avg_approval_latency_days": null,
   "approvals_count": 0.0,
   "p2016_reviews_count": 0.0,
   "modern_reviews_count": 0.0,
   "first_review_date": "2014-03-07T16:55:00+00:00",
-  "last_review_date": "2014-03-18T15:50:32+00:00",
-  "prs_authored": 1.0,
-  "avg_pr_ack_velocity_days": null,
+  "last_review_date": "2014-05-08T18:39:35+00:00",
+  "prs_authored": 2.0,
+  "avg_pr_ack_velocity_days": 0.026296296296296297,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 1.0,
-  "hybrid_score": 0.4161,
-  "p2016_hybrid_score": 0.3646,
-  "modern_hybrid_score": 0.0146,
-  "impact_score": 22.0,
+  "hybrid_score": 0.473,
+  "p2016_hybrid_score": 0.375,
+  "modern_hybrid_score": 0.025,
+  "impact_score": 25.0,
   "p2016_impact_score": 20.0,
   "modern_impact_score": 1.0,
   "threads_started": 1.0,
@@ -59,14 +65,18 @@
   "delving_responses": 0.0,
   "first_active": "2014-03-06T16:38:40",
   "last_active": "2015-06-12T14:42:46",
-  "dev_type": "Participant",
+  "dev_type": "Builder",
   "expertise_domains": [
     "Script",
+    "Infrastructure",
     "Wallet"
   ],
   "expertise_by_source": {
     "bips": {
       "Script": 1.0
+    },
+    "code": {
+      "Infrastructure": 1.0
     },
     "discussion": {
       "Script": 0.254,
@@ -74,8 +84,9 @@
     }
   },
   "expertise_domain_scores": {
-    "Script": 0.7869,
-    "Wallet": 0.2131
+    "Infrastructure": 0.3,
+    "Script": 0.5508,
+    "Wallet": 0.1492
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -91,8 +102,14 @@
   "github_twitter": null,
   "github_blog": null,
   "github_followers": 83.0,
+  "activity_status": "Fading",
   "is_top_50": false,
   "github_url": "https://github.com/swansontec",
+  "commit_history": {
+    "2014": {
+      "Utilities": 1.0
+    }
+  },
   "bip_list": [
     {
       "number": 124,

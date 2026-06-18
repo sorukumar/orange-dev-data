@@ -19,38 +19,44 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "Utilities",
   "total_commits": 20.0,
   "authored_commits": 20.0,
+  "tier1_authored_commits": 20.0,
+  "tier2_authored_commits": 0.0,
   "merge_commits": 0.0,
   "total_additions": 794.0,
   "total_deletions": 418.0,
-  "first_commit": "2012-09-25T23:40:34",
-  "last_commit": "2023-12-21T00:24:37",
+  "first_core_commit": "2012-09-28T05:48:27+00:00",
+  "last_core_commit": "2024-01-16T19:57:14+00:00",
+  "first_ecosystem_commit": null,
+  "last_ecosystem_commit": null,
+  "first_commit": "2012-09-28T05:48:27",
+  "last_commit": "2024-01-16T19:57:14",
   "p2016_authored_commits": 6.0,
   "modern_authored_commits": 2.0,
   "bips_authored": 6.0,
   "p2016_bips_authored": 3.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": 332.38684101430977,
-  "reviews_count": 80.0,
-  "avg_approval_latency_days": 209.05166898148147,
+  "avg_review_latency_days": 338.94096714933016,
+  "reviews_count": 81.0,
+  "avg_approval_latency_days": 209.40845168757468,
   "approvals_count": 25.0,
   "p2016_reviews_count": 39.0,
   "modern_reviews_count": 4.0,
   "first_review_date": "2013-07-22T21:16:34+00:00",
   "last_review_date": "2026-01-20T23:03:59+00:00",
-  "prs_authored": 37.0,
-  "avg_pr_ack_velocity_days": 13.248227237654321,
+  "prs_authored": 36.0,
+  "avg_pr_ack_velocity_days": 14.027510893246188,
   "avg_concept_lead_time_days": 23.853353587962964,
-  "review_reciprocity": 2.1621621621621623,
-  "hybrid_score": 1.6742,
-  "p2016_hybrid_score": 1.1504,
-  "modern_hybrid_score": 0.2196,
+  "review_reciprocity": 2.25,
+  "hybrid_score": 1.6744,
+  "p2016_hybrid_score": 1.1938,
+  "modern_hybrid_score": 0.2675,
   "impact_score": 63.0,
-  "p2016_impact_score": 50.0,
-  "modern_impact_score": 12.0,
+  "p2016_impact_score": 51.0,
+  "modern_impact_score": 15.0,
   "threads_started": 14.0,
   "replies_sent": 272.0,
   "ml_threads": 14.0,
@@ -100,48 +106,51 @@
   "github_twitter": null,
   "github_blog": null,
   "github_followers": 161.0,
+  "activity_status": "Fading",
   "is_top_50": false,
   "github_url": "https://github.com/maaku",
   "commit_history": {
     "2012": {
-      "Utilities": 1.0
+      "Utilities": 2.0
     },
     "2013": {
-      "Documentation": 1.0,
-      "Utilities": 1.0
+      "Documentation": 2.0
     },
     "2014": {
-      "Build & CI": 0.14,
-      "Consensus": 0.14,
-      "GUI": 0.64,
-      "Mempool": 0.14,
-      "Node & RPC": 0.14,
-      "Tests": 0.14,
-      "Utilities": 2.64
+      "Build & CI": 0.29,
+      "Consensus": 0.29,
+      "GUI": 1.29,
+      "Mempool": 0.29,
+      "Node & RPC": 0.29,
+      "Tests": 0.29,
+      "Utilities": 7.29
     },
     "2015": {
-      "Consensus": 0.83,
-      "Mempool": 1.17,
-      "Script": 1.33,
-      "Tests": 2.33,
-      "Utilities": 1.33
+      "Consensus": 1.67,
+      "Mempool": 1.67,
+      "Script": 2.0,
+      "Tests": 4.0,
+      "Utilities": 2.67
+    },
+    "2016": {
+      "Mempool": 0.67,
+      "Script": 0.67,
+      "Tests": 0.67
     },
     "2017": {
-      "Script": 1.0,
-      "Tests": 0.5,
-      "Utilities": 0.5
+      "Script": 2.0,
+      "Tests": 1.0,
+      "Utilities": 1.0
     },
     "2018": {
-      "Script": 0.5,
-      "Tests": 0.5
+      "Script": 1.0,
+      "Tests": 1.0
     },
-    "2022": {
-      "Build & CI": 0.5,
-      "Tests": 0.5
-    },
-    "2023": {
-      "Consensus": 1.0,
-      "Utilities": 1.0
+    "2024": {
+      "Build & CI": 1.0,
+      "Consensus": 2.0,
+      "Tests": 1.0,
+      "Utilities": 2.0
     }
   },
   "bip_list": [

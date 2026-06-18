@@ -19,38 +19,44 @@
     "Researcher"
   ],
   "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-15T00:00:00",
+  "last_seen": "2026-06-18T00:00:00",
   "technical_focus": "Utilities",
   "total_commits": 106.0,
   "authored_commits": 106.0,
+  "tier1_authored_commits": 106.0,
+  "tier2_authored_commits": 0.0,
   "merge_commits": 0.0,
   "total_additions": 4830.0,
   "total_deletions": 846.0,
-  "first_commit": "2012-04-28T20:29:27",
-  "last_commit": "2025-04-28T20:22:59",
+  "first_core_commit": "2012-05-05T19:34:46+00:00",
+  "last_core_commit": "2025-06-09T12:23:56+00:00",
+  "first_ecosystem_commit": null,
+  "last_ecosystem_commit": null,
+  "first_commit": "2012-05-05T19:34:46",
+  "last_commit": "2025-06-09T12:23:56",
   "p2016_authored_commits": 15.0,
   "modern_authored_commits": 4.0,
   "bips_authored": 4.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
-  "avg_review_latency_days": 140.12815159052928,
-  "reviews_count": 425.0,
-  "avg_approval_latency_days": 129.21408667170573,
+  "avg_review_latency_days": 140.2855125631691,
+  "reviews_count": 427.0,
+  "avg_approval_latency_days": 130.71900637522768,
   "approvals_count": 253.0,
   "p2016_reviews_count": 159.0,
   "modern_reviews_count": 30.0,
   "first_review_date": "2012-12-19T17:39:21+00:00",
   "last_review_date": "2026-01-30T21:28:35+00:00",
   "prs_authored": 99.0,
-  "avg_pr_ack_velocity_days": 15.469712661030595,
+  "avg_pr_ack_velocity_days": 15.906767326038159,
   "avg_concept_lead_time_days": 24.905620659722224,
-  "review_reciprocity": 4.292929292929293,
-  "hybrid_score": 1.6547,
-  "p2016_hybrid_score": 0.7028,
-  "modern_hybrid_score": 0.6012,
+  "review_reciprocity": 4.313131313131313,
+  "hybrid_score": 1.6548,
+  "p2016_hybrid_score": 0.7445,
+  "modern_hybrid_score": 0.6351,
   "impact_score": 63.0,
-  "p2016_impact_score": 34.0,
-  "modern_impact_score": 30.0,
+  "p2016_impact_score": 36.0,
+  "modern_impact_score": 32.0,
   "threads_started": 116.0,
   "replies_sent": 1164.0,
   "ml_threads": 116.0,
@@ -105,58 +111,60 @@
   "github_twitter": null,
   "github_blog": "https://petertodd.org",
   "github_followers": 2188.0,
+  "activity_status": "Steady",
   "is_top_50": false,
   "github_url": "https://github.com/petertodd",
   "commit_history": {
     "2012": {
-      "Documentation": 1.0,
-      "Utilities": 1.0
+      "Documentation": 2.0,
+      "Utilities": 2.0
     },
     "2013": {
-      "Documentation": 1.0,
-      "GUI": 1.0,
-      "P2P Network": 1.0,
-      "Tests": 5.0,
-      "Utilities": 10.0
+      "Documentation": 2.0,
+      "GUI": 2.0,
+      "P2P Network": 2.0,
+      "Tests": 10.0,
+      "Utilities": 18.0
     },
     "2014": {
-      "Consensus": 0.5,
-      "Documentation": 1.0,
-      "GUI": 0.33,
-      "Mempool": 0.33,
-      "P2P Network": 1.0,
-      "Script": 7.83,
-      "Tests": 12.67,
-      "Utilities": 14.33
+      "Documentation": 2.0,
+      "GUI": 0.67,
+      "P2P Network": 2.0,
+      "Script": 6.0,
+      "Tests": 22.67,
+      "Utilities": 28.67
     },
     "2015": {
-      "Consensus": 0.33,
-      "Documentation": 3.5,
-      "GUI": 0.25,
-      "P2P Network": 0.83,
-      "Script": 0.83,
-      "Tests": 1.08,
-      "Utilities": 20.92,
-      "Wallet": 5.25
+      "Consensus": 1.67,
+      "Documentation": 7.0,
+      "GUI": 0.5,
+      "Mempool": 0.67,
+      "P2P Network": 1.67,
+      "Script": 11.33,
+      "Tests": 4.83,
+      "Utilities": 43.83,
+      "Wallet": 8.5
     },
     "2016": {
-      "Consensus": 1.0,
-      "Documentation": 2.0,
-      "Utilities": 6.0
+      "Consensus": 2.0,
+      "Documentation": 4.0,
+      "Utilities": 12.0,
+      "Wallet": 2.0
     },
     "2017": {
-      "Consensus": 1.0,
-      "Utilities": 1.0
+      "Consensus": 2.0,
+      "Utilities": 2.0
     },
     "2023": {
-      "Consensus": 1.5,
-      "Tests": 0.5
+      "Consensus": 2.0
     },
     "2024": {
-      "Documentation": 1.0
+      "Consensus": 1.0,
+      "Documentation": 2.0,
+      "Tests": 1.0
     },
     "2025": {
-      "Tests": 1.0
+      "Tests": 2.0
     }
   },
   "bip_list": [
