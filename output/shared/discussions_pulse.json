@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-22T09:38:13.754643",
+  "generated_at": "2026-06-22T12:00:05.018176",
   "windows": {
     "30d": {
       "window_days": 30,
-      "total_messages": 249,
-      "total_threads": 129,
-      "unique_voices": 85,
+      "total_messages": 251,
+      "total_threads": 128,
+      "unique_voices": 86,
       "themes": [
         {
           "category": "quantum",
@@ -13,16 +13,16 @@
           "msgs": 64,
           "threads": 22,
           "voices": 22,
-          "share": 29.8,
+          "share": 29.2,
           "trend": "steady"
         },
         {
           "category": "privacy",
           "label": "Privacy",
-          "msgs": 24,
+          "msgs": 28,
           "threads": 12,
           "voices": 14,
-          "share": 11.2,
+          "share": 12.8,
           "trend": "rising"
         },
         {
@@ -31,16 +31,16 @@
           "msgs": 24,
           "threads": 11,
           "voices": 12,
-          "share": 11.2,
+          "share": 11.0,
           "trend": "rising"
         },
         {
           "category": "mining",
           "label": "Mining Protocol",
-          "msgs": 16,
+          "msgs": 17,
           "threads": 5,
-          "voices": 7,
-          "share": 7.4,
+          "voices": 8,
+          "share": 7.8,
           "trend": "new"
         },
         {
@@ -49,17 +49,8 @@
           "msgs": 14,
           "threads": 1,
           "voices": 7,
-          "share": 6.5,
+          "share": 6.4,
           "trend": "new"
-        },
-        {
-          "category": "taproot",
-          "label": "Taproot",
-          "msgs": 12,
-          "threads": 5,
-          "voices": 6,
-          "share": 5.6,
-          "trend": "rising"
         },
         {
           "category": "testing-devtools",
@@ -67,8 +58,17 @@
           "msgs": 10,
           "threads": 5,
           "voices": 7,
-          "share": 4.7,
+          "share": 4.6,
           "trend": "fading"
+        },
+        {
+          "category": "taproot",
+          "label": "Taproot",
+          "msgs": 10,
+          "threads": 5,
+          "voices": 5,
+          "share": 4.6,
+          "trend": "steady"
         },
         {
           "category": "covenants",
@@ -89,13 +89,13 @@
           "trend": "steady"
         },
         {
-          "category": "mempool-fees",
-          "label": "Mempool & Fees",
+          "category": "wallet-keys",
+          "label": "Wallet & Keys",
           "msgs": 7,
           "threads": 6,
-          "voices": 5,
-          "share": 3.3,
-          "trend": "new"
+          "voices": 3,
+          "share": 3.2,
+          "trend": "steady"
         }
       ],
       "hot_threads": [
@@ -126,6 +126,32 @@
           "snippet": "Motivation\nBitcoin has one of the richest open-source knowledge bases in existence. Every BIP, every mailing list thread, every Delving\u2026"
         },
         {
+          "thread_id": "topic_2622",
+          "subject": "State of the transaction privacy work in Bitcoin",
+          "category": "privacy",
+          "label": "Privacy",
+          "reply_count": 5,
+          "unique_authors": 5,
+          "score": 25,
+          "last_post": "2026-06-22",
+          "source": "delving",
+          "link": "https://delvingbitcoin.org/t/state-of-the-transaction-privacy-work-in-bitcoin/2622/13",
+          "snippet": "I would like to better understand what\u2019s happening around transaction privacy in Bitcoin.\nMy perception is that it\u2019s all happening in\u2026"
+        },
+        {
+          "thread_id": "<f97afcc5-54ba-4284-8e9b-e8c35c7101f6n@googlegroups.com>",
+          "subject": "Prohibit Merkle Internal Node Preimages That Encode\n Minimal 64-Byte Transactions",
+          "category": "mining",
+          "label": "Mining Protocol",
+          "reply_count": 4,
+          "unique_authors": 4,
+          "score": 16,
+          "last_post": "2026-06-22",
+          "source": "mailing_list",
+          "link": "https://gnusha.org/pi/bitcoindev/8FEEF72A-92A3-48A9-AC49-43107D17B090@sprovoost.nl",
+          "snippet": "Esteemed Colleagues,  As a result of some of my research on 64-byte transactions, I'd like to  discuss an alternative soft fork proposal\u2026"
+        },
+        {
           "thread_id": "topic_2624",
           "subject": "Fountain Codes: a way to reduce blockchain storage costs",
           "category": "mining",
@@ -137,19 +163,6 @@
           "source": "delving",
           "link": "https://delvingbitcoin.org/t/fountain-codes-a-way-to-reduce-blockchain-storage-costs/2624/9",
           "snippet": "Over the past few months, I have been conducting research on the application of Fountain Codes in Bitcoin, together with\u2026"
-        },
-        {
-          "thread_id": "topic_2514",
-          "subject": "Bird of Prey 2: non-malleable Schnorr + PQ signatures",
-          "category": "taproot",
-          "label": "Taproot",
-          "reply_count": 5,
-          "unique_authors": 3,
-          "score": 15,
-          "last_post": "2026-06-06",
-          "source": "delving",
-          "link": "https://delvingbitcoin.org/t/bird-of-prey-2-non-malleable-schnorr-pq-signatures/2514/8",
-          "snippet": "Thanks for flagging that.\nSeems like a pretty important paper.\nThe way I\u2019m getting the gist here is: \u2018default\u2019 stuff out there, in\u2026"
         },
         {
           "thread_id": "topic_2215",
@@ -189,19 +202,6 @@
           "source": "mailing_list",
           "link": "https://gnusha.org/pi/bitcoindev/aiKYWu7Osn5hIJFP@erisian.com.au",
           "snippet": "Dear list, I am sharing a BIP draft for a new Testnet5. People are complaining about Testnet4 being difficult to use, the new testnet\u2026"
-        },
-        {
-          "thread_id": "<f97afcc5-54ba-4284-8e9b-e8c35c7101f6n@googlegroups.com>",
-          "subject": "Re: Prohibit Merkle Internal Node Preimages That Encode\n Minimal 64-Byte Transactions",
-          "category": "mining",
-          "label": "Mining Protocol",
-          "reply_count": 3,
-          "unique_authors": 3,
-          "score": 9,
-          "last_post": "2026-06-16",
-          "source": "mailing_list",
-          "link": "https://gnusha.org/pi/bitcoindev/2cae3f35-2058-4e41-8fe9-d2ef06259e0dn@googlegroups.com",
-          "snippet": "Esteemed Colleagues,  As a result of some of my research on 64-byte transactions, I'd like to  discuss an alternative soft fork proposal\u2026"
         }
       ],
       "top_bips": [
@@ -213,7 +213,7 @@
         {
           "bip_id": "39",
           "title": "Mnemonic code for generating deterministic keys",
-          "mentions": 27
+          "mentions": 28
         },
         {
           "bip_id": "32",
@@ -228,19 +228,19 @@
         {
           "bip_id": "441",
           "title": "Restoration of disabled script (Tapleaf 0xC2)",
-          "mentions": 9
+          "mentions": 13
         },
         {
-          "bip_id": "340",
-          "title": "Schnorr Signatures for secp256k1",
-          "mentions": 8
+          "bip_id": "125",
+          "title": "Opt-in Full Replace-by-Fee Signaling",
+          "mentions": 6
         }
       ],
       "top_voices": [
         {
           "name": "conduition",
           "uuid": "auto_conduition",
-          "posts": 28
+          "posts": 27
         },
         {
           "name": "Anthony Towns",
@@ -255,7 +255,7 @@
         {
           "name": "Pieter Wuille",
           "uuid": "can_pieter_wuille",
-          "posts": 13
+          "posts": 12
         },
         {
           "name": "opus lux",
@@ -279,21 +279,21 @@
         }
       ],
       "source_pct": {
-        "delving": 55.0,
-        "mailing_list": 45.0
+        "delving": 55.8,
+        "mailing_list": 44.2
       },
       "source_counts": {
-        "delving": 137,
-        "mailing_list": 112
+        "delving": 140,
+        "mailing_list": 111
       },
       "mailing_list_stale": false,
       "mailing_list_days_since": null
     },
     "90d": {
       "window_days": 90,
-      "total_messages": 749,
-      "total_threads": 363,
-      "unique_voices": 207,
+      "total_messages": 755,
+      "total_threads": 364,
+      "unique_voices": 208,
       "themes": [
         {
           "category": "quantum",
@@ -301,7 +301,7 @@
           "msgs": 177,
           "threads": 83,
           "voices": 58,
-          "share": 26.9,
+          "share": 26.7,
           "trend": "steady"
         },
         {
@@ -310,16 +310,16 @@
           "msgs": 67,
           "threads": 9,
           "voices": 31,
-          "share": 10.2,
+          "share": 10.1,
           "trend": "fading"
         },
         {
           "category": "privacy",
           "label": "Privacy",
-          "msgs": 50,
+          "msgs": 54,
           "threads": 16,
           "voices": 24,
-          "share": 7.6,
+          "share": 8.1,
           "trend": "rising"
         },
         {
@@ -328,7 +328,7 @@
           "msgs": 42,
           "threads": 18,
           "voices": 15,
-          "share": 6.4,
+          "share": 6.3,
           "trend": "fading"
         },
         {
@@ -337,7 +337,7 @@
           "msgs": 34,
           "threads": 16,
           "voices": 15,
-          "share": 5.2,
+          "share": 5.1,
           "trend": "rising"
         },
         {
@@ -356,16 +356,16 @@
           "threads": 19,
           "voices": 16,
           "share": 4.4,
-          "trend": "rising"
+          "trend": "steady"
         },
         {
           "category": "wallet-keys",
           "label": "Wallet & Keys",
-          "msgs": 24,
-          "threads": 18,
-          "voices": 15,
-          "share": 3.6,
-          "trend": "fading"
+          "msgs": 25,
+          "threads": 19,
+          "voices": 16,
+          "share": 3.8,
+          "trend": "steady"
         },
         {
           "category": "core-dev",
@@ -466,6 +466,19 @@
           "snippet": "BIP-110 update: v0.4.1 release and implementation submitted to Bitcoin Core\nHi all,\nFollowing up on the BIP-110 proposal from October, I\u2026"
         },
         {
+          "thread_id": "topic_2622",
+          "subject": "State of the transaction privacy work in Bitcoin",
+          "category": "privacy",
+          "label": "Privacy",
+          "reply_count": 5,
+          "unique_authors": 5,
+          "score": 25,
+          "last_post": "2026-06-22",
+          "source": "delving",
+          "link": "https://delvingbitcoin.org/t/state-of-the-transaction-privacy-work-in-bitcoin/2622/13",
+          "snippet": "I would like to better understand what\u2019s happening around transaction privacy in Bitcoin.\nMy perception is that it\u2019s all happening in\u2026"
+        },
+        {
           "thread_id": "topic_2498",
           "subject": "QCAP: A Bitcoin-Native Quantum Canary Alert",
           "category": "quantum",
@@ -477,19 +490,6 @@
           "source": "delving",
           "link": "https://delvingbitcoin.org/t/qcap-a-bitcoin-native-quantum-canary-alert/2498/9",
           "snippet": "Bitcoin\u2019s security depends on the computational hardness of the discrete logarithm problem over elliptic curves (ECDLP). A sufficiently\u2026"
-        },
-        {
-          "thread_id": "topic_2497",
-          "subject": "TCP hole punching for Bitcoin nodes behind home NATs?",
-          "category": "core-dev",
-          "label": "Core Dev",
-          "reply_count": 2,
-          "unique_authors": 12,
-          "score": 24,
-          "last_post": "2026-05-18",
-          "source": "delving",
-          "link": "https://delvingbitcoin.org/t/tcp-hole-punching-for-bitcoin-nodes-behind-home-nats/2497/17",
-          "snippet": "While @willcl-ark and I were discussing\nDid the number of reachable nodes in residential ISPs increase since Bitcoin Core v30.0? -\u2026"
         }
       ],
       "top_bips": [
@@ -506,7 +506,7 @@
         {
           "bip_id": "39",
           "title": "Mnemonic code for generating deterministic keys",
-          "mentions": 29
+          "mentions": 30
         },
         {
           "bip_id": "54",
@@ -541,13 +541,13 @@
           "posts": 29
         },
         {
-          "name": "Murch",
-          "uuid": "can_mark_erhardt",
+          "name": "Matt Corallo",
+          "uuid": "can_matt_corallo",
           "posts": 23
         },
         {
-          "name": "Matt Corallo",
-          "uuid": "can_matt_corallo",
+          "name": "Murch",
+          "uuid": "can_mark_erhardt",
           "posts": 23
         },
         {
@@ -567,12 +567,12 @@
         }
       ],
       "source_pct": {
-        "delving": 52.9,
-        "mailing_list": 47.1
+        "delving": 53.1,
+        "mailing_list": 46.9
       },
       "source_counts": {
-        "delving": 396,
-        "mailing_list": 353
+        "delving": 401,
+        "mailing_list": 354
       },
       "mailing_list_stale": false,
       "mailing_list_days_since": null

@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-06-22T09:38:11.600532",
+  "generated_at": "2026-06-22T12:00:01.377953",
   "groups": {
     "committers": 1230,
     "reviewers": 5106,
-    "research": 1646,
+    "research": 1647,
     "standards": 156,
-    "total_active": 6452,
-    "total_registry": 7600
+    "total_active": 6453,
+    "total_registry": 7601
   },
   "venn_4": {
     "0001": 15,
-    "0010": 1172,
+    "0010": 1173,
     "0011": 23,
     "0100": 3837,
     "0101": 5,
@@ -28,7 +28,7 @@
   "venn_summary": {
     "code_only": 125,
     "review_only": 3837,
-    "research_only": 1172,
+    "research_only": 1173,
     "standards_only": 15,
     "all_four": 73,
     "code_review": 821,
@@ -48,17 +48,17 @@
   },
   "onboarding": {
     "new_coders_90d": 27,
-    "new_discussants_90d": 92,
+    "new_discussants_90d": 93,
     "window_days": 90
   },
   "prs": {
     "total_merged": 17810,
-    "merged_30d": 106,
-    "merged_prev_30d": 104
+    "merged_30d": 105,
+    "merged_prev_30d": 103
   },
   "commits": {
-    "commits_30d": 527,
-    "commits_prev_30d": 609
+    "commits_30d": 529,
+    "commits_prev_30d": 601
   },
   "bips": {
     "total": 209,
@@ -70,19 +70,19 @@
         "category": "quantum",
         "label": "Quantum",
         "count": 177,
-        "share": 26.9
+        "share": 26.7
       },
       {
         "category": "testing-devtools",
         "label": "Testing Devtools",
         "count": 67,
-        "share": 10.2
+        "share": 10.1
       },
       {
         "category": "privacy",
         "label": "Privacy",
-        "count": 50,
-        "share": 7.6
+        "count": 54,
+        "share": 8.1
       }
     ],
     "top_bips": [
@@ -101,7 +101,7 @@
       {
         "bip_id": "39",
         "title": "Mnemonic code for generating deterministic keys",
-        "mentions": 219,
+        "mentions": 220,
         "theme": "Wallet & Keys"
       }
     ],

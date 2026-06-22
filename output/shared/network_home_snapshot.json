@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-06-22T09:38:36.660972",
-  "contributors_tracked": 7600,
+  "generated_at": "2026-06-22T12:00:33.101450",
+  "contributors_tracked": 7601,
   "window_reference": {
-    "anchor_timestamp": "2026-06-22T13:37:01+00:00",
-    "current_window_start": "2026-05-23T13:37:01+00:00",
-    "previous_window_start": "2026-04-23T13:37:01+00:00",
+    "anchor_timestamp": "2026-06-22T15:31:44+00:00",
+    "current_window_start": "2026-05-23T15:31:44+00:00",
+    "previous_window_start": "2026-04-23T15:31:44+00:00",
     "window_days": 30
   },
   "widgets": {
     "active_contributors_30d": {
-      "value": 152,
-      "previous_30d": 79,
-      "delta_30d": 73,
+      "value": 129,
+      "previous_30d": 60,
+      "delta_30d": 69,
       "window_days": 30,
       "definition": "Contributors with global_last_active in current 30-day window, compared to the previous 30-day window.",
       "latest_activity_date": "2026-06-22"
@@ -24,8 +24,8 @@
           "uuid": "auto_sebastian_kung",
           "display_name": "Sebastian Kung",
           "reviews_30d": 114,
-          "previous_30d": 127,
-          "delta_30d": -13
+          "previous_30d": 126,
+          "delta_30d": -12
         },
         {
           "uuid": "can_marcofalke",
@@ -76,9 +76,9 @@
           "title": "Mnemonic code for generating deterministic keys",
           "primary_author": "Marek Palatinus",
           "primary_author_uuid": "can_marek_palatinus",
-          "mentions_30d": 27,
+          "mentions_30d": 28,
           "previous_30d": 0,
-          "delta_30d": 27
+          "delta_30d": 28
         },
         {
           "bip_id": "32",
@@ -92,18 +92,18 @@
       ]
     },
     "research_activity_30d": {
-      "messages_30d": 247,
-      "previous_30d": 204,
-      "delta_30d": 43,
+      "messages_30d": 251,
+      "previous_30d": 206,
+      "delta_30d": 45,
       "momentum": "rising",
       "definition": "Combined Delving Bitcoin and mailing list discussion volume in current 30 days versus previous 30 days."
     },
     "discussion_voices_30d": {
-      "value": 84,
+      "value": 86,
       "previous_30d": 88,
-      "delta_30d": -4,
-      "messages_30d": 247,
-      "messages_previous_30d": 204
+      "delta_30d": -2,
+      "messages_30d": 251,
+      "messages_previous_30d": 206
     },
     "topic_momentum_30d": {
       "window_days": 30,
@@ -119,9 +119,9 @@
         {
           "topic": "privacy",
           "label": "Privacy",
-          "mentions_30d": 24,
+          "mentions_30d": 28,
           "previous_30d": 4,
-          "delta_30d": 20
+          "delta_30d": 24
         },
         {
           "topic": "consensus-cleanup",
@@ -133,9 +133,9 @@
         {
           "topic": "mining",
           "label": "Mining",
-          "mentions_30d": 16,
+          "mentions_30d": 17,
           "previous_30d": 3,
-          "delta_30d": 13
+          "delta_30d": 14
         },
         {
           "topic": "payment-protocol",
@@ -150,19 +150,19 @@
       "definition": "Random selection of top retired contributors by impact score to feature as ecosystem veterans.",
       "items": [
         {
-          "uuid": "can_chris_belcher",
-          "display_name": "Chris Belcher",
-          "impact_score": 39.0
+          "uuid": "can_tom_harding",
+          "display_name": "Tom Harding",
+          "impact_score": 40.0
         },
         {
-          "uuid": "can_samuel_dobson",
-          "display_name": "Samuel Dobson",
-          "impact_score": 62.0
+          "uuid": "can_thomas_zander",
+          "display_name": "Thomas Zander",
+          "impact_score": 37.0
         },
         {
-          "uuid": "auto_daniel_kraft",
-          "display_name": "Daniel Kraft",
-          "impact_score": 23.0
+          "uuid": "can_alex_morcos",
+          "display_name": "Alex Morcos",
+          "impact_score": 44.0
         }
       ]
     }
