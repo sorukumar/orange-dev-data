@@ -329,6 +329,9 @@ def unify():
     # --- Activity Status Logic ---
     now = pd.Timestamp.utcnow().tz_localize(None)
     
+    p2016_start = pd.Timestamp("2016-01-01")
+    p2016_length_years = (now - p2016_start).days / 365.25
+
     def calculate_status(row):
         m = row.get('modern_hybrid_score', 0)
         if pd.isna(m): m = 0
@@ -351,21 +354,19 @@ def unify():
         if days_since_first <= 365 and m > 0:
             return "New"
             
-        tenure_years = max(days_since_first / 365.25, 3.0)
-        p2016_annual_rate = p / tenure_years
+        # P2016 tenure is the time they were active within the post-2016 era
+        p2016_tenure_years = max(min(days_since_first / 365.25, p2016_length_years), 3.0)
+        p2016_annual_rate = p / p2016_tenure_years
         modern_annual_rate = m / 3.0
         
-        # Only consider someone "Rising" if they have a meaningful absolute floor of activity
-        # (e.g. m >= 1.0) so a single comment doesn't trigger 50% growth over a long-diluted history.
         growth = modern_annual_rate / p2016_annual_rate if p2016_annual_rate > 0 else (2 if m > 0 else 0)
         
-        if growth >= 1.25 and m >= 1.0: 
+        # Rising: Top 5% modern volume (m >= 0.15), high growth (>= 1.5x),
+        # AND not already a top 1% historical legend (p < 0.5)
+        if growth >= 1.5 and m >= 0.15 and p < 0.5: 
             return "Rising"
             
         if m > 0 or c > 0:
-            # We consolidate "Steady" and "Fading" into a single baseline "Active" state.
-            # Returning an empty string prevents badge-clutter for normal active contributors,
-            # letting their role badges (Core Contributor, Reviewer) speak for themselves.
             return "Active"
             
         return ""

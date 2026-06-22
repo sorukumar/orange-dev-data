@@ -1,8 +1,8 @@
 {
-  "display_name": "Steve Coughlan",
+  "display_name": "JOSE FEMENIAS CA\u00d1UELO",
   "github_login_final": null,
   "delving_username_final": null,
-  "uuid": "auto_steve_coughlan",
+  "uuid": "auto_jose_femenias_ca_uelo",
   "badges": null,
   "roles": null,
   "total_commits": 0.0,
@@ -41,38 +41,38 @@
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": null,
-  "hybrid_score": 0.0251,
-  "p2016_hybrid_score": 0.0078,
+  "hybrid_score": 0.0232,
+  "p2016_hybrid_score": 0.0444,
   "modern_hybrid_score": 0.0,
   "impact_score": 1.0,
-  "p2016_impact_score": 0.0,
+  "p2016_impact_score": 3.0,
   "modern_impact_score": 0.0,
-  "threads_started": 2.0,
-  "replies_sent": 9.0,
-  "ml_threads": 2.0,
+  "threads_started": 5.0,
+  "replies_sent": 4.0,
+  "ml_threads": 5.0,
   "delving_threads": 0.0,
-  "ml_responses": 9.0,
+  "ml_responses": 4.0,
   "delving_responses": 0.0,
   "first_active": null,
   "last_active": null,
   "dev_type": "Participant",
   "expertise_domains": [
-    "L2",
-    "Network"
+    "Consensus",
+    "Privacy"
   ],
   "expertise_by_source": {
     "discussion": {
-      "L2": 0.5,
-      "Network": 0.5
+      "Consensus": 0.667,
+      "Privacy": 0.333
     }
   },
   "expertise_domain_scores": {
-    "L2": 0.5,
-    "Network": 0.5
+    "Consensus": 0.667,
+    "Privacy": 0.333
   },
-  "p2016_posts": 1.0,
+  "p2016_posts": 9.0,
   "modern_posts": 0.0,
-  "p2016_ml_posts": 1.0,
+  "p2016_ml_posts": 9.0,
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
@@ -92,26 +92,28 @@
   "is_top_50": false,
   "first_message": {
     "source": "mailing_list",
-    "subject": "[Bitcoin-development] Building a node crawler to map network",
-    "date": "2011-09-06",
-    "link": "https://gnusha.org/pi/bitcoindev/4E65CEE6.7030002@gmail.com"
+    "subject": "[bitcoin-dev] Bitcoin pointers",
+    "date": "2017-06-11",
+    "link": "https://gnusha.org/pi/bitcoindev/FD96E80B-A6ED-436D-876D-423A3C3E7566@gmail.com"
   },
   "last_message": {
     "source": "mailing_list",
-    "subject": "Re: [bitcoin-dev] Why SegWit Anyway?",
-    "date": "2017-11-21",
-    "link": "https://gnusha.org/pi/bitcoindev/CAOPxoMtPvKm0t1ih8vw5YmiGUYjR5Y5a8ZLvjaKo06mH+iHjoA@mail.gmail.com"
+    "subject": "Re: [bitcoin-dev] easypaysy - A layer-two protocol to send payments\n without addresses",
+    "date": "2019-12-06",
+    "link": "https://gnusha.org/pi/bitcoindev/6CB7E73C-57C9-428B-83E6-36113B619BFB@gmail.com"
   },
   "social_history": {
-    "2011": {
-      "lightning": 2,
-      "other": 6,
-      "p2p-network": 2
-    },
     "2017": {
-      "hard-fork-block-size": 1,
-      "mining": 1,
-      "segwit": 1
+      "other": 1,
+      "script-opcodes": 1
+    },
+    "2018": {
+      "privacy": 1,
+      "taproot": 1
+    },
+    "2019": {
+      "other": 4,
+      "taproot": 1
     }
   }
 }

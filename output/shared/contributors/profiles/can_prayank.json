@@ -32,11 +32,11 @@
   "last_commit": "2022-06-20T17:59:41",
   "p2016_authored_commits": 55.0,
   "modern_authored_commits": 0.0,
-  "bips_authored": 0.0,
-  "p2016_bips_authored": 0.0,
+  "bips_authored": 7.0,
+  "p2016_bips_authored": 4.0,
   "modern_bips_authored": 0.0,
-  "first_bip_date": null,
-  "last_bip_date": null,
+  "first_bip_date": "2015-06-19T19:18:48",
+  "last_bip_date": "2018-03-06T06:01:17",
   "avg_review_latency_days": 441.31123226622714,
   "reviews_count": 821.0,
   "avg_approval_latency_days": 221.50205178265455,
@@ -53,11 +53,11 @@
   "avg_pr_ack_velocity_days": 6.170447771990741,
   "avg_concept_lead_time_days": 9.998382936507936,
   "review_reciprocity": 2.7643097643097643,
-  "hybrid_score": 0.8793,
-  "p2016_hybrid_score": 0.421,
+  "hybrid_score": 1.88,
+  "p2016_hybrid_score": 1.5075,
   "modern_hybrid_score": 0.1849,
-  "impact_score": 41.0,
-  "p2016_impact_score": 22.0,
+  "impact_score": 68.0,
+  "p2016_impact_score": 60.0,
   "modern_impact_score": 11.0,
   "threads_started": 73.0,
   "replies_sent": 189.0,
@@ -67,20 +67,36 @@
   "delving_responses": 0.0,
   "first_active": null,
   "last_active": null,
-  "dev_type": "Reviewer",
+  "dev_type": "Protocol Designer",
   "expertise_domains": [
     "Consensus",
+    "Infrastructure",
     "Mining"
   ],
   "expertise_by_source": {
+    "bips": {
+      "Consensus": 0.857,
+      "Infrastructure": 0.143
+    },
+    "code": {
+      "Consensus": 0.083,
+      "Cryptography": 0.001,
+      "Infrastructure": 0.815,
+      "Mempool": 0.016,
+      "Network": 0.045,
+      "Script": 0.026,
+      "Wallet": 0.015
+    },
     "discussion": {
       "Consensus": 0.591,
       "Mining": 0.409
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.591,
-    "Mining": 0.409
+    "Consensus": 0.5714,
+    "Infrastructure": 0.3159,
+    "Mining": 0.0818,
+    "Network": 0.0135
   },
   "p2016_posts": 101.0,
   "modern_posts": 0.0,
@@ -88,7 +104,7 @@
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
-  "is_engineer": false,
+  "is_engineer": true,
   "is_reviewer": true,
   "is_researcher": true,
   "is_bip_author": true,
@@ -179,6 +195,57 @@
       "Mempool": 1.0
     }
   },
+  "bip_list": [
+    {
+      "number": 68,
+      "title": "Relative lock-time using consensus-enforced sequence numbers",
+      "status": "Deployed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0068.mediawiki"
+    },
+    {
+      "number": 98,
+      "title": "Fast Merkle Trees",
+      "status": "Draft",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0098.mediawiki"
+    },
+    {
+      "number": 105,
+      "title": "Consensus based block size retargeting algorithm",
+      "status": "Closed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0105.mediawiki"
+    },
+    {
+      "number": 112,
+      "title": "CHECKSEQUENCEVERIFY",
+      "status": "Deployed",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0112.mediawiki"
+    },
+    {
+      "number": 116,
+      "title": "MERKLEBRANCHVERIFY",
+      "status": "Draft",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0116.mediawiki"
+    },
+    {
+      "number": 117,
+      "title": "Tail Call Execution Semantics",
+      "status": "Draft",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0117.mediawiki"
+    },
+    {
+      "number": 320,
+      "title": "nVersion bits for general purpose use",
+      "status": "Draft",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0320.mediawiki"
+    }
+  ],
   "first_message": {
     "source": "mailing_list",
     "subject": "Re: [Bitcoin-development] Possible Solution To SM Attack",

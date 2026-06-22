@@ -1,8 +1,8 @@
 {
-  "display_name": "woltx",
+  "display_name": "w0xlt",
   "github_login_final": "w0xlt",
   "delving_username_final": null,
-  "uuid": "auto_woltx",
+  "uuid": "auto_w0xlt",
   "badges": null,
   "roles": null,
   "total_commits": 86.0,
@@ -41,12 +41,12 @@
   "avg_pr_ack_velocity_days": 9.518791870915033,
   "avg_concept_lead_time_days": 7.043052151416122,
   "review_reciprocity": 4.836206896551724,
-  "hybrid_score": 0.5395,
-  "p2016_hybrid_score": 0.5467,
-  "modern_hybrid_score": 0.4656,
-  "impact_score": 28.0,
-  "p2016_impact_score": 28.0,
-  "modern_impact_score": 24.0,
+  "hybrid_score": 0.2435,
+  "p2016_hybrid_score": 0.2506,
+  "modern_hybrid_score": 0.2106,
+  "impact_score": 14.0,
+  "p2016_impact_score": 14.0,
+  "modern_impact_score": 12.0,
   "threads_started": 4.0,
   "replies_sent": 3.0,
   "ml_threads": 4.0,
@@ -55,32 +55,20 @@
   "delving_responses": 0.0,
   "first_active": null,
   "last_active": null,
-  "dev_type": "Builder",
+  "dev_type": "Reviewer",
   "expertise_domains": [
-    "Infrastructure",
     "Privacy",
-    "Wallet"
+    "L2"
   ],
   "expertise_by_source": {
-    "code": {
-      "Consensus": 0.083,
-      "Infrastructure": 0.637,
-      "Network": 0.087,
-      "Script": 0.006,
-      "Wallet": 0.186
-    },
     "discussion": {
       "L2": 0.122,
       "Privacy": 0.878
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.0498,
-    "Infrastructure": 0.3824,
-    "L2": 0.0488,
-    "Network": 0.0522,
-    "Privacy": 0.3514,
-    "Wallet": 0.1117
+    "L2": 0.122,
+    "Privacy": 0.878
   },
   "p2016_posts": 7.0,
   "modern_posts": 0.0,
@@ -88,7 +76,7 @@
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
-  "is_engineer": true,
+  "is_engineer": false,
   "is_reviewer": true,
   "is_researcher": true,
   "is_bip_author": false,
