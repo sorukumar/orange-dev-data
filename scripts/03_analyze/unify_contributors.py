@@ -345,7 +345,7 @@ def unify():
         
         is_historically_significant = (c > 5) or (p > 0.5)
         
-        if is_historically_significant and years_inactive > 2.5:
+        if is_historically_significant and years_inactive > 2.0:
             return "Retired"
             
         if days_since_first <= 365 and m > 0:
@@ -355,11 +355,19 @@ def unify():
         p2016_annual_rate = p / tenure_years
         modern_annual_rate = m / 3.0
         
+        # Only consider someone "Rising" if they have a meaningful absolute floor of activity
+        # (e.g. m >= 1.0) so a single comment doesn't trigger 50% growth over a long-diluted history.
         growth = modern_annual_rate / p2016_annual_rate if p2016_annual_rate > 0 else (2 if m > 0 else 0)
         
-        if growth >= 1.25: return "Rising"
-        if growth >= 0.75 or m >= 0.35: return "Steady"
-        if m > 0: return "Fading"
+        if growth >= 1.25 and m >= 1.0: 
+            return "Rising"
+            
+        if m > 0 or c > 0:
+            # We consolidate "Steady" and "Fading" into a single baseline "Active" state.
+            # Returning an empty string prevents badge-clutter for normal active contributors,
+            # letting their role badges (Core Contributor, Reviewer) speak for themselves.
+            return "Active"
+            
         return ""
         
     df_unified['activity_status'] = df_unified.apply(calculate_status, axis=1)
