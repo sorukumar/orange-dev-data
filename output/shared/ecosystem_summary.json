@@ -1,38 +1,38 @@
 {
-  "generated_at": "2026-06-18T12:56:12.696990",
+  "generated_at": "2026-06-22T09:38:11.600532",
   "groups": {
-    "committers": 1224,
+    "committers": 1230,
     "reviewers": 5106,
-    "research": 1638,
-    "standards": 157,
-    "total_active": 6441,
-    "total_registry": 7585
+    "research": 1646,
+    "standards": 156,
+    "total_active": 6452,
+    "total_registry": 7600
   },
   "venn_4": {
     "0001": 15,
-    "0010": 1167,
+    "0010": 1172,
     "0011": 23,
-    "0100": 3838,
+    "0100": 3837,
     "0101": 5,
-    "0110": 133,
+    "0110": 134,
     "0111": 36,
-    "1000": 118,
+    "1000": 125,
     "1001": 1,
-    "1010": 10,
+    "1010": 9,
     "1011": 1,
-    "1100": 824,
+    "1100": 821,
     "1101": 2,
-    "1110": 194,
-    "1111": 74
+    "1110": 198,
+    "1111": 73
   },
   "venn_summary": {
-    "code_only": 118,
-    "review_only": 3838,
-    "research_only": 1167,
+    "code_only": 125,
+    "review_only": 3837,
+    "research_only": 1172,
     "standards_only": 15,
-    "all_four": 74,
-    "code_review": 824,
-    "review_research": 133,
+    "all_four": 73,
+    "code_review": 821,
+    "review_research": 134,
     "research_standards": 23
   },
   "rd_focus": {},
@@ -47,18 +47,18 @@
     "description": "First-time core contributor recently merged 2 commits."
   },
   "onboarding": {
-    "new_coders_90d": 26,
-    "new_discussants_90d": 93,
+    "new_coders_90d": 27,
+    "new_discussants_90d": 92,
     "window_days": 90
   },
   "prs": {
     "total_merged": 17810,
-    "merged_30d": 137,
-    "merged_prev_30d": 88
+    "merged_30d": 106,
+    "merged_prev_30d": 104
   },
   "commits": {
-    "commits_30d": 590,
-    "commits_prev_30d": 546
+    "commits_30d": 527,
+    "commits_prev_30d": 609
   },
   "bips": {
     "total": 209,
@@ -69,20 +69,20 @@
       {
         "category": "quantum",
         "label": "Quantum",
-        "count": 175,
-        "share": 27.4
+        "count": 177,
+        "share": 26.9
       },
       {
         "category": "testing-devtools",
         "label": "Testing Devtools",
         "count": 67,
-        "share": 10.5
+        "share": 10.2
       },
       {
-        "category": "covenants",
-        "label": "Covenants",
-        "count": 43,
-        "share": 6.7
+        "category": "privacy",
+        "label": "Privacy",
+        "count": 50,
+        "share": 7.6
       }
     ],
     "top_bips": [

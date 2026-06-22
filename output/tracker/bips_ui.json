@@ -198,15 +198,15 @@
     "authors": "David A. Harding, Peter Todd"
   },
   {
-    "bip_id": "322",
-    "title": "Generic Signed Message Format",
-    "status": "Complete",
-    "theme": "Other",
+    "bip_id": "360",
+    "title": "Pay-to-Merkle-Root (P2MR)",
+    "status": "Draft",
+    "theme": "Consensus & Soft Forks",
     "maturity_score": 0.16,
-    "social_mention_count": 33,
-    "revision_count": 52,
-    "code_mention_count": 2,
-    "authors": "Karl-Johan Alm, Oliver Gugger"
+    "social_mention_count": 97,
+    "revision_count": 3,
+    "code_mention_count": 0,
+    "authors": "Hunter Beast, Ethan Heilman, Isabel Foxen Duke"
   },
   {
     "bip_id": "148",
@@ -231,15 +231,15 @@
     "authors": "Jeremy Rubin"
   },
   {
-    "bip_id": "360",
-    "title": "Pay-to-Merkle-Root (P2MR)",
-    "status": "Draft",
-    "theme": "Consensus & Soft Forks",
-    "maturity_score": 0.15,
-    "social_mention_count": 93,
-    "revision_count": 2,
-    "code_mention_count": 0,
-    "authors": "Hunter Beast, Ethan Heilman, Isabel Foxen Duke"
+    "bip_id": "322",
+    "title": "Generic Signed Message Format",
+    "status": "Complete",
+    "theme": "Other",
+    "maturity_score": 0.16,
+    "social_mention_count": 33,
+    "revision_count": 52,
+    "code_mention_count": 2,
+    "authors": "Karl-Johan Alm, Oliver Gugger"
   },
   {
     "bip_id": "9",
@@ -1069,11 +1069,11 @@
   {
     "bip_id": "52",
     "title": "Durable, Low Energy Bitcoin PoW",
-    "status": "Draft",
+    "status": "Closed",
     "theme": "Consensus & Soft Forks",
     "maturity_score": 0.04,
     "social_mention_count": 1,
-    "revision_count": 17,
+    "revision_count": 18,
     "code_mention_count": 0,
     "authors": "Michael Dubrovsky, Bogdan Penkovsky"
   },

@@ -3,23 +3,8 @@
   "github_login_final": null,
   "delving_username_final": "vazertuche",
   "uuid": "auto_vazertuche",
-  "badges": {
-    "is_bip_author": null,
-    "is_core_committer": null,
-    "is_core_contributor": null,
-    "is_maintainer": null,
-    "is_social_contributor": true,
-    "is_sponsored": null,
-    "maintainer_status": null,
-    "social_source": "delving",
-    "sponsor_id": null
-  },
-  "roles": [
-    "Researcher"
-  ],
-  "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-18T00:00:00",
-  "technical_focus": "privacy",
+  "badges": null,
+  "roles": null,
   "total_commits": 0.0,
   "authored_commits": 0.0,
   "tier1_authored_commits": 0.0,
@@ -38,15 +23,21 @@
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
+  "first_bip_date": null,
+  "last_bip_date": null,
   "avg_review_latency_days": null,
-  "reviews_count": null,
+  "reviews_count": 0.0,
   "avg_approval_latency_days": null,
   "approvals_count": null,
+  "tier1_reviews_count": 0.0,
+  "tier2_reviews_count": 0.0,
   "p2016_reviews_count": null,
   "modern_reviews_count": null,
   "first_review_date": null,
   "last_review_date": null,
-  "prs_authored": null,
+  "prs_authored": 0.0,
+  "tier1_prs_authored": 0.0,
+  "tier2_prs_authored": 0.0,
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": null,
@@ -56,10 +47,10 @@
   "impact_score": 0.0,
   "p2016_impact_score": 0.0,
   "modern_impact_score": 0.0,
-  "threads_started": 2.0,
+  "threads_started": 3.0,
   "replies_sent": 4.0,
   "ml_threads": 0.0,
-  "delving_threads": 2.0,
+  "delving_threads": 3.0,
   "ml_responses": 0.0,
   "delving_responses": 4.0,
   "first_active": null,
@@ -72,22 +63,26 @@
   ],
   "expertise_by_source": {
     "discussion": {
-      "L2": 0.256,
-      "Mempool": 0.256,
-      "Privacy": 0.487
+      "L2": 0.22,
+      "Mempool": 0.22,
+      "Privacy": 0.561
     }
   },
   "expertise_domain_scores": {
-    "L2": 0.2563,
-    "Mempool": 0.2563,
-    "Privacy": 0.4875
+    "L2": 0.2198,
+    "Mempool": 0.2198,
+    "Privacy": 0.5604
   },
-  "p2016_posts": 6.0,
-  "modern_posts": 6.0,
+  "p2016_posts": 7.0,
+  "modern_posts": 7.0,
   "p2016_ml_posts": 0.0,
-  "p2016_delving_posts": 6.0,
+  "p2016_delving_posts": 7.0,
   "modern_ml_posts": 0.0,
-  "modern_delving_posts": 6.0,
+  "modern_delving_posts": 7.0,
+  "is_engineer": false,
+  "is_reviewer": false,
+  "is_researcher": false,
+  "is_bip_author": false,
   "global_first_active": null,
   "global_last_active": null,
   "github_location": null,
@@ -107,14 +102,14 @@
   },
   "last_message": {
     "source": "delving",
-    "subject": "Re: Bitcoin Embracing MimbleWimble",
-    "date": "2025-10-30",
-    "link": "https://delvingbitcoin.org/t/bitcoin-embracing-mimblewimble/2081/10"
+    "subject": "Privately running wallet privacy heuristics on your own UTXOs without needing to run your own node",
+    "date": "2026-06-20",
+    "link": "https://delvingbitcoin.org/t/privately-running-wallet-privacy-heuristics-on-your-own-utxos-without-needing-to-run-your-own-node/2625/1"
   },
   "social_history": {
     "2024": {
-      "ecash": 1,
-      "other": 3
+      "other": 3,
+      "wallet-keys": 1
     },
     "2025": {
       "atomic-swaps": 3,
@@ -125,6 +120,11 @@
       "script-opcodes": 3,
       "spam-filtering": 3,
       "other": 1
+    },
+    "2026": {
+      "privacy": 1,
+      "other": 1,
+      "wallet-keys": 1
     }
   }
 }

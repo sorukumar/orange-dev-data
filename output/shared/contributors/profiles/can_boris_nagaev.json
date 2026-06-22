@@ -3,23 +3,8 @@
   "github_login_final": "starius",
   "delving_username_final": "starius",
   "uuid": "can_boris_nagaev",
-  "badges": {
-    "is_bip_author": null,
-    "is_core_committer": null,
-    "is_core_contributor": true,
-    "is_maintainer": null,
-    "is_social_contributor": true,
-    "is_sponsored": null,
-    "maintainer_status": null,
-    "social_source": "mailing_list",
-    "sponsor_id": null
-  },
-  "roles": [
-    "Researcher"
-  ],
-  "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-18T00:00:00",
-  "technical_focus": "Mempool",
+  "badges": null,
+  "roles": null,
   "total_commits": 1.0,
   "authored_commits": 1.0,
   "tier1_authored_commits": 1.0,
@@ -38,30 +23,36 @@
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
+  "first_bip_date": null,
+  "last_bip_date": null,
   "avg_review_latency_days": 843.9201421957672,
   "reviews_count": 3.0,
   "avg_approval_latency_days": null,
   "approvals_count": 0.0,
+  "tier1_reviews_count": 2.0,
+  "tier2_reviews_count": 1.0,
   "p2016_reviews_count": 3.0,
   "modern_reviews_count": 3.0,
-  "first_review_date": "2024-01-31T16:48:02+00:00",
-  "last_review_date": "2025-01-07T03:08:36+00:00",
+  "first_review_date": "2024-01-31T16:48:02",
+  "last_review_date": "2025-01-07T03:08:36",
   "prs_authored": 3.0,
+  "tier1_prs_authored": 3.0,
+  "tier2_prs_authored": 0.0,
   "avg_pr_ack_velocity_days": 0.19991898148148146,
   "avg_concept_lead_time_days": 0.1012037037037037,
   "review_reciprocity": 1.0,
-  "hybrid_score": 0.19,
-  "p2016_hybrid_score": 0.2792,
+  "hybrid_score": 0.2132,
+  "p2016_hybrid_score": 0.2789,
   "modern_hybrid_score": 0.4749,
-  "impact_score": 11.0,
+  "impact_score": 12.0,
   "p2016_impact_score": 15.0,
   "modern_impact_score": 25.0,
   "threads_started": 3.0,
-  "replies_sent": 51.0,
+  "replies_sent": 52.0,
   "ml_threads": 1.0,
   "delving_threads": 2.0,
   "ml_responses": 50.0,
-  "delving_responses": 1.0,
+  "delving_responses": 2.0,
   "first_active": "2023-10-21T09:21:48",
   "last_active": null,
   "dev_type": "Builder",
@@ -74,22 +65,26 @@
       "Mempool": 1.0
     },
     "discussion": {
-      "Cryptography": 0.75,
-      "Mempool": 0.25
+      "Cryptography": 0.727,
+      "Mempool": 0.273
     }
   },
   "expertise_domain_scores": {
-    "Cryptography": 0.3,
-    "Mempool": 0.7
+    "Cryptography": 0.2908,
+    "Mempool": 0.7092
   },
-  "p2016_posts": 54.0,
-  "modern_posts": 54.0,
+  "p2016_posts": 55.0,
+  "modern_posts": 55.0,
   "p2016_ml_posts": 51.0,
-  "p2016_delving_posts": 3.0,
+  "p2016_delving_posts": 4.0,
   "modern_ml_posts": 51.0,
-  "modern_delving_posts": 3.0,
+  "modern_delving_posts": 4.0,
+  "is_engineer": true,
+  "is_reviewer": true,
+  "is_researcher": true,
+  "is_bip_author": false,
   "global_first_active": "2023-10-21T09:21:48",
-  "global_last_active": "2025-01-06T11:10:56",
+  "global_last_active": "2025-01-07T03:08:36",
   "github_location": "Earth",
   "github_company": null,
   "github_bio": "Developer",
@@ -113,9 +108,9 @@
   },
   "last_message": {
     "source": "delving",
-    "subject": "Re: Towards A K-of-N Lightning Network Node",
-    "date": "2026-06-17",
-    "link": "https://delvingbitcoin.org/t/towards-a-k-of-n-lightning-network-node/2395/2"
+    "subject": "Re: Public key recovery for EC leaves in P2MR (BIP-360)",
+    "date": "2026-06-19",
+    "link": "https://delvingbitcoin.org/t/public-key-recovery-for-ec-leaves-in-p2mr-bip-360/2603/20"
   },
   "social_history": {
     "2023": {
@@ -145,10 +140,10 @@
       "spam-filtering": 4
     },
     "2026": {
-      "other": 14,
+      "other": 17,
       "lightning": 1,
-      "mempool-fees": 1,
-      "quantum": 6
+      "mempool-fees": 4,
+      "quantum": 7
     }
   }
 }

@@ -3,23 +3,8 @@
   "github_login_final": "niftynei",
   "delving_username_final": "niftynei",
   "uuid": "can_lisa_neigut",
-  "badges": {
-    "is_bip_author": null,
-    "is_core_committer": null,
-    "is_core_contributor": true,
-    "is_maintainer": null,
-    "is_social_contributor": true,
-    "is_sponsored": null,
-    "maintainer_status": null,
-    "social_source": "mailing_list",
-    "sponsor_id": null
-  },
-  "roles": [
-    "Researcher"
-  ],
-  "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-18T00:00:00",
-  "technical_focus": "Documentation",
+  "badges": null,
+  "roles": null,
   "total_commits": 1.0,
   "authored_commits": 1.0,
   "tier1_authored_commits": 1.0,
@@ -38,62 +23,72 @@
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
+  "first_bip_date": null,
+  "last_bip_date": null,
   "avg_review_latency_days": 1725.092521219136,
   "reviews_count": 2.0,
   "avg_approval_latency_days": null,
   "approvals_count": 0.0,
+  "tier1_reviews_count": 0.0,
+  "tier2_reviews_count": 2.0,
   "p2016_reviews_count": 2.0,
   "modern_reviews_count": 1.0,
-  "first_review_date": "2020-07-28T15:52:50+00:00",
-  "last_review_date": "2024-02-12T14:13:16+00:00",
+  "first_review_date": "2020-07-28T15:52:50",
+  "last_review_date": "2024-02-12T14:13:16",
   "prs_authored": 3.0,
+  "tier1_prs_authored": 3.0,
+  "tier2_prs_authored": 0.0,
   "avg_pr_ack_velocity_days": 10.623526234567901,
   "avg_concept_lead_time_days": 31.716712962962962,
   "review_reciprocity": 0.6666666666666666,
-  "hybrid_score": 0.1123,
-  "p2016_hybrid_score": 0.1483,
+  "hybrid_score": 0.1357,
+  "p2016_hybrid_score": 0.1484,
   "modern_hybrid_score": 0.0452,
-  "impact_score": 7.0,
+  "impact_score": 8.0,
   "p2016_impact_score": 9.0,
   "modern_impact_score": 3.0,
-  "threads_started": 2.0,
-  "replies_sent": 1.0,
+  "threads_started": 4.0,
+  "replies_sent": 2.0,
   "ml_threads": 2.0,
-  "delving_threads": 0.0,
+  "delving_threads": 2.0,
   "ml_responses": 1.0,
-  "delving_responses": 0.0,
+  "delving_responses": 1.0,
   "first_active": "2021-10-25T21:56:21",
-  "last_active": "2023-04-24T11:06:59",
+  "last_active": null,
   "dev_type": "Builder",
   "expertise_domains": [
     "Infrastructure",
-    "Mempool",
-    "L2"
+    "Cryptography",
+    "Script"
   ],
   "expertise_by_source": {
     "code": {
       "Infrastructure": 1.0
     },
     "discussion": {
-      "L2": 0.287,
-      "Mempool": 0.426,
-      "Mining": 0.287
+      "Cryptography": 0.4,
+      "Mempool": 0.3,
+      "Script": 0.3
     }
   },
   "expertise_domain_scores": {
+    "Cryptography": 0.16,
     "Infrastructure": 0.6,
-    "L2": 0.1148,
-    "Mempool": 0.1704,
-    "Mining": 0.1148
+    "Mempool": 0.12,
+    "Script": 0.12
   },
-  "p2016_posts": 3.0,
-  "modern_posts": 0.0,
+  "p2016_posts": 6.0,
+  "modern_posts": 3.0,
   "p2016_ml_posts": 3.0,
-  "p2016_delving_posts": 0.0,
+  "p2016_delving_posts": 3.0,
   "modern_ml_posts": 0.0,
-  "modern_delving_posts": 0.0,
-  "global_first_active": "2021-02-08T00:49:06",
-  "global_last_active": "2023-04-24T11:06:59",
+  "modern_delving_posts": 3.0,
+  "is_engineer": true,
+  "is_reviewer": true,
+  "is_researcher": true,
+  "is_bip_author": false,
+  "global_first_active": "2020-07-28T15:52:50",
+  "global_last_active": "2024-02-12T14:13:16",
   "github_location": "ATX",
   "github_company": "Blockstream Inc",
   "github_bio": " HIGH VOLTAGE SIGN",
@@ -116,10 +111,10 @@
     "link": "https://gnusha.org/pi/bitcoindev/CAM1a7P04apCwwmqNp4VLRam5_uk59tVRWv74UVD_g0-DUGNghw@mail.gmail.com"
   },
   "last_message": {
-    "source": "mailing_list",
-    "subject": "Re: [bitcoin-dev] [Lightning-dev] A new Bitcoin implementation\n\tintegrated with Core Lightning",
-    "date": "2023-04-24",
-    "link": "https://gnusha.org/pi/bitcoindev/CAM1a7P0qEkydNQQt38UUvyX3SorfgPNyfO79j72roG0_zo22+w@mail.gmail.com"
+    "source": "delving",
+    "subject": "Re: Writing Simplicity Programs with SimplicityHL",
+    "date": "2025-08-15",
+    "link": "https://delvingbitcoin.org/t/writing-simplicity-programs-with-simplicityhl/1900/4"
   },
   "social_history": {
     "2021": {
@@ -131,6 +126,12 @@
     },
     "2023": {
       "lightning": 1
+    },
+    "2025": {
+      "bitvm": 1,
+      "covenants": 1,
+      "script-opcodes": 3,
+      "signatures-sighash": 2
     }
   }
 }

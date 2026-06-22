@@ -3,23 +3,8 @@
   "github_login_final": null,
   "delving_username_final": "jgmcalpine",
   "uuid": "auto_jon",
-  "badges": {
-    "is_bip_author": null,
-    "is_core_committer": null,
-    "is_core_contributor": null,
-    "is_maintainer": null,
-    "is_social_contributor": true,
-    "is_sponsored": null,
-    "maintainer_status": null,
-    "social_source": "delving",
-    "sponsor_id": null
-  },
-  "roles": [
-    "Researcher"
-  ],
-  "first_seen": "2026-04-17T00:00:00",
-  "last_seen": "2026-06-18T00:00:00",
-  "technical_focus": "mempool-fees",
+  "badges": null,
+  "roles": null,
   "total_commits": 0.0,
   "authored_commits": 0.0,
   "tier1_authored_commits": 0.0,
@@ -38,15 +23,21 @@
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
+  "first_bip_date": null,
+  "last_bip_date": null,
   "avg_review_latency_days": null,
-  "reviews_count": null,
+  "reviews_count": 0.0,
   "avg_approval_latency_days": null,
   "approvals_count": null,
+  "tier1_reviews_count": 0.0,
+  "tier2_reviews_count": 0.0,
   "p2016_reviews_count": null,
   "modern_reviews_count": null,
   "first_review_date": null,
   "last_review_date": null,
-  "prs_authored": null,
+  "prs_authored": 0.0,
+  "tier1_prs_authored": 0.0,
+  "tier2_prs_authored": 0.0,
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": null,
@@ -56,32 +47,42 @@
   "impact_score": 0.0,
   "p2016_impact_score": 0.0,
   "modern_impact_score": 0.0,
-  "threads_started": 1.0,
-  "replies_sent": 0.0,
+  "threads_started": 2.0,
+  "replies_sent": 3.0,
   "ml_threads": 0.0,
-  "delving_threads": 1.0,
+  "delving_threads": 2.0,
   "ml_responses": 0.0,
-  "delving_responses": 0.0,
+  "delving_responses": 3.0,
   "first_active": null,
   "last_active": null,
   "dev_type": "Participant",
   "expertise_domains": [
-    "Mining"
+    "Mempool",
+    "Consensus",
+    "L2"
   ],
   "expertise_by_source": {
     "discussion": {
-      "Mining": 1.0
+      "Consensus": 0.29,
+      "L2": 0.14,
+      "Mempool": 0.57
     }
   },
   "expertise_domain_scores": {
-    "Mining": 1.0
+    "Consensus": 0.29,
+    "L2": 0.14,
+    "Mempool": 0.57
   },
-  "p2016_posts": 1.0,
-  "modern_posts": 1.0,
+  "p2016_posts": 5.0,
+  "modern_posts": 5.0,
   "p2016_ml_posts": 0.0,
-  "p2016_delving_posts": 1.0,
+  "p2016_delving_posts": 5.0,
   "modern_ml_posts": 0.0,
-  "modern_delving_posts": 1.0,
+  "modern_delving_posts": 5.0,
+  "is_engineer": false,
+  "is_reviewer": false,
+  "is_researcher": false,
+  "is_bip_author": false,
   "global_first_active": null,
   "global_last_active": null,
   "github_location": null,
@@ -95,19 +96,22 @@
   "delving_url": "https://delvingbitcoin.org/u/jgmcalpine",
   "first_message": {
     "source": "delving",
-    "subject": "Bitcoin c.h.i.p. - capital hash investment protocol bip",
-    "date": "2025-08-22",
-    "link": "https://delvingbitcoin.org/t/bitcoin-c-h-i-p-capital-hash-investment-protocol-bip/1941/1"
+    "subject": "Re: Ark as a Channel Factory: Compressed Liquidity Management for Improved Payment Feasibility",
+    "date": "2026-01-03",
+    "link": "https://delvingbitcoin.org/t/ark-as-a-channel-factory-compressed-liquidity-management-for-improved-payment-feasibility/2179/3"
   },
   "last_message": {
     "source": "delving",
-    "subject": "Bitcoin c.h.i.p. - capital hash investment protocol bip",
-    "date": "2025-08-22",
-    "link": "https://delvingbitcoin.org/t/bitcoin-c-h-i-p-capital-hash-investment-protocol-bip/1941/1"
+    "subject": "Re: Stateless VTXO Verification: Decoupling Custody from Implementation-Specific Stacks",
+    "date": "2026-02-21",
+    "link": "https://delvingbitcoin.org/t/stateless-vtxo-verification-decoupling-custody-from-implementation-specific-stacks/2267/7"
   },
   "social_history": {
-    "2025": {
-      "mining": 1
+    "2026": {
+      "l2-bridges": 1,
+      "lightning": 1,
+      "mempool-fees": 4,
+      "taproot": 4
     }
   }
 }
