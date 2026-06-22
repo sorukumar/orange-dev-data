@@ -85,7 +85,7 @@ def _build_request(url: str, token: str) -> urllib.request.Request:
     )
 
 
-def _check_rate_limit(headers: ...) -> None:
+def _check_rate_limit(headers: dict) -> None:
     """
     Inspect X-RateLimit-Remaining; if we're at/below the floor, sleep until
     X-RateLimit-Reset (plus a small buffer) so we never exhaust the quota.

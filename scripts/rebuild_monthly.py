@@ -236,6 +236,11 @@ def main():
         "bitcoin-github-metadata (PRs)": ("data/sources/bitcoin-github-metadata", False),
         "bips-github-metadata (PRs)":    ("data/sources/bips-github-metadata",    False),
         "mailing_list/shard_0":          ("data/sources/mailing_list/shard_0",    True),   # bare repo
+        "secp256k1":                     ("data/sources/secp256k1",               False),
+        "gui":                           ("data/sources/gui",                     False),
+        "guix.sigs":                     ("data/sources/guix.sigs",               False),
+        "qa-assets":                     ("data/sources/qa-assets",               False),
+        "HWI":                           ("data/sources/HWI",                     False),
     }
     print("  Source repo status:")
     for label, (rel_path, is_bare) in sources.items():
@@ -251,6 +256,12 @@ def main():
     run("git -C data/sources/bitcoin pull origin master", cwd=root_dir)
     run("git -C data/sources/bips pull origin master", cwd=root_dir)
     run("git -C data/sources/delving pull origin master", cwd=root_dir)
+    run("git -C data/sources/mailing_list/shard_0 fetch origin", cwd=root_dir)
+    run("git -C data/sources/secp256k1 pull origin master", cwd=root_dir)
+    run("git -C data/sources/gui pull origin master", cwd=root_dir)
+    run("git -C data/sources/guix.sigs pull origin main", cwd=root_dir)
+    run("git -C data/sources/qa-assets pull origin main", cwd=root_dir)
+    run("git -C data/sources/HWI pull origin master", cwd=root_dir)
 
     # PHASE 1: Extraction (Source -> Raw)
     print("\n--- PHASE 1: Extraction (Raw Staging) ---")
@@ -286,8 +297,7 @@ def main():
     run("python3 scripts/02_process/merge_social.py", cwd=root_dir)
     run("python3 scripts/02_process/governance.py", cwd=root_dir)
     
-    # registry.py must run before Phase 3 — influence.py and unify_contributors.py both read metadata/contributors.json
-    run("python3 scripts/04_deliver/registry.py", cwd=root_dir)
+    run("python3 scripts/04_deliver/badges.py", cwd=root_dir)
 
     # PHASE 3: Intelligence (Heavy Analytics & Graphs)
     print("\n--- PHASE 3: Intelligence (NLP & Graphs) ---")

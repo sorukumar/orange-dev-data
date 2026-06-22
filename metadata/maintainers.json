@@ -1,20 +1,19 @@
 {
   "_comment": "Bitcoin Core maintainer whitelist. Sources: StackExchange #176, BitcoinCore.org, and Git Merges. This file mapping names to all known email aliases is critical for data accuracy.",
-  "_last_updated": "2026-02-09",
+  "_last_updated": "2026-06-15",
   "maintainers": [
     {
       "id": "satoshi",
       "name": "Satoshi Nakamoto",
       "status": "historical",
       "role": {
-        "title": "Project Founder / Lead Maintainer",
+        "title": "Project Founder / Former Lead Maintainer",
         "primary_area": "Initial Implementation",
         "appointed": "2009-01-03",
         "stepped_down": "2011-09-13"
       },
       "merge_authority": true,
       "evidence": "Creator, first Lead Maintainer. SourceForge era. Managed code via rar files before SVN.",
-      "github": "satoshi",
       "emails": [
         "none@satoshi.com",
         "s_nakamoto@1a98c847-1fd6-4fd8-948a-caf3550aa51b",
@@ -27,7 +26,7 @@
       "name": "Martti Malmi",
       "status": "historical",
       "role": {
-        "title": "Core Maintainer",
+        "title": "Former Core Maintainer",
         "primary_area": "Infrastructure / SVN",
         "appointed": "2009-08-30",
         "stepped_down": "2011-09-13"
@@ -46,7 +45,7 @@
       "name": "Laszlo Hanyecz",
       "status": "historical",
       "role": {
-        "title": "Build Maintainer (OSX)",
+        "title": "Former Build Maintainer (OSX)",
         "primary_area": "Build System / OSX",
         "appointed": "2010-08-04",
         "stepped_down": "2011-09-13"
@@ -64,7 +63,7 @@
       "name": "Gavin Andresen",
       "status": "historical",
       "role": {
-        "title": "Lead Maintainer",
+        "title": "Former Lead Maintainer",
         "primary_area": "General",
         "appointed": "2010-10-11",
         "stepped_down": "2016-05-02"
@@ -81,7 +80,7 @@
       "name": "Chris Moore",
       "status": "historical",
       "role": {
-        "title": "Core Maintainer",
+        "title": "Former Core Maintainer",
         "primary_area": "General",
         "appointed": "2011-01-21",
         "stepped_down": "2011-03-31"
@@ -99,7 +98,7 @@
       "name": "Pieter Wuille",
       "status": "emeritus",
       "role": {
-        "title": "Core Maintainer",
+        "title": "Former Core Maintainer",
         "primary_area": "Consensus / Cryptography",
         "appointed": "2011-05-01",
         "stepped_down": "2022-07-07"
@@ -119,7 +118,7 @@
       "name": "Jeff Garzik",
       "status": "historical",
       "role": {
-        "title": "Core Maintainer",
+        "title": "Former Core Maintainer",
         "primary_area": "General",
         "appointed": "2011-05-06",
         "stepped_down": "2016-08-01"
@@ -140,7 +139,7 @@
       "name": "Wladimir J. van der Laan",
       "status": "emeritus",
       "role": {
-        "title": "Lead Maintainer",
+        "title": "Former Lead Maintainer",
         "primary_area": "General / Release",
         "appointed": "2011-06-05",
         "stepped_down": "2023-02-07"
@@ -160,7 +159,7 @@
       "name": "Nils Schneider",
       "status": "historical",
       "role": {
-        "title": "Core Maintainer",
+        "title": "Former Core Maintainer",
         "primary_area": "General",
         "appointed": "2011-09-19",
         "stepped_down": "2012-05-31"
@@ -180,7 +179,7 @@
       "name": "Gregory Maxwell",
       "status": "historical",
       "role": {
-        "title": "Core Maintainer",
+        "title": "Former Core Maintainer",
         "primary_area": "Consensus / Cryptography",
         "appointed": "2012-02-11",
         "stepped_down": "2015-12-17"
@@ -198,14 +197,14 @@
       "name": "Cory Fields",
       "status": "emeritus",
       "role": {
-        "title": "Build / Security Maintainer",
+        "title": "Former Build System Maintainer",
         "primary_area": "Build System / Guix",
         "appointed": "2014-04-01",
         "stepped_down": "2023-01-01"
       },
       "segments": [
         {
-          "type": "strategic",
+          "type": "build_system",
           "start": "2014-04-01",
           "end": "2025-12-31"
         }
@@ -227,7 +226,7 @@
       "name": "Jonas Schnelli",
       "status": "emeritus",
       "role": {
-        "title": "GUI Maintainer",
+        "title": "Former GUI Maintainer",
         "primary_area": "GUI / Core",
         "appointed": "2015-11-13",
         "stepped_down": "2021-10-21"
@@ -241,29 +240,11 @@
       ]
     },
     {
-      "id": "luke-jr",
-      "name": "Luke Dashjr",
-      "status": "emeritus",
-      "role": {
-        "title": "BIPs / Strategic Maintainer",
-        "primary_area": "BIPs / Knots",
-        "appointed": "2011-05-01"
-      },
-      "merge_authority": false,
-      "evidence": "Maintained Bitcoin Knots and the BIPs repository, but never held merge authority (Committer keys) for the main Bitcoin Core master branch.",
-      "github": "luke-jr",
-      "emails": [
-        "luke-jr+git@utopios.org",
-        "luke-jr@dashjr.org",
-        "luke@dashjr.org"
-      ]
-    },
-    {
       "id": "MarcoFalke",
       "name": "Marco Falke",
       "status": "emeritus",
       "role": {
-        "title": "QA / Testing Maintainer",
+        "title": "Former QA / Testing Maintainer",
         "primary_area": "QA / Testing / CI",
         "appointed": "2016-04-13",
         "stepped_down": "2023-02-21"
@@ -283,7 +264,7 @@
       "name": "Samuel Dobson",
       "status": "emeritus",
       "role": {
-        "title": "Wallet Maintainer",
+        "title": "Former Wallet Maintainer",
         "primary_area": "Wallet",
         "appointed": "2018-12-06",
         "stepped_down": "2021-12-09"
@@ -347,7 +328,7 @@
       "name": "Gloria Zhao",
       "status": "emeritus",
       "role": {
-        "title": "Mempool / Policy Maintainer",
+        "title": "Former Mempool / Policy Maintainer",
         "primary_area": "Mempool & Policy",
         "appointed": "2022-07-07",
         "stepped_down": "2026-02-05"
@@ -382,13 +363,13 @@
       "name": "Sebastian Kung",
       "status": "active",
       "role": {
-        "title": "Build / Security Maintainer",
+        "title": "Build System Maintainer",
         "primary_area": "Build System / Security / Kernel",
         "appointed": "2019-11-10"
       },
       "segments": [
         {
-          "type": "strategic",
+          "type": "build_system",
           "start": "2019-11-10",
           "end": "2026-01-08"
         },
@@ -409,14 +390,14 @@
       "name": "Carl Dong",
       "status": "emeritus",
       "role": {
-        "title": "Build / Security Maintainer",
+        "title": "Former Build System Maintainer",
         "primary_area": "Build System / Guix",
         "appointed": "2018-09-04",
         "stepped_down": "2024-02-14"
       },
       "segments": [
         {
-          "type": "strategic",
+          "type": "build_system",
           "start": "2018-09-04",
           "end": "2024-02-14"
         }

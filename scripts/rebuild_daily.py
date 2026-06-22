@@ -43,6 +43,11 @@ def main():
     run("git -C data/sources/bips pull origin master", cwd=root_dir)
     run("git -C data/sources/delving pull origin master", cwd=root_dir)
     run("git -C data/sources/mailing_list/shard_0 fetch origin", cwd=root_dir)
+    run("git -C data/sources/secp256k1 pull origin master", cwd=root_dir)
+    run("git -C data/sources/gui pull origin master", cwd=root_dir)
+    run("git -C data/sources/guix.sigs pull origin main", cwd=root_dir)
+    run("git -C data/sources/qa-assets pull origin main", cwd=root_dir)
+    run("git -C data/sources/HWI pull origin master", cwd=root_dir)
 
     # PHASE 1: Extraction (Source -> Raw)
     print("\n--- PHASE 1: Extraction (Raw Staging) ---")
@@ -66,8 +71,7 @@ def main():
     run("python3 scripts/02_process/merge_social.py", cwd=root_dir)
     run("python3 scripts/02_process/governance.py", cwd=root_dir)
     
-    # registry.py must run before Phase 3 — influence.py and unify_contributors.py both read metadata/contributors.json
-    run("python3 scripts/04_deliver/registry.py", cwd=root_dir)
+    run("python3 scripts/04_deliver/badges.py", cwd=root_dir)
 
     # PHASE 3: Intelligence (Skipped in daily, except lightweight influence)
     print("\n--- PHASE 3: Intelligence (Light) ---")

@@ -395,49 +395,22 @@ def extract_network():
     social_node_lookup = {n['id']: n for n in nodes_data}
     
     # Process the entire registry to include code-only contributors
-    print(f"Enriching all {total_population} contributors with archetypes and hybrid weighting...")
-    RICH_CODE_STATS = 'output/tracker/contributors_rich.json'
-    code_stats_data = {}
-    if os.path.exists(RICH_CODE_STATS):
-        try:
-            with open(RICH_CODE_STATS, 'r') as f:
-                for c in json.load(f):
-                    uid = resolver.resolve_git(str(c['name']), None)
-                    code_stats_data[uid] = c
-        except: pass
-
-    all_enriched_nodes = []
-    processed_cids = set()
+    # Load static badges (maintainer/sponsor/BIP author) — no dependency on registry.py
+    badges_lookup = {}
+    BADGES_PATH = 'metadata/badges.json'
+    if os.path.exists(BADGES_PATH):
+        with open(BADGES_PATH, 'r') as f:
+            badges_lookup = json.load(f)
+    else:
+        print(f"  Warning: {BADGES_PATH} not found — maintainer bonus will be skipped")
 
     # Use identities.json as the canonical population base — it is rebuilt fresh every run.
     # contributors.json is additive/never-pruned and accumulates zombie entries.
     with open(IDENTITY_MAP_PATH, 'r') as f:
         identities_list = json.load(f)['identities']
 
-    # Build a role/badge lookup from contributors.json (if it exists) keyed by UUID.
-    # Multiple contributors.json records may resolve to the same canonical UUID.
-    # Preserve positive badge values and merged roles rather than overwriting.
-    contrib_lookup = {}
-    if os.path.exists('metadata/contributors.json'):
-        with open('metadata/contributors.json', 'r') as f:
-            for c in json.load(f).get('contributors', []):
-                _raw_id = c.get('display_name') or c.get('id')
-                uid = resolver.resolve_git(str(_raw_id), None)
-                existing = contrib_lookup.get(uid)
-                if existing is None:
-                    contrib_lookup[uid] = c
-                else:
-                    existing_badges = existing.setdefault('badges', {})
-                    for badge, value in c.get('badges', {}).items():
-                        if value and not existing_badges.get(badge):
-                            existing_badges[badge] = value
-                    existing_roles = set(existing.get('roles', []))
-                    existing_roles.update(c.get('roles', []))
-                    existing['roles'] = sorted(existing_roles)
-                    if not existing.get('github', {}).get('login') and c.get('github', {}).get('login'):
-                        existing.setdefault('github', {})['login'] = c['github']['login']
-                    if not existing.get('identities') and c.get('identities'):
-                        existing['identities'] = c['identities']
+    all_enriched_nodes = []
+    processed_cids = set()
 
     # Load reviews_count from contributor_review_metrics.parquet (keyed by canonical_id).
     # Produced by efficiency.py which runs immediately before influence.py in the pipeline.
@@ -516,13 +489,17 @@ def extract_network():
         processed_cids.add(cid)
 
         social_data = social_node_lookup.get(cid, {})
-        c_stats = code_stats_data.get(cid, {})
-        reg_entry = contrib_lookup.get(cid, {})
+        reg_entry = badges_lookup.get(cid, {})
 
         # 1. Base Metrics
-        commits = c_stats.get('total_commits', 0)
-        impact = c_stats.get('impact', 0)
-        is_bip_author = reg_entry.get('badges', {}).get('is_bip_author', False)
+        cid_commit_hist = commit_history.get(cid, {})
+        commits = sum(
+            sum(cat_counts.values())
+            for year_str, cat_counts in cid_commit_hist.items()
+            if isinstance(cat_counts, dict)
+        )
+        impact = 0 # No longer sourced from Phase 4 artifacts
+        is_bip_author = reg_entry.get('is_bip_author', False)
         social_score = social_data.get('scores', {}).get('all', 0)
         reg_data = registry_stats.get(cid, {})
         reviews = reg_data.get('reviews_count', 0) or 0
@@ -564,7 +541,7 @@ def extract_network():
         BIP_BONUS_CAP = math.log(33, 2) * 0.35  # ≈ 1.765
         if bips_authored > 0:
             hybrid_score += min(math.log(bips_authored + 1, 2) * 0.35, BIP_BONUS_CAP)
-        if c_stats.get('is_maintainer'):
+        if reg_entry.get('is_maintainer'):
             hybrid_score += 1.0
         
         # 2b. Modern Hybrid Score — same formula but uses era-specific inputs.
@@ -573,7 +550,6 @@ def extract_network():
         # BIP/maintainer bonuses are intentionally omitted: those are career-level signals,
         # not a measure of current momentum.
         modern_cutoff_year = modern_start.year
-        cid_commit_hist = commit_history.get(cid, {})
         modern_commits = sum(
             sum(cat_counts.values())
             for year_str, cat_counts in cid_commit_hist.items()
@@ -611,34 +587,25 @@ def extract_network():
         # 3. Archetype Logic — 4 groups + Creator singleton
         # PM-friendly grouping: each label answers "what is their primary role?"
         #
-        # Protocol Designer  — shapes the protocol through standards or architecturally
-        #                       influential work (BIP authorship, OR strong hybrid + visibility signal)
+        # Protocol Designer  — contributed across all four domains: code, review, research, standards (BIPs)
         # Builder            — ships code (any commits; not a Protocol Designer)
         # Reviewer           — no code commits but active in review or discussion
         # Participant        — general/occasional participation across any activity
         #
-        # Evaluation order: most specific first so Builders with BIPs → Designer, not Builder.
-        designer_commit_threshold = 100
-        designer_social_threshold = 0.01
-        designer_hybrid_threshold = 2.0
-        designer_bip_count_threshold = 3
-        designer_bip_hybrid_threshold = 1.0
-
+        # Evaluation order: most specific first.
+        
+        has_code = commits > 0
+        has_review = reviews > 0 or prs_authored > 0
+        has_standards = bips_authored > 0
+        # Research uses social_score as a proxy for Mailing List + Delving activity
+        # since ml/delving counts are aggregated into social_score (social_factor)
+        has_research = social_score > 0
+        
         if cid == 'can_satoshi_nakamoto':
             dev_type = "Creator"
-        elif (
-            (bips_authored >= designer_bip_count_threshold and hybrid_score > designer_bip_hybrid_threshold)
-            or (
-                (commits > designer_commit_threshold or bips_authored > 0)
-                and (
-                    social_score > designer_social_threshold or
-                    hybrid_score > designer_hybrid_threshold
-                )
-            )
-        ):
-            # Strong Designer signal requires either:
-            # 1. multi-BIP authorship with sufficient hybrid influence, or
-            # 2. a strong engineering/social signal from commits + visibility.
+        elif has_code and has_review and has_standards and has_research:
+            # Protocol Designer must have footprint in all 4 domains (Code, Review, Research, Standards)
+            # matching the `1111` intersection in the ecosystem Venn diagram.
             dev_type = "Protocol Designer"
         elif commits > 0:
             # Any code committer who didn't clear the Designer bar.
@@ -662,7 +629,7 @@ def extract_network():
             "growth": 0,
             "top_category": "code",
             "expertise": [],
-            "bips": reg_entry.get('badges', {}).get('bips', []),
+            "bips": [],
             "dominant_source": "github",
             "source_breakdown": {"github": 1},
             "threads_started": 0,
@@ -679,6 +646,10 @@ def extract_network():
         }
         
         node_obj.update({
+            "is_engineer": bool(has_code),
+            "is_reviewer": bool(has_review),
+            "is_researcher": bool(has_research),
+            "is_bip_author": bool(has_standards),
             # Always use identities.json as the authoritative display name source.
             # contributors.json entries keyed by resolve_git(display_name) can collide
             # with impersonator accounts whose names are in a real person's git aliases.
@@ -704,7 +675,7 @@ def extract_network():
                 "reviews": int(reviews),
                 "bips_authored": int(bips_authored),
                 "impact": impact,
-                "is_maintainer": c_stats.get('is_maintainer', False)
+                "is_maintainer": reg_entry.get('is_maintainer', False)
             }
         })
 

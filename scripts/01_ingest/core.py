@@ -6,8 +6,14 @@ import os
 import sys
 import json
 
-# --- Configuration ---
-REPO_PATH = "data/sources/bitcoin"
+REPOSITORIES = {
+    "bitcoin/bitcoin": "data/sources/bitcoin",
+    "bitcoin-core/secp256k1": "data/sources/secp256k1",
+    "bitcoin-core/gui": "data/sources/gui",
+    "bitcoin-core/guix.sigs": "data/sources/guix.sigs",
+    "bitcoin-core/qa-assets": "data/sources/qa-assets",
+    "bitcoin-core/HWI": "data/sources/HWI"
+}
 OUTPUT_PATH = "data/raw/core_commits.parquet"
 MESSAGES_OUTPUT_PATH = "data/raw/core_messages.parquet"  # Standardized raw location
 STATE_PATH = "data/state.json"
@@ -108,7 +114,7 @@ def get_git_log(repo_path):
         "git",
         "-C", repo_path,
         "log",
-        "master",
+        "HEAD",
         "--format=COMMIT_Start^|^%H^|^%at^|^%an^|^%ae^|^%cn^|^%ce^|^%ct^|^%P^|^%ai^|^%s",
         # "--numstat", # Temporarily disable numstat to isolate the issue? No, keep it.
         "--numstat"
@@ -136,7 +142,7 @@ def get_git_log_with_messages(repo_path):
         "git",
         "-C", repo_path,
         "log",
-        "master",
+        "HEAD",
         "--format=MESSAGE_START^|^%H^|^%s^|^%b^|^MESSAGE_END",
     ]
     
@@ -145,7 +151,7 @@ def get_git_log_with_messages(repo_path):
     
     return process
 
-def parse_log(process):
+def parse_log(process, repo_name):
     stream = process.stdout
     commits = []
     seen_hashes = set()
@@ -164,7 +170,7 @@ def parse_log(process):
             if curr_meta:
                 # Deduplication check
                 if curr_meta["hash"] not in seen_hashes:
-                    process_commit(curr_meta, curr_stats, commits)
+                    process_commit(curr_meta, curr_stats, commits, repo_name)
                     seen_hashes.add(curr_meta["hash"])
             
             # Start new commit
@@ -203,7 +209,7 @@ def parse_log(process):
     
     # Process last commit
     if curr_meta and curr_meta["hash"] not in seen_hashes:
-        process_commit(curr_meta, curr_stats, commits)
+        process_commit(curr_meta, curr_stats, commits, repo_name)
         
     # Check for errors
     stderr = process.stderr.read()
@@ -215,7 +221,7 @@ def parse_log(process):
         
     return commits
 
-def parse_messages(process):
+def parse_messages(process, repo_name):
     """
     Parse commit messages to extract hash, subject, and body.
     Body contains ACK/NACK trailers we'll parse later.
@@ -237,6 +243,7 @@ def parse_messages(process):
             if current_hash and current_hash not in seen_hashes:
                 messages.append({
                     "hash": current_hash,
+                    "repository_name": repo_name,
                     "subject": current_subject,
                     "body": "\n".join(current_body_lines)
                 })
@@ -263,6 +270,7 @@ def parse_messages(process):
     if current_hash and current_hash not in seen_hashes:
         messages.append({
             "hash": current_hash,
+            "repository_name": repo_name,
             "subject": current_subject,
             "body": "\n".join(current_body_lines)
         })
@@ -280,7 +288,7 @@ def categorize_file(path):
                 return category
     return "Utilities"  # fallback: unrecognised path → shared utilities bucket
 
-def process_commit(meta, stats, commits_list):
+def process_commit(meta, stats, commits_list, repo_name):
     # Base Stats (Total for the commit)
     total_adds = sum(x["adds"] for x in stats)
     total_dels = sum(x["dels"] for x in stats)
@@ -300,9 +308,17 @@ def process_commit(meta, stats, commits_list):
         cat_deltas = {"Merge": {"adds": 0, "dels": 0}}
     else:
         # Categorization logic for non-merge commits
+        # Hardcode ecosystem repos to their native domains
+        eco_map = {
+            "bitcoin-core/HWI": "Wallet",
+            "bitcoin-core/qa-assets": "Tests",
+            "bitcoin-core/guix.sigs": "Build & CI"
+        }
+        repo_override = eco_map.get(repo_name)
+
         for s in stats:
             # Category
-            cat = categorize_file(s["path"])
+            cat = repo_override if repo_override else categorize_file(s["path"])
             if cat not in cat_deltas:
                 cat_deltas[cat] = {"adds": 0, "dels": 0}
             cat_deltas[cat]["adds"] += s["adds"]
@@ -358,6 +374,7 @@ def process_commit(meta, stats, commits_list):
     for category, metrics in cat_deltas.items():
         record = {
             "hash": meta["hash"],
+            "repository_name": repo_name,
             "date_utc": dt_utc,
             "year": dt_utc.year,
             "month": dt_utc.month,
@@ -374,6 +391,7 @@ def process_commit(meta, stats, commits_list):
             "committer_email": meta["committer_email"].lower(),
             
             "is_merge": len(meta["parents"].split()) > 1,
+            "parents": meta["parents"],
             
             # Specific to this category-slice
             "additions": metrics["adds"],
@@ -390,69 +408,74 @@ def process_commit(meta, stats, commits_list):
         commits_list.append(record)
 
 def main():
-    if not os.path.exists(REPO_PATH):
-        print(f"Error: Repo not found at {REPO_PATH}")
-        return
-
-    if not os.path.isdir(os.path.join(REPO_PATH, '.git')):
-        print(f"Error: {REPO_PATH} exists but is not a valid git repository (no .git dir). "
-              f"Run: git clone https://github.com/bitcoin/bitcoin {REPO_PATH}")
-        return
-
-    # State checkpoint: skip if Core repo HEAD hasn't moved since last build.
-    latest_commit = subprocess.run(
-        ["git", "-C", REPO_PATH, "rev-parse", "HEAD"], capture_output=True, text=True
-    ).stdout.strip()
     state = load_state()
-    if (state.get("core", {}).get("latest_commit") == latest_commit
-            and os.path.exists(OUTPUT_PATH) and os.path.exists(MESSAGES_OUTPUT_PATH)):
-        print(f"Core repo is up to date at commit {latest_commit[:12]}. Skipping re-parse.")
-        return
-
-    print("Reading git log...")
+    all_commits = []
+    all_messages = []
     
-    # Actual run - commits with numstat
-    process = get_git_log(REPO_PATH)
-    commits = parse_log(process)
-    
-    print(f"Parsed {len(commits)} commits.")
+    for repo_name, repo_path in REPOSITORIES.items():
+        if not os.path.exists(repo_path):
+            print(f"Error: Repo not found at {repo_path}")
+            continue
 
-    if not commits:
-        print("Warning: No commits parsed. Check that the repo has a 'master' branch and is not empty.")
-        # Write a schema-correct empty parquet so downstream scripts don't crash with KeyError.
-        empty_cols = ['hash', 'author_ts', 'author_name', 'author_email', 'committer_name',
+        if not os.path.isdir(os.path.join(repo_path, '.git')):
+            print(f"Error: {repo_path} exists but is not a valid git repository (no .git dir).")
+            continue
+
+        # State checkpoint
+        latest_commit = subprocess.run(
+            ["git", "-C", repo_path, "rev-parse", "HEAD"], capture_output=True, text=True
+        ).stdout.strip()
+        
+        # We will parse unconditionally for now to ensure all repos are fully ingested during upgrade,
+        # but keep state updated for future incremental passes
+        print(f"\nProcessing {repo_name}...")
+        
+        print(f"  Reading git log...")
+        process = get_git_log(repo_path)
+        commits = parse_log(process, repo_name)
+        print(f"  Parsed {len(commits)} commits.")
+        
+        all_commits.extend(commits)
+        
+        print(f"  Extracting commit messages for reviewer analysis...")
+        msg_process = get_git_log_with_messages(repo_path)
+        messages = parse_messages(msg_process, repo_name)
+        print(f"  Extracted {len(messages)} commit messages.")
+        
+        all_messages.extend(messages)
+        
+        state.setdefault("core_repos", {})[repo_name] = {
+            "latest_commit": latest_commit,
+            "total_commits": len(commits),
+            "latest_update": datetime.utcnow().isoformat()
+        }
+        
+    if not all_commits:
+        print("Warning: No commits parsed across any repository.")
+        empty_cols = ['hash', 'repository_name', 'author_ts', 'author_name', 'author_email', 'committer_name',
                       'committer_email', 'committer_ts', 'parents', 'date_utc', 'subject',
                       'is_merge', 'file_path', 'additions', 'deletions', 'category', 'extensions_json']
         df = pd.DataFrame(columns=empty_cols)
     else:
-        df = pd.DataFrame(commits)
+        df = pd.DataFrame(all_commits)
 
     # Save commits
     os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
     df.to_parquet(OUTPUT_PATH, index=False)
-    print(f"Saved to {OUTPUT_PATH}")
+    print(f"\nSaved {len(df)} total commit chunks to {OUTPUT_PATH}")
     
-    # --- NEW: Extract commit messages for reviewer parsing ---
-    print("\nExtracting commit messages for reviewer analysis...")
-    msg_process = get_git_log_with_messages(REPO_PATH)
-    messages = parse_messages(msg_process)
-    print(f"Extracted {len(messages)} commit messages.")
-    
-    messages_df = pd.DataFrame(messages)
+    messages_df = pd.DataFrame(all_messages)
     messages_df.to_parquet(MESSAGES_OUTPUT_PATH, index=False)
-    print(f"Saved messages to {MESSAGES_OUTPUT_PATH}")
+    print(f"Saved {len(messages_df)} total messages to {MESSAGES_OUTPUT_PATH}")
     
     # --- Static Analysis ---
-    scan_repository(REPO_PATH)
+    for repo_name, repo_path in REPOSITORIES.items():
+        if os.path.exists(repo_path):
+            scan_repository(repo_path, repo_name)
 
-    # Persist state checkpoint
-    state = load_state()
-    state.setdefault("core", {})["latest_commit"] = latest_commit
-    state["core"]["total_commits"] = len(commits) if commits else 0
-    state["core"]["latest_update"] = datetime.utcnow().isoformat()
     save_state(state)
 
-def scan_repository(repo_path):
+def scan_repository(repo_path, repo_name):
     """
     Scans the current HEAD of the repo to count files, lines, and languages per category.
     Saves to data/category_metadata.json
@@ -505,13 +528,14 @@ def scan_repository(repo_path):
             total_files += 1
             total_loc += 1
             
-    print(f"Scanned {total_files} files, {total_loc} lines.")
+    print(f"[{repo_name}] Scanned {total_files} files, {total_loc} lines.")
     
     # Save Artifact
-    meta_path = "data/enriched/core_metadata.json"
+    meta_path = f"data/enriched/{repo_name.replace('/', '_')}_metadata.json"
+    os.makedirs("data/enriched", exist_ok=True)
     with open(meta_path, "w") as f:
         json.dump(stats, f, indent=2)
-    print(f"Saved Metadata to {meta_path}")
+    print(f"[{repo_name}] Saved Metadata to {meta_path}")
 
 if __name__ == "__main__":
     main()

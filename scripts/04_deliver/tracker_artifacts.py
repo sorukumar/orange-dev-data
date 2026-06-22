@@ -861,6 +861,13 @@ class MetricGenerators:
                  "last_active_year": int(row['end_year']),
                  "total_commits": int(row['total_commits']),
                  "authored_commits": int(row['authored_commits']),
+                 "tier1_authored_commits": int(enrich_data.get('tier1_authored_commits', 0) if not pd.isna(enrich_data.get('tier1_authored_commits')) else 0),
+                 "tier2_authored_commits": int(enrich_data.get('tier2_authored_commits', 0) if not pd.isna(enrich_data.get('tier2_authored_commits')) else 0),
+                 "reviews_count": int(enrich_data.get('reviews_count', 0) if not pd.isna(enrich_data.get('reviews_count')) else 0),
+                 "approvals_count": int(enrich_data.get('approvals_count', 0) if not pd.isna(enrich_data.get('approvals_count')) else 0),
+                 "impact_score": int(enrich_data.get('impact_score', 0) if not pd.isna(enrich_data.get('impact_score')) else 0),
+                 "bips_authored": int(enrich_data.get('bips_authored', 0) if not pd.isna(enrich_data.get('bips_authored')) else 0),
+                 "threads_started": int(enrich_data.get('threads_started', 0) if not pd.isna(enrich_data.get('threads_started')) else 0),
                  "merge_commits": int(row['merge_commits']),
                  "impact": int(row['lines_added']),
                  "primary_category": primary,
@@ -872,7 +879,13 @@ class MetricGenerators:
                  "percentile_raw": round(row['percentile'] * 100, 1), # e.g. 99.5
                  "history": history_map.get(cid, {}),
                  "risk_score": int(row['risk_score']),
-                 "radar_profile": radar_profiles.get(cid, {})
+                 "radar_profile": radar_profiles.get(cid, {}),
+                 "is_engineer": bool(enrich_data.get('is_engineer', False)),
+                 "is_reviewer": bool(enrich_data.get('is_reviewer', False)),
+                 "is_researcher": bool(enrich_data.get('is_researcher', False)),
+                 "is_bip_author": bool(enrich_data.get('is_bip_author', False)),
+                 "dev_type": str(enrich_data.get('dev_type', 'Participant')),
+                 "global_cohort_year": int(pd.to_datetime(enrich_data.get('global_first_active')).year) if pd.notna(enrich_data.get('global_first_active')) else int(row['start_year'])
              })
              
         with open(Config.FILES["contributors_rich"], "w") as f:
@@ -1768,6 +1781,23 @@ def main():
     if not social.empty:
         social['date'] = pd.to_datetime(social['date'], utc=True)
         social = social[social['date'] <= cutoff_date]
+    
+    # Derive 'year' from integration_date (PR merge date) when available,
+    # falling back to date_utc. This makes all cohort/tenure metrics reflect
+    # when code was actually merged, not when the author typed it.
+    if 'integration_date' in commits.columns:
+        commits['integration_date'] = pd.to_datetime(commits['integration_date'], utc=True)
+        commits['year'] = commits['integration_date'].dt.year
+        
+        # GUARDRAIL: Bitcoin Core PRs can take years to merge, but administrative 
+        # subtree imports/migrations can cause 10+ year gaps. 
+        # If the gap between authoring and merging is > 3 years (1095 days), 
+        # fall back to the author year to prevent artificially "reviving" retired devs.
+        commits['date_utc'] = pd.to_datetime(commits['date_utc'], utc=True)
+        gap_days = (commits['integration_date'] - commits['date_utc']).dt.days
+        commits.loc[gap_days > 1095, 'year'] = commits.loc[gap_days > 1095, 'date_utc'].dt.year
+    else:
+        commits['year'] = commits['date_utc'].dt.year
     
     print(f"Filtering data to cutoff: {cutoff_date.strftime('%Y-%m-%d')}")
     

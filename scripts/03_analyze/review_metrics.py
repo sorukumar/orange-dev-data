@@ -35,11 +35,18 @@ def calculate_review_metrics():
     df_prs = pd.read_parquet(PR_METADATA_INPUT)
     df_events = pd.read_parquet(REVIEW_EVENTS_INPUT)
 
+    df_prs['repo_tier'] = 'tier1'
+    df_events['repo_tier'] = 'tier1'
+
     # Include BIPs GitHub data (same schema as Bitcoin Core parquets)
     if os.path.exists(BIPS_PR_METADATA_INPUT):
-        df_prs = pd.concat([df_prs, pd.read_parquet(BIPS_PR_METADATA_INPUT)], ignore_index=True)
+        bips_prs = pd.read_parquet(BIPS_PR_METADATA_INPUT)
+        bips_prs['repo_tier'] = 'tier2'
+        df_prs = pd.concat([df_prs, bips_prs], ignore_index=True)
     if os.path.exists(BIPS_REVIEW_EVENTS_INPUT):
-        df_events = pd.concat([df_events, pd.read_parquet(BIPS_REVIEW_EVENTS_INPUT)], ignore_index=True)
+        bips_events = pd.read_parquet(BIPS_REVIEW_EVENTS_INPUT)
+        bips_events['repo_tier'] = 'tier2'
+        df_events = pd.concat([df_events, bips_events], ignore_index=True)
     
     # Using Master Identity Resolver
     print("Using identity resolver for canonical mapping...")
@@ -116,8 +123,18 @@ def calculate_review_metrics():
         avg_approval_latency_days=('latency_days', 'mean'),
         approvals_count=('pr_number', 'nunique')
     ).reset_index()
+
+    tier1_reviews = df_active[df_active['repo_tier'] == 'tier1'].groupby('user').agg(
+        tier1_reviews_count=('pr_number', 'nunique')
+    ).reset_index()
+
+    tier2_reviews = df_active[df_active['repo_tier'] == 'tier2'].groupby('user').agg(
+        tier2_reviews_count=('pr_number', 'nunique')
+    ).reset_index()
     
     reviewer_metrics = reviewer_perf.merge(approval_perf, on='user', how='left')
+    reviewer_metrics = reviewer_metrics.merge(tier1_reviews, on='user', how='left')
+    reviewer_metrics = reviewer_metrics.merge(tier2_reviews, on='user', how='left')
     reviewer_metrics = reviewer_metrics.merge(p2016_reviewer_counts, on='user', how='left')
     reviewer_metrics = reviewer_metrics.merge(modern_reviewer_counts, on='user', how='left')
     reviewer_metrics = reviewer_metrics.merge(review_date_range, on='user', how='left')
@@ -144,6 +161,17 @@ def calculate_review_metrics():
     ).reset_index()
     
     author_metrics = df_prs.groupby('author').agg(prs_authored=('pr_number', 'nunique')).reset_index()
+
+    tier1_authored = df_prs[df_prs['repo_tier'] == 'tier1'].groupby('author').agg(
+        tier1_prs_authored=('pr_number', 'nunique')
+    ).reset_index()
+
+    tier2_authored = df_prs[df_prs['repo_tier'] == 'tier2'].groupby('author').agg(
+        tier2_prs_authored=('pr_number', 'nunique')
+    ).reset_index()
+
+    author_metrics = author_metrics.merge(tier1_authored, on='author', how='left')
+    author_metrics = author_metrics.merge(tier2_authored, on='author', how='left')
     author_metrics = author_metrics.merge(author_perf, on='author', how='left')
     author_metrics = author_metrics.merge(author_concepts, on='author', how='left')
     
@@ -164,8 +192,12 @@ def calculate_review_metrics():
     # Fill NAs
     metrics_df = metrics_df.fillna({
         'reviews_count': 0,
+        'tier1_reviews_count': 0,
+        'tier2_reviews_count': 0,
         'approvals_count': 0,
         'prs_authored': 0,
+        'tier1_prs_authored': 0,
+        'tier2_prs_authored': 0,
         'p2016_reviews_count': 0,
         'modern_reviews_count': 0
     })

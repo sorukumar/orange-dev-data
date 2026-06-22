@@ -9,6 +9,9 @@ from scripts.utils.identity import resolver
 # --- Configuration ---
 COMMITS_FILE = "data/raw/core_commits.parquet"
 OUTPUT_FILE = "data/enriched/commits_resolved.parquet"
+MESSAGES_FILE = "data/raw/core_messages.parquet"
+PR_METADATA_FILE = "data/raw/github_pr_metadata.parquet"
+SPONSORS_FILE = "metadata/sponsors.json"
 SPONSORS_FILE = "metadata/sponsors.json"
 GITHUB_PROFILES_FILE = "metadata/github_profiles.json"
 
@@ -108,6 +111,80 @@ def is_merge_script(name_or_email):
     val = name_or_email.lower()
     return 'merge script' in val or 'merge-script' in val or 'bitcoin-core-merge-script' in val
 
+def map_integration_dates(commits_df):
+    print("Mapping integration dates from PR metadata...")
+    if not os.path.exists(PR_METADATA_FILE):
+        print(f"Warning: {PR_METADATA_FILE} not found. Falling back to date_utc.")
+        commits_df['integration_date'] = commits_df['date_utc']
+        return commits_df
+        
+    prs_df = pd.read_parquet(PR_METADATA_FILE)
+    pr_dict = {}
+    for _, row in prs_df.iterrows():
+        repo = row['repository_name']
+        pr_number = row['pr_number']
+        merged_at = row['merged_at']
+        if pd.notna(merged_at):
+            pr_dict.setdefault(repo, {})[str(pr_number)] = pd.to_datetime(merged_at)
+            pr_dict.setdefault(repo, {})[int(pr_number)] = pd.to_datetime(merged_at)
+            
+    if not os.path.exists(MESSAGES_FILE):
+        print(f"Warning: {MESSAGES_FILE} not found.")
+        commits_df['integration_date'] = commits_df['date_utc']
+        return commits_df
+        
+    messages_df = pd.read_parquet(MESSAGES_FILE)
+    msg_map = messages_df.set_index('hash')['subject'].to_dict()
+    
+    integration_dates = {}
+    import re
+    pr_regex = re.compile(r'Merge\s+(?:pull\s+request\s+|.*?#)(\d+)', re.IGNORECASE)
+    
+    for repo, repo_commits in commits_df.groupby('repository_name'):
+        repo_parents = repo_commits.set_index('hash')['parents'].fillna('').apply(lambda x: x.split()).to_dict()
+        repo_dates = repo_commits.set_index('hash')['date_utc'].to_dict()
+        
+        merge_commits = {}
+        for h, p in repo_parents.items():
+            if len(p) > 1:
+                subject = msg_map.get(h, "")
+                match = pr_regex.search(subject)
+                if match:
+                    merge_commits[h] = match.group(1)
+                    
+        sorted_merges = sorted(merge_commits.keys(), key=lambda x: repo_dates.get(x, pd.Timestamp.min))
+        
+        for mh in sorted_merges:
+            pr_num = merge_commits[mh]
+            merged_at = pr_dict.get(repo, {}).get(pr_num)
+            if pd.isna(merged_at):
+                merged_at = repo_dates.get(mh)
+                
+            integration_dates[mh] = merged_at
+            
+            p_list = repo_parents.get(mh, [])
+            if len(p_list) > 1:
+                p2 = p_list[1]
+                queue = [p2]
+                visited = set()
+                while queue:
+                    curr = queue.pop(0)
+                    if curr in visited: continue
+                    visited.add(curr)
+                    
+                    if curr in integration_dates:
+                        continue
+                        
+                    integration_dates[curr] = merged_at
+                    
+                    for p in repo_parents.get(curr, []):
+                        queue.append(p)
+                        
+    commits_df['integration_date'] = commits_df['hash'].map(integration_dates)
+    commits_df['integration_date'] = commits_df['integration_date'].fillna(commits_df['date_utc'])
+    commits_df['integration_date'] = pd.to_datetime(commits_df['integration_date'], utc=True)
+    return commits_df
+
 def resolve_commits():
     print("Loading raw commits...")
     if not os.path.exists(COMMITS_FILE):
@@ -179,6 +256,9 @@ def resolve_commits():
     commits['classification'] = sponsor_data[0]
     commits['sponsor_name'] = sponsor_data[1]
     commits.drop(columns=['target_email'], inplace=True)
+    
+    # Map integration dates (merged_at)
+    commits = map_integration_dates(commits)
     
     os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
     commits.to_parquet(OUTPUT_FILE, index=False)

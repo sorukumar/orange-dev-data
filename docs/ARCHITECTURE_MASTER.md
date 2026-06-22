@@ -71,7 +71,7 @@ We use two primary orchestrators to manage the pipeline complexity:
 
 The repository's unique value lies in its **Master Contributor Registry**.
 - **`identities.json`**: The **Absolute Bedrock**. Replaced legacy alias strings. Maps 7,659+ identities and generates UUIDs Just-In-Time. This is the primary key for the entire "Grand Join".
-- **`contributors.json`**: The "Legacy Encyclopedia". Holds roles, badges, and manual vetting data for the core 2,400 members. Used during Phase 2 to enrich the UUID-based dataset.
+- **`contributors.json`**: The **Compiled Master Record**. Built deterministically from scratch by `registry.py` on every run. Holds roles and badges derived from the single-source-of-truth files (`maintainers.json`, `sponsors.json`, etc.). Used during Phase 3 to enrich the UUID-based dataset.
 - **`sponsors.json`**: Tracks the funding independence of the decentralized developer set.
 - **`locations.json`**: Human-audited geographical mapping.
 - **`subsystems.json`**: The unified Bitcoin protocol registry. Maps BIPs, source paths, and keywords to technical domains.
@@ -280,22 +280,17 @@ These scripts resolve raw identifiers to UUIDs and aggregate activity per UUID.
 
 ---
 
-## Phase 2c — Bootstrap Registry (`scripts/04_deliver/registry.py`) ← runs early
+## Phase 2c — Static Badges (`scripts/04_deliver/badges.py`) ← runs early
 
 **MUST run before Phase 3.** Both `influence.py` and `unify_contributors.py`
-read `metadata/contributors.json`, which this script creates.
+read `metadata/badges.json`, which this script creates.
 
 ### Reads
 - `metadata/identities.json`
-- `metadata/contributors.json` (if exists — incremental, additive)
-- `output/tracker/contributors_rich.json` (written by `02_process/core.py` — must exist for a full sync; handled gracefully on first run)
-- `data/enriched/social_stats.json` (for social discovery)
+- `metadata/maintainers.json`, `sponsors.json`, `bips_ui.json` (single sources of truth)
 
 ### Writes
-- `metadata/contributors.json` — the “encyclopedia” of all known contributors
-  with roles, badges, first/last seen timestamps
-
-> ⚠️ `registry.py` does **not** write `output/tracker/contributors_rich.json`. That file is written by `02_process/core.py`. `registry.py` only reads it.
+- `metadata/badges.json` — built dynamically from scratch every run to map roles and badges to active developers.
 
 ---
 
@@ -306,7 +301,7 @@ Heavy analytics. Deeper per-UUID aggregations.
 ### `review_metrics.py`
 
 **Reads:** `data/raw/github_pr_metadata.parquet`, `data/raw/github_review_events.parquet`,
-`data/raw/bips_pr_metadata.parquet`, `data/raw/bips_review_events.parquet`, `metadata/contributors.json`  
+`data/raw/bips_pr_metadata.parquet`, `data/raw/bips_review_events.parquet`, `metadata/badges.json`  
 **Writes:** `data/enriched/contributor_review_metrics.parquet`  
 **Computes:** Review latency, ACK speed, PRs authored, review reciprocity  
 **Coverage:** Both Bitcoin Core and BIPs GitHub (BIPs parquets concatenated before processing)  
@@ -327,7 +322,7 @@ Current output: 6,077 unique UUIDs
 ### `influence.py`
 
 **Reads:** `data/enriched/social_threads.parquet`, `metadata/identities.json`,
-`metadata/contributors.json`, `output/tracker/contributors_rich.json` (code stats, optional)  
+`metadata/badges.json`, `data/enriched/core_commits.parquet` (code stats, optional)  
 **Writes:** `data/enriched/social_stats.json`, `output/network/network_graph.json`  
 **Computes:** PageRank centrality across three eras (all-time, post-2016, modern),
 contributor archetypes, hybrid influence score combining social + code signals,
@@ -369,7 +364,7 @@ Current output: 7,249 people in social_stats.json
 |---|---|
 | `metadata/identities.json` | Base UUID list + display name + platform handles |
 | `data/raw/core_commits.parquet` | Commit counts, additions, deletions |
-| `metadata/contributors.json` | Roles, badges, first/last seen |
+| `metadata/badges.json` | Roles and badges |
 | `data/enriched/contributor_review_metrics.parquet` | Reviewer metrics, PRs authored (Bitcoin Core + BIPs) |
 | `data/enriched/social_stats.json` | Social influence score, thread counts, hybrid score, **impact_score** |
 | `data/enriched/bips_refined.parquet` | BIPs authored (uses pre-resolved `author_canonical_ids` — NOT re-resolved) |
@@ -498,7 +493,7 @@ social_delving.parquet ──────┴─ merge_social.py → social_combi
                                            social_threads.parquet  ← used by influence.py & expertise.py
 bips.parquet ─── governance.py (+ social_combined, core_commits, core_messages) → bips_refined.parquet
 
-        ↓ registry.py (bootstrap — writes contributors.json) ↓
+        ↓ badges.py (bootstrap — writes badges.json) ↓
 
         ↓ Phase 3 ↓
 
@@ -510,7 +505,7 @@ bips.parquet ─── governance.py (+ social_combined, core_commits, core_mess
 
 identities.json (base)
 + core_commits.parquet (commits)
-+ contributors.json (roles/badges)
++ badges.json (roles/badges)
 + contributor_review_metrics.parquet (review metrics — Bitcoin Core + BIPs)
 + social_stats.json (influence/hybrid score)
 + bips_refined.parquet (BIP authorship)
@@ -537,7 +532,8 @@ identities.json (base)
 
 | Step | `rebuild_daily.py` | `rebuild_monthly.py` |
 |---|---|---|
-| `mailing_list.py` | ❌ skipped | ✅ runs |
+| `mailing_list.py` | ✅ runs | ✅ runs |
+| `build_github_id_map.py` | ❌ skipped | ✅ runs (Phase 2) |
 | `bips_metadata.py` | ✅ runs | ✅ runs |
 | `categorize.py` | ❌ skipped | ✅ runs (Phase 3) |
 | `generate_regional_evolution.py` | ❌ skipped | ✅ runs (Phase 4) |
@@ -571,7 +567,7 @@ new mailing-list/Delving messages.
 | `mailing_list.py` (Phase 1) baked `canonical_id` before `build_identities.py` ran | Phase 2 identity merges made Phase 1 IDs stale → 97 mailing-list UUIDs stranded with zero activity | Added `restamp_social_ids.py` after `build_identities.py` to re-resolve with fresh Phase 2 resolver |
 | `prs_authored` missing from `registry_cols` in `ui_artifacts.py` | Reviewer count was wrong in output | Added to column list |
 | `ecosystem_summary.py` not called by either rebuild script | Landing page numbers always stale | Added to end of both `rebuild_daily.py` and `rebuild_monthly.py` |
-| `registry.py` ran too late (Phase 4) but `influence.py` and `unify_contributors.py` needed it in Phase 3 | On clean-slate run: `social_stats.json` output 0 people | Moved `registry.py` to run before Phase 3 in both rebuild scripts |
+| `registry.py` ran too late (Phase 4) but `influence.py` and `unify_contributors.py` needed it in Phase 3 | On clean-slate run: `social_stats.json` output 0 people | Split registry.py into `badges.py` (Phase 2c) and `registry.py` (Phase 4) to remove the circular dependency on `contributors_rich.json`. |
 | `unify_contributors.py` hard-crashed when social data was empty | `first_active` column didn't exist if influence produced zero results | Safe column presence check |
 | `build_identities.py` zero-trust SHA anchor join hit only 23% of GitHub identities | Complex inline logic cross-checked head_sha against core_commits.parquet → only 694 of 3,019 GitHub identities got a real-email anchor | Extracted email mining to `build_github_id_map.py` (monthly); stores corroborated `github_id → email` pairs with source, corroboration count, and example SHA/PR; `build_identities.py` now reads the map instead of doing inline SHA lookups |
 
@@ -582,7 +578,7 @@ new mailing-list/Delving messages.
 | `bips_metadata.py` never called by either rebuild script | `bips_pr_metadata.parquet` and `bips_review_events.parquet` were never refreshed; `bipgithub` signal depended on a manually-generated file | **Fixed** — added to Phase 1 of both `rebuild_daily.py` and `rebuild_monthly.py` |
 | `build_identities.py` only used PR author logins for GH_ID anchoring | Reviewers who never authored a PR had no GH_ID edge → harder to merge their identities across sources | **Fixed** — added `process_review_events()` in `build_identities.py` that ingests login+GH_ID edges from both `github_review_events.parquet` and `bips_review_events.parquet` |
 | `categorize.py` skipped on daily runs | `social_threads.parquet` is stale between monthly runs; daily social influence uses old thread categorisations | **By design?** — confirm intentional or add lightweight re-categorisation to daily pipeline |
-| `mailing_list.py` skipped on daily runs | New mailing-list messages not ingested daily | **By design** (archive-based; acceptable for daily cadence) |
+| `mailing_list.py` skipped on daily runs | New mailing-list messages not ingested daily | **Fixed** — added to Phase 1 of `rebuild_daily.py` |
 
 
 ---
@@ -740,7 +736,7 @@ python3 scripts/identity/build_github_id_map.py
 
 For contributors who appeared in only one PR (below the corroboration threshold for
 the main map), there is an optional enrichment step that uses GitHub profile pages as
-a second signal:
+a second signal. **This is an ad-hoc, one-off process.** Because it requires querying the live GitHub API and a `GITHUB_TOKEN`, it is not part of the automated daily or monthly pipelines. You only need to run this manually on occasion (e.g., quarterly) to scoop up new single-PR contributors and enrich the `github_id_map.json`:
 
 ```bash
 # Step 1: generate the list of single-PR contributors
@@ -802,6 +798,17 @@ rebuild script.
 - **`rebuild_monthly.py`**: Full pipeline — adds mailing list ingest, `github_id_map`
   rebuild, NLP categorization (`categorize.py`), and regional evolution. Supports
   `--audit` flag to generate `audit_potential_matches.json`.
+
+---
+
+## Ad-Hoc Enrichment (`scripts/enrichment/`)
+
+Scripts in this directory fetch real-time or supplemental data from external APIs (like GitHub). Because they require a `GITHUB_TOKEN` and are subject to rate limiting, they are **never** called by the automated daily or monthly pipelines.
+
+- **`generate_single_pr_input.py`**: Finds contributors who only authored a single PR to be queried for public email signals.
+- **`fetch_github_profiles.py`**: Fetches full GitHub profile payloads (location, company, public email) from the live REST API for a targeted list of users.
+- **`ingest_single_pr_profiles.py`**: Cross-validates fetched public emails against commit emails to confirm identity links and injects them into the identity maps.
+- **`github_top_contributors.py`**: Fetches the top 300 contributors from the GitHub API directly to bootstrap or cross-reference our own computed total commits.
 
 ---
 

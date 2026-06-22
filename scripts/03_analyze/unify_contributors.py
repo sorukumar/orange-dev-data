@@ -9,7 +9,7 @@ import scripts.utils.identity
 from scripts.utils.identity import resolver
 
 # --- Configuration ---
-CONTRIBUTORS_REGISTRY = "metadata/contributors.json"
+BADGES_JSON = "metadata/badges.json"
 COMMITS_PARQUET = "data/enriched/commits_resolved.parquet"
 EFFICIENCY_PARQUET = "data/enriched/contributor_review_metrics.parquet"
 SOCIAL_STATS_JSON = "data/enriched/social_stats.json"
@@ -59,19 +59,51 @@ def unify():
             df_commits['is_merg'] = 0
             
         # Drop duplicate hashes for a single contributor to prevent double-counting category-exploded rows
-        df_commits_dedup = df_commits.drop_duplicates(subset=['canonical_id', 'hash'])
+        tier1_repos = ['bitcoin/bitcoin', 'bitcoin-core/secp256k1', 'bitcoin-core/gui']
+        tier2_repos = ['bitcoin-core/guix.sigs', 'bitcoin-core/qa-assets', 'bitcoin-core/HWI']
         
+        df_commits_dedup = df_commits.drop_duplicates(subset=['canonical_id', 'hash']).assign(
+            is_tier1=lambda d: d['repository_name'].isin(tier1_repos).astype(int),
+            is_tier2=lambda d: d['repository_name'].isin(tier2_repos).astype(int),
+        )
+        df_commits_dedup = df_commits_dedup.assign(
+            tier1_auth=lambda d: d['is_auth'] * d['is_tier1'],
+            tier2_auth=lambda d: d['is_auth'] * d['is_tier2'],
+        )
+
+        if 'integration_date' in df_commits_dedup.columns:
+            # GUARDRAIL: Use integration_date for normal PRs, but fall back to author date
+            # if the gap exceeds 3 years (1095 days). This prevents administrative
+            # repository migrations from reviving retired developers' timelines.
+            _intg = pd.to_datetime(df_commits_dedup['integration_date'], utc=True, errors='coerce')
+            _auth = pd.to_datetime(df_commits_dedup['date_utc'], utc=True, errors='coerce')
+            _gap = (_intg - _auth).dt.days
+            effective_date = _intg.where(_gap <= 1095, _auth)
+            df_commits_dedup = df_commits_dedup.copy()
+            df_commits_dedup['_effective_date'] = effective_date
+            date_col = '_effective_date'
+        else:
+            date_col = 'date_utc'
+        df_commits_dedup['core_date'] = df_commits_dedup[date_col].where(df_commits_dedup['is_tier1'] == 1)
+        df_commits_dedup['ecosystem_date'] = df_commits_dedup[date_col].where(df_commits_dedup['is_tier2'] == 1)
+
         commit_stats = df_commits_dedup.groupby('canonical_id').agg(
             total_commits=('hash', 'count'),
             authored_commits=('is_auth', 'sum'),
+            tier1_authored_commits=('tier1_auth', 'sum'),
+            tier2_authored_commits=('tier2_auth', 'sum'),
             merge_commits=('is_merg', 'sum'),
-            # For additions/deletions, since we drop duplicates, we should use the commit-level totals 
-            # if they exist, otherwise fallback to additions. But commit_total_adds is the true per-commit sum.
             total_additions=('commit_total_adds', 'sum') if 'commit_total_adds' in df_commits_dedup.columns else ('additions', 'sum'),
             total_deletions=('commit_total_dels', 'sum') if 'commit_total_dels' in df_commits_dedup.columns else ('deletions', 'sum'),
-            first_commit=('date_utc', 'min'),
-            last_commit=('date_utc', 'max')
+            first_core_commit=('core_date', 'min'),
+            last_core_commit=('core_date', 'max'),
+            first_ecosystem_commit=('ecosystem_date', 'min'),
+            last_ecosystem_commit=('ecosystem_date', 'max')
         ).reset_index()
+
+        commit_stats['first_commit'] = commit_stats['first_core_commit'].combine_first(commit_stats['first_ecosystem_commit'])
+        commit_stats['last_commit'] = commit_stats['last_core_commit'].combine_first(commit_stats['last_ecosystem_commit'])
+        # Keep first/last core/ecosystem commits for downstream split timeline UI
 
         # Era-specific authored commit counts
         dates_utc = pd.to_datetime(df_commits_dedup['date_utc'], utc=True, errors='coerce')
@@ -85,7 +117,7 @@ def unify():
 
         all_source_uuids.update(commit_stats['canonical_id'])
     else:
-        commit_stats = pd.DataFrame(columns=['canonical_id', 'total_commits', 'authored_commits', 'merge_commits', 'total_additions', 'total_deletions', 'first_commit', 'last_commit', 'p2016_authored_commits', 'modern_authored_commits'])
+        commit_stats = pd.DataFrame(columns=['canonical_id', 'total_commits', 'authored_commits', 'tier1_authored_commits', 'tier2_authored_commits', 'merge_commits', 'total_additions', 'total_deletions', 'first_commit', 'last_commit', 'p2016_authored_commits', 'modern_authored_commits'])
     
     # 2. Discover from Social
     df_soc = pd.DataFrame(columns=['canonical_id'])
@@ -123,35 +155,23 @@ def unify():
             })
     df_unified = pd.DataFrame(final_base)
 
-    print("Aggregating contributors.json metadata...")
-    with open(CONTRIBUTORS_REGISTRY, 'r') as f:
-        registry_data = json.load(f)['contributors']
-    df_reg = pd.DataFrame(registry_data)
-    def map_contrib_uuid(row):
-        return resolver.resolve_git(row.get('display_name') or row.get('id'), None)
-    df_reg['uuid'] = df_reg.apply(map_contrib_uuid, axis=1)
-    
-    df_reg['first_seen'] = pd.to_datetime(df_reg['first_seen'], errors='coerce')
-    df_reg['last_seen'] = pd.to_datetime(df_reg['last_seen'], errors='coerce')
-    
-    def first_non_null(series):
-        for val in series:
-            if val is None:
-                continue
-            if isinstance(val, float) and np.isnan(val):
-                continue
-            return val
-        return None
+    print("Aggregating badges.json metadata...")
+    badges_data = {}
+    if os.path.exists(BADGES_JSON):
+        with open(BADGES_JSON, 'r') as f:
+            badges_data = json.load(f)
+            
+    badges_rows = []
+    for uuid, badge_info in badges_data.items():
+        badges_rows.append({
+            'uuid': uuid,
+            'badges': badge_info,
+            'roles': badge_info.get('roles', [])
+        })
+    df_reg_agg = pd.DataFrame(badges_rows)
 
-    df_reg_agg = df_reg.groupby('uuid').agg({
-        'badges': first_non_null,
-        'roles': first_non_null,
-        'first_seen': 'min',
-        'last_seen': 'max',
-        'technical_focus': first_non_null
-    }).reset_index()
-
-    df_unified = df_unified.merge(df_reg_agg, on='uuid', how='left')
+    if not df_reg_agg.empty:
+        df_unified = df_unified.merge(df_reg_agg, on='uuid', how='left')
     
     # Join code stats
     df_unified = df_unified.merge(commit_stats, left_on='uuid', right_on='canonical_id', how='left').drop(columns=['canonical_id'])
@@ -167,6 +187,8 @@ def unify():
     bip_counts = {}
     p2016_bip_counts = {}
     modern_bip_counts = {}
+    bip_first_dates = {}
+    bip_last_dates = {}
     # Era cutoffs for BIP dates (timezone-naive, matching git_created_at dtype)
     bip_p2016_start = pd.Timestamp('2016-01-01')
     _bip_dates = pd.to_datetime(df_bips['git_created_at'], errors='coerce')
@@ -192,6 +214,11 @@ def unify():
                     p2016_bip_counts[cid] = p2016_bip_counts.get(cid, 0) + 1
                 if is_modern:
                     modern_bip_counts[cid] = modern_bip_counts.get(cid, 0) + 1
+                if bip_ts is not None:
+                    if cid not in bip_first_dates or bip_ts < bip_first_dates[cid]:
+                        bip_first_dates[cid] = bip_ts
+                    if cid not in bip_last_dates or bip_ts > bip_last_dates[cid]:
+                        bip_last_dates[cid] = bip_ts
     df_bip_stats = pd.DataFrame(list(bip_counts.items()), columns=['uuid', 'bips_authored'])
     if p2016_bip_counts:
         df_bip_stats = df_bip_stats.merge(
@@ -200,6 +227,14 @@ def unify():
     if modern_bip_counts:
         df_bip_stats = df_bip_stats.merge(
             pd.DataFrame(list(modern_bip_counts.items()), columns=['uuid', 'modern_bips_authored']),
+            on='uuid', how='left')
+    if bip_first_dates:
+        df_bip_stats = df_bip_stats.merge(
+            pd.DataFrame(list(bip_first_dates.items()), columns=['uuid', 'first_bip_date']),
+            on='uuid', how='left')
+    if bip_last_dates:
+        df_bip_stats = df_bip_stats.merge(
+            pd.DataFrame(list(bip_last_dates.items()), columns=['uuid', 'last_bip_date']),
             on='uuid', how='left')
     df_unified = df_unified.merge(df_bip_stats, on='uuid', how='left')
     
@@ -211,31 +246,32 @@ def unify():
     
     # Join Social
     if not df_soc.empty and 'canonical_id' in df_soc.columns:
-        soc_cols = [c for c in ['canonical_id', 'hybrid_score', 'p2016_hybrid_score', 'modern_hybrid_score', 'impact_score', 'p2016_impact_score', 'modern_impact_score', 'pagerank', 'threads_started', 'replies_sent', 'ml_threads', 'delving_threads', 'ml_responses', 'delving_responses', 'first_active', 'last_active', 'dev_type', 'expertise_domains', 'expertise_by_source', 'expertise_domain_scores', 'p2016_posts', 'modern_posts', 'p2016_ml_posts', 'p2016_delving_posts', 'modern_ml_posts', 'modern_delving_posts'] if c in df_soc.columns]
+        soc_cols = [c for c in ['canonical_id', 'hybrid_score', 'p2016_hybrid_score', 'modern_hybrid_score', 'impact_score', 'p2016_impact_score', 'modern_impact_score', 'pagerank', 'threads_started', 'replies_sent', 'ml_threads', 'delving_threads', 'ml_responses', 'delving_responses', 'first_active', 'last_active', 'dev_type', 'expertise_domains', 'expertise_by_source', 'expertise_domain_scores', 'p2016_posts', 'modern_posts', 'p2016_ml_posts', 'p2016_delving_posts', 'modern_ml_posts', 'modern_delving_posts', 'is_engineer', 'is_reviewer', 'is_researcher', 'is_bip_author'] if c in df_soc.columns]
         df_soc_filtered = df_soc[soc_cols]
         df_unified = df_unified.merge(df_soc_filtered, left_on='uuid', right_on='canonical_id', how='left', suffixes=('', '_soc')).drop(columns=['canonical_id'])
     
     # Fill defaults (impact_score intentionally excluded — None means "Creator", 0 means unranked)
     df_unified = df_unified.fillna({
-        'total_commits': 0, 'authored_commits': 0, 'merge_commits': 0,
+        'total_commits': 0, 'authored_commits': 0, 'tier1_authored_commits': 0, 'tier2_authored_commits': 0, 'merge_commits': 0,
         'p2016_authored_commits': 0, 'modern_authored_commits': 0,
         'bips_authored': 0, 'p2016_bips_authored': 0, 'modern_bips_authored': 0, 'hybrid_score': 0, 'threads_started': 0,
         'replies_sent': 0, 'ml_threads': 0, 'delving_threads': 0,
         'ml_responses': 0, 'delving_responses': 0,
         'p2016_posts': 0, 'modern_posts': 0,
         'p2016_ml_posts': 0, 'p2016_delving_posts': 0,
-        'modern_ml_posts': 0, 'modern_delving_posts': 0
+        'modern_ml_posts': 0, 'modern_delving_posts': 0,
+        'reviews_count': 0, 'tier1_reviews_count': 0, 'tier2_reviews_count': 0,
+        'prs_authored': 0, 'tier1_prs_authored': 0, 'tier2_prs_authored': 0,
+        'is_engineer': False, 'is_reviewer': False, 'is_researcher': False, 'is_bip_author': False
     })
     
     # Global Timeline
-    for col in ['first_active', 'last_active', 'first_seen', 'last_seen', 'first_commit', 'last_commit']:
+    for col in ['first_active', 'last_active', 'first_commit', 'last_commit', 'first_review_date', 'last_review_date', 'first_bip_date', 'last_bip_date']:
         if col in df_unified.columns:
             df_unified[col] = pd.to_datetime(df_unified[col], errors='coerce', utc=True).dt.tz_localize(None)
 
-    # Exclude first_seen/last_seen: those are set to today's build date in registry.py
-    # and would incorrectly override real last_commit / last_active values.
-    first_cols = [c for c in ['first_commit', 'first_active'] if c in df_unified.columns]
-    last_cols = [c for c in ['last_commit', 'last_active'] if c in df_unified.columns]
+    first_cols = [c for c in ['first_commit', 'first_active', 'first_review_date', 'first_bip_date'] if c in df_unified.columns]
+    last_cols = [c for c in ['last_commit', 'last_active', 'last_review_date', 'last_bip_date'] if c in df_unified.columns]
     df_unified['global_first_active'] = df_unified[first_cols].min(axis=1) if first_cols else pd.NaT
     df_unified['global_last_active'] = df_unified[last_cols].max(axis=1) if last_cols else pd.NaT
 
@@ -289,6 +325,44 @@ def unify():
         df_unified['expertise_domain_scores'] = df_unified['expertise_domain_scores'].apply(
             lambda x: x if isinstance(x, dict) else {}
         )
+
+    # --- Activity Status Logic ---
+    now = pd.Timestamp.utcnow().tz_localize(None)
+    
+    def calculate_status(row):
+        m = row.get('modern_hybrid_score', 0)
+        if pd.isna(m): m = 0
+        p = row.get('p2016_hybrid_score', 0)
+        if pd.isna(p): p = 0
+        c = row.get('total_commits', 0)
+        if pd.isna(c): c = 0
+        
+        last = row.get('global_last_active')
+        first = row.get('global_first_active')
+        
+        years_inactive = (now - last).days / 365.25 if pd.notna(last) else 999
+        days_since_first = (now - first).days if pd.notna(first) else 999
+        
+        is_historically_significant = (c > 5) or (p > 0.5)
+        
+        if is_historically_significant and years_inactive > 2.5:
+            return "Retired"
+            
+        if days_since_first <= 365 and m > 0:
+            return "New"
+            
+        tenure_years = max(days_since_first / 365.25, 3.0)
+        p2016_annual_rate = p / tenure_years
+        modern_annual_rate = m / 3.0
+        
+        growth = modern_annual_rate / p2016_annual_rate if p2016_annual_rate > 0 else (2 if m > 0 else 0)
+        
+        if growth >= 1.25: return "Rising"
+        if growth >= 0.75 or m >= 0.35: return "Steady"
+        if m > 0: return "Fading"
+        return ""
+        
+    df_unified['activity_status'] = df_unified.apply(calculate_status, axis=1)
 
     # --- Bot Exclusion ---
     # Filter out known automation bots from the human developer dataset

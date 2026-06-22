@@ -1,9 +1,17 @@
 import pandas as pd
 import json
 import os
+import sys
 import numpy as np
 import shutil
 from datetime import datetime
+
+# Ensure project root is on the path so `scripts.utils` is importable
+# regardless of the working directory the script is invoked from.
+_SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+_PROJECT_ROOT = os.path.abspath(os.path.join(_SCRIPT_DIR, "../.."))
+if _PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, _PROJECT_ROOT)
 
 # --- Configuration ---
 UNIFIED_INPUT = "data/enriched/contributors_unified.parquet"
@@ -148,6 +156,15 @@ def deliver():
                     if title not in rec['roles']:
                         rec['roles'].append(title)
 
+        # Inject ecosystem badge for contributors active in Tier 2 repos
+        # (guix.sigs, qa-assets, HWI) — signals broad ecosystem involvement
+        tier2_commits = rec.get('tier2_authored_commits') or 0
+        if tier2_commits > 0:
+            if not rec.get('badges'):
+                rec['badges'] = {}
+            rec['badges']['ecosystem_contributor'] = True
+            rec['badges']['tier2_commits'] = int(tier2_commits)
+
         records.append(rec)
 
     # --- Load enriched per-contributor data ---
@@ -267,13 +284,15 @@ def deliver():
     # 2. Prepare Registry (Compact for Table)
     registry_cols = [
         'uuid', 'id', 'display_name', 'github', 'roles', 'badges', 'is_top_50',
-        'dev_type',
-        'total_commits', 'authored_commits', 'merge_commits', 'p2016_authored_commits', 'modern_authored_commits', 'prs_authored', 'reviews_count', 'p2016_reviews_count', 'modern_reviews_count', 'hybrid_score', 'impact_score', 'p2016_impact_score', 'modern_impact_score', 'bips_authored', 'p2016_bips_authored', 'modern_bips_authored', 'review_reciprocity',
-        'first_seen', 'last_seen', 'global_first_active', 'global_last_active',
+        'dev_type', 'is_engineer', 'is_reviewer', 'is_researcher', 'is_bip_author',
+        'total_commits', 'authored_commits', 'tier1_authored_commits', 'tier2_authored_commits',
+        'merge_commits', 'p2016_authored_commits', 'modern_authored_commits', 'prs_authored', 'tier1_prs_authored', 'tier2_prs_authored', 'reviews_count', 'tier1_reviews_count', 'tier2_reviews_count', 'p2016_reviews_count', 'modern_reviews_count', 'hybrid_score', 'impact_score', 'p2016_impact_score', 'modern_impact_score', 'bips_authored', 'p2016_bips_authored', 'modern_bips_authored', 'review_reciprocity',
+        'global_first_active', 'global_last_active',
         'first_commit', 'last_commit', 'first_active', 'last_active',
+        'first_core_commit', 'last_core_commit', 'first_ecosystem_commit', 'last_ecosystem_commit',
         'first_review_date', 'last_review_date',
         'expertise_domains', 'expertise_by_source', 'expertise_domain_scores',
-        'modern_hybrid_score', 'p2016_hybrid_score',
+        'modern_hybrid_score', 'p2016_hybrid_score', 'activity_status',
         'avg_approval_latency_days',
         'ml_threads', 'delving_threads', 'ml_responses', 'delving_responses', 'threads_started', 'replies_sent',
         'p2016_posts', 'modern_posts', 'p2016_ml_posts', 'p2016_delving_posts', 'modern_ml_posts', 'modern_delving_posts'

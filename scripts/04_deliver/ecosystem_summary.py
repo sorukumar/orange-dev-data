@@ -122,6 +122,7 @@ def generate_ecosystem_summary():
     new_discussants_90d = 0
     total_prs_merged = 0
     prs_merged_30d = 0
+    prs_merged_prev_30d = 0
     total_bips = 0
     active_bips = 0
 
@@ -135,11 +136,14 @@ def generate_ecosystem_summary():
             
             pr_df_merged['merged_at'] = pd.to_datetime(pr_df_merged['merged_at'], errors='coerce', utc=True)
             cutoff_30_ts = pd.Timestamp(cutoff_90 + timedelta(days=60), tz='UTC') # 30 days ago
+            cutoff_60_ts = pd.Timestamp(cutoff_90 + timedelta(days=30), tz='UTC')
             prs_merged_30d = int((pr_df_merged['merged_at'] >= cutoff_30_ts).sum())
+            prs_merged_prev_30d = int(((pr_df_merged['merged_at'] >= cutoff_60_ts) & (pr_df_merged['merged_at'] < cutoff_30_ts)).sum())
     except Exception as e:
         print(f"  Warning: Could not compute PRs merged: {e}")
 
     commits_30d = 0
+    commits_prev_30d = 0
     try:
         import pandas as pd
         commits_path = "data/enriched/commits_resolved.parquet"
@@ -147,7 +151,9 @@ def generate_ecosystem_summary():
             df_commits = pd.read_parquet(commits_path, columns=['date_utc'])
             df_commits['date_utc'] = pd.to_datetime(df_commits['date_utc'], utc=True)
             cutoff_30_ts = pd.Timestamp(cutoff_90 + timedelta(days=60), tz='UTC')
+            cutoff_60_ts = pd.Timestamp(cutoff_90 + timedelta(days=30), tz='UTC')
             commits_30d = int((df_commits['date_utc'] >= cutoff_30_ts).sum())
+            commits_prev_30d = int(((df_commits['date_utc'] >= cutoff_60_ts) & (df_commits['date_utc'] < cutoff_30_ts)).sum())
     except Exception as e:
         print(f"  Warning: Could not compute commits_30d: {e}")
 
@@ -165,32 +171,37 @@ def generate_ecosystem_summary():
     try:
         import pandas as pd
         if os.path.exists(CONTRIBUTORS_UNIFIED_INPUT):
-            _df_u = pd.read_parquet(CONTRIBUTORS_UNIFIED_INPUT, columns=['first_commit', 'authored_commits', 'display_name', 'github_login_final', 'uuid'])
+            _df_u = pd.read_parquet(CONTRIBUTORS_UNIFIED_INPUT, columns=['first_commit', 'first_core_commit', 'tier1_authored_commits', 'display_name', 'github_login_final', 'uuid'])
             _fc = pd.to_datetime(_df_u['first_commit'], errors='coerce', utc=True)
             _cutoff_ts = pd.Timestamp(cutoff_90, tz='UTC')
             newbies_mask = _fc >= _cutoff_ts
             new_coders_90d = int(newbies_mask.sum())
             
-            # Use 30-day window for the spotlight specifically
+            # Use 30-day window for the spotlight specifically, targeting Core (Tier 1)
+            _fc_core = pd.to_datetime(_df_u['first_core_commit'], errors='coerce', utc=True)
             _cutoff_30 = pd.Timestamp(cutoff_90 + timedelta(days=60), tz='UTC')
-            spotlight_mask = _fc >= _cutoff_30
+            spotlight_mask = _fc_core >= _cutoff_30
             newbies_30 = _df_u[spotlight_mask].copy()
             
             if not newbies_30.empty:
-                newbies_30 = newbies_30.sort_values(by='authored_commits', ascending=False)
+                newbies_30 = newbies_30.sort_values(by='tier1_authored_commits', ascending=False)
                 top_newbie = newbies_30.iloc[0]
                 name = top_newbie.get('display_name')
                 if pd.isna(name) or not name:
                     name = top_newbie.get('github_login_final') or 'New Contributor'
-                commits = int(top_newbie.get('authored_commits', 1))
+                commits = int(top_newbie.get('tier1_authored_commits', 1))
                 uuid_val = top_newbie.get('uuid', '')
+                gh_login = top_newbie.get('github_login_final', '')
+                if pd.isna(gh_login): gh_login = ''
+                
                 spotlight_data = {
                     "name": str(name),
                     "uuid": str(uuid_val),
-                    "description": f"First-time contributor recently merged {commits} commit{'s' if commits != 1 else ''}."
+                    "github_login": str(gh_login),
+                    "description": f"First-time core contributor recently merged {commits} commit{'s' if commits != 1 else ''}."
                 }
     except Exception as e:
-        print(f"  Warning: Could not compute new coders: {e}")
+        print(f"  Warning: Could not compute new coders or spotlight: {e}")
 
     # Active Discussion Topics + new discussants — both derived from social_threads.parquet
     top_topics = []
@@ -239,10 +250,12 @@ def generate_ecosystem_summary():
         },
         "prs": {
             "total_merged": total_prs_merged,
-            "merged_30d": prs_merged_30d
+            "merged_30d": prs_merged_30d,
+            "merged_prev_30d": prs_merged_prev_30d
         },
         "commits": {
-            "commits_30d": commits_30d
+            "commits_30d": commits_30d,
+            "commits_prev_30d": commits_prev_30d
         },
         "bips": {
             "total": total_bips,
