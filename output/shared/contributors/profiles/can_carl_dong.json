@@ -28,12 +28,14 @@
   "tier1_authored_commits": 510.0,
   "tier2_authored_commits": 14.0,
   "merge_commits": 0.0,
+  "tier1_merge_commits": 0.0,
+  "tier2_merge_commits": 0.0,
   "total_additions": 15035.0,
   "total_deletions": 7023.0,
   "first_core_commit": "2017-08-18T07:55:19+00:00",
   "last_core_commit": "2023-05-29T12:43:27+00:00",
-  "first_ecosystem_commit": "2021-05-26T21:17:01+00:00",
-  "last_ecosystem_commit": "2022-03-10T20:54:40+00:00",
+  "first_ecosystem_commit": "2021-05-26T20:15:33+00:00",
+  "last_ecosystem_commit": "2022-03-10T20:51:43+00:00",
   "first_commit": "2017-08-18T07:55:19",
   "last_commit": "2023-05-29T12:43:27",
   "p2016_authored_commits": 524.0,
@@ -71,8 +73,8 @@
   "delving_threads": 1.0,
   "ml_responses": 1.0,
   "delving_responses": 0.0,
-  "first_active": null,
-  "last_active": "2026-05-12T19:18:49.397000",
+  "first_active": "2019-11-18T10:44:00",
+  "last_active": null,
   "dev_type": "Builder",
   "expertise_domains": [
     "Infrastructure",
@@ -109,7 +111,7 @@
   "is_researcher": true,
   "is_bip_author": false,
   "global_first_active": "2017-08-18T07:55:19",
-  "global_last_active": "2026-05-12T19:18:49.396999936",
+  "global_last_active": "2025-11-05T03:55:45",
   "github_location": "New York",
   "github_company": null,
   "github_bio": "Bitcoin, UNIX, systems engineering.",
@@ -142,20 +144,20 @@
     "2020": {
       "Build & CI": 59.67,
       "Consensus": 13.67,
-      "Documentation": 13.0,
+      "Documentation": 14.0,
       "Node & RPC": 0.67,
       "Tests": 9.33,
-      "Utilities": 47.67
+      "Utilities": 48.67
     },
     "2021": {
       "Build & CI": 54.0,
       "Consensus": 91.0,
-      "Documentation": 35.0,
+      "Documentation": 34.0,
       "Mempool": 9.83,
       "Node & RPC": 98.0,
       "P2P Network": 11.17,
       "Tests": 43.33,
-      "Utilities": 170.67
+      "Utilities": 169.67
     },
     "2022": {
       "Build & CI": 29.93,

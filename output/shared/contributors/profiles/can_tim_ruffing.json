@@ -19,21 +19,23 @@
   "roles": [
     "BIP Author"
   ],
-  "total_commits": 741.0,
-  "authored_commits": 351.0,
-  "tier1_authored_commits": 350.0,
+  "total_commits": 352.0,
+  "authored_commits": 352.0,
+  "tier1_authored_commits": 351.0,
   "tier2_authored_commits": 1.0,
-  "merge_commits": 390.0,
-  "total_additions": 16346.0,
-  "total_deletions": 5158.0,
+  "merge_commits": 0.0,
+  "tier1_merge_commits": 0.0,
+  "tier2_merge_commits": 0.0,
+  "total_additions": 16362.0,
+  "total_deletions": 5168.0,
   "first_core_commit": "2017-07-31T07:44:51+00:00",
-  "last_core_commit": "2026-06-17T11:36:11+00:00",
+  "last_core_commit": "2026-06-25T09:17:24+00:00",
   "first_ecosystem_commit": "2021-05-26T16:29:40+00:00",
   "last_ecosystem_commit": "2021-05-26T16:29:40+00:00",
   "first_commit": "2017-07-31T07:44:51",
-  "last_commit": "2026-06-17T11:36:11",
-  "p2016_authored_commits": 351.0,
-  "modern_authored_commits": 74.0,
+  "last_commit": "2026-06-25T09:17:24",
+  "p2016_authored_commits": 352.0,
+  "modern_authored_commits": 75.0,
   "bips_authored": 3.0,
   "p2016_bips_authored": 3.0,
   "modern_bips_authored": 0.0,
@@ -46,7 +48,7 @@
   "tier1_reviews_count": 783.0,
   "tier2_reviews_count": 48.0,
   "p2016_reviews_count": 813.0,
-  "modern_reviews_count": 361.0,
+  "modern_reviews_count": 357.0,
   "first_review_date": "2018-08-05T00:31:52",
   "last_review_date": "2026-06-17T11:57:07",
   "prs_authored": 203.0,
@@ -55,20 +57,20 @@
   "avg_pr_ack_velocity_days": 9.968637749853027,
   "avg_concept_lead_time_days": 36.9701048900463,
   "review_reciprocity": 4.004926108374384,
-  "hybrid_score": 1.4132,
-  "p2016_hybrid_score": 1.461,
-  "modern_hybrid_score": 0.7424,
-  "impact_score": 57.0,
-  "p2016_impact_score": 58.0,
-  "modern_impact_score": 36.0,
+  "hybrid_score": 1.3718,
+  "p2016_hybrid_score": 1.4196,
+  "modern_hybrid_score": 0.68,
+  "impact_score": 56.0,
+  "p2016_impact_score": 57.0,
+  "modern_impact_score": 34.0,
   "threads_started": 11.0,
   "replies_sent": 64.0,
   "ml_threads": 6.0,
   "delving_threads": 5.0,
   "ml_responses": 57.0,
   "delving_responses": 7.0,
-  "first_active": null,
-  "last_active": "2026-02-27T10:52:17.147000",
+  "first_active": "2014-08-06T17:22:31",
+  "last_active": null,
   "dev_type": "Protocol Designer",
   "expertise_domains": [
     "Infrastructure",
@@ -106,8 +108,8 @@
   "is_reviewer": true,
   "is_researcher": true,
   "is_bip_author": true,
-  "global_first_active": "2017-07-31T07:44:51",
-  "global_last_active": "2026-06-17T11:57:07",
+  "global_first_active": "2014-08-06T17:22:31",
+  "global_last_active": "2026-06-25T09:17:24",
   "github_location": "Germany",
   "github_company": null,
   "github_bio": "full-stack cryptographer",
@@ -131,52 +133,44 @@
     "2019": {
       "Build & CI": 6.0,
       "Documentation": 2.0,
-      "Merge": 7.0,
-      "Utilities": 33.0
+      "Utilities": 35.0
     },
     "2020": {
-      "Build & CI": 2.0,
-      "Merge": 37.0,
-      "Utilities": 22.0
+      "Build & CI": 2.5,
+      "Utilities": 25.5
     },
     "2021": {
       "Build & CI": 20.17,
-      "Documentation": 6.17,
-      "Merge": 49.0,
-      "Utilities": 46.67,
+      "Documentation": 6.67,
+      "Utilities": 46.17,
       "Wallet": 1.0
     },
     "2022": {
-      "Build & CI": 12.5,
-      "Documentation": 5.0,
-      "Merge": 23.0,
-      "Utilities": 54.5
+      "Build & CI": 12.0,
+      "Documentation": 4.5,
+      "Utilities": 53.5
     },
     "2023": {
       "Build & CI": 25.33,
       "Documentation": 14.83,
-      "Merge": 128.0,
       "P2P Network": 3.0,
       "Tests": 1.0,
-      "Utilities": 44.83
+      "Utilities": 40.83
     },
     "2024": {
       "Build & CI": 8.5,
       "Documentation": 7.0,
-      "Merge": 48.0,
-      "Utilities": 9.5
+      "Utilities": 13.5
     },
     "2025": {
       "Build & CI": 4.5,
       "Documentation": 0.5,
-      "Merge": 58.0,
       "Tests": 2.0,
-      "Utilities": 12.0
+      "Utilities": 9.0
     },
     "2026": {
       "Build & CI": 2.0,
-      "Merge": 31.0,
-      "Utilities": 7.0
+      "Utilities": 6.0
     }
   },
   "bip_list": [

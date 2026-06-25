@@ -13,14 +13,16 @@
   "tier1_authored_commits": 4.0,
   "tier2_authored_commits": 13.0,
   "merge_commits": 0.0,
+  "tier1_merge_commits": 0.0,
+  "tier2_merge_commits": 0.0,
   "total_additions": 317.0,
   "total_deletions": 164.0,
   "first_core_commit": "2017-09-05T23:17:44+00:00",
-  "last_core_commit": "2021-01-08T13:19:23+00:00",
+  "last_core_commit": "2020-12-22T21:31:29+00:00",
   "first_ecosystem_commit": "2020-07-02T17:31:14+00:00",
   "last_ecosystem_commit": "2023-11-14T21:47:38+00:00",
   "first_commit": "2017-09-05T23:17:44",
-  "last_commit": "2021-01-08T13:19:23",
+  "last_commit": "2020-12-22T21:31:29",
   "p2016_authored_commits": 17.0,
   "modern_authored_commits": 4.0,
   "bips_authored": 0.0,
@@ -56,8 +58,8 @@
   "delving_threads": 0.0,
   "ml_responses": 6.0,
   "delving_responses": 0.0,
-  "first_active": null,
-  "last_active": null,
+  "first_active": "2014-10-28T15:17:58",
+  "last_active": "2020-11-16T17:38:19",
   "dev_type": "Builder",
   "expertise_domains": [
     "Wallet",
@@ -91,8 +93,8 @@
   "is_reviewer": true,
   "is_researcher": true,
   "is_bip_author": false,
-  "global_first_active": "2017-09-05T23:17:44",
-  "global_last_active": "2021-01-08T13:19:23",
+  "global_first_active": "2014-10-28T15:17:58",
+  "global_last_active": "2020-12-22T21:31:29",
   "github_location": "Milan and everywhere",
   "github_company": "@btclib-org @dginst @checksig-custody @quantlib",
   "github_bio": "Bitcoin & Blockchain Technology @dginst @btclib-org; @quantlib founder; adjunct professor at ESSEC and Milano-Bicocca",
@@ -113,10 +115,8 @@
     },
     "2020": {
       "Tests": 2.0,
+      "Utilities": 1.0,
       "Wallet": 9.0
-    },
-    "2021": {
-      "Utilities": 1.0
     },
     "2023": {
       "Wallet": 4.0

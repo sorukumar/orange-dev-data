@@ -10,13 +10,15 @@
   "tier1_authored_commits": 14.0,
   "tier2_authored_commits": 0.0,
   "merge_commits": 0.0,
+  "tier1_merge_commits": 0.0,
+  "tier2_merge_commits": 0.0,
   "total_additions": 220.0,
   "total_deletions": 350.0,
-  "first_core_commit": "2025-02-18T12:08:51+00:00",
+  "first_core_commit": "2024-11-22T21:28:30+00:00",
   "last_core_commit": "2026-03-19T06:32:31+00:00",
   "first_ecosystem_commit": null,
   "last_ecosystem_commit": null,
-  "first_commit": "2025-02-18T12:08:51",
+  "first_commit": "2024-11-22T21:28:30",
   "last_commit": "2026-03-19T06:32:31",
   "p2016_authored_commits": 14.0,
   "modern_authored_commits": 14.0,
@@ -85,7 +87,7 @@
   "is_reviewer": true,
   "is_researcher": false,
   "is_bip_author": false,
-  "global_first_active": "2025-02-02T17:27:31",
+  "global_first_active": "2024-11-22T21:28:30",
   "global_last_active": "2026-05-10T06:18:39",
   "github_location": "Hyperborea",
   "github_company": null,
@@ -97,13 +99,16 @@
   "is_top_50": false,
   "github_url": "https://github.com/purpleKarrot",
   "commit_history": {
+    "2024": {
+      "Utilities": 1.0
+    },
     "2025": {
       "Build & CI": 8.0,
       "Consensus": 0.4,
       "P2P Network": 0.4,
       "Script": 1.07,
       "Tests": 3.07,
-      "Utilities": 7.07
+      "Utilities": 6.07
     },
     "2026": {
       "Build & CI": 2.0,

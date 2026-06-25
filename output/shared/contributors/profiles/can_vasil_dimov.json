@@ -20,12 +20,14 @@
   "tier1_authored_commits": 477.0,
   "tier2_authored_commits": 5.0,
   "merge_commits": 0.0,
+  "tier1_merge_commits": 0.0,
+  "tier2_merge_commits": 0.0,
   "total_additions": 17062.0,
   "total_deletions": 5840.0,
   "first_core_commit": "2018-03-14T09:16:41+00:00",
   "last_core_commit": "2026-06-15T12:51:59+00:00",
-  "first_ecosystem_commit": "2024-04-17T14:50:22+00:00",
-  "last_ecosystem_commit": "2025-10-11T07:54:09+00:00",
+  "first_ecosystem_commit": "2024-04-17T01:55:07+00:00",
+  "last_ecosystem_commit": "2025-10-11T00:04:56+00:00",
   "first_commit": "2018-03-14T09:16:41",
   "last_commit": "2026-06-15T12:51:59",
   "p2016_authored_commits": 482.0,
@@ -42,7 +44,7 @@
   "tier1_reviews_count": 971.0,
   "tier2_reviews_count": 19.0,
   "p2016_reviews_count": 990.0,
-  "modern_reviews_count": 599.0,
+  "modern_reviews_count": 597.0,
   "first_review_date": "2019-11-25T21:01:07",
   "last_review_date": "2026-06-16T13:07:10",
   "prs_authored": 298.0,
@@ -53,7 +55,7 @@
   "review_reciprocity": 3.3221476510067114,
   "hybrid_score": 0.6577,
   "p2016_hybrid_score": 0.6625,
-  "modern_hybrid_score": 0.6267,
+  "modern_hybrid_score": 0.6266,
   "impact_score": 33.0,
   "p2016_impact_score": 33.0,
   "modern_impact_score": 31.0,
@@ -63,8 +65,8 @@
   "delving_threads": 4.0,
   "ml_responses": 4.0,
   "delving_responses": 4.0,
-  "first_active": null,
-  "last_active": "2026-05-11T16:47:15.946000",
+  "first_active": "2022-02-02T07:30:47",
+  "last_active": null,
   "dev_type": "Builder",
   "expertise_domains": [
     "Infrastructure",
@@ -178,9 +180,9 @@
       "Mempool": 0.4,
       "Node & RPC": 6.73,
       "P2P Network": 11.07,
-      "Tests": 67.4,
+      "Tests": 73.4,
       "Utilities": 28.73,
-      "Wallet": 6.67
+      "Wallet": 30.67
     },
     "2026": {
       "Build & CI": 2.5,
@@ -190,9 +192,9 @@
       "Mempool": 2.0,
       "Node & RPC": 7.33,
       "P2P Network": 25.33,
-      "Tests": 74.17,
+      "Tests": 68.17,
       "Utilities": 13.17,
-      "Wallet": 34.0
+      "Wallet": 10.0
     }
   },
   "first_message": {
