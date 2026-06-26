@@ -106,6 +106,15 @@
         "2140.dev"
       ],
       "website": "https://2140.dev"
+    },
+    {
+      "id": "localhost_research",
+      "name": "Localhost Research",
+      "type": "nonprofit",
+      "domains": [
+        "lclhost.org"
+      ],
+      "website": "https://lclhost.org"
     }
   ],
   "sponsored_developers": [
@@ -142,11 +151,11 @@
         {
           "sponsor_id": "blockstream",
           "start_date": null,
-          "end_date": null
+          "end_date": "2025-05"
         },
         {
-          "sponsor_id": "brink",
-          "start_date": null,
+          "sponsor_id": "localhost_research",
+          "start_date": "2025-05",
           "end_date": null
         }
       ]
