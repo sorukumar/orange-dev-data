@@ -115,6 +115,67 @@
         "lclhost.org"
       ],
       "website": "https://lclhost.org"
+    },
+    {
+      "id": "bitmex",
+      "name": "BitMEX",
+      "type": "corporate",
+      "domains": [
+        "bitmex.com"
+      ],
+      "website": "https://bitmex.com"
+    },
+    {
+      "id": "bitgo",
+      "name": "BitGo",
+      "type": "corporate",
+      "domains": [
+        "bitgo.com"
+      ],
+      "website": "https://bitgo.com"
+    },
+    {
+      "id": "vinteum",
+      "name": "Vinteum",
+      "type": "nonprofit",
+      "domains": [
+        "vinteum.org"
+      ],
+      "website": "https://vinteum.org"
+    },
+    {
+      "id": "maelstrom",
+      "name": "Maelstrom Fund",
+      "type": "corporate",
+      "domains": [
+        "maelstrom.fund"
+      ],
+      "website": "https://maelstrom.fund"
+    },
+    {
+      "id": "coinbase",
+      "name": "Coinbase",
+      "type": "corporate",
+      "domains": [
+        "coinbase.com"
+      ],
+      "website": "https://coinbase.com"
+    },
+    {
+      "id": "hardcore_fund",
+      "name": "Hardcore Fund",
+      "type": "nonprofit",
+      "domains": [],
+      "website": ""
+    },
+    {
+      "id": "marathon",
+      "name": "Marathon Digital Holdings",
+      "type": "corporate",
+      "domains": [
+        "mara.com"
+      ],
+      "website": "https://mara.com"
     }
   ],
   "sponsored_developers": [
@@ -153,8 +214,13 @@
       "github": "sipa",
       "grants": [
         {
-          "sponsor_id": "chaincode",
+          "sponsor_id": "blockstream",
           "start_date": null,
+          "end_date": "2019-01"
+        },
+        {
+          "sponsor_id": "chaincode",
+          "start_date": "2019-01",
           "end_date": null
         }
       ]
@@ -177,8 +243,13 @@
       "github": "jnewbery",
       "grants": [
         {
-          "sponsor_id": "brink",
+          "sponsor_id": "chaincode",
           "start_date": null,
+          "end_date": "2020-06"
+        },
+        {
+          "sponsor_id": "brink",
+          "start_date": "2020-06",
           "end_date": null
         }
       ]
@@ -204,7 +275,8 @@
           "start_date": null,
           "end_date": null
         }
-      ]
+      ],
+      "github": "laanwj"
     },
     {
       "canonical_name": "Cory Fields",
@@ -343,11 +415,22 @@
       "notes": "Mempool, wallet",
       "grants": [
         {
+          "sponsor_id": "bitmex",
+          "start_date": null,
+          "end_date": null
+        },
+        {
+          "sponsor_id": "blockstream",
+          "start_date": null,
+          "end_date": null
+        },
+        {
           "sponsor_id": "spiral",
           "start_date": null,
           "end_date": null
         }
-      ]
+      ],
+      "github": "instagibbs"
     },
     {
       "canonical_name": "Sebastian Kung",
@@ -367,7 +450,12 @@
       "github": "carldong",
       "grants": [
         {
-          "sponsor_id": "spiral",
+          "sponsor_id": "blockstream",
+          "start_date": null,
+          "end_date": null
+        },
+        {
+          "sponsor_id": "chaincode",
           "start_date": null,
           "end_date": null
         }
@@ -415,6 +503,11 @@
       "github": "mzumsande",
       "grants": [
         {
+          "sponsor_id": "chaincode",
+          "start_date": null,
+          "end_date": null
+        },
+        {
           "sponsor_id": "brink",
           "start_date": null,
           "end_date": null
@@ -448,6 +541,11 @@
       "notes": "LTS Grantee",
       "github": "brunoerg",
       "grants": [
+        {
+          "sponsor_id": "vinteum",
+          "start_date": null,
+          "end_date": null
+        },
         {
           "sponsor_id": "opensats",
           "start_date": null,
@@ -486,148 +584,6 @@
       "grants": [
         {
           "sponsor_id": "spiral",
-          "start_date": null,
-          "end_date": null
-        }
-      ]
-    },
-    {
-      "canonical_name": "am-sq",
-      "notes": "Auto-detected via domain @squareup.com",
-      "github": null,
-      "grants": [
-        {
-          "sponsor_id": "spiral",
-          "start_date": null,
-          "end_date": null
-        }
-      ]
-    },
-    {
-      "canonical_name": "roconnor-blockstream",
-      "notes": "Auto-detected via domain @blockstream.com",
-      "github": null,
-      "grants": [
-        {
-          "sponsor_id": "blockstream",
-          "start_date": null,
-          "end_date": null
-        }
-      ]
-    },
-    {
-      "canonical_name": "Russell O'Connor",
-      "notes": "Auto-detected via domain @blockstream.io",
-      "github": null,
-      "grants": [
-        {
-          "sponsor_id": "blockstream",
-          "start_date": null,
-          "end_date": null
-        }
-      ]
-    },
-    {
-      "canonical_name": "Adam Jonas",
-      "notes": "Auto-detected via domain @chaincode.com",
-      "github": null,
-      "grants": [
-        {
-          "sponsor_id": "chaincode",
-          "start_date": null,
-          "end_date": null
-        }
-      ]
-    },
-    {
-      "canonical_name": "James O'Beirne",
-      "notes": "Auto-detected via domain @chaincode.com",
-      "github": "jamesob",
-      "grants": [
-        {
-          "sponsor_id": "chaincode",
-          "start_date": null,
-          "end_date": null
-        }
-      ]
-    },
-    {
-      "canonical_name": "Arvid Norberg",
-      "notes": "Auto-detected via domain @blockstream.io",
-      "github": null,
-      "grants": [
-        {
-          "sponsor_id": "blockstream",
-          "start_date": null,
-          "end_date": null
-        }
-      ]
-    },
-    {
-      "canonical_name": "Jeff Frontz",
-      "notes": "Auto-detected via domain @blockstream.io",
-      "github": null,
-      "grants": [
-        {
-          "sponsor_id": "blockstream",
-          "start_date": null,
-          "end_date": null
-        }
-      ]
-    },
-    {
-      "canonical_name": "Alex Morcos",
-      "notes": "Auto-detected via domain @chaincode.com",
-      "github": "morcos",
-      "grants": [
-        {
-          "sponsor_id": "chaincode",
-          "start_date": null,
-          "end_date": null
-        }
-      ]
-    },
-    {
-      "canonical_name": "Russell Yanofsky",
-      "notes": "Auto-detected via domain @chaincode.com",
-      "grants": [
-        {
-          "sponsor_id": "chaincode",
-          "start_date": null,
-          "end_date": null
-        }
-      ]
-    },
-    {
-      "canonical_name": "Leviathn",
-      "notes": "Auto-detected via domain @blockstream.io",
-      "github": null,
-      "grants": [
-        {
-          "sponsor_id": "blockstream",
-          "start_date": null,
-          "end_date": null
-        }
-      ]
-    },
-    {
-      "canonical_name": "jtimon",
-      "notes": "Auto-detected via domain @blockstream.io",
-      "grants": [
-        {
-          "sponsor_id": "blockstream",
-          "start_date": null,
-          "end_date": null
-        }
-      ]
-    },
-    {
-      "canonical_name": "Mark Friedenbach",
-      "notes": "Auto-detected via domain @blockstream.io",
-      "github": null,
-      "grants": [
-        {
-          "sponsor_id": "blockstream",
           "start_date": null,
           "end_date": null
         }
@@ -684,7 +640,6 @@
     {
       "canonical_name": "Yuvraj Chiplunkar",
       "notes": "Bitcoin Core contributor (Brink Grantee)",
-      "github": "w0xlt",
       "grants": [
         {
           "sponsor_id": "brink",
@@ -700,6 +655,11 @@
       "grants": [
         {
           "sponsor_id": "spiral",
+          "start_date": null,
+          "end_date": null
+        },
+        {
+          "sponsor_id": "2140",
           "start_date": null,
           "end_date": null
         }
@@ -723,8 +683,18 @@
       "github": "murchandamus",
       "grants": [
         {
+          "sponsor_id": "bitgo",
+          "start_date": "2017-04",
+          "end_date": "2020-08"
+        },
+        {
           "sponsor_id": "chaincode",
-          "start_date": null,
+          "start_date": "2020-10",
+          "end_date": "2024-12"
+        },
+        {
+          "sponsor_id": "localhost_research",
+          "start_date": "2025-01",
           "end_date": null
         }
       ]
@@ -732,7 +702,7 @@
     {
       "canonical_name": "Will Clark",
       "notes": "Bitcoin Core PM and contributor (OpenSats LTS Grantee)",
-      "github": null,
+      "github": "willcl-ark",
       "grants": [
         {
           "sponsor_id": "opensats",
@@ -754,12 +724,156 @@
       ]
     },
     {
-      "canonical_name": "Sergi Delgado Segura",
-      "notes": "Formerly Chaincode/Spiral, currently with 2140.dev",
-      "github": "sr-gi",
+      "canonical_name": "ZmnSCPxj",
+      "notes": "Found via BitcoinWords (Square Crypto)",
+      "github": "ZmnSCPxj",
       "grants": [
         {
-          "sponsor_id": "2140",
+          "sponsor_id": "spiral",
+          "start_date": null,
+          "end_date": null
+        }
+      ]
+    },
+    {
+      "canonical_name": "Jo\u00e3o Barbosa",
+      "notes": "Found via BitcoinWords",
+      "github": "promag",
+      "grants": [
+        {
+          "sponsor_id": "coinbase",
+          "start_date": null,
+          "end_date": null
+        }
+      ]
+    },
+    {
+      "canonical_name": "Amiti Uttarwar",
+      "notes": "Found via BitcoinWords",
+      "github": "amitiuttarwar",
+      "grants": [
+        {
+          "sponsor_id": "okcoin",
+          "start_date": null,
+          "end_date": null
+        }
+      ]
+    },
+    {
+      "canonical_name": "Ben Woosley",
+      "notes": "Found via BitcoinWords",
+      "github": "Empact",
+      "grants": [
+        {
+          "sponsor_id": "hardcore_fund",
+          "start_date": null,
+          "end_date": null
+        }
+      ]
+    },
+    {
+      "canonical_name": "Chris Belcher",
+      "notes": "Found via BitcoinWords (HRF, Square Crypto)",
+      "github": "chris-belcher",
+      "grants": [
+        {
+          "sponsor_id": "hrf",
+          "start_date": null,
+          "end_date": null
+        }
+      ]
+    },
+    {
+      "canonical_name": "Jeremy Rubin",
+      "notes": "Found via BitcoinWords",
+      "github": "JeremyRubin",
+      "grants": [
+        {
+          "sponsor_id": "bitmex",
+          "start_date": null,
+          "end_date": null
+        }
+      ]
+    },
+    {
+      "canonical_name": "Gleb Naumenko",
+      "notes": "Found via BitcoinWords",
+      "github": "naumenkogs",
+      "grants": [
+        {
+          "sponsor_id": "bitmex",
+          "start_date": null,
+          "end_date": null
+        }
+      ]
+    },
+    {
+      "canonical_name": "Jonas Schnelli",
+      "notes": "Found via BitcoinWords",
+      "github": "jonasschnelli",
+      "grants": [
+        {
+          "sponsor_id": "marathon",
+          "start_date": null,
+          "end_date": null
+        }
+      ]
+    },
+    {
+      "canonical_name": "Calvin Kim",
+      "notes": "Found via BitcoinWords",
+      "github": "kcalvinalvin",
+      "grants": [
+        {
+          "sponsor_id": "bitmex",
+          "start_date": null,
+          "end_date": null
+        }
+      ]
+    },
+    {
+      "canonical_name": "rkrux",
+      "notes": "Maelstrom Grantee",
+      "github": "rkrux",
+      "grants": [
+        {
+          "sponsor_id": "maelstrom",
+          "start_date": null,
+          "end_date": null
+        }
+      ]
+    },
+    {
+      "canonical_name": "Ben Allen",
+      "notes": "Maelstrom Grantee",
+      "github": "benalleng",
+      "grants": [
+        {
+          "sponsor_id": "maelstrom",
+          "start_date": null,
+          "end_date": null
+        }
+      ]
+    },
+    {
+      "canonical_name": "macgyver",
+      "notes": "Maelstrom Grantee",
+      "github": "macgyver13",
+      "grants": [
+        {
+          "sponsor_id": "maelstrom",
+          "start_date": null,
+          "end_date": null
+        }
+      ]
+    },
+    {
+      "canonical_name": "stratospher",
+      "notes": "Maelstrom Grantee",
+      "github": "stratospher",
+      "grants": [
+        {
+          "sponsor_id": "maelstrom",
           "start_date": null,
           "end_date": null
         }
