@@ -1,34 +1,34 @@
 {
-  "generated_at": "2026-06-26T09:41:17.603728",
+  "generated_at": "2026-06-28T11:21:15.712027",
   "groups": {
-    "committers": 1229,
-    "reviewers": 5107,
+    "committers": 1240,
+    "reviewers": 5109,
     "research": 1641,
-    "standards": 157,
-    "total_active": 6452,
-    "total_registry": 7607
+    "standards": 158,
+    "total_active": 6463,
+    "total_registry": 7622
   },
   "venn_4": {
     "0001": 15,
-    "0010": 1172,
+    "0010": 1171,
     "0011": 23,
-    "0100": 3839,
+    "0100": 3840,
     "0101": 5,
     "0110": 133,
     "0111": 36,
-    "1000": 124,
+    "1000": 133,
     "1001": 1,
-    "1010": 9,
+    "1010": 10,
     "1011": 1,
     "1100": 825,
-    "1101": 2,
+    "1101": 3,
     "1110": 193,
     "1111": 74
   },
   "venn_summary": {
-    "code_only": 124,
-    "review_only": 3839,
-    "research_only": 1172,
+    "code_only": 133,
+    "review_only": 3840,
+    "research_only": 1171,
     "standards_only": 15,
     "all_four": 74,
     "code_review": 825,
@@ -53,15 +53,15 @@
   },
   "prs": {
     "total_merged": 17810,
-    "merged_30d": 95,
-    "merged_prev_30d": 105
+    "merged_30d": 81,
+    "merged_prev_30d": 115
   },
   "commits": {
-    "commits_30d": 568,
-    "commits_prev_30d": 610
+    "commits_30d": 526,
+    "commits_prev_30d": 654
   },
   "bips": {
-    "total": 209,
+    "total": 210,
     "active_recently": 97
   },
   "discussion_pulse": {
@@ -69,20 +69,20 @@
       {
         "category": "quantum",
         "label": "Quantum",
-        "count": 174,
-        "share": 27.1
+        "count": 173,
+        "share": 27.2
       },
       {
         "category": "testing-devtools",
         "label": "Testing Devtools",
         "count": 67,
-        "share": 10.5
+        "share": 10.6
       },
       {
         "category": "privacy",
         "label": "Privacy",
-        "count": 51,
-        "share": 8.0
+        "count": 47,
+        "share": 7.4
       }
     ],
     "top_bips": [

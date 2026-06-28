@@ -3,8 +3,20 @@
   "github_login_final": "polespinasa",
   "delving_username_final": "polespinasa",
   "uuid": "auto_pol_espinasa",
-  "badges": null,
-  "roles": null,
+  "badges": {
+    "is_bip_author": true,
+    "is_core_committer": false,
+    "is_maintainer": false,
+    "is_sponsored": false,
+    "maintainer_status": null,
+    "roles": [
+      "BIP Author"
+    ],
+    "sponsor_id": null
+  },
+  "roles": [
+    "BIP Author"
+  ],
   "total_commits": 30.0,
   "authored_commits": 30.0,
   "tier1_authored_commits": 30.0,
@@ -22,11 +34,11 @@
   "last_commit": "2026-06-24T19:28:55",
   "p2016_authored_commits": 30.0,
   "modern_authored_commits": 30.0,
-  "bips_authored": 0.0,
-  "p2016_bips_authored": 0.0,
-  "modern_bips_authored": 0.0,
-  "first_bip_date": null,
-  "last_bip_date": null,
+  "bips_authored": 1.0,
+  "p2016_bips_authored": 1.0,
+  "modern_bips_authored": 1.0,
+  "first_bip_date": "2026-05-08T03:49:03",
+  "last_bip_date": "2026-05-08T03:49:03",
   "avg_review_latency_days": 276.2295815177923,
   "reviews_count": 71.0,
   "avg_approval_latency_days": 150.54120690180312,
@@ -43,12 +55,12 @@
   "avg_pr_ack_velocity_days": 46.61498625578704,
   "avg_concept_lead_time_days": 59.1168011039886,
   "review_reciprocity": 3.55,
-  "hybrid_score": 0.4001,
-  "p2016_hybrid_score": 0.4062,
-  "modern_hybrid_score": 0.4379,
-  "impact_score": 21.0,
-  "p2016_impact_score": 22.0,
-  "modern_impact_score": 23.0,
+  "hybrid_score": 0.7501,
+  "p2016_hybrid_score": 0.7562,
+  "modern_hybrid_score": 0.7879,
+  "impact_score": 36.0,
+  "p2016_impact_score": 36.0,
+  "modern_impact_score": 38.0,
   "threads_started": 3.0,
   "replies_sent": 3.0,
   "ml_threads": 1.0,
@@ -57,13 +69,16 @@
   "delving_responses": 1.0,
   "first_active": null,
   "last_active": "2026-06-02T11:48:56",
-  "dev_type": "Builder",
+  "dev_type": "Protocol Designer",
   "expertise_domains": [
     "Infrastructure",
     "Network",
     "Mining"
   ],
   "expertise_by_source": {
+    "bips": {
+      "Infrastructure": 1.0
+    },
     "code": {
       "Consensus": 0.046,
       "Infrastructure": 0.793,
@@ -77,11 +92,11 @@
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.0276,
-    "Infrastructure": 0.4758,
-    "Mining": 0.128,
-    "Network": 0.2834,
-    "Wallet": 0.0762
+    "Consensus": 0.0138,
+    "Infrastructure": 0.7379,
+    "Mining": 0.064,
+    "Network": 0.1417,
+    "Wallet": 0.0381
   },
   "p2016_posts": 6.0,
   "modern_posts": 6.0,
@@ -92,7 +107,7 @@
   "is_engineer": true,
   "is_reviewer": true,
   "is_researcher": true,
-  "is_bip_author": false,
+  "is_bip_author": true,
   "global_first_active": "2024-10-29T12:22:59",
   "global_last_active": "2026-06-24T19:28:55",
   "github_location": "BCN",
@@ -126,6 +141,15 @@
       "Wallet": 5.33
     }
   },
+  "bip_list": [
+    {
+      "number": 95,
+      "title": "Testnet 5",
+      "status": "Draft",
+      "theme": "Other",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0095.mediawiki"
+    }
+  ],
   "first_message": {
     "source": "delving",
     "subject": "Re: Stats on compact block reconstructions",

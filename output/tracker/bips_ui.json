@@ -18,7 +18,7 @@
     "maturity_score": 0.55,
     "social_mention_count": 277,
     "revision_count": 59,
-    "code_mention_count": 96,
+    "code_mention_count": 100,
     "authors": "Pieter Wuille"
   },
   {
@@ -335,7 +335,7 @@
     "status": "Draft",
     "theme": "Other",
     "maturity_score": 0.12,
-    "social_mention_count": 18,
+    "social_mention_count": 17,
     "revision_count": 44,
     "code_mention_count": 0,
     "authors": "Shaolin Fry, Luke Dashjr"
@@ -506,17 +506,6 @@
     "authors": "Pieter Wuille"
   },
   {
-    "bip_id": "43",
-    "title": "Purpose Field for Deterministic Wallets",
-    "status": "Deployed",
-    "theme": "Wallet & Keys",
-    "maturity_score": 0.09,
-    "social_mention_count": 38,
-    "revision_count": 17,
-    "code_mention_count": 2,
-    "authors": "Marek Palatinus, Pavol Rusnak"
-  },
-  {
     "bip_id": "321",
     "title": "URI Scheme",
     "status": "Complete",
@@ -526,6 +515,17 @@
     "revision_count": 43,
     "code_mention_count": 0,
     "authors": "Matt Corallo"
+  },
+  {
+    "bip_id": "43",
+    "title": "Purpose Field for Deterministic Wallets",
+    "status": "Deployed",
+    "theme": "Wallet & Keys",
+    "maturity_score": 0.09,
+    "social_mention_count": 38,
+    "revision_count": 17,
+    "code_mention_count": 2,
+    "authors": "Marek Palatinus, Pavol Rusnak"
   },
   {
     "bip_id": "47",
@@ -825,17 +825,6 @@
     "authors": "Olaoluwa Osuntokun, Alex Akselrod, Jim Posen"
   },
   {
-    "bip_id": "111",
-    "title": "NODE_BLOOM service bit",
-    "status": "Deployed",
-    "theme": "Other",
-    "maturity_score": 0.05,
-    "social_mention_count": 15,
-    "revision_count": 15,
-    "code_mention_count": 8,
-    "authors": "Matt Corallo, Peter Todd"
-  },
-  {
     "bip_id": "122",
     "title": "URI scheme for Blockchain references / exploration",
     "status": "Draft",
@@ -845,6 +834,17 @@
     "revision_count": 23,
     "code_mention_count": 0,
     "authors": "Marco Pontello"
+  },
+  {
+    "bip_id": "111",
+    "title": "NODE_BLOOM service bit",
+    "status": "Deployed",
+    "theme": "Other",
+    "maturity_score": 0.05,
+    "social_mention_count": 15,
+    "revision_count": 15,
+    "code_mention_count": 8,
+    "authors": "Matt Corallo, Peter Todd"
   },
   {
     "bip_id": "159",
@@ -902,48 +902,15 @@
     "authors": "Chris Priest"
   },
   {
-    "bip_id": "101",
-    "title": "Increase maximum block size",
-    "status": "Closed",
-    "theme": "Consensus & Soft Forks",
-    "maturity_score": 0.05,
-    "social_mention_count": 15,
-    "revision_count": 11,
-    "code_mention_count": 0,
-    "authors": "Gavin Andresen"
-  },
-  {
-    "bip_id": "99",
-    "title": "Motivation and deployment of consensus rule changes ([soft/hard]forks)",
-    "status": "Closed",
-    "theme": "Consensus & Soft Forks",
-    "maturity_score": 0.05,
-    "social_mention_count": 1,
-    "revision_count": 25,
-    "code_mention_count": 0,
-    "authors": "Jorge Tim\u00f3n"
-  },
-  {
-    "bip_id": "22",
-    "title": "getblocktemplate - Fundamentals",
-    "status": "Deployed",
-    "theme": "Other",
-    "maturity_score": 0.05,
-    "social_mention_count": 9,
-    "revision_count": 19,
-    "code_mention_count": 12,
-    "authors": "Luke Dashjr"
-  },
-  {
-    "bip_id": "35",
-    "title": "mempool message",
+    "bip_id": "14",
+    "title": "Protocol Version and User Agent",
     "status": "Deployed",
     "theme": "P2P Network",
     "maturity_score": 0.05,
-    "social_mention_count": 16,
-    "revision_count": 14,
-    "code_mention_count": 6,
-    "authors": "Jeff Garzik"
+    "social_mention_count": 5,
+    "revision_count": 20,
+    "code_mention_count": 14,
+    "authors": "Amir Taaki, Patrick Strateman"
   },
   {
     "bip_id": "13",
@@ -957,81 +924,59 @@
     "authors": "Gavin Andresen"
   },
   {
-    "bip_id": "14",
-    "title": "Protocol Version and User Agent",
+    "bip_id": "35",
+    "title": "mempool message",
     "status": "Deployed",
     "theme": "P2P Network",
     "maturity_score": 0.05,
-    "social_mention_count": 5,
-    "revision_count": 20,
-    "code_mention_count": 14,
-    "authors": "Amir Taaki, Patrick Strateman"
+    "social_mention_count": 16,
+    "revision_count": 14,
+    "code_mention_count": 6,
+    "authors": "Jeff Garzik"
   },
   {
-    "bip_id": "12",
-    "title": "OP_EVAL",
+    "bip_id": "101",
+    "title": "Increase maximum block size",
     "status": "Closed",
     "theme": "Consensus & Soft Forks",
-    "maturity_score": 0.04,
-    "social_mention_count": 2,
-    "revision_count": 19,
-    "code_mention_count": 2,
+    "maturity_score": 0.05,
+    "social_mention_count": 15,
+    "revision_count": 11,
+    "code_mention_count": 0,
     "authors": "Gavin Andresen"
   },
   {
-    "bip_id": "19",
-    "title": "M-of-N Standard Transactions (Low SigOp)",
-    "status": "Closed",
+    "bip_id": "22",
+    "title": "getblocktemplate - Fundamentals",
+    "status": "Deployed",
     "theme": "Other",
-    "maturity_score": 0.04,
-    "social_mention_count": 1,
+    "maturity_score": 0.05,
+    "social_mention_count": 9,
     "revision_count": 19,
-    "code_mention_count": 2,
+    "code_mention_count": 12,
     "authors": "Luke Dashjr"
   },
   {
-    "bip_id": "142",
-    "title": "Address Format for Segregated Witness",
+    "bip_id": "99",
+    "title": "Motivation and deployment of consensus rule changes ([soft/hard]forks)",
     "status": "Closed",
     "theme": "Consensus & Soft Forks",
-    "maturity_score": 0.04,
-    "social_mention_count": 0,
-    "revision_count": 20,
+    "maturity_score": 0.05,
+    "social_mention_count": 1,
+    "revision_count": 25,
     "code_mention_count": 0,
-    "authors": "Johnson Lau"
+    "authors": "Jorge Tim\u00f3n"
   },
   {
-    "bip_id": "88",
-    "title": "Hierarchical Deterministic Path Templates",
-    "status": "Complete",
+    "bip_id": "327",
+    "title": "MuSig2 for BIP340-compatible Multi-Signatures",
+    "status": "Deployed",
     "theme": "Other",
     "maturity_score": 0.04,
     "social_mention_count": 0,
     "revision_count": 19,
-    "code_mention_count": 2,
-    "authors": "Dmitry Petukhov"
-  },
-  {
-    "bip_id": "86",
-    "title": "Key Derivation for Single Key P2TR Outputs",
-    "status": "Deployed",
-    "theme": "Other",
-    "maturity_score": 0.04,
-    "social_mention_count": 18,
-    "revision_count": 8,
-    "code_mention_count": 12,
-    "authors": "Ava Chow"
-  },
-  {
-    "bip_id": "11",
-    "title": "M-of-N Standard Transactions",
-    "status": "Deployed",
-    "theme": "Other",
-    "maturity_score": 0.04,
-    "social_mention_count": 0,
-    "revision_count": 21,
-    "code_mention_count": 0,
-    "authors": "Gavin Andresen"
+    "code_mention_count": 6,
+    "authors": "Jonas Nick, Tim Ruffing, Elliott Jin"
   },
   {
     "bip_id": "175",
@@ -1043,50 +988,6 @@
     "revision_count": 22,
     "code_mention_count": 0,
     "authors": "Omar Shibli, Nicholas Gregory"
-  },
-  {
-    "bip_id": "121",
-    "title": "Proof of Payment URI scheme",
-    "status": "Closed",
-    "theme": "Other",
-    "maturity_score": 0.04,
-    "social_mention_count": 0,
-    "revision_count": 19,
-    "code_mention_count": 0,
-    "authors": "Kalle Rosenbaum"
-  },
-  {
-    "bip_id": "33",
-    "title": "Stratized Nodes",
-    "status": "Closed",
-    "theme": "Other",
-    "maturity_score": 0.04,
-    "social_mention_count": 10,
-    "revision_count": 13,
-    "code_mention_count": 0,
-    "authors": "Amir Taaki"
-  },
-  {
-    "bip_id": "52",
-    "title": "Durable, Low Energy Bitcoin PoW",
-    "status": "Closed",
-    "theme": "Consensus & Soft Forks",
-    "maturity_score": 0.04,
-    "social_mention_count": 1,
-    "revision_count": 18,
-    "code_mention_count": 0,
-    "authors": "Michael Dubrovsky, Bogdan Penkovsky"
-  },
-  {
-    "bip_id": "45",
-    "title": "Structure for Deterministic P2SH Multisignature Wallets",
-    "status": "Complete",
-    "theme": "Wallet & Keys",
-    "maturity_score": 0.04,
-    "social_mention_count": 9,
-    "revision_count": 15,
-    "code_mention_count": 0,
-    "authors": "Manuel Araoz, Ryan X. Charles, Matias Alejo Garcia"
   },
   {
     "bip_id": "79",
@@ -1111,37 +1012,59 @@
     "authors": "Ava Chow"
   },
   {
-    "bip_id": "37",
-    "title": "Connection Bloom filtering",
+    "bip_id": "86",
+    "title": "Key Derivation for Single Key P2TR Outputs",
     "status": "Deployed",
     "theme": "Other",
     "maturity_score": 0.04,
-    "social_mention_count": 3,
-    "revision_count": 16,
-    "code_mention_count": 46,
-    "authors": "Mike Hearn, Matt Corallo"
+    "social_mention_count": 18,
+    "revision_count": 8,
+    "code_mention_count": 12,
+    "authors": "Ava Chow"
   },
   {
-    "bip_id": "325",
-    "title": "Signet",
+    "bip_id": "88",
+    "title": "Hierarchical Deterministic Path Templates",
     "status": "Complete",
     "theme": "Other",
     "maturity_score": 0.04,
     "social_mention_count": 0,
-    "revision_count": 20,
-    "code_mention_count": 4,
-    "authors": "Karl-Johan Alm, Anthony Towns"
+    "revision_count": 19,
+    "code_mention_count": 2,
+    "authors": "Dmitry Petukhov"
   },
   {
-    "bip_id": "327",
-    "title": "MuSig2 for BIP340-compatible Multi-Signatures",
-    "status": "Deployed",
-    "theme": "Other",
+    "bip_id": "142",
+    "title": "Address Format for Segregated Witness",
+    "status": "Closed",
+    "theme": "Consensus & Soft Forks",
     "maturity_score": 0.04,
     "social_mention_count": 0,
+    "revision_count": 20,
+    "code_mention_count": 0,
+    "authors": "Johnson Lau"
+  },
+  {
+    "bip_id": "12",
+    "title": "OP_EVAL",
+    "status": "Closed",
+    "theme": "Consensus & Soft Forks",
+    "maturity_score": 0.04,
+    "social_mention_count": 2,
     "revision_count": 19,
-    "code_mention_count": 6,
-    "authors": "Jonas Nick, Tim Ruffing, Elliott Jin"
+    "code_mention_count": 2,
+    "authors": "Gavin Andresen"
+  },
+  {
+    "bip_id": "19",
+    "title": "M-of-N Standard Transactions (Low SigOp)",
+    "status": "Closed",
+    "theme": "Other",
+    "maturity_score": 0.04,
+    "social_mention_count": 1,
+    "revision_count": 19,
+    "code_mention_count": 2,
+    "authors": "Luke Dashjr"
   },
   {
     "bip_id": "371",
@@ -1155,48 +1078,92 @@
     "authors": "Ava Chow"
   },
   {
-    "bip_id": "74",
-    "title": "Allow zero value OP_RETURN in Payment Protocol",
-    "status": "Closed",
-    "theme": "P2P Network",
-    "maturity_score": 0.03,
-    "social_mention_count": 6,
-    "revision_count": 10,
-    "code_mention_count": 0,
-    "authors": "Toby Padilla"
-  },
-  {
-    "bip_id": "372",
-    "title": "Pay-to-contract tweak fields for PSBT",
-    "status": "Draft",
+    "bip_id": "11",
+    "title": "M-of-N Standard Transactions",
+    "status": "Deployed",
     "theme": "Other",
-    "maturity_score": 0.03,
+    "maturity_score": 0.04,
     "social_mention_count": 0,
-    "revision_count": 15,
-    "code_mention_count": 0,
-    "authors": "Maxim Orlovsky"
-  },
-  {
-    "bip_id": "77",
-    "title": "Async Payjoin",
-    "status": "Draft",
-    "theme": "Other",
-    "maturity_score": 0.03,
-    "social_mention_count": 0,
-    "revision_count": 14,
-    "code_mention_count": 0,
-    "authors": "Dan Gould, Yuval Kogman"
-  },
-  {
-    "bip_id": "109",
-    "title": "Two million byte size limit with sigop and sighash limits",
-    "status": "Closed",
-    "theme": "Consensus & Soft Forks",
-    "maturity_score": 0.03,
-    "social_mention_count": 0,
-    "revision_count": 13,
+    "revision_count": 21,
     "code_mention_count": 0,
     "authors": "Gavin Andresen"
+  },
+  {
+    "bip_id": "121",
+    "title": "Proof of Payment URI scheme",
+    "status": "Closed",
+    "theme": "Other",
+    "maturity_score": 0.04,
+    "social_mention_count": 0,
+    "revision_count": 19,
+    "code_mention_count": 0,
+    "authors": "Kalle Rosenbaum"
+  },
+  {
+    "bip_id": "33",
+    "title": "Stratized Nodes",
+    "status": "Closed",
+    "theme": "Other",
+    "maturity_score": 0.04,
+    "social_mention_count": 10,
+    "revision_count": 13,
+    "code_mention_count": 0,
+    "authors": "Amir Taaki"
+  },
+  {
+    "bip_id": "325",
+    "title": "Signet",
+    "status": "Complete",
+    "theme": "Other",
+    "maturity_score": 0.04,
+    "social_mention_count": 0,
+    "revision_count": 20,
+    "code_mention_count": 4,
+    "authors": "Karl-Johan Alm, Anthony Towns"
+  },
+  {
+    "bip_id": "37",
+    "title": "Connection Bloom filtering",
+    "status": "Deployed",
+    "theme": "Other",
+    "maturity_score": 0.04,
+    "social_mention_count": 3,
+    "revision_count": 16,
+    "code_mention_count": 46,
+    "authors": "Mike Hearn, Matt Corallo"
+  },
+  {
+    "bip_id": "52",
+    "title": "Durable, Low Energy Bitcoin PoW",
+    "status": "Closed",
+    "theme": "Consensus & Soft Forks",
+    "maturity_score": 0.04,
+    "social_mention_count": 1,
+    "revision_count": 18,
+    "code_mention_count": 0,
+    "authors": "Michael Dubrovsky, Bogdan Penkovsky"
+  },
+  {
+    "bip_id": "45",
+    "title": "Structure for Deterministic P2SH Multisignature Wallets",
+    "status": "Complete",
+    "theme": "Wallet & Keys",
+    "maturity_score": 0.04,
+    "social_mention_count": 9,
+    "revision_count": 15,
+    "code_mention_count": 0,
+    "authors": "Manuel Araoz, Ryan X. Charles, Matias Alejo Garcia"
+  },
+  {
+    "bip_id": "31",
+    "title": "Pong message",
+    "status": "Deployed",
+    "theme": "Other",
+    "maturity_score": 0.03,
+    "social_mention_count": 3,
+    "revision_count": 15,
+    "code_mention_count": 14,
+    "authors": "Mike Hearn"
   },
   {
     "bip_id": "17",
@@ -1210,14 +1177,47 @@
     "authors": "Luke Dashjr"
   },
   {
-    "bip_id": "71",
-    "title": "Payment Protocol MIME types",
-    "status": "Deployed",
-    "theme": "P2P Network",
+    "bip_id": "80",
+    "title": "Hierarchy for Non-Colored Voting Pool Deterministic Multisig Wallets",
+    "status": "Closed",
+    "theme": "Wallet & Keys",
     "maturity_score": 0.03,
-    "social_mention_count": 3,
-    "revision_count": 11,
-    "code_mention_count": 4,
+    "social_mention_count": 0,
+    "revision_count": 13,
+    "code_mention_count": 0,
+    "authors": "Justus Ranvier, Jimmy Song"
+  },
+  {
+    "bip_id": "330",
+    "title": "Transaction announcements reconciliation",
+    "status": "Draft",
+    "theme": "Other",
+    "maturity_score": 0.03,
+    "social_mention_count": 0,
+    "revision_count": 16,
+    "code_mention_count": 2,
+    "authors": "Gleb Naumenko, Pieter Wuille"
+  },
+  {
+    "bip_id": "42",
+    "title": "A finite monetary supply for Bitcoin",
+    "status": "Deployed",
+    "theme": "Consensus & Soft Forks",
+    "maturity_score": 0.03,
+    "social_mention_count": 0,
+    "revision_count": 14,
+    "code_mention_count": 6,
+    "authors": "Pieter Wuille"
+  },
+  {
+    "bip_id": "109",
+    "title": "Two million byte size limit with sigop and sighash limits",
+    "status": "Closed",
+    "theme": "Consensus & Soft Forks",
+    "maturity_score": 0.03,
+    "social_mention_count": 0,
+    "revision_count": 13,
+    "code_mention_count": 0,
     "authors": "Gavin Andresen"
   },
   {
@@ -1232,48 +1232,26 @@
     "authors": "Luke Dashjr"
   },
   {
-    "bip_id": "353",
-    "title": "DNS Payment Instructions",
-    "status": "Complete",
-    "theme": "Other",
-    "maturity_score": 0.03,
-    "social_mention_count": 0,
-    "revision_count": 17,
-    "code_mention_count": 0,
-    "authors": "Matt Corallo, Bastien Teinturier"
-  },
-  {
-    "bip_id": "150",
-    "title": "Peer Authentication",
+    "bip_id": "338",
+    "title": "Disable transaction relay message",
     "status": "Closed",
+    "theme": "P2P Network",
+    "maturity_score": 0.03,
+    "social_mention_count": 0,
+    "revision_count": 14,
+    "code_mention_count": 0,
+    "authors": "Suhas Daftuar"
+  },
+  {
+    "bip_id": "77",
+    "title": "Async Payjoin",
+    "status": "Draft",
     "theme": "Other",
     "maturity_score": 0.03,
-    "social_mention_count": 6,
-    "revision_count": 11,
-    "code_mention_count": 0,
-    "authors": "Jonas Schnelli"
-  },
-  {
-    "bip_id": "350",
-    "title": "Bech32m format for v1+ witness addresses",
-    "status": "Deployed",
-    "theme": "Consensus & Soft Forks",
-    "maturity_score": 0.03,
     "social_mention_count": 0,
-    "revision_count": 15,
-    "code_mention_count": 8,
-    "authors": "Pieter Wuille"
-  },
-  {
-    "bip_id": "349",
-    "title": "OP_INTERNALKEY",
-    "status": "Draft",
-    "theme": "Consensus & Soft Forks",
-    "maturity_score": 0.03,
-    "social_mention_count": 0,
-    "revision_count": 13,
+    "revision_count": 14,
     "code_mention_count": 0,
-    "authors": "Brandon Black, Jeremy Rubin"
+    "authors": "Dan Gould, Yuval Kogman"
   },
   {
     "bip_id": "23",
@@ -1287,59 +1265,81 @@
     "authors": "Luke Dashjr"
   },
   {
-    "bip_id": "31",
-    "title": "Pong message",
-    "status": "Deployed",
-    "theme": "Other",
-    "maturity_score": 0.03,
-    "social_mention_count": 3,
-    "revision_count": 15,
-    "code_mention_count": 14,
-    "authors": "Mike Hearn"
-  },
-  {
-    "bip_id": "42",
-    "title": "A finite monetary supply for Bitcoin",
-    "status": "Deployed",
-    "theme": "Consensus & Soft Forks",
-    "maturity_score": 0.03,
-    "social_mention_count": 0,
-    "revision_count": 14,
-    "code_mention_count": 6,
-    "authors": "Pieter Wuille"
-  },
-  {
-    "bip_id": "338",
-    "title": "Disable transaction relay message",
+    "bip_id": "74",
+    "title": "Allow zero value OP_RETURN in Payment Protocol",
     "status": "Closed",
     "theme": "P2P Network",
     "maturity_score": 0.03,
-    "social_mention_count": 0,
-    "revision_count": 14,
+    "social_mention_count": 6,
+    "revision_count": 10,
     "code_mention_count": 0,
-    "authors": "Suhas Daftuar"
+    "authors": "Toby Padilla"
   },
   {
-    "bip_id": "80",
-    "title": "Hierarchy for Non-Colored Voting Pool Deterministic Multisig Wallets",
-    "status": "Closed",
-    "theme": "Wallet & Keys",
+    "bip_id": "353",
+    "title": "DNS Payment Instructions",
+    "status": "Complete",
+    "theme": "Other",
     "maturity_score": 0.03,
     "social_mention_count": 0,
-    "revision_count": 13,
+    "revision_count": 17,
     "code_mention_count": 0,
-    "authors": "Justus Ranvier, Jimmy Song"
+    "authors": "Matt Corallo, Bastien Teinturier"
   },
   {
-    "bip_id": "147",
-    "title": "Dealing with dummy stack element malleability",
+    "bip_id": "71",
+    "title": "Payment Protocol MIME types",
+    "status": "Deployed",
+    "theme": "P2P Network",
+    "maturity_score": 0.03,
+    "social_mention_count": 3,
+    "revision_count": 11,
+    "code_mention_count": 4,
+    "authors": "Gavin Andresen"
+  },
+  {
+    "bip_id": "350",
+    "title": "Bech32m format for v1+ witness addresses",
     "status": "Deployed",
     "theme": "Consensus & Soft Forks",
     "maturity_score": 0.03,
-    "social_mention_count": 3,
+    "social_mention_count": 0,
+    "revision_count": 15,
+    "code_mention_count": 8,
+    "authors": "Pieter Wuille"
+  },
+  {
+    "bip_id": "150",
+    "title": "Peer Authentication",
+    "status": "Closed",
+    "theme": "Other",
+    "maturity_score": 0.03,
+    "social_mention_count": 6,
+    "revision_count": 11,
+    "code_mention_count": 0,
+    "authors": "Jonas Schnelli"
+  },
+  {
+    "bip_id": "349",
+    "title": "OP_INTERNALKEY",
+    "status": "Draft",
+    "theme": "Consensus & Soft Forks",
+    "maturity_score": 0.03,
+    "social_mention_count": 0,
     "revision_count": 13,
-    "code_mention_count": 4,
-    "authors": "Johnson Lau"
+    "code_mention_count": 0,
+    "authors": "Brandon Black, Jeremy Rubin"
+  },
+  {
+    "bip_id": "107",
+    "title": "Dynamic limit on the block size",
+    "status": "Closed",
+    "theme": "Consensus & Soft Forks",
+    "maturity_score": 0.03,
+    "social_mention_count": 0,
+    "revision_count": 13,
+    "code_mention_count": 0,
+    "authors": "Washington Y. Sanchez"
   },
   {
     "bip_id": "81",
@@ -1353,26 +1353,15 @@
     "authors": "Justus Ranvier, Jimmy Song"
   },
   {
-    "bip_id": "329",
-    "title": "Wallet Labels Export Format",
-    "status": "Draft",
-    "theme": "Wallet & Keys",
-    "maturity_score": 0.03,
-    "social_mention_count": 0,
-    "revision_count": 15,
-    "code_mention_count": 0,
-    "authors": "Craig Raw"
-  },
-  {
-    "bip_id": "107",
-    "title": "Dynamic limit on the block size",
-    "status": "Closed",
+    "bip_id": "147",
+    "title": "Dealing with dummy stack element malleability",
+    "status": "Deployed",
     "theme": "Consensus & Soft Forks",
     "maturity_score": 0.03,
-    "social_mention_count": 0,
+    "social_mention_count": 3,
     "revision_count": 13,
-    "code_mention_count": 0,
-    "authors": "Washington Y. Sanchez"
+    "code_mention_count": 4,
+    "authors": "Johnson Lau"
   },
   {
     "bip_id": "106",
@@ -1397,6 +1386,17 @@
     "authors": "BtcDrak"
   },
   {
+    "bip_id": "104",
+    "title": "'Block75' - Max block size like difficulty",
+    "status": "Closed",
+    "theme": "Consensus & Soft Forks",
+    "maturity_score": 0.03,
+    "social_mention_count": 2,
+    "revision_count": 14,
+    "code_mention_count": 0,
+    "authors": "t.khan"
+  },
+  {
     "bip_id": "114",
     "title": "Merkelized Abstract Syntax Tree",
     "status": "Closed",
@@ -1419,28 +1419,6 @@
     "authors": "Luke Dashjr"
   },
   {
-    "bip_id": "117",
-    "title": "Tail Call Execution Semantics",
-    "status": "Draft",
-    "theme": "Consensus & Soft Forks",
-    "maturity_score": 0.03,
-    "social_mention_count": 10,
-    "revision_count": 9,
-    "code_mention_count": 0,
-    "authors": "Mark Friedenbach, Kalle Alm, BtcDrak"
-  },
-  {
-    "bip_id": "104",
-    "title": "'Block75' - Max block size like difficulty",
-    "status": "Closed",
-    "theme": "Consensus & Soft Forks",
-    "maturity_score": 0.03,
-    "social_mention_count": 2,
-    "revision_count": 14,
-    "code_mention_count": 0,
-    "authors": "t.khan"
-  },
-  {
     "bip_id": "390",
     "title": "musig() Descriptor Key Expression",
     "status": "Draft",
@@ -1450,6 +1428,17 @@
     "revision_count": 15,
     "code_mention_count": 2,
     "authors": "Ava Chow"
+  },
+  {
+    "bip_id": "117",
+    "title": "Tail Call Execution Semantics",
+    "status": "Draft",
+    "theme": "Consensus & Soft Forks",
+    "maturity_score": 0.03,
+    "social_mention_count": 10,
+    "revision_count": 9,
+    "code_mention_count": 0,
+    "authors": "Mark Friedenbach, Kalle Alm, BtcDrak"
   },
   {
     "bip_id": "120",
@@ -1463,48 +1452,15 @@
     "authors": "Kalle Rosenbaum"
   },
   {
-    "bip_id": "330",
-    "title": "Transaction announcements reconciliation",
+    "bip_id": "372",
+    "title": "Pay-to-contract tweak fields for PSBT",
     "status": "Draft",
-    "theme": "Other",
-    "maturity_score": 0.03,
-    "social_mention_count": 0,
-    "revision_count": 16,
-    "code_mention_count": 2,
-    "authors": "Gleb Naumenko, Pieter Wuille"
-  },
-  {
-    "bip_id": "94",
-    "title": "Testnet 4",
-    "status": "Deployed",
     "theme": "Other",
     "maturity_score": 0.03,
     "social_mention_count": 0,
     "revision_count": 15,
-    "code_mention_count": 18,
-    "authors": "Fabian Jahr"
-  },
-  {
-    "bip_id": "93",
-    "title": "codex32: Checksummed SSSS-aware BIP32 seeds",
-    "status": "Draft",
-    "theme": "Other",
-    "maturity_score": 0.03,
-    "social_mention_count": 7,
-    "revision_count": 11,
     "code_mention_count": 0,
-    "authors": "Leon Olsson Curr and Pearlwort Sneed, Andrew Poelstra"
-  },
-  {
-    "bip_id": "140",
-    "title": "Normalized TXID",
-    "status": "Closed",
-    "theme": "Consensus & Soft Forks",
-    "maturity_score": 0.03,
-    "social_mention_count": 0,
-    "revision_count": 13,
-    "code_mention_count": 0,
-    "authors": "Christian Decker"
+    "authors": "Maxim Orlovsky"
   },
   {
     "bip_id": "91",
@@ -1529,6 +1485,50 @@
     "authors": "Pieter Wuille, Ava Chow"
   },
   {
+    "bip_id": "329",
+    "title": "Wallet Labels Export Format",
+    "status": "Draft",
+    "theme": "Wallet & Keys",
+    "maturity_score": 0.03,
+    "social_mention_count": 0,
+    "revision_count": 15,
+    "code_mention_count": 0,
+    "authors": "Craig Raw"
+  },
+  {
+    "bip_id": "140",
+    "title": "Normalized TXID",
+    "status": "Closed",
+    "theme": "Consensus & Soft Forks",
+    "maturity_score": 0.03,
+    "social_mention_count": 0,
+    "revision_count": 13,
+    "code_mention_count": 0,
+    "authors": "Christian Decker"
+  },
+  {
+    "bip_id": "94",
+    "title": "Testnet 4",
+    "status": "Deployed",
+    "theme": "Other",
+    "maturity_score": 0.03,
+    "social_mention_count": 0,
+    "revision_count": 15,
+    "code_mention_count": 18,
+    "authors": "Fabian Jahr"
+  },
+  {
+    "bip_id": "93",
+    "title": "codex32: Checksummed SSSS-aware BIP32 seeds",
+    "status": "Draft",
+    "theme": "Other",
+    "maturity_score": 0.03,
+    "social_mention_count": 7,
+    "revision_count": 11,
+    "code_mention_count": 0,
+    "authors": "Leon Olsson Curr and Pearlwort Sneed, Andrew Poelstra"
+  },
+  {
     "bip_id": "135",
     "title": "Generalized version bits voting",
     "status": "Closed",
@@ -1551,17 +1551,6 @@
     "authors": "Tom Zander"
   },
   {
-    "bip_id": "384",
-    "title": "combo() Output Script Descriptors",
-    "status": "Deployed",
-    "theme": "Script & Smart Contracts",
-    "maturity_score": 0.02,
-    "social_mention_count": 0,
-    "revision_count": 11,
-    "code_mention_count": 0,
-    "authors": "Pieter Wuille, Ava Chow"
-  },
-  {
     "bip_id": "443",
     "title": "OP_CHECKCONTRACTVERIFY",
     "status": "Draft",
@@ -1571,17 +1560,6 @@
     "revision_count": 12,
     "code_mention_count": 0,
     "authors": "Salvatore Ingala"
-  },
-  {
-    "bip_id": "379",
-    "title": "Miniscript",
-    "status": "Draft",
-    "theme": "Script & Smart Contracts",
-    "maturity_score": 0.02,
-    "social_mention_count": 0,
-    "revision_count": 10,
-    "code_mention_count": 4,
-    "authors": "Pieter Wuille, Andrew Poelstra, Sanket Kanjalkar, Antoine Poinsot, Ava Chow"
   },
   {
     "bip_id": "337",
@@ -1595,37 +1573,15 @@
     "authors": "Tom Briar"
   },
   {
-    "bip_id": "36",
-    "title": "Custom Services",
-    "status": "Closed",
-    "theme": "Other",
-    "maturity_score": 0.02,
-    "social_mention_count": 0,
-    "revision_count": 12,
-    "code_mention_count": 0,
-    "authors": "Stefan Thomas"
-  },
-  {
-    "bip_id": "339",
-    "title": "WTXID-based transaction relay",
-    "status": "Deployed",
-    "theme": "P2P Network",
-    "maturity_score": 0.02,
-    "social_mention_count": 0,
-    "revision_count": 11,
-    "code_mention_count": 8,
-    "authors": "Suhas Daftuar"
-  },
-  {
-    "bip_id": "385",
-    "title": "raw() and addr() Output Script Descriptors",
-    "status": "Deployed",
+    "bip_id": "379",
+    "title": "Miniscript",
+    "status": "Draft",
     "theme": "Script & Smart Contracts",
     "maturity_score": 0.02,
     "social_mention_count": 0,
     "revision_count": 10,
-    "code_mention_count": 0,
-    "authors": "Pieter Wuille, Ava Chow"
+    "code_mention_count": 4,
+    "authors": "Pieter Wuille, Andrew Poelstra, Sanket Kanjalkar, Antoine Poinsot, Ava Chow"
   },
   {
     "bip_id": "382",
@@ -1639,6 +1595,17 @@
     "authors": "Pieter Wuille, Ava Chow"
   },
   {
+    "bip_id": "339",
+    "title": "WTXID-based transaction relay",
+    "status": "Deployed",
+    "theme": "P2P Network",
+    "maturity_score": 0.02,
+    "social_mention_count": 0,
+    "revision_count": 11,
+    "code_mention_count": 8,
+    "authors": "Suhas Daftuar"
+  },
+  {
     "bip_id": "383",
     "title": "Multisig Output Script Descriptors",
     "status": "Deployed",
@@ -1648,6 +1615,28 @@
     "revision_count": 12,
     "code_mention_count": 0,
     "authors": "Pieter Wuille, Ava Chow"
+  },
+  {
+    "bip_id": "36",
+    "title": "Custom Services",
+    "status": "Closed",
+    "theme": "Other",
+    "maturity_score": 0.02,
+    "social_mention_count": 0,
+    "revision_count": 12,
+    "code_mention_count": 0,
+    "authors": "Stefan Thomas"
+  },
+  {
+    "bip_id": "389",
+    "title": "Multipath Descriptor Key Expressions",
+    "status": "Draft",
+    "theme": "Script & Smart Contracts",
+    "maturity_score": 0.02,
+    "social_mention_count": 0,
+    "revision_count": 9,
+    "code_mention_count": 0,
+    "authors": "Ava Chow"
   },
   {
     "bip_id": "343",
@@ -1661,6 +1650,17 @@
     "authors": "Shinobius, Michael Folkson"
   },
   {
+    "bip_id": "385",
+    "title": "raw() and addr() Output Script Descriptors",
+    "status": "Deployed",
+    "theme": "Script & Smart Contracts",
+    "maturity_score": 0.02,
+    "social_mention_count": 0,
+    "revision_count": 10,
+    "code_mention_count": 0,
+    "authors": "Pieter Wuille, Ava Chow"
+  },
+  {
     "bip_id": "348",
     "title": "CHECKSIGFROMSTACK",
     "status": "Draft",
@@ -1672,6 +1672,17 @@
     "authors": "Brandon Black, Jeremy Rubin"
   },
   {
+    "bip_id": "384",
+    "title": "combo() Output Script Descriptors",
+    "status": "Deployed",
+    "theme": "Script & Smart Contracts",
+    "maturity_score": 0.02,
+    "social_mention_count": 0,
+    "revision_count": 11,
+    "code_mention_count": 0,
+    "authors": "Pieter Wuille, Ava Chow"
+  },
+  {
     "bip_id": "386",
     "title": "tr() Output Script Descriptors",
     "status": "Deployed",
@@ -1681,17 +1692,6 @@
     "revision_count": 11,
     "code_mention_count": 2,
     "authors": "Pieter Wuille, Ava Chow"
-  },
-  {
-    "bip_id": "389",
-    "title": "Multipath Descriptor Key Expressions",
-    "status": "Draft",
-    "theme": "Script & Smart Contracts",
-    "maturity_score": 0.02,
-    "social_mention_count": 0,
-    "revision_count": 9,
-    "code_mention_count": 0,
-    "authors": "Ava Chow"
   },
   {
     "bip_id": "320",
@@ -1716,37 +1716,125 @@
     "authors": "Ava Chow"
   },
   {
-    "bip_id": "64",
-    "title": "getutxo message",
+    "bip_id": "132",
+    "title": "Committee-based BIP Acceptance Process",
+    "status": "Closed",
+    "theme": "Other",
+    "maturity_score": 0.02,
+    "social_mention_count": 0,
+    "revision_count": 11,
+    "code_mention_count": 0,
+    "authors": "Andy Chase"
+  },
+  {
+    "bip_id": "154",
+    "title": "Rate Limiting via peer specified challenges",
     "status": "Closed",
     "theme": "Other",
     "maturity_score": 0.02,
     "social_mention_count": 0,
     "revision_count": 10,
-    "code_mention_count": 8,
-    "authors": "Mike Hearn"
+    "code_mention_count": 0,
+    "authors": "Karl-Johan Alm"
   },
   {
-    "bip_id": "116",
-    "title": "MERKLEBRANCHVERIFY",
+    "bip_id": "146",
+    "title": "Dealing with signature encoding malleability",
+    "status": "Closed",
+    "theme": "Consensus & Soft Forks",
+    "maturity_score": 0.02,
+    "social_mention_count": 0,
+    "revision_count": 12,
+    "code_mention_count": 0,
+    "authors": "Johnson Lau, Pieter Wuille"
+  },
+  {
+    "bip_id": "84",
+    "title": "Derivation scheme for P2WPKH based accounts",
+    "status": "Deployed",
+    "theme": "Other",
+    "maturity_score": 0.02,
+    "social_mention_count": 0,
+    "revision_count": 12,
+    "code_mention_count": 0,
+    "authors": "Pavol Rusnak"
+  },
+  {
+    "bip_id": "90",
+    "title": "Buried Deployments",
+    "status": "Deployed",
+    "theme": "Other",
+    "maturity_score": 0.02,
+    "social_mention_count": 0,
+    "revision_count": 12,
+    "code_mention_count": 12,
+    "authors": "Suhas Daftuar"
+  },
+  {
+    "bip_id": "326",
+    "title": "Anti-fee-sniping in taproot transactions",
     "status": "Draft",
     "theme": "Consensus & Soft Forks",
     "maturity_score": 0.02,
     "social_mention_count": 0,
-    "revision_count": 10,
-    "code_mention_count": 0,
-    "authors": "Mark Friedenbach, Kalle Alm, BtcDrak"
+    "revision_count": 8,
+    "code_mention_count": 2,
+    "authors": "Chris Belcher"
   },
   {
-    "bip_id": "103",
-    "title": "Block size following technological growth",
-    "status": "Closed",
-    "theme": "Consensus & Soft Forks",
+    "bip_id": "133",
+    "title": "feefilter message",
+    "status": "Deployed",
+    "theme": "Other",
     "maturity_score": 0.02,
-    "social_mention_count": 1,
+    "social_mention_count": 0,
+    "revision_count": 12,
+    "code_mention_count": 6,
+    "authors": "Alex Morcos"
+  },
+  {
+    "bip_id": "127",
+    "title": "Simple Proof-of-Reserves Transactions",
+    "status": "Complete",
+    "theme": "Other",
+    "maturity_score": 0.02,
+    "social_mention_count": 2,
+    "revision_count": 10,
+    "code_mention_count": 0,
+    "authors": "Steven Roose"
+  },
+  {
+    "bip_id": "73",
+    "title": "Use \"Accept\" header for response type negotiation with Payment Request URLs",
+    "status": "Deployed",
+    "theme": "Other",
+    "maturity_score": 0.02,
+    "social_mention_count": 0,
     "revision_count": 11,
     "code_mention_count": 0,
-    "authors": "Pieter Wuille"
+    "authors": "Stephen Pair"
+  },
+  {
+    "bip_id": "126",
+    "title": "Best Practices for Heterogeneous Input Script Transactions",
+    "status": "Draft",
+    "theme": "Script & Smart Contracts",
+    "maturity_score": 0.02,
+    "social_mention_count": 0,
+    "revision_count": 11,
+    "code_mention_count": 0,
+    "authors": "Kristov Atlas"
+  },
+  {
+    "bip_id": "110",
+    "title": "Reduced Data Temporary Softfork",
+    "status": "Draft",
+    "theme": "Consensus & Soft Forks",
+    "maturity_score": 0.02,
+    "social_mention_count": 11,
+    "revision_count": 3,
+    "code_mention_count": 0,
+    "authors": "Dathon Ohm"
   },
   {
     "bip_id": "124",
@@ -1771,92 +1859,26 @@
     "authors": "Mark Friedenbach, Kalle Alm, BtcDrak"
   },
   {
-    "bip_id": "126",
-    "title": "Best Practices for Heterogeneous Input Script Transactions",
-    "status": "Draft",
-    "theme": "Script & Smart Contracts",
-    "maturity_score": 0.02,
-    "social_mention_count": 0,
-    "revision_count": 11,
-    "code_mention_count": 0,
-    "authors": "Kristov Atlas"
-  },
-  {
-    "bip_id": "127",
-    "title": "Simple Proof-of-Reserves Transactions",
-    "status": "Complete",
-    "theme": "Other",
-    "maturity_score": 0.02,
-    "social_mention_count": 2,
-    "revision_count": 10,
-    "code_mention_count": 0,
-    "authors": "Steven Roose"
-  },
-  {
-    "bip_id": "132",
-    "title": "Committee-based BIP Acceptance Process",
-    "status": "Closed",
-    "theme": "Other",
-    "maturity_score": 0.02,
-    "social_mention_count": 0,
-    "revision_count": 11,
-    "code_mention_count": 0,
-    "authors": "Andy Chase"
-  },
-  {
-    "bip_id": "133",
-    "title": "feefilter message",
-    "status": "Deployed",
-    "theme": "Other",
-    "maturity_score": 0.02,
-    "social_mention_count": 0,
-    "revision_count": 12,
-    "code_mention_count": 6,
-    "authors": "Alex Morcos"
-  },
-  {
-    "bip_id": "90",
-    "title": "Buried Deployments",
-    "status": "Deployed",
-    "theme": "Other",
-    "maturity_score": 0.02,
-    "social_mention_count": 0,
-    "revision_count": 12,
-    "code_mention_count": 12,
-    "authors": "Suhas Daftuar"
-  },
-  {
-    "bip_id": "84",
-    "title": "Derivation scheme for P2WPKH based accounts",
-    "status": "Deployed",
-    "theme": "Other",
-    "maturity_score": 0.02,
-    "social_mention_count": 0,
-    "revision_count": 12,
-    "code_mention_count": 0,
-    "authors": "Pavol Rusnak"
-  },
-  {
-    "bip_id": "146",
-    "title": "Dealing with signature encoding malleability",
+    "bip_id": "103",
+    "title": "Block size following technological growth",
     "status": "Closed",
     "theme": "Consensus & Soft Forks",
     "maturity_score": 0.02,
-    "social_mention_count": 0,
-    "revision_count": 12,
+    "social_mention_count": 1,
+    "revision_count": 11,
     "code_mention_count": 0,
-    "authors": "Johnson Lau, Pieter Wuille"
+    "authors": "Pieter Wuille"
   },
   {
-    "bip_id": "83",
-    "title": "Dynamic Hierarchical Deterministic Key Trees",
-    "status": "Closed",
-    "theme": "Other",
+    "bip_id": "116",
+    "title": "MERKLEBRANCHVERIFY",
+    "status": "Draft",
+    "theme": "Consensus & Soft Forks",
     "maturity_score": 0.02,
     "social_mention_count": 0,
-    "revision_count": 12,
+    "revision_count": 10,
     "code_mention_count": 0,
-    "authors": "Eric Lombrozo"
+    "authors": "Mark Friedenbach, Kalle Alm, BtcDrak"
   },
   {
     "bip_id": "156",
@@ -1870,48 +1892,37 @@
     "authors": "Brad Denby, Andrew Miller, Giulia Fanti, Surya Bakshi, Shaileshh Bojja Venkatakrishnan, Pramod Viswanath"
   },
   {
-    "bip_id": "73",
-    "title": "Use \"Accept\" header for response type negotiation with Payment Request URLs",
-    "status": "Deployed",
-    "theme": "Other",
-    "maturity_score": 0.02,
-    "social_mention_count": 0,
-    "revision_count": 11,
-    "code_mention_count": 0,
-    "authors": "Stephen Pair"
-  },
-  {
-    "bip_id": "154",
-    "title": "Rate Limiting via peer specified challenges",
-    "status": "Closed",
-    "theme": "Other",
-    "maturity_score": 0.02,
-    "social_mention_count": 0,
-    "revision_count": 10,
-    "code_mention_count": 0,
-    "authors": "Karl-Johan Alm"
-  },
-  {
-    "bip_id": "197",
-    "title": "Hashed Time-Locked Collateral Contract",
-    "status": "Draft",
-    "theme": "Other",
-    "maturity_score": 0.02,
-    "social_mention_count": 0,
-    "revision_count": 10,
-    "code_mention_count": 0,
-    "authors": "Matthew Black, Tony Cai"
-  },
-  {
-    "bip_id": "180",
-    "title": "Block size/weight fraud proof",
+    "bip_id": "83",
+    "title": "Dynamic Hierarchical Deterministic Key Trees",
     "status": "Closed",
     "theme": "Other",
     "maturity_score": 0.02,
     "social_mention_count": 0,
     "revision_count": 12,
     "code_mention_count": 0,
-    "authors": "Luke Dashjr"
+    "authors": "Eric Lombrozo"
+  },
+  {
+    "bip_id": "64",
+    "title": "getutxo message",
+    "status": "Closed",
+    "theme": "Other",
+    "maturity_score": 0.02,
+    "social_mention_count": 0,
+    "revision_count": 10,
+    "code_mention_count": 8,
+    "authors": "Mike Hearn"
+  },
+  {
+    "bip_id": "60",
+    "title": "Fixed Length \"version\" Message (Relay-Transactions Field)",
+    "status": "Closed",
+    "theme": "P2P Network",
+    "maturity_score": 0.02,
+    "social_mention_count": 0,
+    "revision_count": 12,
+    "code_mention_count": 0,
+    "authors": "Amir Taaki"
   },
   {
     "bip_id": "176",
@@ -1923,28 +1934,6 @@
     "revision_count": 7,
     "code_mention_count": 6,
     "authors": "Jimmy Song"
-  },
-  {
-    "bip_id": "326",
-    "title": "Anti-fee-sniping in taproot transactions",
-    "status": "Draft",
-    "theme": "Consensus & Soft Forks",
-    "maturity_score": 0.02,
-    "social_mention_count": 0,
-    "revision_count": 8,
-    "code_mention_count": 2,
-    "authors": "Chris Belcher"
-  },
-  {
-    "bip_id": "110",
-    "title": "Reduced Data Temporary Softfork",
-    "status": "Draft",
-    "theme": "Consensus & Soft Forks",
-    "maturity_score": 0.02,
-    "social_mention_count": 11,
-    "revision_count": 3,
-    "code_mention_count": 0,
-    "authors": "Dathon Ohm"
   },
   {
     "bip_id": "310",
@@ -1980,26 +1969,37 @@
     "authors": "Sean Bowe, Daira Hopwood"
   },
   {
-    "bip_id": "60",
-    "title": "Fixed Length \"version\" Message (Relay-Transactions Field)",
+    "bip_id": "197",
+    "title": "Hashed Time-Locked Collateral Contract",
+    "status": "Draft",
+    "theme": "Other",
+    "maturity_score": 0.02,
+    "social_mention_count": 0,
+    "revision_count": 10,
+    "code_mention_count": 0,
+    "authors": "Matthew Black, Tony Cai"
+  },
+  {
+    "bip_id": "180",
+    "title": "Block size/weight fraud proof",
     "status": "Closed",
-    "theme": "P2P Network",
+    "theme": "Other",
     "maturity_score": 0.02,
     "social_mention_count": 0,
     "revision_count": 12,
     "code_mention_count": 0,
-    "authors": "Amir Taaki"
+    "authors": "Luke Dashjr"
   },
   {
-    "bip_id": "433",
-    "title": "Pay to Anchor (P2A)",
+    "bip_id": "172",
+    "title": "Define Bitcoin Subunits as Satoshis",
     "status": "Draft",
     "theme": "Other",
     "maturity_score": 0.01,
     "social_mention_count": 0,
-    "revision_count": 5,
+    "revision_count": 3,
     "code_mention_count": 0,
-    "authors": "Gregory Sanders"
+    "authors": "OceanSlim"
   },
   {
     "bip_id": "431",
@@ -2024,6 +2024,17 @@
     "authors": "Rusty Russell, Julian Moik"
   },
   {
+    "bip_id": "331",
+    "title": "Ancestor Package Relay",
+    "status": "Draft",
+    "theme": "Privacy",
+    "maturity_score": 0.01,
+    "social_mention_count": 0,
+    "revision_count": 7,
+    "code_mention_count": 4,
+    "authors": "Gloria Zhao"
+  },
+  {
     "bip_id": "387",
     "title": "Tapscript Multisig Output Script Descriptors",
     "status": "Deployed",
@@ -2035,37 +2046,15 @@
     "authors": "Pieter Wuille, Ava Chow"
   },
   {
-    "bip_id": "172",
-    "title": "Define Bitcoin Subunits as Satoshis",
+    "bip_id": "433",
+    "title": "Pay to Anchor (P2A)",
     "status": "Draft",
     "theme": "Other",
     "maturity_score": 0.01,
     "social_mention_count": 0,
-    "revision_count": 3,
+    "revision_count": 5,
     "code_mention_count": 0,
-    "authors": "OceanSlim"
-  },
-  {
-    "bip_id": "136",
-    "title": "Bech32 Encoded Tx Position References",
-    "status": "Draft",
-    "theme": "Other",
-    "maturity_score": 0.01,
-    "social_mention_count": 0,
-    "revision_count": 7,
-    "code_mention_count": 0,
-    "authors": "\u0412\u0435\u043b\u0435\u0441\u043b\u0430\u0432, Jonas Schnelli, Daniel Pape"
-  },
-  {
-    "bip_id": "331",
-    "title": "Ancestor Package Relay",
-    "status": "Draft",
-    "theme": "Privacy",
-    "maturity_score": 0.01,
-    "social_mention_count": 0,
-    "revision_count": 7,
-    "code_mention_count": 4,
-    "authors": "Gloria Zhao"
+    "authors": "Gregory Sanders"
   },
   {
     "bip_id": "179",
@@ -2090,6 +2079,17 @@
     "authors": "Karl-Johan Alm"
   },
   {
+    "bip_id": "136",
+    "title": "Bech32 Encoded Tx Position References",
+    "status": "Draft",
+    "theme": "Other",
+    "maturity_score": 0.01,
+    "social_mention_count": 0,
+    "revision_count": 7,
+    "code_mention_count": 0,
+    "authors": "\u0412\u0435\u043b\u0435\u0441\u043b\u0430\u0432, Jonas Schnelli, Daniel Pape"
+  },
+  {
     "bip_id": "177",
     "title": "Redefine Bitcoin's Base Unit",
     "status": "Draft",
@@ -2112,17 +2112,6 @@
     "authors": "Chris Stewart"
   },
   {
-    "bip_id": "361",
-    "title": "Post Quantum Migration and Legacy Signature Sunset",
-    "status": "Draft",
-    "theme": "Consensus & Soft Forks",
-    "maturity_score": 0.01,
-    "social_mention_count": 0,
-    "revision_count": 3,
-    "code_mention_count": 0,
-    "authors": "Jameson Lopp, Christian Papathanasiou, Ian Smith, Joe Ross, Steve Vaile, Pierre-Luc Dallaire-Demers"
-  },
-  {
     "bip_id": "434",
     "title": "Peer Feature Negotiation",
     "status": "Complete",
@@ -2134,15 +2123,15 @@
     "authors": "Anthony Towns"
   },
   {
-    "bip_id": "446",
-    "title": "OP_TEMPLATEHASH",
+    "bip_id": "361",
+    "title": "Post Quantum Migration and Legacy Signature Sunset",
     "status": "Draft",
     "theme": "Consensus & Soft Forks",
-    "maturity_score": 0.0,
+    "maturity_score": 0.01,
     "social_mention_count": 0,
-    "revision_count": 1,
+    "revision_count": 3,
     "code_mention_count": 0,
-    "authors": "Gregory Sanders, Antoine Poinsot, Steven Roose"
+    "authors": "Jameson Lopp, Christian Papathanasiou, Ian Smith, Joe Ross, Steve Vaile, Pierre-Luc Dallaire-Demers"
   },
   {
     "bip_id": "449",
@@ -2200,15 +2189,26 @@
     "authors": "Rusty Russell, Julian Moik"
   },
   {
-    "bip_id": "89",
-    "title": "Chain Code Delegation",
+    "bip_id": "446",
+    "title": "OP_TEMPLATEHASH",
     "status": "Draft",
-    "theme": "Other",
+    "theme": "Consensus & Soft Forks",
     "maturity_score": 0.0,
     "social_mention_count": 0,
     "revision_count": 1,
     "code_mention_count": 0,
-    "authors": "Jesse Posner, Jurvis Tan"
+    "authors": "Gregory Sanders, Antoine Poinsot, Steven Roose"
+  },
+  {
+    "bip_id": "376",
+    "title": "Spending Silent Payment outputs with PSBTs",
+    "status": "Draft",
+    "theme": "Privacy",
+    "maturity_score": 0.0,
+    "social_mention_count": 0,
+    "revision_count": 1,
+    "code_mention_count": 0,
+    "authors": "nymius"
   },
   {
     "bip_id": "393",
@@ -2244,6 +2244,17 @@
     "authors": "SeedHammer"
   },
   {
+    "bip_id": "95",
+    "title": "Testnet 5",
+    "status": "Draft",
+    "theme": "Other",
+    "maturity_score": 0.0,
+    "social_mention_count": 0,
+    "revision_count": 1,
+    "code_mention_count": 0,
+    "authors": "Pol Espinasa, Fabian Jahr"
+  },
+  {
     "bip_id": "128",
     "title": "Timelock-Recovery Storage Format",
     "status": "Draft",
@@ -2255,15 +2266,15 @@
     "authors": "Oren Z"
   },
   {
-    "bip_id": "376",
-    "title": "Spending Silent Payment outputs with PSBTs",
+    "bip_id": "89",
+    "title": "Chain Code Delegation",
     "status": "Draft",
-    "theme": "Privacy",
+    "theme": "Other",
     "maturity_score": 0.0,
     "social_mention_count": 0,
     "revision_count": 1,
     "code_mention_count": 0,
-    "authors": "nymius"
+    "authors": "Jesse Posner, Jurvis Tan"
   },
   {
     "bip_id": "346",
