@@ -11,8 +11,8 @@ COMMITS_FILE = "data/raw/core_commits.parquet"
 OUTPUT_FILE = "data/enriched/commits_resolved.parquet"
 MESSAGES_FILE = "data/raw/core_messages.parquet"
 PR_METADATA_FILE = "data/raw/github_pr_metadata.parquet"
-SPONSORS_FILE = "metadata/sponsors.json"
-SPONSORS_FILE = "metadata/sponsors.json"
+IDENTITIES_FILE = "metadata/identities.json"
+SPONSORS_FILE = "data/enriched/sponsors_merged.json"
 GITHUB_PROFILES_FILE = "metadata/github_profiles.json"
 
 # --- Sponsor Lookup ---
@@ -36,7 +36,17 @@ class SponsorLookup:
             cls._sponsors[s["id"]] = s
         for dev in data.get("sponsored_developers", []):
             grants = dev.get("grants", [])
-            for email in dev.get("emails", []):
+            
+            uuid = None
+            if dev.get("github"):
+                uuid = resolver.resolve_github(dev["github"])
+            else:
+                uuid = resolver.resolve_git(dev.get("canonical_name"), None)
+                
+            record = next((r for r in resolver._identities if r["uuid"] == uuid), None)
+            emails = record.get("git_signatures", {}).get("emails", []) if record else []
+            
+            for email in emails:
                 cls._email_to_sponsor.setdefault(email.lower(), []).extend(grants)
         cls._rules = data.get("classification_rules", {})
         return cls._instance
@@ -120,13 +130,22 @@ def map_integration_dates(commits_df):
         
     prs_df = pd.read_parquet(PR_METADATA_FILE)
     pr_dict = {}
+    pr_author_dict = {}
     for _, row in prs_df.iterrows():
         repo = row['repository_name']
         pr_number = row['pr_number']
         merged_at = row['merged_at']
+        author_login = row.get('author')
+        
+        pr_author_cid = resolver.resolve_github(author_login) if pd.notna(author_login) and author_login else None
+        
         if pd.notna(merged_at):
             pr_dict.setdefault(repo, {})[str(pr_number)] = pd.to_datetime(merged_at)
             pr_dict.setdefault(repo, {})[int(pr_number)] = pd.to_datetime(merged_at)
+            
+        if pr_author_cid:
+            pr_author_dict.setdefault(repo, {})[str(pr_number)] = pr_author_cid
+            pr_author_dict.setdefault(repo, {})[int(pr_number)] = pr_author_cid
             
     if not os.path.exists(MESSAGES_FILE):
         print(f"Warning: {MESSAGES_FILE} not found.")
@@ -137,6 +156,8 @@ def map_integration_dates(commits_df):
     msg_map = messages_df.set_index('hash')['subject'].to_dict()
     
     integration_dates = {}
+    merge_author_cids = {}
+    global_merge_commits = {}
     import re
     pr_regex = re.compile(r'Merge\s+(?:pull\s+request\s+|.*?#)(\d+)', re.IGNORECASE)
     
@@ -151,6 +172,7 @@ def map_integration_dates(commits_df):
                 match = pr_regex.search(subject)
                 if match:
                     merge_commits[h] = match.group(1)
+                    global_merge_commits[h] = match.group(1)
                     
         sorted_merges = sorted(merge_commits.keys(), key=lambda x: repo_dates.get(x, pd.Timestamp.min))
         
@@ -161,6 +183,10 @@ def map_integration_dates(commits_df):
                 merged_at = repo_dates.get(mh)
                 
             integration_dates[mh] = merged_at
+            
+            author_cid = pr_author_dict.get(repo, {}).get(pr_num)
+            if author_cid:
+                merge_author_cids[mh] = author_cid
             
             p_list = repo_parents.get(mh, [])
             if len(p_list) > 1:
@@ -183,7 +209,42 @@ def map_integration_dates(commits_df):
     commits_df['integration_date'] = commits_df['hash'].map(integration_dates)
     commits_df['integration_date'] = commits_df['integration_date'].fillna(commits_df['date_utc'])
     commits_df['integration_date'] = pd.to_datetime(commits_df['integration_date'], utc=True)
+    
+    commits_df['pr_author_cid'] = commits_df['hash'].map(merge_author_cids)
+    commits_df['is_self_merge'] = (commits_df['is_merge'] == True) & (commits_df['canonical_id'] == commits_df['pr_author_cid']) & commits_df['canonical_id'].notna()
+    commits_df['pr_number'] = commits_df['hash'].map(global_merge_commits)
+    
     return commits_df
+
+# --- Maintainer Lookup ---
+class MaintainerLookup:
+    _email_to_id = {}
+    _is_loaded = False
+    
+    @classmethod
+    def load(cls):
+        if cls._is_loaded:
+            return
+        path = "metadata/maintainers.json"
+        if not os.path.exists(path):
+            print("Warning: maintainers.json not found.")
+            return
+        with open(path, "r") as f:
+            data = json.load(f)
+        for m in data.get("maintainers", []):
+            for email in m.get("emails", []):
+                cls._email_to_id[email.lower()] = m["id"]
+            if m.get("github"):
+                cls._email_to_id[m["github"].lower()] = m["id"]
+        cls._is_loaded = True
+        
+    @classmethod
+    def is_maintainer(cls, email_or_github):
+        cls.load()
+        if not email_or_github:
+            return False
+        return email_or_github.lower() in cls._email_to_id
+
 
 def resolve_commits():
     print("Loading raw commits...")
@@ -191,6 +252,37 @@ def resolve_commits():
         raise FileNotFoundError(f"Missing {COMMITS_FILE}")
     
     commits = pd.read_parquet(COMMITS_FILE)
+    
+    print("Filtering out branch sync merges...")
+    # Load message subjects
+    if os.path.exists(MESSAGES_FILE):
+        messages_df = pd.read_parquet(MESSAGES_FILE)
+        msg_map = messages_df.set_index('hash')['subject'].to_dict()
+    else:
+        msg_map = {}
+
+    MaintainerLookup.load()
+
+    # Identify branch sync merges:
+    # 1. Subject contains 'into ' (case-insensitive)
+    # 2. Or committer is not a whitelisted maintainer
+    def is_branch_sync(row):
+        if not row['is_merge']:
+            return False
+        h = row['hash']
+        subject = msg_map.get(h, '')
+        if 'into ' in subject.lower():
+            return True
+        # If it's an integration merge but committer is not a whitelisted maintainer, it's a sync merge
+        committer_email = str(row.get('committer_email', '')).lower()
+        committer_name = str(row.get('committer_name', '')).lower()
+        if not MaintainerLookup.is_maintainer(committer_email) and not MaintainerLookup.is_maintainer(committer_name):
+            return True
+        return False
+
+    is_sync = commits.apply(is_branch_sync, axis=1)
+    print(f"Dropped {is_sync.sum()} branch sync merges from commit history.")
+    commits = commits[~is_sync].copy()
     
     # Load profile metadata for company enrichment
     gh_profiles = {}

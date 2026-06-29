@@ -12,6 +12,7 @@
   "merge_commits": 0.0,
   "tier1_merge_commits": null,
   "tier2_merge_commits": null,
+  "self_merges": 0.0,
   "total_additions": null,
   "total_deletions": null,
   "first_core_commit": null,
@@ -22,6 +23,7 @@
   "last_commit": null,
   "p2016_authored_commits": 0.0,
   "modern_authored_commits": 0.0,
+  "co_authored_commits": 0.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
@@ -65,15 +67,15 @@
   ],
   "expertise_by_source": {
     "discussion": {
-      "L2": 0.151,
-      "Script": 0.547,
-      "Wallet": 0.302
+      "L2": 0.157,
+      "Script": 0.549,
+      "Wallet": 0.294
     }
   },
   "expertise_domain_scores": {
-    "L2": 0.151,
-    "Script": 0.547,
-    "Wallet": 0.302
+    "L2": 0.157,
+    "Script": 0.549,
+    "Wallet": 0.294
   },
   "p2016_posts": 9.0,
   "modern_posts": 9.0,
@@ -126,7 +128,7 @@
     },
     "2026": {
       "bitvm": 1,
-      "other": 5,
+      "other": 6,
       "sidechains-drivechain": 1
     }
   }

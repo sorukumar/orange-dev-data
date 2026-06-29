@@ -12,7 +12,7 @@ from scripts.utils.identity import IdentityResolver
 
 # --- Paths ---
 MAINTAINERS_PATH = "metadata/maintainers.json"
-SPONSORS_PATH = "metadata/sponsors.json"
+SPONSORS_PATH = "data/enriched/sponsors_merged.json"
 BIPS_PATH = "output/tracker/bips_ui.json"
 BADGES_PATH = "metadata/badges.json"
 
@@ -32,7 +32,10 @@ def main():
     if os.path.exists(SPONSORS_PATH):
         with open(SPONSORS_PATH, 'r') as f:
             for s in json.load(f).get('sponsored_developers', []):
-                uuid = resolver.resolve_git(s['canonical_name'], None)
+                if s.get('github'):
+                    uuid = resolver.resolve_github(s['github'])
+                else:
+                    uuid = resolver.resolve_git(s.get('canonical_name'), None)
                 sponsored[uuid] = s
 
     bip_authors = set()

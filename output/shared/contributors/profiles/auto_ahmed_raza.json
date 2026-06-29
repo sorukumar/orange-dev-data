@@ -12,6 +12,7 @@
   "merge_commits": 0.0,
   "tier1_merge_commits": null,
   "tier2_merge_commits": null,
+  "self_merges": 0.0,
   "total_additions": null,
   "total_deletions": null,
   "first_core_commit": null,
@@ -22,6 +23,7 @@
   "last_commit": null,
   "p2016_authored_commits": 0.0,
   "modern_authored_commits": 0.0,
+  "co_authored_commits": 0.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
@@ -49,28 +51,38 @@
   "impact_score": 0.0,
   "p2016_impact_score": 0.0,
   "modern_impact_score": 0.0,
-  "threads_started": 0.0,
+  "threads_started": 2.0,
   "replies_sent": 0.0,
   "ml_threads": 0.0,
-  "delving_threads": 0.0,
+  "delving_threads": 2.0,
   "ml_responses": 0.0,
   "delving_responses": 0.0,
   "first_active": null,
   "last_active": null,
   "dev_type": "Participant",
   "expertise_domains": [
-    "Infrastructure"
+    "Cryptography",
+    "Ecosystem",
+    "Script"
   ],
-  "expertise_by_source": {},
-  "expertise_domain_scores": {
-    "Infrastructure": 1.0
+  "expertise_by_source": {
+    "discussion": {
+      "Cryptography": 0.5,
+      "Ecosystem": 0.25,
+      "Script": 0.25
+    }
   },
-  "p2016_posts": 0.0,
-  "modern_posts": 0.0,
+  "expertise_domain_scores": {
+    "Cryptography": 0.5,
+    "Ecosystem": 0.25,
+    "Script": 0.25
+  },
+  "p2016_posts": 2.0,
+  "modern_posts": 2.0,
   "p2016_ml_posts": 0.0,
-  "p2016_delving_posts": 0.0,
+  "p2016_delving_posts": 2.0,
   "modern_ml_posts": 0.0,
-  "modern_delving_posts": 0.0,
+  "modern_delving_posts": 2.0,
   "is_engineer": false,
   "is_reviewer": false,
   "is_researcher": false,
@@ -85,5 +97,25 @@
   "github_followers": null,
   "activity_status": "",
   "is_top_50": false,
-  "delving_url": "https://delvingbitcoin.org/u/ahmedraza"
+  "delving_url": "https://delvingbitcoin.org/u/ahmedraza",
+  "first_message": {
+    "source": "delving",
+    "subject": "Quantum Sunset Economics: a working paper analyzing PACT adoption",
+    "date": "2026-06-24",
+    "link": "https://delvingbitcoin.org/t/quantum-sunset-economics-a-working-paper-analyzing-pact-adoption/2645/1"
+  },
+  "last_message": {
+    "source": "delving",
+    "subject": "Re: Quantum Sunset Economics: a working paper analyzing PACT adoption",
+    "date": "2026-06-27",
+    "link": "https://delvingbitcoin.org/t/quantum-sunset-economics-a-working-paper-analyzing-pact-adoption/2645/4"
+  },
+  "social_history": {
+    "2026": {
+      "bip-process": 2,
+      "quantum": 2,
+      "script-opcodes": 2,
+      "wallet-keys": 2
+    }
+  }
 }

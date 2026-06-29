@@ -12,6 +12,7 @@
   "merge_commits": 0.0,
   "tier1_merge_commits": null,
   "tier2_merge_commits": null,
+  "self_merges": 0.0,
   "total_additions": null,
   "total_deletions": null,
   "first_core_commit": null,
@@ -22,6 +23,7 @@
   "last_commit": null,
   "p2016_authored_commits": 0.0,
   "modern_authored_commits": 0.0,
+  "co_authored_commits": 0.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
@@ -43,20 +45,20 @@
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": null,
-  "hybrid_score": 0.087,
-  "p2016_hybrid_score": 0.1047,
-  "modern_hybrid_score": 0.1907,
+  "hybrid_score": 0.0882,
+  "p2016_hybrid_score": 0.1068,
+  "modern_hybrid_score": 0.197,
   "impact_score": 5.0,
   "p2016_impact_score": 6.0,
   "modern_impact_score": 11.0,
   "threads_started": 7.0,
-  "replies_sent": 13.0,
+  "replies_sent": 14.0,
   "ml_threads": 2.0,
   "delving_threads": 5.0,
-  "ml_responses": 7.0,
+  "ml_responses": 8.0,
   "delving_responses": 6.0,
   "first_active": "2020-09-22T01:24:40",
-  "last_active": null,
+  "last_active": "2026-06-26T04:27:09",
   "dev_type": "Participant",
   "expertise_domains": [
     "Mempool",
@@ -65,28 +67,28 @@
   ],
   "expertise_by_source": {
     "discussion": {
-      "Cryptography": 0.26,
-      "Mempool": 0.46,
-      "Privacy": 0.28
+      "Cryptography": 0.235,
+      "Mempool": 0.431,
+      "Privacy": 0.333
     }
   },
   "expertise_domain_scores": {
-    "Cryptography": 0.26,
-    "Mempool": 0.46,
-    "Privacy": 0.28
+    "Cryptography": 0.2352,
+    "Mempool": 0.4314,
+    "Privacy": 0.3333
   },
-  "p2016_posts": 20.0,
-  "modern_posts": 18.0,
-  "p2016_ml_posts": 9.0,
+  "p2016_posts": 21.0,
+  "modern_posts": 19.0,
+  "p2016_ml_posts": 10.0,
   "p2016_delving_posts": 11.0,
-  "modern_ml_posts": 7.0,
+  "modern_ml_posts": 8.0,
   "modern_delving_posts": 11.0,
   "is_engineer": false,
   "is_reviewer": true,
   "is_researcher": true,
   "is_bip_author": false,
   "global_first_active": "2020-09-22T01:24:40",
-  "global_last_active": "2026-02-02T14:32:29",
+  "global_last_active": "2026-06-26T04:27:09",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -104,10 +106,10 @@
     "link": "https://gnusha.org/pi/bitcoindev/Jilb-w5AFlMx809pICIKdhhj3xBynWDlPtRTiJVIoxnC5_1gi6sK7rhOjl4e5HeMr7DDk9NjLdSGc8nWXaDIePDsjroiTd5xLU0xL3_INiY=@protonmail.com"
   },
   "last_message": {
-    "source": "delving",
-    "subject": "Re: Disposing of \"dust attack\" UTXOs",
-    "date": "2026-05-23",
-    "link": "https://delvingbitcoin.org/t/disposing-of-dust-attack-utxos/2215/38"
+    "source": "mailing_list",
+    "subject": "Re: [bitcoindev] Aligning privacy incentives in P2MR",
+    "date": "2026-06-26",
+    "link": "https://gnusha.org/pi/bitcoindev/2UBm2dVIs3jNHvlZtgXA_7Pfa09T6bK0BBkpvEZUMV8CNgeOwpG87vmUZ9vEnn0TQIfag2uIbiViizuDaND9UljX9LdDqHYXgJhTlW7OGqs=@protonmail.com"
   },
   "social_history": {
     "2020": {
@@ -132,10 +134,10 @@
       "soft-fork-activation": 1
     },
     "2026": {
+      "other": 9,
       "mempool-fees": 4,
       "mining": 1,
-      "other": 8,
-      "privacy": 5,
+      "privacy": 6,
       "quantum": 1,
       "script-opcodes": 4,
       "soft-fork-activation": 2,

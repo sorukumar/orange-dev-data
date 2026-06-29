@@ -58,6 +58,11 @@ def unify():
             df_commits['is_auth'] = 1
             df_commits['is_merg'] = 0
             
+        if 'is_self_merge' in df_commits.columns:
+            df_commits['is_self_merge'] = df_commits['is_self_merge'].fillna(False).astype(int)
+        else:
+            df_commits['is_self_merge'] = 0
+            
         # Drop duplicate hashes for a single contributor to prevent double-counting category-exploded rows
         tier1_repos = ['bitcoin/bitcoin', 'bitcoin-core/secp256k1', 'bitcoin-core/gui']
         tier2_repos = ['bitcoin-core/guix.sigs', 'bitcoin-core/qa-assets', 'bitcoin-core/HWI']
@@ -69,6 +74,8 @@ def unify():
         df_commits_dedup = df_commits_dedup.assign(
             tier1_auth=lambda d: d['is_auth'] * d['is_tier1'],
             tier2_auth=lambda d: d['is_auth'] * d['is_tier2'],
+            tier1_merge=lambda d: d['is_merg'] * d['is_tier1'],
+            tier2_merge=lambda d: d['is_merg'] * d['is_tier2'],
         )
 
         if 'integration_date' in df_commits_dedup.columns:
@@ -93,6 +100,9 @@ def unify():
             tier1_authored_commits=('tier1_auth', 'sum'),
             tier2_authored_commits=('tier2_auth', 'sum'),
             merge_commits=('is_merg', 'sum'),
+            tier1_merge_commits=('tier1_merge', 'sum'),
+            tier2_merge_commits=('tier2_merge', 'sum'),
+            self_merges=('is_self_merge', 'sum'),
             total_additions=('commit_total_adds', 'sum') if 'commit_total_adds' in df_commits_dedup.columns else ('additions', 'sum'),
             total_deletions=('commit_total_dels', 'sum') if 'commit_total_dels' in df_commits_dedup.columns else ('deletions', 'sum'),
             first_core_commit=('core_date', 'min'),
@@ -115,9 +125,25 @@ def unify():
         commit_stats = commit_stats.merge(p2016_auth, on='canonical_id', how='left')
         commit_stats = commit_stats.merge(modern_auth, on='canonical_id', how='left')
 
+        # Add Co-Authored Commits from reviews
+        REVIEWS_PARQUET = "data/raw/core_reviews.parquet"
+        if os.path.exists(REVIEWS_PARQUET):
+            df_core_reviews = pd.read_parquet(REVIEWS_PARQUET)
+            df_coauth = df_core_reviews[df_core_reviews['review_type'] == 'Co-authored-by'].copy()
+            if not df_coauth.empty:
+                df_coauth['canonical_id'] = df_coauth.apply(lambda r: resolver.resolve_git(r.get('reviewer_name'), r.get('reviewer_email')), axis=1)
+                coauth_counts = df_coauth.groupby('canonical_id').size().rename('co_authored_commits').reset_index()
+                commit_stats = commit_stats.merge(coauth_counts, on='canonical_id', how='left')
+                commit_stats['co_authored_commits'] = commit_stats['co_authored_commits'].fillna(0)
+                all_source_uuids.update(coauth_counts['canonical_id'])
+            else:
+                commit_stats['co_authored_commits'] = 0
+        else:
+            commit_stats['co_authored_commits'] = 0
+
         all_source_uuids.update(commit_stats['canonical_id'])
     else:
-        commit_stats = pd.DataFrame(columns=['canonical_id', 'total_commits', 'authored_commits', 'tier1_authored_commits', 'tier2_authored_commits', 'merge_commits', 'total_additions', 'total_deletions', 'first_commit', 'last_commit', 'p2016_authored_commits', 'modern_authored_commits'])
+        commit_stats = pd.DataFrame(columns=['canonical_id', 'total_commits', 'authored_commits', 'tier1_authored_commits', 'tier2_authored_commits', 'merge_commits', 'tier1_merge_commits', 'tier2_merge_commits', 'self_merges', 'co_authored_commits', 'total_additions', 'total_deletions', 'first_commit', 'last_commit', 'p2016_authored_commits', 'modern_authored_commits'])
     
     # 2. Discover from Social
     df_soc = pd.DataFrame(columns=['canonical_id'])
@@ -253,6 +279,7 @@ def unify():
     # Fill defaults (impact_score intentionally excluded — None means "Creator", 0 means unranked)
     df_unified = df_unified.fillna({
         'total_commits': 0, 'authored_commits': 0, 'tier1_authored_commits': 0, 'tier2_authored_commits': 0, 'merge_commits': 0,
+        'self_merges': 0, 'co_authored_commits': 0,
         'p2016_authored_commits': 0, 'modern_authored_commits': 0,
         'bips_authored': 0, 'p2016_bips_authored': 0, 'modern_bips_authored': 0, 'hybrid_score': 0, 'threads_started': 0,
         'replies_sent': 0, 'ml_threads': 0, 'delving_threads': 0,
@@ -310,6 +337,46 @@ def unify():
                             ('bio', 'github_bio'), ('twitter_username', 'github_twitter'),
                             ('blog', 'github_blog'), ('followers', 'github_followers')]:
             df_unified[col_name] = None
+
+    # --- Manual Social Profile Overrides ---
+    SOCIAL_PROFILES_FILE = "metadata/social_profiles.json"
+    if os.path.exists(SOCIAL_PROFILES_FILE):
+        print("Applying manual social profile overrides (Twitter/Blog)...")
+        with open(SOCIAL_PROFILES_FILE, 'r') as f:
+            manual_social = json.load(f).get('social_profiles', [])
+            
+        twitter_overrides = {}
+        blog_overrides = {}
+        for entry in manual_social:
+            uuid = None
+            if entry.get('github_login'):
+                uuid = resolver.resolve_github(entry['github_login'])
+            elif entry.get('name'):
+                uuid = resolver.resolve_git(entry['name'], None)
+                
+            if uuid:
+                if entry.get('twitter_username'):
+                    twitter_overrides[uuid] = entry['twitter_username']
+                if entry.get('blog'):
+                    blog_overrides[uuid] = entry['blog']
+                    
+        def apply_twitter_override(row):
+            uuid = row['uuid']
+            if uuid in twitter_overrides:
+                return twitter_overrides[uuid]
+            return row.get('github_twitter')
+            
+        def apply_blog_override(row):
+            uuid = row['uuid']
+            if uuid in blog_overrides:
+                return blog_overrides[uuid]
+            return row.get('github_blog')
+            
+        if twitter_overrides:
+            df_unified['github_twitter'] = df_unified.apply(apply_twitter_override, axis=1)
+        if blog_overrides:
+            df_unified['github_blog'] = df_unified.apply(apply_blog_override, axis=1)
+
 
     # Normalize expertise columns: pyarrow cannot serialize a column with mixed
     # list/NaN values; coerce NaN → empty list/dict so the type is consistent.

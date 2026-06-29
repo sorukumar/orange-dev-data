@@ -12,6 +12,7 @@
   "merge_commits": 0.0,
   "tier1_merge_commits": null,
   "tier2_merge_commits": null,
+  "self_merges": 0.0,
   "total_additions": null,
   "total_deletions": null,
   "first_core_commit": null,
@@ -22,6 +23,7 @@
   "last_commit": null,
   "p2016_authored_commits": 0.0,
   "modern_authored_commits": 0.0,
+  "co_authored_commits": 0.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
@@ -43,40 +45,47 @@
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": null,
-  "hybrid_score": 0.0052,
-  "p2016_hybrid_score": 0.0078,
-  "modern_hybrid_score": 0.0208,
-  "impact_score": 0.0,
-  "p2016_impact_score": 0.0,
-  "modern_impact_score": 1.0,
+  "hybrid_score": 0.0103,
+  "p2016_hybrid_score": 0.0161,
+  "modern_hybrid_score": 0.0477,
+  "impact_score": 1.0,
+  "p2016_impact_score": 1.0,
+  "modern_impact_score": 3.0,
   "threads_started": 0.0,
-  "replies_sent": 1.0,
+  "replies_sent": 2.0,
   "ml_threads": 0.0,
   "delving_threads": 0.0,
-  "ml_responses": 1.0,
+  "ml_responses": 2.0,
   "delving_responses": 0.0,
   "first_active": "2026-04-15T12:24:57",
-  "last_active": "2026-04-15T12:24:57",
+  "last_active": "2026-06-24T17:00:59",
   "dev_type": "Participant",
   "expertise_domains": [
-    "Infrastructure"
+    "Cryptography",
+    "Privacy"
   ],
-  "expertise_by_source": {},
-  "expertise_domain_scores": {
-    "Infrastructure": 1.0
+  "expertise_by_source": {
+    "discussion": {
+      "Cryptography": 0.667,
+      "Privacy": 0.333
+    }
   },
-  "p2016_posts": 1.0,
-  "modern_posts": 1.0,
-  "p2016_ml_posts": 1.0,
+  "expertise_domain_scores": {
+    "Cryptography": 0.667,
+    "Privacy": 0.333
+  },
+  "p2016_posts": 2.0,
+  "modern_posts": 2.0,
+  "p2016_ml_posts": 2.0,
   "p2016_delving_posts": 0.0,
-  "modern_ml_posts": 1.0,
+  "modern_ml_posts": 2.0,
   "modern_delving_posts": 0.0,
   "is_engineer": false,
   "is_reviewer": false,
   "is_researcher": true,
   "is_bip_author": false,
   "global_first_active": "2026-04-15T12:24:57",
-  "global_last_active": "2026-04-15T12:24:57",
+  "global_last_active": "2026-06-24T17:00:59",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -93,13 +102,15 @@
   },
   "last_message": {
     "source": "mailing_list",
-    "subject": "Re: [bitcoindev] PQC - What is our Goal, Even?",
-    "date": "2026-04-15",
-    "link": "https://gnusha.org/pi/bitcoindev/CACja=NxfNT4dkS9F3L=9HKwxqLPJOJ6MJxfhWZrbkX-K-fuHhw@mail.gmail.com"
+    "subject": "Re: [bitcoindev] Aligning privacy incentives in P2MR",
+    "date": "2026-06-24",
+    "link": "https://gnusha.org/pi/bitcoindev/CACja=Nz=A2wV68MMBYcgOMDjwcXpKNQsptdP2NVqXske=ONG6w@mail.gmail.com"
   },
   "social_history": {
     "2026": {
-      "other": 1
+      "other": 1,
+      "privacy": 1,
+      "quantum": 1
     }
   }
 }

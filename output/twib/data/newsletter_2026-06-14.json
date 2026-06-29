@@ -1,0 +1,788 @@
+{
+  "start_date": "2026-06-08",
+  "end_date": "2026-06-14",
+  "stats": {
+    "total_merged": 30,
+    "total_reviews": 532,
+    "total_threads": 21,
+    "new_contributors": 4
+  },
+  "tldr": [
+    "Advancements in P2P feature negotiation and ongoing discussions for protocol extensions:** The integration of BIP 434 marks a crucial step for flexible peer-to-peer feature adoption, while active discourse around novel covenant designs (like BIP-360's P2MR) and proposals to tighten Merkle tree preimage rules signals a forward-looking approach to Bitcoin's scripting capabilities and core consensus security.",
+    "Significant internal hardening, efficiency gains, and concurrency improvements:** Key efforts focused on enhancing the core daemon's reliability, including critical fixes for P2P integer overflows and RPC assertion crashes, crypto buffer cleansing for better security, and refactoring of block storage mutexes and index cache allocation for improved concurrency and resource management."
+  ],
+  "categories": {
+    "merged": [
+      {
+        "name": "\ud83d\udee0\ufe0f Build, CI & Testing",
+        "prs": [
+          {
+            "number": 35179,
+            "title": "test: Add importdescriptors rpc error coverage",
+            "author": {
+              "username": "polespinasa",
+              "uuid": "auto_pol_espinasa"
+            },
+            "summary": "Enhances the reliability of wallet integrations by ensuring RPC error paths for importing descriptors are thoroughly tested and predictable.",
+            "importance": 35
+          },
+          {
+            "number": 35418,
+            "title": "build: exclude mptest target from compile commands",
+            "author": {
+              "username": "Sanjana2906",
+              "uuid": "auto_sanjana2906"
+            },
+            "summary": "Accelerates the build process and improves developer experience by excluding irrelevant multiprocess test targets from standard compilation tracking.",
+            "importance": 17
+          },
+          {
+            "number": 35114,
+            "title": "test: NodeClockContext follow-ups",
+            "author": {
+              "username": "seduless",
+              "uuid": "auto_seduless"
+            },
+            "summary": "Strengthens testing accuracy and developer confidence by standardizing how mock time and node clocks behave in integration tests.",
+            "importance": 14
+          },
+          {
+            "number": 35451,
+            "title": "lint: Grep for `AUTO` test suites in file names",
+            "author": {
+              "username": "rustaceanrob",
+              "uuid": "auto_robert_netzke"
+            },
+            "summary": "Maintains a clean, predictable testing infrastructure by preventing misnamed or incorrectly registered automated test suites.",
+            "importance": 11
+          },
+          {
+            "number": 35459,
+            "title": "guix: add setup.sh",
+            "author": {
+              "username": "fanquake",
+              "uuid": "can_michael_ford"
+            },
+            "summary": "Lowers the barrier to entry for reproducible builds by providing developers an automated script to set up Guix compilation environments.",
+            "importance": 11
+          },
+          {
+            "number": 35288,
+            "title": "ci: Bump toward Ubuntu 26.04",
+            "author": {
+              "username": "maflcko",
+              "uuid": "can_marcofalke"
+            },
+            "summary": "Future-proofs the continuous integration pipeline by adapting it for upcoming operating system dependencies and compilers.",
+            "importance": 10
+          },
+          {
+            "number": 35458,
+            "title": "qa: Avoid extra tracebacks when exception is raised",
+            "author": {
+              "username": "hodlinator",
+              "uuid": "can_hodlinator"
+            },
+            "summary": "Streamlines troubleshooting during failed tests by removing noisy, redundant stack traces, saving developers time.",
+            "importance": 7
+          },
+          {
+            "number": 35497,
+            "title": "test: FakeNodeClock follow-ups in unit tests",
+            "author": {
+              "username": "maflcko",
+              "uuid": "can_marcofalke"
+            },
+            "summary": "Ensures consistent mock-time progression logic across all unit tests to eliminate flaky, time-dependent failures.",
+            "importance": 6
+          },
+          {
+            "number": 35487,
+            "title": "scripted-diff: Rename UNIQUE_NAME to BITCOIN_UNIQUE_NAME",
+            "author": {
+              "username": "hebasto",
+              "uuid": "can_hennadii_stepanov"
+            },
+            "summary": "Prevents symbol collisions and unexpected linkage errors for developers embedding Bitcoin Core code into other C++ projects.",
+            "importance": 5
+          },
+          {
+            "number": 35462,
+            "title": "test: remove unnecessary nodes from wallet_multisig_descriptor_psbt",
+            "author": {
+              "username": "rkrux",
+              "uuid": "auto_rkrux"
+            },
+            "summary": "Speeds up test execution and reduces resource usage by dropping redundant peer nodes from wallet multisig tests.",
+            "importance": 4
+          },
+          {
+            "number": 35456,
+            "title": "test: Perform full reset of CoinsResult in order to avoid passing 21M BTC",
+            "author": {
+              "username": "hodlinator",
+              "uuid": "can_hodlinator"
+            },
+            "summary": "Fixes a critical test-suite bug where cached states could incorrectly exceed the 21 million Bitcoin supply cap during validations.",
+            "importance": 4
+          },
+          {
+            "number": 35514,
+            "title": "ci: Alpine 3.24",
+            "author": {
+              "username": "fanquake",
+              "uuid": "can_michael_ford"
+            },
+            "summary": "Ensures Bitcoin Core builds correctly on lightweight musl-libc systems by integrating the latest Alpine Linux release into CI.",
+            "importance": 3
+          },
+          {
+            "number": 35448,
+            "title": "ci: don't build libunwind in msan",
+            "author": {
+              "username": "fanquake",
+              "uuid": "can_michael_ford"
+            },
+            "summary": "Accelerates Memory Sanitizer builds in continuous integration by dropping the unnecessary libunwind dependency.",
+            "importance": 3
+          }
+        ]
+      },
+      {
+        "name": "\u26a1 P2P & Network",
+        "prs": [
+          {
+            "number": 34028,
+            "title": "p2p: Prevent integer overflow in LocalServiceInfo::nScore",
+            "author": {
+              "username": "codeabysss",
+              "uuid": "auto_codeabysss"
+            },
+            "summary": "Protects node stability and network resilience by patching an integer overflow bug in peer scoring logic.",
+            "importance": 31
+          },
+          {
+            "number": 35297,
+            "title": "p2p: Release m_peer_mutex early in InitiateTxBroadcastToAll",
+            "author": {
+              "username": "maflcko",
+              "uuid": "can_marcofalke"
+            },
+            "summary": "Improves overall node concurrency and reduces locking bottlenecks during widespread transaction broadcasting.",
+            "importance": 6
+          },
+          {
+            "number": 35498,
+            "title": "net: move cs_main up in FetchBlock to fix rpc assert crash",
+            "author": {
+              "username": "Crypt-iQ",
+              "uuid": "auto_eugene_siegel"
+            },
+            "summary": "Prevents unexpected node crashes by strictly enforcing the required lock order when fetching blocks via RPC.",
+            "importance": 5
+          }
+        ]
+      },
+      {
+        "name": "\ud83d\udce1 RPC, APIs & ZMQ",
+        "prs": [
+          {
+            "number": 35267,
+            "title": "rpc: make getprivatebroadcastinfo and abortprivatebroadcast fail if privatebroadcast is not enabled",
+            "author": {
+              "username": "polespinasa",
+              "uuid": "auto_pol_espinasa"
+            },
+            "summary": "Enhances RPC API clarity by ensuring private broadcasting commands immediately return meaningful errors when the feature is disabled.",
+            "importance": 27
+          },
+          {
+            "number": 35519,
+            "title": "rpc: tighten setmocktime upper bound to UINT32_MAX",
+            "author": {
+              "username": "stringintech",
+              "uuid": "auto_stringintech"
+            },
+            "summary": "Prevents time-overflow bugs and undefined behavior in testing infrastructure by explicitly clamping the setmocktime RPC upper bound.",
+            "importance": 8
+          }
+        ]
+      },
+      {
+        "name": "\ud83d\udd04 Misc / Other",
+        "prs": [
+          {
+            "number": 35101,
+            "title": "refactor: disable default std::hash for CTransactionRef",
+            "author": {
+              "username": "Sjors",
+              "uuid": "can_sjors_provoost"
+            },
+            "summary": "Protects developers from introducing subtle, nondeterministic bugs by preventing accidental hashing of transaction pointers instead of their TxIDs.",
+            "importance": 23
+          },
+          {
+            "number": 35221,
+            "title": "BIP 434 Support: Peer feature negotiation",
+            "author": {
+              "username": "ajtowns",
+              "uuid": "can_anthony_towns"
+            },
+            "summary": "Enables future extensible P2P protocol upgrades by implementing BIP 434, allowing peers to negotiate feature flags securely during handshakes.",
+            "importance": 22
+          },
+          {
+            "number": 35254,
+            "title": "crypto: cleanse HMAC stack buffers after use and ChainCode",
+            "author": {
+              "username": "thomasbuilds",
+              "uuid": "auto_thomasbuilds"
+            },
+            "summary": "Hardens node security by ensuring sensitive cryptographic materials are wiped from memory immediately after they are used.",
+            "importance": 15
+          },
+          {
+            "number": 35043,
+            "title": "refactor: Properly return from ThreadSafeQuestion signal + btcsignals follow-ups",
+            "author": {
+              "username": "maflcko",
+              "uuid": "can_marcofalke"
+            },
+            "summary": "Improves thread safety and GUI stability by correctly handling GUI dialog signals across asynchronous threads.",
+            "importance": 14
+          },
+          {
+            "number": 34636,
+            "title": "node: allocate index caches proportional to usage patterns",
+            "author": {
+              "username": "svanstaa",
+              "uuid": "auto_sebastian_van_staa"
+            },
+            "summary": "Boosts synchronization performance and efficiency by dynamically allocating node memory caches based on real-time indexing needs.",
+            "importance": 14
+          },
+          {
+            "number": 35120,
+            "title": "btcsignals: delete broken scoped_connection move assignment",
+            "author": {
+              "username": "thomasbuilds",
+              "uuid": "auto_thomasbuilds"
+            },
+            "summary": "Eliminates potential memory-safety issues and undefined behavior by removing flawed C++ move semantics in the signal handling library.",
+            "importance": 13
+          },
+          {
+            "number": 35455,
+            "title": "fuzz: improve dbwrapper_concurrent_reads performance",
+            "author": {
+              "username": "andrewtoth",
+              "uuid": "can_andrew_toth"
+            },
+            "summary": "Significantly accelerates fuzzing throughput for concurrent database reads, allowing for deeper bug discovery in LevelDB operations.",
+            "importance": 13
+          },
+          {
+            "number": 35168,
+            "title": "validation: Don't add pruned blocks to `m_blocks_unlinked` on startup",
+            "author": {
+              "username": "marcofleon",
+              "uuid": "auto_marcofleon"
+            },
+            "summary": "Optimizes node startup times for pruned setups by skipping the tracking of unlinked blocks that have already been discarded.",
+            "importance": 12
+          },
+          {
+            "number": 35359,
+            "title": "blockstorage: Remove cs_LastBlockFile recursive mutex",
+            "author": {
+              "username": "sedited",
+              "uuid": "auto_sebastian_kung"
+            },
+            "summary": "Mitigates deadlocks and simplifies the blockstorage locking architecture by removing an unnecessary recursive lock.",
+            "importance": 11
+          },
+          {
+            "number": 35478,
+            "title": "fuzz: reset the mockable steady clock between iterations",
+            "author": {
+              "username": "HowHsu",
+              "uuid": "auto_hao_xu"
+            },
+            "summary": "Ensures deterministic and reliable execution of fuzzing iterations by preventing mock-clock state leakage.",
+            "importance": 9
+          },
+          {
+            "number": 35489,
+            "title": "fuzz: test non-max descriptor satisfaction weight",
+            "author": {
+              "username": "w0xlt",
+              "uuid": "auto_woltx"
+            },
+            "summary": "Expands fuzzing coverage to find edge cases in wallet descriptor logic by testing partial satisfaction weight paths.",
+            "importance": 8
+          },
+          {
+            "number": 35523,
+            "title": "Revert \"build: exclude mptest target from compile commands\"",
+            "author": {
+              "username": "fanquake",
+              "uuid": "can_michael_ford"
+            },
+            "summary": "Reverts a previous build exclusion to restore proper IDE navigation and compilation tracking for multiprocess code.",
+            "importance": 3
+          }
+        ]
+      }
+    ],
+    "hot": [
+      {
+        "name": "\ud83d\udee0\ufe0f Build, CI & Testing",
+        "prs": [
+          {
+            "number": 35179,
+            "title": "test: Add importdescriptors rpc error coverage",
+            "event_count": 18,
+            "summary": "Enhances the reliability of wallet integrations by ensuring RPC error paths for importing descriptors are thoroughly tested and predictable.",
+            "author": "polespinasa"
+          }
+        ]
+      },
+      {
+        "name": "\ud83d\udd04 Misc / Other",
+        "prs": [
+          {
+            "number": 35465,
+            "title": "coins: compact chainstate regularly",
+            "event_count": 17,
+            "summary": "Improves long-running node performance and reduces memory fragmentation by compacting the chainstate database continuously during normal operation.",
+            "author": "l0rinc"
+          },
+          {
+            "number": 35482,
+            "title": "fuzz: exercise the transaction-handling path in process_message",
+            "event_count": 16,
+            "summary": "Hardens node security against malformed network data by expanding fuzz testing directly into the P2P transaction processing logic.",
+            "author": "HowHsu"
+          },
+          {
+            "number": 32427,
+            "title": "kernel: Replace leveldb-based BlockTreeDB with WAL and .dat file based store",
+            "event_count": 14,
+            "summary": "Substantially improves block database robustness and speed by migrating away from LevelDB toward a custom Write-Ahead Log design.",
+            "author": "sedited"
+          }
+        ]
+      },
+      {
+        "name": "\ud83d\udc5b Wallet & Keys",
+        "prs": [
+          {
+            "number": 35405,
+            "title": "wallet: switch default optinrbf from true to false",
+            "event_count": 12,
+            "summary": "Prioritizes a conservative default posture for user wallets by disabling automatic Opt-In RBF (Replace-By-Fee) unless explicitly requested.",
+            "author": "rkrux"
+          }
+        ]
+      }
+    ]
+  },
+  "discussions": [
+    {
+      "source": "Delving",
+      "subject": "Re: Public key recovery for EC leaves in P2MR (BIP-360)",
+      "link": "https://delvingbitcoin.org/t/public-key-recovery-for-ec-leaves-in-p2mr-bip-360/2603/16",
+      "message_count": 10,
+      "summary": "Explores technical optimizations in the proposed Pay-to-Merkle-Root protocol to allow smaller transaction sizes by recovering public keys directly from cryptographic leaves.",
+      "author": "Pieter Wuille"
+    },
+    {
+      "source": "Delving",
+      "subject": "Re: A Bitcoin-native LLM: dataset, architecture and open questions",
+      "link": "https://delvingbitcoin.org/t/a-bitcoin-native-llm-dataset-architecture-and-open-questions/2550/12",
+      "message_count": 6,
+      "summary": "Analyzes the feasibility, data requirements, and architectural considerations for creating a specialized LLM trained explicitly to assist with Bitcoin Core development and research.",
+      "author": "sudocarlos"
+    }
+  ],
+  "shoutouts": {
+    "new_contributors": [
+      {
+        "username": "Sanjana2906",
+        "uuid": "auto_sanjana2906"
+      },
+      {
+        "username": "codeabysss",
+        "uuid": "auto_codeabysss"
+      },
+      {
+        "username": "seduless",
+        "uuid": "auto_seduless"
+      },
+      {
+        "username": "svanstaa",
+        "uuid": "auto_sebastian_van_staa"
+      }
+    ],
+    "top_authors": [
+      {
+        "user": {
+          "username": "fanquake",
+          "uuid": "can_michael_ford"
+        },
+        "count": 4
+      },
+      {
+        "user": {
+          "username": "maflcko",
+          "uuid": "can_marcofalke"
+        },
+        "count": 4
+      },
+      {
+        "user": {
+          "username": "hodlinator",
+          "uuid": "can_hodlinator"
+        },
+        "count": 2
+      },
+      {
+        "user": {
+          "username": "polespinasa",
+          "uuid": "auto_pol_espinasa"
+        },
+        "count": 2
+      },
+      {
+        "user": {
+          "username": "thomasbuilds",
+          "uuid": "auto_thomasbuilds"
+        },
+        "count": 2
+      }
+    ],
+    "top_reviewers": [
+      {
+        "user": {
+          "username": "maflcko",
+          "uuid": "can_marcofalke"
+        },
+        "count": 61
+      },
+      {
+        "user": {
+          "username": "sedited",
+          "uuid": "auto_sebastian_kung"
+        },
+        "count": 39
+      },
+      {
+        "user": {
+          "username": "w0xlt",
+          "uuid": "auto_woltx"
+        },
+        "count": 33
+      },
+      {
+        "user": {
+          "username": "hebasto",
+          "uuid": "can_hennadii_stepanov"
+        },
+        "count": 28
+      },
+      {
+        "user": {
+          "username": "rkrux",
+          "uuid": "auto_rkrux"
+        },
+        "count": 27
+      }
+    ],
+    "all_active": [
+      {
+        "username": "0xB10C",
+        "uuid": "can_0xb10c"
+      },
+      {
+        "username": "achow101",
+        "uuid": "can_ava_chow"
+      },
+      {
+        "username": "ajtowns",
+        "uuid": "can_anthony_towns"
+      },
+      {
+        "username": "alexanderwiederin",
+        "uuid": "auto_alexander_wiederin"
+      },
+      {
+        "username": "alhudz",
+        "uuid": "auto_alhudz"
+      },
+      {
+        "username": "andrewtoth",
+        "uuid": "can_andrew_toth"
+      },
+      {
+        "username": "b-l-u-e",
+        "uuid": "auto_b_l_u_e"
+      },
+      {
+        "username": "Bicaru20",
+        "uuid": "auto_bicaru20"
+      },
+      {
+        "username": "BrandonOdiwuor",
+        "uuid": "auto_brandon_odiwuor"
+      },
+      {
+        "username": "brunoerg",
+        "uuid": "can_bruno_garcia"
+      },
+      {
+        "username": "carloantinarella",
+        "uuid": "auto_carloantinarella"
+      },
+      {
+        "username": "codeabysss",
+        "uuid": "auto_codeabysss"
+      },
+      {
+        "username": "Crypt-iQ",
+        "uuid": "auto_eugene_siegel"
+      },
+      {
+        "username": "danielabrozzoni",
+        "uuid": "auto_daniela_brozzoni"
+      },
+      {
+        "username": "davidgumberg",
+        "uuid": "can_vasil_dimov"
+      },
+      {
+        "username": "dergoegge",
+        "uuid": "can_niklas_g_gge"
+      },
+      {
+        "username": "DoumiLaville",
+        "uuid": "auto_doumilaville"
+      },
+      {
+        "username": "ekzyis",
+        "uuid": "auto_ekzyis"
+      },
+      {
+        "username": "enirox001",
+        "uuid": "auto_enoch_azariah"
+      },
+      {
+        "username": "fanquake",
+        "uuid": "can_michael_ford"
+      },
+      {
+        "username": "fjahr",
+        "uuid": "can_fabian_jahr"
+      },
+      {
+        "username": "frankomosh",
+        "uuid": "auto_frankomosh"
+      },
+      {
+        "username": "furszy",
+        "uuid": "auto_matias_furszyfer"
+      },
+      {
+        "username": "gmaxwell",
+        "uuid": "can_gregory_maxwell"
+      },
+      {
+        "username": "hebasto",
+        "uuid": "can_hennadii_stepanov"
+      },
+      {
+        "username": "hodlinator",
+        "uuid": "can_hodlinator"
+      },
+      {
+        "username": "HowHsu",
+        "uuid": "auto_hao_xu"
+      },
+      {
+        "username": "instagibbs",
+        "uuid": "can_greg_sanders"
+      },
+      {
+        "username": "janb84",
+        "uuid": "auto_jan_b"
+      },
+      {
+        "username": "Jay-1409",
+        "uuid": "auto_jay_1409"
+      },
+      {
+        "username": "jonatack",
+        "uuid": "can_jon_atack"
+      },
+      {
+        "username": "josibake",
+        "uuid": "auto_oghenovo_usiwoma"
+      },
+      {
+        "username": "jsarenik",
+        "uuid": "auto_j_n_s_ren_k"
+      },
+      {
+        "username": "kwsantiago",
+        "uuid": "auto_kyle"
+      },
+      {
+        "username": "l0rinc",
+        "uuid": "can_lorinc_pap"
+      },
+      {
+        "username": "maflcko",
+        "uuid": "can_marcofalke"
+      },
+      {
+        "username": "marcofleon",
+        "uuid": "auto_marcofleon"
+      },
+      {
+        "username": "mostafarahimifard",
+        "uuid": "auto_mostafarahimifard"
+      },
+      {
+        "username": "musaHaruna",
+        "uuid": "auto_musa_haruna"
+      },
+      {
+        "username": "mzumsande",
+        "uuid": "can_martin_zumsande"
+      },
+      {
+        "username": "nebula-21",
+        "uuid": "auto_rogersala21"
+      },
+      {
+        "username": "optout21",
+        "uuid": "auto_optout21"
+      },
+      {
+        "username": "opus-lux",
+        "uuid": "auto_opus_lux"
+      },
+      {
+        "username": "OSINTv96",
+        "uuid": "auto_osintv96"
+      },
+      {
+        "username": "pablomartin4btc",
+        "uuid": "auto_pablomartin4btc"
+      },
+      {
+        "username": "pinheadmz",
+        "uuid": "auto_matthew_zipkin"
+      },
+      {
+        "username": "polespinasa",
+        "uuid": "auto_pol_espinasa"
+      },
+      {
+        "username": "pseudoramdom",
+        "uuid": "auto_pseudoramdom"
+      },
+      {
+        "username": "rkrux",
+        "uuid": "auto_rkrux"
+      },
+      {
+        "username": "rustaceanrob",
+        "uuid": "auto_robert_netzke"
+      },
+      {
+        "username": "ryanofsky",
+        "uuid": "can_russell_yanofsky"
+      },
+      {
+        "username": "Sanjana2906",
+        "uuid": "auto_sanjana2906"
+      },
+      {
+        "username": "satsfy",
+        "uuid": "auto_renato_britto"
+      },
+      {
+        "username": "sedited",
+        "uuid": "auto_sebastian_kung"
+      },
+      {
+        "username": "seduless",
+        "uuid": "auto_seduless"
+      },
+      {
+        "username": "sh011",
+        "uuid": "auto_sh011"
+      },
+      {
+        "username": "sipa",
+        "uuid": "can_pieter_wuille"
+      },
+      {
+        "username": "Sjors",
+        "uuid": "can_sjors_provoost"
+      },
+      {
+        "username": "stickies-v",
+        "uuid": "auto_stickies_v"
+      },
+      {
+        "username": "stratospher",
+        "uuid": "auto_stratospher"
+      },
+      {
+        "username": "stringintech",
+        "uuid": "auto_stringintech"
+      },
+      {
+        "username": "svanstaa",
+        "uuid": "auto_sebastian_van_staa"
+      },
+      {
+        "username": "takeshikurosawaa",
+        "uuid": "auto_takeshi_kurosawa"
+      },
+      {
+        "username": "theStack",
+        "uuid": "can_sebastian_falbesoner"
+      },
+      {
+        "username": "theuni",
+        "uuid": "can_cory_fields"
+      },
+      {
+        "username": "thomasbuilds",
+        "uuid": "auto_thomasbuilds"
+      },
+      {
+        "username": "vasild",
+        "uuid": "can_vasil_dimov"
+      },
+      {
+        "username": "w0xlt",
+        "uuid": "auto_woltx"
+      },
+      {
+        "username": "willcl-ark",
+        "uuid": "auto_will_clark"
+      },
+      {
+        "username": "winterrdog",
+        "uuid": "auto_winterrdog"
+      },
+      {
+        "username": "yuvicc",
+        "uuid": "auto_i_am_yuvi"
+      }
+    ]
+  }
+}

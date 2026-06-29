@@ -1,0 +1,671 @@
+{
+  "start_date": "2026-06-22",
+  "end_date": "2026-06-28",
+  "stats": {
+    "total_merged": 20,
+    "total_reviews": 458,
+    "total_threads": 33,
+    "new_contributors": 0
+  },
+  "tldr": [
+    "The complete removal of Libevent marks a major architectural shift to a modern asynchronous I/O model for the networking stack, improving performance, scalability, and maintainability.",
+    "Significant ongoing discussion around a \"Segregated Data\" block region suggests potential future protocol changes impacting block structure and data carriage, alongside continued research into advanced transaction types and privacy-enhancing techniques (e.g., P2MR)."
+  ],
+  "categories": {
+    "merged": [
+      {
+        "name": "\ud83d\udc5b Wallet & Keys",
+        "prs": [
+          {
+            "number": 35266,
+            "title": "rpc, wallet: add an option to not load the wallet after migrating",
+            "author": {
+              "username": "polespinasa",
+              "uuid": "auto_pol_espinasa"
+            },
+            "summary": "Users can now choose not to load a wallet immediately after an upgrade, offering more control over node startup. This helps manage resource usage and ensures wallets are only loaded when explicitly needed.",
+            "technical_summary": "This PR introduces a new option for RPC and wallet operations to prevent automatic wallet loading after a migration. It adds a configuration flag or RPC parameter (e.g., `-noloadwalletaftermigrate`) to `upgradewallet` to skip the subsequent `loadwallet` call. This enhances user control, particularly in scenarios where wallets are upgraded but not immediately required, improving startup performance and resource management for nodes managing multiple wallets.",
+            "importance": 22
+          },
+          {
+            "number": 35601,
+            "title": "wallet: remove experimental warning from send and sendall",
+            "author": {
+              "username": "Sjors",
+              "uuid": "can_sjors_provoost"
+            },
+            "summary": "The wallet's 'send' and 'sendall' features are now considered stable and reliable. You can use them with full confidence for your transactions.",
+            "technical_summary": "This PR removes the 'experimental' warning associated with the `send` and `sendall` RPC methods within the wallet component. After extensive testing and review, these functions are now deemed stable and production-ready for general use. This change signals maturity and confidence in the underlying transaction construction, signing, and broadcasting logic, simplifying their adoption for users and developers interacting with the wallet.",
+            "importance": 10
+          }
+        ]
+      },
+      {
+        "name": "\ud83d\udcdd Documentation",
+        "prs": [
+          {
+            "number": 35424,
+            "title": "doc, wallet: align external signer documentation, reject sendtoaddress/sendmany",
+            "author": {
+              "username": "w0xlt",
+              "uuid": "auto_woltx"
+            },
+            "summary": "External signer functionality is now better documented, and certain wallet commands are blocked when using external signers. This improves security and clarity for users managing funds with hardware wallets.",
+            "technical_summary": "This PR updates the documentation for external signers (e.g., hardware wallets) to provide clearer guidance on their usage and limitations. Crucially, it modifies the wallet RPC interface to reject `sendtoaddress` and `sendmany` calls when an external signer is configured. This prevents operations that might inadvertently expose private keys or lead to unexpected behavior when signing responsibilities are delegated, enforcing better security practices and preventing misuse for externally managed funds.",
+            "importance": 19
+          },
+          {
+            "number": 35602,
+            "title": "doc: Clarify build docs about `pkgconf` / `pkg-config` requirements",
+            "author": {
+              "username": "hebasto",
+              "uuid": "can_hennadii_stepanov"
+            },
+            "summary": "The build instructions are now clearer about which tools are needed to compile Bitcoin Core. This makes it easier for new developers to get started.",
+            "technical_summary": "This PR clarifies the build documentation regarding the requirements for `pkgconf` or `pkg-config`. It specifically details which of these tools is needed for correctly locating library dependencies during the compilation process. This change reduces ambiguity for developers setting up their build environment, particularly across different operating systems or distributions, ensuring a smoother and more predictable compilation experience by explicitly stating package management tool dependencies.",
+            "importance": 8
+          }
+        ]
+      },
+      {
+        "name": "\ud83d\udee0\ufe0f Build, CI & Testing",
+        "prs": [
+          {
+            "number": 35543,
+            "title": "test: introduce ExtendedPrivateKey and ExtendedPublicKey classes",
+            "author": {
+              "username": "rkrux",
+              "uuid": "auto_rkrux"
+            },
+            "summary": "We've added new internal tools to improve how we test features related to HD wallets and advanced key management. This helps ensure the security and correctness of future wallet developments.",
+            "technical_summary": "This PR introduces new `ExtendedPrivateKey` and `ExtendedPublicKey` classes specifically for the test suite. These classes encapsulate the functionality and data structures required for hierarchical deterministic (HD) key operations within tests, including child key derivation and serialization. This refactoring improves testability and reduces boilerplate in HD-related tests, providing a more robust and organized framework for validating complex key management logic without affecting the production codebase.",
+            "importance": 11
+          },
+          {
+            "number": 35603,
+            "title": "build: QRencode cleanups",
+            "author": {
+              "username": "hebasto",
+              "uuid": "can_hennadii_stepanov"
+            },
+            "summary": "Minor improvements have been made to the QR code generation component, making it more efficient and tidier for developers.",
+            "technical_summary": "This PR performs various cleanups and minor refactorings within the QRencode integration in the Bitcoin Core build system. This includes removing dead code, improving code style, and potentially updating build flags or dependencies related to QR code generation. The change aims to reduce technical debt, enhance maintainability, and ensure the QR code functionality remains efficient and well-integrated without introducing new features or altering user-facing behavior.",
+            "importance": 9
+          },
+          {
+            "number": 35506,
+            "title": "test: ensure group data cluster pointers are live",
+            "author": {
+              "username": "instagibbs",
+              "uuid": "can_greg_sanders"
+            },
+            "summary": "This ensures that internal data structures used for transaction organization are correctly managed and don't lead to errors, making the system more stable.",
+            "technical_summary": "This PR introduces a new test specifically designed to verify that 'group data cluster pointers' remain live and valid throughout their lifecycle within the transaction memory pool management. This addresses a potential memory management or data corruption issue where pointers to aggregated transaction data might become invalid. The test ensures that these internal data structures are correctly referenced and managed, preventing potential crashes or incorrect behavior related to UTXO management and transaction clustering.",
+            "importance": 9
+          },
+          {
+            "number": 35576,
+            "title": "test: raise `feature_reindex` RPC timeout",
+            "author": {
+              "username": "l0rinc",
+              "uuid": "can_lorinc_pap"
+            },
+            "summary": "The timeout for reindexing the blockchain in our automated tests has been increased. This makes our tests more reliable, especially on slower systems.",
+            "technical_summary": "This PR increases the RPC timeout specifically for the `feature_reindex` test case in the test suite. Reindexing the blockchain can be a time-consuming operation, especially in CI environments or on slower testing machines. Raising the timeout prevents spurious test failures due to the reindex operation exceeding the default RPC call duration. This improves the robustness and reliability of the test suite without altering any production code behavior.",
+            "importance": 6
+          },
+          {
+            "number": 35595,
+            "title": "ci: remove some packages from Chimera job",
+            "author": {
+              "username": "fanquake",
+              "uuid": "can_michael_ford"
+            },
+            "summary": "We've streamlined our continuous integration testing environment by removing unnecessary packages. This makes our tests faster and more efficient.",
+            "technical_summary": "This PR optimizes the Continuous Integration (CI) environment for the 'Chimera' job by removing several packages that are no longer required or relevant for its specific test matrix. This reduces the build and setup time for the CI job, decreasing resource consumption and improving overall CI pipeline efficiency. It's a maintenance task to keep the CI environment lean and focused, ensuring only necessary dependencies are present.",
+            "importance": 5
+          },
+          {
+            "number": 35609,
+            "title": "ci: Bump tsan config to ubuntu:26.04 with -U_FORTIFY_SOURCE",
+            "author": {
+              "username": "maflcko",
+              "uuid": "can_marcofalke"
+            },
+            "summary": "Our automated tests for finding memory and threading issues are now running on a newer, more robust system. This helps us catch subtle bugs sooner.",
+            "technical_summary": "This PR updates the ThreadSanitizer (TSan) configuration within the Continuous Integration (CI) pipeline. It specifically bumps the base Docker image for the TSan job to `ubuntu:26.04` and introduces the `-U_FORTIFY_SOURCE` flag. This upgrade provides a more modern and potentially more effective environment for detecting concurrency bugs and memory errors, while the flag ensures `_FORTIFY_SOURCE` optimizations are not enabled, which could interfere with TSan's diagnostic capabilities, leading to more accurate bug detection.",
+            "importance": 3
+          },
+          {
+            "number": 35220,
+            "title": "fuzz: connman: strengthen assertions and extend coverage",
+            "author": {
+              "username": "brunoerg",
+              "uuid": "can_bruno_garcia"
+            },
+            "summary": "We've improved our automated testing for network connection management, making it even better at finding potential issues before they affect users.",
+            "technical_summary": "This PR strengthens existing assertions and extends the coverage of the fuzzer for the `connman` component. It introduces more rigorous checks within the fuzzer to validate the behavior and state of connection management logic under various malformed or unexpected inputs. This enhanced fuzzing increases the likelihood of discovering edge-case bugs, race conditions, or logic errors in the network layer, thereby improving the robustness and security of Bitcoin Core's peer-to-peer communication.",
+            "importance": 16
+          },
+          {
+            "number": 35536,
+            "title": "fuzz: share a single mocked steady clock across FuzzedSock instances",
+            "author": {
+              "username": "HowHsu",
+              "uuid": "auto_hao_xu"
+            },
+            "summary": "Our advanced automated tests now use a consistent time source when simulating network interactions. This helps us find time-sensitive bugs more accurately.",
+            "technical_summary": "This PR refactors the fuzzer framework to share a single mocked `steady_clock` instance across all `FuzzedSock` instances. Previously, each fuzzed socket might have had its own independent clock, leading to inconsistencies in time-based testing. By centralizing the mocked clock, the fuzzer can simulate synchronized network events more accurately, making it more effective at uncovering timing-dependent bugs, race conditions, or deadlocks in network-related code.",
+            "importance": 10
+          },
+          {
+            "number": 35452,
+            "title": "[30.x] 30.3rc1",
+            "author": {
+              "username": "fanquake",
+              "uuid": "can_michael_ford"
+            },
+            "summary": "This is a release candidate for Bitcoin Core version 30.3, preparing for an upcoming maintenance update.",
+            "technical_summary": "This PR marks the creation of `30.3rc1`, the first release candidate for the 30.3 point release. It involves branching the `30.x` release train, updating version numbers, and preparing the codebase for final testing before a stable release. This is a critical step in the release management process, indicating that the included bug fixes, minor improvements, and security patches are now feature-complete and ready for community testing and validation.",
+            "importance": 7
+          },
+          {
+            "number": 35594,
+            "title": "fuzz: cover async chainstate compaction",
+            "author": {
+              "username": "l0rinc",
+              "uuid": "can_lorinc_pap"
+            },
+            "summary": "We've expanded our automated tests to cover background processes that optimize how blockchain data is stored, helping to prevent issues with disk usage.",
+            "technical_summary": "This PR adds fuzzer coverage for the asynchronous chainstate compaction process. It introduces new fuzzer inputs and test scenarios specifically targeting the background operations that manage and optimize the on-disk storage of blockchain state, such as UTXO set pruning. This aims to identify potential bugs, race conditions, or resource leaks within the compaction logic, enhancing the reliability and efficiency of Bitcoin Core's chainstate management under various operating conditions.",
+            "importance": 3
+          },
+          {
+            "number": 35450,
+            "title": "[29.x] 29.4rc1",
+            "author": {
+              "username": "fanquake",
+              "uuid": "can_michael_ford"
+            },
+            "summary": "This is a release candidate for Bitcoin Core version 29.4, gearing up for an upcoming maintenance update.",
+            "technical_summary": "This PR marks the creation of `29.4rc1`, the first release candidate for the 29.4 point release. It involves branching the `29.x` release train, updating version numbers, and preparing the codebase for final testing before a stable release. This is a critical step in the release management process, indicating that the included bug fixes, minor improvements, and security patches are now feature-complete and ready for community testing and validation.",
+            "importance": 3
+          }
+        ]
+      },
+      {
+        "name": "\u26a1 P2P & Network",
+        "prs": [
+          {
+            "number": 34411,
+            "title": "Full Libevent removal",
+            "author": {
+              "username": "fanquake",
+              "uuid": "can_michael_ford"
+            },
+            "summary": "Developers are actively working to completely remove the Libevent library, simplifying Bitcoin Core's code and reducing its external dependencies.",
+            "technical_summary": "This 'Hot PR' is under review for the full removal of the Libevent networking library from Bitcoin Core. The goal is to replace its asynchronous I/O and event loop functionality with a custom, more controlled implementation or standard C++ features. This significantly reduces the project's external dependency surface, potentially improving build times, security posture, and providing finer-grained control over network operations by eliminating a large third-party component.",
+            "importance": 20
+          },
+          {
+            "number": 35588,
+            "title": "scripted-diff: Rename `Sock::{RECV,SEND,ERR}`",
+            "author": {
+              "username": "hebasto",
+              "uuid": "can_hennadii_stepanov"
+            },
+            "summary": "This is a code cleanup effort to rename internal network functions, making the codebase more consistent and easier for developers to understand.",
+            "technical_summary": "This 'Hot PR' is a `scripted-diff` that proposes renaming specific enumeration members within the `Sock` class: `RECV`, `SEND`, and `ERR`. The intention is to align naming conventions and improve clarity within the network abstraction layer, standardizing low-level socket event identifiers. This type of change is typically a widespread textual replacement managed by a script to maintain consistency, enhancing code readability and maintainability for developers working on the network stack.",
+            "importance": 17
+          },
+          {
+            "number": 35550,
+            "title": "net_processing: fix BIP152 first integer interpretation",
+            "author": {
+              "username": "brunoerg",
+              "uuid": "can_bruno_garcia"
+            },
+            "summary": "A subtle bug affecting how nodes communicate about new blocks (BIP152) has been fixed, improving network efficiency and reliability.",
+            "technical_summary": "This PR fixes a bug in the `net_processing` component related to the interpretation of the 'first integer' in BIP152 compact block announcements. The issue likely involved an incorrect parsing or handling of this field, potentially leading to inefficient or erroneous compact block propagation. The fix ensures correct interpretation, improving the reliability and efficiency of compact block forwarding, which helps nodes synchronize faster with less bandwidth and reduces unnecessary block requests.",
+            "importance": 12
+          }
+        ]
+      },
+      {
+        "name": "\ud83d\udee1\ufe0f Consensus & Cryptography",
+        "prs": [
+          {
+            "number": 35070,
+            "title": "validation: prevent FindMostWorkChain from causing UB",
+            "author": {
+              "username": "stratospher",
+              "uuid": "auto_stratospher"
+            },
+            "summary": "A potential issue that could cause crashes or unexpected behavior in the blockchain validation logic has been fixed, making the node more robust.",
+            "technical_summary": "This PR addresses and prevents potential Undefined Behavior (UB) within the `FindMostWorkChain` function in the validation component. This function is critical for identifying the heaviest blockchain, and UB could arise from specific edge cases like dereferencing invalid pointers or out-of-bounds access within the chain state. The fix involves adding robust checks, bounds validation, or adjusting logic to ensure all operations are well-defined, significantly improving the stability and security of the blockchain validation process.",
+            "importance": 15
+          }
+        ]
+      },
+      {
+        "name": "\ud83d\udd04 Misc / Other",
+        "prs": [
+          {
+            "number": 35403,
+            "title": "mining: pr 33966 followups (disentangle miner startup defaults)",
+            "author": {
+              "username": "Sjors",
+              "uuid": "can_sjors_provoost"
+            },
+            "summary": "Improvements have been made to how the built-in miner starts up, making its configuration clearer and less prone to conflicts.",
+            "technical_summary": "This PR provides follow-up changes to previous work (PR #33966) regarding miner startup defaults and configuration. It focuses on further disentangling and clarifying the default configuration settings and initialization logic for the internal mining component. This involves separating concerns, simplifying parameter handling, and potentially removing implicit dependencies to ensure that miner startup behavior is explicit, predictable, and easier to configure for users running an internal miner, avoiding potential conflicts with other node settings.",
+            "importance": 9
+          }
+        ]
+      }
+    ],
+    "hot": [
+      {
+        "name": "\ud83d\udd04 Misc / Other",
+        "prs": [
+          {
+            "number": 35587,
+            "title": "Remove boost as a unit test runner",
+            "author": "rustaceanrob",
+            "event_count": 18,
+            "summary": "Developers are planning to remove the Boost library's test runner, aiming for a simpler and more focused testing setup within Bitcoin Core.",
+            "technical_summary": "This 'Hot PR' is currently under review and proposes removing the Boost.Test library as the unit test runner in Bitcoin Core. The objective is to replace it with either a custom, lightweight test harness or another more suitable testing framework. This change aims to reduce the project's reliance on large third-party dependencies, simplify the build process for tests, and potentially improve test execution performance and flexibility, contributing to a leaner and more manageable testing infrastructure."
+          },
+          {
+            "number": 35588,
+            "title": "scripted-diff: Rename `Sock::{RECV,SEND,ERR}`",
+            "author": "hebasto",
+            "event_count": 17,
+            "summary": "This is a code cleanup effort to rename internal network functions, making the codebase more consistent and easier for developers to understand.",
+            "technical_summary": "This 'Hot PR' is a `scripted-diff` that proposes renaming specific enumeration members within the `Sock` class: `RECV`, `SEND`, and `ERR`. The intention is to align naming conventions and improve clarity within the network abstraction layer, standardizing low-level socket event identifiers. This type of change is typically a widespread textual replacement managed by a script to maintain consistency, enhancing code readability and maintainability for developers working on the network stack."
+          },
+          {
+            "number": 34411,
+            "title": "Full Libevent removal",
+            "author": "fanquake",
+            "event_count": 16,
+            "summary": "Developers are actively working to completely remove the Libevent library, simplifying Bitcoin Core's code and reducing its external dependencies.",
+            "technical_summary": "This 'Hot PR' is under review for the full removal of the Libevent networking library from Bitcoin Core. The goal is to replace its asynchronous I/O and event loop functionality with a custom, more controlled implementation or standard C++ features. This significantly reduces the project's external dependency surface, potentially improving build times, security posture, and providing finer-grained control over network operations by eliminating a large third-party component."
+          },
+          {
+            "number": 35295,
+            "title": "validation: fetch block input prevouts in parallel during ConnectBlock",
+            "author": "andrewtoth",
+            "event_count": 14,
+            "summary": "Developers are working on a significant performance improvement that will make nodes process new blocks much faster by fetching transaction data in parallel.",
+            "technical_summary": "This 'Hot PR' is under review and proposes a significant performance enhancement for the `ConnectBlock` function within the validation component. It introduces parallel fetching of previous transaction outputs (prevouts) for block inputs. Instead of fetching each prevout sequentially, this change would use multiple threads or asynchronous operations to retrieve the necessary data concurrently from the UTXO set. This optimization is expected to drastically reduce block processing times, especially for large blocks, improving node synchronization speed and overall network performance."
+          }
+        ]
+      },
+      {
+        "name": "\ud83d\udc5b Wallet & Keys",
+        "prs": [
+          {
+            "number": 35436,
+            "title": "wallet: Add addHDkey interface",
+            "author": "pseudoramdom",
+            "event_count": 14,
+            "summary": "A new feature is being developed to allow users to easily add Hierarchical Deterministic (HD) keys to their wallet, making it easier to manage advanced key setups.",
+            "technical_summary": "This 'Hot PR' is under review for adding an `addHDkey` interface to the wallet. This interface would allow users or other components to import extended public or private keys (xpubs/xprvs) directly into the wallet, enabling the tracking and derivation of addresses from an HD key structure. This improves wallet functionality for users who manage keys with hardware wallets or advanced key schemas, providing better integration and management capabilities for complex hierarchical key setups without requiring full wallet re-scans."
+          }
+        ]
+      }
+    ]
+  },
+  "discussions": [
+    {
+      "source": "Delving",
+      "subject": "Re: [BIP Draft] Segregated Data: a prunable, script-isolated block region for data carriage",
+      "author": "Antoine Poinsot",
+      "link": "https://delvingbitcoin.org/t/bip-draft-segregated-data-a-prunable-script-isolated-block-region-for-data-carriage/2641/2",
+      "message_count": 24,
+      "summary": "Developers are discussing a new proposal to store non-financial data on the Bitcoin blockchain more efficiently. This could help keep the network lean by allowing certain data to be discarded later, reducing long-term storage needs.",
+      "technical_summary": "This thread delves into a BIP draft for 'Segregated Data,' proposing a new, distinct region within Bitcoin blocks. This region would be specifically designed for arbitrary data carriage, isolated from existing script validation, and crucially, designated as 'prunable' data. The architectural value lies in providing a dedicated, consensus-safe mechanism for embedding data without permanently burdening the full node's storage requirements, thus mitigating blockchain bloat. The discussion covers implementation specifics, potential impacts on node operation, and the incentives for data inclusion and pruning."
+    },
+    {
+      "source": "Delving",
+      "subject": "Re: Addressing the Diminishing Block Subsidy",
+      "author": "cmp_ancp",
+      "link": "https://delvingbitcoin.org/t/addressing-the-diminishing-block-subsidy/2640/2",
+      "message_count": 16,
+      "summary": "Bitcoin developers are engaging in a critical discussion about the network's long-term security as the reward for miners (the 'block subsidy') continues to decrease over time. The goal is to ensure Bitcoin remains robust and secure well into the future.",
+      "technical_summary": "This discussion addresses the fundamental long-term economic challenge of Bitcoin's diminishing block subsidy. As the block reward halves over time and eventually approaches zero, the debate centers on how transaction fees will need to fully compensate miners to maintain network security and a robust hash rate against potential 51% attacks. Topics include modeling future fee markets, analyzing the economic sustainability of a fee-only miner revenue model, and exploring potential (though controversial) protocol adjustments to incentives. The architectural value is focused on ensuring the protocol's continued security budget and the stability of its economic foundation for decades to come."
+    }
+  ],
+  "shoutouts": {
+    "new_contributors": [],
+    "top_authors": [
+      {
+        "user": {
+          "username": "fanquake",
+          "uuid": "can_michael_ford"
+        },
+        "count": 4
+      },
+      {
+        "user": {
+          "username": "hebasto",
+          "uuid": "can_hennadii_stepanov"
+        },
+        "count": 3
+      },
+      {
+        "user": {
+          "username": "Sjors",
+          "uuid": "can_sjors_provoost"
+        },
+        "count": 2
+      },
+      {
+        "user": {
+          "username": "brunoerg",
+          "uuid": "can_bruno_garcia"
+        },
+        "count": 2
+      },
+      {
+        "user": {
+          "username": "l0rinc",
+          "uuid": "can_lorinc_pap"
+        },
+        "count": 2
+      }
+    ],
+    "top_reviewers": [
+      {
+        "user": {
+          "username": "sedited",
+          "uuid": "auto_sebastian_kung"
+        },
+        "count": 29
+      },
+      {
+        "user": {
+          "username": "maflcko",
+          "uuid": "can_marcofalke"
+        },
+        "count": 26
+      },
+      {
+        "user": {
+          "username": "l0rinc",
+          "uuid": "can_lorinc_pap"
+        },
+        "count": 23
+      },
+      {
+        "user": {
+          "username": "hebasto",
+          "uuid": "can_hennadii_stepanov"
+        },
+        "count": 23
+      },
+      {
+        "user": {
+          "username": "Sjors",
+          "uuid": "can_sjors_provoost"
+        },
+        "count": 20
+      }
+    ],
+    "all_active": [
+      {
+        "username": "0xB10C",
+        "uuid": "can_0xb10c"
+      },
+      {
+        "username": "8144225309",
+        "uuid": "auto_8144225309"
+      },
+      {
+        "username": "achow101",
+        "uuid": "can_ava_chow"
+      },
+      {
+        "username": "ajtowns",
+        "uuid": "can_anthony_towns"
+      },
+      {
+        "username": "alexanderwiederin",
+        "uuid": "auto_alexander_wiederin"
+      },
+      {
+        "username": "alhudz",
+        "uuid": "auto_alhudz"
+      },
+      {
+        "username": "andrewtoth",
+        "uuid": "can_andrew_toth"
+      },
+      {
+        "username": "arejula27",
+        "uuid": "auto_igo_ar_jula_a_sa"
+      },
+      {
+        "username": "b-l-u-e",
+        "uuid": "auto_b_l_u_e"
+      },
+      {
+        "username": "BrandonOdiwuor",
+        "uuid": "auto_brandon_odiwuor"
+      },
+      {
+        "username": "brunoerg",
+        "uuid": "can_bruno_garcia"
+      },
+      {
+        "username": "chriszeng1010",
+        "uuid": "auto_chris_z"
+      },
+      {
+        "username": "Crypt-iQ",
+        "uuid": "auto_eugene_siegel"
+      },
+      {
+        "username": "danielabrozzoni",
+        "uuid": "auto_daniela_brozzoni"
+      },
+      {
+        "username": "darosior",
+        "uuid": "can_antoine_poinsot"
+      },
+      {
+        "username": "davidgumberg",
+        "uuid": "can_vasil_dimov"
+      },
+      {
+        "username": "dergoegge",
+        "uuid": "can_niklas_g_gge"
+      },
+      {
+        "username": "ekzyis",
+        "uuid": "auto_ekzyis"
+      },
+      {
+        "username": "enirox001",
+        "uuid": "auto_enoch_azariah"
+      },
+      {
+        "username": "Eunovo",
+        "uuid": "auto_oghenovo_usiwoma"
+      },
+      {
+        "username": "fanquake",
+        "uuid": "can_michael_ford"
+      },
+      {
+        "username": "fernandguil",
+        "uuid": "auto_guillermo_fernandes"
+      },
+      {
+        "username": "fjahr",
+        "uuid": "can_fabian_jahr"
+      },
+      {
+        "username": "frankomosh",
+        "uuid": "auto_frankomosh"
+      },
+      {
+        "username": "hebasto",
+        "uuid": "can_hennadii_stepanov"
+      },
+      {
+        "username": "hodlinator",
+        "uuid": "can_hodlinator"
+      },
+      {
+        "username": "HowHsu",
+        "uuid": "auto_hao_xu"
+      },
+      {
+        "username": "instagibbs",
+        "uuid": "can_greg_sanders"
+      },
+      {
+        "username": "janb84",
+        "uuid": "auto_jan_b"
+      },
+      {
+        "username": "Jewellorraine",
+        "uuid": "auto_jewellorraine"
+      },
+      {
+        "username": "johnnyasantoss",
+        "uuid": "auto_johnnyasantoss"
+      },
+      {
+        "username": "josibake",
+        "uuid": "auto_oghenovo_usiwoma"
+      },
+      {
+        "username": "l0rinc",
+        "uuid": "can_lorinc_pap"
+      },
+      {
+        "username": "maflcko",
+        "uuid": "can_marcofalke"
+      },
+      {
+        "username": "marcofleon",
+        "uuid": "auto_crackercracked"
+      },
+      {
+        "username": "musaHaruna",
+        "uuid": "auto_musa_haruna"
+      },
+      {
+        "username": "mzumsande",
+        "uuid": "can_martin_zumsande"
+      },
+      {
+        "username": "naiyoma",
+        "uuid": "auto_naiyoma"
+      },
+      {
+        "username": "nervana21",
+        "uuid": "auto_nervana21"
+      },
+      {
+        "username": "optout21",
+        "uuid": "auto_optout21"
+      },
+      {
+        "username": "pablomartin4btc",
+        "uuid": "auto_pablo_martin"
+      },
+      {
+        "username": "pinheadmz",
+        "uuid": "auto_matthew_zipkin"
+      },
+      {
+        "username": "polespinasa",
+        "uuid": "auto_pol_espinasa"
+      },
+      {
+        "username": "pseudoramdom",
+        "uuid": "auto_pseudoramdom"
+      },
+      {
+        "username": "ptrinh",
+        "uuid": "auto_ptrinh"
+      },
+      {
+        "username": "purpleKarrot",
+        "uuid": "auto_daniel_pfeifer"
+      },
+      {
+        "username": "rkrux",
+        "uuid": "auto_rkrux"
+      },
+      {
+        "username": "rustaceanrob",
+        "uuid": "auto_robert_netzke"
+      },
+      {
+        "username": "ryanofsky",
+        "uuid": "can_russell_yanofsky"
+      },
+      {
+        "username": "sedited",
+        "uuid": "auto_sebastian_kung"
+      },
+      {
+        "username": "seduless",
+        "uuid": "auto_seduless"
+      },
+      {
+        "username": "sipa",
+        "uuid": "can_pieter_wuille"
+      },
+      {
+        "username": "Sjors",
+        "uuid": "can_sjors_provoost"
+      },
+      {
+        "username": "sr-gi",
+        "uuid": "auto_sergi_delgado_segura"
+      },
+      {
+        "username": "stickies-v",
+        "uuid": "auto_stickies_v"
+      },
+      {
+        "username": "stratospher",
+        "uuid": "auto_stratospher"
+      },
+      {
+        "username": "stringintech",
+        "uuid": "auto_stringintech"
+      },
+      {
+        "username": "stutxo",
+        "uuid": "auto_stutxo"
+      },
+      {
+        "username": "theStack",
+        "uuid": "can_sebastian_falbesoner"
+      },
+      {
+        "username": "vasild",
+        "uuid": "can_vasil_dimov"
+      },
+      {
+        "username": "ViniciusCestarii",
+        "uuid": "auto_vinicius_cestari"
+      },
+      {
+        "username": "w0xlt",
+        "uuid": "auto_woltx"
+      },
+      {
+        "username": "willcl-ark",
+        "uuid": "auto_will_clark"
+      }
+    ]
+  }
+}

@@ -29,7 +29,7 @@ def run(command, cwd=None):
     return True
 
 def main():
-    print("🚀 Starting DAILY Automated Pipeline (Fast/Incremental)...")
+    print("🚀 Starting TEST Automated Pipeline (Fast/Incremental)...")
     
     load_env()
     root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
@@ -41,6 +41,8 @@ def main():
     print("\n--- PHASE 0: Raw Data Sync ---")
     run("git -C data/sources/bitcoin pull origin master", cwd=root_dir)
     run("git -C data/sources/bips pull origin master", cwd=root_dir)
+    run("git -C data/sources/bitcoin-github-metadata pull origin master", cwd=root_dir)
+    run("git -C data/sources/bips-github-metadata pull origin master", cwd=root_dir)
     run("git -C data/sources/delving pull origin master", cwd=root_dir)
     run("git -C data/sources/mailing_list/shard_0 fetch origin", cwd=root_dir)
     run("git -C data/sources/secp256k1 pull origin master", cwd=root_dir)
@@ -48,6 +50,8 @@ def main():
     run("git -C data/sources/guix.sigs pull origin main", cwd=root_dir)
     run("git -C data/sources/qa-assets pull origin main", cwd=root_dir)
     run("git -C data/sources/HWI pull origin master", cwd=root_dir)
+    run("git -C data/sources/opensats pull origin main", cwd=root_dir)
+    run("git -C data/sources/brink pull origin master", cwd=root_dir)
 
     # PHASE 1: Extraction (Source -> Raw)
     print("\n--- PHASE 1: Extraction (Raw Staging) ---")
@@ -57,6 +61,7 @@ def main():
     run("python3 scripts/01_ingest/delving.py", cwd=root_dir)
     run("python3 scripts/01_ingest/mailing_list.py", cwd=root_dir)
     run("python3 scripts/01_ingest/github_metadata.py", cwd=root_dir)
+    run("python3 scripts/01_ingest/automated_sponsors.py", cwd=root_dir)
 
     # PHASE 2: Convergence (Raw -> Enriched)
     print("\n--- PHASE 2: Convergence (Enrichment) ---")
@@ -78,18 +83,23 @@ def main():
     run("python3 scripts/03_analyze/review_metrics.py", cwd=root_dir)
     run("python3 scripts/03_analyze/expertise.py", cwd=root_dir)
     run("python3 scripts/03_analyze/influence.py", cwd=root_dir)
+    run("python3 scripts/03_analyze/self_merges.py", cwd=root_dir)
+    run("python3 scripts/02_process/merge_sponsors.py", cwd=root_dir)
     run("python3 scripts/03_analyze/unify_contributors.py", cwd=root_dir)
 
     # PHASE 4: Delivery (Enriched -> Output)
     print("\n--- PHASE 4: Artifact Generation ---")
     run("python3 scripts/04_deliver/registry.py", cwd=root_dir)
     run("python3 scripts/04_deliver/tracker_artifacts.py", cwd=root_dir)
+    run("python3 scripts/04_deliver/maintainers.py", cwd=root_dir)
     run("python3 scripts/04_deliver/ui_artifacts.py", cwd=root_dir)
     run("python3 scripts/04_deliver/ecosystem_summary.py", cwd=root_dir)
     run("python3 scripts/04_deliver/discussions_pulse.py", cwd=root_dir)
     run("python3 scripts/04_deliver/network_home_snapshot.py", cwd=root_dir)
+    run("python3 scripts/04_deliver/self_merge_receipts.py", cwd=root_dir)
+    run("python3 scripts/04_deliver/twib_artifacts.py", cwd=root_dir)
     
-    print("\n✨ DAILY PIPELINE COMPLETE!")
+    print("\n✨ TEST PIPELINE COMPLETE!")
 
 if __name__ == "__main__":
     main()

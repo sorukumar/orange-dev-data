@@ -12,6 +12,7 @@
   "merge_commits": 0.0,
   "tier1_merge_commits": null,
   "tier2_merge_commits": null,
+  "self_merges": 0.0,
   "total_additions": null,
   "total_deletions": null,
   "first_core_commit": null,
@@ -22,6 +23,7 @@
   "last_commit": null,
   "p2016_authored_commits": 0.0,
   "modern_authored_commits": 0.0,
+  "co_authored_commits": 0.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
@@ -45,7 +47,7 @@
   "review_reciprocity": 0.5,
   "hybrid_score": 0.0527,
   "p2016_hybrid_score": 0.0602,
-  "modern_hybrid_score": 0.1007,
+  "modern_hybrid_score": 0.1003,
   "impact_score": 3.0,
   "p2016_impact_score": 4.0,
   "modern_impact_score": 6.0,
@@ -60,17 +62,20 @@
   "dev_type": "Participant",
   "expertise_domains": [
     "Privacy",
-    "Cryptography"
+    "Cryptography",
+    "Ecosystem"
   ],
   "expertise_by_source": {
     "discussion": {
-      "Cryptography": 0.365,
-      "Privacy": 0.635
+      "Cryptography": 0.375,
+      "Ecosystem": 0.179,
+      "Privacy": 0.446
     }
   },
   "expertise_domain_scores": {
-    "Cryptography": 0.365,
-    "Privacy": 0.635
+    "Cryptography": 0.375,
+    "Ecosystem": 0.179,
+    "Privacy": 0.446
   },
   "p2016_posts": 12.0,
   "modern_posts": 12.0,
@@ -110,13 +115,13 @@
     "2026": {
       "bitvm": 1,
       "mempool-fees": 1,
-      "mining": 1,
+      "other": 3,
       "nostr": 5,
-      "other": 2,
       "privacy": 6,
       "quantum": 5,
       "sidechains-drivechain": 5,
-      "silent-payments": 5
+      "silent-payments": 5,
+      "tokens-runes": 5
     }
   }
 }

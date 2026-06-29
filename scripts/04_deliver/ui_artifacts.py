@@ -286,7 +286,7 @@ def deliver():
         'uuid', 'id', 'display_name', 'github', 'roles', 'badges', 'is_top_50',
         'dev_type', 'is_engineer', 'is_reviewer', 'is_researcher', 'is_bip_author',
         'total_commits', 'authored_commits', 'tier1_authored_commits', 'tier2_authored_commits',
-        'merge_commits', 'p2016_authored_commits', 'modern_authored_commits', 'prs_authored', 'tier1_prs_authored', 'tier2_prs_authored', 'reviews_count', 'tier1_reviews_count', 'tier2_reviews_count', 'p2016_reviews_count', 'modern_reviews_count', 'hybrid_score', 'impact_score', 'p2016_impact_score', 'modern_impact_score', 'bips_authored', 'p2016_bips_authored', 'modern_bips_authored', 'review_reciprocity',
+        'merge_commits', 'tier1_merge_commits', 'tier2_merge_commits', 'p2016_authored_commits', 'modern_authored_commits', 'prs_authored', 'tier1_prs_authored', 'tier2_prs_authored', 'reviews_count', 'tier1_reviews_count', 'tier2_reviews_count', 'p2016_reviews_count', 'modern_reviews_count', 'hybrid_score', 'impact_score', 'p2016_impact_score', 'modern_impact_score', 'bips_authored', 'p2016_bips_authored', 'modern_bips_authored', 'review_reciprocity',
         'global_first_active', 'global_last_active',
         'first_commit', 'last_commit', 'first_active', 'last_active',
         'first_core_commit', 'last_core_commit', 'first_ecosystem_commit', 'last_ecosystem_commit',

@@ -12,6 +12,7 @@
   "merge_commits": 0.0,
   "tier1_merge_commits": null,
   "tier2_merge_commits": null,
+  "self_merges": 0.0,
   "total_additions": null,
   "total_deletions": null,
   "first_core_commit": null,
@@ -22,6 +23,7 @@
   "last_commit": null,
   "p2016_authored_commits": 0.0,
   "modern_authored_commits": 0.0,
+  "co_authored_commits": 0.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
@@ -50,37 +52,37 @@
   "p2016_impact_score": 1.0,
   "modern_impact_score": 1.0,
   "threads_started": 3.0,
-  "replies_sent": 20.0,
+  "replies_sent": 21.0,
   "ml_threads": 1.0,
   "delving_threads": 2.0,
   "ml_responses": 11.0,
-  "delving_responses": 9.0,
+  "delving_responses": 10.0,
   "first_active": "2015-08-11T20:56:00",
   "last_active": null,
   "dev_type": "Participant",
   "expertise_domains": [
     "Consensus",
     "Script",
-    "L2"
+    "Mining"
   ],
   "expertise_by_source": {
     "discussion": {
-      "Consensus": 0.426,
-      "L2": 0.213,
-      "Script": 0.362
+      "Consensus": 0.417,
+      "Mining": 0.25,
+      "Script": 0.333
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.4256,
-    "L2": 0.2128,
-    "Script": 0.3616
+    "Consensus": 0.417,
+    "Mining": 0.25,
+    "Script": 0.333
   },
-  "p2016_posts": 20.0,
-  "modern_posts": 11.0,
+  "p2016_posts": 21.0,
+  "modern_posts": 12.0,
   "p2016_ml_posts": 9.0,
-  "p2016_delving_posts": 11.0,
+  "p2016_delving_posts": 12.0,
   "modern_ml_posts": 0.0,
-  "modern_delving_posts": 11.0,
+  "modern_delving_posts": 12.0,
   "is_engineer": false,
   "is_reviewer": false,
   "is_researcher": true,
@@ -104,9 +106,9 @@
   },
   "last_message": {
     "source": "delving",
-    "subject": "Re: OP_CC: A simple introspection opcode to enable cheaper consolidations",
-    "date": "2026-02-07",
-    "link": "https://delvingbitcoin.org/t/op-cc-a-simple-introspection-opcode-to-enable-cheaper-consolidations/2177/16"
+    "subject": "Re: Addressing the Diminishing Block Subsidy",
+    "date": "2026-06-26",
+    "link": "https://delvingbitcoin.org/t/addressing-the-diminishing-block-subsidy/2640/15"
   },
   "social_history": {
     "2015": {
@@ -143,9 +145,10 @@
       "vaults": 3
     },
     "2026": {
+      "other": 6,
       "covenants": 1,
-      "hard-fork-block-size": 1,
-      "other": 4,
+      "hard-fork-block-size": 2,
+      "mining": 1,
       "scaling": 1
     }
   }

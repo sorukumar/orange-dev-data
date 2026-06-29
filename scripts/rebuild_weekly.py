@@ -182,7 +182,7 @@ def count_step(label, root_dir):
     print(sep)
 
 def main():
-    parser = argparse.ArgumentParser(description="Monthly rebuild pipeline")
+    parser = argparse.ArgumentParser(description="Weekly rebuild pipeline")
     parser.add_argument(
         "--audit",
         action="store_true",
@@ -191,7 +191,7 @@ def main():
     parser.add_argument(
         "--background",
         action="store_true",
-        help="Run the pipeline in the background (detached process). Output is written to logs/rebuild_monthly_<date>.log",
+        help="Run the pipeline in the background (detached process). Output is written to logs/rebuild_weekly_<date>.log",
     )
     args = parser.parse_args()
 
@@ -199,7 +199,7 @@ def main():
         from datetime import datetime
         import shlex
         root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-        log_path  = os.path.join(root_dir, "logs", f"rebuild_monthly_{datetime.now().strftime('%Y-%m-%d_%H%M%S')}.log")
+        log_path  = os.path.join(root_dir, "logs", f"rebuild_weekly_{datetime.now().strftime('%Y-%m-%d_%H%M%S')}.log")
         os.makedirs(os.path.dirname(log_path), exist_ok=True)
         # Build the same command without --background to avoid recursion
         cmd = [sys.executable, __file__]
@@ -215,7 +215,7 @@ def main():
 
     run_audit = args.audit
 
-    print("🚀 Starting MONTHLY Automated Pipeline (Deep Analytics)...")
+    print("🚀 Starting WEEKLY Automated Pipeline (Deep Analytics)...")
     if run_audit:
         print("   (--audit mode: will regenerate audit_potential_matches.json)")
 
@@ -241,6 +241,8 @@ def main():
         "guix.sigs":                     ("data/sources/guix.sigs",               False),
         "qa-assets":                     ("data/sources/qa-assets",               False),
         "HWI":                           ("data/sources/HWI",                     False),
+        "opensats (Website)":            ("data/sources/opensats",                False),
+        "brink (Website)":               ("data/sources/brink",                   False),
     }
     print("  Source repo status:")
     for label, (rel_path, is_bare) in sources.items():
@@ -255,6 +257,8 @@ def main():
 
     run("git -C data/sources/bitcoin pull origin master", cwd=root_dir)
     run("git -C data/sources/bips pull origin master", cwd=root_dir)
+    run("git -C data/sources/bitcoin-github-metadata pull origin master", cwd=root_dir)
+    run("git -C data/sources/bips-github-metadata pull origin master", cwd=root_dir)
     run("git -C data/sources/delving pull origin master", cwd=root_dir)
     run("git -C data/sources/mailing_list/shard_0 fetch origin", cwd=root_dir)
     run("git -C data/sources/secp256k1 pull origin master", cwd=root_dir)
@@ -262,6 +266,8 @@ def main():
     run("git -C data/sources/guix.sigs pull origin main", cwd=root_dir)
     run("git -C data/sources/qa-assets pull origin main", cwd=root_dir)
     run("git -C data/sources/HWI pull origin master", cwd=root_dir)
+    run("git -C data/sources/opensats pull origin main", cwd=root_dir)
+    run("git -C data/sources/brink pull origin master", cwd=root_dir)
 
     # PHASE 1: Extraction (Source -> Raw)
     print("\n--- PHASE 1: Extraction (Raw Staging) ---")
@@ -271,6 +277,7 @@ def main():
     run("python3 scripts/01_ingest/delving.py", cwd=root_dir)
     run("python3 scripts/01_ingest/mailing_list.py", cwd=root_dir)
     run("python3 scripts/01_ingest/github_metadata.py", cwd=root_dir)
+    run("python3 scripts/01_ingest/automated_sponsors.py", cwd=root_dir)
     count_step("After Phase 1 — raw source files extracted", root_dir)
 
     # PHASE 2: Convergence (Raw -> Enriched)
@@ -302,11 +309,14 @@ def main():
     # PHASE 3: Intelligence (Heavy Analytics & Graphs)
     print("\n--- PHASE 3: Intelligence (NLP & Graphs) ---")
     run("python3 scripts/02_process/categorize.py", cwd=root_dir)
+    run("python3 scripts/03_analyze/twib_nlp.py", cwd=root_dir)
     run("python3 scripts/03_analyze/review_metrics.py", cwd=root_dir)
     count_step("After review_metrics — reviewer metrics computed", root_dir)
     run("python3 scripts/03_analyze/influence.py", cwd=root_dir)
     count_step("After influence — social stats computed", root_dir)
     run("python3 scripts/03_analyze/expertise.py", cwd=root_dir)
+    run("python3 scripts/03_analyze/self_merges.py", cwd=root_dir)
+    run("python3 scripts/02_process/merge_sponsors.py", cwd=root_dir)
     run("python3 scripts/03_analyze/unify_contributors.py", cwd=root_dir)
     count_step("After unify_contributors — grand join complete", root_dir)
 
@@ -315,13 +325,16 @@ def main():
     run("python3 scripts/04_deliver/generate_regional_evolution.py", cwd=root_dir)
     run("python3 scripts/04_deliver/registry.py", cwd=root_dir)
     run("python3 scripts/04_deliver/tracker_artifacts.py", cwd=root_dir)
+    run("python3 scripts/04_deliver/maintainers.py", cwd=root_dir)
     run("python3 scripts/04_deliver/ui_artifacts.py", cwd=root_dir)
     run("python3 scripts/04_deliver/ecosystem_summary.py", cwd=root_dir)
     run("python3 scripts/04_deliver/discussions_pulse.py", cwd=root_dir)
     run("python3 scripts/04_deliver/network_home_snapshot.py", cwd=root_dir)
+    run("python3 scripts/04_deliver/self_merge_receipts.py", cwd=root_dir)
+    run("python3 scripts/04_deliver/twib_artifacts.py", cwd=root_dir)
     count_step("FINAL — ecosystem summary", root_dir)
 
-    print("\n✨ MONTHLY PIPELINE COMPLETE!")
+    print("\n✨ WEEKLY PIPELINE COMPLETE!")
     print("Everything is up to date and all NLP/Graphs have been recalculated.")
 
 if __name__ == "__main__":

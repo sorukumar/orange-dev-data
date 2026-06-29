@@ -1,9 +1,9 @@
 {
-  "generated": "2026-06-22T16:48:47Z",
-  "total_entries": 1616,
+  "generated": "2026-06-29T14:41:14Z",
+  "total_entries": 1617,
   "real_email_entries": 905,
-  "noreply_only_entries": 711,
-  "curated_entries": 26,
+  "noreply_only_entries": 712,
+  "curated_entries": 27,
   "corroboration_min": 2,
   "entries": [
     {
@@ -5432,7 +5432,7 @@
           "email": "dathonohm@proton.me",
           "email_type": "real",
           "source": "head_sha_event",
-          "corroboration_count": 4,
+          "corroboration_count": 5,
           "example_sha": "28650257b64f37c0d640112a14a9f3adba4166ec",
           "example_pr": 34929
         }
@@ -7300,7 +7300,7 @@
           "email": "ethicnology@pm.me",
           "email_type": "real",
           "source": "head_sha_event",
-          "corroboration_count": 4,
+          "corroboration_count": 3,
           "example_sha": "f8d102edfba86936bddbe7f1c85bf0d90deb3cf3",
           "example_pr": 1302
         },
@@ -7856,7 +7856,7 @@
           "email": "fjahr@protonmail.com",
           "email_type": "real",
           "source": "head_sha_event",
-          "corroboration_count": 151,
+          "corroboration_count": 152,
           "example_sha": "c3dfc9103260935261eaf6cfbacf0623003f116d",
           "example_pr": 16445
         },
@@ -15895,6 +15895,20 @@
       ]
     },
     {
+      "github_id": "16808272",
+      "login": "notmike-5",
+      "emails": [
+        {
+          "email": "notmike-5@users.noreply.github.com",
+          "email_type": "noreply",
+          "source": "head_sha_event",
+          "corroboration_count": null,
+          "example_sha": null,
+          "example_pr": null
+        }
+      ]
+    },
+    {
       "github_id": "91558366",
       "login": "notnout",
       "emails": [
@@ -18518,6 +18532,22 @@
       "github_id": "21371712",
       "login": "roconnor-blockstream",
       "emails": [
+        {
+          "email": "roconnor@theorem.ca",
+          "email_type": "real",
+          "source": "curated",
+          "corroboration_count": null,
+          "example_sha": null,
+          "example_pr": null
+        },
+        {
+          "email": "roconnor@blockstream.io",
+          "email_type": "real",
+          "source": "head_sha_event",
+          "corroboration_count": 7,
+          "example_sha": "b97ee241782e8f9c2fb908ae6dbb10c3830f3d6d",
+          "example_pr": 19518
+        },
         {
           "email": "roconnor@blockstream.com",
           "email_type": "real",

@@ -12,6 +12,7 @@
   "merge_commits": 0.0,
   "tier1_merge_commits": 0.0,
   "tier2_merge_commits": 0.0,
+  "self_merges": 0.0,
   "total_additions": 1625.0,
   "total_deletions": 452.0,
   "first_core_commit": "2014-08-21T03:20:39+00:00",
@@ -22,6 +23,7 @@
   "last_commit": "2022-10-27T10:02:11",
   "p2016_authored_commits": 52.0,
   "modern_authored_commits": 0.0,
+  "co_authored_commits": 3.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
@@ -114,21 +116,18 @@
       "Wallet": 1.0
     },
     "2020": {
-      "Build & CI": 1.0,
+      "Build & CI": 1.5,
       "Consensus": 2.0,
-      "Documentation": 2.0,
+      "Documentation": 3.0,
       "Script": 2.0,
       "Tests": 6.0,
-      "Utilities": 24.0
+      "Utilities": 27.5
     },
     "2021": {
-      "Utilities": 1.0
+      "Utilities": 2.0
     },
     "2022": {
-      "Build & CI": 0.5,
-      "Cryptography": 2.0,
-      "Documentation": 1.0,
-      "Utilities": 4.5
+      "Cryptography": 2.0
     }
   },
   "first_message": {

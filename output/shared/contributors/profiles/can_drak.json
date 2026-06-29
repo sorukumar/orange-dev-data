@@ -24,6 +24,7 @@
   "merge_commits": 0.0,
   "tier1_merge_commits": 0.0,
   "tier2_merge_commits": 0.0,
+  "self_merges": 0.0,
   "total_additions": 702.0,
   "total_deletions": 1189.0,
   "first_core_commit": "2014-02-28T11:34:45+00:00",
@@ -34,6 +35,7 @@
   "last_commit": "2017-05-03T09:42:13",
   "p2016_authored_commits": 28.0,
   "modern_authored_commits": 0.0,
+  "co_authored_commits": 0.0,
   "bips_authored": 7.0,
   "p2016_bips_authored": 4.0,
   "modern_bips_authored": 0.0,
@@ -55,46 +57,60 @@
   "avg_pr_ack_velocity_days": 15.437886854657688,
   "avg_concept_lead_time_days": 23.749498456790125,
   "review_reciprocity": 5.855072463768116,
-  "hybrid_score": 1.2695,
-  "p2016_hybrid_score": 1.0177,
+  "hybrid_score": 1.726,
+  "p2016_hybrid_score": 1.2984,
   "modern_hybrid_score": 0.1287,
-  "impact_score": 53.0,
-  "p2016_impact_score": 46.0,
+  "impact_score": 64.0,
+  "p2016_impact_score": 54.0,
   "modern_impact_score": 7.0,
-  "threads_started": 0.0,
-  "replies_sent": 0.0,
-  "ml_threads": 0.0,
+  "threads_started": 11.0,
+  "replies_sent": 160.0,
+  "ml_threads": 11.0,
   "delving_threads": 0.0,
-  "ml_responses": 0.0,
+  "ml_responses": 160.0,
   "delving_responses": 0.0,
-  "first_active": null,
-  "last_active": null,
-  "dev_type": "Reviewer",
+  "first_active": "2013-11-05T16:15:27",
+  "last_active": "2018-03-07T02:19:57",
+  "dev_type": "Protocol Designer",
   "expertise_domains": [
     "Consensus",
-    "Infrastructure"
+    "Infrastructure",
+    "Mining"
   ],
   "expertise_by_source": {
     "bips": {
       "Consensus": 0.857,
       "Infrastructure": 0.143
+    },
+    "code": {
+      "Consensus": 0.062,
+      "Infrastructure": 0.844,
+      "Mempool": 0.012,
+      "Network": 0.025,
+      "Script": 0.056
+    },
+    "discussion": {
+      "Consensus": 0.655,
+      "Mining": 0.345
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.857,
-    "Infrastructure": 0.143
+    "Consensus": 0.5783,
+    "Infrastructure": 0.3248,
+    "Mining": 0.069,
+    "Script": 0.0168
   },
-  "p2016_posts": 0.0,
+  "p2016_posts": 18.0,
   "modern_posts": 0.0,
-  "p2016_ml_posts": 0.0,
+  "p2016_ml_posts": 18.0,
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
-  "is_engineer": false,
+  "is_engineer": true,
   "is_reviewer": true,
-  "is_researcher": false,
+  "is_researcher": true,
   "is_bip_author": true,
-  "global_first_active": "2014-02-28T11:34:45",
+  "global_first_active": "2013-11-05T16:15:27",
   "global_last_active": "2018-08-19T20:53:36",
   "github_location": null,
   "github_company": null,
@@ -180,5 +196,60 @@
       "theme": "Other",
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0320.mediawiki"
     }
-  ]
+  ],
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "Re: [Bitcoin-development] Possible Solution To SM Attack",
+    "date": "2013-11-05",
+    "link": "https://gnusha.org/pi/bitcoindev/CANAnSg2sUfRH0mYEir_XKUz-iOYRpdzNgM-AJ7t-H=SOa4wBig@mail.gmail.com"
+  },
+  "last_message": {
+    "source": "mailing_list",
+    "subject": "[bitcoin-dev] BIP proposal: Reserved nversion bits in blockheader",
+    "date": "2018-03-07",
+    "link": "https://gnusha.org/pi/bitcoindev/CADJgMzv85-So7F1+nyDP_xA2GH5erodA21PM-uAJw8P6_ix6hA@mail.gmail.com"
+  },
+  "social_history": {
+    "2013": {
+      "core-dev": 4,
+      "mining": 2,
+      "other": 25
+    },
+    "2014": {
+      "bip-process": 2,
+      "core-dev": 1,
+      "other": 30,
+      "payment-protocol": 7,
+      "script-opcodes": 4
+    },
+    "2015": {
+      "bip-process": 6,
+      "other": 39,
+      "core-dev": 3,
+      "hard-fork-block-size": 36,
+      "mining": 21,
+      "payment-protocol": 3,
+      "script-opcodes": 16,
+      "soft-fork-activation": 4
+    },
+    "2016": {
+      "bip-process": 4,
+      "core-dev": 1,
+      "hard-fork-block-size": 1,
+      "mining": 2,
+      "other": 4,
+      "script-opcodes": 2,
+      "soft-fork-activation": 2
+    },
+    "2017": {
+      "hard-fork-block-size": 4,
+      "mining": 2,
+      "other": 2,
+      "soft-fork-activation": 4
+    },
+    "2018": {
+      "mining": 1,
+      "soft-fork-activation": 1
+    }
+  }
 }

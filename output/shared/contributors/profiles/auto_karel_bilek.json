@@ -1,8 +1,8 @@
 {
-  "display_name": "Karel B\u00edlek",
+  "display_name": "Karel Bilek",
   "github_login_final": "karelbilek",
   "delving_username_final": null,
-  "uuid": "auto_karel_b_lek",
+  "uuid": "auto_karel_bilek",
   "badges": null,
   "roles": null,
   "total_commits": 3.0,
@@ -12,6 +12,7 @@
   "merge_commits": 0.0,
   "tier1_merge_commits": 0.0,
   "tier2_merge_commits": 0.0,
+  "self_merges": 0.0,
   "total_additions": 413.0,
   "total_deletions": 411.0,
   "first_core_commit": "2017-08-22T06:23:09+00:00",
@@ -22,6 +23,7 @@
   "last_commit": "2018-10-08T06:01:33",
   "p2016_authored_commits": 3.0,
   "modern_authored_commits": 0.0,
+  "co_authored_commits": 0.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
@@ -43,34 +45,39 @@
   "avg_pr_ack_velocity_days": 0.24703125,
   "avg_concept_lead_time_days": 2.5258680555555553,
   "review_reciprocity": 2.2,
-  "hybrid_score": 0.2088,
+  "hybrid_score": 0.2248,
   "p2016_hybrid_score": 0.2088,
   "modern_hybrid_score": 0.0452,
-  "impact_score": 12.0,
+  "impact_score": 13.0,
   "p2016_impact_score": 12.0,
   "modern_impact_score": 3.0,
   "threads_started": 0.0,
-  "replies_sent": 0.0,
+  "replies_sent": 1.0,
   "ml_threads": 0.0,
   "delving_threads": 0.0,
-  "ml_responses": 0.0,
+  "ml_responses": 1.0,
   "delving_responses": 0.0,
-  "first_active": null,
-  "last_active": null,
+  "first_active": "2014-06-17T13:25:39",
+  "last_active": "2014-06-17T13:25:39",
   "dev_type": "Builder",
   "expertise_domains": [
     "Infrastructure",
+    "Mining",
     "Wallet"
   ],
   "expertise_by_source": {
     "code": {
       "Infrastructure": 0.889,
       "Wallet": 0.111
+    },
+    "discussion": {
+      "Mining": 1.0
     }
   },
   "expertise_domain_scores": {
-    "Infrastructure": 0.889,
-    "Wallet": 0.111
+    "Infrastructure": 0.5334,
+    "Mining": 0.4,
+    "Wallet": 0.0666
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -80,9 +87,9 @@
   "modern_delving_posts": 0.0,
   "is_engineer": true,
   "is_reviewer": true,
-  "is_researcher": false,
+  "is_researcher": true,
   "is_bip_author": false,
-  "global_first_active": "2017-03-17T04:58:01",
+  "global_first_active": "2014-06-17T13:25:39",
   "global_last_active": "2018-12-06T16:49:33",
   "github_location": "Prague",
   "github_company": "CDN77",
@@ -102,6 +109,23 @@
       "Node & RPC": 0.67,
       "Utilities": 0.67,
       "Wallet": 0.67
+    }
+  },
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "Re: [Bitcoin-development] Proposals for improving Bitcoin mining\n\tdecentralization",
+    "date": "2014-06-17",
+    "link": "https://gnusha.org/pi/bitcoindev/CAGUkT8ZTtR_ysR+0Ufq4k=SLeifEOQYtrak6G_iJRQqc3dt6Jg@mail.gmail.com"
+  },
+  "last_message": {
+    "source": "mailing_list",
+    "subject": "Re: [Bitcoin-development] Proposals for improving Bitcoin mining\n\tdecentralization",
+    "date": "2014-06-17",
+    "link": "https://gnusha.org/pi/bitcoindev/CAGUkT8ZTtR_ysR+0Ufq4k=SLeifEOQYtrak6G_iJRQqc3dt6Jg@mail.gmail.com"
+  },
+  "social_history": {
+    "2014": {
+      "mining": 1
     }
   }
 }

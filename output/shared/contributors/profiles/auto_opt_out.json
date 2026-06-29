@@ -12,6 +12,7 @@
   "merge_commits": 0.0,
   "tier1_merge_commits": null,
   "tier2_merge_commits": null,
+  "self_merges": 0.0,
   "total_additions": null,
   "total_deletions": null,
   "first_core_commit": null,
@@ -22,6 +23,7 @@
   "last_commit": null,
   "p2016_authored_commits": 0.0,
   "modern_authored_commits": 0.0,
+  "co_authored_commits": 0.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
@@ -44,15 +46,15 @@
   "avg_concept_lead_time_days": null,
   "review_reciprocity": null,
   "hybrid_score": 0.0052,
-  "p2016_hybrid_score": 0.0078,
+  "p2016_hybrid_score": 0.0077,
   "modern_hybrid_score": 0.0208,
   "impact_score": 0.0,
   "p2016_impact_score": 0.0,
   "modern_impact_score": 1.0,
-  "threads_started": 5.0,
+  "threads_started": 6.0,
   "replies_sent": 7.0,
   "ml_threads": 0.0,
-  "delving_threads": 5.0,
+  "delving_threads": 6.0,
   "ml_responses": 0.0,
   "delving_responses": 7.0,
   "first_active": null,
@@ -65,22 +67,22 @@
   ],
   "expertise_by_source": {
     "discussion": {
-      "Mining": 0.418,
-      "Network": 0.165,
-      "Privacy": 0.418
+      "Mining": 0.419,
+      "Network": 0.162,
+      "Privacy": 0.419
     }
   },
   "expertise_domain_scores": {
-    "Mining": 0.4176,
-    "Network": 0.1648,
-    "Privacy": 0.4176
+    "Mining": 0.419,
+    "Network": 0.162,
+    "Privacy": 0.419
   },
-  "p2016_posts": 12.0,
-  "modern_posts": 12.0,
+  "p2016_posts": 13.0,
+  "modern_posts": 13.0,
   "p2016_ml_posts": 0.0,
-  "p2016_delving_posts": 12.0,
+  "p2016_delving_posts": 13.0,
   "modern_ml_posts": 0.0,
-  "modern_delving_posts": 12.0,
+  "modern_delving_posts": 13.0,
   "is_engineer": false,
   "is_reviewer": false,
   "is_researcher": true,
@@ -104,9 +106,9 @@
   },
   "last_message": {
     "source": "delving",
-    "subject": "Re: Binary Fuse filters as an alternative to BIP 158 GCS",
-    "date": "2026-06-12",
-    "link": "https://delvingbitcoin.org/t/binary-fuse-filters-as-an-alternative-to-bip-158-gcs/2428/11"
+    "subject": "Re: BIP39 native-language display wordlists mapped to canonical English",
+    "date": "2026-06-23",
+    "link": "https://delvingbitcoin.org/t/bip39-native-language-display-wordlists-mapped-to-canonical-english/2637/2"
   },
   "social_history": {
     "2025": {
@@ -120,7 +122,8 @@
       "privacy": 4,
       "scaling": 1,
       "signatures-sighash": 1,
-      "utxo-sync": 1
+      "utxo-sync": 1,
+      "wallet-keys": 1
     }
   }
 }

@@ -12,6 +12,7 @@
   "merge_commits": 0.0,
   "tier1_merge_commits": 0.0,
   "tier2_merge_commits": 0.0,
+  "self_merges": 0.0,
   "total_additions": 18440.0,
   "total_deletions": 1132.0,
   "first_core_commit": "2019-02-21T04:15:22+00:00",
@@ -22,6 +23,7 @@
   "last_commit": "2024-09-25T15:05:23",
   "p2016_authored_commits": 54.0,
   "modern_authored_commits": 4.0,
+  "co_authored_commits": 1.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
@@ -43,9 +45,9 @@
   "avg_pr_ack_velocity_days": 4.078164457070707,
   "avg_concept_lead_time_days": 14.419138558201059,
   "review_reciprocity": 1.1951219512195121,
-  "hybrid_score": 0.592,
-  "p2016_hybrid_score": 0.7239,
-  "modern_hybrid_score": 0.5158,
+  "hybrid_score": 0.5922,
+  "p2016_hybrid_score": 0.7236,
+  "modern_hybrid_score": 0.5155,
   "impact_score": 30.0,
   "p2016_impact_score": 35.0,
   "modern_impact_score": 27.0,
@@ -111,11 +113,11 @@
       "Build & CI": 0.5,
       "Script": 1.0,
       "Tests": 1.0,
-      "Utilities": 14.5
+      "Utilities": 20.5
     },
     "2022": {
       "Build & CI": 0.5,
-      "Utilities": 11.5
+      "Utilities": 5.5
     },
     "2023": {
       "Script": 1.67,

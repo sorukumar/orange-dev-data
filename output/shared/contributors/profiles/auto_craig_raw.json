@@ -1,5 +1,5 @@
 {
-  "display_name": "Craig Raw",
+  "display_name": "craig raw",
   "github_login_final": "craigraw",
   "delving_username_final": "craigraw",
   "uuid": "auto_craig_raw",
@@ -24,6 +24,7 @@
   "merge_commits": 0.0,
   "tier1_merge_commits": null,
   "tier2_merge_commits": null,
+  "self_merges": 0.0,
   "total_additions": null,
   "total_deletions": null,
   "first_core_commit": null,
@@ -34,6 +35,7 @@
   "last_commit": null,
   "p2016_authored_commits": 0.0,
   "modern_authored_commits": 0.0,
+  "co_authored_commits": 0.0,
   "bips_authored": 3.0,
   "p2016_bips_authored": 3.0,
   "modern_bips_authored": 2.0,
@@ -46,7 +48,7 @@
   "tier1_reviews_count": 8.0,
   "tier2_reviews_count": 13.0,
   "p2016_reviews_count": 21.0,
-  "modern_reviews_count": 14.0,
+  "modern_reviews_count": 13.0,
   "first_review_date": "2020-12-19T07:12:35",
   "last_review_date": "2026-04-07T05:25:57",
   "prs_authored": 6.0,
@@ -56,19 +58,19 @@
   "avg_concept_lead_time_days": 89.69445601851852,
   "review_reciprocity": 3.5,
   "hybrid_score": 0.8604,
-  "p2016_hybrid_score": 0.8888,
-  "modern_hybrid_score": 0.7737,
+  "p2016_hybrid_score": 0.8887,
+  "modern_hybrid_score": 0.7715,
   "impact_score": 40.0,
   "p2016_impact_score": 41.0,
   "modern_impact_score": 37.0,
-  "threads_started": 5.0,
-  "replies_sent": 19.0,
+  "threads_started": 6.0,
+  "replies_sent": 24.0,
   "ml_threads": 3.0,
-  "delving_threads": 2.0,
+  "delving_threads": 3.0,
   "ml_responses": 19.0,
-  "delving_responses": 0.0,
+  "delving_responses": 5.0,
   "first_active": "2021-01-16T00:15:27",
-  "last_active": "2026-04-14T01:27:16",
+  "last_active": null,
   "dev_type": "Reviewer",
   "expertise_domains": [
     "Script",
@@ -81,27 +83,27 @@
       "Wallet": 0.333
     },
     "discussion": {
-      "Privacy": 0.237,
-      "Wallet": 0.762
+      "Privacy": 0.532,
+      "Wallet": 0.468
     }
   },
   "expertise_domain_scores": {
-    "Privacy": 0.0677,
-    "Script": 0.4766,
-    "Wallet": 0.4557
+    "Privacy": 0.152,
+    "Script": 0.4764,
+    "Wallet": 0.3716
   },
-  "p2016_posts": 24.0,
-  "modern_posts": 7.0,
+  "p2016_posts": 30.0,
+  "modern_posts": 13.0,
   "p2016_ml_posts": 22.0,
-  "p2016_delving_posts": 2.0,
+  "p2016_delving_posts": 8.0,
   "modern_ml_posts": 5.0,
-  "modern_delving_posts": 2.0,
+  "modern_delving_posts": 8.0,
   "is_engineer": false,
   "is_reviewer": true,
   "is_researcher": true,
   "is_bip_author": true,
   "global_first_active": "2020-12-19T07:12:35",
-  "global_last_active": "2026-04-14T01:27:16",
+  "global_last_active": "2026-04-07T10:31:42",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -142,18 +144,17 @@
     "link": "https://gnusha.org/pi/bitcoindev/CAPR5oBPJPs1g32K3XDnNyV3bKCq58fti3mNd-ooFhKNMVxCf9g@mail.gmail.com"
   },
   "last_message": {
-    "source": "mailing_list",
-    "subject": "Re: [bitcoindev] [BIP Draft] Blind Relay: Stateless Encrypted\n WebSocket Coordination for PSBTs",
-    "date": "2026-04-14",
-    "link": "https://gnusha.org/pi/bitcoindev/CAPR5oBPQQGvanjTFm_RsLiVTtrympkuXkFY3eN-wHeqjnggcbw@mail.gmail.com"
+    "source": "delving",
+    "subject": "Re: State of the transaction privacy work in Bitcoin",
+    "date": "2026-06-23",
+    "link": "https://delvingbitcoin.org/t/state-of-the-transaction-privacy-work-in-bitcoin/2622/24"
   },
   "social_history": {
     "2021": {
-      "mining": 1,
+      "other": 2,
       "multisig-threshold": 4,
       "privacy": 1,
       "taproot": 1,
-      "other": 1,
       "wallet-keys": 6
     },
     "2022": {
@@ -162,14 +163,17 @@
     },
     "2025": {
       "silent-payments": 5,
-      "soft-fork-activation": 1,
+      "other": 1,
       "taproot": 1,
       "wallet-keys": 5
     },
     "2026": {
       "multisig-threshold": 1,
-      "privacy": 1,
-      "silent-payments": 1,
+      "nostr": 6,
+      "privacy": 7,
+      "sidechains-drivechain": 6,
+      "silent-payments": 7,
+      "tokens-runes": 6,
       "wallet-keys": 2
     }
   }

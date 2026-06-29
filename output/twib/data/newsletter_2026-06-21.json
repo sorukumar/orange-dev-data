@@ -1,0 +1,536 @@
+{
+  "start_date": "2026-06-15",
+  "end_date": "2026-06-21",
+  "stats": {
+    "total_merged": 16,
+    "total_reviews": 218,
+    "total_threads": 21,
+    "new_contributors": 1
+  },
+  "tldr": [
+    "Intense research and discussion around **novel blockchain scalability techniques**, particularly Fountain Codes, aiming to fundamentally reduce storage requirements and improve overall network efficiency.",
+    "Deep technical dives into **advanced transaction privacy schemes**, specifically Pay-to-Mutually-Recoverable (P2MR) outputs and associated public key recovery mechanisms, indicating significant future directions for on-chain privacy enhancements."
+  ],
+  "categories": {
+    "merged": [
+      {
+        "name": "\ud83d\udee0\ufe0f Build, CI & Testing",
+        "prs": [
+          {
+            "number": 1860,
+            "title": "cmake: Emulate Libtool's behavior on NetBSD and OpenBSD",
+            "author": {
+              "username": "hebasto",
+              "uuid": "can_hennadii_stepanov"
+            },
+            "summary": "Improves compatibility for building Bitcoin Core on NetBSD and OpenBSD systems. This ensures a smoother setup process for developers and users on these platforms.",
+            "technical_summary": "This PR enhances the CMake build system to better emulate Libtool's behavior on specific BSD operating systems (NetBSD and OpenBSD). By aligning the build process with standard practices on these platforms, it resolves potential library linking issues and ensures consistent build outputs, thereby improving cross-platform reliability and reducing platform-specific build headaches for developers.",
+            "importance": 21
+          },
+          {
+            "number": 35441,
+            "title": "ci: inline runner selection",
+            "author": {
+              "username": "willcl-ark",
+              "uuid": "auto_will_clark"
+            },
+            "summary": "Streamlines how our automated testing system selects specific machines to run tests. This makes our continuous integration process more efficient and reliable.",
+            "technical_summary": "This change in the CI configuration inlines the runner selection logic directly within the workflow definitions. Instead of abstracting runner selection, this explicitly specifies the required labels for the GitHub Actions runners. This improves transparency and maintainability of the CI setup, making it clearer which runners are used for which jobs and simplifying future adjustments or debugging of the CI infrastructure.",
+            "importance": 14
+          },
+          {
+            "number": 35503,
+            "title": "guix: CMake-related improvements",
+            "author": {
+              "username": "hebasto",
+              "uuid": "can_hennadii_stepanov"
+            },
+            "summary": "Enhances the Guix build system for Bitcoin Core, making it more robust and reliable. This helps ensure reproducible builds for greater security and trust.",
+            "technical_summary": "This PR implements several CMake-related improvements within the Guix build environment. It addresses specific integration points and configurations necessary for CMake projects to build correctly and reproducibly under Guix. This work is crucial for maintaining the integrity and verifiability of Bitcoin Core binaries built through the Guix framework, ensuring that the software can be built from source by anyone and yield identical results.",
+            "importance": 10
+          },
+          {
+            "number": 35520,
+            "title": "lint: remove redundant test suite uniqueness check",
+            "author": {
+              "username": "l0rinc",
+              "uuid": "can_lorinc_pap"
+            },
+            "summary": "Optimizes our development tools by removing an unnecessary check, making our code validation process slightly faster.",
+            "technical_summary": "This PR removes a redundant uniqueness check within the project's linting scripts for test suites. The check was found to be superfluous as other mechanisms or inherent design patterns already ensure the uniqueness of test suite names. Removing this unnecessary validation step reduces CI execution time and simplifies the linting codebase without compromising code quality or test integrity.",
+            "importance": 8
+          },
+          {
+            "number": 35396,
+            "title": "ci: Rewrite broken wrap-valgrind.sh to .py",
+            "author": {
+              "username": "maflcko",
+              "uuid": "can_marcofalke"
+            },
+            "summary": "Upgrades our Valgrind memory-checking tool from a shell script to Python. This improves the reliability of our automated memory error detection, helping us find and fix bugs faster.",
+            "technical_summary": "This PR rewrites the `wrap-valgrind.sh` script, used for integrating Valgrind into our CI pipeline, into a Python script (`wrap-valgrind.py`). The original shell script was identified as broken or difficult to maintain. Migrating to Python provides a more robust, portable, and maintainable solution for orchestrating Valgrind runs, enabling more precise control over argument parsing, output analysis, and error handling, thereby enhancing the reliability of memory and concurrency issue detection in CI.",
+            "importance": 7
+          },
+          {
+            "number": 35547,
+            "title": "lint: Require scripted-diff script to succeed",
+            "author": {
+              "username": "hodlinator",
+              "uuid": "can_hodlinator"
+            },
+            "summary": "Strengthens our code quality checks by ensuring automated code formatting scripts are applied correctly. This helps keep our codebase consistent and clean.",
+            "technical_summary": "This PR enhances the linting process by mandating that `scripted-diff` operations within the codebase must succeed without producing any diffs. The `scripted-diff` tool is used to apply automatic formatting or refactoring changes. By requiring its success, the CI now strictly enforces consistent code style and structure, preventing patches that fail to adhere to these automated standards from being merged. This improves code hygiene and reduces manual review overhead for formatting issues.",
+            "importance": 6
+          },
+          {
+            "number": 35526,
+            "title": "ci: bump MSan fuzz timeout from 150 to 180 minutes",
+            "author": {
+              "username": "Sjors",
+              "uuid": "can_sjors_provoost"
+            },
+            "summary": "Increases the time allowed for our memory safety tests (MSan fuzzing) to run. This gives our testing more opportunity to find subtle memory bugs, making Bitcoin Core more secure.",
+            "technical_summary": "This PR adjusts the timeout for MemorySanitizer (MSan) fuzzing jobs in the continuous integration pipeline, increasing it from 150 to 180 minutes. The purpose of this change is to allow the fuzzing process more time to explore potential code paths and uncover subtle memory errors that might require longer execution times to manifest. This adjustment enhances the effectiveness of MSan in detecting memory corruption bugs, contributing to a more robust and secure codebase, particularly in complex and performance-critical areas.",
+            "importance": 5
+          },
+          {
+            "number": 35540,
+            "title": "test: descriptor: bare multisig at TOP level with exactly 3 pubkeys is allowed",
+            "author": {
+              "username": "brunoerg",
+              "uuid": "can_bruno_garcia"
+            },
+            "summary": "Improves the flexibility and correctness of our descriptor system by allowing a specific type of multi-signature setup directly. This makes it easier to define certain wallet configurations.",
+            "technical_summary": "This PR updates the descriptor parser and validation logic to correctly allow bare multisig expressions with exactly three public keys at the top level. Previously, some specific configurations might have been incorrectly rejected or handled. This ensures that the descriptor system is more permissive for valid script configurations, aligning with standard Bitcoin script semantics. It enhances the robustness and utility of output descriptors by supporting a wider range of legitimate wallet configurations without requiring additional wrapping.",
+            "importance": 3
+          },
+          {
+            "number": 35463,
+            "title": "depends: Drop trailing slash from `CMAKE_INSTALL_LIBDIR`",
+            "author": {
+              "username": "hebasto",
+              "uuid": "can_hennadii_stepanov"
+            },
+            "summary": "Fixes a minor detail in our build process related to how libraries are installed. This resolves potential issues and ensures cleaner installation paths.",
+            "technical_summary": "This PR modifies the `depends` system's CMake configuration to remove a trailing slash from the `CMAKE_INSTALL_LIBDIR` variable. This seemingly minor change is important for consistency across different CMake versions and operating systems, preventing potential double slashes in installation paths which could lead to issues with certain tools or environment configurations. It ensures that libraries are installed into correctly formed, standard directory structures, simplifying downstream tooling and packaging efforts.",
+            "importance": 3
+          },
+          {
+            "number": 35546,
+            "title": "ci: Use GCC consistently in i686 task",
+            "author": {
+              "username": "maflcko",
+              "uuid": "can_marcofalke"
+            },
+            "summary": "Ensures our automated tests for older 32-bit systems consistently use the GCC compiler. This helps maintain stable and reliable builds for these specific environments.",
+            "technical_summary": "This PR enforces consistent usage of the GCC compiler within the `i686` (32-bit architecture) continuous integration task. Previously, there might have been inconsistencies where other compilers or different versions of GCC were used. By explicitly configuring the CI to use GCC, it standardizes the build environment for this specific target, which is crucial for reproducible builds and for identifying compiler-specific issues or warnings that might arise from compiler version differences. This improves the reliability of 32-bit builds.",
+            "importance": 3
+          },
+          {
+            "number": 35538,
+            "title": "test: make TestChain100Setup's m_clock timestamp more readable",
+            "author": {
+              "username": "HowHsu",
+              "uuid": "auto_hao_xu"
+            },
+            "summary": "Improves the readability of timestamps in our testing environment. This makes it easier for developers to understand test results and debug issues related to time.",
+            "technical_summary": "This PR enhances the readability of the `m_clock` timestamp within the `TestChain100Setup` test fixture. By adjusting how the timestamp is initialized or represented, it makes it easier for developers to quickly grasp the simulated time within a test scenario. This is a quality-of-life improvement for developers, aiding in debugging time-dependent logic, especially in tests involving block timestamps or transaction locktimes, by providing clearer diagnostic information during test failures.",
+            "importance": 3
+          },
+          {
+            "number": 1865,
+            "title": "test: enable -Wunused-function in test suite (Fix #1831)",
+            "author": {
+              "username": "kallal79",
+              "uuid": "auto_kallal79"
+            },
+            "summary": "Activates a compiler warning to catch unused functions in our test code. This helps developers identify and remove dead code, making our test suite cleaner and more maintainable.",
+            "technical_summary": "This PR enables the `-Wunused-function` compiler warning specifically within the test suite compilation. By activating this warning, the build system will now flag any functions declared but not used in the test codebase. This helps developers identify and eliminate dead code or architectural cruft in the tests, improving code quality, reducing compilation times, and making the test suite easier to understand and maintain. It addresses and fixes issue #1831.",
+            "importance": 14
+          },
+          {
+            "number": 1867,
+            "title": "test: musig: fix dead \"aggnonce encodes two points at infinity\" check",
+            "author": {
+              "username": "theStack",
+              "uuid": "can_sebastian_falbesoner"
+            },
+            "summary": "Corrects a specific check in our MuSig signature implementation tests. This ensures our cryptographic tests are fully accurate and reliable, contributing to the security of advanced Bitcoin features.",
+            "technical_summary": "This PR fixes a \"dead\" or ineffective check within the MuSig (multi-signature scheme) test suite. Specifically, it addresses a condition intended to verify that an aggregated nonce does not encode two points at infinity. The previous implementation of this check was not functioning as intended, potentially allowing an invalid state to pass unnoticed. The fix ensures this critical cryptographic validation is correctly performed, enhancing the rigor and security of MuSig implementation tests.",
+            "importance": 8
+          }
+        ]
+      },
+      {
+        "name": "\ud83d\udee1\ufe0f Consensus & Cryptography",
+        "prs": [
+          {
+            "number": 1859,
+            "title": "field: force-inline 5x52 mul and sqr",
+            "author": {
+              "username": "l0rinc",
+              "uuid": "can_lorinc_pap"
+            },
+            "summary": "Optimizes critical cryptographic calculations by making them run faster. This improves the overall performance of Bitcoin's cryptographic operations.",
+            "technical_summary": "This PR proposes to `force-inline` the 5x52 multiplication and squaring operations within the `field` arithmetic implementation. By explicitly hinting to the compiler to inline these functions, it aims to reduce function call overhead and potentially enable further compiler optimizations for these fundamental cryptographic primitives. This change targets performance-critical sections of the codebase related to elliptic curve cryptography, offering measurable speedups for operations like signature verification and key generation, thereby enhancing overall system efficiency.",
+            "importance": 35
+          }
+        ]
+      },
+      {
+        "name": "\ud83d\udd04 Misc / Other",
+        "prs": [
+          {
+            "number": 35173,
+            "title": "util: shorten thread names to avoid Linux truncation",
+            "author": {
+              "username": "l0rinc",
+              "uuid": "can_lorinc_pap"
+            },
+            "summary": "Improves how system tools display information about Bitcoin Core's internal operations. This makes it easier for developers to monitor and debug the software.",
+            "technical_summary": "This PR addresses an issue where thread names in Bitcoin Core were being truncated by the Linux kernel, which has a 16-character limit for `pthread_setname_np`. By shortening the thread names used internally, this change ensures that they are fully visible when using system tools like `htop` or `pstree`. This significantly improves debuggability and monitoring capabilities for developers and system administrators, allowing for clearer identification of individual threads and their functions within the running `bitcoind` process.",
+            "importance": 27
+          },
+          {
+            "number": 35470,
+            "title": "argsman: Prevent duplicate option registration across categories",
+            "author": {
+              "username": "pablomartin4btc",
+              "uuid": "auto_pablo_martin"
+            },
+            "summary": "Prevents potential conflicts in how Bitcoin Core processes command-line arguments and configuration settings. This makes the software more robust and reliable.",
+            "technical_summary": "This PR enhances the `argsman` argument parsing framework by introducing a mechanism to prevent duplicate option registrations across different categories. Previously, it was possible for the same command-line or configuration option to be inadvertently registered multiple times, potentially leading to undefined behavior or unexpected parsing results. This change adds a validation step to ensure each option is uniquely defined, improving the robustness and predictability of the argument processing system and preventing subtle configuration bugs.",
+            "importance": 9
+          }
+        ]
+      }
+    ],
+    "hot": [
+      {
+        "name": "\ud83d\udd04 Misc / Other",
+        "prs": [
+          {
+            "number": 1859,
+            "title": "add LOCK() for proxy related data-structures",
+            "author": "Diapolo",
+            "event_count": 13,
+            "summary": "Optimizes critical cryptographic calculations by making them run faster. This improves the overall performance of Bitcoin's cryptographic operations.",
+            "technical_summary": "This PR proposes to `force-inline` the 5x52 multiplication and squaring operations within the `field` arithmetic implementation. By explicitly hinting to the compiler to inline these functions, it aims to reduce function call overhead and potentially enable further compiler optimizations for these fundamental cryptographic primitives. This change targets performance-critical sections of the codebase related to elliptic curve cryptography, offering measurable speedups for operations like signature verification and key generation, thereby enhancing overall system efficiency."
+          },
+          {
+            "number": 1859,
+            "title": "field: force-inline 5x52 mul and sqr",
+            "author": "l0rinc",
+            "event_count": 13,
+            "summary": "Optimizes critical cryptographic calculations by making them run faster. This improves the overall performance of Bitcoin's cryptographic operations.",
+            "technical_summary": "This PR proposes to `force-inline` the 5x52 multiplication and squaring operations within the `field` arithmetic implementation. By explicitly hinting to the compiler to inline these functions, it aims to reduce function call overhead and potentially enable further compiler optimizations for these fundamental cryptographic primitives. This change targets performance-critical sections of the codebase related to elliptic curve cryptography, offering measurable speedups for operations like signature verification and key generation, thereby enhancing overall system efficiency."
+          },
+          {
+            "number": 35173,
+            "title": "util: shorten thread names to avoid Linux truncation",
+            "author": "l0rinc",
+            "event_count": 11,
+            "summary": "Improves how system tools display information about Bitcoin Core's internal operations. This makes it easier for developers to monitor and debug the software.",
+            "technical_summary": "This PR addresses an issue where thread names in Bitcoin Core were being truncated by the Linux kernel, which has a 16-character limit for `pthread_setname_np`. By shortening the thread names used internally, this change ensures that they are fully visible when using system tools like `htop` or `pstree`. This significantly improves debuggability and monitoring capabilities for developers and system administrators, allowing for clearer identification of individual threads and their functions within the running `bitcoind` process."
+          },
+          {
+            "number": 35496,
+            "title": "kernel: add `btck_set_mock_time` for testing time-dependent paths",
+            "author": "stringintech",
+            "event_count": 8,
+            "summary": "Adds a new tool for developers to simulate different times during testing. This helps us thoroughly test parts of Bitcoin Core that rely on time, such as transaction locktimes, improving their reliability.",
+            "technical_summary": "This PR introduces a new function, `btck_set_mock_time`, into the Bitcoin Core kernel, specifically designed for testing purposes. This function allows developers to set a simulated, deterministic timestamp, enabling precise control over time-dependent execution paths in unit and functional tests. It facilitates rigorous testing of features sensitive to block timestamps, transaction locktimes, or network time adjustments, leading to more comprehensive test coverage and improved reliability of critical time-sensitive consensus and policy logic."
+          },
+          {
+            "number": 35511,
+            "title": "RFC: consensus: Make `CAmount` a class",
+            "author": "hodlinator",
+            "event_count": 7,
+            "summary": "Proposes a fundamental change to how Bitcoin amounts are handled internally, making the code safer and easier to maintain. This could prevent certain types of programming errors related to money values.",
+            "technical_summary": "This PR is an RFC (Request For Comments) proposing to refactor `CAmount`, the fundamental type for representing monetary values in Bitcoin Core, from a `typedef` of `int64_t` into a dedicated class. This change would leverage C++'s type system to enforce stronger type safety, preventing implicit conversions with other integer types and making arithmetic operations more explicit. This architectural improvement aims to eliminate a class of potential bugs related to unit confusion or integer overflows, enhancing code correctness and maintainability, particularly in consensus-critical areas."
+          },
+          {
+            "number": 35531,
+            "title": "txindex: use 5-byte siphash keys to optimize disk usage",
+            "author": "andrewtoth",
+            "event_count": 7,
+            "summary": "I\nImproves the efficiency of storing transaction index data, potentially reducing the disk space required for some Bitcoin Core users.",
+            "technical_summary": "This PR suggests an optimization for the transaction index (`txindex`) by using 5-byte SipHash keys instead of larger keys for certain internal mappings. SipHash is a pseudorandom function used for hashing keys, and by reducing the key size, this change aims to decrease the memory footprint and disk usage associated with the transaction index database. While a minor change in isolation, such optimizations contribute to overall resource efficiency, especially for nodes running with `txindex=1`, potentially leading to smaller database files and improved cache efficiency."
+          }
+        ]
+      }
+    ]
+  },
+  "discussions": [
+    {
+      "source": "Delving",
+      "subject": "Re: Fountain Codes: a way to reduce blockchain storage costs",
+      "author": "Anthony Towns",
+      "link": "https://delvingbitcoin.org/t/fountain-codes-a-way-to-reduce-blockchain-storage-costs/2624/2",
+      "message_count": 8,
+      "summary": "Developers are discussing a new technology called \"Fountain Codes\" that could significantly reduce the amount of storage needed for the Bitcoin blockchain. This research aims to make running a full node more accessible and cost-effective in the future.",
+      "technical_summary": "This discussion thread centers on the application of Fountain Codes as a method to potentially reduce the storage requirements of the Bitcoin blockchain. Fountain Codes are erasure codes that can efficiently encode data into an arbitrarily large number of blocks, allowing reconstruction from any subset of these blocks. The discussion explores their theoretical feasibility, challenges in integration (e.g., impact on block propagation, decentralization, and incentivization), and practical implications for node operators and the overall network architecture, aiming to find ways to make running a full node more resource-efficient without compromising security or decentralization."
+    },
+    {
+      "source": "Delving",
+      "subject": "Re: State of the transaction privacy work in Bitcoin",
+      "author": "Nikita Karetnikov",
+      "link": "https://delvingbitcoin.org/t/state-of-the-transaction-privacy-work-in-bitcoin/2622/2",
+      "message_count": 8,
+      "summary": "Developers are actively discussing the current status and future directions of work to improve transaction privacy on the Bitcoin network. This continuous effort aims to make Bitcoin transactions more confidential for users.",
+      "technical_summary": "This discussion thread provides an overview and ongoing conversation regarding the current state of transaction privacy efforts within Bitcoin. It covers various research and development initiatives, including topics like CoinJoin implementations, PayJoin, Schnorr/Taproot improvements, potential future technologies like Confidential Transactions (CTs) or Zero-Knowledge Proofs (ZKPs) on sidechains, and challenges related to practical deployment and adoption. The thread serves as a forum for developers to share updates, assess progress, and strategize on enhancing user privacy for on-chain Bitcoin transactions, considering trade-offs with scalability and decentralization."
+    }
+  ],
+  "shoutouts": {
+    "new_contributors": [
+      {
+        "username": "kallal79",
+        "uuid": "auto_kallal79"
+      }
+    ],
+    "top_authors": [
+      {
+        "user": {
+          "username": "hebasto",
+          "uuid": "can_hennadii_stepanov"
+        },
+        "count": 3
+      },
+      {
+        "user": {
+          "username": "l0rinc",
+          "uuid": "can_lorinc_pap"
+        },
+        "count": 3
+      },
+      {
+        "user": {
+          "username": "maflcko",
+          "uuid": "can_marcofalke"
+        },
+        "count": 2
+      },
+      {
+        "user": {
+          "username": "HowHsu",
+          "uuid": "auto_hao_xu"
+        },
+        "count": 1
+      },
+      {
+        "user": {
+          "username": "Sjors",
+          "uuid": "can_sjors_provoost"
+        },
+        "count": 1
+      }
+    ],
+    "top_reviewers": [
+      {
+        "user": {
+          "username": "maflcko",
+          "uuid": "can_marcofalke"
+        },
+        "count": 21
+      },
+      {
+        "user": {
+          "username": "ryanofsky",
+          "uuid": "can_russell_yanofsky"
+        },
+        "count": 15
+      },
+      {
+        "user": {
+          "username": "fanquake",
+          "uuid": "can_michael_ford"
+        },
+        "count": 15
+      },
+      {
+        "user": {
+          "username": "real-or-random",
+          "uuid": "can_tim_ruffing"
+        },
+        "count": 14
+      },
+      {
+        "user": {
+          "username": "hebasto",
+          "uuid": "can_hennadii_stepanov"
+        },
+        "count": 14
+      }
+    ],
+    "all_active": [
+      {
+        "username": "ajtowns",
+        "uuid": "can_anthony_towns"
+      },
+      {
+        "username": "andrewtoth",
+        "uuid": "can_andrew_toth"
+      },
+      {
+        "username": "brunoerg",
+        "uuid": "can_bruno_garcia"
+      },
+      {
+        "username": "danielabrozzoni",
+        "uuid": "auto_daniela_brozzoni"
+      },
+      {
+        "username": "darosior",
+        "uuid": "can_antoine_poinsot"
+      },
+      {
+        "username": "edilmedeiros",
+        "uuid": "auto_jos_edil_guimar_es_de_medeiros"
+      },
+      {
+        "username": "fanquake",
+        "uuid": "can_michael_ford"
+      },
+      {
+        "username": "furszy",
+        "uuid": "auto_matias_furszyfer"
+      },
+      {
+        "username": "hebasto",
+        "uuid": "can_hennadii_stepanov"
+      },
+      {
+        "username": "hodlinator",
+        "uuid": "can_hodlinator"
+      },
+      {
+        "username": "HowHsu",
+        "uuid": "auto_hao_xu"
+      },
+      {
+        "username": "instagibbs",
+        "uuid": "can_greg_sanders"
+      },
+      {
+        "username": "ismaelsadeeq",
+        "uuid": "can_abubakar_sadiq_ismail"
+      },
+      {
+        "username": "janb84",
+        "uuid": "auto_jan_b"
+      },
+      {
+        "username": "Jay-1409",
+        "uuid": "auto_jay_1409"
+      },
+      {
+        "username": "josibake",
+        "uuid": "auto_oghenovo_usiwoma"
+      },
+      {
+        "username": "kallal79",
+        "uuid": "auto_kallal79"
+      },
+      {
+        "username": "l0rinc",
+        "uuid": "can_lorinc_pap"
+      },
+      {
+        "username": "m3dwards",
+        "uuid": "auto_max_edwards"
+      },
+      {
+        "username": "maflcko",
+        "uuid": "can_marcofalke"
+      },
+      {
+        "username": "mzumsande",
+        "uuid": "can_martin_zumsande"
+      },
+      {
+        "username": "nervana21",
+        "uuid": "auto_nervana21"
+      },
+      {
+        "username": "optout21",
+        "uuid": "auto_optout21"
+      },
+      {
+        "username": "pablomartin4btc",
+        "uuid": "auto_pablo_martin"
+      },
+      {
+        "username": "pseudoramdom",
+        "uuid": "auto_pseudoramdom"
+      },
+      {
+        "username": "real-or-random",
+        "uuid": "can_tim_ruffing"
+      },
+      {
+        "username": "rkrux",
+        "uuid": "auto_rkrux"
+      },
+      {
+        "username": "ryanofsky",
+        "uuid": "can_russell_yanofsky"
+      },
+      {
+        "username": "sedited",
+        "uuid": "auto_sebastian_kung"
+      },
+      {
+        "username": "ShauryaaSharma",
+        "uuid": "auto_shauryaasharma"
+      },
+      {
+        "username": "sipa",
+        "uuid": "can_pieter_wuille"
+      },
+      {
+        "username": "siv2r",
+        "uuid": "auto_sivaram_dhakshinamoorthy"
+      },
+      {
+        "username": "Sjors",
+        "uuid": "can_sjors_provoost"
+      },
+      {
+        "username": "stickies-v",
+        "uuid": "auto_stickies_v"
+      },
+      {
+        "username": "stringintech",
+        "uuid": "auto_stringintech"
+      },
+      {
+        "username": "theStack",
+        "uuid": "can_sebastian_falbesoner"
+      },
+      {
+        "username": "theuni",
+        "uuid": "can_cory_fields"
+      },
+      {
+        "username": "tobtoht",
+        "uuid": "auto_tobtoht"
+      },
+      {
+        "username": "vasild",
+        "uuid": "can_vasil_dimov"
+      },
+      {
+        "username": "w0xlt",
+        "uuid": "auto_woltx"
+      },
+      {
+        "username": "willcl-ark",
+        "uuid": "auto_will_clark"
+      },
+      {
+        "username": "winterrdog",
+        "uuid": "auto_winterrdog"
+      }
+    ]
+  }
+}

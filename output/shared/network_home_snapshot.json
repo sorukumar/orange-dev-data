@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-06-28T11:21:47.680655",
-  "contributors_tracked": 7622,
+  "generated_at": "2026-06-29T10:41:32.102027",
+  "contributors_tracked": 7631,
   "window_reference": {
-    "anchor_timestamp": "2026-06-28T15:42:20.023000+00:00",
-    "current_window_start": "2026-05-29T15:42:20.023000+00:00",
-    "previous_window_start": "2026-04-29T15:42:20.023000+00:00",
+    "anchor_timestamp": "2026-06-29T15:15:47.342000+00:00",
+    "current_window_start": "2026-05-30T15:15:47.342000+00:00",
+    "previous_window_start": "2026-04-30T15:15:47.342000+00:00",
     "window_days": 30
   },
   "widgets": {
     "active_contributors_30d": {
-      "value": 136,
-      "previous_30d": 92,
-      "delta_30d": 44,
+      "value": 146,
+      "previous_30d": 85,
+      "delta_30d": 61,
       "window_days": 30,
       "definition": "Contributors with global_last_active in current 30-day window, compared to the previous 30-day window.",
-      "latest_activity_date": "2026-06-28"
+      "latest_activity_date": "2026-06-29"
     },
     "top_reviewers_30d": {
       "window_days": 30,
@@ -23,37 +23,37 @@
         {
           "uuid": "auto_sebastian_kung",
           "display_name": "Sebastian Kung",
-          "reviews_30d": 84,
-          "previous_30d": 130,
-          "delta_30d": -46
+          "reviews_30d": 129,
+          "previous_30d": 129,
+          "delta_30d": 0
         },
         {
           "uuid": "can_marcofalke",
           "display_name": "MarcoFalke",
-          "reviews_30d": 60,
-          "previous_30d": 119,
-          "delta_30d": -59
+          "reviews_30d": 86,
+          "previous_30d": 117,
+          "delta_30d": -31
         },
         {
           "uuid": "can_michael_ford",
           "display_name": "Michael Ford",
-          "reviews_30d": 54,
-          "previous_30d": 104,
-          "delta_30d": -50
+          "reviews_30d": 69,
+          "previous_30d": 100,
+          "delta_30d": -31
         },
         {
           "uuid": "auto_woltx",
           "display_name": "woltx",
-          "reviews_30d": 46,
-          "previous_30d": 51,
-          "delta_30d": -5
+          "reviews_30d": 67,
+          "previous_30d": 52,
+          "delta_30d": 15
         },
         {
           "uuid": "can_hennadii_stepanov",
           "display_name": "Hennadii Stepanov",
-          "reviews_30d": 35,
-          "previous_30d": 38,
-          "delta_30d": -3
+          "reviews_30d": 49,
+          "previous_30d": 34,
+          "delta_30d": 15
         }
       ],
       "aliases_collapsed": 0
@@ -67,42 +67,42 @@
           "title": "Mnemonic code for generating deterministic keys",
           "primary_author": "Marek Palatinus",
           "primary_author_uuid": "can_marek_palatinus",
-          "mentions_30d": 28,
+          "mentions_30d": 30,
           "previous_30d": 0,
-          "delta_30d": 28
+          "delta_30d": 30
         },
         {
           "bip_id": "360",
           "title": "Pay-to-Merkle-Root (P2MR)",
           "primary_author": "Hunter Beast",
           "primary_author_uuid": "auto_hunter_beast",
-          "mentions_30d": 26,
+          "mentions_30d": 27,
           "previous_30d": 8,
-          "delta_30d": 18
+          "delta_30d": 19
         },
         {
-          "bip_id": "32",
-          "title": "Hierarchical Deterministic Wallets",
-          "primary_author": "Pieter Wuille",
-          "primary_author_uuid": "can_pieter_wuille",
-          "mentions_30d": 21,
-          "previous_30d": 2,
-          "delta_30d": 19
+          "bip_id": "441",
+          "title": "Restoration of disabled script (Tapleaf 0xC2)",
+          "primary_author": "Rusty Russell",
+          "primary_author_uuid": "can_rusty_russell",
+          "mentions_30d": 25,
+          "previous_30d": 0,
+          "delta_30d": 25
         }
       ]
     },
     "research_activity_30d": {
-      "messages_30d": 299,
+      "messages_30d": 307,
       "previous_30d": 218,
-      "delta_30d": 81,
+      "delta_30d": 89,
       "momentum": "rising",
       "definition": "Combined Delving Bitcoin and mailing list discussion volume in current 30 days versus previous 30 days."
     },
     "discussion_voices_30d": {
-      "value": 95,
-      "previous_30d": 88,
-      "delta_30d": 7,
-      "messages_30d": 299,
+      "value": 93,
+      "previous_30d": 87,
+      "delta_30d": 6,
+      "messages_30d": 307,
       "messages_previous_30d": 218
     },
     "topic_momentum_30d": {
@@ -112,9 +112,30 @@
         {
           "topic": "quantum",
           "label": "Quantum",
-          "mentions_30d": 45,
-          "previous_30d": 71,
-          "delta_30d": -26
+          "mentions_30d": 48,
+          "previous_30d": 73,
+          "delta_30d": -25
+        },
+        {
+          "topic": "privacy",
+          "label": "Privacy",
+          "mentions_30d": 38,
+          "previous_30d": 9,
+          "delta_30d": 29
+        },
+        {
+          "topic": "mining",
+          "label": "Mining",
+          "mentions_30d": 33,
+          "previous_30d": 2,
+          "delta_30d": 31
+        },
+        {
+          "topic": "utxo-sync",
+          "label": "Utxo Sync",
+          "mentions_30d": 29,
+          "previous_30d": 25,
+          "delta_30d": 4
         },
         {
           "topic": "consensus-cleanup",
@@ -122,27 +143,6 @@
           "mentions_30d": 24,
           "previous_30d": 8,
           "delta_30d": 16
-        },
-        {
-          "topic": "privacy",
-          "label": "Privacy",
-          "mentions_30d": 23,
-          "previous_30d": 9,
-          "delta_30d": 14
-        },
-        {
-          "topic": "mining",
-          "label": "Mining",
-          "mentions_30d": 17,
-          "previous_30d": 2,
-          "delta_30d": 15
-        },
-        {
-          "topic": "payment-protocol",
-          "label": "Payment Protocol",
-          "mentions_30d": 14,
-          "previous_30d": 0,
-          "delta_30d": 14
         }
       ]
     },
@@ -150,24 +150,29 @@
       "definition": "Random selection of top retired contributors by impact score to feature as ecosystem veterans.",
       "items": [
         {
+          "uuid": "auto_ryan_x_charles",
+          "display_name": "Ryan X. Charles",
+          "impact_score": 26.0
+        },
+        {
+          "uuid": "auto_ruben_de_vries",
+          "display_name": "Ruben de Vries",
+          "impact_score": 28.0
+        },
+        {
+          "uuid": "auto_marco_pontello",
+          "display_name": "marco pontello",
+          "impact_score": 23.0
+        },
+        {
           "uuid": "auto_daira_emma_hopwood",
           "display_name": "Daira-Emma Hopwood",
           "impact_score": 25.0
         },
         {
-          "uuid": "auto_chun_kuan_lee",
-          "display_name": "Chun Kuan Lee",
-          "impact_score": 27.0
-        },
-        {
-          "uuid": "auto_andy_chase",
-          "display_name": "andy chase",
-          "impact_score": 24.0
-        },
-        {
-          "uuid": "auto_ryan_x_charles",
-          "display_name": "ryan x. charles",
-          "impact_score": 26.0
+          "uuid": "auto_chris_priest",
+          "display_name": "Chris Priest",
+          "impact_score": 25.0
         }
       ]
     }

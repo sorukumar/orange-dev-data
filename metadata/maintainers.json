@@ -5,7 +5,7 @@
     {
       "id": "satoshi",
       "name": "Satoshi Nakamoto",
-      "status": "historical",
+      "status": "emeritus",
       "role": {
         "title": "Project Founder / Former Lead Maintainer",
         "primary_area": "Initial Implementation",
@@ -24,7 +24,7 @@
     {
       "id": "sirius",
       "name": "Martti Malmi",
-      "status": "historical",
+      "status": "emeritus",
       "role": {
         "title": "Former Core Maintainer",
         "primary_area": "Infrastructure / SVN",
@@ -43,7 +43,7 @@
     {
       "id": "laszloh",
       "name": "Laszlo Hanyecz",
-      "status": "historical",
+      "status": "emeritus",
       "role": {
         "title": "Former Build Maintainer (OSX)",
         "primary_area": "Build System / OSX",
@@ -61,7 +61,7 @@
     {
       "id": "gavinandresen",
       "name": "Gavin Andresen",
-      "status": "historical",
+      "status": "emeritus",
       "role": {
         "title": "Former Lead Maintainer",
         "primary_area": "General",
@@ -78,7 +78,7 @@
     {
       "id": "dooglus",
       "name": "Chris Moore",
-      "status": "historical",
+      "status": "emeritus",
       "role": {
         "title": "Former Core Maintainer",
         "primary_area": "General",
@@ -116,7 +116,7 @@
     {
       "id": "jgarzik",
       "name": "Jeff Garzik",
-      "status": "historical",
+      "status": "emeritus",
       "role": {
         "title": "Former Core Maintainer",
         "primary_area": "General",
@@ -157,7 +157,7 @@
     {
       "id": "tcatm",
       "name": "Nils Schneider",
-      "status": "historical",
+      "status": "emeritus",
       "role": {
         "title": "Former Core Maintainer",
         "primary_area": "General",
@@ -177,7 +177,7 @@
     {
       "id": "gmaxwell",
       "name": "Gregory Maxwell",
-      "status": "historical",
+      "status": "emeritus",
       "role": {
         "title": "Former Core Maintainer",
         "primary_area": "Consensus / Cryptography",
@@ -313,7 +313,7 @@
     },
     {
       "id": "achow101",
-      "name": "Andrew Chow",
+      "name": "Ava Chow",
       "status": "active",
       "role": {
         "title": "Wallet Maintainer",
@@ -321,7 +321,18 @@
         "appointed": "2021-12-20"
       },
       "merge_authority": true,
-      "evidence": "Volunteered to be the wallet maintainer after meshcollider stepped down. Merges under github@ handle."
+      "evidence": "Volunteered to be the wallet maintainer after meshcollider stepped down. Merges under github@ handle.",
+      "github": "achow101",
+      "emails": [
+        "github@achow101.com",
+        "andrew@achow101.com",
+        "lists@achow101.com",
+        "me@achow101.com",
+        "achow101-lists@achow101.com",
+        "achow101-github@achow101.com",
+        "achow101@gmail.com",
+        "achow101-hierarchical@google.com"
+      ]
     },
     {
       "id": "glozow",

@@ -12,16 +12,18 @@
   "merge_commits": 0.0,
   "tier1_merge_commits": 0.0,
   "tier2_merge_commits": 0.0,
+  "self_merges": 0.0,
   "total_additions": 19038.0,
   "total_deletions": 44.0,
   "first_core_commit": "2023-04-10T13:29:11+00:00",
-  "last_core_commit": "2025-05-14T06:52:09+00:00",
+  "last_core_commit": "2025-05-13T10:43:09+00:00",
   "first_ecosystem_commit": null,
   "last_ecosystem_commit": null,
   "first_commit": "2023-04-10T13:29:11",
-  "last_commit": "2025-05-14T06:52:09",
+  "last_commit": "2025-05-13T10:43:09",
   "p2016_authored_commits": 4.0,
   "modern_authored_commits": 2.0,
+  "co_authored_commits": 0.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
@@ -80,7 +82,7 @@
   "is_researcher": false,
   "is_bip_author": false,
   "global_first_active": "2023-03-22T22:09:48",
-  "global_last_active": "2025-05-14T06:52:09",
+  "global_last_active": "2025-05-13T10:43:09",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -95,10 +97,13 @@
       "Build & CI": 0.5,
       "Utilities": 1.5
     },
-    "2025": {
+    "2024": {
       "Build & CI": 0.5,
+      "Utilities": 0.5
+    },
+    "2025": {
       "Documentation": 0.5,
-      "Utilities": 1.0
+      "Utilities": 0.5
     }
   }
 }

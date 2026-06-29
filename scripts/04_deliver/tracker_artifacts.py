@@ -39,7 +39,7 @@ class Config:
     EFFICIENCY_PARQUET = "data/enriched/contributor_review_metrics.parquet"
     
     MAINTAINERS_FILE = "metadata/maintainers.json"
-    SPONSORS_FILE = "metadata/sponsors.json"
+    SPONSORS_FILE = "data/enriched/sponsors_merged.json"
 
     # Map output filenames
     FILES = {
@@ -151,7 +151,17 @@ class SponsorLookup:
         
         for dev in data.get("sponsored_developers", []):
             grants = dev.get("grants", [])
-            for email in dev.get("emails", []):
+            
+            uuid = None
+            if dev.get("github"):
+                uuid = resolver.resolve_github(dev["github"])
+            else:
+                uuid = resolver.resolve_git(dev.get("canonical_name"), None)
+                
+            record = next((r for r in resolver._identities if r["uuid"] == uuid), None)
+            emails = record.get("git_signatures", {}).get("emails", []) if record else []
+            
+            for email in emails:
                 cls._email_to_sponsor.setdefault(email.lower(), []).extend(grants)
         
         cls._rules = data.get("classification_rules", {})
@@ -1064,146 +1074,7 @@ class MetricGenerators:
         with open(Config.FILES["trend_corporate"], "w") as f:
             json.dump(data, f)
         
-        # ========================================
-        # PART 2: Maintainer Independence
-        # ========================================
-        
-        maintainers = MaintainerLookup.get_all_maintainers()
-        
-        if not maintainers:
-            print("  Skipping Maintainer Independence (no maintainer data)")
-            return
-        
-        # Run Footprint Analysis (Modular approach)
-        print("Running Maintainer Footprint Analysis...")
-        try:
-             footprints = footprint.run_footprint_analysis("data/sources/bitcoin", Config.MAINTAINERS_FILE, "data/enriched/maintainer_footprints.json")
-        except Exception as e:
-             print(f"  Warning: Footprint analysis failed: {e}")
-             footprints = {}
-
-        # For each maintainer, determine their sponsor (if any)
-        maintainer_sponsors = []
-        
-        for m in maintainers:
-            m_id = m.get("id")
-            m_name_raw = m.get("name", m_id)
-            uuid = resolver.resolve_git(m_name_raw, None)
-            record = next((r for r in resolver._identities if r["uuid"] == uuid), None)
-            m_name = record["display_name"] if record else m_name_raw
-            m_status = m.get("status", "unknown")
-            emails = m.get("emails", [])
-            
-            # Check if any email matches a sponsor
-            sponsor_name = None
-            for email in emails:
-                sponsor_name = SponsorLookup.get_sponsor_name(email)
-                if sponsor_name:
-                    break
-            
-            # If no sponsor found, check enrichment data
-            if not sponsor_name:
-                # Try to find canonical_id for this maintainer
-                for email in emails:
-                    email_lower = email.lower()
-                    # Search commits for matching email
-                    match = commits[commits['author_email'].str.lower() == email_lower]
-                    if not match.empty:
-                        cid = match.iloc[0]['canonical_id']
-                        company = enrich_map.get(cid, {}).get('company')
-                        if company and len(str(company).strip()) > 1:
-                            sponsor_name = company
-                            break
-
-            # NEW: Calculate active years from explicit maintainers.json dates
-            # Fall back to commit data only if dates are missing (which shouldn't happen)
-            active_years = []
-            
-            # Use explicit segments if available
-            if m.get("segments"):
-                for seg in m["segments"]:
-                    start_yr = int(seg["start"].split('-')[0])
-                    end_yr = int(seg["end"].split('-')[0]) if "end" in seg else commits['date_utc'].max().year
-                    active_years.extend(list(range(start_yr, end_yr + 1)))
-            # Otherwise use role appointed/stepped_down
-            elif m.get("role") and m["role"].get("appointed"):
-                start_yr = int(m["role"]["appointed"].split('-')[0])
-                end_yr = int(m["role"]["stepped_down"].split('-')[0]) if "stepped_down" in m["role"] else commits['date_utc'].max().year
-                active_years.extend(list(range(start_yr, end_yr + 1)))
-                
-            active_years = sorted(list(set(active_years)))
-            
-            # For merge count fallback
-            emails_lower = [e.lower() for e in emails]
-            m_actions = maintainer_commits[maintainer_commits['committer_email'].str.lower().isin(emails_lower)]
-            merges_count = len(m_actions[m_actions['is_merge'] == True]) if not m_actions.empty else 0
-            
-            maintainer_entry = {
-                "id": m_id,
-                "name": m_name,
-                "status": m_status,
-                "sponsor": sponsor_name if sponsor_name else "Independent",
-                "active_years": [int(y) for y in active_years],
-                "merges_count": merges_count,
-                "merges_active": merges_count > 0 or m_status == 'active',
-                "merge_authority": m.get("merge_authority", True) # Default to True for historicals
-            }
-            
-            # Pass through new metadata
-            if m.get("role"):
-                maintainer_entry["role"] = m["role"]
-            if m.get("gpg_fingerprint"):
-                maintainer_entry["gpg_fingerprint"] = m["gpg_fingerprint"]
-            if "merge_authority" in m:
-                maintainer_entry["merge_authority"] = m["merge_authority"]
-            if m.get("evidence"):
-                maintainer_entry["evidence"] = m["evidence"]
-            if m.get("segments"):
-                maintainer_entry["segments"] = m["segments"]
-            
-            # Add Footprint (Top specializations)
-            if m_id in footprints:
-                maintainer_entry["footprint"] = footprints[m_id].get("top_areas", {})
-                
-            maintainer_sponsors.append(maintainer_entry)
-        
-        # Summary: Count by Sponsor
-        # Use the whitelist status as primary truth for totals to match Dashboard KPI
-        active_maintainers = [m for m in maintainer_sponsors if m["status"] == "active"]
-        # For all-time, include everyone in the whitelist/processed list
-        all_maintainers = [m for m in maintainer_sponsors]
-        
-        # Count sponsors for active maintainers
-        sponsor_counts_active = {}
-        for m in active_maintainers:
-            s = m["sponsor"]
-            sponsor_counts_active[s] = sponsor_counts_active.get(s, 0) + 1
-        
-        # Count sponsors for all maintainers (historical)
-        sponsor_counts_all = {}
-        for m in all_maintainers:
-            s = m["sponsor"]
-            sponsor_counts_all[s] = sponsor_counts_all.get(s, 0) + 1
-
-        # Format for chart (horizontal bar or pie)
-        independence_data = {
-            "title": "Maintainer Independence",
-            "subtitle": "Who funds the gatekeepers?",
-            "active": {
-                "total": len(active_maintainers),
-                "by_sponsor": [{"name": k, "value": v} for k, v in sorted(sponsor_counts_active.items(), key=lambda x: -x[1])]
-            },
-            "all_time": {
-                "total": len(all_maintainers),
-                "by_sponsor": [{"name": k, "value": v} for k, v in sorted(sponsor_counts_all.items(), key=lambda x: -x[1])]
-            },
-            "maintainers": maintainer_sponsors  # Full list for detailed view
-        }
-        
-        with open(os.path.join(Config.OUTPUT_DIR, "stats_maintainer_independence.json"), "w") as f:
-            json.dump(independence_data, f)
-        
-        print(f"  Generated: {len(active_maintainers)} active maintainers, {len(all_maintainers)} total")
+        # PART 2 (Maintainer Independence) has been refactored and moved to scripts/04_deliver/maintainers.py
 
     @staticmethod
     def generate_geography(commits):

@@ -1,37 +1,37 @@
 {
-  "generated_at": "2026-06-28T11:21:15.712027",
+  "generated_at": "2026-06-29T10:40:52.371990",
   "groups": {
     "committers": 1240,
-    "reviewers": 5109,
-    "research": 1641,
-    "standards": 158,
-    "total_active": 6463,
-    "total_registry": 7622
+    "reviewers": 5118,
+    "research": 1651,
+    "standards": 159,
+    "total_active": 6479,
+    "total_registry": 7631
   },
   "venn_4": {
     "0001": 15,
-    "0010": 1171,
+    "0010": 1178,
     "0011": 23,
-    "0100": 3840,
+    "0100": 3849,
     "0101": 5,
     "0110": 133,
     "0111": 36,
-    "1000": 133,
+    "1000": 132,
     "1001": 1,
-    "1010": 10,
+    "1010": 11,
     "1011": 1,
-    "1100": 825,
-    "1101": 3,
+    "1100": 824,
+    "1101": 2,
     "1110": 193,
-    "1111": 74
+    "1111": 76
   },
   "venn_summary": {
-    "code_only": 133,
-    "review_only": 3840,
-    "research_only": 1171,
+    "code_only": 132,
+    "review_only": 3849,
+    "research_only": 1178,
     "standards_only": 15,
-    "all_four": 74,
-    "code_review": 825,
+    "all_four": 76,
+    "code_review": 824,
     "review_research": 133,
     "research_standards": 23
   },
@@ -47,18 +47,18 @@
     "description": "First-time core contributor recently merged 2 commits."
   },
   "onboarding": {
-    "new_coders_90d": 25,
-    "new_discussants_90d": 91,
+    "new_coders_90d": 24,
+    "new_discussants_90d": 99,
     "window_days": 90
   },
   "prs": {
-    "total_merged": 17810,
-    "merged_30d": 81,
-    "merged_prev_30d": 115
+    "total_merged": 17846,
+    "merged_30d": 112,
+    "merged_prev_30d": 117
   },
   "commits": {
-    "commits_30d": 526,
-    "commits_prev_30d": 654
+    "commits_30d": 541,
+    "commits_prev_30d": 626
   },
   "bips": {
     "total": 210,
@@ -69,20 +69,20 @@
       {
         "category": "quantum",
         "label": "Quantum",
-        "count": 173,
-        "share": 27.2
+        "count": 179,
+        "share": 25.0
       },
       {
         "category": "testing-devtools",
         "label": "Testing Devtools",
-        "count": 67,
-        "share": 10.6
+        "count": 69,
+        "share": 9.6
       },
       {
         "category": "privacy",
         "label": "Privacy",
-        "count": 47,
-        "share": 7.4
+        "count": 59,
+        "share": 8.2
       }
     ],
     "top_bips": [

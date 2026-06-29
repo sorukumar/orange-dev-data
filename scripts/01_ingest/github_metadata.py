@@ -71,6 +71,7 @@ def process_metadata():
                     # High-fidelity anchors: Labels & Head SHA
                     labels = [l.get('name') for l in pull.get('labels', []) if l.get('name')]
                     head_sha = (pull.get('head') or {}).get('sha')
+                    milestone = (pull.get('milestone') or {}).get('title')
                 
                     pr_data.append({
                         'repository_name': repo_name,
@@ -82,7 +83,8 @@ def process_metadata():
                         'created_at': created_at,
                         'merged_at': merged_at,
                         'closed_at': closed_at,
-                        'title': pull.get('title')
+                        'title': pull.get('title'),
+                        'milestone': milestone
                     })
                 
                     # Process events for review signals

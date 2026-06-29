@@ -12,6 +12,7 @@
   "merge_commits": 0.0,
   "tier1_merge_commits": null,
   "tier2_merge_commits": null,
+  "self_merges": 0.0,
   "total_additions": null,
   "total_deletions": null,
   "first_core_commit": null,
@@ -22,6 +23,7 @@
   "last_commit": null,
   "p2016_authored_commits": 0.0,
   "modern_authored_commits": 0.0,
+  "co_authored_commits": 0.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
@@ -50,31 +52,34 @@
   "p2016_impact_score": 7.0,
   "modern_impact_score": 6.0,
   "threads_started": 13.0,
-  "replies_sent": 8.0,
+  "replies_sent": 9.0,
   "ml_threads": 0.0,
   "delving_threads": 13.0,
   "ml_responses": 0.0,
-  "delving_responses": 8.0,
+  "delving_responses": 9.0,
   "first_active": null,
   "last_active": null,
   "dev_type": "Reviewer",
   "expertise_domains": [
-    "Mempool"
+    "Mempool",
+    "Mining"
   ],
   "expertise_by_source": {
     "discussion": {
-      "Mempool": 1.0
+      "Mempool": 0.571,
+      "Mining": 0.429
     }
   },
   "expertise_domain_scores": {
-    "Mempool": 1.0
+    "Mempool": 0.571,
+    "Mining": 0.429
   },
-  "p2016_posts": 21.0,
-  "modern_posts": 21.0,
+  "p2016_posts": 22.0,
+  "modern_posts": 22.0,
   "p2016_ml_posts": 0.0,
-  "p2016_delving_posts": 21.0,
+  "p2016_delving_posts": 22.0,
   "modern_ml_posts": 0.0,
-  "modern_delving_posts": 21.0,
+  "modern_delving_posts": 22.0,
   "is_engineer": false,
   "is_reviewer": true,
   "is_researcher": true,
@@ -99,9 +104,9 @@
   },
   "last_message": {
     "source": "delving",
-    "subject": "Re: Signet faucet using 25-long-tx-chain & RBF",
-    "date": "2026-03-31",
-    "link": "https://delvingbitcoin.org/t/signet-faucet-using-25-long-tx-chain-rbf/1426/3"
+    "subject": "Re: Regular signet reorgs",
+    "date": "2026-06-23",
+    "link": "https://delvingbitcoin.org/t/regular-signet-reorgs/2549/6"
   },
   "social_history": {
     "2025": {
@@ -117,8 +122,9 @@
     "2026": {
       "covenants": 2,
       "mempool-fees": 2,
+      "mining": 1,
       "other": 4,
-      "testing-devtools": 1,
+      "testing-devtools": 2,
       "utxo-sync": 1
     }
   }
