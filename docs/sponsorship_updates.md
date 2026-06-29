@@ -1,57 +1,42 @@
 # Sponsorship Data Maintenance Guide
 
-This document outlines the logical path for updating and expanding the sponsorship data in the Orange Dev Tracker.
+This document outlines the Hybrid Architecture for updating and expanding sponsorship data in the Orange Dev Tracker.
 
 ## Methodology
 
-We follow a tiered approach to classify developers, moving from zero-cost automation to targeted research.
+We use a **Hybrid Architecture** that isolates manual curation from automated data scraping. This guarantees that human curations are never overwritten by automated scripts, while still capturing real-time grant updates.
 
-### 1. Zero-Token: Domain Auto-Mapping
-The first step is to identify contributors whose email domains match known corporate or academic sponsors.
+### 1. Automated Ingestion (Phase 1)
+We automatically fetch machine-readable grant data directly from the open-source repositories of major sponsors.
 
-- **Action**: Run `python3 analysis/auto_map_domains.py`.
-- **Logic**: This script checks the `commits.parquet` for any email domain (e.g., `@brink.dev`, `@chaincode.com`) that matches the `domains` list in `sponsors_lookup.json`.
-- **Output**: It generates `proposed_domain_matches.json`.
-- **Note**: Always verify these results before committing, as some domains might be shared or legacy.
+- **Sources**:
+  - **OpenSats**: Parsed from `data/sources/opensats/data/projects/*.mdx`.
+  - **Brink**: Parsed from `data/sources/brink/_data/team.yml`.
+- **Action**: Handled automatically in Phase 1 via `scripts/01_ingest/automated_sponsors.py`.
+- **Output**: Generates `data/raw/automated_grants.json`. This extracts developer names, GitHub profiles, grant start dates, and project names.
 
-### 2. Targeted Identification: High-Impact Contributors
-We prioritize research on the most active contributors.
+### 2. Manual Curation (Phase 1)
+For sponsors that do not provide machine-readable automated lists (e.g., Chaincode, Spiral, Btrust), or to manually adjust data, we maintain a strict manual registry.
 
-- **Action**: Run `python3 analysis/identify_top_devs.py`.
-- **Logic**: Filters for developers active in the last 3 years and the top 25 historical contributors.
-- **Output**: `analysis/research_targets.csv`.
-- **Rule**: Focus on researchers marked as `already_sponsored: False`.
+- **File**: `metadata/sponsors.json`.
+- **Role**: This is the manual override layer. It allows us to manually log grants or add custom `notes` to automated grants without fear of being overwritten.
 
-### 3. Verification: Evidence-Based Research
-For identified targets, perform targeted web research using the Browser Subagent.
+### 3. Convergence & Transformation (Phase 2)
+We merge the automated ingestion with the manual curation to create a single, unified source of truth.
 
-- **Sources to Check**:
-    - [Brink Grantees](https://brink.dev/about)
-    - [Spiral Grants](https://spiral.xyz/grants)
-    - [OpenSats LTS Grants](https://opensats.org/projects/bitcoin-core-lts-grants)
-    - [Chaincode Team](https://chaincode.com/team)
-    - [Btrust Africa](https://btrust.africa/)
-    - Personal Twitter (X) profiles or GitHub bios.
-- **Rule of Thumb**: Only classify as "sponsored" if there is a public record of funding. Use "affiliated" for corporate employees where the specific funding for Bitcoin Core work is less clear.
+- **Action**: Handled automatically in Phase 2 via `scripts/02_process/merge_sponsors.py`.
+- **Output**: Generates `data/enriched/sponsors_merged.json`.
+- **Logic**:
+  1. Loads `metadata/sponsors.json` as the base.
+  2. Loads `data/raw/automated_grants.json`.
+  3. Intelligently merges them by developer `github` or `canonical_name`, avoiding duplicate grants. 
+  4. If a manual entry exists for an automated grant, the manual `notes` are preserved, and the rich metadata (`start_date` and `project_name`) from the automation is safely injected.
 
-### 4. Data Commitment: The Ledger System
-Never update sponsorship without logging the evidence.
-
-- **Update `data/cache/sponsors_lookup.json`**:
-    - Add the developer to the `sponsored_developers` array.
-    - Fields: `canonical_name`, `github` (if known), `emails` (optional), `sponsor_id`, `status` (active/emeritus), `notes`.
-- **Update `data/cache/sponsors_evidence.json`**:
-    - Every manual entry MUST have a corresponding entry here.
-    - Fields: `canonical_name`, `sponsor_id`, `source_url`, `verification_date`, `notes`.
-
-## Key Rules
-1. **No Manual Deduplication**: Rely on `canonical_id` or consistent `canonical_name`. Do not merge identities manually unless the identity mapping system handles it.
-2. **Preserve History**: If a developer moves (e.g., Ava Chow from Blockstream to Brink), update their current classification but document the transition in `notes`.
-3. **Canonical Status**: Use the name exactly as it appears in `contributors_rich.json` to ensure clean joins for the dashboard.
+### 4. Integration
+The final unified file (`data/enriched/sponsors_merged.json`) is the *only* file read by downstream pipeline scripts (`unify_contributors.py`, `badges.py`, `maintainers.py`, etc.).
 
 ## Technical Rebuild
-After updating JSON files, run the rebuild script to update statistics:
+To run the complete pipeline and ensure all UI elements and Parquet files are updated with new sponsorship data, simply run:
 ```bash
-python3 code/core/rebuild.py
+python3 scripts/rebuild_daily.py
 ```
-*(Note: Ensure paths are correct based on the root directory)*

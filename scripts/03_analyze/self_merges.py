@@ -99,9 +99,9 @@ def generate_self_merges():
                 if is_approval:
                     unique_ackers.add(user)
                     
-            ack_counts[pr] = len(unique_ackers)
+            ack_counts[(repo, pr)] = len(unique_ackers)
             
-    df_self['ack_count'] = df_self['pr_number'].map(ack_counts).fillna(0).astype(int)
+    df_self['ack_count'] = df_self.apply(lambda row: ack_counts.get((row['repository_name'], row['pr_number']), 0), axis=1).astype(int)
     
     # Categorize
     def categorize(acks):

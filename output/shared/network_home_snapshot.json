@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-29T10:41:32.102027",
-  "contributors_tracked": 7631,
+  "generated_at": "2026-06-29T14:59:11.823744",
+  "contributors_tracked": 7632,
   "window_reference": {
-    "anchor_timestamp": "2026-06-29T15:15:47.342000+00:00",
-    "current_window_start": "2026-05-30T15:15:47.342000+00:00",
-    "previous_window_start": "2026-04-30T15:15:47.342000+00:00",
+    "anchor_timestamp": "2026-06-29T18:32:22+00:00",
+    "current_window_start": "2026-05-30T18:32:22+00:00",
+    "previous_window_start": "2026-04-30T18:32:22+00:00",
     "window_days": 30
   },
   "widgets": {
@@ -23,30 +23,30 @@
         {
           "uuid": "auto_sebastian_kung",
           "display_name": "Sebastian Kung",
-          "reviews_30d": 129,
+          "reviews_30d": 130,
           "previous_30d": 129,
-          "delta_30d": 0
+          "delta_30d": 1
         },
         {
           "uuid": "can_marcofalke",
           "display_name": "MarcoFalke",
-          "reviews_30d": 86,
+          "reviews_30d": 87,
           "previous_30d": 117,
-          "delta_30d": -31
+          "delta_30d": -30
         },
         {
           "uuid": "can_michael_ford",
           "display_name": "Michael Ford",
           "reviews_30d": 69,
-          "previous_30d": 100,
-          "delta_30d": -31
+          "previous_30d": 99,
+          "delta_30d": -30
         },
         {
           "uuid": "auto_woltx",
           "display_name": "woltx",
           "reviews_30d": 67,
-          "previous_30d": 52,
-          "delta_30d": 15
+          "previous_30d": 49,
+          "delta_30d": 18
         },
         {
           "uuid": "can_hennadii_stepanov",
@@ -93,8 +93,8 @@
     },
     "research_activity_30d": {
       "messages_30d": 307,
-      "previous_30d": 218,
-      "delta_30d": 89,
+      "previous_30d": 217,
+      "delta_30d": 90,
       "momentum": "rising",
       "definition": "Combined Delving Bitcoin and mailing list discussion volume in current 30 days versus previous 30 days."
     },
@@ -103,7 +103,7 @@
       "previous_30d": 87,
       "delta_30d": 6,
       "messages_30d": 307,
-      "messages_previous_30d": 218
+      "messages_previous_30d": 217
     },
     "topic_momentum_30d": {
       "window_days": 30,
@@ -113,8 +113,8 @@
           "topic": "quantum",
           "label": "Quantum",
           "mentions_30d": 48,
-          "previous_30d": 73,
-          "delta_30d": -25
+          "previous_30d": 72,
+          "delta_30d": -24
         },
         {
           "topic": "privacy",
@@ -150,28 +150,23 @@
       "definition": "Random selection of top retired contributors by impact score to feature as ecosystem veterans.",
       "items": [
         {
-          "uuid": "auto_ryan_x_charles",
-          "display_name": "Ryan X. Charles",
-          "impact_score": 26.0
+          "uuid": "auto_philip_kaufmann",
+          "display_name": "Philip Kaufmann",
+          "impact_score": 33.0
         },
         {
-          "uuid": "auto_ruben_de_vries",
-          "display_name": "Ruben de Vries",
-          "impact_score": 28.0
+          "uuid": "auto_christopher_gilliard",
+          "display_name": "Christopher Gilliard",
+          "impact_score": 24.0
         },
         {
-          "uuid": "auto_marco_pontello",
-          "display_name": "marco pontello",
-          "impact_score": 23.0
-        },
-        {
-          "uuid": "auto_daira_emma_hopwood",
-          "display_name": "Daira-Emma Hopwood",
-          "impact_score": 25.0
+          "uuid": "can_chris_belcher",
+          "display_name": "Chris Belcher",
+          "impact_score": 39.0
         },
         {
           "uuid": "auto_chris_priest",
-          "display_name": "Chris Priest",
+          "display_name": "chris priest",
           "impact_score": 25.0
         }
       ]

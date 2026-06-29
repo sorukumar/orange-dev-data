@@ -25,6 +25,7 @@ class Config:
     SPONSORS_FILE = "data/enriched/sponsors_merged.json"
     OUTPUT_DIR = "output/shared/maintainers"
     OUTPUT_FILE = f"{OUTPUT_DIR}/stats_maintainers.json"
+    BIPS_FILE = "data/enriched/bips_refined.parquet"
 
 # --- Maintainer Lookup ---
 class MaintainerLookup:
@@ -161,6 +162,10 @@ def main():
     commits['date_utc'] = pd.to_datetime(commits['date_utc'], utc=True)
     commits = commits[commits['date_utc'] <= cutoff_date]
     
+    date_1yr_ago = cutoff_date - timedelta(days=365)
+    date_3yr_ago = cutoff_date - timedelta(days=365*3)
+    date_5yr_ago = cutoff_date - timedelta(days=365*5)
+    
     # Determine cohort years based on integration date
     if 'integration_date' in commits.columns:
         commits['integration_date'] = pd.to_datetime(commits['integration_date'], utc=True)
@@ -187,6 +192,12 @@ def main():
         # Deduplicate to count unique PRs reviewed, or just total review interactions? Let's stick to unique PRs per person
         reviews_df = reviews_df.drop_duplicates(subset=['uuid', 'repository_name', 'pr_number'])
         
+    bips_df = pd.DataFrame()
+    if os.path.exists(Config.BIPS_FILE):
+        bips_df = pd.read_parquet(Config.BIPS_FILE)
+        if 'git_created_at' in bips_df.columns:
+            bips_df['git_created_at'] = pd.to_datetime(bips_df['git_created_at'], utc=True)
+            
     MaintainerLookup.load()
     SponsorLookup.load()
     
@@ -202,8 +213,15 @@ def main():
     maintainers = MaintainerLookup.get_all_maintainers()
     maintainer_profiles = []
     
-    # Merges count mapping
-    maintainer_commits = commits[commits['is_merge'] == True]
+    # Load authentic first-parent merge hashes to avoid counting side-branch subtree pulls
+    first_parent_hashes = set()
+    fp_path = "metadata/first_parent_merges.json"
+    if os.path.exists(fp_path):
+        with open(fp_path, "r") as f:
+            first_parent_hashes = set(json.load(f))
+            
+    # Merges count mapping (filter strictly to master first-parent merges)
+    maintainer_commits = commits[(commits['is_merge'] == True) & (commits['hash'].isin(first_parent_hashes))]
     
     for m in maintainers:
         m_id = m.get("id")
@@ -258,7 +276,19 @@ def main():
         m_actions = maintainer_commits[maintainer_commits['committer_email'].str.lower().isin(emails_lower)]
         # Deduplicate by hash to avoid double-counting across categories/repositories
         m_actions_dedup = m_actions.drop_duplicates(subset=['hash'])
-        merges_count = len(m_actions_dedup)
+        
+        m_actions_main = m_actions_dedup[m_actions_dedup['repository_name'] == 'bitcoin/bitcoin']
+        m_actions_eco = m_actions_dedup[m_actions_dedup['repository_name'] != 'bitcoin/bitcoin']
+        
+        merges_count = len(m_actions_main)
+        merges_1_yr = len(m_actions_main[m_actions_main['date_utc'] >= date_1yr_ago])
+        merges_3_yr = len(m_actions_main[m_actions_main['date_utc'] >= date_3yr_ago])
+        merges_5_yr = len(m_actions_main[m_actions_main['date_utc'] >= date_5yr_ago])
+        
+        merges_eco_count = len(m_actions_eco)
+        merges_eco_1_yr = len(m_actions_eco[m_actions_eco['date_utc'] >= date_1yr_ago])
+        merges_eco_3_yr = len(m_actions_eco[m_actions_eco['date_utc'] >= date_3yr_ago])
+        merges_eco_5_yr = len(m_actions_eco[m_actions_eco['date_utc'] >= date_5yr_ago])
         
         # Split by tier1 (core) and tier2 (ecosystem) repositories
         tier1_repos = {'bitcoin/bitcoin', 'bitcoin-core/secp256k1', 'bitcoin-core/gui'}
@@ -283,6 +313,8 @@ def main():
         prior_review_count = 0
         post_review_count = 0
         self_merges = 0
+        authored_bips = []
+        prior_authored_bips = 0
         
         if cid:
             enrich_data = enrich_map.get(cid, {})
@@ -307,6 +339,30 @@ def main():
                 
                 post_authored = cid_authored_dedup[cid_authored_dedup['date_utc'] >= app_ts]
                 post_authored_commits = len(post_authored)
+                
+            if not bips_df.empty and 'author_canonical_ids' in bips_df.columns:
+                def is_author(ids_list, target_cid):
+                    if not isinstance(ids_list, (list, tuple)):
+                        # Might be a numpy array or string
+                        try:
+                            import ast
+                            if isinstance(ids_list, str):
+                                ids_list = ast.literal_eval(ids_list)
+                        except:
+                            return False
+                    if isinstance(ids_list, (list, tuple)):
+                        return target_cid in ids_list
+                    return False
+                    
+                m_bips = bips_df[bips_df['author_canonical_ids'].apply(lambda x: is_author(x, cid))]
+                authored_bips = m_bips['bip_id'].tolist()
+                
+                if appointment_date:
+                    app_ts = pd.to_datetime(appointment_date, utc=True)
+                    prior_bips = m_bips[m_bips['git_created_at'] < app_ts]
+                    prior_authored_bips = len(prior_bips)
+                else:
+                    prior_authored_bips = len(m_bips)
         
         # Calculate pre/post reviews based on UUID
         if uuid and not reviews_df.empty:
@@ -328,16 +384,25 @@ def main():
             "sponsor": sponsor_name if sponsor_name else "Independent",
             "active_years": [int(y) for y in active_years],
             "merges_count": merges_count,
+            "merges_1_yr": merges_1_yr,
+            "merges_3_yr": merges_3_yr,
+            "merges_5_yr": merges_5_yr,
+            "merges_eco_count": merges_eco_count,
+            "merges_eco_1_yr": merges_eco_1_yr,
+            "merges_eco_3_yr": merges_eco_3_yr,
+            "merges_eco_5_yr": merges_eco_5_yr,
             "merges_core": merges_core,
             "merges_ecosystem": merges_ecosystem,
-            "merges_active": merges_count > 0 or m_status == 'active',
+            "merges_active": (merges_count + merges_eco_count) > 0 or m_status == 'active',
             "merge_authority": m.get("merge_authority", True),
             "first_active_year": first_active_year,
             "prior_authored_commits": prior_authored_commits,
             "post_authored_commits": post_authored_commits,
             "prior_review_count": prior_review_count,
             "post_review_count": post_review_count,
-            "self_merges": self_merges
+            "self_merges": self_merges,
+            "authored_bips": authored_bips,
+            "prior_authored_bips": prior_authored_bips
         }
         
         if m.get("role"):

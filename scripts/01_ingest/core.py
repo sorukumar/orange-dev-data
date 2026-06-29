@@ -151,7 +151,18 @@ def get_git_log_with_messages(repo_path):
     
     return process
 
-def parse_log(process, repo_name):
+def get_first_parent_commits(repo_path):
+    """
+    Extracts the hashes of all commits that are on the first-parent (master) branch.
+    """
+    cmd = ["git", "-C", repo_path, "log", "HEAD", "--first-parent", "--format=%H"]
+    try:
+        res = subprocess.run(cmd, capture_output=True, text=True, check=True)
+        return set(res.stdout.splitlines())
+    except subprocess.CalledProcessError:
+        return set()
+
+def parse_log(process, repo_name, first_parent_commits):
     stream = process.stdout
     commits = []
     seen_hashes = set()
@@ -170,7 +181,7 @@ def parse_log(process, repo_name):
             if curr_meta:
                 # Deduplication check
                 if curr_meta["hash"] not in seen_hashes:
-                    process_commit(curr_meta, curr_stats, commits, repo_name)
+                    process_commit(curr_meta, curr_stats, commits, repo_name, first_parent_commits)
                     seen_hashes.add(curr_meta["hash"])
             
             # Start new commit
@@ -209,7 +220,7 @@ def parse_log(process, repo_name):
     
     # Process last commit
     if curr_meta and curr_meta["hash"] not in seen_hashes:
-        process_commit(curr_meta, curr_stats, commits, repo_name)
+        process_commit(curr_meta, curr_stats, commits, repo_name, first_parent_commits)
         
     # Check for errors
     stderr = process.stderr.read()
@@ -288,7 +299,7 @@ def categorize_file(path):
                 return category
     return "Utilities"  # fallback: unrecognised path → shared utilities bucket
 
-def process_commit(meta, stats, commits_list, repo_name):
+def process_commit(meta, stats, commits_list, repo_name, first_parent_commits):
     # Base Stats (Total for the commit)
     total_adds = sum(x["adds"] for x in stats)
     total_dels = sum(x["dels"] for x in stats)
@@ -390,7 +401,9 @@ def process_commit(meta, stats, commits_list, repo_name):
             "committer_name": meta["committer_name"],
             "committer_email": meta["committer_email"].lower(),
             
-            "is_merge": len(meta["parents"].split()) > 1,
+            "is_merge": is_merge,
+            "is_first_parent": meta["hash"] in first_parent_commits,
+            "is_first_parent_merge": meta["hash"] in first_parent_commits and is_merge,
             "parents": meta["parents"],
             
             # Specific to this category-slice
@@ -431,8 +444,10 @@ def main():
         print(f"\nProcessing {repo_name}...")
         
         print(f"  Reading git log...")
+        first_parent_commits = get_first_parent_commits(repo_path)
         process = get_git_log(repo_path)
-        commits = parse_log(process, repo_name)
+        
+        commits = parse_log(process, repo_name, first_parent_commits)
         print(f"  Parsed {len(commits)} commits.")
         
         all_commits.extend(commits)

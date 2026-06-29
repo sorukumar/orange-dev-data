@@ -1,0 +1,2896 @@
+{
+  "periods": {
+    "1yr": {
+      "nodes": [
+        {
+          "name": "Brink",
+          "category": 0
+        },
+        {
+          "name": "Michael Ford",
+          "category": 1
+        },
+        {
+          "name": "Build & CI",
+          "category": 2
+        },
+        {
+          "name": "Consensus",
+          "category": 2
+        },
+        {
+          "name": "Documentation",
+          "category": 2
+        },
+        {
+          "name": "GUI",
+          "category": 2
+        },
+        {
+          "name": "Mempool",
+          "category": 2
+        },
+        {
+          "name": "Node & RPC",
+          "category": 2
+        },
+        {
+          "name": "P2P Network",
+          "category": 2
+        },
+        {
+          "name": "Script",
+          "category": 2
+        },
+        {
+          "name": "Tests",
+          "category": 2
+        },
+        {
+          "name": "Utilities",
+          "category": 2
+        },
+        {
+          "name": "Wallet",
+          "category": 2
+        },
+        {
+          "name": "Hennadii Stepanov",
+          "category": 1
+        },
+        {
+          "name": "Cryptography",
+          "category": 2
+        },
+        {
+          "name": "Localhost_Research",
+          "category": 0
+        },
+        {
+          "name": "Ava Chow",
+          "category": 1
+        },
+        {
+          "name": "Gloria Zhao",
+          "category": 1
+        },
+        {
+          "name": "Chaincode Labs",
+          "category": 0
+        },
+        {
+          "name": "Ryan Ofsky",
+          "category": 1
+        },
+        {
+          "name": "Spiral",
+          "category": 0
+        },
+        {
+          "name": "Sebastian Kung",
+          "category": 1
+        }
+      ],
+      "links": [
+        {
+          "source": "Brink",
+          "target": "Michael Ford",
+          "value": 2274
+        },
+        {
+          "source": "Michael Ford",
+          "target": "Build & CI",
+          "value": 403
+        },
+        {
+          "source": "Michael Ford",
+          "target": "Consensus",
+          "value": 11
+        },
+        {
+          "source": "Michael Ford",
+          "target": "Documentation",
+          "value": 357
+        },
+        {
+          "source": "Michael Ford",
+          "target": "GUI",
+          "value": 10
+        },
+        {
+          "source": "Michael Ford",
+          "target": "Mempool",
+          "value": 15
+        },
+        {
+          "source": "Michael Ford",
+          "target": "Node & RPC",
+          "value": 60
+        },
+        {
+          "source": "Michael Ford",
+          "target": "P2P Network",
+          "value": 70
+        },
+        {
+          "source": "Michael Ford",
+          "target": "Script",
+          "value": 86
+        },
+        {
+          "source": "Michael Ford",
+          "target": "Tests",
+          "value": 957
+        },
+        {
+          "source": "Michael Ford",
+          "target": "Utilities",
+          "value": 254
+        },
+        {
+          "source": "Michael Ford",
+          "target": "Wallet",
+          "value": 51
+        },
+        {
+          "source": "Brink",
+          "target": "Hennadii Stepanov",
+          "value": 476
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "Build & CI",
+          "value": 142
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "Consensus",
+          "value": 7
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "Cryptography",
+          "value": 4
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "Documentation",
+          "value": 40
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "GUI",
+          "value": 22
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "Mempool",
+          "value": 1
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "Node & RPC",
+          "value": 11
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "P2P Network",
+          "value": 4
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "Script",
+          "value": 6
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "Tests",
+          "value": 143
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "Utilities",
+          "value": 89
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "Wallet",
+          "value": 7
+        },
+        {
+          "source": "Localhost_Research",
+          "target": "Ava Chow",
+          "value": 866
+        },
+        {
+          "source": "Ava Chow",
+          "target": "Build & CI",
+          "value": 35
+        },
+        {
+          "source": "Ava Chow",
+          "target": "Consensus",
+          "value": 11
+        },
+        {
+          "source": "Ava Chow",
+          "target": "Documentation",
+          "value": 89
+        },
+        {
+          "source": "Ava Chow",
+          "target": "GUI",
+          "value": 5
+        },
+        {
+          "source": "Ava Chow",
+          "target": "Node & RPC",
+          "value": 76
+        },
+        {
+          "source": "Ava Chow",
+          "target": "P2P Network",
+          "value": 75
+        },
+        {
+          "source": "Ava Chow",
+          "target": "Script",
+          "value": 18
+        },
+        {
+          "source": "Ava Chow",
+          "target": "Tests",
+          "value": 280
+        },
+        {
+          "source": "Ava Chow",
+          "target": "Utilities",
+          "value": 130
+        },
+        {
+          "source": "Ava Chow",
+          "target": "Wallet",
+          "value": 147
+        },
+        {
+          "source": "Brink",
+          "target": "Gloria Zhao",
+          "value": 337
+        },
+        {
+          "source": "Gloria Zhao",
+          "target": "Build & CI",
+          "value": 10
+        },
+        {
+          "source": "Gloria Zhao",
+          "target": "Consensus",
+          "value": 8
+        },
+        {
+          "source": "Gloria Zhao",
+          "target": "Documentation",
+          "value": 40
+        },
+        {
+          "source": "Gloria Zhao",
+          "target": "Mempool",
+          "value": 23
+        },
+        {
+          "source": "Gloria Zhao",
+          "target": "Node & RPC",
+          "value": 26
+        },
+        {
+          "source": "Gloria Zhao",
+          "target": "P2P Network",
+          "value": 21
+        },
+        {
+          "source": "Gloria Zhao",
+          "target": "Script",
+          "value": 15
+        },
+        {
+          "source": "Gloria Zhao",
+          "target": "Tests",
+          "value": 105
+        },
+        {
+          "source": "Gloria Zhao",
+          "target": "Utilities",
+          "value": 66
+        },
+        {
+          "source": "Gloria Zhao",
+          "target": "Wallet",
+          "value": 23
+        },
+        {
+          "source": "Chaincode Labs",
+          "target": "Ryan Ofsky",
+          "value": 133
+        },
+        {
+          "source": "Ryan Ofsky",
+          "target": "Build & CI",
+          "value": 14
+        },
+        {
+          "source": "Ryan Ofsky",
+          "target": "Consensus",
+          "value": 1
+        },
+        {
+          "source": "Ryan Ofsky",
+          "target": "Documentation",
+          "value": 11
+        },
+        {
+          "source": "Ryan Ofsky",
+          "target": "GUI",
+          "value": 1
+        },
+        {
+          "source": "Ryan Ofsky",
+          "target": "Mempool",
+          "value": 1
+        },
+        {
+          "source": "Ryan Ofsky",
+          "target": "Node & RPC",
+          "value": 19
+        },
+        {
+          "source": "Ryan Ofsky",
+          "target": "Script",
+          "value": 5
+        },
+        {
+          "source": "Ryan Ofsky",
+          "target": "Tests",
+          "value": 33
+        },
+        {
+          "source": "Ryan Ofsky",
+          "target": "Utilities",
+          "value": 42
+        },
+        {
+          "source": "Ryan Ofsky",
+          "target": "Wallet",
+          "value": 6
+        },
+        {
+          "source": "Spiral",
+          "target": "Sebastian Kung",
+          "value": 625
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "Build & CI",
+          "value": 22
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "Consensus",
+          "value": 17
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "Documentation",
+          "value": 56
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "GUI",
+          "value": 1
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "Mempool",
+          "value": 5
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "Node & RPC",
+          "value": 32
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "P2P Network",
+          "value": 32
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "Script",
+          "value": 10
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "Tests",
+          "value": 234
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "Utilities",
+          "value": 156
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "Wallet",
+          "value": 60
+        }
+      ]
+    },
+    "3yr": {
+      "nodes": [
+        {
+          "name": "Brink",
+          "category": 0
+        },
+        {
+          "name": "Michael Ford",
+          "category": 1
+        },
+        {
+          "name": "Build & CI",
+          "category": 2
+        },
+        {
+          "name": "Consensus",
+          "category": 2
+        },
+        {
+          "name": "Cryptography",
+          "category": 2
+        },
+        {
+          "name": "Database",
+          "category": 2
+        },
+        {
+          "name": "Documentation",
+          "category": 2
+        },
+        {
+          "name": "GUI",
+          "category": 2
+        },
+        {
+          "name": "Mempool",
+          "category": 2
+        },
+        {
+          "name": "Node & RPC",
+          "category": 2
+        },
+        {
+          "name": "P2P Network",
+          "category": 2
+        },
+        {
+          "name": "Script",
+          "category": 2
+        },
+        {
+          "name": "Tests",
+          "category": 2
+        },
+        {
+          "name": "Utilities",
+          "category": 2
+        },
+        {
+          "name": "Wallet",
+          "category": 2
+        },
+        {
+          "name": "Hennadii Stepanov",
+          "category": 1
+        },
+        {
+          "name": "Localhost_Research",
+          "category": 0
+        },
+        {
+          "name": "Ava Chow",
+          "category": 1
+        },
+        {
+          "name": "Gloria Zhao",
+          "category": 1
+        },
+        {
+          "name": "Chaincode Labs",
+          "category": 0
+        },
+        {
+          "name": "Ryan Ofsky",
+          "category": 1
+        },
+        {
+          "name": "Spiral",
+          "category": 0
+        },
+        {
+          "name": "Sebastian Kung",
+          "category": 1
+        }
+      ],
+      "links": [
+        {
+          "source": "Brink",
+          "target": "Michael Ford",
+          "value": 7703
+        },
+        {
+          "source": "Michael Ford",
+          "target": "Build & CI",
+          "value": 1823
+        },
+        {
+          "source": "Michael Ford",
+          "target": "Consensus",
+          "value": 34
+        },
+        {
+          "source": "Michael Ford",
+          "target": "Cryptography",
+          "value": 4
+        },
+        {
+          "source": "Michael Ford",
+          "target": "Database",
+          "value": 1
+        },
+        {
+          "source": "Michael Ford",
+          "target": "Documentation",
+          "value": 1122
+        },
+        {
+          "source": "Michael Ford",
+          "target": "GUI",
+          "value": 41
+        },
+        {
+          "source": "Michael Ford",
+          "target": "Mempool",
+          "value": 26
+        },
+        {
+          "source": "Michael Ford",
+          "target": "Node & RPC",
+          "value": 149
+        },
+        {
+          "source": "Michael Ford",
+          "target": "P2P Network",
+          "value": 190
+        },
+        {
+          "source": "Michael Ford",
+          "target": "Script",
+          "value": 182
+        },
+        {
+          "source": "Michael Ford",
+          "target": "Tests",
+          "value": 3141
+        },
+        {
+          "source": "Michael Ford",
+          "target": "Utilities",
+          "value": 860
+        },
+        {
+          "source": "Michael Ford",
+          "target": "Wallet",
+          "value": 130
+        },
+        {
+          "source": "Brink",
+          "target": "Hennadii Stepanov",
+          "value": 1305
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "Build & CI",
+          "value": 406
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "Consensus",
+          "value": 13
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "Cryptography",
+          "value": 6
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "Documentation",
+          "value": 114
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "GUI",
+          "value": 80
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "Mempool",
+          "value": 2
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "Node & RPC",
+          "value": 19
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "P2P Network",
+          "value": 5
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "Script",
+          "value": 13
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "Tests",
+          "value": 310
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "Utilities",
+          "value": 271
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "Wallet",
+          "value": 66
+        },
+        {
+          "source": "Localhost_Research",
+          "target": "Ava Chow",
+          "value": 3298
+        },
+        {
+          "source": "Ava Chow",
+          "target": "Build & CI",
+          "value": 92
+        },
+        {
+          "source": "Ava Chow",
+          "target": "Consensus",
+          "value": 37
+        },
+        {
+          "source": "Ava Chow",
+          "target": "Documentation",
+          "value": 263
+        },
+        {
+          "source": "Ava Chow",
+          "target": "GUI",
+          "value": 27
+        },
+        {
+          "source": "Ava Chow",
+          "target": "Mempool",
+          "value": 13
+        },
+        {
+          "source": "Ava Chow",
+          "target": "Node & RPC",
+          "value": 292
+        },
+        {
+          "source": "Ava Chow",
+          "target": "P2P Network",
+          "value": 250
+        },
+        {
+          "source": "Ava Chow",
+          "target": "Script",
+          "value": 119
+        },
+        {
+          "source": "Ava Chow",
+          "target": "Tests",
+          "value": 1192
+        },
+        {
+          "source": "Ava Chow",
+          "target": "Utilities",
+          "value": 497
+        },
+        {
+          "source": "Ava Chow",
+          "target": "Wallet",
+          "value": 516
+        },
+        {
+          "source": "Brink",
+          "target": "Gloria Zhao",
+          "value": 1222
+        },
+        {
+          "source": "Gloria Zhao",
+          "target": "Build & CI",
+          "value": 18
+        },
+        {
+          "source": "Gloria Zhao",
+          "target": "Consensus",
+          "value": 42
+        },
+        {
+          "source": "Gloria Zhao",
+          "target": "Documentation",
+          "value": 133
+        },
+        {
+          "source": "Gloria Zhao",
+          "target": "Mempool",
+          "value": 85
+        },
+        {
+          "source": "Gloria Zhao",
+          "target": "Node & RPC",
+          "value": 99
+        },
+        {
+          "source": "Gloria Zhao",
+          "target": "P2P Network",
+          "value": 103
+        },
+        {
+          "source": "Gloria Zhao",
+          "target": "Script",
+          "value": 25
+        },
+        {
+          "source": "Gloria Zhao",
+          "target": "Tests",
+          "value": 475
+        },
+        {
+          "source": "Gloria Zhao",
+          "target": "Utilities",
+          "value": 174
+        },
+        {
+          "source": "Gloria Zhao",
+          "target": "Wallet",
+          "value": 68
+        },
+        {
+          "source": "Chaincode Labs",
+          "target": "Ryan Ofsky",
+          "value": 838
+        },
+        {
+          "source": "Ryan Ofsky",
+          "target": "Build & CI",
+          "value": 68
+        },
+        {
+          "source": "Ryan Ofsky",
+          "target": "Consensus",
+          "value": 32
+        },
+        {
+          "source": "Ryan Ofsky",
+          "target": "Database",
+          "value": 1
+        },
+        {
+          "source": "Ryan Ofsky",
+          "target": "Documentation",
+          "value": 56
+        },
+        {
+          "source": "Ryan Ofsky",
+          "target": "GUI",
+          "value": 8
+        },
+        {
+          "source": "Ryan Ofsky",
+          "target": "Mempool",
+          "value": 2
+        },
+        {
+          "source": "Ryan Ofsky",
+          "target": "Node & RPC",
+          "value": 95
+        },
+        {
+          "source": "Ryan Ofsky",
+          "target": "P2P Network",
+          "value": 37
+        },
+        {
+          "source": "Ryan Ofsky",
+          "target": "Script",
+          "value": 7
+        },
+        {
+          "source": "Ryan Ofsky",
+          "target": "Tests",
+          "value": 257
+        },
+        {
+          "source": "Ryan Ofsky",
+          "target": "Utilities",
+          "value": 193
+        },
+        {
+          "source": "Ryan Ofsky",
+          "target": "Wallet",
+          "value": 82
+        },
+        {
+          "source": "Spiral",
+          "target": "Sebastian Kung",
+          "value": 915
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "Build & CI",
+          "value": 38
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "Consensus",
+          "value": 76
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "Cryptography",
+          "value": 2
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "Database",
+          "value": 15
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "Documentation",
+          "value": 60
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "GUI",
+          "value": 5
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "Mempool",
+          "value": 11
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "Node & RPC",
+          "value": 87
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "P2P Network",
+          "value": 42
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "Script",
+          "value": 17
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "Tests",
+          "value": 299
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "Utilities",
+          "value": 200
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "Wallet",
+          "value": 63
+        }
+      ]
+    },
+    "5yr": {
+      "nodes": [
+        {
+          "name": "Chaincode Labs",
+          "category": 0
+        },
+        {
+          "name": "Pieter Wuille",
+          "category": 1
+        },
+        {
+          "name": "Build & CI",
+          "category": 2
+        },
+        {
+          "name": "Cryptography",
+          "category": 2
+        },
+        {
+          "name": "Documentation",
+          "category": 2
+        },
+        {
+          "name": "GUI",
+          "category": 2
+        },
+        {
+          "name": "Mempool",
+          "category": 2
+        },
+        {
+          "name": "Node & RPC",
+          "category": 2
+        },
+        {
+          "name": "P2P Network",
+          "category": 2
+        },
+        {
+          "name": "Script",
+          "category": 2
+        },
+        {
+          "name": "Tests",
+          "category": 2
+        },
+        {
+          "name": "Utilities",
+          "category": 2
+        },
+        {
+          "name": "Wallet",
+          "category": 2
+        },
+        {
+          "name": "MIT DCI",
+          "category": 0
+        },
+        {
+          "name": "Wladimir J. van der Laan",
+          "category": 1
+        },
+        {
+          "name": "Consensus",
+          "category": 2
+        },
+        {
+          "name": "Database",
+          "category": 2
+        },
+        {
+          "name": "Cory Fields",
+          "category": 1
+        },
+        {
+          "name": "Marco Falke",
+          "category": 1
+        },
+        {
+          "name": "Independent",
+          "category": 0
+        },
+        {
+          "name": "Samuel Dobson",
+          "category": 1
+        },
+        {
+          "name": "Brink",
+          "category": 0
+        },
+        {
+          "name": "Michael Ford",
+          "category": 1
+        },
+        {
+          "name": "Hennadii Stepanov",
+          "category": 1
+        },
+        {
+          "name": "Localhost_Research",
+          "category": 0
+        },
+        {
+          "name": "Ava Chow",
+          "category": 1
+        },
+        {
+          "name": "Gloria Zhao",
+          "category": 1
+        },
+        {
+          "name": "Ryan Ofsky",
+          "category": 1
+        },
+        {
+          "name": "Spiral",
+          "category": 0
+        },
+        {
+          "name": "Sebastian Kung",
+          "category": 1
+        }
+      ],
+      "links": [
+        {
+          "source": "Chaincode Labs",
+          "target": "Pieter Wuille",
+          "value": 106
+        },
+        {
+          "source": "Pieter Wuille",
+          "target": "Build & CI",
+          "value": 6
+        },
+        {
+          "source": "Pieter Wuille",
+          "target": "Cryptography",
+          "value": 2
+        },
+        {
+          "source": "Pieter Wuille",
+          "target": "Documentation",
+          "value": 5
+        },
+        {
+          "source": "Pieter Wuille",
+          "target": "GUI",
+          "value": 2
+        },
+        {
+          "source": "Pieter Wuille",
+          "target": "Mempool",
+          "value": 1
+        },
+        {
+          "source": "Pieter Wuille",
+          "target": "Node & RPC",
+          "value": 2
+        },
+        {
+          "source": "Pieter Wuille",
+          "target": "P2P Network",
+          "value": 10
+        },
+        {
+          "source": "Pieter Wuille",
+          "target": "Script",
+          "value": 16
+        },
+        {
+          "source": "Pieter Wuille",
+          "target": "Tests",
+          "value": 34
+        },
+        {
+          "source": "Pieter Wuille",
+          "target": "Utilities",
+          "value": 26
+        },
+        {
+          "source": "Pieter Wuille",
+          "target": "Wallet",
+          "value": 2
+        },
+        {
+          "source": "MIT DCI",
+          "target": "Wladimir J. van der Laan",
+          "value": 1124
+        },
+        {
+          "source": "Wladimir J. van der Laan",
+          "target": "Build & CI",
+          "value": 186
+        },
+        {
+          "source": "Wladimir J. van der Laan",
+          "target": "Consensus",
+          "value": 14
+        },
+        {
+          "source": "Wladimir J. van der Laan",
+          "target": "Database",
+          "value": 3
+        },
+        {
+          "source": "Wladimir J. van der Laan",
+          "target": "Documentation",
+          "value": 154
+        },
+        {
+          "source": "Wladimir J. van der Laan",
+          "target": "GUI",
+          "value": 22
+        },
+        {
+          "source": "Wladimir J. van der Laan",
+          "target": "Mempool",
+          "value": 10
+        },
+        {
+          "source": "Wladimir J. van der Laan",
+          "target": "Node & RPC",
+          "value": 58
+        },
+        {
+          "source": "Wladimir J. van der Laan",
+          "target": "P2P Network",
+          "value": 131
+        },
+        {
+          "source": "Wladimir J. van der Laan",
+          "target": "Script",
+          "value": 90
+        },
+        {
+          "source": "Wladimir J. van der Laan",
+          "target": "Tests",
+          "value": 174
+        },
+        {
+          "source": "Wladimir J. van der Laan",
+          "target": "Utilities",
+          "value": 226
+        },
+        {
+          "source": "Wladimir J. van der Laan",
+          "target": "Wallet",
+          "value": 56
+        },
+        {
+          "source": "MIT DCI",
+          "target": "Cory Fields",
+          "value": 36
+        },
+        {
+          "source": "Cory Fields",
+          "target": "Build & CI",
+          "value": 12
+        },
+        {
+          "source": "Cory Fields",
+          "target": "Consensus",
+          "value": 1
+        },
+        {
+          "source": "Cory Fields",
+          "target": "GUI",
+          "value": 2
+        },
+        {
+          "source": "Cory Fields",
+          "target": "Node & RPC",
+          "value": 5
+        },
+        {
+          "source": "Cory Fields",
+          "target": "P2P Network",
+          "value": 1
+        },
+        {
+          "source": "Cory Fields",
+          "target": "Tests",
+          "value": 5
+        },
+        {
+          "source": "Cory Fields",
+          "target": "Utilities",
+          "value": 7
+        },
+        {
+          "source": "Cory Fields",
+          "target": "Wallet",
+          "value": 3
+        },
+        {
+          "source": "Chaincode Labs",
+          "target": "Marco Falke",
+          "value": 4919
+        },
+        {
+          "source": "Marco Falke",
+          "target": "Build & CI",
+          "value": 145
+        },
+        {
+          "source": "Marco Falke",
+          "target": "Consensus",
+          "value": 88
+        },
+        {
+          "source": "Marco Falke",
+          "target": "Cryptography",
+          "value": 1
+        },
+        {
+          "source": "Marco Falke",
+          "target": "Database",
+          "value": 4
+        },
+        {
+          "source": "Marco Falke",
+          "target": "Documentation",
+          "value": 419
+        },
+        {
+          "source": "Marco Falke",
+          "target": "GUI",
+          "value": 16
+        },
+        {
+          "source": "Marco Falke",
+          "target": "Mempool",
+          "value": 30
+        },
+        {
+          "source": "Marco Falke",
+          "target": "Node & RPC",
+          "value": 369
+        },
+        {
+          "source": "Marco Falke",
+          "target": "P2P Network",
+          "value": 217
+        },
+        {
+          "source": "Marco Falke",
+          "target": "Script",
+          "value": 68
+        },
+        {
+          "source": "Marco Falke",
+          "target": "Tests",
+          "value": 2353
+        },
+        {
+          "source": "Marco Falke",
+          "target": "Utilities",
+          "value": 1060
+        },
+        {
+          "source": "Marco Falke",
+          "target": "Wallet",
+          "value": 149
+        },
+        {
+          "source": "Independent",
+          "target": "Samuel Dobson",
+          "value": 148
+        },
+        {
+          "source": "Samuel Dobson",
+          "target": "Build & CI",
+          "value": 9
+        },
+        {
+          "source": "Samuel Dobson",
+          "target": "Consensus",
+          "value": 1
+        },
+        {
+          "source": "Samuel Dobson",
+          "target": "Documentation",
+          "value": 5
+        },
+        {
+          "source": "Samuel Dobson",
+          "target": "GUI",
+          "value": 3
+        },
+        {
+          "source": "Samuel Dobson",
+          "target": "Mempool",
+          "value": 1
+        },
+        {
+          "source": "Samuel Dobson",
+          "target": "Node & RPC",
+          "value": 10
+        },
+        {
+          "source": "Samuel Dobson",
+          "target": "Tests",
+          "value": 24
+        },
+        {
+          "source": "Samuel Dobson",
+          "target": "Utilities",
+          "value": 23
+        },
+        {
+          "source": "Samuel Dobson",
+          "target": "Wallet",
+          "value": 72
+        },
+        {
+          "source": "Brink",
+          "target": "Michael Ford",
+          "value": 12000
+        },
+        {
+          "source": "Michael Ford",
+          "target": "Build & CI",
+          "value": 2905
+        },
+        {
+          "source": "Michael Ford",
+          "target": "Consensus",
+          "value": 56
+        },
+        {
+          "source": "Michael Ford",
+          "target": "Cryptography",
+          "value": 7
+        },
+        {
+          "source": "Michael Ford",
+          "target": "Database",
+          "value": 2
+        },
+        {
+          "source": "Michael Ford",
+          "target": "Documentation",
+          "value": 1647
+        },
+        {
+          "source": "Michael Ford",
+          "target": "GUI",
+          "value": 83
+        },
+        {
+          "source": "Michael Ford",
+          "target": "Mempool",
+          "value": 42
+        },
+        {
+          "source": "Michael Ford",
+          "target": "Node & RPC",
+          "value": 293
+        },
+        {
+          "source": "Michael Ford",
+          "target": "P2P Network",
+          "value": 420
+        },
+        {
+          "source": "Michael Ford",
+          "target": "Script",
+          "value": 341
+        },
+        {
+          "source": "Michael Ford",
+          "target": "Tests",
+          "value": 4221
+        },
+        {
+          "source": "Michael Ford",
+          "target": "Utilities",
+          "value": 1687
+        },
+        {
+          "source": "Michael Ford",
+          "target": "Wallet",
+          "value": 296
+        },
+        {
+          "source": "Brink",
+          "target": "Hennadii Stepanov",
+          "value": 2120
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "Build & CI",
+          "value": 557
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "Consensus",
+          "value": 28
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "Cryptography",
+          "value": 14
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "Database",
+          "value": 4
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "Documentation",
+          "value": 137
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "GUI",
+          "value": 181
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "Mempool",
+          "value": 11
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "Node & RPC",
+          "value": 44
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "P2P Network",
+          "value": 21
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "Script",
+          "value": 17
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "Tests",
+          "value": 441
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "Utilities",
+          "value": 542
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "Wallet",
+          "value": 123
+        },
+        {
+          "source": "Localhost_Research",
+          "target": "Ava Chow",
+          "value": 4481
+        },
+        {
+          "source": "Ava Chow",
+          "target": "Build & CI",
+          "value": 133
+        },
+        {
+          "source": "Ava Chow",
+          "target": "Consensus",
+          "value": 48
+        },
+        {
+          "source": "Ava Chow",
+          "target": "Documentation",
+          "value": 322
+        },
+        {
+          "source": "Ava Chow",
+          "target": "GUI",
+          "value": 35
+        },
+        {
+          "source": "Ava Chow",
+          "target": "Mempool",
+          "value": 24
+        },
+        {
+          "source": "Ava Chow",
+          "target": "Node & RPC",
+          "value": 427
+        },
+        {
+          "source": "Ava Chow",
+          "target": "P2P Network",
+          "value": 325
+        },
+        {
+          "source": "Ava Chow",
+          "target": "Script",
+          "value": 139
+        },
+        {
+          "source": "Ava Chow",
+          "target": "Tests",
+          "value": 1436
+        },
+        {
+          "source": "Ava Chow",
+          "target": "Utilities",
+          "value": 636
+        },
+        {
+          "source": "Ava Chow",
+          "target": "Wallet",
+          "value": 956
+        },
+        {
+          "source": "Brink",
+          "target": "Gloria Zhao",
+          "value": 1493
+        },
+        {
+          "source": "Gloria Zhao",
+          "target": "Build & CI",
+          "value": 21
+        },
+        {
+          "source": "Gloria Zhao",
+          "target": "Consensus",
+          "value": 57
+        },
+        {
+          "source": "Gloria Zhao",
+          "target": "Documentation",
+          "value": 174
+        },
+        {
+          "source": "Gloria Zhao",
+          "target": "Mempool",
+          "value": 105
+        },
+        {
+          "source": "Gloria Zhao",
+          "target": "Node & RPC",
+          "value": 111
+        },
+        {
+          "source": "Gloria Zhao",
+          "target": "P2P Network",
+          "value": 130
+        },
+        {
+          "source": "Gloria Zhao",
+          "target": "Script",
+          "value": 30
+        },
+        {
+          "source": "Gloria Zhao",
+          "target": "Tests",
+          "value": 536
+        },
+        {
+          "source": "Gloria Zhao",
+          "target": "Utilities",
+          "value": 233
+        },
+        {
+          "source": "Gloria Zhao",
+          "target": "Wallet",
+          "value": 96
+        },
+        {
+          "source": "Chaincode Labs",
+          "target": "Ryan Ofsky",
+          "value": 861
+        },
+        {
+          "source": "Ryan Ofsky",
+          "target": "Build & CI",
+          "value": 68
+        },
+        {
+          "source": "Ryan Ofsky",
+          "target": "Consensus",
+          "value": 34
+        },
+        {
+          "source": "Ryan Ofsky",
+          "target": "Database",
+          "value": 1
+        },
+        {
+          "source": "Ryan Ofsky",
+          "target": "Documentation",
+          "value": 57
+        },
+        {
+          "source": "Ryan Ofsky",
+          "target": "GUI",
+          "value": 8
+        },
+        {
+          "source": "Ryan Ofsky",
+          "target": "Mempool",
+          "value": 2
+        },
+        {
+          "source": "Ryan Ofsky",
+          "target": "Node & RPC",
+          "value": 96
+        },
+        {
+          "source": "Ryan Ofsky",
+          "target": "P2P Network",
+          "value": 43
+        },
+        {
+          "source": "Ryan Ofsky",
+          "target": "Script",
+          "value": 7
+        },
+        {
+          "source": "Ryan Ofsky",
+          "target": "Tests",
+          "value": 258
+        },
+        {
+          "source": "Ryan Ofsky",
+          "target": "Utilities",
+          "value": 195
+        },
+        {
+          "source": "Ryan Ofsky",
+          "target": "Wallet",
+          "value": 92
+        },
+        {
+          "source": "Spiral",
+          "target": "Sebastian Kung",
+          "value": 1054
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "Build & CI",
+          "value": 53
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "Consensus",
+          "value": 99
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "Cryptography",
+          "value": 2
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "Database",
+          "value": 16
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "Documentation",
+          "value": 62
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "GUI",
+          "value": 11
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "Mempool",
+          "value": 14
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "Node & RPC",
+          "value": 116
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "P2P Network",
+          "value": 46
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "Script",
+          "value": 19
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "Tests",
+          "value": 319
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "Utilities",
+          "value": 226
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "Wallet",
+          "value": 71
+        }
+      ]
+    },
+    "all": {
+      "nodes": [
+        {
+          "name": "Independent",
+          "category": 0
+        },
+        {
+          "name": "Gavin Andresen",
+          "category": 1
+        },
+        {
+          "name": "Build & CI",
+          "category": 2
+        },
+        {
+          "name": "Consensus",
+          "category": 2
+        },
+        {
+          "name": "Database",
+          "category": 2
+        },
+        {
+          "name": "Documentation",
+          "category": 2
+        },
+        {
+          "name": "GUI",
+          "category": 2
+        },
+        {
+          "name": "Mempool",
+          "category": 2
+        },
+        {
+          "name": "Node & RPC",
+          "category": 2
+        },
+        {
+          "name": "P2P Network",
+          "category": 2
+        },
+        {
+          "name": "Tests",
+          "category": 2
+        },
+        {
+          "name": "Utilities",
+          "category": 2
+        },
+        {
+          "name": "Wallet",
+          "category": 2
+        },
+        {
+          "name": "Chris Moore",
+          "category": 1
+        },
+        {
+          "name": "Chaincode Labs",
+          "category": 0
+        },
+        {
+          "name": "Pieter Wuille",
+          "category": 1
+        },
+        {
+          "name": "Cryptography",
+          "category": 2
+        },
+        {
+          "name": "Script",
+          "category": 2
+        },
+        {
+          "name": "Jeff Garzik",
+          "category": 1
+        },
+        {
+          "name": "MIT DCI",
+          "category": 0
+        },
+        {
+          "name": "Wladimir J. van der Laan",
+          "category": 1
+        },
+        {
+          "name": "Nils Schneider",
+          "category": 1
+        },
+        {
+          "name": "Gregory Maxwell",
+          "category": 1
+        },
+        {
+          "name": "Cory Fields",
+          "category": 1
+        },
+        {
+          "name": "Marathon",
+          "category": 0
+        },
+        {
+          "name": "Jonas Schnelli",
+          "category": 1
+        },
+        {
+          "name": "Marco Falke",
+          "category": 1
+        },
+        {
+          "name": "Samuel Dobson",
+          "category": 1
+        },
+        {
+          "name": "Brink",
+          "category": 0
+        },
+        {
+          "name": "Michael Ford",
+          "category": 1
+        },
+        {
+          "name": "Hennadii Stepanov",
+          "category": 1
+        },
+        {
+          "name": "Localhost_Research",
+          "category": 0
+        },
+        {
+          "name": "Ava Chow",
+          "category": 1
+        },
+        {
+          "name": "Gloria Zhao",
+          "category": 1
+        },
+        {
+          "name": "Ryan Ofsky",
+          "category": 1
+        },
+        {
+          "name": "Spiral",
+          "category": 0
+        },
+        {
+          "name": "Sebastian Kung",
+          "category": 1
+        }
+      ],
+      "links": [
+        {
+          "source": "Independent",
+          "target": "Gavin Andresen",
+          "value": 891
+        },
+        {
+          "source": "Gavin Andresen",
+          "target": "Build & CI",
+          "value": 75
+        },
+        {
+          "source": "Gavin Andresen",
+          "target": "Consensus",
+          "value": 4
+        },
+        {
+          "source": "Gavin Andresen",
+          "target": "Database",
+          "value": 1
+        },
+        {
+          "source": "Gavin Andresen",
+          "target": "Documentation",
+          "value": 72
+        },
+        {
+          "source": "Gavin Andresen",
+          "target": "GUI",
+          "value": 43
+        },
+        {
+          "source": "Gavin Andresen",
+          "target": "Mempool",
+          "value": 7
+        },
+        {
+          "source": "Gavin Andresen",
+          "target": "Node & RPC",
+          "value": 58
+        },
+        {
+          "source": "Gavin Andresen",
+          "target": "P2P Network",
+          "value": 28
+        },
+        {
+          "source": "Gavin Andresen",
+          "target": "Tests",
+          "value": 106
+        },
+        {
+          "source": "Gavin Andresen",
+          "target": "Utilities",
+          "value": 471
+        },
+        {
+          "source": "Gavin Andresen",
+          "target": "Wallet",
+          "value": 26
+        },
+        {
+          "source": "Independent",
+          "target": "Chris Moore",
+          "value": 5
+        },
+        {
+          "source": "Chris Moore",
+          "target": "Utilities",
+          "value": 5
+        },
+        {
+          "source": "Chaincode Labs",
+          "target": "Pieter Wuille",
+          "value": 3388
+        },
+        {
+          "source": "Pieter Wuille",
+          "target": "Build & CI",
+          "value": 157
+        },
+        {
+          "source": "Pieter Wuille",
+          "target": "Consensus",
+          "value": 139
+        },
+        {
+          "source": "Pieter Wuille",
+          "target": "Cryptography",
+          "value": 40
+        },
+        {
+          "source": "Pieter Wuille",
+          "target": "Database",
+          "value": 17
+        },
+        {
+          "source": "Pieter Wuille",
+          "target": "Documentation",
+          "value": 159
+        },
+        {
+          "source": "Pieter Wuille",
+          "target": "GUI",
+          "value": 72
+        },
+        {
+          "source": "Pieter Wuille",
+          "target": "Mempool",
+          "value": 86
+        },
+        {
+          "source": "Pieter Wuille",
+          "target": "Node & RPC",
+          "value": 239
+        },
+        {
+          "source": "Pieter Wuille",
+          "target": "P2P Network",
+          "value": 372
+        },
+        {
+          "source": "Pieter Wuille",
+          "target": "Script",
+          "value": 189
+        },
+        {
+          "source": "Pieter Wuille",
+          "target": "Tests",
+          "value": 494
+        },
+        {
+          "source": "Pieter Wuille",
+          "target": "Utilities",
+          "value": 1209
+        },
+        {
+          "source": "Pieter Wuille",
+          "target": "Wallet",
+          "value": 215
+        },
+        {
+          "source": "Independent",
+          "target": "Jeff Garzik",
+          "value": 384
+        },
+        {
+          "source": "Jeff Garzik",
+          "target": "Build & CI",
+          "value": 33
+        },
+        {
+          "source": "Jeff Garzik",
+          "target": "Consensus",
+          "value": 1
+        },
+        {
+          "source": "Jeff Garzik",
+          "target": "Documentation",
+          "value": 23
+        },
+        {
+          "source": "Jeff Garzik",
+          "target": "GUI",
+          "value": 16
+        },
+        {
+          "source": "Jeff Garzik",
+          "target": "Mempool",
+          "value": 1
+        },
+        {
+          "source": "Jeff Garzik",
+          "target": "Node & RPC",
+          "value": 29
+        },
+        {
+          "source": "Jeff Garzik",
+          "target": "P2P Network",
+          "value": 32
+        },
+        {
+          "source": "Jeff Garzik",
+          "target": "Tests",
+          "value": 25
+        },
+        {
+          "source": "Jeff Garzik",
+          "target": "Utilities",
+          "value": 223
+        },
+        {
+          "source": "Jeff Garzik",
+          "target": "Wallet",
+          "value": 1
+        },
+        {
+          "source": "MIT DCI",
+          "target": "Wladimir J. van der Laan",
+          "value": 17773
+        },
+        {
+          "source": "Wladimir J. van der Laan",
+          "target": "Build & CI",
+          "value": 1910
+        },
+        {
+          "source": "Wladimir J. van der Laan",
+          "target": "Consensus",
+          "value": 159
+        },
+        {
+          "source": "Wladimir J. van der Laan",
+          "target": "Cryptography",
+          "value": 4
+        },
+        {
+          "source": "Wladimir J. van der Laan",
+          "target": "Database",
+          "value": 11
+        },
+        {
+          "source": "Wladimir J. van der Laan",
+          "target": "Documentation",
+          "value": 2818
+        },
+        {
+          "source": "Wladimir J. van der Laan",
+          "target": "GUI",
+          "value": 1778
+        },
+        {
+          "source": "Wladimir J. van der Laan",
+          "target": "Mempool",
+          "value": 189
+        },
+        {
+          "source": "Wladimir J. van der Laan",
+          "target": "Node & RPC",
+          "value": 1340
+        },
+        {
+          "source": "Wladimir J. van der Laan",
+          "target": "P2P Network",
+          "value": 1549
+        },
+        {
+          "source": "Wladimir J. van der Laan",
+          "target": "Script",
+          "value": 604
+        },
+        {
+          "source": "Wladimir J. van der Laan",
+          "target": "Tests",
+          "value": 2650
+        },
+        {
+          "source": "Wladimir J. van der Laan",
+          "target": "Utilities",
+          "value": 3514
+        },
+        {
+          "source": "Wladimir J. van der Laan",
+          "target": "Wallet",
+          "value": 1247
+        },
+        {
+          "source": "Independent",
+          "target": "Nils Schneider",
+          "value": 26
+        },
+        {
+          "source": "Nils Schneider",
+          "target": "Build & CI",
+          "value": 1
+        },
+        {
+          "source": "Nils Schneider",
+          "target": "Documentation",
+          "value": 3
+        },
+        {
+          "source": "Nils Schneider",
+          "target": "GUI",
+          "value": 10
+        },
+        {
+          "source": "Nils Schneider",
+          "target": "Node & RPC",
+          "value": 1
+        },
+        {
+          "source": "Nils Schneider",
+          "target": "Tests",
+          "value": 1
+        },
+        {
+          "source": "Nils Schneider",
+          "target": "Utilities",
+          "value": 10
+        },
+        {
+          "source": "Independent",
+          "target": "Gregory Maxwell",
+          "value": 209
+        },
+        {
+          "source": "Gregory Maxwell",
+          "target": "Build & CI",
+          "value": 2
+        },
+        {
+          "source": "Gregory Maxwell",
+          "target": "Consensus",
+          "value": 3
+        },
+        {
+          "source": "Gregory Maxwell",
+          "target": "Documentation",
+          "value": 6
+        },
+        {
+          "source": "Gregory Maxwell",
+          "target": "GUI",
+          "value": 3
+        },
+        {
+          "source": "Gregory Maxwell",
+          "target": "Mempool",
+          "value": 6
+        },
+        {
+          "source": "Gregory Maxwell",
+          "target": "Node & RPC",
+          "value": 43
+        },
+        {
+          "source": "Gregory Maxwell",
+          "target": "P2P Network",
+          "value": 35
+        },
+        {
+          "source": "Gregory Maxwell",
+          "target": "Script",
+          "value": 5
+        },
+        {
+          "source": "Gregory Maxwell",
+          "target": "Tests",
+          "value": 11
+        },
+        {
+          "source": "Gregory Maxwell",
+          "target": "Utilities",
+          "value": 87
+        },
+        {
+          "source": "Gregory Maxwell",
+          "target": "Wallet",
+          "value": 8
+        },
+        {
+          "source": "MIT DCI",
+          "target": "Cory Fields",
+          "value": 837
+        },
+        {
+          "source": "Cory Fields",
+          "target": "Build & CI",
+          "value": 239
+        },
+        {
+          "source": "Cory Fields",
+          "target": "Consensus",
+          "value": 16
+        },
+        {
+          "source": "Cory Fields",
+          "target": "Cryptography",
+          "value": 3
+        },
+        {
+          "source": "Cory Fields",
+          "target": "Documentation",
+          "value": 15
+        },
+        {
+          "source": "Cory Fields",
+          "target": "GUI",
+          "value": 36
+        },
+        {
+          "source": "Cory Fields",
+          "target": "Mempool",
+          "value": 4
+        },
+        {
+          "source": "Cory Fields",
+          "target": "Node & RPC",
+          "value": 61
+        },
+        {
+          "source": "Cory Fields",
+          "target": "P2P Network",
+          "value": 131
+        },
+        {
+          "source": "Cory Fields",
+          "target": "Script",
+          "value": 11
+        },
+        {
+          "source": "Cory Fields",
+          "target": "Tests",
+          "value": 75
+        },
+        {
+          "source": "Cory Fields",
+          "target": "Utilities",
+          "value": 222
+        },
+        {
+          "source": "Cory Fields",
+          "target": "Wallet",
+          "value": 24
+        },
+        {
+          "source": "Marathon",
+          "target": "Jonas Schnelli",
+          "value": 1228
+        },
+        {
+          "source": "Jonas Schnelli",
+          "target": "Build & CI",
+          "value": 67
+        },
+        {
+          "source": "Jonas Schnelli",
+          "target": "Consensus",
+          "value": 14
+        },
+        {
+          "source": "Jonas Schnelli",
+          "target": "Cryptography",
+          "value": 4
+        },
+        {
+          "source": "Jonas Schnelli",
+          "target": "Documentation",
+          "value": 71
+        },
+        {
+          "source": "Jonas Schnelli",
+          "target": "GUI",
+          "value": 636
+        },
+        {
+          "source": "Jonas Schnelli",
+          "target": "Mempool",
+          "value": 1
+        },
+        {
+          "source": "Jonas Schnelli",
+          "target": "Node & RPC",
+          "value": 81
+        },
+        {
+          "source": "Jonas Schnelli",
+          "target": "P2P Network",
+          "value": 36
+        },
+        {
+          "source": "Jonas Schnelli",
+          "target": "Script",
+          "value": 10
+        },
+        {
+          "source": "Jonas Schnelli",
+          "target": "Tests",
+          "value": 66
+        },
+        {
+          "source": "Jonas Schnelli",
+          "target": "Utilities",
+          "value": 106
+        },
+        {
+          "source": "Jonas Schnelli",
+          "target": "Wallet",
+          "value": 136
+        },
+        {
+          "source": "Chaincode Labs",
+          "target": "Marco Falke",
+          "value": 16069
+        },
+        {
+          "source": "Marco Falke",
+          "target": "Build & CI",
+          "value": 667
+        },
+        {
+          "source": "Marco Falke",
+          "target": "Consensus",
+          "value": 215
+        },
+        {
+          "source": "Marco Falke",
+          "target": "Cryptography",
+          "value": 3
+        },
+        {
+          "source": "Marco Falke",
+          "target": "Database",
+          "value": 9
+        },
+        {
+          "source": "Marco Falke",
+          "target": "Documentation",
+          "value": 1693
+        },
+        {
+          "source": "Marco Falke",
+          "target": "GUI",
+          "value": 240
+        },
+        {
+          "source": "Marco Falke",
+          "target": "Mempool",
+          "value": 90
+        },
+        {
+          "source": "Marco Falke",
+          "target": "Node & RPC",
+          "value": 1037
+        },
+        {
+          "source": "Marco Falke",
+          "target": "P2P Network",
+          "value": 574
+        },
+        {
+          "source": "Marco Falke",
+          "target": "Script",
+          "value": 313
+        },
+        {
+          "source": "Marco Falke",
+          "target": "Tests",
+          "value": 8077
+        },
+        {
+          "source": "Marco Falke",
+          "target": "Utilities",
+          "value": 2520
+        },
+        {
+          "source": "Marco Falke",
+          "target": "Wallet",
+          "value": 631
+        },
+        {
+          "source": "Independent",
+          "target": "Samuel Dobson",
+          "value": 562
+        },
+        {
+          "source": "Samuel Dobson",
+          "target": "Build & CI",
+          "value": 19
+        },
+        {
+          "source": "Samuel Dobson",
+          "target": "Consensus",
+          "value": 1
+        },
+        {
+          "source": "Samuel Dobson",
+          "target": "Documentation",
+          "value": 22
+        },
+        {
+          "source": "Samuel Dobson",
+          "target": "GUI",
+          "value": 9
+        },
+        {
+          "source": "Samuel Dobson",
+          "target": "Mempool",
+          "value": 1
+        },
+        {
+          "source": "Samuel Dobson",
+          "target": "Node & RPC",
+          "value": 55
+        },
+        {
+          "source": "Samuel Dobson",
+          "target": "Script",
+          "value": 7
+        },
+        {
+          "source": "Samuel Dobson",
+          "target": "Tests",
+          "value": 37
+        },
+        {
+          "source": "Samuel Dobson",
+          "target": "Utilities",
+          "value": 47
+        },
+        {
+          "source": "Samuel Dobson",
+          "target": "Wallet",
+          "value": 364
+        },
+        {
+          "source": "Brink",
+          "target": "Michael Ford",
+          "value": 14911
+        },
+        {
+          "source": "Michael Ford",
+          "target": "Build & CI",
+          "value": 3639
+        },
+        {
+          "source": "Michael Ford",
+          "target": "Consensus",
+          "value": 85
+        },
+        {
+          "source": "Michael Ford",
+          "target": "Cryptography",
+          "value": 8
+        },
+        {
+          "source": "Michael Ford",
+          "target": "Database",
+          "value": 2
+        },
+        {
+          "source": "Michael Ford",
+          "target": "Documentation",
+          "value": 2202
+        },
+        {
+          "source": "Michael Ford",
+          "target": "GUI",
+          "value": 271
+        },
+        {
+          "source": "Michael Ford",
+          "target": "Mempool",
+          "value": 46
+        },
+        {
+          "source": "Michael Ford",
+          "target": "Node & RPC",
+          "value": 411
+        },
+        {
+          "source": "Michael Ford",
+          "target": "P2P Network",
+          "value": 568
+        },
+        {
+          "source": "Michael Ford",
+          "target": "Script",
+          "value": 469
+        },
+        {
+          "source": "Michael Ford",
+          "target": "Tests",
+          "value": 4757
+        },
+        {
+          "source": "Michael Ford",
+          "target": "Utilities",
+          "value": 2031
+        },
+        {
+          "source": "Michael Ford",
+          "target": "Wallet",
+          "value": 422
+        },
+        {
+          "source": "Brink",
+          "target": "Hennadii Stepanov",
+          "value": 2237
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "Build & CI",
+          "value": 578
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "Consensus",
+          "value": 29
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "Cryptography",
+          "value": 14
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "Database",
+          "value": 4
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "Documentation",
+          "value": 140
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "GUI",
+          "value": 220
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "Mempool",
+          "value": 14
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "Node & RPC",
+          "value": 45
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "P2P Network",
+          "value": 33
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "Script",
+          "value": 17
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "Tests",
+          "value": 454
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "Utilities",
+          "value": 563
+        },
+        {
+          "source": "Hennadii Stepanov",
+          "target": "Wallet",
+          "value": 126
+        },
+        {
+          "source": "Localhost_Research",
+          "target": "Ava Chow",
+          "value": 4481
+        },
+        {
+          "source": "Ava Chow",
+          "target": "Build & CI",
+          "value": 133
+        },
+        {
+          "source": "Ava Chow",
+          "target": "Consensus",
+          "value": 48
+        },
+        {
+          "source": "Ava Chow",
+          "target": "Documentation",
+          "value": 322
+        },
+        {
+          "source": "Ava Chow",
+          "target": "GUI",
+          "value": 35
+        },
+        {
+          "source": "Ava Chow",
+          "target": "Mempool",
+          "value": 24
+        },
+        {
+          "source": "Ava Chow",
+          "target": "Node & RPC",
+          "value": 427
+        },
+        {
+          "source": "Ava Chow",
+          "target": "P2P Network",
+          "value": 325
+        },
+        {
+          "source": "Ava Chow",
+          "target": "Script",
+          "value": 139
+        },
+        {
+          "source": "Ava Chow",
+          "target": "Tests",
+          "value": 1436
+        },
+        {
+          "source": "Ava Chow",
+          "target": "Utilities",
+          "value": 636
+        },
+        {
+          "source": "Ava Chow",
+          "target": "Wallet",
+          "value": 956
+        },
+        {
+          "source": "Brink",
+          "target": "Gloria Zhao",
+          "value": 1493
+        },
+        {
+          "source": "Gloria Zhao",
+          "target": "Build & CI",
+          "value": 21
+        },
+        {
+          "source": "Gloria Zhao",
+          "target": "Consensus",
+          "value": 57
+        },
+        {
+          "source": "Gloria Zhao",
+          "target": "Documentation",
+          "value": 174
+        },
+        {
+          "source": "Gloria Zhao",
+          "target": "Mempool",
+          "value": 105
+        },
+        {
+          "source": "Gloria Zhao",
+          "target": "Node & RPC",
+          "value": 111
+        },
+        {
+          "source": "Gloria Zhao",
+          "target": "P2P Network",
+          "value": 130
+        },
+        {
+          "source": "Gloria Zhao",
+          "target": "Script",
+          "value": 30
+        },
+        {
+          "source": "Gloria Zhao",
+          "target": "Tests",
+          "value": 536
+        },
+        {
+          "source": "Gloria Zhao",
+          "target": "Utilities",
+          "value": 233
+        },
+        {
+          "source": "Gloria Zhao",
+          "target": "Wallet",
+          "value": 96
+        },
+        {
+          "source": "Chaincode Labs",
+          "target": "Ryan Ofsky",
+          "value": 861
+        },
+        {
+          "source": "Ryan Ofsky",
+          "target": "Build & CI",
+          "value": 68
+        },
+        {
+          "source": "Ryan Ofsky",
+          "target": "Consensus",
+          "value": 34
+        },
+        {
+          "source": "Ryan Ofsky",
+          "target": "Database",
+          "value": 1
+        },
+        {
+          "source": "Ryan Ofsky",
+          "target": "Documentation",
+          "value": 57
+        },
+        {
+          "source": "Ryan Ofsky",
+          "target": "GUI",
+          "value": 8
+        },
+        {
+          "source": "Ryan Ofsky",
+          "target": "Mempool",
+          "value": 2
+        },
+        {
+          "source": "Ryan Ofsky",
+          "target": "Node & RPC",
+          "value": 96
+        },
+        {
+          "source": "Ryan Ofsky",
+          "target": "P2P Network",
+          "value": 43
+        },
+        {
+          "source": "Ryan Ofsky",
+          "target": "Script",
+          "value": 7
+        },
+        {
+          "source": "Ryan Ofsky",
+          "target": "Tests",
+          "value": 258
+        },
+        {
+          "source": "Ryan Ofsky",
+          "target": "Utilities",
+          "value": 195
+        },
+        {
+          "source": "Ryan Ofsky",
+          "target": "Wallet",
+          "value": 92
+        },
+        {
+          "source": "Spiral",
+          "target": "Sebastian Kung",
+          "value": 1055
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "Build & CI",
+          "value": 53
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "Consensus",
+          "value": 99
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "Cryptography",
+          "value": 2
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "Database",
+          "value": 16
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "Documentation",
+          "value": 63
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "GUI",
+          "value": 11
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "Mempool",
+          "value": 14
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "Node & RPC",
+          "value": 116
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "P2P Network",
+          "value": 46
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "Script",
+          "value": 19
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "Tests",
+          "value": 319
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "Utilities",
+          "value": 226
+        },
+        {
+          "source": "Sebastian Kung",
+          "target": "Wallet",
+          "value": 71
+        }
+      ]
+    }
+  }
+}
