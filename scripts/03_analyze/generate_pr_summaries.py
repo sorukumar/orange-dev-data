@@ -103,9 +103,6 @@ def run_summarizer():
 
     print(f"Found {len(api_keys)} API Keys loaded.")
 
-    df = pd.read_parquet(INPUT_PR_PARQUET)
-    df = df[(df['repository_name'] == 'bitcoin/bitcoin') & (df['milestone'].notna())]
-    
     pr_cache = load_cache(CACHE_FILE)
     
     import re
@@ -117,6 +114,51 @@ def run_summarizer():
         while len(ints) < 3:
             ints.append(0)
         return tuple(ints[:3])
+        
+    def is_high_signal(labels_str, is_recent):
+        if pd.isna(labels_str):
+            return False
+        labels = str(labels_str).lower()
+        if any(drop in labels for drop in ['test', 'doc', 'refactor', 'build', 'ci']):
+            return False
+        if is_recent:
+            return any(keep in labels for keep in ['consensus', 'p2p', 'rpc', 'rest', 'zmq', 'wallet', 'mempool', 'gui', 'policy'])
+        else:
+            return any(keep in labels for keep in ['consensus', 'cryptography', 'p2p'])
+
+    df = pd.read_parquet(INPUT_PR_PARQUET)
+    df = df[(df['repository_name'] == 'bitcoin/bitcoin') & (df['merged_at'].notna())].copy()
+    
+    tagged_df = df[df['milestone'].notna()]
+    cutoff_dates = {}
+    for ms, group in tagged_df.groupby('milestone'):
+        cutoff_dates[ms] = pd.to_datetime(group['merged_at'], utc=True).max()
+        
+    sorted_cutoffs = sorted([(ms, date) for ms, date in cutoff_dates.items() if pd.notna(date)], key=lambda x: parse_version(x[0]))
+    
+    def infer_milestone(row):
+        if pd.notna(row['milestone']):
+            return row['milestone']
+        merged = pd.to_datetime(row['merged_at'], utc=True)
+        if pd.isna(merged):
+            return None
+        inferred_ms = None
+        for ms, cutoff in sorted_cutoffs:
+            if merged <= cutoff:
+                inferred_ms = ms
+                break
+        if not inferred_ms and sorted_cutoffs:
+            inferred_ms = sorted_cutoffs[-1][0]
+        
+        if inferred_ms:
+            ms_version = parse_version(inferred_ms)
+            is_recent = ms_version >= (24, 0, 0)
+            if not is_high_signal(row['labels'], is_recent):
+                return None
+        return inferred_ms
+
+    df['milestone'] = df.apply(infer_milestone, axis=1)
+    df = df[df['milestone'].notna()]
         
     unique_milestones = list(df['milestone'].unique())
     target_milestones = sorted(unique_milestones, key=parse_version, reverse=True)

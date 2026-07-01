@@ -320,8 +320,13 @@ def main():
     run("python3 scripts/03_analyze/unify_contributors.py", cwd=root_dir)
     count_step("After unify_contributors — grand join complete", root_dir)
 
+    print("\n--- PHASE 3.5: LLM Summarization ---")
+    run("python3 scripts/03_analyze/generate_pr_summaries.py", cwd=root_dir)
+    run("python3 scripts/03_analyze/generate_release_highlights.py", cwd=root_dir)
+
     # PHASE 4: Delivery (Enriched -> Output)
     print("\n--- PHASE 4: Artifact Generation ---")
+    run("python3 scripts/03_analyze/releases.py", cwd=root_dir)
     run("python3 scripts/04_deliver/generate_regional_evolution.py", cwd=root_dir)
     run("python3 scripts/04_deliver/registry.py", cwd=root_dir)
     run("python3 scripts/04_deliver/tracker_artifacts.py", cwd=root_dir)

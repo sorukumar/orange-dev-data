@@ -89,6 +89,7 @@ def main():
 
     # PHASE 4: Delivery (Enriched -> Output)
     print("\n--- PHASE 4: Artifact Generation ---")
+    run("python3 scripts/03_analyze/releases.py", cwd=root_dir)
     run("python3 scripts/04_deliver/registry.py", cwd=root_dir)
     run("python3 scripts/04_deliver/tracker_artifacts.py", cwd=root_dir)
     run("python3 scripts/04_deliver/maintainers.py", cwd=root_dir)

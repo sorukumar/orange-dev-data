@@ -2,25 +2,48 @@ import os
 import json
 import time
 from google import genai
+from google.genai.errors import APIError
 import sys
 
 # Add parent directory to path so we can import utils
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
 from scripts.utils.twib_data import get_weekly_activity
 
-def get_llm_summary(client, text, instruction):
-    prompt = f"You are a Bitcoin Core developer. {instruction}\n\nContext:\n{text}\n\nOutput only the summary, no markdown headers or extra fluff."
-    for attempt in range(3):
-        try:
-            response = client.models.generate_content(model='gemini-2.5-flash', contents=prompt)
-            return response.text.strip()
-        except Exception as e:
-            if attempt == 2:
-                return f"*(Failed to summarize after retries: {e})*"
-            print(f"Rate limit hit. Retrying in {2 ** attempt * 5} seconds... ({e})")
-            time.sleep(2 ** attempt * 5)
+def _call_gemini(api_keys, prompt, is_json=False):
+    for key_index, current_key in enumerate(api_keys):
+        client = genai.Client(api_key=current_key)
+        for attempt in range(2):
+            try:
+                response = client.models.generate_content(model='gemini-2.5-flash', contents=prompt)
+                text = response.text.strip()
+                if is_json:
+                    if text.startswith("```json"): text = text[7:]
+                    if text.endswith("```"): text = text[:-3]
+                    return json.loads(text.strip())
+                return text
+            except APIError as e:
+                if e.code == 429 or e.code == 404 or e.code == 403:
+                    print(f"Key {key_index + 1} hit {e.code}. Rotating...")
+                    break # try next key
+                print(f"APIError on Key {key_index + 1}: {e}")
+                time.sleep(3)
+            except Exception as e:
+                err_str = str(e)
+                if '429' in err_str or 'RESOURCE_EXHAUSTED' in err_str:
+                    print(f"Key {key_index + 1} hit rate limit. Rotating...")
+                    break
+                print(f"Error on Key {key_index + 1}: {e}")
+                time.sleep(3)
+    return {} if is_json else None
 
-def get_bulk_llm_summaries(client, items_dict, instruction):
+def get_llm_summary(api_keys, text, instruction):
+    prompt = f"You are a Bitcoin Core developer. {instruction}\n\nContext:\n{text}\n\nOutput only the summary, no markdown headers or extra fluff."
+    res = _call_gemini(api_keys, prompt, is_json=False)
+    if not res:
+        return "*(Failed to summarize)*"
+    return res
+
+def get_bulk_llm_summaries(api_keys, items_dict, instruction):
     if not items_dict:
         return {}
         
@@ -32,21 +55,9 @@ You MUST return a valid JSON object where the keys are exactly the keys provided
 Input Data:
 {json.dumps(items_dict, indent=2)}
 """
-    for attempt in range(3):
-        try:
-            response = client.models.generate_content(model='gemini-2.5-flash', contents=prompt)
-            text = response.text.strip()
-            if text.startswith("```json"): text = text[7:]
-            if text.endswith("```"): text = text[:-3]
-            return json.loads(text.strip())
-        except Exception as e:
-            if attempt == 2:
-                print(f"Failed bulk summarize: {e}")
-                return {}
-            print(f"Rate limit hit. Retrying in {2 ** attempt * 5} seconds... ({e})")
-            time.sleep(2 ** attempt * 5)
+    return _call_gemini(api_keys, prompt, is_json=True)
 
-def categorize_misc_prs(client, prs, valid_categories):
+def categorize_misc_prs(api_keys, prs, valid_categories):
     if not prs:
         return {}
     
@@ -61,18 +72,7 @@ You MUST return a valid JSON object where the keys are the PR numbers (as string
 PRs to categorize:
 {json.dumps([{ 'pr_number': str(pr['pr_number']), 'title': pr['title'] } for pr in prs], indent=2)}
 """
-    for attempt in range(3):
-        try:
-            response = client.models.generate_content(model='gemini-2.5-flash', contents=prompt)
-            text = response.text.strip()
-            if text.startswith("```json"): text = text[7:]
-            if text.endswith("```"): text = text[:-3]
-            return json.loads(text.strip())
-        except Exception as e:
-            if attempt == 2:
-                print(f"Failed to categorize: {e}")
-                return {}
-            time.sleep(2 ** attempt * 5)
+    return _call_gemini(api_keys, prompt, is_json=True)
 
 def load_env(root_dir):
     env_path = os.path.join(root_dir, ".env")
@@ -86,13 +86,16 @@ def load_env(root_dir):
 def main():
     root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
     load_env(root_dir)
-    api_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GEMINI_API_KEY_1")
-    if not api_key:
-        print("Error: GEMINI_API_KEY environment variable not set.")
+    
+    api_keys = []
+    for k, v in os.environ.items():
+        if k.startswith("GEMINI_API_KEY") and v.strip():
+            api_keys.append(v.strip())
+            
+    if not api_keys:
+        print("Error: No GEMINI_API_KEY found in environment.")
         return
 
-    client = genai.Client(api_key=api_key)
-    
     print("Fetching weekly data for LLM processing...")
     weekly_data = get_weekly_activity(root_dir, days_back=7)
     
@@ -112,7 +115,7 @@ def main():
     misc_prs = weekly_data.get('categorized_merged_prs', {}).get('🔄 Misc / Other', [])
     if misc_prs:
         print(f"Categorizing {len(misc_prs)} miscellaneous PRs...")
-        new_cats = categorize_misc_prs(client, misc_prs, valid_categories)
+        new_cats = categorize_misc_prs(api_keys, misc_prs, valid_categories)
         if new_cats:
             if "misc_categories" not in cache: cache["misc_categories"] = {}
             cache["misc_categories"].update(new_cats)
@@ -126,8 +129,8 @@ def main():
         tldr_input += f"- Discussed: {thread['subject']}\n"
 
     print("Generating TL;DR summary...")
-    tldr_summary = get_llm_summary(client, tldr_input, "Write 2 bullet points summarizing the most important technical shift or discussion from these events.")
-    if tldr_summary:
+    tldr_summary = get_llm_summary(api_keys, tldr_input, "Write 2 bullet points summarizing the most important technical shift or discussion from these events.")
+    if tldr_summary and tldr_summary != "*(Failed to summarize)*":
         cache["tldr_summary"] = tldr_summary
         with open(cache_path, "w") as f: json.dump(cache, f, indent=2)
 
@@ -157,10 +160,21 @@ def main():
 1. "public_summary": Exactly 1-2 short lines accessible to the general public. Explain exactly what is being done, and focus on the value and benefit of the work rather than just technical details.
 2. "technical_summary": A detailed 4-5 line summary explaining the technical implementation, architectural value, and exactly what needs to be done."""
         
-        new_summaries = get_bulk_llm_summaries(client, items_to_summarize, instruction)
-        for k, v in new_summaries.items():
-            cache[k] = v
-        with open(cache_path, "w") as f: json.dump(cache, f, indent=2)
+        items = list(items_to_summarize.items())
+        for i in range(0, len(items), 10):
+            chunk = dict(items[i:i+10])
+            print(f"Processing chunk {i} to {i+len(chunk)}...")
+            new_summaries = get_bulk_llm_summaries(api_keys, chunk, instruction)
+            
+            if not new_summaries:
+                print("Stopping script due to API limits or failures across all keys.")
+                break
+                
+            for k, v in new_summaries.items():
+                cache[k] = v
+            with open(cache_path, "w") as f: json.dump(cache, f, indent=2)
+            print("Chunk saved successfully.")
+            time.sleep(3)
     else:
         print("No new items to summarize. Cache is fully warmed.")
 

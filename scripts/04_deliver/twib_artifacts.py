@@ -209,7 +209,7 @@ def main():
     os.makedirs(output_dir, exist_ok=True)
     os.makedirs(archive_dir, exist_ok=True)
     
-    today_str = pd.Timestamp.now(tz='UTC').strftime('%Y-%m-%d')
+    today_str = weekly_data['end_date']
     json_filename = os.path.join(output_dir, f"newsletter_{today_str}.json")
     latest_json = os.path.join(output_dir, "latest.json")
     archive_index_file = os.path.join(output_dir, "archive_index.json")
