@@ -176,6 +176,15 @@
         "mara.com"
       ],
       "website": "https://mara.com"
+    },
+    {
+      "id": "bitcoin_foundation",
+      "name": "Bitcoin Foundation",
+      "type": "nonprofit",
+      "domains": [
+        "bitcoinfoundation.org"
+      ],
+      "website": "https://bitcoinfoundation.org"
     }
   ],
   "sponsored_developers": [
@@ -274,6 +283,11 @@
           "sponsor_id": "mit_dci",
           "start_date": null,
           "end_date": null
+        },
+        {
+          "sponsor_id": "bitcoin_foundation",
+          "start_date": "2014-04",
+          "end_date": "2015-04"
         }
       ],
       "github": "laanwj"
@@ -287,6 +301,11 @@
           "sponsor_id": "mit_dci",
           "start_date": null,
           "end_date": null
+        },
+        {
+          "sponsor_id": "bitcoin_foundation",
+          "start_date": "2014-01",
+          "end_date": "2015-04"
         }
       ]
     },
@@ -299,6 +318,11 @@
           "sponsor_id": "spiral",
           "start_date": null,
           "end_date": null
+        },
+        {
+          "sponsor_id": "blockstream",
+          "start_date": "2014-01",
+          "end_date": "historical"
         }
       ]
     },
@@ -470,6 +494,11 @@
           "sponsor_id": "opensats",
           "start_date": null,
           "end_date": null
+        },
+        {
+          "sponsor_id": "blockstream",
+          "start_date": null,
+          "end_date": "historical"
         }
       ]
     },
@@ -876,6 +905,143 @@
           "sponsor_id": "maelstrom",
           "start_date": null,
           "end_date": null
+        }
+      ]
+    },
+    {
+      "canonical_name": "Gregory Maxwell",
+      "notes": "Blockstream Co-founder / CTO",
+      "github": "gmaxwell",
+      "grants": [
+        {
+          "sponsor_id": "blockstream",
+          "start_date": "2014-01",
+          "end_date": "historical"
+        }
+      ]
+    },
+    {
+      "canonical_name": "Mark Friedenbach",
+      "notes": "Blockstream Co-founder",
+      "github": "maaku",
+      "grants": [
+        {
+          "sponsor_id": "blockstream",
+          "start_date": "2014-01",
+          "end_date": "historical"
+        }
+      ]
+    },
+    {
+      "canonical_name": "Jorge Tim\u00f3n",
+      "notes": "Blockstream Co-founder",
+      "github": "jtimon",
+      "grants": [
+        {
+          "sponsor_id": "blockstream",
+          "start_date": "2014-01",
+          "end_date": "historical"
+        }
+      ]
+    },
+    {
+      "canonical_name": "Christian Decker",
+      "notes": "Core Tech Engineer",
+      "github": "cdecker",
+      "grants": [
+        {
+          "sponsor_id": "blockstream",
+          "start_date": null,
+          "end_date": "historical"
+        }
+      ]
+    },
+    {
+      "canonical_name": "Andrew Poelstra",
+      "notes": "Director of Research",
+      "github": "apoelstra",
+      "grants": [
+        {
+          "sponsor_id": "blockstream",
+          "start_date": null,
+          "end_date": "historical"
+        }
+      ]
+    },
+    {
+      "canonical_name": "Russell O'Connor",
+      "notes": "Researcher",
+      "github": "roconnor",
+      "grants": [
+        {
+          "sponsor_id": "blockstream",
+          "start_date": null,
+          "end_date": "historical"
+        }
+      ]
+    },
+    {
+      "canonical_name": "Lisa Neigut",
+      "notes": "Lightning Engineer",
+      "github": "niftynei",
+      "grants": [
+        {
+          "sponsor_id": "blockstream",
+          "start_date": null,
+          "end_date": "historical"
+        }
+      ]
+    },
+    {
+      "canonical_name": "Elichai Turkel",
+      "notes": "Cryptographer",
+      "github": "elichai",
+      "grants": [
+        {
+          "sponsor_id": "blockstream",
+          "start_date": null,
+          "end_date": "historical"
+        }
+      ]
+    },
+    {
+      "canonical_name": "Nadav Ivgi",
+      "notes": "Engineer",
+      "github": "shesek",
+      "grants": [
+        {
+          "sponsor_id": "blockstream",
+          "start_date": null,
+          "end_date": "historical"
+        }
+      ]
+    },
+    {
+      "canonical_name": "Warren Togami",
+      "notes": "VP Engineering",
+      "github": "wtogami",
+      "grants": [
+        {
+          "sponsor_id": "blockstream",
+          "start_date": null,
+          "end_date": "historical"
+        }
+      ]
+    },
+    {
+      "canonical_name": "Gavin Andresen",
+      "notes": "Early Lead Maintainer",
+      "github": "gavinandresen",
+      "grants": [
+        {
+          "sponsor_id": "bitcoin_foundation",
+          "start_date": "2012-09",
+          "end_date": "2015-04"
+        },
+        {
+          "sponsor_id": "mit_dci",
+          "start_date": "2015-04",
+          "end_date": "2016-05"
         }
       ]
     }
