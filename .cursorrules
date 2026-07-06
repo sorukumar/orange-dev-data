@@ -13,3 +13,12 @@
 ## Identity Resolution
 - All contributor metrics must be resolved through `metadata/identities.json`. 
 - Do not use raw names or emails from Git/Social logs in final artifacts.
+
+## Time Boundary (T-1)
+- To prevent partial-day data skew, all time-based metric cutoffs (`now`, `anchor`) must be strictly truncated to the end of the previous day (T-1).
+- Any exported `generated_at` string should also output the T-1 date, and frontends should display "Data as of: [T-1 Date]".
+
+## Core vs Ecosystem Definitions
+- "Core" explicitly means ONLY: `bitcoin/bitcoin`, `bitcoin-core/gui`, and `bitcoin-core/secp256k1`.
+- Because forks share commits, always use a SET-based union of commit hashes across all three Core repos when calculating unique core commits.
+- "Ecosystem" means all other tracked repositories outside of those three.
