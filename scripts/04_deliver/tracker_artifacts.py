@@ -1061,8 +1061,9 @@ class MetricGenerators:
         # Commits resolved parquet already has 'classification'
         commits['author_type'] = commits['classification']
         
-        # Aggregate by Year - COUNT COMMITS
-        stats = commits.groupby(['year', 'author_type']).size().unstack(fill_value=0)
+        # Aggregate by Year - COUNT AUTHORED COMMITS ONLY
+        authored_commits = commits[commits['category'] != 'Merge']
+        stats = authored_commits.groupby(['year', 'author_type']).size().unstack(fill_value=0)
         
         # Normalize to %
         stats_pct = stats.div(stats.sum(axis=1), axis=0).round(4) * 100

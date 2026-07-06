@@ -130,15 +130,28 @@ def generate_ecosystem_summary():
         import pandas as pd
         enriched_prs_path = "data/enriched/enriched_prs.parquet"
         if os.path.exists(enriched_prs_path):
-            pr_df = pd.read_parquet(enriched_prs_path, columns=['merged_at'])
+            pr_df = pd.read_parquet(enriched_prs_path, columns=['merged_at', 'repository_name'])
             pr_df_merged = pr_df[pr_df['merged_at'].notna()].copy()
+            pr_df_merged['merged_at'] = pd.to_datetime(pr_df_merged['merged_at'], errors='coerce', utc=True)
+            
+            # Overall PRs
             total_prs_merged = len(pr_df_merged)
             
-            pr_df_merged['merged_at'] = pd.to_datetime(pr_df_merged['merged_at'], errors='coerce', utc=True)
-            cutoff_30_ts = pd.Timestamp(cutoff_90 + timedelta(days=60), tz='UTC') # 30 days ago
-            cutoff_60_ts = pd.Timestamp(cutoff_90 + timedelta(days=30), tz='UTC')
-            prs_merged_30d = int((pr_df_merged['merged_at'] >= cutoff_30_ts).sum())
-            prs_merged_prev_30d = int(((pr_df_merged['merged_at'] >= cutoff_60_ts) & (pr_df_merged['merged_at'] < cutoff_30_ts)).sum())
+            # Split Core vs Eco
+            core_prs_df = pr_df_merged[pr_df_merged['repository_name'] == 'bitcoin/bitcoin']
+            eco_prs_df = pr_df_merged[pr_df_merged['repository_name'] != 'bitcoin/bitcoin']
+            total_prs_core = len(core_prs_df)
+            total_prs_eco = len(eco_prs_df)
+
+            cutoff_30 = pd.Timestamp(cutoff_90 + timedelta(days=60), tz='UTC')
+            cutoff_60 = pd.Timestamp(cutoff_90 + timedelta(days=30), tz='UTC')
+            cutoff_7 = pd.Timestamp(now - timedelta(days=7), tz='UTC')
+            cutoff_14 = pd.Timestamp(now - timedelta(days=14), tz='UTC')
+
+            prs_merged_30d = int((pr_df_merged['merged_at'] >= cutoff_30).sum())
+            prs_merged_prev_30d = int(((pr_df_merged['merged_at'] >= cutoff_60) & (pr_df_merged['merged_at'] < cutoff_30)).sum())
+            prs_merged_7d = int((pr_df_merged['merged_at'] >= cutoff_7).sum())
+            prs_merged_prev_7d = int(((pr_df_merged['merged_at'] >= cutoff_14) & (pr_df_merged['merged_at'] < cutoff_7)).sum())
     except Exception as e:
         print(f"  Warning: Could not compute PRs merged: {e}")
 
@@ -152,8 +165,13 @@ def generate_ecosystem_summary():
             df_commits['date_utc'] = pd.to_datetime(df_commits['date_utc'], utc=True)
             cutoff_30_ts = pd.Timestamp(cutoff_90 + timedelta(days=60), tz='UTC')
             cutoff_60_ts = pd.Timestamp(cutoff_90 + timedelta(days=30), tz='UTC')
+            cutoff_7_ts = pd.Timestamp(now - timedelta(days=7), tz='UTC')
+            cutoff_14_ts = pd.Timestamp(now - timedelta(days=14), tz='UTC')
+
             commits_30d = int((df_commits['date_utc'] >= cutoff_30_ts).sum())
             commits_prev_30d = int(((df_commits['date_utc'] >= cutoff_60_ts) & (df_commits['date_utc'] < cutoff_30_ts)).sum())
+            commits_7d = int((df_commits['date_utc'] >= cutoff_7_ts).sum())
+            commits_prev_7d = int(((df_commits['date_utc'] >= cutoff_14_ts) & (df_commits['date_utc'] < cutoff_7_ts)).sum())
     except Exception as e:
         print(f"  Warning: Could not compute commits_30d: {e}")
 
@@ -174,8 +192,10 @@ def generate_ecosystem_summary():
             _df_u = pd.read_parquet(CONTRIBUTORS_UNIFIED_INPUT, columns=['first_commit', 'first_core_commit', 'tier1_authored_commits', 'display_name', 'github_login_final', 'uuid'])
             _fc = pd.to_datetime(_df_u['first_commit'], errors='coerce', utc=True)
             _cutoff_ts = pd.Timestamp(cutoff_90, tz='UTC')
+            _cutoff_7_ts = pd.Timestamp(now - timedelta(days=7), tz='UTC')
             newbies_mask = _fc >= _cutoff_ts
             new_coders_90d = int(newbies_mask.sum())
+            new_coders_7d = int((_fc >= _cutoff_7_ts).sum())
             
             # Use 30-day window for the spotlight specifically, targeting Core (Tier 1)
             _fc_core = pd.to_datetime(_df_u['first_core_commit'], errors='coerce', utc=True)
@@ -211,10 +231,12 @@ def generate_ecosystem_summary():
             df_threads = pd.read_parquet(SOCIAL_THREADS_INPUT, columns=['date', 'category', 'canonical_id'])
             df_threads['date'] = pd.to_datetime(df_threads['date'])
             cutoff_ts_naive = pd.Timestamp(cutoff_90)
+            cutoff_7_ts_naive = pd.Timestamp(now - timedelta(days=7))
 
             # New discussion voices: canonical IDs whose first message ever is within window
             first_msg = df_threads.groupby('canonical_id')['date'].min()
             new_discussants_90d = int((first_msg >= cutoff_ts_naive).sum())
+            new_discussants_7d = int((first_msg >= cutoff_7_ts_naive).sum())
 
             # Top discussion topics in the window
             recent = df_threads[df_threads['date'] >= cutoff_ts_naive]
@@ -245,17 +267,25 @@ def generate_ecosystem_summary():
         "spotlight": spotlight_data,
         "onboarding": {
             "new_coders_90d": new_coders_90d,
+            "new_coders_7d": locals().get('new_coders_7d', 0),
             "new_discussants_90d": new_discussants_90d,
+            "new_discussants_7d": locals().get('new_discussants_7d', 0),
             "window_days": 90
         },
         "prs": {
             "total_merged": total_prs_merged,
+            "total_merged_core": locals().get('total_prs_core', 0),
+            "total_merged_eco": locals().get('total_prs_eco', 0),
             "merged_30d": prs_merged_30d,
-            "merged_prev_30d": prs_merged_prev_30d
+            "merged_prev_30d": prs_merged_prev_30d,
+            "merged_7d": locals().get('prs_merged_7d', 0),
+            "merged_prev_7d": locals().get('prs_merged_prev_7d', 0)
         },
         "commits": {
             "commits_30d": commits_30d,
-            "commits_prev_30d": commits_prev_30d
+            "commits_prev_30d": commits_prev_30d,
+            "commits_7d": locals().get('commits_7d', 0),
+            "commits_prev_7d": locals().get('commits_prev_7d', 0)
         },
         "bips": {
             "total": total_bips,
