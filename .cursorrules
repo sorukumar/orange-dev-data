@@ -21,4 +21,4 @@
 ## Core vs Ecosystem Definitions
 - "Core" explicitly means ONLY: `bitcoin/bitcoin`, `bitcoin-core/gui`, and `bitcoin-core/secp256k1`.
 - Because forks share commits, always use a SET-based union of commit hashes across all three Core repos when calculating unique core commits.
-- "Ecosystem" means all other tracked repositories outside of those three.
+- "Ecosystem" refers to the other tracked ecosystem repositories (e.g., guix.sigs, HWI, qa-assets, ...).
