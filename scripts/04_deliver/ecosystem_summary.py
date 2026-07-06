@@ -130,18 +130,12 @@ def generate_ecosystem_summary():
         import pandas as pd
         enriched_prs_path = "data/enriched/enriched_prs.parquet"
         if os.path.exists(enriched_prs_path):
-            pr_df = pd.read_parquet(enriched_prs_path, columns=['merged_at', 'repository_name'])
+            pr_df = pd.read_parquet(enriched_prs_path, columns=['merged_at'])
             pr_df_merged = pr_df[pr_df['merged_at'].notna()].copy()
             pr_df_merged['merged_at'] = pd.to_datetime(pr_df_merged['merged_at'], errors='coerce', utc=True)
             
             # Overall PRs
             total_prs_merged = len(pr_df_merged)
-            
-            # Split Core vs Eco
-            core_prs_df = pr_df_merged[pr_df_merged['repository_name'] == 'bitcoin/bitcoin']
-            eco_prs_df = pr_df_merged[pr_df_merged['repository_name'] != 'bitcoin/bitcoin']
-            total_prs_core = len(core_prs_df)
-            total_prs_eco = len(eco_prs_df)
 
             cutoff_30 = pd.Timestamp(cutoff_90 + timedelta(days=60), tz='UTC')
             cutoff_60 = pd.Timestamp(cutoff_90 + timedelta(days=30), tz='UTC')
@@ -274,8 +268,6 @@ def generate_ecosystem_summary():
         },
         "prs": {
             "total_merged": total_prs_merged,
-            "total_merged_core": locals().get('total_prs_core', 0),
-            "total_merged_eco": locals().get('total_prs_eco', 0),
             "merged_30d": prs_merged_30d,
             "merged_prev_30d": prs_merged_prev_30d,
             "merged_7d": locals().get('prs_merged_7d', 0),

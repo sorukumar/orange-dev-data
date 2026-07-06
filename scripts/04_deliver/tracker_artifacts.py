@@ -312,8 +312,9 @@ class MetricGenerators:
         # 1.5 Total Commits (Simulated SHA count if available, else row count)
         total_commits = commits['hash'].nunique()
         
-        # Split by Core vs Ecosystem properly
-        core_hashes = set(commits[commits['repository_name'] == 'bitcoin/bitcoin']['hash'])
+        # Split by Core vs Ecosystem properly (Core = bitcoin, gui, secp256k1)
+        core_repos = ['bitcoin/bitcoin', 'bitcoin-core/gui', 'bitcoin-core/secp256k1']
+        core_hashes = set(commits[commits['repository_name'].isin(core_repos)]['hash'])
         core_commits = len(core_hashes)
         
         eco_commits_df = commits[~commits['hash'].isin(core_hashes)]
