@@ -60,7 +60,7 @@ def process_releases():
     # Sort cutoffs by version
     sorted_cutoffs = sorted([(ms, date) for ms, date in cutoff_dates.items() if pd.notna(date)], key=lambda x: parse_version(x[0]))
     
-    def infer_milestone(row):
+    def infer_milestone_only(row):
         if pd.notna(row['milestone']):
             return row['milestone']
             
@@ -78,17 +78,24 @@ def process_releases():
         # If merged after the latest known cutoff, assign to the "next" / latest milestone
         if not inferred_ms and sorted_cutoffs:
             inferred_ms = sorted_cutoffs[-1][0]
-            
-        # Apply tier filtering
-        if inferred_ms:
-            ms_version = parse_version(inferred_ms)
-            is_recent = ms_version >= (24, 0, 0)
-            if not is_high_signal(row['labels'], is_recent):
-                return None
                 
         return inferred_ms
 
-    df['milestone'] = df.apply(infer_milestone, axis=1)
+    df['inferred_milestone'] = df.apply(infer_milestone_only, axis=1)
+    df = df[df['inferred_milestone'].notna()]
+    
+    # Calculate total PRs for the milestone BEFORE applying high-signal filter
+    total_prs_per_milestone = df.groupby('inferred_milestone').size().to_dict()
+
+    def filter_high_signal(row):
+        inferred_ms = row['inferred_milestone']
+        ms_version = parse_version(inferred_ms)
+        is_recent = ms_version >= (24, 0, 0)
+        if not is_high_signal(row['labels'], is_recent):
+            return None
+        return inferred_ms
+
+    df['milestone'] = df.apply(filter_high_signal, axis=1)
     df = df[df['milestone'].notna()]
     
     pr_cache = load_cache(CACHE_FILE)
@@ -112,6 +119,35 @@ def process_releases():
                         github_to_uuid[gh_logins.lower()] = identity['uuid']
                         if display_name: github_to_name[gh_logins.lower()] = display_name
                         
+    # Load expertise domains for canonical mapping
+    expertise_domains = {}
+    if os.path.exists("metadata/expertise_domains.json"):
+        with open("metadata/expertise_domains.json", "r") as f:
+            domains_data = json.load(f).get('domains', [])
+            for d in domains_data:
+                expertise_domains[d['id']] = d['name']
+                
+    def map_label_to_domain(label):
+        label_lower = label.lower()
+        if 'consensus' in label_lower or 'validation' in label_lower:
+            return expertise_domains.get('Consensus', 'Consensus')
+        if 'p2p' in label_lower or 'network' in label_lower:
+            return expertise_domains.get('Network', 'P2P Network')
+        if 'wallet' in label_lower:
+            return expertise_domains.get('Wallet', 'Wallet & Keys')
+        if 'tx fees and policy' in label_lower or 'mempool' in label_lower or 'policy' in label_lower:
+            return expertise_domains.get('Mempool', 'Mempool & Fees')
+        if any(x in label_lower for x in ['rpc', 'rest', 'zmq', 'refactoring', 'utils', 'log', 'libs', 'build system', 'tests', 'ci failed', 'docs', 'windows']):
+            return expertise_domains.get('Infrastructure', 'Core Infrastructure')
+        if 'script' in label_lower or 'covenant' in label_lower:
+            return expertise_domains.get('Script', 'Script & Covenants')
+        if 'crypto' in label_lower:
+            return expertise_domains.get('Cryptography', 'Cryptography')
+        if 'gui' in label_lower:
+            return expertise_domains.get('Infrastructure', 'Core Infrastructure')
+            
+        return expertise_domains.get('Ecosystem', 'Ecosystem')
+
     releases_data = []
     grouped = df.groupby('milestone')
     
@@ -132,6 +168,7 @@ def process_releases():
             "last_active_date": last_active_date,
             "summary": f"Release notes and changes for Bitcoin Core {milestone}.",
             "release_summary": None,
+            "total_prs_in_release": total_prs_per_milestone.get(milestone, 0),
             "highlights": [],
             "prs": []
         }
@@ -159,17 +196,22 @@ def process_releases():
             categories = []
             if pd.notna(labels_str):
                 labels = labels_str.split('|')
+                mapped_categories = set()
                 for label in labels:
-                    categories.append(label)
+                    mapped_cat = map_label_to_domain(label)
+                    mapped_categories.add(mapped_cat)
+                categories = list(mapped_categories)
             if not categories:
-                categories = ["Uncategorized"]
+                categories = [expertise_domains.get('Ecosystem', 'Ecosystem')]
                 
             pub_summary = title
             tech_summary = "Technical details pending."
+            impact_category = "Maintenance & Tech Debt"
             
             if pr_num in pr_cache:
                 pub_summary = pr_cache[pr_num].get("public_summary", title)
                 tech_summary = pr_cache[pr_num].get("technical_summary", "Technical details pending.")
+                impact_category = pr_cache[pr_num].get("impact_category", "Maintenance & Tech Debt")
                 
             pr_data = {
                 "pr": f"#{pr_num}",
@@ -179,6 +221,7 @@ def process_releases():
                 "author_name": author_name,
                 "merge_time_days": merge_time_days,
                 "categories": categories,
+                "impact_category": impact_category,
                 "public_summary": pub_summary,
                 "technical_summary": tech_summary
             }

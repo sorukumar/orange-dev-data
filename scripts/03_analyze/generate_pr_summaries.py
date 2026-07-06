@@ -55,9 +55,16 @@ Analyze this dictionary of Pull Requests where the key is the PR number and the 
 Input Data:
 {json.dumps(pr_dict, indent=2)}
 
-You MUST return a valid JSON object where the keys are the exact PR numbers, and the values are objects containing exactly two keys:
+You MUST return a valid JSON object where the keys are the exact PR numbers, and the values are objects containing exactly three keys:
 1. "public_summary": Exactly 1-2 short sentences. Explain what this PR is, what it does, and why it adds value to Bitcoin Core.
 2. "technical_summary": A detailed 3-5 sentence summary for engineers explaining the architectural implementation.
+3. "impact_category": MUST be exactly one of the following strings based on these strict guidelines:
+   - "Security & Consensus": ONLY for consensus rules, soft/hard forks, and Denial of Service (DoS) protections or security vulnerabilities.
+   - "Performance & Optimization": IBD speedups, memory usage reduction, cryptography speedups.
+   - "Network & Privacy": P2P relay policies, Tor/I2P, transaction privacy.
+   - "Wallet & User Tools": RPCs, GUI, PSBTs, hardware wallets, coin selection.
+   - "Strategic Initiatives": Major architectural milestones (e.g., Cluster Mempool, v3 Tx, Kernel).
+   - "Maintenance & Tech Debt": ONLY use this for routine CI updates, pure tests, documentation, and pure refactoring. If it changes behavior or protection bounds, it is NOT maintenance.
 
 Do NOT wrap in markdown blocks, just raw JSON.
 """
