@@ -36,7 +36,7 @@
   "first_commit": "2019-04-23T18:59:02",
   "last_commit": "2026-06-03T20:53:24",
   "p2016_authored_commits": 307.0,
-  "modern_authored_commits": 115.0,
+  "modern_authored_commits": 113.0,
   "co_authored_commits": 29.0,
   "bips_authored": 4.0,
   "p2016_bips_authored": 4.0,
@@ -60,7 +60,7 @@
   "avg_concept_lead_time_days": 18.135407175925927,
   "review_reciprocity": 2.7906976744186047,
   "hybrid_score": 1.5575,
-  "p2016_hybrid_score": 1.6808,
+  "p2016_hybrid_score": 1.6807,
   "modern_hybrid_score": 1.6983,
   "impact_score": 61.0,
   "p2016_impact_score": 64.0,
@@ -93,14 +93,14 @@
       "Wallet": 0.035
     },
     "discussion": {
-      "Consensus": 0.444,
-      "Mining": 0.556
+      "Consensus": 0.429,
+      "Mining": 0.571
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.4763,
+    "Consensus": 0.4733,
     "Infrastructure": 0.2141,
-    "Mining": 0.1112,
+    "Mining": 0.1142,
     "Script": 0.1759,
     "Wallet": 0.0105
   },
@@ -293,11 +293,11 @@
       "utxo-sync": 18
     },
     "2026": {
-      "other": 45,
+      "other": 48,
       "consensus-cleanup": 27,
       "covenants": 5,
       "mempool-fees": 17,
-      "mining": 17,
+      "mining": 20,
       "script-opcodes": 11,
       "security": 5,
       "testing-devtools": 21,

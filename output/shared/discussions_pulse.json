@@ -1,74 +1,56 @@
 {
-  "generated_at": "2026-06-29T14:58:45.270387",
+  "generated_at": "2026-07-06T08:47:54.339340",
   "windows": {
     "30d": {
       "window_days": 30,
-      "total_messages": 305,
-      "total_threads": 126,
-      "unique_voices": 94,
+      "total_messages": 279,
+      "total_threads": 97,
+      "unique_voices": 74,
       "themes": [
         {
           "category": "quantum",
           "label": "Quantum Resistance",
-          "msgs": 51,
-          "threads": 18,
-          "voices": 21,
-          "share": 19.4,
-          "trend": "steady"
+          "msgs": 42,
+          "threads": 12,
+          "voices": 14,
+          "share": 16.5,
+          "trend": "fading"
+        },
+        {
+          "category": "utxo-sync",
+          "label": "UTXO & Sync",
+          "msgs": 41,
+          "threads": 4,
+          "voices": 10,
+          "share": 16.1,
+          "trend": "rising"
         },
         {
           "category": "privacy",
           "label": "Privacy",
           "msgs": 38,
-          "threads": 11,
+          "threads": 10,
           "voices": 15,
-          "share": 14.4,
+          "share": 15.0,
           "trend": "rising"
         },
         {
           "category": "mining",
           "label": "Mining Protocol",
           "msgs": 33,
-          "threads": 8,
-          "voices": 15,
-          "share": 12.5,
+          "threads": 9,
+          "voices": 17,
+          "share": 13.0,
           "trend": "rising"
         },
         {
-          "category": "utxo-sync",
-          "label": "UTXO & Sync",
-          "msgs": 29,
-          "threads": 5,
-          "voices": 10,
-          "share": 11.0,
-          "trend": "rising"
-        },
-        {
-          "category": "consensus-cleanup",
-          "label": "Consensus Cleanup",
-          "msgs": 24,
-          "threads": 11,
-          "voices": 12,
-          "share": 9.1,
-          "trend": "rising"
-        },
-        {
-          "category": "payment-protocol",
-          "label": "Payment Protocol",
-          "msgs": 14,
-          "threads": 1,
-          "voices": 7,
-          "share": 5.3,
-          "trend": "new"
-        },
-        {
-          "category": "testing-devtools",
-          "label": "Dev Tooling",
-          "msgs": 12,
-          "threads": 5,
-          "voices": 8,
-          "share": 4.6,
-          "trend": "fading"
+          "category": "lightning",
+          "label": "Lightning / L2",
+          "msgs": 15,
+          "threads": 2,
+          "voices": 5,
+          "share": 5.9,
+          "trend": "steady"
         },
         {
           "category": "scaling",
@@ -76,7 +58,16 @@
           "msgs": 11,
           "threads": 1,
           "voices": 4,
-          "share": 4.2,
+          "share": 4.3,
+          "trend": "new"
+        },
+        {
+          "category": "payment-protocol",
+          "label": "Payment Protocol",
+          "msgs": 11,
+          "threads": 1,
+          "voices": 6,
+          "share": 4.3,
           "trend": "new"
         },
         {
@@ -84,8 +75,8 @@
           "label": "Taproot",
           "msgs": 9,
           "threads": 3,
-          "voices": 4,
-          "share": 3.4,
+          "voices": 5,
+          "share": 3.5,
           "trend": "steady"
         },
         {
@@ -94,8 +85,17 @@
           "msgs": 9,
           "threads": 6,
           "voices": 4,
-          "share": 3.4,
+          "share": 3.5,
           "trend": "new"
+        },
+        {
+          "category": "consensus-cleanup",
+          "label": "Consensus Cleanup",
+          "msgs": 8,
+          "threads": 6,
+          "voices": 6,
+          "share": 3.1,
+          "trend": "fading"
         }
       ],
       "hot_threads": [
@@ -104,12 +104,12 @@
           "subject": "[BIP Draft] Segregated Data: a prunable, script-isolated block region for data carriage",
           "category": "utxo-sync",
           "label": "UTXO & Sync",
-          "reply_count": 17,
-          "unique_authors": 6,
-          "score": 102,
-          "last_post": "2026-06-27",
+          "reply_count": 30,
+          "unique_authors": 7,
+          "score": 210,
+          "last_post": "2026-07-03",
           "source": "delving",
-          "link": "https://delvingbitcoin.org/t/bip-draft-segregated-data-a-prunable-script-isolated-block-region-for-data-carriage/2641/25",
+          "link": "https://delvingbitcoin.org/t/bip-draft-segregated-data-a-prunable-script-isolated-block-region-for-data-carriage/2641/38",
           "snippet": "Dear all,\nI\u2019ve drafted companion BIPs for Segregated Data (SegData), a soft-fork block region for arbitrary data (data without an intent\u2026"
         },
         {
@@ -117,12 +117,12 @@
           "subject": "Public key recovery for EC leaves in P2MR (BIP-360)",
           "category": "quantum",
           "label": "Quantum Resistance",
-          "reply_count": 16,
+          "reply_count": 18,
           "unique_authors": 6,
-          "score": 96,
-          "last_post": "2026-06-19",
+          "score": 108,
+          "last_post": "2026-07-03",
           "source": "delving",
-          "link": "https://delvingbitcoin.org/t/public-key-recovery-for-ec-leaves-in-p2mr-bip-360/2603/21",
+          "link": "https://delvingbitcoin.org/t/public-key-recovery-for-ec-leaves-in-p2mr-bip-360/2603/23",
           "snippet": "Public key recovery for EC leaves in P2MR\nThis note describes a possible BIP-360 optimization using EC public key recovery.\nThe idea is\u2026"
         },
         {
@@ -130,12 +130,12 @@
           "subject": "State of the transaction privacy work in Bitcoin",
           "category": "privacy",
           "label": "Privacy",
-          "reply_count": 16,
+          "reply_count": 17,
           "unique_authors": 6,
-          "score": 96,
-          "last_post": "2026-06-23",
+          "score": 102,
+          "last_post": "2026-06-29",
           "source": "delving",
-          "link": "https://delvingbitcoin.org/t/state-of-the-transaction-privacy-work-in-bitcoin/2622/25",
+          "link": "https://delvingbitcoin.org/t/state-of-the-transaction-privacy-work-in-bitcoin/2622/26",
           "snippet": "I would like to better understand what\u2019s happening around transaction privacy in Bitcoin.\nMy perception is that it\u2019s all happening in\u2026"
         },
         {
@@ -144,25 +144,38 @@
           "category": "mining",
           "label": "Mining Protocol",
           "reply_count": 10,
-          "unique_authors": 8,
-          "score": 80,
+          "unique_authors": 9,
+          "score": 90,
           "last_post": "2026-06-29",
           "source": "delving",
-          "link": "https://delvingbitcoin.org/t/addressing-the-diminishing-block-subsidy/2640/17",
+          "link": "https://delvingbitcoin.org/t/addressing-the-diminishing-block-subsidy/2640/18",
           "snippet": "Introduction: The Elephant in the Room\nAs the block subsidy continues to diminish, we are hoping that transaction fees will eventually\u2026"
+        },
+        {
+          "thread_id": "topic_2667",
+          "subject": "Input-triggered transaction expiry",
+          "category": "lightning",
+          "label": "Lightning / L2",
+          "reply_count": 8,
+          "unique_authors": 4,
+          "score": 32,
+          "last_post": "2026-06-29",
+          "source": "delving",
+          "link": "https://delvingbitcoin.org/t/input-triggered-transaction-expiry/2667/13",
+          "snippet": "TLDR\nInput-triggered transaction expiry is an interesting primitive that warrants further research. It can be implemented with a\u2026"
         },
         {
           "thread_id": "topic_2550",
           "subject": "A Bitcoin-native LLM: dataset, architecture and open questions",
           "category": "payment-protocol",
           "label": "Payment Protocol",
-          "reply_count": 6,
-          "unique_authors": 7,
-          "score": 42,
+          "reply_count": 5,
+          "unique_authors": 6,
+          "score": 30,
           "last_post": "2026-06-16",
           "source": "delving",
           "link": "https://delvingbitcoin.org/t/a-bitcoin-native-llm-dataset-architecture-and-open-questions/2550/14",
-          "snippet": "Motivation\nBitcoin has one of the richest open-source knowledge bases in existence. Every BIP, every mailing list thread, every Delving\u2026"
+          "snippet": "I think this came up a few times before, would be really cool to see someone champion it.\nBesides the usual sources, I would also\u2026"
         },
         {
           "thread_id": "topic_2624",
@@ -178,84 +191,71 @@
           "snippet": "Over the past few months, I have been conducting research on the application of Fountain Codes in Bitcoin, together with\u2026"
         },
         {
-          "thread_id": "<f97afcc5-54ba-4284-8e9b-e8c35c7101f6n@googlegroups.com>",
-          "subject": "Prohibit Merkle Internal Node Preimages That Encode\n Minimal 64-Byte Transactions",
-          "category": "mining",
-          "label": "Mining Protocol",
-          "reply_count": 4,
-          "unique_authors": 4,
-          "score": 16,
-          "last_post": "2026-06-22",
-          "source": "mailing_list",
-          "link": "https://gnusha.org/pi/bitcoindev/8FEEF72A-92A3-48A9-AC49-43107D17B090@sprovoost.nl",
-          "snippet": "Esteemed Colleagues,  As a result of some of my research on 64-byte transactions, I'd like to  discuss an alternative soft fork proposal\u2026"
-        },
-        {
-          "thread_id": "<BrgqDZiNhpEz32-Z9ZX2rrPDE9EUIb62SKT2WsTo-yZtd3gLMLVk6TkO6kLIR96-87TumXqi92l_m1j3xlJr1tcJwG_I3UVDk2NZgXZL8fw=@protonmail.com>",
-          "subject": "[BIP Draft] Testnet 5",
-          "category": "consensus-cleanup",
-          "label": "Consensus Cleanup",
+          "thread_id": "topic_2514",
+          "subject": "Bird of Prey 2: non-malleable Schnorr + PQ signatures",
+          "category": "taproot",
+          "label": "Taproot",
           "reply_count": 3,
-          "unique_authors": 4,
-          "score": 12,
-          "last_post": "2026-06-05",
-          "source": "mailing_list",
-          "link": "https://gnusha.org/pi/bitcoindev/aiKYWu7Osn5hIJFP@erisian.com.au",
-          "snippet": "Dear list, I am sharing a BIP draft for a new Testnet5. People are complaining about Testnet4 being difficult to use, the new testnet\u2026"
+          "unique_authors": 3,
+          "score": 9,
+          "last_post": "2026-07-05",
+          "source": "delving",
+          "link": "https://delvingbitcoin.org/t/bird-of-prey-2-non-malleable-schnorr-pq-signatures/2514/10",
+          "snippet": "Video of the presentation: https://www.youtube.com/watch?v=FbdbkOKby8c"
         }
       ],
       "top_bips": [
         {
           "bip_id": "39",
           "title": "Mnemonic code for generating deterministic keys",
-          "mentions": 30
+          "mentions": 32
         },
         {
           "bip_id": "360",
           "title": "Pay-to-Merkle-Root (P2MR)",
-          "mentions": 27
+          "mentions": 28
         },
         {
           "bip_id": "441",
           "title": "Restoration of disabled script (Tapleaf 0xC2)",
-          "mentions": 25
+          "mentions": 26
         },
         {
           "bip_id": "32",
           "title": "Hierarchical Deterministic Wallets",
-          "mentions": 21
-        },
-        {
-          "bip_id": "54",
-          "title": "Consensus Cleanup",
-          "mentions": 16
+          "mentions": 23
         },
         {
           "bip_id": "125",
           "title": "Opt-in Full Replace-by-Fee Signaling",
           "mentions": 6
+        },
+        {
+          "bip_id": "340",
+          "title": "Schnorr Signatures for secp256k1",
+          "mentions": 5
         }
       ],
       "top_voices": [
         {
-          "name": "Anthony Towns",
-          "uuid": "can_anthony_towns",
-          "posts": 26
-        },
-        {
-          "name": "conduition",
-          "uuid": "auto_conduition",
-          "posts": 25
+          "name": "MrHash",
+          "uuid": "auto_mrhash",
+          "posts": 23
         },
         {
           "name": "Pieter Wuille",
           "uuid": "can_pieter_wuille",
-          "posts": 20
+          "posts": 22
         },
         {
-          "name": "MrHash",
-          "uuid": "auto_mrhash",
-          "posts": 15
+          "name": "conduition",
+          "uuid": "auto_conduition",
+          "posts": 21
+        },
+        {
+          "name": "Anthony Towns",
+          "uuid": "can_anthony_towns",
+          "posts": 19
         },
         {
           "name": "Kruw",
@@ -263,90 +263,99 @@
           "posts": 11
         },
         {
-          "name": "Antoine Poinsot",
-          "uuid": "can_antoine_poinsot",
-          "posts": 11
+          "name": "Adam Gibson",
+          "uuid": "can_adam_gibson",
+          "posts": 10
         },
         {
-          "name": "Sho",
-          "uuid": "auto_sho",
+          "name": "josh",
+          "uuid": "auto_josh",
+          "posts": 10
+        },
+        {
+          "name": "Murch",
+          "uuid": "can_mark_erhardt",
           "posts": 9
-        },
-        {
-          "name": "Nagaev Boris",
-          "uuid": "can_boris_nagaev",
-          "posts": 8
         }
       ],
       "source_pct": {
-        "delving": 64.9,
-        "mailing_list": 35.1
+        "delving": 72.8,
+        "mailing_list": 27.2
       },
       "source_counts": {
-        "delving": 198,
-        "mailing_list": 107
+        "delving": 203,
+        "mailing_list": 76
       },
       "mailing_list_stale": false,
       "mailing_list_days_since": null
     },
     "90d": {
       "window_days": 90,
-      "total_messages": 819,
-      "total_threads": 372,
-      "unique_voices": 214,
+      "total_messages": 826,
+      "total_threads": 375,
+      "unique_voices": 208,
       "themes": [
         {
           "category": "quantum",
           "label": "Quantum Resistance",
-          "msgs": 179,
-          "threads": 83,
-          "voices": 60,
-          "share": 25.0,
-          "trend": "steady"
+          "msgs": 178,
+          "threads": 84,
+          "voices": 58,
+          "share": 24.7,
+          "trend": "fading"
+        },
+        {
+          "category": "utxo-sync",
+          "label": "UTXO & Sync",
+          "msgs": 67,
+          "threads": 23,
+          "voices": 16,
+          "share": 9.3,
+          "trend": "rising"
         },
         {
           "category": "testing-devtools",
           "label": "Dev Tooling",
-          "msgs": 69,
-          "threads": 9,
-          "voices": 32,
-          "share": 9.6,
+          "msgs": 60,
+          "threads": 10,
+          "voices": 30,
+          "share": 8.3,
           "trend": "fading"
         },
         {
           "category": "privacy",
           "label": "Privacy",
-          "msgs": 59,
-          "threads": 17,
-          "voices": 24,
-          "share": 8.2,
-          "trend": "rising"
-        },
-        {
-          "category": "utxo-sync",
-          "label": "UTXO & Sync",
-          "msgs": 57,
-          "threads": 24,
-          "voices": 19,
-          "share": 7.9,
+          "msgs": 52,
+          "threads": 15,
+          "voices": 21,
+          "share": 7.2,
           "trend": "rising"
         },
         {
           "category": "mining",
           "label": "Mining Protocol",
-          "msgs": 38,
-          "threads": 13,
-          "voices": 18,
-          "share": 5.3,
+          "msgs": 41,
+          "threads": 15,
+          "voices": 21,
+          "share": 5.7,
           "trend": "rising"
+        },
+        {
+          "category": "lightning",
+          "label": "Lightning / L2",
+          "msgs": 37,
+          "threads": 7,
+          "voices": 20,
+          "share": 5.1,
+          "trend": "steady"
         },
         {
           "category": "covenants",
           "label": "Covenants & Vaults",
-          "msgs": 38,
+          "msgs": 36,
           "threads": 17,
           "voices": 13,
-          "share": 5.3,
+          "share": 5.0,
           "trend": "fading"
         },
         {
@@ -356,33 +365,24 @@
           "threads": 16,
           "voices": 15,
           "share": 4.6,
-          "trend": "rising"
+          "trend": "fading"
         },
         {
           "category": "taproot",
           "label": "Taproot",
-          "msgs": 29,
+          "msgs": 31,
           "threads": 18,
-          "voices": 15,
-          "share": 4.0,
+          "voices": 16,
+          "share": 4.3,
           "trend": "steady"
         },
         {
           "category": "core-dev",
           "label": "Core Dev",
-          "msgs": 22,
-          "threads": 5,
-          "voices": 16,
-          "share": 3.1,
-          "trend": "fading"
-        },
-        {
-          "category": "lightning",
-          "label": "Lightning / L2",
-          "msgs": 22,
-          "threads": 6,
-          "voices": 16,
-          "share": 3.1,
+          "msgs": 26,
+          "threads": 8,
+          "voices": 17,
+          "share": 3.6,
           "trend": "fading"
         }
       ],
@@ -392,25 +392,25 @@
           "subject": "Consensus Cleanup: demo of slow blocks on Signet",
           "category": "testing-devtools",
           "label": "Dev Tooling",
-          "reply_count": 14,
-          "unique_authors": 20,
-          "score": 280,
+          "reply_count": 12,
+          "unique_authors": 19,
+          "score": 228,
           "last_post": "2026-04-15",
           "source": "delving",
           "link": "https://delvingbitcoin.org/t/consensus-cleanup-demo-of-slow-blocks-on-signet/2367/46",
-          "snippet": "We are going to do a demo of long-to-validate blocks on Signet on Wednesday. Here are instructions on how you can join.\nThe goal of this\u2026"
+          "snippet": "If you\u2019re already synced to a different signet and don\u2019t want to lose your datadir when switching to the default signet, you could check\u2026"
         },
         {
           "thread_id": "topic_2641",
           "subject": "[BIP Draft] Segregated Data: a prunable, script-isolated block region for data carriage",
           "category": "utxo-sync",
           "label": "UTXO & Sync",
-          "reply_count": 17,
-          "unique_authors": 6,
-          "score": 102,
-          "last_post": "2026-06-27",
+          "reply_count": 30,
+          "unique_authors": 7,
+          "score": 210,
+          "last_post": "2026-07-03",
           "source": "delving",
-          "link": "https://delvingbitcoin.org/t/bip-draft-segregated-data-a-prunable-script-isolated-block-region-for-data-carriage/2641/25",
+          "link": "https://delvingbitcoin.org/t/bip-draft-segregated-data-a-prunable-script-isolated-block-region-for-data-carriage/2641/38",
           "snippet": "Dear all,\nI\u2019ve drafted companion BIPs for Segregated Data (SegData), a soft-fork block region for arbitrary data (data without an intent\u2026"
         },
         {
@@ -418,12 +418,12 @@
           "subject": "Public key recovery for EC leaves in P2MR (BIP-360)",
           "category": "quantum",
           "label": "Quantum Resistance",
-          "reply_count": 16,
+          "reply_count": 18,
           "unique_authors": 6,
-          "score": 96,
-          "last_post": "2026-06-19",
+          "score": 108,
+          "last_post": "2026-07-03",
           "source": "delving",
-          "link": "https://delvingbitcoin.org/t/public-key-recovery-for-ec-leaves-in-p2mr-bip-360/2603/21",
+          "link": "https://delvingbitcoin.org/t/public-key-recovery-for-ec-leaves-in-p2mr-bip-360/2603/23",
           "snippet": "Public key recovery for EC leaves in P2MR\nThis note describes a possible BIP-360 optimization using EC public key recovery.\nThe idea is\u2026"
         },
         {
@@ -431,12 +431,12 @@
           "subject": "State of the transaction privacy work in Bitcoin",
           "category": "privacy",
           "label": "Privacy",
-          "reply_count": 16,
+          "reply_count": 17,
           "unique_authors": 6,
-          "score": 96,
-          "last_post": "2026-06-23",
+          "score": 102,
+          "last_post": "2026-06-29",
           "source": "delving",
-          "link": "https://delvingbitcoin.org/t/state-of-the-transaction-privacy-work-in-bitcoin/2622/25",
+          "link": "https://delvingbitcoin.org/t/state-of-the-transaction-privacy-work-in-bitcoin/2622/26",
           "snippet": "I would like to better understand what\u2019s happening around transaction privacy in Bitcoin.\nMy perception is that it\u2019s all happening in\u2026"
         },
         {
@@ -445,11 +445,11 @@
           "category": "mining",
           "label": "Mining Protocol",
           "reply_count": 10,
-          "unique_authors": 8,
-          "score": 80,
+          "unique_authors": 9,
+          "score": 90,
           "last_post": "2026-06-29",
           "source": "delving",
-          "link": "https://delvingbitcoin.org/t/addressing-the-diminishing-block-subsidy/2640/17",
+          "link": "https://delvingbitcoin.org/t/addressing-the-diminishing-block-subsidy/2640/18",
           "snippet": "Introduction: The Elephant in the Room\nAs the block subsidy continues to diminish, we are hoping that transaction fees will eventually\u2026"
         },
         {
@@ -466,19 +466,6 @@
           "snippet": "Background\nBOLT 4 acknowledges that onion message routing is inherently unreliable and recommends that implementations apply rate\u2026"
         },
         {
-          "thread_id": "topic_2215",
-          "subject": "Disposing of \"dust attack\" UTXOs",
-          "category": "privacy",
-          "label": "Privacy",
-          "reply_count": 12,
-          "unique_authors": 6,
-          "score": 72,
-          "last_post": "2026-05-23",
-          "source": "delving",
-          "link": "https://delvingbitcoin.org/t/disposing-of-dust-attack-utxos/2215/39",
-          "snippet": "Thanks nothingmuch and bubb1es. Lots of interesting details over here. After reading through this new discussion, i agree to\u2026"
-        },
-        {
           "thread_id": "topic_2550",
           "subject": "A Bitcoin-native LLM: dataset, architecture and open questions",
           "category": "payment-protocol",
@@ -490,33 +477,46 @@
           "source": "delving",
           "link": "https://delvingbitcoin.org/t/a-bitcoin-native-llm-dataset-architecture-and-open-questions/2550/14",
           "snippet": "Motivation\nBitcoin has one of the richest open-source knowledge bases in existence. Every BIP, every mailing list thread, every Delving\u2026"
+        },
+        {
+          "thread_id": "topic_2360",
+          "subject": "BIP-110 update: v0.4.1 release and implementation submitted to Bitcoin Core",
+          "category": "spam-filtering",
+          "label": "Spam Filtering",
+          "reply_count": 7,
+          "unique_authors": 5,
+          "score": 35,
+          "last_post": "2026-07-04",
+          "source": "delving",
+          "link": "https://delvingbitcoin.org/t/bip-110-update-v0-4-1-release-and-implementation-submitted-to-bitcoin-core/2360/18",
+          "snippet": "Hi @dathonohm\nThanks for your respectful answer.\n\nFor example, the researchers who actually studied the topic concluded that \u201cWe thus\u2026"
         }
       ],
       "top_bips": [
         {
           "bip_id": "32",
           "title": "Hierarchical Deterministic Wallets",
-          "mentions": 47
+          "mentions": 44
         },
         {
           "bip_id": "360",
           "title": "Pay-to-Merkle-Root (P2MR)",
-          "mentions": 39
+          "mentions": 42
         },
         {
           "bip_id": "39",
           "title": "Mnemonic code for generating deterministic keys",
-          "mentions": 30
+          "mentions": 32
+        },
+        {
+          "bip_id": "441",
+          "title": "Restoration of disabled script (Tapleaf 0xC2)",
+          "mentions": 26
         },
         {
           "bip_id": "54",
           "title": "Consensus Cleanup",
           "mentions": 26
-        },
-        {
-          "bip_id": "441",
-          "title": "Restoration of disabled script (Tapleaf 0xC2)",
-          "mentions": 25
         },
         {
           "bip_id": "86",
@@ -528,27 +528,27 @@
         {
           "name": "conduition",
           "uuid": "auto_conduition",
-          "posts": 55
+          "posts": 54
         },
         {
           "name": "Anthony Towns",
           "uuid": "can_anthony_towns",
-          "posts": 34
-        },
-        {
-          "name": "Antoine Poinsot",
-          "uuid": "can_antoine_poinsot",
-          "posts": 33
+          "posts": 37
         },
         {
           "name": "Pieter Wuille",
           "uuid": "can_pieter_wuille",
-          "posts": 27
+          "posts": 30
+        },
+        {
+          "name": "Antoine Poinsot",
+          "uuid": "can_antoine_poinsot",
+          "posts": 29
         },
         {
           "name": "Murch",
           "uuid": "can_mark_erhardt",
-          "posts": 24
+          "posts": 26
         },
         {
           "name": "Matt Corallo",
@@ -556,23 +556,23 @@
           "posts": 23
         },
         {
-          "name": "0xB10C",
-          "uuid": "can_0xb10c",
-          "posts": 20
+          "name": "MrHash",
+          "uuid": "auto_mrhash",
+          "posts": 23
         },
         {
-          "name": "Antoine Riard",
-          "uuid": "can_antoine_riard",
-          "posts": 18
+          "name": "Adam Gibson",
+          "uuid": "can_adam_gibson",
+          "posts": 22
         }
       ],
       "source_pct": {
-        "delving": 56.9,
-        "mailing_list": 43.1
+        "delving": 57.5,
+        "mailing_list": 42.5
       },
       "source_counts": {
-        "delving": 466,
-        "mailing_list": 353
+        "delving": 475,
+        "mailing_list": 351
       },
       "mailing_list_stale": false,
       "mailing_list_days_since": null

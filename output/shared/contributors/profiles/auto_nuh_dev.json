@@ -45,50 +45,47 @@
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": null,
-  "hybrid_score": 0.0151,
-  "p2016_hybrid_score": 0.0232,
-  "modern_hybrid_score": 0.0823,
+  "hybrid_score": 0.0133,
+  "p2016_hybrid_score": 0.0203,
+  "modern_hybrid_score": 0.0696,
   "impact_score": 1.0,
   "p2016_impact_score": 1.0,
-  "modern_impact_score": 5.0,
+  "modern_impact_score": 4.0,
   "threads_started": 0.0,
-  "replies_sent": 3.0,
+  "replies_sent": 4.0,
   "ml_threads": 0.0,
   "delving_threads": 0.0,
-  "ml_responses": 3.0,
+  "ml_responses": 4.0,
   "delving_responses": 0.0,
   "first_active": "2026-05-01T03:42:45",
-  "last_active": "2026-05-21T04:56:11",
+  "last_active": "2026-06-30T03:19:05",
   "dev_type": "Participant",
   "expertise_domains": [
     "L2",
-    "Consensus",
-    "Cryptography"
+    "Consensus"
   ],
   "expertise_by_source": {
     "discussion": {
-      "Consensus": 0.376,
-      "Cryptography": 0.248,
-      "L2": 0.376
+      "Consensus": 0.5,
+      "L2": 0.5
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.376,
-    "Cryptography": 0.248,
-    "L2": 0.376
+    "Consensus": 0.5,
+    "L2": 0.5
   },
-  "p2016_posts": 3.0,
-  "modern_posts": 3.0,
-  "p2016_ml_posts": 3.0,
+  "p2016_posts": 4.0,
+  "modern_posts": 4.0,
+  "p2016_ml_posts": 4.0,
   "p2016_delving_posts": 0.0,
-  "modern_ml_posts": 3.0,
+  "modern_ml_posts": 4.0,
   "modern_delving_posts": 0.0,
   "is_engineer": false,
   "is_reviewer": false,
   "is_researcher": true,
   "is_bip_author": false,
   "global_first_active": "2026-05-01T03:42:45",
-  "global_last_active": "2026-05-21T04:56:11",
+  "global_last_active": "2026-06-30T03:19:05",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -105,13 +102,14 @@
   },
   "last_message": {
     "source": "mailing_list",
-    "subject": "Re: [bitcoindev] Re: Fly Client Proposal",
-    "date": "2026-05-21",
-    "link": "https://gnusha.org/pi/bitcoindev/8e069e17-c819-4c30-b4d7-917b9561813bn@googlegroups.com"
+    "subject": "[bitcoindev] Re: [BIP Proposal] Strict circular economy within the\n Bitcoin network",
+    "date": "2026-06-30",
+    "link": "https://gnusha.org/pi/bitcoindev/f857d6e6-2be4-4b94-bc26-a46d8d6654f9n@googlegroups.com"
   },
   "social_history": {
     "2026": {
       "bitvm": 2,
+      "other": 1,
       "quantum": 1,
       "soft-fork-activation": 2
     }

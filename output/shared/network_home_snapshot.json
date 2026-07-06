@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-06-29T14:59:11.823744",
-  "contributors_tracked": 7632,
+  "generated_at": "2026-07-06T08:48:25.985501",
+  "contributors_tracked": 7642,
   "window_reference": {
-    "anchor_timestamp": "2026-06-29T18:32:22+00:00",
-    "current_window_start": "2026-05-30T18:32:22+00:00",
-    "previous_window_start": "2026-04-30T18:32:22+00:00",
+    "anchor_timestamp": "2026-07-06T12:48:19+00:00",
+    "current_window_start": "2026-06-06T12:48:19+00:00",
+    "previous_window_start": "2026-05-07T12:48:19+00:00",
     "window_days": 30
   },
   "widgets": {
     "active_contributors_30d": {
-      "value": 146,
-      "previous_30d": 85,
-      "delta_30d": 61,
+      "value": 132,
+      "previous_30d": 88,
+      "delta_30d": 44,
       "window_days": 30,
       "definition": "Contributors with global_last_active in current 30-day window, compared to the previous 30-day window.",
-      "latest_activity_date": "2026-06-29"
+      "latest_activity_date": "2026-07-06"
     },
     "top_reviewers_30d": {
       "window_days": 30,
@@ -23,37 +23,37 @@
         {
           "uuid": "auto_sebastian_kung",
           "display_name": "Sebastian Kung",
-          "reviews_30d": 130,
-          "previous_30d": 129,
-          "delta_30d": 1
+          "reviews_30d": 133,
+          "previous_30d": 138,
+          "delta_30d": -5
         },
         {
           "uuid": "can_marcofalke",
           "display_name": "MarcoFalke",
-          "reviews_30d": 87,
-          "previous_30d": 117,
-          "delta_30d": -30
-        },
-        {
-          "uuid": "can_michael_ford",
-          "display_name": "Michael Ford",
-          "reviews_30d": 69,
-          "previous_30d": 99,
-          "delta_30d": -30
+          "reviews_30d": 92,
+          "previous_30d": 115,
+          "delta_30d": -23
         },
         {
           "uuid": "auto_woltx",
           "display_name": "woltx",
-          "reviews_30d": 67,
-          "previous_30d": 49,
-          "delta_30d": 18
+          "reviews_30d": 59,
+          "previous_30d": 59,
+          "delta_30d": 0
         },
         {
           "uuid": "can_hennadii_stepanov",
           "display_name": "Hennadii Stepanov",
-          "reviews_30d": 49,
-          "previous_30d": 34,
-          "delta_30d": 15
+          "reviews_30d": 52,
+          "previous_30d": 39,
+          "delta_30d": 13
+        },
+        {
+          "uuid": "can_lorinc_pap",
+          "display_name": "Lorinc Pap",
+          "reviews_30d": 52,
+          "previous_30d": 48,
+          "delta_30d": 4
         }
       ],
       "aliases_collapsed": 0
@@ -67,43 +67,43 @@
           "title": "Mnemonic code for generating deterministic keys",
           "primary_author": "Marek Palatinus",
           "primary_author_uuid": "can_marek_palatinus",
-          "mentions_30d": 30,
+          "mentions_30d": 32,
           "previous_30d": 0,
-          "delta_30d": 30
+          "delta_30d": 32
         },
         {
           "bip_id": "360",
           "title": "Pay-to-Merkle-Root (P2MR)",
           "primary_author": "Hunter Beast",
           "primary_author_uuid": "auto_hunter_beast",
-          "mentions_30d": 27,
-          "previous_30d": 8,
-          "delta_30d": 19
+          "mentions_30d": 28,
+          "previous_30d": 10,
+          "delta_30d": 18
         },
         {
           "bip_id": "441",
           "title": "Restoration of disabled script (Tapleaf 0xC2)",
           "primary_author": "Rusty Russell",
           "primary_author_uuid": "can_rusty_russell",
-          "mentions_30d": 25,
+          "mentions_30d": 26,
           "previous_30d": 0,
-          "delta_30d": 25
+          "delta_30d": 26
         }
       ]
     },
     "research_activity_30d": {
-      "messages_30d": 307,
-      "previous_30d": 217,
-      "delta_30d": 90,
-      "momentum": "rising",
+      "messages_30d": 276,
+      "previous_30d": 246,
+      "delta_30d": 30,
+      "momentum": "steady",
       "definition": "Combined Delving Bitcoin and mailing list discussion volume in current 30 days versus previous 30 days."
     },
     "discussion_voices_30d": {
-      "value": 93,
-      "previous_30d": 87,
-      "delta_30d": 6,
-      "messages_30d": 307,
-      "messages_previous_30d": 217
+      "value": 74,
+      "previous_30d": 97,
+      "delta_30d": -23,
+      "messages_30d": 276,
+      "messages_previous_30d": 246
     },
     "topic_momentum_30d": {
       "window_days": 30,
@@ -112,9 +112,16 @@
         {
           "topic": "quantum",
           "label": "Quantum",
-          "mentions_30d": 48,
-          "previous_30d": 72,
-          "delta_30d": -24
+          "mentions_30d": 42,
+          "previous_30d": 70,
+          "delta_30d": -28
+        },
+        {
+          "topic": "utxo-sync",
+          "label": "Utxo Sync",
+          "mentions_30d": 41,
+          "previous_30d": 23,
+          "delta_30d": 18
         },
         {
           "topic": "privacy",
@@ -127,22 +134,15 @@
           "topic": "mining",
           "label": "Mining",
           "mentions_30d": 33,
-          "previous_30d": 2,
-          "delta_30d": 31
+          "previous_30d": 6,
+          "delta_30d": 27
         },
         {
-          "topic": "utxo-sync",
-          "label": "Utxo Sync",
-          "mentions_30d": 29,
-          "previous_30d": 25,
-          "delta_30d": 4
-        },
-        {
-          "topic": "consensus-cleanup",
-          "label": "Consensus Cleanup",
-          "mentions_30d": 24,
-          "previous_30d": 8,
-          "delta_30d": 16
+          "topic": "lightning",
+          "label": "Lightning",
+          "mentions_30d": 15,
+          "previous_30d": 3,
+          "delta_30d": 12
         }
       ]
     },
@@ -150,24 +150,29 @@
       "definition": "Random selection of top retired contributors by impact score to feature as ecosystem veterans.",
       "items": [
         {
-          "uuid": "auto_philip_kaufmann",
-          "display_name": "Philip Kaufmann",
-          "impact_score": 33.0
+          "uuid": "auto_elliott_jin",
+          "display_name": "Elliott Jin",
+          "impact_score": 26.0
         },
         {
-          "uuid": "auto_christopher_gilliard",
-          "display_name": "Christopher Gilliard",
-          "impact_score": 24.0
+          "uuid": "can_aaron_voisine",
+          "display_name": "Aaron Voisine",
+          "impact_score": 44.0
         },
         {
-          "uuid": "can_chris_belcher",
-          "display_name": "Chris Belcher",
-          "impact_score": 39.0
+          "uuid": "can_alex_morcos",
+          "display_name": "Alex Morcos",
+          "impact_score": 44.0
         },
         {
-          "uuid": "auto_chris_priest",
-          "display_name": "chris priest",
-          "impact_score": 25.0
+          "uuid": "auto_emil_engler",
+          "display_name": "emil engler",
+          "impact_score": 37.0
+        },
+        {
+          "uuid": "can_omar_shibli",
+          "display_name": "Omar Shibli",
+          "impact_score": 23.0
         }
       ]
     }

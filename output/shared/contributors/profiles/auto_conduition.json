@@ -45,44 +45,44 @@
   "avg_pr_ack_velocity_days": 0.09181712962962962,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 2.6666666666666665,
-  "hybrid_score": 0.2044,
-  "p2016_hybrid_score": 0.2842,
+  "hybrid_score": 0.2053,
+  "p2016_hybrid_score": 0.2861,
   "modern_hybrid_score": 0.4348,
   "impact_score": 12.0,
   "p2016_impact_score": 16.0,
   "modern_impact_score": 23.0,
   "threads_started": 20.0,
-  "replies_sent": 104.0,
+  "replies_sent": 105.0,
   "ml_threads": 3.0,
   "delving_threads": 17.0,
   "ml_responses": 84.0,
-  "delving_responses": 20.0,
+  "delving_responses": 21.0,
   "first_active": null,
-  "last_active": "2026-06-26T13:20:26",
+  "last_active": null,
   "dev_type": "Participant",
   "expertise_domains": [
     "Cryptography",
     "Consensus",
-    "Wallet"
+    "Script"
   ],
   "expertise_by_source": {
     "discussion": {
       "Consensus": 0.175,
       "Cryptography": 0.719,
-      "Wallet": 0.105
+      "Script": 0.105
     }
   },
   "expertise_domain_scores": {
     "Consensus": 0.1752,
     "Cryptography": 0.7197,
-    "Wallet": 0.1051
+    "Script": 0.1051
   },
-  "p2016_posts": 124.0,
-  "modern_posts": 124.0,
+  "p2016_posts": 125.0,
+  "modern_posts": 125.0,
   "p2016_ml_posts": 87.0,
-  "p2016_delving_posts": 37.0,
+  "p2016_delving_posts": 38.0,
   "modern_ml_posts": 87.0,
-  "modern_delving_posts": 37.0,
+  "modern_delving_posts": 38.0,
   "is_engineer": false,
   "is_reviewer": true,
   "is_researcher": true,
@@ -106,10 +106,10 @@
     "link": "https://delvingbitcoin.org/t/off-chain-dlc-ticketing-systems/214/1"
   },
   "last_message": {
-    "source": "mailing_list",
-    "subject": "Re: [bitcoindev] Giving teeth to expected EC disabling: P2XX(-T)(-ML)",
-    "date": "2026-06-26",
-    "link": "https://gnusha.org/pi/bitcoindev/Jj-Ozzq4OMo2XaP_Drftu_n7gmEHWC_Dw2bToW9hI8vId-BN3y4hmQSaHh5JY1xTonTyBWKa17vzNH4GMYTkM-CiFw5ZNwRFATdc3OE_lLk=@proton.me"
+    "source": "delving",
+    "subject": "Re: SHRINCS: 324-byte stateful post-quantum signatures with static backups",
+    "date": "2026-07-01",
+    "link": "https://delvingbitcoin.org/t/shrincs-324-byte-stateful-post-quantum-signatures-with-static-backups/2158/22"
   },
   "social_history": {
     "2023": {
@@ -134,13 +134,13 @@
     },
     "2026": {
       "bitvm": 11,
-      "covenants": 9,
+      "covenants": 10,
       "other": 52,
       "mempool-fees": 8,
       "privacy": 10,
-      "quantum": 52,
-      "script-opcodes": 9,
-      "taproot": 26,
+      "quantum": 53,
+      "script-opcodes": 10,
+      "taproot": 27,
       "wallet-keys": 20
     }
   }

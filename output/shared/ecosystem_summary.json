@@ -1,38 +1,38 @@
 {
-  "generated_at": "2026-06-29T14:58:42.487261",
+  "generated_at": "2026-07-06T08:47:50.387485",
   "groups": {
     "committers": 1240,
-    "reviewers": 5119,
-    "research": 1651,
+    "reviewers": 5126,
+    "research": 1660,
     "standards": 158,
-    "total_active": 6481,
-    "total_registry": 7632
+    "total_active": 6492,
+    "total_registry": 7642
   },
   "venn_4": {
     "0001": 15,
-    "0010": 1179,
+    "0010": 1183,
     "0011": 23,
-    "0100": 3850,
+    "0100": 3855,
     "0101": 5,
-    "0110": 133,
+    "0110": 135,
     "0111": 36,
     "1000": 132,
     "1001": 1,
     "1010": 11,
     "1011": 1,
-    "1100": 825,
+    "1100": 822,
     "1101": 2,
-    "1110": 193,
+    "1110": 196,
     "1111": 75
   },
   "venn_summary": {
     "code_only": 132,
-    "review_only": 3850,
-    "research_only": 1179,
+    "review_only": 3855,
+    "research_only": 1183,
     "standards_only": 15,
     "all_four": 75,
-    "code_review": 825,
-    "review_research": 133,
+    "code_review": 822,
+    "review_research": 135,
     "research_standards": 23
   },
   "rd_focus": {},
@@ -47,18 +47,18 @@
     "description": "First-time core contributor recently merged 2 commits."
   },
   "onboarding": {
-    "new_coders_90d": 24,
-    "new_discussants_90d": 99,
+    "new_coders_90d": 22,
+    "new_discussants_90d": 95,
     "window_days": 90
   },
   "prs": {
-    "total_merged": 17846,
-    "merged_30d": 112,
-    "merged_prev_30d": 117
+    "total_merged": 17867,
+    "merged_30d": 114,
+    "merged_prev_30d": 111
   },
   "commits": {
-    "commits_30d": 543,
-    "commits_prev_30d": 626
+    "commits_30d": 527,
+    "commits_prev_30d": 645
   },
   "bips": {
     "total": 210,
@@ -69,20 +69,20 @@
       {
         "category": "quantum",
         "label": "Quantum",
-        "count": 179,
-        "share": 25.0
+        "count": 178,
+        "share": 24.9
+      },
+      {
+        "category": "utxo-sync",
+        "label": "Utxo Sync",
+        "count": 67,
+        "share": 9.4
       },
       {
         "category": "testing-devtools",
         "label": "Testing Devtools",
-        "count": 69,
-        "share": 9.6
-      },
-      {
-        "category": "privacy",
-        "label": "Privacy",
-        "count": 58,
-        "share": 8.1
+        "count": 59,
+        "share": 8.2
       }
     ],
     "top_bips": [

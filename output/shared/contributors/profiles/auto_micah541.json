@@ -51,10 +51,10 @@
   "impact_score": 0.0,
   "p2016_impact_score": 0.0,
   "modern_impact_score": 0.0,
-  "threads_started": 4.0,
+  "threads_started": 5.0,
   "replies_sent": 4.0,
   "ml_threads": 0.0,
-  "delving_threads": 4.0,
+  "delving_threads": 5.0,
   "ml_responses": 0.0,
   "delving_responses": 4.0,
   "first_active": null,
@@ -62,27 +62,24 @@
   "dev_type": "Participant",
   "expertise_domains": [
     "Mining",
-    "Cryptography",
-    "L2"
+    "Cryptography"
   ],
   "expertise_by_source": {
     "discussion": {
-      "Cryptography": 0.333,
-      "L2": 0.167,
-      "Mining": 0.5
+      "Cryptography": 0.327,
+      "Mining": 0.673
     }
   },
   "expertise_domain_scores": {
-    "Cryptography": 0.333,
-    "L2": 0.167,
-    "Mining": 0.5
+    "Cryptography": 0.327,
+    "Mining": 0.673
   },
-  "p2016_posts": 8.0,
-  "modern_posts": 8.0,
+  "p2016_posts": 9.0,
+  "modern_posts": 9.0,
   "p2016_ml_posts": 0.0,
-  "p2016_delving_posts": 8.0,
+  "p2016_delving_posts": 9.0,
   "modern_ml_posts": 0.0,
-  "modern_delving_posts": 8.0,
+  "modern_delving_posts": 9.0,
   "is_engineer": false,
   "is_reviewer": false,
   "is_researcher": false,
@@ -106,21 +103,24 @@
   },
   "last_message": {
     "source": "delving",
-    "subject": "Re: Quantum Attack Game Theory",
-    "date": "2026-06-05",
-    "link": "https://delvingbitcoin.org/t/quantum-attack-game-theory/2524/4"
+    "subject": "Re: Addressing the Diminishing Block Subsidy",
+    "date": "2026-06-29",
+    "link": "https://delvingbitcoin.org/t/addressing-the-diminishing-block-subsidy/2640/18"
   },
   "social_history": {
     "2025": {
       "privacy": 1,
       "script-opcodes": 1,
       "sidechains-drivechain": 1,
-      "spam-filtering": 1,
+      "other": 1,
       "utxo-sync": 1
     },
     "2026": {
-      "mining": 3,
-      "quantum": 2
+      "bip-process": 1,
+      "hard-fork-block-size": 1,
+      "mining": 4,
+      "quantum": 2,
+      "utxo-sync": 1
     }
   }
 }

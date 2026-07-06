@@ -1,6 +1,17 @@
 {
-  "generated_at": "2026-06-29T20:24:27.348777+00:00",
+  "generated_at": "2026-07-06T13:48:28.319844+00:00",
   "self_merges": [
+    {
+      "maintainer_id": "can_michael_ford",
+      "maintainer_name": "Michael Ford",
+      "repository": "bitcoin/bitcoin",
+      "pr_number": 35640,
+      "url": "https://github.com/bitcoin/bitcoin/pull/35640",
+      "title": "ci: use a 8x instance over 16x for riscv job",
+      "merged_at": "2026-07-03T15:08:37+00:00",
+      "ack_count": 1,
+      "category": "Light Review"
+    },
     {
       "maintainer_id": "can_michael_ford",
       "maintainer_name": "Michael Ford",
@@ -28160,6 +28171,17 @@
       "merged_at": null,
       "ack_count": 2,
       "category": "Light Review"
+    },
+    {
+      "maintainer_id": "can_michael_ford",
+      "maintainer_name": "Michael Ford",
+      "repository": "bitcoin-core/gui",
+      "pr_number": 35640,
+      "url": "https://github.com/bitcoin-core/gui/pull/35640",
+      "title": null,
+      "merged_at": null,
+      "ack_count": 0,
+      "category": "Ninja Merge"
     },
     {
       "maintainer_id": "can_michael_ford",

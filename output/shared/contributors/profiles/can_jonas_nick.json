@@ -19,24 +19,24 @@
   "roles": [
     "BIP Author"
   ],
-  "total_commits": 188.0,
-  "authored_commits": 188.0,
-  "tier1_authored_commits": 185.0,
+  "total_commits": 189.0,
+  "authored_commits": 189.0,
+  "tier1_authored_commits": 186.0,
   "tier2_authored_commits": 3.0,
   "merge_commits": 0.0,
   "tier1_merge_commits": 0.0,
   "tier2_merge_commits": 0.0,
   "self_merges": 0.0,
-  "total_additions": 11603.0,
-  "total_deletions": 3997.0,
+  "total_additions": 11612.0,
+  "total_deletions": 4006.0,
   "first_core_commit": "2016-05-08T17:53:01+00:00",
-  "last_core_commit": "2026-01-30T14:32:36+00:00",
+  "last_core_commit": "2026-06-29T07:06:10+00:00",
   "first_ecosystem_commit": "2019-04-29T17:14:58+00:00",
   "last_ecosystem_commit": "2019-04-29T19:57:56+00:00",
   "first_commit": "2016-05-08T17:53:01",
-  "last_commit": "2026-01-30T14:32:36",
-  "p2016_authored_commits": 188.0,
-  "modern_authored_commits": 52.0,
+  "last_commit": "2026-06-29T07:06:10",
+  "p2016_authored_commits": 189.0,
+  "modern_authored_commits": 53.0,
   "co_authored_commits": 8.0,
   "bips_authored": 4.0,
   "p2016_bips_authored": 4.0,
@@ -50,7 +50,7 @@
   "tier1_reviews_count": 336.0,
   "tier2_reviews_count": 61.0,
   "p2016_reviews_count": 382.0,
-  "modern_reviews_count": 103.0,
+  "modern_reviews_count": 100.0,
   "first_review_date": "2015-03-11T23:42:40",
   "last_review_date": "2026-05-15T06:41:42",
   "prs_authored": 111.0,
@@ -60,15 +60,15 @@
   "avg_concept_lead_time_days": 11.727422839506172,
   "review_reciprocity": 3.4504504504504503,
   "hybrid_score": 1.4087,
-  "p2016_hybrid_score": 1.4583,
-  "modern_hybrid_score": 0.6904,
+  "p2016_hybrid_score": 1.4584,
+  "modern_hybrid_score": 0.6899,
   "impact_score": 57.0,
   "p2016_impact_score": 58.0,
   "modern_impact_score": 34.0,
-  "threads_started": 14.0,
+  "threads_started": 15.0,
   "replies_sent": 50.0,
   "ml_threads": 7.0,
-  "delving_threads": 7.0,
+  "delving_threads": 8.0,
   "ml_responses": 47.0,
   "delving_responses": 3.0,
   "first_active": "2015-06-14T12:45:48",
@@ -89,29 +89,29 @@
       "Wallet": 0.016
     },
     "discussion": {
-      "Consensus": 0.259,
-      "Cryptography": 0.352,
-      "Wallet": 0.389
+      "Consensus": 0.255,
+      "Cryptography": 0.364,
+      "Wallet": 0.382
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.3018,
-    "Cryptography": 0.0704,
-    "Infrastructure": 0.5452,
-    "Wallet": 0.0826
+    "Consensus": 0.3009,
+    "Cryptography": 0.0728,
+    "Infrastructure": 0.5451,
+    "Wallet": 0.0812
   },
-  "p2016_posts": 63.0,
-  "modern_posts": 41.0,
+  "p2016_posts": 64.0,
+  "modern_posts": 42.0,
   "p2016_ml_posts": 53.0,
-  "p2016_delving_posts": 10.0,
+  "p2016_delving_posts": 11.0,
   "modern_ml_posts": 31.0,
-  "modern_delving_posts": 10.0,
+  "modern_delving_posts": 11.0,
   "is_engineer": true,
   "is_reviewer": true,
   "is_researcher": true,
   "is_bip_author": true,
   "global_first_active": "2015-03-11T23:42:40",
-  "global_last_active": "2026-05-15T06:41:42",
+  "global_last_active": "2026-06-29T07:06:10",
   "github_location": null,
   "github_company": null,
   "github_bio": "GPG 36C7 1A37 C9D9 88BD E825  08D9 B1A7 0E4F 8DCD 0366",
@@ -173,7 +173,7 @@
     },
     "2026": {
       "Build & CI": 1.0,
-      "Documentation": 3.0
+      "Documentation": 4.0
     }
   },
   "bip_list": [
@@ -214,9 +214,9 @@
   },
   "last_message": {
     "source": "delving",
-    "subject": "Re: SHRIMPS: 2.5 KB post-quantum signatures across multiple stateful devices",
-    "date": "2026-04-06",
-    "link": "https://delvingbitcoin.org/t/shrimps-2-5-kb-post-quantum-signatures-across-multiple-stateful-devices/2355/5"
+    "subject": "Re: SHRINCS: 324-byte stateful post-quantum signatures with static backups",
+    "date": "2026-06-29",
+    "link": "https://delvingbitcoin.org/t/shrincs-324-byte-stateful-post-quantum-signatures-with-static-backups/2158/21"
   },
   "social_history": {
     "2015": {
@@ -268,10 +268,10 @@
     },
     "2026": {
       "other": 2,
-      "covenants": 3,
-      "quantum": 7,
-      "script-opcodes": 3,
-      "taproot": 3
+      "covenants": 4,
+      "quantum": 8,
+      "script-opcodes": 4,
+      "taproot": 4
     }
   }
 }

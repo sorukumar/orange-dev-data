@@ -1,0 +1,1733 @@
+🚀 Starting WEEKLY Automated Pipeline (Deep Analytics)...
+✅ Loaded .env file
+
+--- PHASE 0: Raw Data Sync ---
+  Source repo status:
+    bitcoin (Core git)                       ✅ git repo
+    bips (BIPs git)                          ✅ git repo
+    delving (archive)                        ✅ git repo
+    bitcoin-github-metadata (PRs)            ✅ git repo
+    bips-github-metadata (PRs)               ✅ git repo
+    mailing_list/shard_0                     ✅ bare repo
+    secp256k1                                ✅ git repo
+    gui                                      ✅ git repo
+    guix.sigs                                ✅ git repo
+    qa-assets                                ✅ git repo
+    HWI                                      ✅ git repo
+    opensats (Website)                       ✅ git repo
+    brink (Website)                          ✅ git repo
+
+
+--- Running: git -C data/sources/bitcoin pull origin master ---
+From https://github.com/bitcoin/bitcoin
+ * branch                  master     -> FETCH_HEAD
+   3c76bd4356..f79ecfd9c7  master     -> origin/master
+Updating 3c76bd4356..f79ecfd9c7
+Fast-forward
+ .github/workflows/ci.yml                           |  12 +
+ CMakeLists.txt                                     |   7 +-
+ ci/test/00_setup_env_native_fuzz_with_msan.sh      |   4 +-
+ ci/test/00_setup_env_native_previous_releases.sh   |   2 +-
+ ci/test/00_setup_env_openbsd_cross.sh              |  35 +++
+ ci/test/00_setup_env_riscv_bare_cross.sh           |  37 +++
+ ci/test/01_base_install.sh                         |  27 ++
+ ci/test/03_test_script.sh                          |   5 +
+ ci/test/link-riscv.sh                              |  73 +++++
+ cmake/introspection.cmake                          |   2 +
+ cmake/module/TestAppendRequiredLibraries.cmake     |   1 -
+ depends/hosts/openbsd.mk                           |   1 +
+ depends/packages/boost.mk                          |   4 +-
+ doc/offline-signing-tutorial.md                    |  60 +---
+ doc/release-notes-33671.md                         |  11 +
+ doc/release-notes-35182.md                         |   6 +-
+ doc/release-notes-35610.md                         |   6 +
+ doc/release-notes-35634.md                         |   9 +
+ src/CMakeLists.txt                                 |   2 +-
+ src/bench/nanobench.h                              |   6 +-
+ src/bitcoin-util.cpp                               |  14 +
+ src/common/netif.cpp                               |   1 -
+ src/crypto/CMakeLists.txt                          |   4 +-
+ src/httpserver.cpp                                 |  21 +-
+ src/httpserver.h                                   |  13 +-
+ src/index/txospenderindex.cpp                      |   9 +-
+ src/init/common.cpp                                |   2 +-
+ src/ipc/CMakeLists.txt                             |  15 +
+ src/ipc/test/fuzz/CMakeLists.txt                   |   6 +
+ src/ipc/test/fuzz/ipc.cpp                          | 138 ++++++++++
+ src/ipc/test/fuzz/ipc_fuzz.capnp                   |  21 ++
+ src/ipc/test/fuzz/ipc_fuzz.h                       |  26 ++
+ src/ipc/test/fuzz/ipc_fuzz_types.h                 |  11 +
+ src/logging.cpp                                    |  16 +-
+ src/logging/categories.h                           |  32 +--
+ src/private_broadcast.cpp                          |   5 +
+ src/private_broadcast.h                            |   4 +-
+ src/script/descriptor.cpp                          |  29 +-
+ src/script/descriptor.h                            |   3 +
+ src/test/descriptor_tests.cpp                      |  42 +--
+ src/test/fuzz/CMakeLists.txt                       |   5 +
+ src/test/fuzz/pcp.cpp                              |   6 +
+ src/test/fuzz/private_broadcast.cpp                | 202 ++++++++++++++
+ src/test/fuzz/util.h                               |  14 +-
+ src/test/httpserver_tests.cpp                      | 158 +++++++++++
+ src/test/logging_tests.cpp                         |  13 +-
+ src/test/util/CMakeLists.txt                       |   2 +-
+ src/test/util/setup_common.cpp                     |  18 --
+ src/test/util/setup_common.h                       |  12 +-
+ src/validation.cpp                                 |   9 +-
+ src/wallet/CMakeLists.txt                          |   1 +
+ src/wallet/export.cpp                              | 222 +++++++++++++++
+ src/wallet/export.h                                |  36 +++
+ src/wallet/migrate.cpp                             |  26 +-
+ src/wallet/rpc/backup.cpp                          |  36 +--
+ src/wallet/rpc/wallet.cpp                          |  45 +++
+ src/wallet/scriptpubkeyman.cpp                     |   2 +-
+ src/wallet/test/fuzz/wallet_bdb_parser.cpp         |  17 +-
+ src/wallet/test/walletload_tests.cpp               |   1 +
+ src/wallet/wallet.cpp                              |   6 +
+ src/wallet/wallet.h                                |   3 +-
+ test/functional/data/util/bitcoin-util-test.json   |  49 ++++
+ test/functional/data/util/netmagic-mainnet.hex     |   1 +
+ test/functional/data/util/netmagic-regtest.hex     |   1 +
+ .../data/util/netmagic-signet-custom.hex           |   1 +
+ test/functional/data/util/netmagic-signet.hex      |   1 +
+ test/functional/data/util/netmagic-testnet.hex     |   1 +
+ test/functional/data/util/netmagic-testnet4.hex    |   1 +
+ test/functional/feature_taproot.py                 |  23 +-
+ test/functional/rpc_createmultisig.py              |   2 +-
+ test/functional/rpc_misc.py                        |  21 +-
+ test/functional/rpc_scantxoutset.py                |   6 +-
+ test/functional/test_framework/netutil.py          |  31 +++
+ test/functional/test_framework/socks5.py           |  45 ++-
+ test/functional/test_framework/wallet.py           |  44 ++-
+ test/functional/test_runner.py                     |   1 +
+ test/functional/wallet_exported_watchonly.py       | 303 +++++++++++++++++++++
+ 77 files changed, 1838 insertions(+), 249 deletions(-)
+ create mode 100755 ci/test/00_setup_env_openbsd_cross.sh
+ create mode 100755 ci/test/00_setup_env_riscv_bare_cross.sh
+ create mode 100755 ci/test/link-riscv.sh
+ create mode 100644 doc/release-notes-33671.md
+ create mode 100644 doc/release-notes-35610.md
+ create mode 100644 doc/release-notes-35634.md
+ create mode 100644 src/ipc/test/fuzz/CMakeLists.txt
+ create mode 100644 src/ipc/test/fuzz/ipc.cpp
+ create mode 100644 src/ipc/test/fuzz/ipc_fuzz.capnp
+ create mode 100644 src/ipc/test/fuzz/ipc_fuzz.h
+ create mode 100644 src/ipc/test/fuzz/ipc_fuzz_types.h
+ create mode 100644 src/test/fuzz/private_broadcast.cpp
+ create mode 100644 src/wallet/export.cpp
+ create mode 100644 src/wallet/export.h
+ create mode 100644 test/functional/data/util/netmagic-mainnet.hex
+ create mode 100644 test/functional/data/util/netmagic-regtest.hex
+ create mode 100644 test/functional/data/util/netmagic-signet-custom.hex
+ create mode 100644 test/functional/data/util/netmagic-signet.hex
+ create mode 100644 test/functional/data/util/netmagic-testnet.hex
+ create mode 100644 test/functional/data/util/netmagic-testnet4.hex
+ create mode 100755 test/functional/wallet_exported_watchonly.py
+
+--- Running: git -C data/sources/bips pull origin master ---
+From https://github.com/bitcoin/bips
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+--- Running: git -C data/sources/bitcoin-github-metadata pull origin master ---
+From https://github.com/bitcoin-data/github-metadata-backup-bitcoin-bitcoin
+ * branch              master     -> FETCH_HEAD
+   e04e6768..4bb9d397  master     -> origin/master
+Updating e04e6768..4bb9d397
+Fast-forward
+ issues/24861.json |     4 +-
+ issues/27284.json |    62 +-
+ issues/27587.json |   872 +++-
+ issues/33758.json |   120 +-
+ issues/34019.json |    68 +-
+ issues/34163.json |     6 +-
+ issues/34367.json |   308 +-
+ issues/34476.json |   128 +-
+ issues/34658.json |     2 +-
+ issues/35112.json |    45 +-
+ issues/35172.json |    62 +-
+ issues/35457.json |   124 +-
+ issues/35491.json |    97 +-
+ issues/35544.json |   103 +-
+ issues/35612.json |    62 +-
+ issues/35622.json |   229 +
+ issues/35623.json |   229 +
+ issues/35626.json |   588 +++
+ issues/35627.json |   320 ++
+ issues/35628.json |   281 ++
+ issues/35629.json |    48 +
+ issues/35632.json |   222 +
+ issues/35636.json |   205 +
+ issues/35643.json |   548 +++
+ issues/35645.json |   331 ++
+ issues/35648.json |    48 +
+ pulls/10102.json  |    30 +-
+ pulls/16545.json  |   284 +-
+ pulls/17493.json  |    36 +-
+ pulls/17580.json  |    26 +-
+ pulls/17581.json  |    26 +-
+ pulls/17783.json  |    26 +-
+ pulls/19460.json  |    88 +-
+ pulls/19461.json  |   212 +-
+ pulls/24230.json  |   150 +-
+ pulls/24539.json  |   368 +-
+ pulls/25573.json  |   766 +++-
+ pulls/25665.json  |    32 +-
+ pulls/25722.json  |    26 +-
+ pulls/26022.json  |    32 +-
+ pulls/27865.json  |  1092 +++--
+ pulls/28463.json  |  1097 ++++-
+ pulls/28690.json  |    72 +-
+ pulls/29247.json  |    84 +-
+ pulls/29256.json  |    32 +-
+ pulls/29278.json  |  1838 +++++---
+ pulls/29409.json  |   156 +-
+ pulls/29700.json  |   223 +-
+ pulls/29843.json  |    26 +-
+ pulls/30342.json  |    32 +-
+ pulls/30343.json  |    32 +-
+ pulls/30437.json  |    82 +-
+ pulls/30610.json  |   308 +-
+ pulls/30661.json  |   272 +-
+ pulls/30951.json  |   937 ++--
+ pulls/31260.json  |   135 +-
+ pulls/31308.json  |   649 ++-
+ pulls/31425.json  |   269 +-
+ pulls/31649.json  |   523 ++-
+ pulls/31682.json  |   202 +-
+ pulls/31868.json  |   208 +-
+ pulls/31989.json  |    76 +-
+ pulls/32123.json  |    22 +-
+ pulls/32229.json  |   506 ++-
+ pulls/32247.json  |    18 +-
+ pulls/32266.json  |   570 ++-
+ pulls/32273.json  |   856 +++-
+ pulls/32317.json  |    28 +-
+ pulls/32318.json  |   257 +-
+ pulls/32338.json  |   268 +-
+ pulls/32342.json  |   314 +-
+ pulls/32344.json  |   329 +-
+ pulls/32359.json  |   889 +++-
+ pulls/32364.json  |   372 +-
+ pulls/32405.json  |   329 +-
+ pulls/32409.json  |    94 +-
+ pulls/32427.json  |  9838 +++++++++++++++++++++++-------------------
+ pulls/32489.json  | 11988 +++++++++++++++++++++++++++++++--------------------
+ pulls/32575.json  |    22 +-
+ pulls/32606.json  |   212 +-
+ pulls/32763.json  |   240 +-
+ pulls/32784.json  |  1219 ++++--
+ pulls/32800.json  |   495 ++-
+ pulls/32857.json  |    28 +-
+ pulls/32861.json  |   418 +-
+ pulls/32895.json  |   229 +-
+ pulls/32958.json  |    26 +-
+ pulls/33014.json  |    22 +-
+ pulls/33034.json  |    26 +-
+ pulls/33043.json  |   144 +-
+ pulls/33145.json  |   140 +-
+ pulls/33186.json  |   590 ++-
+ pulls/33324.json  |   127 +-
+ pulls/33392.json  |   129 +-
+ pulls/33540.json  |    28 +-
+ pulls/33637.json  |    30 +-
+ pulls/33847.json  |    36 +-
+ pulls/33854.json  |    30 +-
+ pulls/33922.json  |    61 +-
+ pulls/34020.json  |   416 +-
+ pulls/34038.json  |   937 ++--
+ pulls/34075.json  |  5433 +++++++++++++++---------
+ pulls/34132.json  |    30 +-
+ pulls/34271.json  |   555 ++-
+ pulls/34320.json  |    30 +-
+ pulls/34486.json  |    30 +-
+ pulls/34514.json  |    90 +-
+ pulls/34520.json  |    26 +-
+ pulls/34534.json  |    32 +-
+ pulls/34538.json  |    24 +-
+ pulls/34603.json  |    26 +-
+ pulls/34617.json  |   383 +-
+ pulls/34628.json  |    32 +-
+ pulls/34651.json  |   649 ++-
+ pulls/34672.json  |    26 +-
+ pulls/34683.json  |    26 +-
+ pulls/34697.json  |    26 +-
+ pulls/34707.json  |   133 +-
+ pulls/34717.json  |   146 +-
+ pulls/34729.json  |    26 +-
+ pulls/34775.json  |    22 +-
+ pulls/34778.json  |    30 +-
+ pulls/34812.json  |    26 +-
+ pulls/34824.json  |   904 ++--
+ pulls/34844.json  |   142 +-
+ pulls/34861.json  |  2121 ++++++---
+ pulls/34864.json  |   820 ++--
+ pulls/34875.json  |    28 +-
+ pulls/34909.json  |   136 +-
+ pulls/34914.json  |    94 +-
+ pulls/34931.json  |    24 +-
+ pulls/34959.json  |   118 +-
+ pulls/34969.json  |    26 +-
+ pulls/34978.json  |    26 +-
+ pulls/34993.json  |   597 ++-
+ pulls/34995.json  |  1202 ++++--
+ pulls/34997.json  |   148 +-
+ pulls/35003.json  |  8768 +++++++++++++++++++++++---------------
+ pulls/35016.json  |   942 ++--
+ pulls/35026.json  |   118 +-
+ pulls/35027.json  |    22 +-
+ pulls/35037.json  |   297 +-
+ pulls/35069.json  |    20 +-
+ pulls/35071.json  |    26 +-
+ pulls/35076.json  |    22 +-
+ pulls/35090.json  |  1400 ++++--
+ pulls/35100.json  |   174 +-
+ pulls/35105.json  |    53 +-
+ pulls/35118.json  |  2573 ++++++++---
+ pulls/35129.json  |   269 +-
+ pulls/35147.json  |   603 ++-
+ pulls/35161.json  |    30 +-
+ pulls/35167.json  |   144 +-
+ pulls/35170.json  |    26 +-
+ pulls/35179.json  |   239 +-
+ pulls/35182.json  |   173 +-
+ pulls/35197.json  |   207 +-
+ pulls/35200.json  |    34 +-
+ pulls/35201.json  |    28 +-
+ pulls/35205.json  |   129 +-
+ pulls/35208.json  |    55 +-
+ pulls/35215.json  |    30 +-
+ pulls/35225.json  |    26 +-
+ pulls/35229.json  |    26 +-
+ pulls/35242.json  |   245 +-
+ pulls/35252.json  |    30 +-
+ pulls/35261.json  |   529 ++-
+ pulls/35267.json  |   208 +-
+ pulls/35281.json  |   283 +-
+ pulls/35286.json  |   115 +-
+ pulls/35289.json  |   177 +-
+ pulls/35295.json  | 12026 +++++++++++++++++++++++++++++++---------------------
+ pulls/35301.json  |   645 ++-
+ pulls/35302.json  |   241 +-
+ pulls/35303.json  |    26 +-
+ pulls/35307.json  |    22 +-
+ pulls/35315.json  |  1169 ++++-
+ pulls/35322.json  |   138 +-
+ pulls/35351.json  |  1575 ++++---
+ pulls/35368.json  |    26 +-
+ pulls/35370.json  |    22 +-
+ pulls/35377.json  |   135 +-
+ pulls/35380.json  |   694 ++-
+ pulls/35386.json  |   852 +++-
+ pulls/35387.json  |   140 +-
+ pulls/35395.json  |  1000 +++--
+ pulls/35397.json  |  1110 ++++-
+ pulls/35406.json  |  4599 ++++++++++++++------
+ pulls/35412.json  |   481 ++-
+ pulls/35417.json  |    28 +-
+ pulls/35422.json  |    22 +-
+ pulls/35429.json  |    26 +-
+ pulls/35436.json  |   739 +++-
+ pulls/35438.json  |   747 +++-
+ pulls/35440.json  |    22 +-
+ pulls/35444.json  |   131 +-
+ pulls/35445.json  |   142 +-
+ pulls/35461.json  |    26 +-
+ pulls/35464.json  |  1319 +++++-
+ pulls/35474.json  |    26 +-
+ pulls/35482.json  |    16 +-
+ pulls/35490.json  |   149 +-
+ pulls/35496.json  |    53 +-
+ pulls/35501.json  |    26 +-
+ pulls/35502.json  |    26 +-
+ pulls/35510.json  |   163 +-
+ pulls/35511.json  |  2114 +++++++--
+ pulls/35513.json  |   696 ++-
+ pulls/35516.json  |   188 +-
+ pulls/35518.json  |   366 +-
+ pulls/35531.json  |  4161 ++++++++++++++----
+ pulls/35551.json  |   525 ++-
+ pulls/35557.json  |    26 +-
+ pulls/35558.json  |  3048 +++++++++----
+ pulls/35561.json  |   277 +-
+ pulls/35568.json  |  1038 ++++-
+ pulls/35569.json  |  1476 ++++++-
+ pulls/35570.json  |  2749 ++++++++----
+ pulls/35572.json  |   144 +-
+ pulls/35578.json  |    88 +-
+ pulls/35579.json  |   123 +-
+ pulls/35581.json  |   362 +-
+ pulls/35582.json  |   525 ++-
+ pulls/35583.json  |   233 +-
+ pulls/35586.json  |    65 +-
+ pulls/35587.json  |  1541 ++++---
+ pulls/35590.json  |   142 +-
+ pulls/35591.json  |    22 +-
+ pulls/35592.json  |   726 +++-
+ pulls/35597.json  |  1264 ++++--
+ pulls/35598.json  |   471 +-
+ pulls/35599.json  |   286 +-
+ pulls/35604.json  |   403 +-
+ pulls/35605.json  |   321 +-
+ pulls/35606.json  |   169 +-
+ pulls/35607.json  |   235 +-
+ pulls/35610.json  |  1140 ++++-
+ pulls/35613.json  |   176 +-
+ pulls/35614.json  |   235 +-
+ pulls/35615.json  |   221 +-
+ pulls/35616.json  |   863 +++-
+ pulls/35618.json  |   241 +-
+ pulls/35619.json  |   532 ++-
+ pulls/35620.json  |   444 +-
+ pulls/35621.json  |  1997 +++++++++
+ pulls/35624.json  |   551 +++
+ pulls/35625.json  |   816 ++++
+ pulls/35630.json  |  1124 +++++
+ pulls/35631.json  |   610 +++
+ pulls/35633.json  |   738 ++++
+ pulls/35634.json  |  1598 +++++++
+ pulls/35635.json  |   583 +++
+ pulls/35637.json  |   583 +++
+ pulls/35638.json  |   727 ++++
+ pulls/35639.json  |   686 +++
+ pulls/35640.json  |   817 ++++
+ pulls/35641.json  |  1017 +++++
+ pulls/35642.json  |  1251 ++++++
+ pulls/35644.json  |   607 +++
+ pulls/35646.json  |   632 +++
+ pulls/35647.json  |  1131 +++++
+ pulls/35649.json  |   750 ++++
+ pulls/35650.json  |   966 +++++
+ pulls/35651.json  |   599 +++
+ pulls/35652.json  |  1463 +++++++
+ pulls/35653.json  |   692 +++
+ pulls/35654.json  |   676 +++
+ pulls/35655.json  |  1534 +++++++
+ pulls/35656.json  |   769 ++++
+ pulls/35657.json  |   986 +++++
+ pulls/35658.json  |   801 ++++
+ pulls/35659.json  |   590 +++
+ pulls/35660.json  |   659 +++
+ pulls/35661.json  |   495 +++
+ pulls/35662.json  |   534 +++
+ pulls/35663.json  |   494 +++
+ pulls/35664.json  |   534 +++
+ pulls/35665.json  |   575 +++
+ pulls/35666.json  |   724 ++++
+ pulls/35667.json  |   691 +++
+ state.json        |     2 +-
+ 281 files changed, 130424 insertions(+), 35826 deletions(-)
+ create mode 100644 issues/35622.json
+ create mode 100644 issues/35623.json
+ create mode 100644 issues/35626.json
+ create mode 100644 issues/35627.json
+ create mode 100644 issues/35628.json
+ create mode 100644 issues/35629.json
+ create mode 100644 issues/35632.json
+ create mode 100644 issues/35636.json
+ create mode 100644 issues/35643.json
+ create mode 100644 issues/35645.json
+ create mode 100644 issues/35648.json
+ create mode 100644 pulls/35621.json
+ create mode 100644 pulls/35624.json
+ create mode 100644 pulls/35625.json
+ create mode 100644 pulls/35630.json
+ create mode 100644 pulls/35631.json
+ create mode 100644 pulls/35633.json
+ create mode 100644 pulls/35634.json
+ create mode 100644 pulls/35635.json
+ create mode 100644 pulls/35637.json
+ create mode 100644 pulls/35638.json
+ create mode 100644 pulls/35639.json
+ create mode 100644 pulls/35640.json
+ create mode 100644 pulls/35641.json
+ create mode 100644 pulls/35642.json
+ create mode 100644 pulls/35644.json
+ create mode 100644 pulls/35646.json
+ create mode 100644 pulls/35647.json
+ create mode 100644 pulls/35649.json
+ create mode 100644 pulls/35650.json
+ create mode 100644 pulls/35651.json
+ create mode 100644 pulls/35652.json
+ create mode 100644 pulls/35653.json
+ create mode 100644 pulls/35654.json
+ create mode 100644 pulls/35655.json
+ create mode 100644 pulls/35656.json
+ create mode 100644 pulls/35657.json
+ create mode 100644 pulls/35658.json
+ create mode 100644 pulls/35659.json
+ create mode 100644 pulls/35660.json
+ create mode 100644 pulls/35661.json
+ create mode 100644 pulls/35662.json
+ create mode 100644 pulls/35663.json
+ create mode 100644 pulls/35664.json
+ create mode 100644 pulls/35665.json
+ create mode 100644 pulls/35666.json
+ create mode 100644 pulls/35667.json
+
+--- Running: git -C data/sources/bips-github-metadata pull origin master ---
+From https://github.com/bitcoin-data/github-metadata-backup-bitcoin-bips
+ * branch            master     -> FETCH_HEAD
+   1383176..18ecc10  master     -> origin/master
+Updating 1383176..18ecc10
+Fast-forward
+ pulls/1923.json |  202 +-
+ pulls/1951.json | 1163 ++++++++--
+ pulls/2070.json |  347 ++-
+ pulls/2102.json |  114 +-
+ pulls/2103.json |  114 +-
+ pulls/2126.json |   58 +-
+ pulls/2152.json | 6598 +++++++++++++++++++++++++++++++++++--------------------
+ pulls/2195.json |  329 ++-
+ pulls/2200.json |  626 +++++-
+ pulls/2201.json |  124 +-
+ pulls/2202.json |  292 ++-
+ pulls/2203.json |  869 ++++++--
+ pulls/2204.json |   72 +-
+ pulls/2205.json | 1604 +++++++++++---
+ state.json      |    2 +-
+ 15 files changed, 9315 insertions(+), 3199 deletions(-)
+
+--- Running: git -C data/sources/delving pull origin master ---
+From https://github.com/jamesob/delving-bitcoin-archive
+ * branch            master     -> FETCH_HEAD
+   fa5ba58..67cca74  master     -> origin/master
+Updating fa5ba58..67cca74
+Fast-forward
+ archive/.metadata.json                             |   2 +-
+ ...deviation-when-the-bitcoin-rewards-is-zero.json |   4 +-
+ ...-data-history-against-the-observed-network.json |   6 +-
+ ...15-josh-input-triggered-transaction-expiry.json |  10 +-
+ ...17-josh-input-triggered-transaction-expiry.json |   8 +-
+ ...ajtowns-input-triggered-transaction-expiry.json |  10 +-
+ ...5-addressing-the-diminishing-block-subsidy.json |  25 ++-
+ ...5-addressing-the-diminishing-block-subsidy.json |   8 +-
+ ...mp_ancp-input-triggered-transaction-expiry.json |  10 +-
+ ...cs-a-working-paper-analyzing-pact-adoption.json |   6 +-
+ ...stagibbs-expiring-htlcs-without-free-relay.json |   6 +-
+ ...ake-bitcoin-core-v31-1rc1-is-now-available.json |  25 ++-
+ ...of-the-transaction-privacy-work-in-bitcoin.json |   8 +-
+ ...27-josh-input-triggered-transaction-expiry.json |  65 +++++++
+ ...tagibbs-input-triggered-transaction-expiry.json |  65 +++++++
+ ...30-josh-input-triggered-transaction-expiry.json |  65 +++++++
+ ...ajtowns-input-triggered-transaction-expiry.json |  82 +++++++++
+ ...pt-isolated-block-region-for-data-carriage.json |  65 +++++++
+ ...34-josh-input-triggered-transaction-expiry.json |  65 +++++++
+ ...1-addressing-the-diminishing-block-subsidy.json |  65 +++++++
+ ...tagibbs-input-triggered-transaction-expiry.json |  65 +++++++
+ ...38-josh-input-triggered-transaction-expiry.json |  65 +++++++
+ ...tagibbs-input-triggered-transaction-expiry.json |  65 +++++++
+ ...pt-isolated-block-region-for-data-carriage.json |  71 ++++++++
+ ...pt-isolated-block-region-for-data-carriage.json |  82 +++++++++
+ ...42-josh-input-triggered-transaction-expiry.json |  65 +++++++
+ ...ost-quantum-signatures-with-static-backups.json |  76 ++++++++
+ ...prey-2-non-malleable-schnorr-pq-signatures.json |  65 +++++++
+ ...pt-isolated-block-region-for-data-carriage.json |  87 +++++++++
+ ...pt-isolated-block-region-for-data-carriage.json |  71 ++++++++
+ ...pt-isolated-block-region-for-data-carriage.json |  71 ++++++++
+ ...ream-bounded-slh-dsa-and-p2mr-style-spends.json |  77 ++++++++
+ .../0000007951-kiwidream-deleted-discussion.json   |  77 ++++++++
+ ...pt-isolated-block-region-for-data-carriage.json |  71 ++++++++
+ ...pt-isolated-block-region-for-data-carriage.json |  71 ++++++++
+ ...ost-quantum-signatures-with-static-backups.json |  82 +++++++++
+ ...pt-isolated-block-region-for-data-carriage.json |  71 ++++++++
+ ...pt-isolated-block-region-for-data-carriage.json |  65 +++++++
+ ...-ajtowns-proof-of-work-based-signet-faucet.json |  82 +++++++++
+ .../0000007962-josh-what-is-memory.json            |  66 +++++++
+ ...963-josh-an-expression-enforced-whitespace.json |  67 +++++++
+ ...pt-isolated-block-region-for-data-carriage.json |  82 +++++++++
+ ...pt-isolated-block-region-for-data-carriage.json |  82 +++++++++
+ ...key-recovery-for-ec-leaves-in-p2mr-bip-360.json |  71 ++++++++
+ ...-ux-bitcoin-core-v31-1rc1-is-now-available.json |  76 ++++++++
+ ...key-recovery-for-ec-leaves-in-p2mr-bip-360.json |  71 ++++++++
+ ...nt-to-bip-360-witness-v3-sizing-discussion.json |  66 +++++++
+ .../0000007976-AdamISZ-emulating-op-rand.json      |  71 ++++++++
+ ...-verified-formalizing-the-bitcoin-protocol.json |  66 +++++++
+ ...pt-isolated-block-region-for-data-carriage.json |  71 ++++++++
+ .../0000007980-AdamISZ-emulating-op-rand.json      |  71 ++++++++
+ ...d-implementation-submitted-to-bitcoin-core.json |  65 +++++++
+ ...d-implementation-submitted-to-bitcoin-core.json |  71 ++++++++
+ ...prey-2-non-malleable-schnorr-pq-signatures.json |  65 +++++++
+ ...6-03-proof-of-work-based-signet-faucet-id937.md |  32 +++-
+ .../2025-01-29-emulating-op-rand-id1409.md         |  50 ++++++
+ ...uantum-signatures-with-static-backups-id2158.md |  36 ++++
+ ...lementation-submitted-to-bitcoin-core-id2360.md |  16 ++
+ ...2-non-malleable-schnorr-pq-signatures-id2514.md |  27 +++
+ ...ecovery-for-ec-leaves-in-p2mr-bip-360-id2603.md |  40 +++++
+ ...ressing-the-diminishing-block-subsidy-id2640.md |  17 ++
+ ...olated-block-region-for-data-carriage-id2641.md | 196 +++++++++++++++++++++
+ ...itcoin-core-v31-1rc1-is-now-available-id2669.md |   8 +
+ ...29-input-triggered-transaction-expiry-id2667.md | 142 +++++++++++++++
+ ...bounded-slh-dsa-and-p2mr-style-spends-id2674.md |  18 ++
+ .../2026-06-30-deleted-discussion-id2674.md        |   8 +
+ ...-02-an-expression-enforced-whitespace-id2679.md |  14 ++
+ .../2026-07-02-what-is-memory-id2678.md            |  72 ++++++++
+ ...fied-formalizing-the-bitcoin-protocol-id2684.md |  68 +++++++
+ ...-bip-360-witness-v3-sizing-discussion-id2682.md |  57 ++++++
+ 70 files changed, 3787 insertions(+), 54 deletions(-)
+ create mode 100644 archive/posts/2026-06-June/0000007927-josh-input-triggered-transaction-expiry.json
+ create mode 100644 archive/posts/2026-06-June/0000007928-instagibbs-input-triggered-transaction-expiry.json
+ create mode 100644 archive/posts/2026-06-June/0000007930-josh-input-triggered-transaction-expiry.json
+ create mode 100644 archive/posts/2026-06-June/0000007931-ajtowns-input-triggered-transaction-expiry.json
+ create mode 100644 archive/posts/2026-06-June/0000007932-murch-bip-draft-segregated-data-a-prunable-script-isolated-block-region-for-data-carriage.json
+ create mode 100644 archive/posts/2026-06-June/0000007934-josh-input-triggered-transaction-expiry.json
+ create mode 100644 archive/posts/2026-06-June/0000007935-micah541-addressing-the-diminishing-block-subsidy.json
+ create mode 100644 archive/posts/2026-06-June/0000007936-instagibbs-input-triggered-transaction-expiry.json
+ create mode 100644 archive/posts/2026-06-June/0000007938-josh-input-triggered-transaction-expiry.json
+ create mode 100644 archive/posts/2026-06-June/0000007939-instagibbs-input-triggered-transaction-expiry.json
+ create mode 100644 archive/posts/2026-06-June/0000007940-MrHash-bip-draft-segregated-data-a-prunable-script-isolated-block-region-for-data-carriage.json
+ create mode 100644 archive/posts/2026-06-June/0000007941-MrHash-bip-draft-segregated-data-a-prunable-script-isolated-block-region-for-data-carriage.json
+ create mode 100644 archive/posts/2026-06-June/0000007942-josh-input-triggered-transaction-expiry.json
+ create mode 100644 archive/posts/2026-06-June/0000007943-jonasnick-shrincs-324-byte-stateful-post-quantum-signatures-with-static-backups.json
+ create mode 100644 archive/posts/2026-06-June/0000007946-sipa-bird-of-prey-2-non-malleable-schnorr-pq-signatures.json
+ create mode 100644 archive/posts/2026-06-June/0000007948-ajtowns-bip-draft-segregated-data-a-prunable-script-isolated-block-region-for-data-carriage.json
+ create mode 100644 archive/posts/2026-06-June/0000007949-MrHash-bip-draft-segregated-data-a-prunable-script-isolated-block-region-for-data-carriage.json
+ create mode 100644 archive/posts/2026-06-June/0000007950-MrHash-bip-draft-segregated-data-a-prunable-script-isolated-block-region-for-data-carriage.json
+ create mode 100644 archive/posts/2026-06-June/0000007951-kiwidream-bounded-slh-dsa-and-p2mr-style-spends.json
+ create mode 100644 archive/posts/2026-06-June/0000007951-kiwidream-deleted-discussion.json
+ create mode 100644 archive/posts/2026-06-June/0000007952-murch-bip-draft-segregated-data-a-prunable-script-isolated-block-region-for-data-carriage.json
+ create mode 100644 archive/posts/2026-06-June/0000007953-MrHash-bip-draft-segregated-data-a-prunable-script-isolated-block-region-for-data-carriage.json
+ create mode 100644 archive/posts/2026-07-July/0000007954-conduition-shrincs-324-byte-stateful-post-quantum-signatures-with-static-backups.json
+ create mode 100644 archive/posts/2026-07-July/0000007956-murch-bip-draft-segregated-data-a-prunable-script-isolated-block-region-for-data-carriage.json
+ create mode 100644 archive/posts/2026-07-July/0000007960-MrHash-bip-draft-segregated-data-a-prunable-script-isolated-block-region-for-data-carriage.json
+ create mode 100644 archive/posts/2026-07-July/0000007961-ajtowns-proof-of-work-based-signet-faucet.json
+ create mode 100644 archive/posts/2026-07-July/0000007962-josh-what-is-memory.json
+ create mode 100644 archive/posts/2026-07-July/0000007963-josh-an-expression-enforced-whitespace.json
+ create mode 100644 archive/posts/2026-07-July/0000007966-MrHash-bip-draft-segregated-data-a-prunable-script-isolated-block-region-for-data-carriage.json
+ create mode 100644 archive/posts/2026-07-July/0000007967-murch-bip-draft-segregated-data-a-prunable-script-isolated-block-region-for-data-carriage.json
+ create mode 100644 archive/posts/2026-07-July/0000007968-sipa-public-key-recovery-for-ec-leaves-in-p2mr-bip-360.json
+ create mode 100644 archive/posts/2026-07-July/0000007969-mercie-ux-bitcoin-core-v31-1rc1-is-now-available.json
+ create mode 100644 archive/posts/2026-07-July/0000007970-ajtowns-public-key-recovery-for-ec-leaves-in-p2mr-bip-360.json
+ create mode 100644 archive/posts/2026-07-July/0000007971-geobees-empirical-ml-dsa-87-data-from-a-live-sha-256-pow-chain-relevant-to-bip-360-witness-v3-sizing-discussion.json
+ create mode 100644 archive/posts/2026-07-July/0000007976-AdamISZ-emulating-op-rand.json
+ create mode 100644 archive/posts/2026-07-July/0000007978-ProofOfKeags-btc-verified-formalizing-the-bitcoin-protocol.json
+ create mode 100644 archive/posts/2026-07-July/0000007979-MrHash-bip-draft-segregated-data-a-prunable-script-isolated-block-region-for-data-carriage.json
+ create mode 100644 archive/posts/2026-07-July/0000007980-AdamISZ-emulating-op-rand.json
+ create mode 100644 archive/posts/2026-07-July/0000007982-dathonohm-bip-110-update-v0-4-1-release-and-implementation-submitted-to-bitcoin-core.json
+ create mode 100644 archive/posts/2026-07-July/0000007985-dathonohm-bip-110-update-v0-4-1-release-and-implementation-submitted-to-bitcoin-core.json
+ create mode 100644 archive/posts/2026-07-July/0000007994-geobees-bird-of-prey-2-non-malleable-schnorr-pq-signatures.json
+ create mode 100644 archive/rendered-topics/2026-06-June/2026-06-30-bounded-slh-dsa-and-p2mr-style-spends-id2674.md
+ create mode 100644 archive/rendered-topics/2026-06-June/2026-06-30-deleted-discussion-id2674.md
+ create mode 100644 archive/rendered-topics/2026-07-July/2026-07-02-an-expression-enforced-whitespace-id2679.md
+ create mode 100644 archive/rendered-topics/2026-07-July/2026-07-02-what-is-memory-id2678.md
+ create mode 100644 archive/rendered-topics/2026-07-July/2026-07-03-btc-verified-formalizing-the-bitcoin-protocol-id2684.md
+ create mode 100644 archive/rendered-topics/2026-07-July/2026-07-03-empirical-ml-dsa-87-data-from-a-live-sha-256-pow-chain-relevant-to-bip-360-witness-v3-sizing-discussion-id2682.md
+
+--- Running: git -C data/sources/mailing_list/shard_0 fetch origin ---
+From https://gnusha.org/pi/bitcoindev
+ * branch                HEAD       -> FETCH_HEAD
+
+--- Running: git -C data/sources/secp256k1 pull origin master ---
+From https://github.com/bitcoin-core/secp256k1
+ * branch            master     -> FETCH_HEAD
+   b90075a..ebf5943  master     -> origin/master
+Updating b90075a..ebf5943
+Fast-forward
+ README.md   | 17 +++++++++--------
+ SECURITY.md |  1 -
+ 2 files changed, 9 insertions(+), 9 deletions(-)
+
+--- Running: git -C data/sources/gui pull origin master ---
+From https://github.com/bitcoin-core/gui
+ * branch                  master     -> FETCH_HEAD
+   3c76bd4356..f79ecfd9c7  master     -> origin/master
+Updating 3c76bd4356..f79ecfd9c7
+Fast-forward
+ .github/workflows/ci.yml                           |  12 +
+ CMakeLists.txt                                     |   7 +-
+ ci/test/00_setup_env_native_fuzz_with_msan.sh      |   4 +-
+ ci/test/00_setup_env_native_previous_releases.sh   |   2 +-
+ ci/test/00_setup_env_openbsd_cross.sh              |  35 +++
+ ci/test/00_setup_env_riscv_bare_cross.sh           |  37 +++
+ ci/test/01_base_install.sh                         |  27 ++
+ ci/test/03_test_script.sh                          |   5 +
+ ci/test/link-riscv.sh                              |  73 +++++
+ cmake/introspection.cmake                          |   2 +
+ cmake/module/TestAppendRequiredLibraries.cmake     |   1 -
+ depends/hosts/openbsd.mk                           |   1 +
+ depends/packages/boost.mk                          |   4 +-
+ doc/offline-signing-tutorial.md                    |  60 +---
+ doc/release-notes-33671.md                         |  11 +
+ doc/release-notes-35182.md                         |   6 +-
+ doc/release-notes-35610.md                         |   6 +
+ doc/release-notes-35634.md                         |   9 +
+ src/CMakeLists.txt                                 |   2 +-
+ src/bench/nanobench.h                              |   6 +-
+ src/bitcoin-util.cpp                               |  14 +
+ src/common/netif.cpp                               |   1 -
+ src/crypto/CMakeLists.txt                          |   4 +-
+ src/httpserver.cpp                                 |  21 +-
+ src/httpserver.h                                   |  13 +-
+ src/index/txospenderindex.cpp                      |   9 +-
+ src/init/common.cpp                                |   2 +-
+ src/ipc/CMakeLists.txt                             |  15 +
+ src/ipc/test/fuzz/CMakeLists.txt                   |   6 +
+ src/ipc/test/fuzz/ipc.cpp                          | 138 ++++++++++
+ src/ipc/test/fuzz/ipc_fuzz.capnp                   |  21 ++
+ src/ipc/test/fuzz/ipc_fuzz.h                       |  26 ++
+ src/ipc/test/fuzz/ipc_fuzz_types.h                 |  11 +
+ src/logging.cpp                                    |  16 +-
+ src/logging/categories.h                           |  32 +--
+ src/private_broadcast.cpp                          |   5 +
+ src/private_broadcast.h                            |   4 +-
+ src/script/descriptor.cpp                          |  29 +-
+ src/script/descriptor.h                            |   3 +
+ src/test/descriptor_tests.cpp                      |  42 +--
+ src/test/fuzz/CMakeLists.txt                       |   5 +
+ src/test/fuzz/pcp.cpp                              |   6 +
+ src/test/fuzz/private_broadcast.cpp                | 202 ++++++++++++++
+ src/test/fuzz/util.h                               |  14 +-
+ src/test/httpserver_tests.cpp                      | 158 +++++++++++
+ src/test/logging_tests.cpp                         |  13 +-
+ src/test/util/CMakeLists.txt                       |   2 +-
+ src/test/util/setup_common.cpp                     |  18 --
+ src/test/util/setup_common.h                       |  12 +-
+ src/validation.cpp                                 |   9 +-
+ src/wallet/CMakeLists.txt                          |   1 +
+ src/wallet/export.cpp                              | 222 +++++++++++++++
+ src/wallet/export.h                                |  36 +++
+ src/wallet/migrate.cpp                             |  26 +-
+ src/wallet/rpc/backup.cpp                          |  36 +--
+ src/wallet/rpc/wallet.cpp                          |  45 +++
+ src/wallet/scriptpubkeyman.cpp                     |   2 +-
+ src/wallet/test/fuzz/wallet_bdb_parser.cpp         |  17 +-
+ src/wallet/test/walletload_tests.cpp               |   1 +
+ src/wallet/wallet.cpp                              |   6 +
+ src/wallet/wallet.h                                |   3 +-
+ test/functional/data/util/bitcoin-util-test.json   |  49 ++++
+ test/functional/data/util/netmagic-mainnet.hex     |   1 +
+ test/functional/data/util/netmagic-regtest.hex     |   1 +
+ .../data/util/netmagic-signet-custom.hex           |   1 +
+ test/functional/data/util/netmagic-signet.hex      |   1 +
+ test/functional/data/util/netmagic-testnet.hex     |   1 +
+ test/functional/data/util/netmagic-testnet4.hex    |   1 +
+ test/functional/feature_taproot.py                 |  23 +-
+ test/functional/rpc_createmultisig.py              |   2 +-
+ test/functional/rpc_misc.py                        |  21 +-
+ test/functional/rpc_scantxoutset.py                |   6 +-
+ test/functional/test_framework/netutil.py          |  31 +++
+ test/functional/test_framework/socks5.py           |  45 ++-
+ test/functional/test_framework/wallet.py           |  44 ++-
+ test/functional/test_runner.py                     |   1 +
+ test/functional/wallet_exported_watchonly.py       | 303 +++++++++++++++++++++
+ 77 files changed, 1838 insertions(+), 249 deletions(-)
+ create mode 100755 ci/test/00_setup_env_openbsd_cross.sh
+ create mode 100755 ci/test/00_setup_env_riscv_bare_cross.sh
+ create mode 100755 ci/test/link-riscv.sh
+ create mode 100644 doc/release-notes-33671.md
+ create mode 100644 doc/release-notes-35610.md
+ create mode 100644 doc/release-notes-35634.md
+ create mode 100644 src/ipc/test/fuzz/CMakeLists.txt
+ create mode 100644 src/ipc/test/fuzz/ipc.cpp
+ create mode 100644 src/ipc/test/fuzz/ipc_fuzz.capnp
+ create mode 100644 src/ipc/test/fuzz/ipc_fuzz.h
+ create mode 100644 src/ipc/test/fuzz/ipc_fuzz_types.h
+ create mode 100644 src/test/fuzz/private_broadcast.cpp
+ create mode 100644 src/wallet/export.cpp
+ create mode 100644 src/wallet/export.h
+ create mode 100644 test/functional/data/util/netmagic-mainnet.hex
+ create mode 100644 test/functional/data/util/netmagic-regtest.hex
+ create mode 100644 test/functional/data/util/netmagic-signet-custom.hex
+ create mode 100644 test/functional/data/util/netmagic-signet.hex
+ create mode 100644 test/functional/data/util/netmagic-testnet.hex
+ create mode 100644 test/functional/data/util/netmagic-testnet4.hex
+ create mode 100755 test/functional/wallet_exported_watchonly.py
+
+--- Running: git -C data/sources/guix.sigs pull origin main ---
+From https://github.com/bitcoin-core/guix.sigs
+ * branch              main       -> FETCH_HEAD
+   34f4b117..6413bbfb  main       -> origin/main
+Updating 34f4b117..6413bbfb
+Fast-forward
+ 29.4rc1/benthecarman/all.SHA256SUMS               |  28 ++++++++++++++++++++++
+ 29.4rc1/benthecarman/all.SHA256SUMS.asc           | Bin 0 -> 691 bytes
+ 29.4rc1/benthecarman/noncodesigned.SHA256SUMS     |  21 ++++++++++++++++
+ 29.4rc1/benthecarman/noncodesigned.SHA256SUMS.asc | Bin 0 -> 691 bytes
+ 31.1rc1/benthecarman/all.SHA256SUMS               |  28 ++++++++++++++++++++++
+ 31.1rc1/benthecarman/all.SHA256SUMS.asc           | Bin 0 -> 691 bytes
+ 31.1rc1/benthecarman/noncodesigned.SHA256SUMS     |  21 ++++++++++++++++
+ 31.1rc1/benthecarman/noncodesigned.SHA256SUMS.asc | Bin 0 -> 691 bytes
+ 8 files changed, 98 insertions(+)
+ create mode 100644 29.4rc1/benthecarman/all.SHA256SUMS
+ create mode 100644 29.4rc1/benthecarman/all.SHA256SUMS.asc
+ create mode 100644 29.4rc1/benthecarman/noncodesigned.SHA256SUMS
+ create mode 100644 29.4rc1/benthecarman/noncodesigned.SHA256SUMS.asc
+ create mode 100644 31.1rc1/benthecarman/all.SHA256SUMS
+ create mode 100644 31.1rc1/benthecarman/all.SHA256SUMS.asc
+ create mode 100644 31.1rc1/benthecarman/noncodesigned.SHA256SUMS
+ create mode 100644 31.1rc1/benthecarman/noncodesigned.SHA256SUMS.asc
+
+--- Running: git -C data/sources/qa-assets pull origin main ---
+From https://github.com/bitcoin-core/qa-assets
+ * branch                  main       -> FETCH_HEAD
+Already up to date.
+
+--- Running: git -C data/sources/HWI pull origin master ---
+From https://github.com/bitcoin-core/HWI
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+--- Running: git -C data/sources/opensats pull origin main ---
+fatal: couldn't find remote ref main
+⚠️  Command failed with exit code 1
+
+--- Running: git -C data/sources/brink pull origin master ---
+From https://github.com/bitcoinbrink/website
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+--- PHASE 1: Extraction (Raw Staging) ---
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/01_ingest/core.py ---
+/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/01_ingest/core.py:465: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "latest_update": datetime.utcnow().isoformat()
+/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/01_ingest/core.py:465: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "latest_update": datetime.utcnow().isoformat()
+/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/01_ingest/core.py:465: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "latest_update": datetime.utcnow().isoformat()
+/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/01_ingest/core.py:465: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "latest_update": datetime.utcnow().isoformat()
+/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/01_ingest/core.py:465: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "latest_update": datetime.utcnow().isoformat()
+/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/01_ingest/core.py:465: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "latest_update": datetime.utcnow().isoformat()
+
+Processing bitcoin/bitcoin...
+  Reading git log...
+Running command: git -C data/sources/bitcoin log HEAD --format=COMMIT_Start^|^%H^|^%at^|^%an^|^%ae^|^%cn^|^%ce^|^%ct^|^%P^|^%ai^|^%s --numstat
+  Parsed 63947 commits.
+  Extracting commit messages for reviewer analysis...
+Extracting commit messages for reviewer parsing...
+  Extracted 49545 commit messages.
+
+Processing bitcoin-core/secp256k1...
+  Reading git log...
+Running command: git -C data/sources/secp256k1 log HEAD --format=COMMIT_Start^|^%H^|^%at^|^%an^|^%ae^|^%cn^|^%ce^|^%ct^|^%P^|^%ai^|^%s --numstat
+  Parsed 3077 commits.
+  Extracting commit messages for reviewer analysis...
+Extracting commit messages for reviewer parsing...
+  Extracted 2795 commit messages.
+
+Processing bitcoin-core/gui...
+  Reading git log...
+Running command: git -C data/sources/gui log HEAD --format=COMMIT_Start^|^%H^|^%at^|^%an^|^%ae^|^%cn^|^%ce^|^%ct^|^%P^|^%ai^|^%s --numstat
+  Parsed 63947 commits.
+  Extracting commit messages for reviewer analysis...
+Extracting commit messages for reviewer parsing...
+  Extracted 49545 commit messages.
+
+Processing bitcoin-core/guix.sigs...
+  Reading git log...
+Running command: git -C data/sources/guix.sigs log HEAD --format=COMMIT_Start^|^%H^|^%at^|^%an^|^%ae^|^%cn^|^%ce^|^%ct^|^%P^|^%ai^|^%s --numstat
+  Parsed 4851 commits.
+  Extracting commit messages for reviewer analysis...
+Extracting commit messages for reviewer parsing...
+  Extracted 4851 commit messages.
+
+Processing bitcoin-core/qa-assets...
+  Reading git log...
+Running command: git -C data/sources/qa-assets log HEAD --format=COMMIT_Start^|^%H^|^%at^|^%an^|^%ae^|^%cn^|^%ce^|^%ct^|^%P^|^%ai^|^%s --numstat
+  Parsed 147 commits.
+  Extracting commit messages for reviewer analysis...
+Extracting commit messages for reviewer parsing...
+  Extracted 147 commit messages.
+
+Processing bitcoin-core/HWI...
+  Reading git log...
+Running command: git -C data/sources/HWI log HEAD --format=COMMIT_Start^|^%H^|^%at^|^%an^|^%ae^|^%cn^|^%ce^|^%ct^|^%P^|^%ai^|^%s --numstat
+  Parsed 1631 commits.
+  Extracting commit messages for reviewer analysis...
+Extracting commit messages for reviewer parsing...
+  Extracted 1631 commit messages.
+
+Saved 137600 total commit chunks to data/raw/core_commits.parquet
+Saved 108514 total messages to data/raw/core_messages.parquet
+Scanning repository structure...
+[bitcoin/bitcoin] Scanned 2969 files, 2969 lines.
+[bitcoin/bitcoin] Saved Metadata to data/enriched/bitcoin_bitcoin_metadata.json
+Scanning repository structure...
+[bitcoin-core/secp256k1] Scanned 176 files, 176 lines.
+[bitcoin-core/secp256k1] Saved Metadata to data/enriched/bitcoin-core_secp256k1_metadata.json
+Scanning repository structure...
+[bitcoin-core/gui] Scanned 2969 files, 2969 lines.
+[bitcoin-core/gui] Saved Metadata to data/enriched/bitcoin-core_gui_metadata.json
+Scanning repository structure...
+[bitcoin-core/guix.sigs] Scanned 5773 files, 5773 lines.
+[bitcoin-core/guix.sigs] Saved Metadata to data/enriched/bitcoin-core_guix.sigs_metadata.json
+Scanning repository structure...
+[bitcoin-core/qa-assets] Scanned 210984 files, 210984 lines.
+[bitcoin-core/qa-assets] Saved Metadata to data/enriched/bitcoin-core_qa-assets_metadata.json
+Scanning repository structure...
+[bitcoin-core/HWI] Scanned 250 files, 250 lines.
+[bitcoin-core/HWI] Saved Metadata to data/enriched/bitcoin-core_HWI_metadata.json
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/01_ingest/bips.py ---
+--- Stage 1: BIP Ingestion Starting ---
+BIPs repo exists and is full.
+Parsing 210 BIP files for metadata and git history...
+  Processed 0/210 files...
+  Processed 50/210 files...
+  Processed 100/210 files...
+  Processed 150/210 files...
+  Processed 200/210 files...
+
+--- Ingestion Complete ---
+Total BIPs Parsed: 210
+Artifact Saved: data/raw/bips.parquet
+
+Status Distribution:
+status
+Deployed    77
+Draft       57
+Closed      55
+Complete    21
+Name: count, dtype: int64
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/01_ingest/bips_metadata.py ---
+Already up to date.
+Updating BIPs GitHub metadata archive in data/sources/bips-github-metadata...
+Processing 2046 BIP metadata files...
+  0%|          | 0/2046 [00:00<?, ?it/s]  1%|          | 19/2046 [00:00<00:12, 165.50it/s]  2%|▏         | 36/2046 [00:00<00:12, 163.99it/s]  4%|▎         | 76/2046 [00:00<00:13, 144.65it/s]  7%|▋         | 146/2046 [00:00<00:06, 284.32it/s] 11%|█         | 223/2046 [00:00<00:04, 412.81it/s] 13%|█▎        | 275/2046 [00:00<00:04, 428.07it/s] 17%|█▋        | 341/2046 [00:00<00:03, 488.63it/s] 20%|██        | 415/2046 [00:01<00:02, 558.80it/s] 24%|██▎       | 481/2046 [00:01<00:02, 580.44it/s] 27%|██▋       | 543/2046 [00:01<00:03, 397.93it/s] 31%|███       | 625/2046 [00:01<00:02, 488.87it/s] 34%|███▍      | 701/2046 [00:01<00:02, 549.93it/s] 38%|███▊      | 786/2046 [00:01<00:02, 624.41it/s] 43%|████▎     | 880/2046 [00:01<00:01, 706.76it/s] 47%|████▋     | 958/2046 [00:01<00:01, 656.66it/s] 51%|█████     | 1038/2046 [00:02<00:01, 692.66it/s] 54%|█████▍    | 1112/2046 [00:02<00:01, 688.87it/s] 58%|█████▊    | 1193/2046 [00:02<00:01, 719.78it/s] 62%|██████▏   | 1268/2046 [00:02<00:01, 721.38it/s] 66%|██████▌   | 1342/2046 [00:02<00:01, 662.05it/s] 69%|██████▉   | 1411/2046 [00:02<00:01, 618.24it/s] 73%|███████▎  | 1503/2046 [00:02<00:00, 695.93it/s] 77%|███████▋  | 1581/2046 [00:02<00:00, 718.56it/s] 81%|████████  | 1655/2046 [00:02<00:00, 677.07it/s] 85%|████████▌ | 1746/2046 [00:03<00:00, 739.67it/s] 89%|████████▉ | 1822/2046 [00:03<00:00, 643.51it/s] 92%|█████████▏| 1890/2046 [00:03<00:00, 586.83it/s] 96%|█████████▌| 1955/2046 [00:03<00:00, 601.56it/s]100%|█████████▉| 2038/2046 [00:03<00:00, 660.08it/s]100%|██████████| 2046/2046 [00:03<00:00, 574.89it/s]
+Saved 2046 BIP PRs to data/raw/bips_pr_metadata.parquet
+Saved 33069 BIP review events to data/raw/bips_review_events.parquet
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/01_ingest/delving.py ---
+Already up to date.
+Updating Delving archive in data/sources/delving...
+Processing Delving archive files...
+  Processed 1000 posts...
+  Processed 2000 posts...
+  Processed 3000 posts...
+  Processed 4000 posts...
+  Skipped 4 post(s) from bot/system accounts.
+
+Saved 4411 Delving posts to data/raw/social_delving.parquet
+
+Top 5 Delving Contributors:
+canonical_id
+can_anthony_towns      319
+can_pieter_wuille      191
+can_greg_sanders       177
+can_antoine_poinsot    141
+can_alicexbt           133
+Name: count, dtype: int64
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/01_ingest/mailing_list.py ---
+Ingesting mailing list from Git repo (Shard 0): data/sources/mailing_list/shard_0...
+  Fetching latest from remote for shard 0...
+Found 24560 potential email files in shard 0.
+  Processed 5000/24560 emails in shard 0...
+  Processed 10000/24560 emails in shard 0...
+  Processed 15000/24560 emails in shard 0...
+  Processed 20000/24560 emails in shard 0...
+Added 7 new emails from shard 0.
+Saved 24560 total messages to data/raw/social_mailing_list.parquet
+Mailing list state updated: 24560 messages, latest from 2026-07-05T16:55:06
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/01_ingest/github_metadata.py ---
+Processing bitcoin/bitcoin metadata...
+  0%|          | 0/24883 [00:00<?, ?it/s]  0%|          | 50/24883 [00:00<00:50, 495.96it/s]  0%|          | 101/24883 [00:00<00:49, 503.54it/s]  1%|          | 154/24883 [00:00<00:48, 514.36it/s]  1%|          | 208/24883 [00:00<00:47, 523.41it/s]  1%|          | 261/24883 [00:00<00:55, 442.38it/s]  1%|▏         | 328/24883 [00:00<00:48, 505.00it/s]  2%|▏         | 381/24883 [00:00<00:47, 510.54it/s]  2%|▏         | 434/24883 [00:00<00:56, 429.90it/s]  2%|▏         | 485/24883 [00:01<00:55, 441.84it/s]  2%|▏         | 545/24883 [00:01<00:50, 483.96it/s]  2%|▏         | 596/24883 [00:01<00:52, 463.12it/s]  3%|▎         | 644/24883 [00:01<01:33, 259.44it/s]  3%|▎         | 700/24883 [00:01<01:17, 312.66it/s]  3%|▎         | 764/24883 [00:01<01:03, 378.40it/s]  3%|▎         | 837/24883 [00:01<00:52, 456.27it/s]  4%|▎         | 898/24883 [00:02<00:48, 493.13it/s]  4%|▍         | 956/24883 [00:02<00:47, 506.67it/s]  4%|▍         | 1013/24883 [00:02<00:47, 503.92it/s]  4%|▍         | 1070/24883 [00:02<00:45, 519.64it/s]  5%|▍         | 1130/24883 [00:02<00:44, 539.14it/s]  5%|▍         | 1187/24883 [00:02<00:43, 543.64it/s]  5%|▍         | 1243/24883 [00:02<00:43, 541.08it/s]  5%|▌         | 1299/24883 [00:02<00:43, 544.25it/s]  5%|▌         | 1355/24883 [00:02<00:44, 525.54it/s]  6%|▌         | 1409/24883 [00:03<00:46, 502.04it/s]  6%|▌         | 1475/24883 [00:03<00:42, 544.56it/s]  6%|▌         | 1531/24883 [00:03<00:42, 548.50it/s]  6%|▋         | 1587/24883 [00:03<00:42, 547.89it/s]  7%|▋         | 1650/24883 [00:03<00:40, 570.32it/s]  7%|▋         | 1720/24883 [00:03<00:38, 606.90it/s]  7%|▋         | 1781/24883 [00:03<00:38, 592.51it/s]  7%|▋         | 1841/24883 [00:03<00:38, 593.03it/s]  8%|▊         | 1906/24883 [00:03<00:38, 601.61it/s]  8%|▊         | 1967/24883 [00:03<00:38, 594.26it/s]  8%|▊         | 2031/24883 [00:04<00:37, 605.90it/s]  8%|▊         | 2098/24883 [00:04<00:36, 622.54it/s]  9%|▊         | 2163/24883 [00:04<00:36, 627.44it/s]  9%|▉         | 2236/24883 [00:04<00:34, 655.48it/s]  9%|▉         | 2302/24883 [00:04<00:37, 610.21it/s] 10%|▉         | 2364/24883 [00:04<00:37, 606.20it/s] 10%|▉         | 2429/24883 [00:04<00:36, 617.15it/s] 10%|█         | 2492/24883 [00:04<00:36, 608.10it/s] 10%|█         | 2554/24883 [00:04<00:36, 604.84it/s] 11%|█         | 2624/24883 [00:04<00:35, 631.44it/s] 11%|█         | 2688/24883 [00:05<00:38, 577.02it/s] 11%|█         | 2749/24883 [00:05<00:37, 582.96it/s] 11%|█▏        | 2809/24883 [00:05<00:38, 566.80it/s] 12%|█▏        | 2872/24883 [00:05<00:37, 580.22it/s] 12%|█▏        | 2931/24883 [00:05<00:41, 528.61it/s] 12%|█▏        | 2985/24883 [00:05<00:41, 529.39it/s] 12%|█▏        | 3045/24883 [00:05<00:39, 548.29it/s] 12%|█▏        | 3101/24883 [00:05<00:39, 546.19it/s] 13%|█▎        | 3157/24883 [00:05<00:39, 549.73it/s] 13%|█▎        | 3213/24883 [00:06<00:39, 552.47it/s] 13%|█▎        | 3277/24883 [00:06<00:37, 571.83it/s] 13%|█▎        | 3338/24883 [00:06<00:37, 578.93it/s] 14%|█▎        | 3409/24883 [00:06<00:34, 616.11it/s] 14%|█▍        | 3471/24883 [00:06<00:40, 526.99it/s] 14%|█▍        | 3528/24883 [00:06<00:39, 535.13it/s] 14%|█▍        | 3591/24883 [00:06<00:38, 559.69it/s] 15%|█▍        | 3649/24883 [00:06<00:37, 562.67it/s] 15%|█▍        | 3707/24883 [00:06<00:37, 560.49it/s] 15%|█▌        | 3764/24883 [00:07<00:37, 560.66it/s] 15%|█▌        | 3823/24883 [00:07<00:37, 569.10it/s] 16%|█▌        | 3898/24883 [00:07<00:33, 619.48it/s] 16%|█▌        | 3961/24883 [00:07<00:41, 506.40it/s] 16%|█▌        | 4025/24883 [00:07<00:39, 534.03it/s] 16%|█▋        | 4082/24883 [00:07<00:38, 542.34it/s] 17%|█▋        | 4152/24883 [00:07<00:35, 585.41it/s] 17%|█▋        | 4213/24883 [00:07<00:36, 559.77it/s] 17%|█▋        | 4278/24883 [00:07<00:35, 580.45it/s] 17%|█▋        | 4347/24883 [00:08<00:33, 610.25it/s] 18%|█▊        | 4414/24883 [00:08<00:32, 625.45it/s] 18%|█▊        | 4478/24883 [00:08<00:34, 587.18it/s] 18%|█▊        | 4538/24883 [00:08<00:47, 425.22it/s] 18%|█▊        | 4593/24883 [00:08<00:44, 452.72it/s] 19%|█▊        | 4659/24883 [00:08<00:40, 500.82it/s] 19%|█▉        | 4715/24883 [00:08<00:40, 495.38it/s] 19%|█▉        | 4772/24883 [00:08<00:39, 511.29it/s] 19%|█▉        | 4838/24883 [00:09<00:37, 537.40it/s] 20%|█▉        | 4894/24883 [00:09<00:37, 539.40it/s] 20%|█▉        | 4962/24883 [00:09<00:34, 577.59it/s] 20%|██        | 5022/24883 [00:09<00:34, 573.43it/s] 20%|██        | 5082/24883 [00:09<00:34, 580.35it/s] 21%|██        | 5156/24883 [00:09<00:31, 625.64it/s] 21%|██        | 5220/24883 [00:09<00:32, 602.90it/s] 21%|██        | 5281/24883 [00:09<00:32, 603.92it/s] 21%|██▏       | 5342/24883 [00:09<00:34, 574.41it/s] 22%|██▏       | 5413/24883 [00:10<00:31, 611.17it/s] 22%|██▏       | 5477/24883 [00:10<00:31, 619.41it/s] 22%|██▏       | 5540/24883 [00:10<00:31, 608.84it/s] 23%|██▎       | 5609/24883 [00:10<00:30, 631.90it/s] 23%|██▎       | 5673/24883 [00:10<00:31, 614.59it/s] 23%|██▎       | 5735/24883 [00:10<00:31, 611.92it/s] 23%|██▎       | 5797/24883 [00:10<00:31, 608.78it/s] 24%|██▎       | 5859/24883 [00:10<00:33, 569.21it/s] 24%|██▍       | 5921/24883 [00:10<00:32, 579.81it/s] 24%|██▍       | 5987/24883 [00:10<00:31, 601.53it/s] 24%|██▍       | 6048/24883 [00:11<00:33, 554.12it/s] 25%|██▍       | 6105/24883 [00:11<00:33, 555.15it/s] 25%|██▍       | 6162/24883 [00:11<00:35, 528.54it/s] 25%|██▍       | 6216/24883 [00:11<00:36, 513.68it/s] 25%|██▌       | 6268/24883 [00:11<00:37, 493.20it/s] 25%|██▌       | 6328/24883 [00:11<00:35, 517.53it/s] 26%|██▌       | 6381/24883 [00:11<00:37, 494.84it/s] 26%|██▌       | 6437/24883 [00:11<00:36, 512.05it/s] 26%|██▌       | 6495/24883 [00:11<00:34, 528.03it/s] 26%|██▋       | 6554/24883 [00:12<00:34, 537.19it/s] 27%|██▋       | 6608/24883 [00:12<00:35, 519.22it/s] 27%|██▋       | 6668/24883 [00:12<00:33, 539.20it/s] 27%|██▋       | 6728/24883 [00:12<00:32, 553.45it/s] 27%|██▋       | 6799/24883 [00:12<00:30, 598.05it/s] 28%|██▊       | 6860/24883 [00:12<00:32, 551.62it/s] 28%|██▊       | 6924/24883 [00:12<00:31, 573.85it/s] 28%|██▊       | 6983/24883 [00:12<00:34, 511.83it/s] 28%|██▊       | 7056/24883 [00:12<00:31, 568.82it/s] 29%|██▊       | 7115/24883 [00:13<00:31, 572.83it/s] 29%|██▉       | 7175/24883 [00:13<00:30, 578.22it/s] 29%|██▉       | 7245/24883 [00:13<00:28, 609.01it/s] 29%|██▉       | 7307/24883 [00:13<00:30, 573.37it/s] 30%|██▉       | 7366/24883 [00:13<00:30, 571.92it/s] 30%|██▉       | 7428/24883 [00:13<00:29, 583.75it/s] 30%|███       | 7489/24883 [00:13<00:29, 585.30it/s] 30%|███       | 7548/24883 [00:13<00:39, 437.83it/s] 31%|███       | 7620/24883 [00:14<00:34, 502.98it/s] 31%|███       | 7676/24883 [00:14<00:34, 493.54it/s] 31%|███       | 7731/24883 [00:14<00:34, 500.52it/s] 31%|███▏      | 7784/24883 [00:14<00:34, 495.78it/s] 32%|███▏      | 7842/24883 [00:14<00:33, 514.29it/s] 32%|███▏      | 7902/24883 [00:14<00:31, 537.85it/s] 32%|███▏      | 7982/24883 [00:14<00:27, 609.82it/s] 32%|███▏      | 8045/24883 [00:14<00:28, 584.54it/s] 33%|███▎      | 8105/24883 [00:14<00:29, 574.86it/s] 33%|███▎      | 8165/24883 [00:15<00:28, 579.20it/s] 33%|███▎      | 8224/24883 [00:15<00:28, 575.85it/s] 33%|███▎      | 8283/24883 [00:15<00:28, 575.23it/s] 34%|███▎      | 8347/24883 [00:15<00:27, 593.38it/s] 34%|███▍      | 8415/24883 [00:15<00:26, 617.60it/s] 34%|███▍      | 8477/24883 [00:15<00:26, 610.89it/s] 34%|███▍      | 8539/24883 [00:15<00:28, 564.53it/s] 35%|███▍      | 8597/24883 [00:15<00:29, 546.05it/s] 35%|███▍      | 8661/24883 [00:15<00:30, 538.54it/s] 35%|███▌      | 8716/24883 [00:16<00:31, 509.25it/s] 35%|███▌      | 8771/24883 [00:16<00:32, 491.37it/s] 35%|███▌      | 8831/24883 [00:16<00:30, 519.53it/s] 36%|███▌      | 8893/24883 [00:16<00:29, 545.34it/s] 36%|███▌      | 8951/24883 [00:16<00:28, 554.33it/s] 36%|███▌      | 9009/24883 [00:16<00:28, 556.12it/s] 36%|███▋      | 9065/24883 [00:16<00:28, 550.32it/s] 37%|███▋      | 9131/24883 [00:16<00:27, 580.45it/s] 37%|███▋      | 9195/24883 [00:16<00:26, 595.59it/s] 37%|███▋      | 9257/24883 [00:16<00:25, 601.64it/s] 37%|███▋      | 9319/24883 [00:17<00:25, 605.81it/s] 38%|███▊      | 9386/24883 [00:17<00:24, 622.64it/s] 38%|███▊      | 9449/24883 [00:17<00:24, 623.88it/s] 38%|███▊      | 9512/24883 [00:17<00:30, 506.36it/s] 39%|███▊      | 9584/24883 [00:17<00:27, 559.05it/s] 39%|███▉      | 9644/24883 [00:17<00:26, 565.09it/s] 39%|███▉      | 9703/24883 [00:17<00:26, 570.25it/s] 39%|███▉      | 9767/24883 [00:17<00:25, 585.71it/s] 40%|███▉      | 9833/24883 [00:17<00:24, 605.96it/s] 40%|███▉      | 9895/24883 [00:18<00:25, 576.74it/s] 40%|████      | 9964/24883 [00:18<00:24, 606.89it/s] 40%|████      | 10026/24883 [00:18<00:25, 573.64it/s] 41%|████      | 10085/24883 [00:18<00:26, 557.44it/s] 41%|████      | 10156/24883 [00:18<00:24, 598.92it/s] 41%|████      | 10217/24883 [00:18<00:25, 573.42it/s] 41%|████▏     | 10283/24883 [00:18<00:24, 596.07it/s] 42%|████▏     | 10348/24883 [00:18<00:23, 610.95it/s] 42%|████▏     | 10410/24883 [00:18<00:23, 604.57it/s] 42%|████▏     | 10471/24883 [00:19<00:24, 595.62it/s] 42%|████▏     | 10537/24883 [00:19<00:23, 613.96it/s] 43%|████▎     | 10599/24883 [00:19<00:24, 588.49it/s] 43%|████▎     | 10665/24883 [00:19<00:23, 605.87it/s] 43%|████▎     | 10733/24883 [00:19<00:22, 626.59it/s] 43%|████▎     | 10796/24883 [00:19<00:22, 627.35it/s] 44%|████▎     | 10859/24883 [00:19<00:23, 608.59it/s] 44%|████▍     | 10921/24883 [00:19<00:22, 609.66it/s] 44%|████▍     | 10986/24883 [00:19<00:22, 617.33it/s] 44%|████▍     | 11053/24883 [00:19<00:22, 618.29it/s] 45%|████▍     | 11116/24883 [00:20<00:22, 621.60it/s] 45%|████▍     | 11190/24883 [00:20<00:20, 653.96it/s] 45%|████▌     | 11256/24883 [00:20<00:21, 623.25it/s] 45%|████▌     | 11319/24883 [00:20<00:22, 612.34it/s] 46%|████▌     | 11383/24883 [00:20<00:21, 617.56it/s] 46%|████▌     | 11451/24883 [00:20<00:21, 631.78it/s] 46%|████▋     | 11515/24883 [00:20<00:22, 602.13it/s] 47%|████▋     | 11582/24883 [00:20<00:21, 619.06it/s] 47%|████▋     | 11645/24883 [00:20<00:21, 606.82it/s] 47%|████▋     | 11706/24883 [00:21<00:22, 595.99it/s] 47%|████▋     | 11766/24883 [00:21<00:24, 536.45it/s] 48%|████▊     | 11824/24883 [00:21<00:24, 542.19it/s] 48%|████▊     | 11889/24883 [00:21<00:22, 570.34it/s] 48%|████▊     | 11947/24883 [00:21<00:23, 550.36it/s] 48%|████▊     | 12012/24883 [00:21<00:22, 577.83it/s] 49%|████▊     | 12071/24883 [00:21<00:22, 572.98it/s] 49%|████▉     | 12134/24883 [00:21<00:22, 579.16it/s] 49%|████▉     | 12195/24883 [00:21<00:21, 586.65it/s] 49%|████▉     | 12258/24883 [00:21<00:21, 596.14it/s] 50%|████▉     | 12323/24883 [00:22<00:20, 609.76it/s] 50%|████▉     | 12385/24883 [00:22<00:21, 575.25it/s] 50%|█████     | 12448/24883 [00:22<00:21, 589.92it/s] 50%|█████     | 12508/24883 [00:22<00:21, 566.17it/s] 51%|█████     | 12567/24883 [00:22<00:21, 572.63it/s] 51%|█████     | 12625/24883 [00:22<00:24, 495.10it/s] 51%|█████     | 12677/24883 [00:22<00:25, 477.09it/s] 51%|█████     | 12741/24883 [00:22<00:23, 518.05it/s] 51%|█████▏    | 12795/24883 [00:23<00:23, 506.25it/s] 52%|█████▏    | 12864/24883 [00:23<00:21, 551.84it/s] 52%|█████▏    | 12922/24883 [00:23<00:21, 559.67it/s] 52%|█████▏    | 12980/24883 [00:23<00:21, 565.09it/s] 52%|█████▏    | 13038/24883 [00:23<00:21, 557.98it/s] 53%|█████▎    | 13095/24883 [00:23<00:21, 561.29it/s] 53%|█████▎    | 13152/24883 [00:23<00:21, 540.66it/s] 53%|█████▎    | 13207/24883 [00:23<00:21, 534.21it/s] 53%|█████▎    | 13262/24883 [00:23<00:21, 532.71it/s] 54%|█████▎    | 13332/24883 [00:23<00:20, 566.34it/s] 54%|█████▍    | 13396/24883 [00:24<00:19, 585.93it/s] 54%|█████▍    | 13465/24883 [00:24<00:18, 615.58it/s] 54%|█████▍    | 13531/24883 [00:24<00:18, 628.47it/s] 55%|█████▍    | 13595/24883 [00:24<00:18, 615.30it/s] 55%|█████▍    | 13667/24883 [00:24<00:17, 644.09it/s] 55%|█████▌    | 13732/24883 [00:24<00:17, 626.31it/s] 55%|█████▌    | 13795/24883 [00:24<00:17, 625.10it/s] 56%|█████▌    | 13861/24883 [00:24<00:17, 629.31it/s] 56%|█████▌    | 13925/24883 [00:24<00:18, 604.34it/s] 56%|█████▌    | 13986/24883 [00:25<00:18, 594.33it/s] 56%|█████▋    | 14046/24883 [00:25<00:18, 580.29it/s] 57%|█████▋    | 14105/24883 [00:25<00:19, 566.26it/s] 57%|█████▋    | 14167/24883 [00:25<00:18, 580.33it/s] 57%|█████▋    | 14236/24883 [00:25<00:17, 607.59it/s] 57%|█████▋    | 14297/24883 [00:25<00:18, 567.92it/s] 58%|█████▊    | 14355/24883 [00:25<00:22, 460.98it/s] 58%|█████▊    | 14422/24883 [00:25<00:20, 511.13it/s] 58%|█████▊    | 14477/24883 [00:25<00:20, 513.65it/s] 58%|█████▊    | 14532/24883 [00:26<00:19, 521.68it/s] 59%|█████▊    | 14587/24883 [00:26<00:21, 477.40it/s] 59%|█████▉    | 14640/24883 [00:26<00:20, 488.94it/s] 59%|█████▉    | 14699/24883 [00:26<00:19, 515.61it/s] 59%|█████▉    | 14759/24883 [00:26<00:18, 538.96it/s] 60%|█████▉    | 14814/24883 [00:26<00:19, 514.85it/s] 60%|█████▉    | 14869/24883 [00:26<00:19, 524.10it/s] 60%|█████▉    | 14923/24883 [00:26<00:19, 501.44it/s] 60%|██████    | 14982/24883 [00:26<00:19, 503.47it/s] 60%|██████    | 15033/24883 [00:27<00:19, 494.60it/s] 61%|██████    | 15093/24883 [00:27<00:18, 522.64it/s] 61%|██████    | 15154/24883 [00:27<00:17, 540.56it/s] 61%|██████    | 15214/24883 [00:27<00:17, 557.12it/s] 61%|██████▏   | 15271/24883 [00:27<00:17, 543.82it/s] 62%|██████▏   | 15326/24883 [00:27<00:18, 523.85it/s] 62%|██████▏   | 15389/24883 [00:27<00:17, 545.55it/s] 62%|██████▏   | 15459/24883 [00:27<00:15, 589.23it/s] 62%|██████▏   | 15519/24883 [00:27<00:17, 538.62it/s] 63%|██████▎   | 15575/24883 [00:28<00:17, 534.68it/s] 63%|██████▎   | 15630/24883 [00:28<00:21, 440.07it/s] 63%|██████▎   | 15705/24883 [00:28<00:17, 514.64it/s] 63%|██████▎   | 15761/24883 [00:28<00:18, 487.76it/s] 64%|██████▎   | 15815/24883 [00:28<00:18, 499.16it/s] 64%|██████▍   | 15870/24883 [00:28<00:17, 509.45it/s] 64%|██████▍   | 15937/24883 [00:28<00:16, 549.63it/s] 64%|██████▍   | 15997/24883 [00:28<00:15, 563.42it/s] 65%|██████▍   | 16055/24883 [00:28<00:16, 530.22it/s] 65%|██████▍   | 16129/24883 [00:29<00:14, 585.44it/s] 65%|██████▌   | 16189/24883 [00:29<00:15, 558.69it/s] 65%|██████▌   | 16256/24883 [00:29<00:14, 587.86it/s] 66%|██████▌   | 16326/24883 [00:29<00:13, 614.03it/s] 66%|██████▌   | 16399/24883 [00:29<00:13, 645.62it/s] 66%|██████▌   | 16465/24883 [00:29<00:13, 621.55it/s] 66%|██████▋   | 16528/24883 [00:29<00:13, 613.48it/s] 67%|██████▋   | 16590/24883 [00:29<00:14, 574.54it/s] 67%|██████▋   | 16649/24883 [00:29<00:15, 520.94it/s] 67%|██████▋   | 16712/24883 [00:30<00:14, 547.12it/s] 67%|██████▋   | 16768/24883 [00:30<00:15, 538.63it/s] 68%|██████▊   | 16830/24883 [00:30<00:14, 554.31it/s] 68%|██████▊   | 16897/24883 [00:30<00:13, 585.65it/s] 68%|██████▊   | 16962/24883 [00:30<00:13, 602.90it/s] 68%|██████▊   | 17023/24883 [00:30<00:13, 591.81it/s] 69%|██████▊   | 17083/24883 [00:30<00:13, 577.81it/s] 69%|██████▉   | 17143/24883 [00:30<00:13, 580.82it/s] 69%|██████▉   | 17204/24883 [00:30<00:13, 587.17it/s] 69%|██████▉   | 17263/24883 [00:31<00:14, 543.09it/s] 70%|██████▉   | 17322/24883 [00:31<00:13, 554.30it/s] 70%|██████▉   | 17396/24883 [00:31<00:12, 606.22it/s] 70%|███████   | 17458/24883 [00:31<00:12, 593.65it/s] 70%|███████   | 17518/24883 [00:31<00:14, 501.27it/s] 71%|███████   | 17579/24883 [00:31<00:13, 528.82it/s] 71%|███████   | 17635/24883 [00:31<00:13, 527.22it/s] 71%|███████   | 17690/24883 [00:31<00:14, 512.46it/s] 71%|███████▏  | 17743/24883 [00:31<00:13, 515.99it/s] 72%|███████▏  | 17807/24883 [00:32<00:12, 545.73it/s] 72%|███████▏  | 17865/24883 [00:32<00:12, 553.69it/s] 72%|███████▏  | 17924/24883 [00:32<00:12, 563.60it/s] 72%|███████▏  | 17981/24883 [00:32<00:12, 562.41it/s] 73%|███████▎  | 18042/24883 [00:32<00:11, 573.26it/s] 73%|███████▎  | 18100/24883 [00:32<00:12, 560.14it/s] 73%|███████▎  | 18161/24883 [00:32<00:11, 572.51it/s] 73%|███████▎  | 18227/24883 [00:32<00:11, 596.56it/s] 73%|███████▎  | 18287/24883 [00:32<00:11, 560.87it/s] 74%|███████▎  | 18346/24883 [00:33<00:11, 568.31it/s] 74%|███████▍  | 18406/24883 [00:33<00:11, 577.37it/s] 74%|███████▍  | 18473/24883 [00:33<00:10, 603.40it/s] 74%|███████▍  | 18534/24883 [00:33<00:10, 604.51it/s] 75%|███████▍  | 18602/24883 [00:33<00:10, 621.52it/s] 75%|███████▌  | 18665/24883 [00:33<00:10, 602.97it/s] 75%|███████▌  | 18729/24883 [00:33<00:10, 612.58it/s] 76%|███████▌  | 18791/24883 [00:33<00:10, 600.55it/s] 76%|███████▌  | 18854/24883 [00:33<00:09, 608.74it/s] 76%|███████▌  | 18916/24883 [00:33<00:10, 580.20it/s] 76%|███████▋  | 18975/24883 [00:34<00:10, 540.20it/s] 76%|███████▋  | 19030/24883 [00:34<00:10, 540.59it/s] 77%|███████▋  | 19085/24883 [00:34<00:11, 492.83it/s] 77%|███████▋  | 19146/24883 [00:34<00:10, 523.41it/s] 77%|███████▋  | 19213/24883 [00:34<00:10, 559.78it/s] 77%|███████▋  | 19270/24883 [00:34<00:10, 561.24it/s] 78%|███████▊  | 19327/24883 [00:34<00:09, 561.94it/s] 78%|███████▊  | 19391/24883 [00:34<00:09, 581.51it/s] 78%|███████▊  | 19460/24883 [00:34<00:08, 612.82it/s] 78%|███████▊  | 19522/24883 [00:35<00:09, 582.35it/s] 79%|███████▊  | 19581/24883 [00:35<00:09, 569.44it/s] 79%|███████▉  | 19641/24883 [00:35<00:09, 576.79it/s] 79%|███████▉  | 19699/24883 [00:35<00:09, 575.87it/s] 79%|███████▉  | 19757/24883 [00:35<00:08, 572.93it/s] 80%|███████▉  | 19822/24883 [00:35<00:08, 594.17it/s] 80%|███████▉  | 19885/24883 [00:35<00:08, 601.02it/s] 80%|████████  | 19946/24883 [00:35<00:08, 588.67it/s] 80%|████████  | 20010/24883 [00:35<00:08, 600.76it/s] 81%|████████  | 20071/24883 [00:35<00:08, 575.95it/s] 81%|████████  | 20135/24883 [00:36<00:07, 593.62it/s] 81%|████████  | 20195/24883 [00:36<00:08, 567.86it/s] 81%|████████▏ | 20260/24883 [00:36<00:07, 590.76it/s] 82%|████████▏ | 20322/24883 [00:36<00:07, 598.32it/s] 82%|████████▏ | 20394/24883 [00:36<00:07, 631.79it/s] 82%|████████▏ | 20458/24883 [00:36<00:07, 610.48it/s] 82%|████████▏ | 20520/24883 [00:36<00:07, 596.50it/s] 83%|████████▎ | 20580/24883 [00:36<00:07, 587.75it/s] 83%|████████▎ | 20645/24883 [00:36<00:07, 603.28it/s] 83%|████████▎ | 20709/24883 [00:37<00:06, 612.81it/s] 83%|████████▎ | 20773/24883 [00:37<00:06, 620.24it/s] 84%|████████▎ | 20838/24883 [00:37<00:06, 602.80it/s] 84%|████████▍ | 20907/24883 [00:37<00:06, 626.69it/s] 84%|████████▍ | 20977/24883 [00:37<00:06, 646.04it/s] 85%|████████▍ | 21042/24883 [00:37<00:06, 612.44it/s] 85%|████████▍ | 21104/24883 [00:37<00:06, 605.06it/s] 85%|████████▌ | 21165/24883 [00:37<00:06, 593.64it/s] 85%|████████▌ | 21229/24883 [00:37<00:06, 605.67it/s] 86%|████████▌ | 21290/24883 [00:38<00:06, 518.73it/s] 86%|████████▌ | 21354/24883 [00:38<00:06, 545.98it/s] 86%|████████▌ | 21415/24883 [00:38<00:06, 548.51it/s] 86%|████████▋ | 21472/24883 [00:38<00:06, 544.49it/s] 87%|████████▋ | 21537/24883 [00:38<00:05, 573.08it/s] 87%|████████▋ | 21596/24883 [00:38<00:05, 550.42it/s] 87%|████████▋ | 21664/24883 [00:38<00:05, 584.98it/s] 87%|████████▋ | 21727/24883 [00:38<00:05, 595.56it/s] 88%|████████▊ | 21800/24883 [00:38<00:04, 631.34it/s] 88%|████████▊ | 21864/24883 [00:38<00:04, 614.98it/s] 88%|████████▊ | 21935/24883 [00:39<00:04, 641.76it/s] 88%|████████▊ | 22000/24883 [00:39<00:04, 616.73it/s] 89%|████████▊ | 22063/24883 [00:39<00:05, 560.57it/s] 89%|████████▉ | 22138/24883 [00:39<00:04, 610.97it/s] 89%|████████▉ | 22214/24883 [00:39<00:04, 649.49it/s] 90%|████████▉ | 22281/24883 [00:39<00:04, 636.76it/s] 90%|████████▉ | 22346/24883 [00:39<00:04, 617.89it/s] 90%|█████████ | 22409/24883 [00:39<00:04, 597.92it/s] 90%|█████████ | 22472/24883 [00:39<00:03, 606.68it/s] 91%|█████████ | 22539/24883 [00:40<00:03, 622.99it/s] 91%|█████████ | 22607/24883 [00:40<00:03, 638.99it/s] 91%|█████████ | 22672/24883 [00:40<00:03, 623.90it/s] 91%|█████████▏| 22735/24883 [00:40<00:03, 613.46it/s] 92%|█████████▏| 22797/24883 [00:40<00:03, 598.70it/s] 92%|█████████▏| 22858/24883 [00:40<00:03, 559.43it/s] 92%|█████████▏| 22927/24883 [00:40<00:03, 584.09it/s] 92%|█████████▏| 22986/24883 [00:40<00:03, 569.30it/s] 93%|█████████▎| 23044/24883 [00:40<00:03, 557.73it/s] 93%|█████████▎| 23100/24883 [00:41<00:03, 557.61it/s] 93%|█████████▎| 23166/24883 [00:41<00:02, 585.26it/s] 93%|█████████▎| 23225/24883 [00:41<00:03, 535.19it/s] 94%|█████████▎| 23280/24883 [00:41<00:03, 530.89it/s] 94%|█████████▍| 23344/24883 [00:41<00:02, 558.51it/s] 94%|█████████▍| 23405/24883 [00:41<00:02, 571.15it/s] 94%|█████████▍| 23463/24883 [00:41<00:02, 555.35it/s] 95%|█████████▍| 23534/24883 [00:41<00:02, 598.79it/s] 95%|█████████▍| 23595/24883 [00:41<00:02, 558.87it/s] 95%|█████████▌| 23657/24883 [00:42<00:02, 575.18it/s] 95%|█████████▌| 23716/24883 [00:42<00:02, 572.54it/s] 96%|█████████▌| 23774/24883 [00:42<00:02, 519.81it/s] 96%|█████████▌| 23841/24883 [00:42<00:01, 559.85it/s] 96%|█████████▌| 23899/24883 [00:42<00:01, 552.65it/s] 96%|█████████▋| 23967/24883 [00:42<00:01, 586.29it/s] 97%|█████████▋| 24027/24883 [00:42<00:01, 588.18it/s] 97%|█████████▋| 24089/24883 [00:42<00:01, 596.97it/s] 97%|█████████▋| 24155/24883 [00:42<00:01, 614.93it/s] 97%|█████████▋| 24217/24883 [00:43<00:01, 614.01it/s] 98%|█████████▊| 24285/24883 [00:43<00:00, 633.43it/s] 98%|█████████▊| 24364/24883 [00:43<00:00, 679.45it/s] 98%|█████████▊| 24439/24883 [00:43<00:00, 691.82it/s] 98%|█████████▊| 24509/24883 [00:43<00:00, 685.40it/s] 99%|█████████▉| 24578/24883 [00:43<00:00, 637.05it/s] 99%|█████████▉| 24644/24883 [00:43<00:00, 641.02it/s] 99%|█████████▉| 24709/24883 [00:43<00:00, 639.49it/s]100%|█████████▉| 24774/24883 [00:43<00:00, 638.25it/s]100%|█████████▉| 24839/24883 [00:43<00:00, 581.10it/s]100%|██████████| 24883/24883 [00:44<00:00, 564.84it/s]
+Saved 24883 PRs to data/raw/github_pr_metadata.parquet
+Saved 732570 review events to data/raw/github_review_events.parquet
+Processing bitcoin-core/secp256k1 metadata...
+  0%|          | 0/1267 [00:00<?, ?it/s]  6%|▌         | 77/1267 [00:00<00:01, 749.72it/s] 12%|█▏        | 152/1267 [00:00<00:01, 724.03it/s] 18%|█▊        | 232/1267 [00:00<00:01, 636.20it/s] 25%|██▌       | 318/1267 [00:00<00:01, 712.41it/s] 32%|███▏      | 409/1267 [00:00<00:01, 777.33it/s] 39%|███▊      | 489/1267 [00:00<00:00, 780.51it/s] 45%|████▌     | 575/1267 [00:00<00:00, 804.23it/s] 52%|█████▏    | 657/1267 [00:00<00:00, 626.84it/s] 57%|█████▋    | 726/1267 [00:01<00:01, 484.72it/s] 62%|██████▏   | 783/1267 [00:01<00:01, 356.74it/s] 66%|██████▋   | 841/1267 [00:01<00:01, 395.75it/s] 70%|███████   | 890/1267 [00:01<00:01, 355.33it/s] 76%|███████▌  | 957/1267 [00:01<00:00, 401.58it/s] 79%|███████▉  | 1004/1267 [00:02<00:00, 387.29it/s] 85%|████████▌ | 1081/1267 [00:02<00:00, 471.61it/s] 90%|█████████ | 1141/1267 [00:02<00:00, 499.50it/s] 94%|█████████▍| 1196/1267 [00:02<00:00, 378.80it/s] 98%|█████████▊| 1242/1267 [00:02<00:00, 305.32it/s]100%|██████████| 1267/1267 [00:02<00:00, 437.42it/s]
+Saved 26150 PRs to data/raw/github_pr_metadata.parquet
+Saved 761081 review events to data/raw/github_review_events.parquet
+Processing bitcoin-core/gui metadata...
+  0%|          | 0/521 [00:00<?, ?it/s]  9%|▉         | 47/521 [00:00<00:01, 469.45it/s] 21%|██        | 109/521 [00:00<00:00, 554.86it/s] 34%|███▍      | 178/521 [00:00<00:00, 614.84it/s] 46%|████▌     | 240/521 [00:00<00:00, 602.18it/s] 60%|█████▉    | 311/521 [00:00<00:00, 638.83it/s] 74%|███████▍  | 388/521 [00:00<00:00, 682.21it/s] 88%|████████▊ | 457/521 [00:00<00:00, 673.97it/s]100%|██████████| 521/521 [00:00<00:00, 648.61it/s]
+Saved 26671 PRs to data/raw/github_pr_metadata.parquet
+Saved 775266 review events to data/raw/github_review_events.parquet
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/01_ingest/automated_sponsors.py ---
+✅ Extracted 72 automated grants to /Users/saurabhkumar/Desktop/Work/github/orange-dev-data/data/raw/automated_grants.json
+
+────────────────────────────────────────────────────────────
+  📊  DEV COUNT SNAPSHOT — After Phase 1 — raw source files extracted
+────────────────────────────────────────────────────────────
+    Commit authors (unique emails)                  1,436
+    GitHub PR authors (unique IDs)                  2,747
+    GitHub reviewers (unique IDs)                   4,781
+    BIPs PR authors (unique IDs)                      757
+    BIPs reviewers (unique IDs)                     1,313
+    Mailing list (unique emails)                    1,475
+    Delving (unique usernames)                        435
+
+    identities.json — total                         7,663
+      can_ (hand-curated multi-alias)                 140
+      auto_ (everyone else)                         7,523
+      merged across 2+ sources                      2,776
+      origin: prgithub                              5,428
+      origin: ghprofile                             1,614
+      origin: bipgithub                             1,480
+      origin: singlepr                              1,406
+      origin: mailinglist                           1,376
+      origin: corecommit                            1,240
+      origin: delving                                 427
+      origin: bips                                    159
+      origin: curation                                139
+
+    audit — Delving users mapped                      427 / 432
+    audit — Delving candidates to curate                1
+    audit — ML emails mapped                        1,469 / 1,470
+    audit — fuzzy name pairs to review                124
+
+    contributor_review_metrics — unique UUIDs       6,285
+
+    social_stats — unique UUIDs                     7,663
+      with mailing list activity                      891
+      with Delving activity                           401
+
+    contributors_unified — ONE ROW PER DEV          7,705
+      commit activity (total_commits > 0)           1,244
+      review activity (reviews > 0)                 5,119
+      social activity (ML or Delving > 0)           1,192
+      BIP authorship (bips_authored > 0)              158
+      cross-source (2+ signal types)                  772
+
+    enriched_prs — total PRs                       26,635
+      matched to unified UUID                      26,635 (100.0%)
+
+    ecosystem_summary — total_registry              7,632
+    ecosystem_summary — total_active                6,481
+    ecosystem_summary — committers                  1,240
+    ecosystem_summary — reviewers                   5,119
+    ecosystem_summary — research                    1,651
+    ecosystem_summary — standards                     158
+
+────────────────────────────────────────────────────────────
+
+--- PHASE 2: Convergence (Enrichment) ---
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/identity/build_github_id_map.py ---
+Deriving proxy set from merged events...
+  21 proxy logins derived (≥5 merges): achow101, fanquake, gavinandresen, glozow, gmaxwell, hebasto, jgarzik, jonasschnelli, jonatack, kallewoof, laanwj, luke-jr, maflcko, marcofalke, meshcollider, murchandamus, roasbeef, ryanofsky, sedited, sipa, tcatm
+Mining PR directories...
+  2,979 (github_id, email) pairs found (pre-corroboration)
+  796 github_ids with only noreply emails
+  3,094 unique github_ids seen
+Loading curated anchors...
+  6 explicit blocked anchors loaded from curated file
+  63 github_ids matched from curated entries
+  155 emails blocked (owned by curated identities)
+Building map...
+
+Wrote 1,626 entries → metadata/github_id_map.json
+  912  have at least one real email
+  714  have only a noreply address
+  27  entries supplemented from hand-curated table
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/identity/build_identities.py ---
+Building exhaustive universal identity database...
+Indexing Git Commits...
+Loading github_id_map...
+  813 gh_id_map email(s) suppressed by blocked_anchors
+  911 github_ids with real email anchors
+Parsing PR Metadata (prgithub)...
+Parsing PR Metadata (bipgithub)...
+Parsing Review Events (prgithub)...
+Parsing Review Events (bipgithub)...
+Parsing Delving...
+Parsing Mailing List...
+Parsing BIP Author headers...
+Loading GitHub profiles (public email + display-name bridge)...
+  777 public profile email edges
+  1,417 display-name bridge edges (login → real name)
+Loading single-PR candidate emails...
+  278 confirmed (candidate == profile email)
+  912 candidate-only (no profile email to cross-validate)
+Injecting explicit curated edges...
+Computing Universal Map...
+Generated 7673 high-fidelity identities.
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/identity/restamp_social_ids.py ---
+Re-stamping canonical_ids in social_mailing_list.parquet ...
+  24,560 rows re-stamped: 1,376 unique IDs before → 1,376 after
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/identity/restamp_delving_ids.py ---
+Re-stamping canonical_ids in social_delving.parquet ...
+  4,411 rows re-stamped: 434 unique IDs before → 434 after
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/02_process/resolve_commits.py ---
+Loading raw commits...
+Filtering out branch sync merges...
+Dropped 3404 branch sync merges from commit history.
+Normalizing identities using master resolver...
+Applying sponsor classifications...
+Mapping integration dates from PR metadata...
+✅ Resolved 134196 commits to data/enriched/commits_resolved.parquet
+
+────────────────────────────────────────────────────────────
+  📊  DEV COUNT SNAPSHOT — After build_identities — identity graph built
+────────────────────────────────────────────────────────────
+    Commit authors (unique emails)                  1,436
+    GitHub PR authors (unique IDs)                  2,747
+    GitHub reviewers (unique IDs)                   4,781
+    BIPs PR authors (unique IDs)                      757
+    BIPs reviewers (unique IDs)                     1,313
+    Mailing list (unique emails)                    1,475
+    Delving (unique usernames)                        435
+
+    identities.json — total                         7,673
+      can_ (hand-curated multi-alias)                 140
+      auto_ (everyone else)                         7,533
+      merged across 2+ sources                      2,777
+      origin: prgithub                              5,436
+      origin: ghprofile                             1,614
+      origin: bipgithub                             1,480
+      origin: singlepr                              1,403
+      origin: mailinglist                           1,376
+      origin: corecommit                            1,240
+      origin: delving                                 430
+      origin: bips                                    159
+      origin: curation                                139
+
+    audit — Delving users mapped                      427 / 432
+    audit — Delving candidates to curate                1
+    audit — ML emails mapped                        1,469 / 1,470
+    audit — fuzzy name pairs to review                124
+
+    contributor_review_metrics — unique UUIDs       6,285
+
+    social_stats — unique UUIDs                     7,663
+      with mailing list activity                      891
+      with Delving activity                           401
+
+    contributors_unified — ONE ROW PER DEV          7,705
+      commit activity (total_commits > 0)           1,244
+      review activity (reviews > 0)                 5,119
+      social activity (ML or Delving > 0)           1,192
+      BIP authorship (bips_authored > 0)              158
+      cross-source (2+ signal types)                  772
+
+    enriched_prs — total PRs                       26,635
+      matched to unified UUID                      26,635 (100.0%)
+
+    ecosystem_summary — total_registry              7,632
+    ecosystem_summary — total_active                6,481
+    ecosystem_summary — committers                  1,240
+    ecosystem_summary — reviewers                   5,119
+    ecosystem_summary — research                    1,651
+    ecosystem_summary — standards                     158
+
+────────────────────────────────────────────────────────────
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/02_process/reviews.py ---
+Loading commit messages from data/raw/core_messages.parquet...
+Processing 108514 commit messages...
+Found 40573 review signals in 21016 commits.
+Saved reviews to data/raw/core_reviews.parquet
+Saved reviewer summary to output/tracker/reviewers_summary.json
+  Total reviews: 40573
+  Unique commits with reviews: 10929
+  Top 5 reviewers: ['achow101', 'laanwj', 'hebasto', 'marcofalke', 'fanquake']
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/02_process/github_social.py ---
+🕵️  Processing local GitHub metadata from data/sources/bitcoin-github-metadata...
+📊 Found 34120 metadata files.
+✨ Successfully enriched 0 GitHub identities via local metadata.
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/02_process/enrich_prs.py ---
+Loading raw PRs...
+Joining PR authors with UUIDs using central identity resolver...
+Saved 26671 enriched PRs to data/enriched/enriched_prs.parquet
+Matched 26671 PRs (100.0%) to unified contributors.
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/02_process/enrich_reviews.py ---
+Loading raw reviews...
+Joining review authors with UUIDs using central identity resolver...
+Saved 775266 enriched reviews to data/enriched/enriched_reviews.parquet
+Matched 775266 reviews (100.0%) to unified contributors.
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/02_process/merge_social.py ---
+Loading Delving data from data/raw/social_delving.parquet...
+Loading Mailing List data from data/raw/social_mailing_list.parquet...
+Merging social data...
+Total social records: 28971
+Saved to data/raw/social_combined.parquet
+
+Social Activity by Source:
+source
+mailing_list    24560
+delving          4411
+Name: count, dtype: int64
+
+Top 5 Contributors (Governance):
+canonical_id
+can_peter_todd         1280
+can_mike_hearn          981
+can_gregory_maxwell     876
+can_pieter_wuille       714
+can_luke_dashjr         703
+Name: count, dtype: int64
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/02_process/governance.py ---
+--- Stage 3: Forensic Enrichment Starting ---
+Loading datasets...
+Categorizing BIPs and Social threads into themes...
+Linking BIPs to social discussions...
+Linking BIPs to repository commits...
+Calculating Maturity Scores...
+Saving enriched BIPs to data/enriched/bips_refined.parquet...
+Wrote 210 BIP records to output/tracker/bips_ui.json
+
+--- Enrichment Complete ---
+BIPs with code links: 80
+BIPs with social links: 97
+
+Top BIPs by Maturity Score:
+    bip_id  ... maturity_score
+50      70  ...           0.68
+21      32  ...           0.55
+28      39  ...           0.51
+161    340  ...           0.43
+134    174  ...           0.39
+162    341  ...           0.38
+45      65  ...           0.26
+1        2  ...           0.24
+10      15  ...           0.21
+113    141  ...           0.19
+
+[10 rows x 4 columns]
+Exported per-contributor BIP index to data/enriched/contributor_bips.json (159 contributors)
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/04_deliver/badges.py ---
+🏆 Compiling static badges...
+✨ Compiled badges for 246 contributors.
+
+--- PHASE 3: Intelligence (NLP & Graphs) ---
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/02_process/categorize.py ---
+============================================================
+  Categorize Threads – Bitcoin Social Data
+============================================================
+
+Loading data/raw/social_combined.parquet ...
+  28,971 messages loaded.
+  17,416 unique threads.
+
+Categorizing threads ...
+   2,000 / 17,416 threads processed
+   4,000 / 17,416 threads processed
+   6,000 / 17,416 threads processed
+   8,000 / 17,416 threads processed
+  10,000 / 17,416 threads processed
+  12,000 / 17,416 threads processed
+  14,000 / 17,416 threads processed
+  16,000 / 17,416 threads processed
+  17,416 / 17,416 threads processed
+
+Mapping results to messages ...
+
+Saved → data/enriched/social_threads.parquet
+
+============================================================
+  CATEGORIZATION SUMMARY
+============================================================
+
+  Total threads:          17,416
+  Threads with BIP refs:  2,575  (14.8%)
+  Categorized (non-other):12,622  (72.5%)
+  Uncategorized (other):  4,794  (27.5%)
+
+  Category                      Threads       %
+  ----------------------------------------------
+  other                           4,794   27.5%
+  mining                          1,235    7.1%
+  hard-fork-block-size            1,116    6.4%
+  mempool-fees                      997    5.7%
+  wallet-keys                       767    4.4%
+  payment-protocol                  766    4.4%
+  covenants                         695    4.0%
+  script-opcodes                    647    3.7%
+  taproot                           573    3.3%
+  soft-fork-activation              548    3.1%
+  segwit                            466    2.7%
+  privacy                           462    2.7%
+  p2p-network                       458    2.6%
+  quantum                           367    2.1%
+  security                          356    2.0%
+  core-dev                          339    1.9%
+  multisig-threshold                289    1.7%
+  lightning                         288    1.7%
+  spam-filtering                    285    1.6%
+  bip-process                       275    1.6%
+  utxo-sync                         258    1.5%
+  testing-devtools                  221    1.3%
+  scaling                           199    1.1%
+  sidechains-drivechain             180    1.0%
+  consensus-cleanup                 143    0.8%
+  signatures-sighash                139    0.8%
+  bitvm                              82    0.5%
+  tokens-runes                       78    0.4%
+  ordinals-inscriptions              68    0.4%
+  vaults                             59    0.3%
+  data-structures                    57    0.3%
+  l2-bridges                         47    0.3%
+  silent-payments                    43    0.2%
+  transaction-format                 39    0.2%
+  atomic-swaps                       34    0.2%
+  dlc                                19    0.1%
+  ecash                              17    0.1%
+  nostr                              10    0.1%
+
+  Threads with 2+ categories: 4,920
+
+Done.
+
+Computing contributor message bookmarks...
+  Saved → data/enriched/contributor_message_bookmarks.json (1685 contributors)
+Computing contributor social history by topic...
+  Saved → data/enriched/contributor_social_history.json (1685 contributors)
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/03_analyze/twib_nlp.py ---
+Fetching weekly data for LLM processing...
+Categorizing 9 miscellaneous PRs...
+Generating TL;DR summary...
+Generating bulk summaries for 23 new items...
+Processing chunk 0 to 10...
+Chunk saved successfully.
+Processing chunk 10 to 20...
+Chunk saved successfully.
+Processing chunk 20 to 23...
+Chunk saved successfully.
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/03_analyze/review_metrics.py ---
+Loading datasets...
+Using identity resolver for canonical mapping...
+Filtering signals...
+Aggregating reviewer metrics...
+Aggregating author metrics...
+Joining all metrics...
+Review metrics calculated for 6293 contributors.
+Top contributors by Reciprocity:
+               canonical_id  review_reciprocity
+2027          auto_drahtbot         3897.000000
+1595             auto_jan_b           38.000000
+4042    auto_daniel_cousens           32.285714
+5805    can_michael_folkson           29.666667
+5508  auto_riccardo_masutti           29.000000
+Fastest Approvers (Avg Latency):
+                          canonical_id  avg_approval_latency_days
+4631                  auto_oolanla8888                   0.002917
+2595                auto_matt_auckland                   0.003333
+2405                      auto_rabidus                   0.003715
+5670  auto_jonathan_toomim_toomim_bros                   0.004641
+1641                      auto_lubuzzo                   0.006192
+
+────────────────────────────────────────────────────────────
+  📊  DEV COUNT SNAPSHOT — After review_metrics — reviewer metrics computed
+────────────────────────────────────────────────────────────
+    Commit authors (unique emails)                  1,436
+    GitHub PR authors (unique IDs)                  2,747
+    GitHub reviewers (unique IDs)                   4,781
+    BIPs PR authors (unique IDs)                      757
+    BIPs reviewers (unique IDs)                     1,313
+    Mailing list (unique emails)                    1,475
+    Delving (unique usernames)                        435
+
+    identities.json — total                         7,673
+      can_ (hand-curated multi-alias)                 140
+      auto_ (everyone else)                         7,533
+      merged across 2+ sources                      2,777
+      origin: prgithub                              5,436
+      origin: ghprofile                             1,614
+      origin: bipgithub                             1,480
+      origin: singlepr                              1,403
+      origin: mailinglist                           1,376
+      origin: corecommit                            1,240
+      origin: delving                                 430
+      origin: bips                                    159
+      origin: curation                                139
+
+    audit — Delving users mapped                      427 / 432
+    audit — Delving candidates to curate                1
+    audit — ML emails mapped                        1,469 / 1,470
+    audit — fuzzy name pairs to review                124
+
+    contributor_review_metrics — unique UUIDs       6,293
+
+    social_stats — unique UUIDs                     7,663
+      with mailing list activity                      891
+      with Delving activity                           401
+
+    contributors_unified — ONE ROW PER DEV          7,705
+      commit activity (total_commits > 0)           1,244
+      review activity (reviews > 0)                 5,119
+      social activity (ML or Delving > 0)           1,192
+      BIP authorship (bips_authored > 0)              158
+      cross-source (2+ signal types)                  772
+
+    enriched_prs — total PRs                       26,671
+      matched to unified UUID                      26,671 (100.0%)
+
+    ecosystem_summary — total_registry              7,632
+    ecosystem_summary — total_active                6,481
+    ecosystem_summary — committers                  1,240
+    ecosystem_summary — reviewers                   5,119
+    ecosystem_summary — research                    1,651
+    ecosystem_summary — standards                     158
+
+────────────────────────────────────────────────────────────
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/03_analyze/influence.py ---
+Loading identity resolver...
+Loading enriched social data from data/enriched/social_threads.parquet...
+Processing edges and expertise fingerprints across eras...
+Dampening message counts for PageRank (Logarithmic scaling)...
+Calculating era-based PageRank centralities...
+  Using Universal Identities population count: 7673
+Exporting enriched network data for 7673 total contributors (interactive + observers)...
+  Loaded commit history for 1243 contributors.
+Exported comprehensive contributor dataset (7673 people) to data/enriched/social_stats.json
+Building undirected subgraph for community detection (time-decay weighted)...
+Running Louvain community detection on 172 connected nodes...
+Computing spring layout (Fruchterman-Reingold)...
+  10 communication communities detected, 78 isolated nodes
+Building expertise similarity graph...
+Running Louvain on expertise graph (250 nodes)...
+  7 expertise communities detected, 0 generalists
+Exported richer network to output/network/network_graph.json
+
+────────────────────────────────────────────────────────────
+  📊  DEV COUNT SNAPSHOT — After influence — social stats computed
+────────────────────────────────────────────────────────────
+    Commit authors (unique emails)                  1,436
+    GitHub PR authors (unique IDs)                  2,747
+    GitHub reviewers (unique IDs)                   4,781
+    BIPs PR authors (unique IDs)                      757
+    BIPs reviewers (unique IDs)                     1,313
+    Mailing list (unique emails)                    1,475
+    Delving (unique usernames)                        435
+
+    identities.json — total                         7,673
+      can_ (hand-curated multi-alias)                 140
+      auto_ (everyone else)                         7,533
+      merged across 2+ sources                      2,777
+      origin: prgithub                              5,436
+      origin: ghprofile                             1,614
+      origin: bipgithub                             1,480
+      origin: singlepr                              1,403
+      origin: mailinglist                           1,376
+      origin: corecommit                            1,240
+      origin: delving                                 430
+      origin: bips                                    159
+      origin: curation                                139
+
+    audit — Delving users mapped                      427 / 432
+    audit — Delving candidates to curate                1
+    audit — ML emails mapped                        1,469 / 1,470
+    audit — fuzzy name pairs to review                124
+
+    contributor_review_metrics — unique UUIDs       6,293
+
+    social_stats — unique UUIDs                     7,673
+      with mailing list activity                      896
+      with Delving activity                           403
+
+    contributors_unified — ONE ROW PER DEV          7,705
+      commit activity (total_commits > 0)           1,244
+      review activity (reviews > 0)                 5,119
+      social activity (ML or Delving > 0)           1,192
+      BIP authorship (bips_authored > 0)              158
+      cross-source (2+ signal types)                  772
+
+    enriched_prs — total PRs                       26,671
+      matched to unified UUID                      26,671 (100.0%)
+
+    ecosystem_summary — total_registry              7,632
+    ecosystem_summary — total_active                6,481
+    ecosystem_summary — committers                  1,240
+    ecosystem_summary — reviewers                   5,119
+    ecosystem_summary — research                    1,651
+    ecosystem_summary — standards                     158
+
+────────────────────────────────────────────────────────────
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/03_analyze/expertise.py ---
+--- Stage 3.5: Expertise & Authority Mapping ---
+Extracting Expertise Tags from PR labels...
+Identifying Full-Stack Architects...
+Resolving commit author identities...
+Identifying The Gatekeepers...
+Assembling Expert Profiles...
+Expertise mapping saved to output/tracker/expertise.json
+Found 79 Full-Stack Architects and 78 specialized experts.
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/03_analyze/self_merges.py ---
+Generating self-merges detailed analytics...
+Found 4884 self-merge commits. Analyzing ACKs...
+Saved 4884 detailed self-merges to data/enriched/self_merges_detailed.parquet
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/02_process/merge_sponsors.py ---
+✅ Merged sponsors written to /Users/saurabhkumar/Desktop/Work/github/orange-dev-data/data/enriched/sponsors_merged.json with 111 developers
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/03_analyze/unify_contributors.py ---
+Loading Master UUID Identities...
+Discovering all active contributors across sources...
+Master Union: 7723 unique contributors discovered.
+Aggregating badges.json metadata...
+Processing BIP data...
+Enriching with GitHub profile data (location, company, bio, twitter)...
+  Profile enrichment: 1297 / 7723 contributors with location data
+Applying manual social profile overrides (Twitter/Blog)...
+Grand Join complete. 7715 contributors unified in data/enriched/contributors_unified.parquet
+
+────────────────────────────────────────────────────────────
+  📊  DEV COUNT SNAPSHOT — After unify_contributors — grand join complete
+────────────────────────────────────────────────────────────
+    Commit authors (unique emails)                  1,436
+    GitHub PR authors (unique IDs)                  2,747
+    GitHub reviewers (unique IDs)                   4,781
+    BIPs PR authors (unique IDs)                      757
+    BIPs reviewers (unique IDs)                     1,313
+    Mailing list (unique emails)                    1,475
+    Delving (unique usernames)                        435
+
+    identities.json — total                         7,673
+      can_ (hand-curated multi-alias)                 140
+      auto_ (everyone else)                         7,533
+      merged across 2+ sources                      2,777
+      origin: prgithub                              5,436
+      origin: ghprofile                             1,614
+      origin: bipgithub                             1,480
+      origin: singlepr                              1,403
+      origin: mailinglist                           1,376
+      origin: corecommit                            1,240
+      origin: delving                                 430
+      origin: bips                                    159
+      origin: curation                                139
+
+    audit — Delving users mapped                      427 / 432
+    audit — Delving candidates to curate                1
+    audit — ML emails mapped                        1,469 / 1,470
+    audit — fuzzy name pairs to review                124
+
+    contributor_review_metrics — unique UUIDs       6,293
+
+    social_stats — unique UUIDs                     7,673
+      with mailing list activity                      896
+      with Delving activity                           403
+
+    contributors_unified — ONE ROW PER DEV          7,715
+      commit activity (total_commits > 0)           1,244
+      review activity (reviews > 0)                 5,126
+      social activity (ML or Delving > 0)           1,199
+      BIP authorship (bips_authored > 0)              158
+      cross-source (2+ signal types)                  773
+
+    enriched_prs — total PRs                       26,671
+      matched to unified UUID                      26,671 (100.0%)
+
+    ecosystem_summary — total_registry              7,632
+    ecosystem_summary — total_active                6,481
+    ecosystem_summary — committers                  1,240
+    ecosystem_summary — reviewers                   5,119
+    ecosystem_summary — research                    1,651
+    ecosystem_summary — standards                     158
+
+────────────────────────────────────────────────────────────
+
+--- PHASE 3.5: LLM Summarization ---
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/03_analyze/generate_pr_summaries.py ---
+Found 7 API Keys loaded.
+Need to summarize 88 PRs.
+Processing chunk 0 to 10...
+Chunk saved successfully.
+Processing chunk 10 to 20...
+Chunk saved successfully.
+Processing chunk 20 to 30...
+Chunk saved successfully.
+Processing chunk 30 to 40...
+Chunk saved successfully.
+Processing chunk 40 to 50...
+Chunk saved successfully.
+Processing chunk 50 to 60...
+Chunk saved successfully.
+Processing chunk 60 to 70...
+Chunk saved successfully.
+Processing chunk 70 to 80...
+Chunk saved successfully.
+Processing chunk 80 to 88...
+Chunk saved successfully.
+Summarization pass complete.
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/03_analyze/generate_release_highlights.py ---
+Found 7 API Keys loaded.
+Highlights generation pass complete.
+
+--- PHASE 4: Artifact Generation ---
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/03_analyze/releases.py ---
+Exported 77 releases to output/tracker/releases.json
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/04_deliver/generate_regional_evolution.py ---
+Generated output/tracker/stats_regional_evolution.json with consolidated categories
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/04_deliver/registry.py ---
+🔄 Starting Master Registry Sync...
+  Bootstrapping from 7673 defined identities...
+  Syncing 6429 active core contributors...
+  Syncing 7673 social participants...
+      Matched: can_pieter_wuille -> Pieter Wuille
+      Matched: can_ava_chow -> Ava Chow
+      Matched: can_gavin_andresen -> Gavin Andresen
+      Matched: can_jonas_schnelli -> Jonas Schnelli
+      Matched: can_jeff_garzik -> Jeff Garzik
+      Matched: can_wladimir_j_van_der_laan -> Wladimir J. van der Laan
+      Matched: can_gregory_maxwell -> Gregory Maxwell
+      Matched: can_luke_dashjr -> Luke Dashjr
+      Matched: can_gloria_zhao -> Gloria Zhao
+      Matched: can_matt_corallo -> Matt Corallo
+      Matched: can_marcofalke -> MarcoFalke
+      Matched: can_anthony_towns -> Anthony Towns
+      Matched: can_michael_ford -> Michael Ford
+      Matched: can_hennadii_stepanov -> Hennadii Stepanov
+      Matched: can_nils_schneider -> Nils Schneider
+      Matched: can_drak -> Drak
+      Matched: can_cory_fields -> Cory Fields
+      Matched: can_mark_friedenbach -> Mark Friedenbach
+      Matched: can_russell_yanofsky -> Russell Yanofsky
+      Matched: can_peter_todd -> Peter Todd
+  Garbage collected 17 stale contributors.
+✨ Registry Sync Complete! Tracked 7669 unique contributors.
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/04_deliver/tracker_artifacts.py ---
+/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/scripts/04_deliver/tracker_artifacts.py:1195: UserWarning: Converting to PeriodArray/Index representation will drop timezone information.
+  df['month_period'] = df['date_utc'].dt.to_period('M')
+Loading data...
+Filtering data to cutoff: 2026-06-30
+Generating Vital Signs...
+Loaded 21 maintainers with 63 email aliases.
+RUNTIME vital_signs path in core.py: output/tracker/dashboard_vital_signs.json
+RUNTIME absolute vital_signs path: /Users/saurabhkumar/Desktop/Work/github/orange-dev-data/output/tracker/dashboard_vital_signs.json
+RUNTIME total_commits computed in core.py: 55768
+Generating Snapshots...
+Generating Contributor Landscape...
+Adding 5191 pure reviewers to the landscape population...
+Exported contributor commit history to data/enriched/contributor_commit_history.json
+Generating Category Evolution...
+  Generating Total view...
+  Generating Authored view...
+Generating Contributor Growth...
+Generating Common Metrics...
+Generating Social (Interpolated)...
+Generating Corporate Era & Maintainer Independence...
+Loaded 20 sponsors, 164 sponsored developer emails.
+Generating Geography...
+Generating Codebase Stats...
+  Replaying 134152 commits for stack evolution...
+  Scaling Stack Evolution by 0.193275 (Hist: 2589608 -> Target: 500506)
+  Replaying commits for Category History...
+  Scaling Category History by 0.179101 (Hist: 2794539 -> Target: 500506)
+Generating Engagement Tiers...
+Generating Churn Metrics...
+Generating Retention Metrics...
+Generating Reviewer Metrics...
+All stats generated successfully.
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/04_deliver/maintainers.py ---
+🚀 Starting Maintainer Artifact Generation Pipeline...
+Running Footprint Analysis...
+Analyzing footprints for 21 potential maintainers...
+Footprints saved to data/enriched/maintainer_footprints.json
+✅ Generated maintainers data: 21 core, 0 ecosystem.
+Saved to output/shared/maintainers/stats_maintainers.json
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/04_deliver/ui_artifacts.py ---
+Delivering UI artifacts...
+Loading enriched per-contributor data files...
+  commit_history loaded for 1246 contributors
+  contributor_bips loaded for 159 contributors
+  message_bookmarks loaded for 1685 contributors
+  social_history loaded for 1685 contributors
+Cleaning profiles directory...
+Generating profiles and tracking filenames...
+  Filtered out 73 low-impact identities with no GitHub, no Delving, and no real email.
+Generated 7642 profile shards to output/shared/contributors/profiles
+  registry_contributors.parquet written (1096 KB, snappy-compressed)
+  registry_metadata.json written (3926 bytes)
+Registry and profiles saved to output/shared/contributors/
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/04_deliver/ecosystem_summary.py ---
+Generating Ecosystem Summary (Pure Python)...
+Ecosystem summary saved to output/shared/ecosystem_summary.json
+Stats: Total Active=6492, New Coders=22, New Discussants=95
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/04_deliver/discussions_pulse.py ---
+Generating Discussions Pulse...
+  ✅ Written: output/shared/discussions_pulse.json
+     90d: 826 msgs · 375 threads · 208 voices
+     30d: 279 msgs · 97 threads · 74 voices
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/04_deliver/network_home_snapshot.py ---
+Wrote output/shared/network_home_snapshot.json
+  active_contributors_30d=132 (delta=+44)
+  top_reviewers_30d=['Sebastian Kung', 'MarcoFalke', 'woltx', 'Hennadii Stepanov', 'Lorinc Pap']
+  top_topics_30d=['Quantum', 'Utxo Sync', 'Privacy', 'Mining', 'Lightning']
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/04_deliver/self_merge_receipts.py ---
+Formatting self-merge receipts for delivery...
+Saved 4884 self-merge receipts to output/network/stats_self_merges.json
+
+--- Running: "/opt/anaconda3/bin/python3" scripts/04_deliver/twib_artifacts.py ---
+Loading weekly activity data...
+✅ Generated TWIB Artifacts to output/twib/ for 2026-07-05
+
+────────────────────────────────────────────────────────────
+  📊  DEV COUNT SNAPSHOT — FINAL — ecosystem summary
+────────────────────────────────────────────────────────────
+    Commit authors (unique emails)                  1,436
+    GitHub PR authors (unique IDs)                  2,747
+    GitHub reviewers (unique IDs)                   4,781
+    BIPs PR authors (unique IDs)                      757
+    BIPs reviewers (unique IDs)                     1,313
+    Mailing list (unique emails)                    1,475
+    Delving (unique usernames)                        435
+
+    identities.json — total                         7,673
+      can_ (hand-curated multi-alias)                 140
+      auto_ (everyone else)                         7,533
+      merged across 2+ sources                      2,777
+      origin: prgithub                              5,436
+      origin: ghprofile                             1,614
+      origin: bipgithub                             1,480
+      origin: singlepr                              1,403
+      origin: mailinglist                           1,376
+      origin: corecommit                            1,240
+      origin: delving                                 430
+      origin: bips                                    159
+      origin: curation                                139
+
+    audit — Delving users mapped                      427 / 432
+    audit — Delving candidates to curate                1
+    audit — ML emails mapped                        1,469 / 1,470
+    audit — fuzzy name pairs to review                124
+
+    contributor_review_metrics — unique UUIDs       6,293
+
+    social_stats — unique UUIDs                     7,673
+      with mailing list activity                      896
+      with Delving activity                           403
+
+    contributors_unified — ONE ROW PER DEV          7,715
+      commit activity (total_commits > 0)           1,244
+      review activity (reviews > 0)                 5,126
+      social activity (ML or Delving > 0)           1,199
+      BIP authorship (bips_authored > 0)              158
+      cross-source (2+ signal types)                  773
+
+    enriched_prs — total PRs                       26,671
+      matched to unified UUID                      26,671 (100.0%)
+
+    ecosystem_summary — total_registry              7,642
+    ecosystem_summary — total_active                6,492
+    ecosystem_summary — committers                  1,240
+    ecosystem_summary — reviewers                   5,126
+    ecosystem_summary — research                    1,660
+    ecosystem_summary — standards                     158
+
+────────────────────────────────────────────────────────────
+
+✨ WEEKLY PIPELINE COMPLETE!
+Everything is up to date and all NLP/Graphs have been recalculated.
