@@ -259,23 +259,35 @@ def generate_discussions_pulse():
 
     df = pd.read_parquet(SOCIAL_THREADS_INPUT)
     df['date'] = pd.to_datetime(df['date'])
+    
+    # Enforce T-1 boundary to prevent partial day data
+    t1_end = (datetime.now() - pd.Timedelta(days=1)).replace(hour=23, minute=59, second=59)
+    df = df[df['date'] <= t1_end]
 
     w90 = _compute_window(df, 90)
     w30 = _compute_window(df, 30)
+    w7 = _compute_window(df, 7)
 
     if not w90 or not w30:
         print("  Error: Not enough data to compute windows.")
         return
 
     _add_trends(w30, w90)
+    if w7:
+        _add_trends(w7, w30)
 
     # Strip internal keys
     w90.pop('_cat_shares', None)
     w30.pop('_cat_shares', None)
+    if w7:
+        w7.pop('_cat_shares', None)
 
+    # Use T-1 for generated_at to clearly signify the complete data boundary
+    generated_at_t1 = (datetime.now() - pd.Timedelta(days=1)).strftime('%Y-%m-%d')
     output = {
-        "generated_at": datetime.now().isoformat(),
+        "generated_at": generated_at_t1,
         "windows": {
+            "7d": w7 or {},
             "30d": w30,
             "90d": w90,
         },
@@ -286,8 +298,10 @@ def generate_discussions_pulse():
         json.dump(output, f, indent=2, default=str)
 
     print(f"  ✅ Written: {OUTPUT_FILE}")
-    print(f"     90d: {w90['total_messages']} msgs · {w90['total_threads']} threads · {w90['unique_voices']} voices")
-    print(f"     30d: {w30['total_messages']} msgs · {w30['total_threads']} threads · {w30['unique_voices']} voices")
+    print(f"     90d: {w90.get('total_messages', 0)} msgs · {w90.get('total_threads', 0)} threads · {w90.get('unique_voices', 0)} voices")
+    print(f"     30d: {w30.get('total_messages', 0)} msgs · {w30.get('total_threads', 0)} threads · {w30.get('unique_voices', 0)} voices")
+    if w7:
+        print(f"      7d: {w7.get('total_messages', 0)} msgs · {w7.get('total_threads', 0)} threads · {w7.get('unique_voices', 0)} voices")
 
 
 if __name__ == "__main__":

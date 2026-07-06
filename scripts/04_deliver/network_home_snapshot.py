@@ -137,7 +137,8 @@ def generate_snapshot():
     latest_social = social_df['date'].max() if not social_df.empty else pd.NaT
 
     anchors = [x for x in [latest_global, latest_review, latest_social] if pd.notna(x)]
-    anchor = max(anchors) if anchors else pd.Timestamp.utcnow()
+    # Use T-1 as the effective anchor to prevent partial day data
+    anchor = (pd.Timestamp.utcnow() - pd.Timedelta(days=1)).replace(hour=23, minute=59, second=59)
 
     current_start = anchor - pd.Timedelta(days=WINDOW_DAYS)
     previous_start = anchor - pd.Timedelta(days=WINDOW_DAYS * 2)
@@ -462,8 +463,10 @@ def generate_snapshot():
             momentum_7d = 'steady'
     else:
         momentum_7d = 'steady'
+    # Use T-1 for generated_at to clearly signify the complete data boundary
+    generated_at_t1 = (datetime.now() - pd.Timedelta(days=1)).strftime('%Y-%m-%d')
     snapshot = {
-        'generated_at': datetime.now().isoformat(),
+        'generated_at': generated_at_t1,
         'contributors_tracked': int(registry.get('metadata', {}).get('count') or len(contributors)),
         'window_reference': {
             'anchor_timestamp': anchor.isoformat(),

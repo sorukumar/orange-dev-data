@@ -401,6 +401,8 @@ class MetricGenerators:
             stars = int(social_counts.get('star', 0))
             forks = int(social_counts.get('fork', 0))
             
+        # Enforce T-1 boundary for generated_at string
+        generated_at_t1 = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
         data = {
             "unique_contributors": int(unique_contributors),
             "core_contributors": int(core_contributors),
@@ -414,7 +416,7 @@ class MetricGenerators:
             "total_stars": stars,
             "total_forks": forks,
             "total_watchers": watchers,
-            "generated_at": datetime.now().strftime("%Y-%m-%d")
+            "generated_at": generated_at_t1
         }
         
         with open(Config.FILES["vital_signs"], "w") as f:

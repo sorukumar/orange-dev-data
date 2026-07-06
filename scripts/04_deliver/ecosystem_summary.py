@@ -1,6 +1,6 @@
 import json
 import os
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 
 # --- Configuration ---
 REGISTRY_INPUT = "output/shared/contributors/registry_index.json"
@@ -50,7 +50,8 @@ def generate_ecosystem_summary():
     
     active_uuids = set()
     focus_counts = {}
-    now = datetime.now()
+    # Enforce T-1 boundary for all time windows to prevent partial day data
+    now = datetime.now() - timedelta(days=1)
     cutoff_90 = now - timedelta(days=90)
     # Focus labels to skip — unmapped, generic, or social-topic labels that pollute the chart
     _SKIP_FOCUS = {'None', 'none', 'code', 'other', 'Other', ''}
