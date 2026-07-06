@@ -311,6 +311,17 @@ class MetricGenerators:
         
         # 1.5 Total Commits (Simulated SHA count if available, else row count)
         total_commits = commits['hash'].nunique()
+        
+        # Split by Core vs Ecosystem properly
+        core_hashes = set(commits[commits['repository_name'] == 'bitcoin/bitcoin']['hash'])
+        core_commits = len(core_hashes)
+        
+        eco_commits_df = commits[~commits['hash'].isin(core_hashes)]
+        eco_commits = eco_commits_df['hash'].nunique()
+        
+        core_contributors = commits[commits['hash'].isin(core_hashes)]['canonical_id'].nunique()
+        eco_contributors = eco_commits_df['canonical_id'].nunique()
+        
         print("RUNTIME total_commits computed in core.py:", total_commits)
 
         # 2. Maintainers - Data Driven
@@ -391,9 +402,13 @@ class MetricGenerators:
             
         data = {
             "unique_contributors": int(unique_contributors),
+            "core_contributors": int(core_contributors),
+            "eco_contributors": int(eco_contributors),
             "unique_maintainers": int(unique_maintainers_active),
             "total_maintainers": int(unique_maintainers_total),
             "total_commits": int(total_commits),
+            "core_commits": int(core_commits),
+            "eco_commits": int(eco_commits),
             "current_codebase_size": net_lines,
             "total_stars": stars,
             "total_forks": forks,

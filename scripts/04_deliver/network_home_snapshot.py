@@ -360,6 +360,108 @@ def generate_snapshot():
     else:
         momentum = 'steady'
 
+
+    # --- 7-Day Logic ---
+    current_start_7 = anchor - pd.Timedelta(days=7)
+    previous_start_7 = anchor - pd.Timedelta(days=14)
+
+    active_current_7d = count_window(global_series, current_start_7, anchor)
+    active_previous_7d = count_window(global_series, previous_start_7, current_start_7)
+    active_delta_7d = active_current_7d - active_previous_7d
+
+    reviewer_current_7d = reviewer_counts_for_window(current_start_7, anchor)
+    reviewer_previous_7d = reviewer_counts_for_window(previous_start_7, current_start_7)
+    reviewer_items_7d = []
+    all_reviewer_uuids_7 = set(reviewer_current_7d.keys()) | set(reviewer_previous_7d.keys())
+    for uuid in all_reviewer_uuids_7:
+        cur = reviewer_current_7d.get(uuid, 0)
+        prev = reviewer_previous_7d.get(uuid, 0)
+        if cur <= 0:
+            continue
+        names = name_candidates.get(uuid, {})
+        reviewer_items_7d.append({
+            'uuid': uuid,
+            'display_name': pick_name(names, uuid),
+            'reviews_7d': cur,
+            'previous_7d': prev,
+            'delta_7d': cur - prev,
+        })
+    reviewer_items_7d = sorted(reviewer_items_7d, key=lambda x: (x['reviews_7d'], x['delta_7d']), reverse=True)[:5]
+
+    bip_current_counts_7d = {}
+    bip_previous_counts_7d = {}
+    topic_current_counts_7d = {}
+    topic_previous_counts_7d = {}
+    
+    if os.path.exists(SOCIAL_THREADS_PATH) and 'threads_df' in locals():
+        cur_df_7 = threads_df[(threads_df['date'] > current_start_7) & (threads_df['date'] <= anchor)]
+        prev_df_7 = threads_df[(threads_df['date'] > previous_start_7) & (threads_df['date'] <= current_start_7)]
+        bip_current_counts_7d = fold_bips(cur_df_7)
+        bip_previous_counts_7d = fold_bips(prev_df_7)
+        topic_current_counts_7d = fold_topics(cur_df_7)
+        topic_previous_counts_7d = fold_topics(prev_df_7)
+        
+    recent_bips_7d = []
+    for bip_id, current_mentions in sorted(bip_current_counts_7d.items(), key=lambda x: x[1], reverse=True)[:3]:
+        bip_ref = bips_index.get(bip_id, {})
+        authors_text = str(bip_ref.get('authors') or '')
+        primary_author = authors_text.split(',')[0].strip() if authors_text else ''
+        author_uuid = author_index.get(primary_author.lower()) if primary_author else None
+        prev_mentions = int(bip_previous_counts_7d.get(bip_id, 0))
+        recent_bips_7d.append({
+            'bip_id': bip_id,
+            'title': bip_ref.get('title') or f'BIP {bip_id}',
+            'primary_author': primary_author or 'Unknown',
+            'primary_author_uuid': author_uuid,
+            'mentions_7d': int(current_mentions),
+            'previous_7d': prev_mentions,
+            'delta_7d': int(current_mentions) - prev_mentions,
+        })
+        
+    topic_items_7d = []
+    all_topics_7 = set(topic_current_counts_7d.keys()) | set(topic_previous_counts_7d.keys())
+    for topic in all_topics_7:
+        current_mentions = int(topic_current_counts_7d.get(topic, 0))
+        previous_mentions = int(topic_previous_counts_7d.get(topic, 0))
+        if current_mentions <= 0:
+            continue
+        topic_items_7d.append({
+            'topic': topic,
+            'label': topic.replace('-', ' ').title(),
+            'mentions_7d': current_mentions,
+            'previous_7d': previous_mentions,
+            'delta_7d': current_mentions - previous_mentions,
+        })
+    topic_items_7d = sorted(topic_items_7d, key=lambda x: (x['mentions_7d'], x['delta_7d']), reverse=True)[:5]
+
+    research_messages_7d = 0
+    research_messages_previous_7d = 0
+    voices_7d = 0
+    voices_previous_7d = 0
+    discussions_7d = 0
+    discussions_previous_7d = 0
+    if not social_df.empty:
+        cur_7 = social_df[(social_df['date'] > current_start_7) & (social_df['date'] <= anchor)]
+        prev_7 = social_df[(social_df['date'] > previous_start_7) & (social_df['date'] <= current_start_7)]
+        research_messages_7d = int(len(cur_7))
+        research_messages_previous_7d = int(len(prev_7))
+        voices_7d = int(cur_7['canonical_id'].dropna().nunique())
+        voices_previous_7d = int(prev_7['canonical_id'].dropna().nunique())
+        discussions_7d = int(len(cur_7))
+        discussions_previous_7d = int(len(prev_7))
+
+    if research_messages_previous_7d == 0 and research_messages_7d > 0:
+        momentum_7d = 'rising'
+    elif research_messages_previous_7d > 0:
+        ratio = research_messages_7d / float(research_messages_previous_7d)
+        if ratio > 1.15:
+            momentum_7d = 'rising'
+        elif ratio < 0.85:
+            momentum_7d = 'cooling'
+        else:
+            momentum_7d = 'steady'
+    else:
+        momentum_7d = 'steady'
     snapshot = {
         'generated_at': datetime.now().isoformat(),
         'contributors_tracked': int(registry.get('metadata', {}).get('count') or len(contributors)),
@@ -408,7 +510,46 @@ def generate_snapshot():
                 'definition': 'Most active research topics in current 30-day discussion window versus previous 30-day baseline.',
                 'items': topic_items,
             },
-            'historical_legends': {
+            
+            'active_contributors_7d': {
+                'value': active_current_7d,
+                'previous_7d': active_previous_7d,
+                'delta_7d': active_delta_7d,
+                'window_days': 7,
+                'definition': 'Contributors with global_last_active in current 7-day window, compared to the previous 7-day window.',
+                'latest_activity_date': latest_global.date().isoformat() if pd.notna(latest_global) else None,
+            },
+            'top_reviewers_7d': {
+                'window_days': 7,
+                'definition': 'Top reviewers by unique PRs reviewed in current 7-day window (comments/reviews only), with previous 7-day comparison.',
+                'items': reviewer_items_7d,
+                'aliases_collapsed': aliases_collapsed,
+            },
+            'recent_bips_7d': {
+                'window_days': 7,
+                'definition': 'Most-mentioned BIPs in current 7-day discussion window versus previous 7-day baseline.',
+                'items': recent_bips_7d,
+            },
+            'research_activity_7d': {
+                'messages_7d': research_messages_7d,
+                'previous_7d': research_messages_previous_7d,
+                'delta_7d': research_messages_7d - research_messages_previous_7d,
+                'momentum': momentum_7d,
+                'definition': 'Combined Delving Bitcoin and mailing list discussion volume in current 7 days versus previous 7 days.',
+            },
+            'discussion_voices_7d': {
+                'value': voices_7d,
+                'previous_7d': voices_previous_7d,
+                'delta_7d': voices_7d - voices_previous_7d,
+                'messages_7d': discussions_7d,
+                'messages_previous_7d': discussions_previous_7d,
+            },
+            'topic_momentum_7d': {
+                'window_days': 7,
+                'definition': 'Most active research topics in current 7-day discussion window versus previous 7-day baseline.',
+                'items': topic_items_7d,
+            },
+'historical_legends': {
                 'definition': 'Random selection of top retired contributors by impact score to feature as ecosystem veterans.',
                 'items': historical_legends,
             },
