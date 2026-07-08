@@ -323,6 +323,7 @@ def main():
     print("\n--- PHASE 3.5: LLM Summarization ---")
     run("python3 scripts/03_analyze/generate_pr_summaries.py", cwd=root_dir)
     run("python3 scripts/03_analyze/generate_release_highlights.py", cwd=root_dir)
+    run("python3 scripts/03_analyze/generate_pulse_summary.py", cwd=root_dir)
 
     # PHASE 4: Delivery (Enriched -> Output)
     print("\n--- PHASE 4: Artifact Generation ---")

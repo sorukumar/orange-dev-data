@@ -276,6 +276,30 @@ def generate_discussions_pulse():
     if w7:
         _add_trends(w7, w30)
 
+    # Load LLM editorial if available
+    pulse_editorial = None
+    if os.path.exists("data/raw/pulse_summary.json"):
+        try:
+            with open("data/raw/pulse_summary.json") as f:
+                pulse_editorial = json.load(f)
+        except Exception as e:
+            print(f"  Warning: Could not load pulse summary: {e}")
+
+    # Inject into 30d window
+    if pulse_editorial:
+        w30["pulse_editorial"] = {
+            "summary": pulse_editorial.get("summary", ""),
+            "insights": pulse_editorial.get("insights", []),
+            "thread_insights": pulse_editorial.get("thread_insights", {}),
+        }
+        
+        # Enrich hot threads with insights
+        thread_insights = pulse_editorial.get("thread_insights", {})
+        for thread in w30.get("hot_threads", []):
+            tid_str = str(thread.get("thread_id"))
+            if tid_str in thread_insights:
+                thread["insight"] = thread_insights[tid_str]
+
     # Strip internal keys
     w90.pop('_cat_shares', None)
     w30.pop('_cat_shares', None)
