@@ -42,15 +42,19 @@ def save_cache(path, data):
     with open(path, 'w') as f:
         json.dump(data, f, indent=2)
 
-def generate_version_highlight(version, pr_subset):
+def generate_version_highlight(version, pr_subset, official_notes=None):
     if not HAS_GENAI or not api_keys or not pr_subset:
         return None
+
+    notes_section = ""
+    if official_notes:
+        notes_section = f"\nOfficial Release Notes Anchor:\n{official_notes[:8000]}\n" # Trim to avoid token limits
 
     prompt = f"""You are the lead technical writer for Bitcoin Core. Your task is to analyze a list of Pull Request summaries that were merged into version {version} and synthesize a strict, factual "Release Highlights" summary.
 
 Input Data (List of PR Summaries):
 {json.dumps(pr_subset, indent=2)}
-
+{notes_section}
 ### Your Directives:
 1. TONE: Be dry, objective, and strictly factual. Do NOT use marketing fluff, hyperbole (e.g., "game-changing", "revolutionary"), or emojis. 
 2. EVALUATION RUBRIC: When deciding what constitutes a "Highlight", prioritize changes in this strict order:
@@ -172,10 +176,6 @@ def run_highlights_generator():
     
     for ms in target_milestones:
         ms_str = str(ms)
-        if ms_str in highlights_cache:
-            continue
-            
-        print(f"Processing highlights for {ms_str}...")
         ms_prs = df[df['milestone'].astype(str) == ms_str]
         
         pr_subset = []
@@ -198,6 +198,17 @@ def run_highlights_generator():
                 "summary": pub_summary
             })
             
+        # --- Staleness check: skip if the PR count hasn't changed ---
+        current_pr_count = len(pr_subset)
+        cached_entry = highlights_cache.get(ms_str)
+        if cached_entry and cached_entry.get("pr_count") == current_pr_count:
+            continue  # Summary is still fresh, skip
+            
+        if cached_entry:
+            print(f"Regenerating highlights for {ms_str} (PR count changed: {cached_entry.get('pr_count')} → {current_pr_count})...")
+        else:
+            print(f"Generating highlights for {ms_str} ({current_pr_count} high-signal PRs)...")
+            
         if not pr_subset:
             print(f"No high-signal PRs found for {ms_str}, skipping.")
             continue
@@ -206,8 +217,31 @@ def run_highlights_generator():
         if len(pr_subset) > 150:
             pr_subset = pr_subset[:150]
             
-        result = generate_version_highlight(ms_str, pr_subset)
+        # Try to read official release notes directly from the cloned repository
+        official_notes = None
+        
+        clean_ms = ms_str.lstrip('v')
+        
+        # Possible locations in the bitcoin/bitcoin repository
+        possible_files = [
+            f"data/sources/bitcoin/doc/release-notes/release-notes-{clean_ms}.md",
+            f"data/sources/bitcoin/doc/release-notes/release-notes-{clean_ms}.0.md",
+            "data/sources/bitcoin/doc/release-notes.md" # Fallback for active/unreleased
+        ]
+        
+        for pfile_path in possible_files:
+            if os.path.exists(pfile_path):
+                try:
+                    with open(pfile_path, 'r', encoding='utf-8') as f:
+                        official_notes = f.read()
+                    print(f"Loaded official notes from {pfile_path}")
+                    break
+                except Exception as e:
+                    print(f"Error reading {pfile_path}: {e}")
+            
+        result = generate_version_highlight(ms_str, pr_subset, official_notes)
         if result:
+            result["pr_count"] = current_pr_count
             highlights_cache[ms_str] = result
             save_cache(HIGHLIGHTS_CACHE_FILE, highlights_cache)
             print(f"Successfully generated and cached highlights for {ms_str}.")

@@ -1,6 +1,294 @@
 {
-  "generated_at": "2026-07-06T08:47:54.339340",
+  "generated_at": "2026-07-05",
   "windows": {
+    "7d": {
+      "window_days": 7,
+      "total_messages": 59,
+      "total_threads": 27,
+      "unique_voices": 22,
+      "themes": [
+        {
+          "category": "lightning",
+          "label": "Lightning / L2",
+          "msgs": 15,
+          "threads": 2,
+          "voices": 5,
+          "share": 27.8,
+          "trend": "rising"
+        },
+        {
+          "category": "utxo-sync",
+          "label": "UTXO & Sync",
+          "msgs": 13,
+          "threads": 1,
+          "voices": 3,
+          "share": 24.1,
+          "trend": "rising"
+        },
+        {
+          "category": "mining",
+          "label": "Mining Protocol",
+          "msgs": 6,
+          "threads": 4,
+          "voices": 5,
+          "share": 11.1,
+          "trend": "steady"
+        },
+        {
+          "category": "quantum",
+          "label": "Quantum Resistance",
+          "msgs": 6,
+          "threads": 4,
+          "voices": 6,
+          "share": 11.1,
+          "trend": "fading"
+        },
+        {
+          "category": "core-dev",
+          "label": "Core Dev",
+          "msgs": 5,
+          "threads": 4,
+          "voices": 2,
+          "share": 9.3,
+          "trend": "new"
+        },
+        {
+          "category": "spam-filtering",
+          "label": "Spam Filtering",
+          "msgs": 2,
+          "threads": 1,
+          "voices": 1,
+          "share": 3.7,
+          "trend": "new"
+        },
+        {
+          "category": "taproot",
+          "label": "Taproot",
+          "msgs": 2,
+          "threads": 1,
+          "voices": 2,
+          "share": 3.7,
+          "trend": "steady"
+        },
+        {
+          "category": "privacy",
+          "label": "Privacy",
+          "msgs": 1,
+          "threads": 1,
+          "voices": 1,
+          "share": 1.9,
+          "trend": "fading"
+        },
+        {
+          "category": "script-opcodes",
+          "label": "Script & Opcodes",
+          "msgs": 1,
+          "threads": 1,
+          "voices": 1,
+          "share": 1.9,
+          "trend": "new"
+        },
+        {
+          "category": "security",
+          "label": "Security",
+          "msgs": 1,
+          "threads": 1,
+          "voices": 1,
+          "share": 1.9,
+          "trend": "new"
+        }
+      ],
+      "hot_threads": [
+        {
+          "thread_id": "topic_2641",
+          "subject": "[BIP Draft] Segregated Data: a prunable, script-isolated block region for data carriage",
+          "category": "utxo-sync",
+          "label": "UTXO & Sync",
+          "reply_count": 13,
+          "unique_authors": 3,
+          "score": 39,
+          "last_post": "2026-07-03",
+          "source": "delving",
+          "link": "https://delvingbitcoin.org/t/bip-draft-segregated-data-a-prunable-script-isolated-block-region-for-data-carriage/2641/38",
+          "snippet": "nan"
+        },
+        {
+          "thread_id": "topic_2667",
+          "subject": "Input-triggered transaction expiry",
+          "category": "lightning",
+          "label": "Lightning / L2",
+          "reply_count": 8,
+          "unique_authors": 4,
+          "score": 32,
+          "last_post": "2026-06-29",
+          "source": "delving",
+          "link": "https://delvingbitcoin.org/t/input-triggered-transaction-expiry/2667/13",
+          "snippet": "TLDR\nInput-triggered transaction expiry is an interesting primitive that warrants further research. It can be implemented with a\u2026"
+        },
+        {
+          "thread_id": "topic_2640",
+          "subject": "Addressing the Diminishing Block Subsidy",
+          "category": "mining",
+          "label": "Mining Protocol",
+          "reply_count": 2,
+          "unique_authors": 2,
+          "score": 4,
+          "last_post": "2026-06-29",
+          "source": "delving",
+          "link": "https://delvingbitcoin.org/t/addressing-the-diminishing-block-subsidy/2640/18",
+          "snippet": "Part of the issue in 2026 is that nobody has a good threat model.\nEven if the number was super low (image a universe where tomorrow the\u2026"
+        },
+        {
+          "thread_id": "topic_2603",
+          "subject": "Public key recovery for EC leaves in P2MR (BIP-360)",
+          "category": "quantum",
+          "label": "Quantum Resistance",
+          "reply_count": 2,
+          "unique_authors": 2,
+          "score": 4,
+          "last_post": "2026-07-03",
+          "source": "delving",
+          "link": "https://delvingbitcoin.org/t/public-key-recovery-for-ec-leaves-in-p2mr-bip-360/2603/23",
+          "snippet": "nan"
+        },
+        {
+          "thread_id": "topic_1409",
+          "subject": "Emulating OP_RAND",
+          "category": "lightning",
+          "label": "Lightning / L2",
+          "reply_count": 2,
+          "unique_authors": 1,
+          "score": 2,
+          "last_post": "2026-07-03",
+          "source": "delving",
+          "link": "https://delvingbitcoin.org/t/emulating-op-rand/1409/15",
+          "snippet": "nan"
+        },
+        {
+          "thread_id": "topic_2158",
+          "subject": "SHRINCS: 324-byte stateful post-quantum signatures with static backups",
+          "category": "quantum",
+          "label": "Quantum Resistance",
+          "reply_count": 1,
+          "unique_authors": 2,
+          "score": 2,
+          "last_post": "2026-07-01",
+          "source": "delving",
+          "link": "https://delvingbitcoin.org/t/shrincs-324-byte-stateful-post-quantum-signatures-with-static-backups/2158/22",
+          "snippet": "A small modification to the original SHRINCS scheme improves the user experience of losing state and initializing new signing devices:\u2026"
+        },
+        {
+          "thread_id": "<002f2395-7d5d-4cb6-852c-e991aa1f0eb3@app.fastmail.com>",
+          "subject": "Giving teeth to expected EC disabling: P2XX(-T)(-ML)",
+          "category": "soft-fork-activation",
+          "label": "Soft Fork Activation",
+          "reply_count": 1,
+          "unique_authors": 1,
+          "score": 1,
+          "last_post": "2026-07-05",
+          "source": "mailing_list",
+          "link": "https://gnusha.org/pi/bitcoindev/CALZpt+FMHG3yoOCXPfMhS=KFF9bn+rCi9NL836GDRp1CKTBXRA@mail.gmail.com",
+          "snippet": "nan"
+        },
+        {
+          "thread_id": "topic_2360",
+          "subject": "BIP-110 update: v0.4.1 release and implementation submitted to Bitcoin Core",
+          "category": "spam-filtering",
+          "label": "Spam Filtering",
+          "reply_count": 1,
+          "unique_authors": 1,
+          "score": 1,
+          "last_post": "2026-07-04",
+          "source": "delving",
+          "link": "https://delvingbitcoin.org/t/bip-110-update-v0-4-1-release-and-implementation-submitted-to-bitcoin-core/2360/18",
+          "snippet": "Some of my replies were deleted from this thread. Does anyone know how to contact the forum moderators in order to restore them?\nDeleted\u2026"
+        }
+      ],
+      "top_bips": [
+        {
+          "bip_id": "360",
+          "title": "Pay-to-Merkle-Root (P2MR)",
+          "mentions": 3
+        },
+        {
+          "bip_id": "340",
+          "title": "Schnorr Signatures for secp256k1",
+          "mentions": 2
+        },
+        {
+          "bip_id": "110",
+          "title": "Reduced Data Temporary Softfork",
+          "mentions": 2
+        },
+        {
+          "bip_id": "32",
+          "title": "Hierarchical Deterministic Wallets",
+          "mentions": 2
+        },
+        {
+          "bip_id": "39",
+          "title": "Mnemonic code for generating deterministic keys",
+          "mentions": 2
+        },
+        {
+          "bip_id": "441",
+          "title": "Restoration of disabled script (Tapleaf 0xC2)",
+          "mentions": 1
+        }
+      ],
+      "top_voices": [
+        {
+          "name": "josh",
+          "uuid": "auto_josh",
+          "posts": 9
+        },
+        {
+          "name": "MrHash",
+          "uuid": "auto_mrhash",
+          "posts": 8
+        },
+        {
+          "name": "Anthony Towns",
+          "uuid": "can_anthony_towns",
+          "posts": 5
+        },
+        {
+          "name": "Gregory Sanders",
+          "uuid": "can_greg_sanders",
+          "posts": 4
+        },
+        {
+          "name": "fanquake",
+          "uuid": "can_michael_ford",
+          "posts": 4
+        },
+        {
+          "name": "Murch",
+          "uuid": "can_mark_erhardt",
+          "posts": 4
+        },
+        {
+          "name": "Adam Gibson",
+          "uuid": "can_adam_gibson",
+          "posts": 4
+        },
+        {
+          "name": "Pieter Wuille",
+          "uuid": "can_pieter_wuille",
+          "posts": 3
+        }
+      ],
+      "source_pct": {
+        "delving": 86.4,
+        "mailing_list": 13.6
+      },
+      "source_counts": {
+        "delving": 51,
+        "mailing_list": 8
+      },
+      "mailing_list_stale": false,
+      "mailing_list_days_since": null
+    },
     "30d": {
       "window_days": 30,
       "total_messages": 279,
@@ -32,7 +320,7 @@
           "threads": 10,
           "voices": 15,
           "share": 15.0,
-          "trend": "rising"
+          "trend": "fading"
         },
         {
           "category": "mining",
@@ -41,7 +329,7 @@
           "threads": 9,
           "voices": 17,
           "share": 13.0,
-          "trend": "rising"
+          "trend": "steady"
         },
         {
           "category": "lightning",
@@ -50,7 +338,7 @@
           "threads": 2,
           "voices": 5,
           "share": 5.9,
-          "trend": "steady"
+          "trend": "rising"
         },
         {
           "category": "scaling",
@@ -59,7 +347,7 @@
           "threads": 1,
           "voices": 4,
           "share": 4.3,
-          "trend": "new"
+          "trend": "fading"
         },
         {
           "category": "payment-protocol",
@@ -68,7 +356,7 @@
           "threads": 1,
           "voices": 6,
           "share": 4.3,
-          "trend": "new"
+          "trend": "fading"
         },
         {
           "category": "taproot",
@@ -86,7 +374,7 @@
           "threads": 6,
           "voices": 4,
           "share": 3.5,
-          "trend": "new"
+          "trend": "fading"
         },
         {
           "category": "consensus-cleanup",

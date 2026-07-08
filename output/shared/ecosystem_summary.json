@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-06T08:47:50.387485",
+  "generated_at": "2026-07-05T15:29:45.656497",
   "groups": {
     "committers": 1240,
     "reviewers": 5126,
@@ -48,17 +48,23 @@
   },
   "onboarding": {
     "new_coders_90d": 22,
-    "new_discussants_90d": 95,
+    "new_coders_7d": 0,
+    "new_discussants_90d": 98,
+    "new_discussants_7d": 3,
     "window_days": 90
   },
   "prs": {
     "total_merged": 17867,
     "merged_30d": 114,
-    "merged_prev_30d": 111
+    "merged_prev_30d": 115,
+    "merged_7d": 24,
+    "merged_prev_7d": 23
   },
   "commits": {
-    "commits_30d": 527,
-    "commits_prev_30d": 645
+    "commits_30d": 529,
+    "commits_prev_30d": 659,
+    "commits_7d": 68,
+    "commits_prev_7d": 167
   },
   "bips": {
     "total": 210,
@@ -69,20 +75,20 @@
       {
         "category": "quantum",
         "label": "Quantum",
-        "count": 178,
-        "share": 24.9
+        "count": 179,
+        "share": 24.6
       },
       {
         "category": "utxo-sync",
         "label": "Utxo Sync",
-        "count": 67,
-        "share": 9.4
+        "count": 68,
+        "share": 9.3
       },
       {
         "category": "testing-devtools",
         "label": "Testing Devtools",
-        "count": 59,
-        "share": 8.2
+        "count": 63,
+        "share": 8.7
       }
     ],
     "top_bips": [

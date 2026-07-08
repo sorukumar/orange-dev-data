@@ -153,11 +153,17 @@ def process_releases():
     
     for milestone, group in grouped:
         merged_dates = group['merged_at'].dropna()
+        
+        # Check if official release notes exist for this milestone in the source repo
+        clean_ms = str(milestone).lstrip('v')
+        notes_path_1 = f"data/sources/bitcoin/doc/release-notes/release-notes-{clean_ms}.md"
+        notes_path_2 = f"data/sources/bitcoin/doc/release-notes/release-notes-{clean_ms}.0.md"
+        is_released = os.path.exists(notes_path_1) or os.path.exists(notes_path_2)
+        
         if not merged_dates.empty:
             max_date = pd.to_datetime(merged_dates, utc=True).max()
             last_active_date = max_date.strftime("%b %d, %Y")
-            open_prs = group[group['closed_at'].isna()]
-            status = "released" if open_prs.empty else "upcoming"
+            status = "released" if is_released else "upcoming"
         else:
             last_active_date = "TBD"
             status = "upcoming"
