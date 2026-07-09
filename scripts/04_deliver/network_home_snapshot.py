@@ -489,7 +489,7 @@ def generate_snapshot():
                 'items': reviewer_items,
                 'aliases_collapsed': aliases_collapsed,
             },
-            'recent_bips': {
+            'recent_bips_30d': {
                 'window_days': WINDOW_DAYS,
                 'definition': 'Most-mentioned BIPs in current 30-day discussion window versus previous 30-day baseline.',
                 'items': recent_bips,
