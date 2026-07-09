@@ -33,6 +33,12 @@ The most critical pull requests merged into Bitcoin Core.
 
 **Technical Details:** This PR introduces a new CI job that cross-compiles Bitcoin Core for OpenBSD using the Clang compiler. This addition ensures that the codebase correctly builds and functions on OpenBSD, a security-focused operating system, and verifies compatibility with alternative compiler toolchains. Regular testing against diverse platforms and compilers like this helps catch platform-specific bugs and ensures broader software portability and resilience.
 
+#### [#35129: test: add fuzz test for private broadcast](https://github.com/bitcoin/bitcoin/pull/35129)
+**Author:** [@vasild](https://github.com/vasild)
+> We're expanding our sophisticated bug detection methods to enhance the reliability and security of private transaction broadcasting features.
+
+**Technical Details:** This PR introduces a new fuzz test specifically targeting the 'private broadcast' mechanism, likely related to transaction relay privacy protocols such as Dandelion++. Fuzzing randomly injects malformed or unexpected data inputs to uncover edge cases, vulnerabilities, or crashes in the implementation. This test aims to bolster the robustness and security of sensitive privacy-related network interactions, making the privacy features more resilient against attack or malfunction.
+
 #### [#35510: test: SOCKS5 proxy: expect that connection may be reset during SOCKS5 handshake or data forwarding](https://github.com/bitcoin/bitcoin/pull/35510)
 **Author:** [@vasild](https://github.com/vasild)
 > Our software is now smarter about handling temporary network issues when using SOCKS5 proxies, making your connections more resilient and reliable.
@@ -44,12 +50,6 @@ The most critical pull requests merged into Bitcoin Core.
 > We've updated a core software component, Boost, to its latest version, bringing performance improvements, security fixes, and greater stability to Bitcoin Core.
 
 **Technical Details:** This PR updates the Boost library dependency to version 1.91.0-1. Boost is a collection of peer-reviewed portable C++ source libraries used extensively within Bitcoin Core. Upgrading this dependency ensures that the project benefits from the latest upstream bug fixes, security patches, performance enhancements, and new functionalities. This is a crucial maintenance task that contributes to the overall stability, security, and long-term maintainability of the codebase.
-
-#### [#35129: test: add fuzz test for private broadcast](https://github.com/bitcoin/bitcoin/pull/35129)
-**Author:** [@vasild](https://github.com/vasild)
-> We're expanding our sophisticated bug detection methods to enhance the reliability and security of private transaction broadcasting features.
-
-**Technical Details:** This PR introduces a new fuzz test specifically targeting the 'private broadcast' mechanism, likely related to transaction relay privacy protocols such as Dandelion++. Fuzzing randomly injects malformed or unexpected data inputs to uncover edge cases, vulnerabilities, or crashes in the implementation. This test aims to bolster the robustness and security of sensitive privacy-related network interactions, making the privacy features more resilient against attack or malfunction.
 
 #### [#35603: build: QRencode cleanups](https://github.com/bitcoin/bitcoin/pull/35603)
 **Author:** [@hebasto](https://github.com/hebasto)

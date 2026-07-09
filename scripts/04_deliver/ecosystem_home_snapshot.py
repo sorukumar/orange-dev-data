@@ -18,7 +18,7 @@ REVIEW_EVENTS_PATHS = [
 SOCIAL_COMBINED_PATH = 'data/raw/social_combined.parquet'
 SOCIAL_THREADS_PATH = 'data/enriched/social_threads.parquet'
 RELEASES_PATH = 'output/tracker/releases.json'
-OUTPUT_PATH = 'output/shared/network_home_snapshot.json'
+OUTPUT_PATH = 'output/shared/ecosystem_home_snapshot.json'
 
 WINDOW_DAYS = 30
 BOT_PATTERNS = (

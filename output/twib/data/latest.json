@@ -3,7 +3,7 @@
   "end_date": "2026-07-05",
   "stats": {
     "total_merged": 21,
-    "total_reviews": 441,
+    "total_reviews": 438,
     "total_threads": 26,
     "new_contributors": 0
   },
@@ -66,6 +66,17 @@
             "importance": 27
           },
           {
+            "number": 35129,
+            "title": "test: add fuzz test for private broadcast",
+            "author": {
+              "username": "vasild",
+              "uuid": "can_vasil_dimov"
+            },
+            "summary": "We're expanding our sophisticated bug detection methods to enhance the reliability and security of private transaction broadcasting features.",
+            "technical_summary": "This PR introduces a new fuzz test specifically targeting the 'private broadcast' mechanism, likely related to transaction relay privacy protocols such as Dandelion++. Fuzzing randomly injects malformed or unexpected data inputs to uncover edge cases, vulnerabilities, or crashes in the implementation. This test aims to bolster the robustness and security of sensitive privacy-related network interactions, making the privacy features more resilient against attack or malfunction.",
+            "importance": 19
+          },
+          {
             "number": 35510,
             "title": "test: SOCKS5 proxy: expect that connection may be reset during SOCKS5 handshake or data forwarding",
             "author": {
@@ -85,17 +96,6 @@
             },
             "summary": "We've updated a core software component, Boost, to its latest version, bringing performance improvements, security fixes, and greater stability to Bitcoin Core.",
             "technical_summary": "This PR updates the Boost library dependency to version 1.91.0-1. Boost is a collection of peer-reviewed portable C++ source libraries used extensively within Bitcoin Core. Upgrading this dependency ensures that the project benefits from the latest upstream bug fixes, security patches, performance enhancements, and new functionalities. This is a crucial maintenance task that contributes to the overall stability, security, and long-term maintainability of the codebase.",
-            "importance": 18
-          },
-          {
-            "number": 35129,
-            "title": "test: add fuzz test for private broadcast",
-            "author": {
-              "username": "vasild",
-              "uuid": "can_vasil_dimov"
-            },
-            "summary": "We're expanding our sophisticated bug detection methods to enhance the reliability and security of private transaction broadcasting features.",
-            "technical_summary": "This PR introduces a new fuzz test specifically targeting the 'private broadcast' mechanism, likely related to transaction relay privacy protocols such as Dandelion++. Fuzzing randomly injects malformed or unexpected data inputs to uncover edge cases, vulnerabilities, or crashes in the implementation. This test aims to bolster the robustness and security of sensitive privacy-related network interactions, making the privacy features more resilient against attack or malfunction.",
             "importance": 18
           },
           {
@@ -680,7 +680,7 @@
       },
       {
         "username": "w0xlt",
-        "uuid": "auto_woltx"
+        "uuid": "auto_w0xlt"
       },
       {
         "username": "willcl-ark",

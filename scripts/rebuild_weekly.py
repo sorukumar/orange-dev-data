@@ -335,7 +335,7 @@ def main():
     run("python3 scripts/04_deliver/ui_artifacts.py", cwd=root_dir)
     run("python3 scripts/04_deliver/ecosystem_summary.py", cwd=root_dir)
     run("python3 scripts/04_deliver/discussions_pulse.py", cwd=root_dir)
-    run("python3 scripts/04_deliver/network_home_snapshot.py", cwd=root_dir)
+    run("python3 scripts/04_deliver/ecosystem_home_snapshot.py", cwd=root_dir)
     run("python3 scripts/04_deliver/self_merge_receipts.py", cwd=root_dir)
     run("python3 scripts/04_deliver/twib_artifacts.py", cwd=root_dir)
     count_step("FINAL — ecosystem summary", root_dir)

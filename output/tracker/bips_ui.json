@@ -37,8 +37,8 @@
     "title": "Schnorr Signatures for secp256k1",
     "status": "Deployed",
     "theme": "Other",
-    "maturity_score": 0.43,
-    "social_mention_count": 21,
+    "maturity_score": 0.44,
+    "social_mention_count": 24,
     "revision_count": 198,
     "code_mention_count": 58,
     "authors": "Pieter Wuille, Jonas Nick, Tim Ruffing"
@@ -99,17 +99,6 @@
     "authors": "Amir Taaki"
   },
   {
-    "bip_id": "141",
-    "title": "Segregated Witness (Consensus layer)",
-    "status": "Deployed",
-    "theme": "Consensus & Soft Forks",
-    "maturity_score": 0.19,
-    "social_mention_count": 32,
-    "revision_count": 70,
-    "code_mention_count": 42,
-    "authors": "Eric Lombrozo, Johnson Lau, Pieter Wuille"
-  },
-  {
     "bip_id": "75",
     "title": "Out of Band Address Exchange using Payment Protocol Encryption",
     "status": "Deployed",
@@ -121,6 +110,17 @@
     "authors": "Justin Newton, Matt David, Aaron Voisine, James MacWhyte"
   },
   {
+    "bip_id": "141",
+    "title": "Segregated Witness (Consensus layer)",
+    "status": "Deployed",
+    "theme": "Consensus & Soft Forks",
+    "maturity_score": 0.19,
+    "social_mention_count": 32,
+    "revision_count": 70,
+    "code_mention_count": 42,
+    "authors": "Eric Lombrozo, Johnson Lau, Pieter Wuille"
+  },
+  {
     "bip_id": "158",
     "title": "Compact Block Filters for Light Clients",
     "status": "Deployed",
@@ -130,6 +130,28 @@
     "revision_count": 30,
     "code_mention_count": 24,
     "authors": "Olaoluwa Osuntokun, Alex Akselrod"
+  },
+  {
+    "bip_id": "21",
+    "title": "URI Scheme",
+    "status": "Closed",
+    "theme": "Other",
+    "maturity_score": 0.18,
+    "social_mention_count": 66,
+    "revision_count": 40,
+    "code_mention_count": 32,
+    "authors": "Nils Schneider, Matt Corallo"
+  },
+  {
+    "bip_id": "3",
+    "title": "Updated BIP Process",
+    "status": "Deployed",
+    "theme": "Other",
+    "maturity_score": 0.18,
+    "social_mention_count": 51,
+    "revision_count": 52,
+    "code_mention_count": 0,
+    "authors": "Murch"
   },
   {
     "bip_id": "342",
@@ -154,26 +176,15 @@
     "authors": "Jonas Schnelli"
   },
   {
-    "bip_id": "3",
-    "title": "Updated BIP Process",
-    "status": "Deployed",
-    "theme": "Other",
-    "maturity_score": 0.18,
-    "social_mention_count": 51,
-    "revision_count": 52,
+    "bip_id": "360",
+    "title": "Pay-to-Merkle-Root (P2MR)",
+    "status": "Draft",
+    "theme": "Consensus & Soft Forks",
+    "maturity_score": 0.17,
+    "social_mention_count": 107,
+    "revision_count": 3,
     "code_mention_count": 0,
-    "authors": "Murch"
-  },
-  {
-    "bip_id": "21",
-    "title": "URI Scheme",
-    "status": "Closed",
-    "theme": "Other",
-    "maturity_score": 0.18,
-    "social_mention_count": 66,
-    "revision_count": 40,
-    "code_mention_count": 32,
-    "authors": "Nils Schneider, Matt Corallo"
+    "authors": "Hunter Beast, Ethan Heilman, Isabel Foxen Duke"
   },
   {
     "bip_id": "352",
@@ -196,17 +207,6 @@
     "revision_count": 18,
     "code_mention_count": 134,
     "authors": "David A. Harding, Peter Todd"
-  },
-  {
-    "bip_id": "360",
-    "title": "Pay-to-Merkle-Root (P2MR)",
-    "status": "Draft",
-    "theme": "Consensus & Soft Forks",
-    "maturity_score": 0.16,
-    "social_mention_count": 100,
-    "revision_count": 3,
-    "code_mention_count": 0,
-    "authors": "Hunter Beast, Ethan Heilman, Isabel Foxen Duke"
   },
   {
     "bip_id": "148",
@@ -253,17 +253,6 @@
     "authors": "Pieter Wuille, Peter Todd, Greg Maxwell, Rusty Russell"
   },
   {
-    "bip_id": "347",
-    "title": "OP_CAT in Tapscript",
-    "status": "Complete",
-    "theme": "Consensus & Soft Forks",
-    "maturity_score": 0.13,
-    "social_mention_count": 0,
-    "revision_count": 62,
-    "code_mention_count": 0,
-    "authors": "Ethan Heilman, Armin Sabouri"
-  },
-  {
     "bip_id": "48",
     "title": "Multi-Script Hierarchy for Multi-Sig Wallets",
     "status": "Deployed",
@@ -273,6 +262,17 @@
     "revision_count": 59,
     "code_mention_count": 2,
     "authors": "Fontaine"
+  },
+  {
+    "bip_id": "347",
+    "title": "OP_CAT in Tapscript",
+    "status": "Complete",
+    "theme": "Consensus & Soft Forks",
+    "maturity_score": 0.13,
+    "social_mention_count": 0,
+    "revision_count": 62,
+    "code_mention_count": 0,
+    "authors": "Ethan Heilman, Armin Sabouri"
   },
   {
     "bip_id": "78",
@@ -303,7 +303,7 @@
     "theme": "Consensus & Soft Forks",
     "maturity_score": 0.12,
     "social_mention_count": 42,
-    "revision_count": 26,
+    "revision_count": 28,
     "code_mention_count": 12,
     "authors": "Antoine Poinsot, Matt Corallo"
   },
@@ -335,7 +335,7 @@
     "status": "Draft",
     "theme": "Other",
     "maturity_score": 0.12,
-    "social_mention_count": 18,
+    "social_mention_count": 19,
     "revision_count": 44,
     "code_mention_count": 0,
     "authors": "Shaolin Fry, Luke Dashjr"
@@ -412,7 +412,7 @@
     "status": "Draft",
     "theme": "Consensus & Soft Forks",
     "maturity_score": 0.1,
-    "social_mention_count": 13,
+    "social_mention_count": 14,
     "revision_count": 38,
     "code_mention_count": 0,
     "authors": "Paul Sztorc, CryptAxe"
@@ -469,7 +469,7 @@
     "maturity_score": 0.09,
     "social_mention_count": 32,
     "revision_count": 19,
-    "code_mention_count": 54,
+    "code_mention_count": 56,
     "authors": "Pieter Wuille"
   },
   {
@@ -612,7 +612,7 @@
     "maturity_score": 0.07,
     "social_mention_count": 1,
     "revision_count": 33,
-    "code_mention_count": 50,
+    "code_mention_count": 54,
     "authors": "Matt Corallo"
   },
   {
