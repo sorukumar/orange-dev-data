@@ -26,6 +26,23 @@ def load_cache(path):
                 return {}
     return {}
 
+import subprocess
+def get_git_commit_date(repo_path, file_path):
+    try:
+        result = subprocess.run(
+            ['git', 'log', '-1', '--format=%cI', file_path],
+            cwd=repo_path,
+            capture_output=True,
+            text=True,
+            check=True
+        )
+        date_str = result.stdout.strip()
+        if date_str:
+            return pd.to_datetime(date_str, utc=True)
+    except Exception as e:
+        print(f"Error getting git date for {file_path}: {e}")
+    return None
+
 def is_high_signal(labels_str, is_recent):
     if pd.isna(labels_str):
         return False
@@ -160,12 +177,25 @@ def process_releases():
         notes_path_2 = f"data/sources/bitcoin/doc/release-notes/release-notes-{clean_ms}.0.md"
         is_released = os.path.exists(notes_path_1) or os.path.exists(notes_path_2)
         
-        if not merged_dates.empty:
-            max_date = pd.to_datetime(merged_dates, utc=True).max()
-            last_active_date = max_date.strftime("%b %d, %Y")
-            status = "released" if is_released else "upcoming"
+        if is_released:
+            actual_notes_path = notes_path_1 if os.path.exists(notes_path_1) else notes_path_2
+            rel_path = os.path.relpath(actual_notes_path, "data/sources/bitcoin")
+            git_date = get_git_commit_date("data/sources/bitcoin", rel_path)
+            
+            if pd.notna(git_date):
+                last_active_date = git_date.strftime("%b %d, %Y")
+            elif not merged_dates.empty:
+                max_date = pd.to_datetime(merged_dates, utc=True).max()
+                last_active_date = max_date.strftime("%b %d, %Y")
+            else:
+                last_active_date = "TBD"
+            status = "released"
         else:
-            last_active_date = "TBD"
+            if not merged_dates.empty:
+                max_date = pd.to_datetime(merged_dates, utc=True).max()
+                last_active_date = max_date.strftime("%b %d, %Y")
+            else:
+                last_active_date = "TBD"
             status = "upcoming"
              
         release_obj = {

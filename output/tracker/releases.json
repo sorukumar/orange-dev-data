@@ -2,10 +2,10 @@
   {
     "version": "32.0",
     "status": "upcoming",
-    "last_active_date": "Jul 04, 2026",
+    "last_active_date": "Jul 08, 2026",
     "summary": "Release notes and changes for Bitcoin Core 32.0.",
     "release_summary": "This release implements significant architectural improvements, primarily through the reduction of external dependencies by integrating custom implementations for networking and signal handling. It enhances node robustness and security, notably concerning Tor proxy interactions and internal component stability. Additionally, new RPC methods were introduced to expand wallet functionality and facilitate advanced data export.",
-    "total_prs_in_release": 74,
+    "total_prs_in_release": 46,
     "highlights": [
       "**Networking:** Replaced the `libevent` library with Bitcoin Core's own HTTP and socket-handling implementation, significantly reducing external dependencies and improving control over networking components.",
       "**Wallet:** Introduced `exportwatchonlywallet` RPC to create read-only wallet copies, enhancing user privacy and security for monitoring setups.",
@@ -57,19 +57,18 @@
         "technical_summary": "The issue was an initialization-order fiasco where certain RPC data structures were accessed before full construction. This PR resolves it by implementing lazy initialization for dependencies of `decodepsbt_inputs`. Components are now initialized on first use rather than through static or early global means, ensuring all necessary resources are ready when the function is called and preventing uninitialized memory access."
       },
       {
-        "pr": "#32489",
-        "description": "wallet: Add `exportwatchonlywallet` RPC to export a watchonly version of a wallet",
-        "author": "achow101",
-        "author_uuid": "can_ava_chow",
-        "author_name": "Ava Chow",
-        "merge_time_days": 415,
+        "pr": "#32606",
+        "description": "p2p: Drop unsolicited CMPCTBLOCK from non-HB peer and when blocksonly",
+        "author": "davidgumberg",
+        "author_uuid": "can_vasil_dimov",
+        "author_name": "Vasil Dimov",
+        "merge_time_days": 409,
         "categories": [
-          "Wallet & Keys",
-          "Ecosystem"
+          "P2P Network"
         ],
-        "impact_category": "Wallet & User Tools",
-        "public_summary": "This PR introduces a new RPC command, `exportwatchonlywallet`, allowing users to create a read-only copy of their wallet for monitoring purposes. This enhances user privacy and security by enabling watch-only setups without exposing private keys.",
-        "technical_summary": "The `exportwatchonlywallet` RPC function is added, which iterates through the keys and scripts of an existing wallet. For each entry, it extracts the corresponding public keys, scriptPubKeys, and derivation paths, then uses these to construct a new, watch-only wallet database. This new wallet contains all address and script information necessary for monitoring transactions but explicitly excludes all private keys. The implementation involves serializing this watch-only subset of the wallet data into a new Berkeley DB instance, ensuring that sensitive signing material is never transferred."
+        "impact_category": "Network & Privacy",
+        "public_summary": "This Pull Request enhances network efficiency and security by dropping unsolicited `CMPCTBLOCK` messages from peers that are not designated as high-bandwidth (HB). This prevents potential DoS attacks and ensures efficient block propagation.",
+        "technical_summary": "The P2P message handling logic is updated to check the 'high-bandwidth' status of a peer before processing incoming `CMPCTBLOCK` messages. If a peer has not been explicitly negotiated or identified as an HB peer (e.g., through feature bits or observed bandwidth characteristics), any `CMPCTBLOCK` message it sends is immediately discarded. This policy prevents non-trusted or misbehaving peers from flooding a node with compact block announcements, focusing resources on legitimate, high-speed block propagation channels."
       },
       {
         "pr": "#35182",
@@ -114,18 +113,18 @@
         "technical_summary": "The `decodepsbt` RPC decodes Partially Signed Bitcoin Transactions. This PR introduces strict type checking on the decoded fields before they are returned. It modifies the RPC result generation logic to validate that each field conforms to its expected data type. If an unexpected type is encountered, an RPC error is raised instead of allowing a malformed value to propagate, preventing client-side issues."
       },
       {
-        "pr": "#34959",
-        "description": "wallet: Enforce BDB btree levels and overflow item sizes",
-        "author": "achow101",
-        "author_uuid": "can_ava_chow",
-        "author_name": "Ava Chow",
-        "merge_time_days": 95,
+        "pr": "#34997",
+        "description": "p2p: Don't participate in addr relay with feelers",
+        "author": "danielabrozzoni",
+        "author_uuid": "auto_daniela_brozzoni",
+        "author_name": "Daniela Brozzoni",
+        "merge_time_days": 96,
         "categories": [
-          "Wallet & Keys"
+          "P2P Network"
         ],
-        "impact_category": "Wallet & User Tools",
-        "public_summary": "This PR improves wallet database robustness by enforcing specific Berkeley DB (BDB) btree levels and overflow item sizes. This helps prevent database corruption and ensures more stable wallet operation.",
-        "technical_summary": "This change introduces explicit configuration for Berkeley DB's Btree levels and overflow page sizes within the wallet's database environment. By setting `DB_MAX_BTREE_PAGES` and `DB_MAX_TXN_PAGES`, it prevents potential issues arising from excessively deep Btrees or over-fragmented overflow pages, which can lead to performance degradation or corruption. This ensures more predictable and stable on-disk storage characteristics for wallet data, particularly for large wallets or those experiencing many transactions."
+        "impact_category": "Maintenance & Tech Debt",
+        "public_summary": "p2p: Don't participate in addr relay with feelers",
+        "technical_summary": "Technical details pending."
       },
       {
         "pr": "#31560",
@@ -154,30 +153,16 @@
         "impact_category": "Wallet & User Tools",
         "public_summary": "This PR removes the 'experimental' warning from the `send` and `sendall` wallet RPC commands. This change indicates that these core transaction functions are now considered stable and fully reliable for general use.",
         "technical_summary": "The change involves modifying the specific code paths within the wallet RPC handler responsible for appending the 'experimental' flag to the `send` and `sendall` command descriptions or output. By removing this flag, the RPC interface for these functions will no longer display the warning to users. This signals that the features have undergone sufficient testing and maturity to be deemed production-ready within the Bitcoin Core wallet."
-      },
-      {
-        "pr": "#35266",
-        "description": "rpc, wallet: add an option to not load the wallet after migrating",
-        "author": "polespinasa",
-        "author_uuid": "auto_pol_espinasa",
-        "author_name": "Pol Espinasa",
-        "merge_time_days": 43,
-        "categories": [
-          "Wallet & Keys"
-        ],
-        "impact_category": "Wallet & User Tools",
-        "public_summary": "This PR adds an option to prevent the automatic loading of a wallet after it has been migrated. This gives users greater control over wallet activation, enhancing flexibility and privacy.",
-        "technical_summary": "Previously, wallet migrations would automatically load the new wallet. This change introduces a configuration option that, when enabled, prevents the wallet management system from automatically loading a wallet after a successful migration. This involves modifying the wallet's post-migration startup logic to check for this new setting before attempting to load the wallet, ensuring the node operator has explicit control over wallet availability."
       }
     ]
   },
   {
     "version": "31.1",
-    "status": "upcoming",
-    "last_active_date": "Jun 04, 2026",
+    "status": "released",
+    "last_active_date": "Jul 06, 2026",
     "summary": "Release notes and changes for Bitcoin Core 31.1.",
     "release_summary": "This release primarily focuses on enhancing P2P network privacy and improving connectivity for nodes using proxy configurations. It also includes a significant correction to transaction data management during validation, contributing to overall node stability and correctness.",
-    "total_prs_in_release": 7,
+    "total_prs_in_release": 9,
     "highlights": [
       "**P2P Privacy:** Private broadcast connections no longer modify the node's public address manager, preventing the inadvertent sharing of sensitive peer details.",
       "**P2P:** Overridden proxy settings are now correctly utilized when establishing reconnections between different peer protocol versions.",
@@ -204,7 +189,7 @@
   {
     "version": "31.0",
     "status": "released",
-    "last_active_date": "Mar 10, 2026",
+    "last_active_date": "Apr 22, 2026",
     "summary": "Release notes and changes for Bitcoin Core 31.0.",
     "release_summary": "The 31.0 release of Bitcoin Core introduces a major reimplementation of the mempool with a new \"cluster mempool\" design, enhancing transaction management and selection. Key architectural changes include the introduction of a stable C language API for the kernel and new private broadcast RPCs for enhanced P2P privacy. Node performance is improved with an increased default database cache, and ASMap data is now embedded within the binary for improved peer selection.",
     "total_prs_in_release": 107,
@@ -308,8 +293,8 @@
         "author_name": "Pol Espinasa",
         "merge_time_days": 330,
         "categories": [
-          "Wallet & Keys",
-          "Core Infrastructure"
+          "Core Infrastructure",
+          "Wallet & Keys"
         ],
         "impact_category": "Wallet & User Tools",
         "public_summary": "This PR removes outdated and potentially confusing RPC commands (`settxfee`, `paytxfee`) from the wallet. This streamlines the interface, encouraging the use of more modern and robust fee control mechanisms.",
@@ -421,8 +406,8 @@
         "author_name": "Suhas Daftuar",
         "merge_time_days": 41,
         "categories": [
-          "Mempool & Fees",
-          "Consensus"
+          "Consensus",
+          "Mempool & Fees"
         ],
         "impact_category": "Strategic Initiatives",
         "public_summary": "This foundational PR introduces the 'Cluster mempool' feature, a significant architectural change to how Bitcoin Core manages unconfirmed transactions. It aims to improve transaction propagation, fee estimation, and overall mempool efficiency by grouping related transactions.",
@@ -433,7 +418,7 @@
   {
     "version": "30.2",
     "status": "released",
-    "last_active_date": "Jan 07, 2026",
+    "last_active_date": "Jan 10, 2026",
     "summary": "Release notes and changes for Bitcoin Core 30.2.",
     "release_summary": "This release of Bitcoin Core v30.2 primarily provides essential bug fixes and minor improvements to enhance stability and reliability. Key updates include resolutions for specific wallet migration and import failures, alongside an improvement to the node's graceful shutdown process.",
     "total_prs_in_release": 6,
@@ -463,7 +448,7 @@
   {
     "version": "30.1",
     "status": "released",
-    "last_active_date": "Dec 04, 2025",
+    "last_active_date": "Jan 02, 2026",
     "summary": "Release notes and changes for Bitcoin Core 30.1.",
     "release_summary": "Bitcoin Core version 30.1 is a maintenance release focusing on stability and reliability, incorporating several bug fixes and minor improvements. Notable changes include refined wallet transaction handling, simplification of multi-process operation, and enhancements to build determinism.",
     "total_prs_in_release": 9,
@@ -494,7 +479,7 @@
   {
     "version": "30.0",
     "status": "released",
-    "last_active_date": "Sep 19, 2025",
+    "last_active_date": "Oct 11, 2025",
     "summary": "Release notes and changes for Bitcoin Core 30.0.",
     "release_summary": "This release features significant architectural modernization, including the complete removal of the legacy wallet and its Berkeley DB dependency. It also includes key network improvements such as enabling NAT-PMP by default and reintroducing external signer support for Windows. Policy adjustments, like lowering default minimum transaction fees, further refine network behavior and accessibility.",
     "total_prs_in_release": 91,
@@ -627,8 +612,8 @@
         "author_name": "Hennadii Stepanov",
         "merge_time_days": 400,
         "categories": [
-          "Wallet & Keys",
-          "Core Infrastructure"
+          "Core Infrastructure",
+          "Wallet & Keys"
         ],
         "impact_category": "Wallet & User Tools",
         "public_summary": "This PR restores crucial support for external hardware signers on the Windows operating system. This is a significant enhancement for users on Windows who rely on hardware wallets for enhanced security.",
@@ -656,8 +641,8 @@
         "author_name": "Ishaana Misra",
         "merge_time_days": 42,
         "categories": [
-          "Wallet & Keys",
-          "Core Infrastructure"
+          "Core Infrastructure",
+          "Wallet & Keys"
         ],
         "impact_category": "Strategic Initiatives",
         "public_summary": "This PR adds comprehensive support for creating and managing v3 transactions within Bitcoin Core's wallet and via its RPC interface. This enables users to utilize the benefits of v3 transactions, such as package relay, improving transaction efficiency.",
@@ -769,8 +754,8 @@
         "author_name": "Gloria Zhao",
         "merge_time_days": 14,
         "categories": [
-          "Mempool & Fees",
-          "Ecosystem"
+          "Ecosystem",
+          "Mempool & Fees"
         ],
         "impact_category": "Network & Privacy",
         "public_summary": "This PR lowers the default minimum transaction fees for block inclusion, incremental relay, and minimum relay policies. This makes transactions cheaper to send and relay, improving transaction accessibility and network throughput during less congested times.",
@@ -865,10 +850,10 @@
   {
     "version": "29.4",
     "status": "upcoming",
-    "last_active_date": "Jun 19, 2026",
+    "last_active_date": "Jul 04, 2026",
     "summary": "Release notes and changes for Bitcoin Core 29.4.",
     "release_summary": "Bitcoin Core version 29.4 focuses on enhancing wallet capabilities, strengthening network security, and improving P2P node operations. This release introduces support for PSBTv2, refines key management, and includes critical fixes for network integrity and mempool reliability. Various backports from the development branch are also integrated, contributing to overall stability and security.",
-    "total_prs_in_release": 300,
+    "total_prs_in_release": 344,
     "highlights": [
       "**Wallet:** Implemented BIP 370 for Partially Signed Bitcoin Transactions (PSBTv2), enhancing capabilities for constructing complex transactions.",
       "**Network Security:** Fixed an integer overflow in the peer scoring mechanism, enhancing robustness against score manipulation.",
@@ -976,6 +961,21 @@
         "technical_summary": "Previously, if the wallet database directory lacked write permissions, attempting to open a wallet could lead to a crash due to unhandled exceptions during Berkeley DB initialization. This PR adds explicit error checking and exception handling around database environment creation (`wallet_bdb::OpenEnvironment`), ensuring that a more graceful error is returned rather than a crash, improving resilience when faced with file system permission issues."
       },
       {
+        "pr": "#32489",
+        "description": "wallet: Add `exportwatchonlywallet` RPC to export a watchonly version of a wallet",
+        "author": "achow101",
+        "author_uuid": "can_ava_chow",
+        "author_name": "Ava Chow",
+        "merge_time_days": 415,
+        "categories": [
+          "Ecosystem",
+          "Wallet & Keys"
+        ],
+        "impact_category": "Wallet & User Tools",
+        "public_summary": "This PR introduces a new RPC command, `exportwatchonlywallet`, allowing users to create a read-only copy of their wallet for monitoring purposes. This enhances user privacy and security by enabling watch-only setups without exposing private keys.",
+        "technical_summary": "The `exportwatchonlywallet` RPC function is added, which iterates through the keys and scripts of an existing wallet. For each entry, it extracts the corresponding public keys, scriptPubKeys, and derivation paths, then uses these to construct a new, watch-only wallet database. This new wallet contains all address and script information necessary for monitoring transactions but explicitly excludes all private keys. The implementation involves serializing this watch-only subset of the wallet data into a new Berkeley DB instance, ensuring that sensitive signing material is never transferred."
+      },
+      {
         "pr": "#35116",
         "description": "net: cleanup SOCKS5 auth logging",
         "author": "takeshikurosawaa",
@@ -1067,8 +1067,8 @@
         "author_name": "Ava Chow",
         "merge_time_days": 1896,
         "categories": [
-          "Wallet & Keys",
-          "Core Infrastructure"
+          "Core Infrastructure",
+          "Wallet & Keys"
         ],
         "impact_category": "Strategic Initiatives",
         "public_summary": "This PR introduces support for BIP 370, implementing PSBTv2, an upgraded version of Partially Signed Bitcoin Transactions. It significantly enhances the flexibility and capabilities for constructing complex transactions, making advanced use cases more accessible.",
@@ -1177,8 +1177,8 @@
         "pr": "#34451",
         "description": "rpc: fix race condition in gettxoutsetinfo",
         "author": "w0xlt",
-        "author_uuid": "auto_woltx",
-        "author_name": "woltx",
+        "author_uuid": "auto_w0xlt",
+        "author_name": "w0xlt",
         "merge_time_days": 48,
         "categories": [
           "Core Infrastructure"
@@ -1200,6 +1200,20 @@
         "impact_category": "Security & Consensus",
         "public_summary": "This PR strengthens the security of Bitcoin Core nodes running as Tor hidden services by enabling Proof-of-Work (PoW) defenses. This measure helps protect automatically created services from denial-of-service attacks.",
         "technical_summary": "This enhancement modifies the configuration generated by Bitcoin Core for automatically created Tor hidden services. It enables Tor's Proof-of-Work (PoW) defense mechanisms, such as `tor_pow_enabled`, within the service's `torrc` settings. This forces incoming connections to solve a minor computational puzzle, significantly increasing the cost for attackers attempting to flood the hidden service with connection requests and thereby mitigating low-resource denial-of-service attempts."
+      },
+      {
+        "pr": "#34959",
+        "description": "wallet: Enforce BDB btree levels and overflow item sizes",
+        "author": "achow101",
+        "author_uuid": "can_ava_chow",
+        "author_name": "Ava Chow",
+        "merge_time_days": 95,
+        "categories": [
+          "Wallet & Keys"
+        ],
+        "impact_category": "Wallet & User Tools",
+        "public_summary": "This PR improves wallet database robustness by enforcing specific Berkeley DB (BDB) btree levels and overflow item sizes. This helps prevent database corruption and ensures more stable wallet operation.",
+        "technical_summary": "This change introduces explicit configuration for Berkeley DB's Btree levels and overflow page sizes within the wallet's database environment. By setting `DB_MAX_BTREE_PAGES` and `DB_MAX_TXN_PAGES`, it prevents potential issues arising from excessively deep Btrees or over-fragmented overflow pages, which can lead to performance degradation or corruption. This ensures more predictable and stable on-disk storage characteristics for wallet data, particularly for large wallets or those experiencing many transactions."
       },
       {
         "pr": "#35519",
@@ -1371,6 +1385,20 @@
         "technical_summary": "When migrating legacy Berkeley DB (BDB) wallets using `wallet_bdb::TryCreateBLSWallet`, an additional check of the final page's Log Sequence Number (LSN) is now performed. This ensures the BDB file is fully flushed and valid, preventing incomplete migrations and potential data loss during the transition to new wallet database backends, improving the reliability of the upgrade path."
       },
       {
+        "pr": "#35266",
+        "description": "rpc, wallet: add an option to not load the wallet after migrating",
+        "author": "polespinasa",
+        "author_uuid": "auto_pol_espinasa",
+        "author_name": "Pol Espinasa",
+        "merge_time_days": 43,
+        "categories": [
+          "Wallet & Keys"
+        ],
+        "impact_category": "Wallet & User Tools",
+        "public_summary": "This PR adds an option to prevent the automatic loading of a wallet after it has been migrated. This gives users greater control over wallet activation, enhancing flexibility and privacy.",
+        "technical_summary": "Previously, wallet migrations would automatically load the new wallet. This change introduces a configuration option that, when enabled, prevents the wallet management system from automatically loading a wallet after a successful migration. This involves modifying the wallet's post-migration startup logic to check for this new setting before attempting to load the wallet, ensuring the node operator has explicit control over wallet availability."
+      },
+      {
         "pr": "#34379",
         "description": "wallet: fix `gethdkeys` RPC for descriptors with partial xprvs",
         "author": "rkrux",
@@ -1431,7 +1459,7 @@
   {
     "version": "29.0",
     "status": "released",
-    "last_active_date": "Mar 12, 2025",
+    "last_active_date": "Apr 15, 2025",
     "summary": "Release notes and changes for Bitcoin Core 29.0.",
     "release_summary": "Bitcoin Core 29.0 integrates `assumeutxo` for mainnet, enhancing initial node synchronization speed. This version also features an updated P2P networking stack with built-in NATPMP/PCP, removal of the `mempoolfullrbf` option, and the introduction of \"Ephemeral Dust\" outputs for transaction policy. The build system has been fully migrated to CMake, and release binaries are now codesigned, bolstering security and simplifying development.",
     "total_prs_in_release": 105,
@@ -1493,8 +1521,8 @@
         "author_name": "crackercracked",
         "merge_time_days": 1,
         "categories": [
-          "Mempool & Fees",
-          "Ecosystem"
+          "Ecosystem",
+          "Mempool & Fees"
         ],
         "impact_category": "Security & Consensus",
         "public_summary": "This PR corrects a critical bug in transaction validation by using the witness transaction ID (wtxid) instead of the traditional transaction ID (txid) when checking ephemeral spends. This ensures proper validation of transactions with segregated witness data.",
@@ -1551,9 +1579,9 @@
         "author_name": "Ava Chow",
         "merge_time_days": 1093,
         "categories": [
-          "Wallet & Keys",
+          "Script & Covenants",
           "Core Infrastructure",
-          "Script & Covenants"
+          "Wallet & Keys"
         ],
         "impact_category": "Wallet & User Tools",
         "public_summary": "This PR enhances Bitcoin Core's descriptor wallet functionality by allowing users to define both receiving and change addresses within a single descriptor string. This simplifies wallet configuration and management, making it easier to handle complex wallet setups.",
@@ -1634,7 +1662,7 @@
   {
     "version": "28.4",
     "status": "released",
-    "last_active_date": "Mar 12, 2026",
+    "last_active_date": "Mar 25, 2026",
     "summary": "Release notes and changes for Bitcoin Core 28.4.",
     "release_summary": "Bitcoin Core version 28.4 delivers important enhancements to network performance, wallet management, and RPC capabilities. It includes critical bug fixes for P2P stability and script validation, alongside a significant privacy feature for transaction broadcasting. Overall, this release improves the client's robustness, efficiency, and user experience.",
     "total_prs_in_release": 448,
@@ -1766,8 +1794,8 @@
         "author_name": "Luke Dashjr",
         "merge_time_days": 8,
         "categories": [
-          "Wallet & Keys",
-          "Ecosystem"
+          "Ecosystem",
+          "Wallet & Keys"
         ],
         "impact_category": "Maintenance & Tech Debt",
         "public_summary": "This PR resolves bugs that were introduced during a previous backport operation into the 29.x development series. It ensures intended fixes are properly integrated without introducing new regressions, maintaining the integrity of the 29.x branch.",
@@ -1918,7 +1946,7 @@
         "description": "net: Remove unused `local_socket_bytes` variable in `CConnman::GetAddresses()`",
         "author": "waketraindev",
         "author_uuid": "auto_waketraindev",
-        "author_name": "WakeTrainDev",
+        "author_name": "waketraindev",
         "merge_time_days": 0,
         "categories": [
           "P2P Network"
@@ -2259,8 +2287,8 @@
         "author_name": "MarcoFalke",
         "merge_time_days": 15,
         "categories": [
-          "Wallet & Keys",
-          "Core Infrastructure"
+          "Core Infrastructure",
+          "Wallet & Keys"
         ],
         "impact_category": "Wallet & User Tools",
         "public_summary": "This is a minor but important RPC API improvement that corrects the data type for the transaction version in the `sendall` command. It ensures the API is more accurate and consistent with the actual Bitcoin transaction data.",
@@ -2313,7 +2341,7 @@
   {
     "version": "28.3",
     "status": "released",
-    "last_active_date": "Oct 14, 2025",
+    "last_active_date": "Oct 16, 2025",
     "summary": "Release notes and changes for Bitcoin Core 28.3.",
     "release_summary": "Bitcoin Core 28.3 is a maintenance release that primarily focuses on stability and operational improvements. This version incorporates various bug fixes, adjusts mempool policy, and includes changes to default minimum feerates. Updates to P2P network behavior and the build system ensure continued reliability and performance.",
     "total_prs_in_release": 25,
@@ -2343,7 +2371,7 @@
   {
     "version": "28.1",
     "status": "released",
-    "last_active_date": "Dec 13, 2024",
+    "last_active_date": "Jan 13, 2025",
     "summary": "Release notes and changes for Bitcoin Core 28.1.",
     "release_summary": "Bitcoin Core version 28.1 integrates various bug fixes and performance improvements, having undergone multiple release candidate phases to ensure stability. This update includes an enhancement to P2P network configuration for users of Tor hidden services and a security hardening measure related to key data handling.",
     "total_prs_in_release": 3,
@@ -2372,7 +2400,7 @@
   {
     "version": "28.0",
     "status": "released",
-    "last_active_date": "Sep 16, 2024",
+    "last_active_date": "Oct 04, 2024",
     "summary": "Release notes and changes for Bitcoin Core 28.0.",
     "release_summary": "This release of Bitcoin Core includes performance enhancements for initial node synchronization, specifically improving AssumeUTXO and pruned node Initial Block Download. It also modifies transaction policy by enabling full Replace-by-Fee by default. Other changes include architectural updates, such as the removal of `libbitcoinconsensus`, and adjustments to RPC fee estimation.",
     "total_prs_in_release": 79,
@@ -3021,8 +3049,8 @@
         "pr": "#33231",
         "description": "net: Prevent node from binding to the same `CService`",
         "author": "w0xlt",
-        "author_uuid": "auto_woltx",
-        "author_name": "woltx",
+        "author_uuid": "auto_w0xlt",
+        "author_name": "w0xlt",
         "merge_time_days": 19,
         "categories": [
           "P2P Network"
@@ -3259,8 +3287,8 @@
         "pr": "#32944",
         "description": "wallet: Remove `upgradewallet` RPC",
         "author": "w0xlt",
-        "author_uuid": "auto_woltx",
-        "author_name": "woltx",
+        "author_uuid": "auto_w0xlt",
+        "author_name": "w0xlt",
         "merge_time_days": 14,
         "categories": [
           "Wallet & Keys"
@@ -3530,8 +3558,8 @@
         "author_name": "Sjors Provoost",
         "merge_time_days": 22,
         "categories": [
-          "Core Infrastructure",
-          "Consensus"
+          "Consensus",
+          "Core Infrastructure"
         ],
         "impact_category": "Wallet & User Tools",
         "public_summary": "This PR enhances the `getmininginfo` RPC command by adding the current mining difficulty target and details about the next block. This provides more comprehensive and useful information for miners and anyone monitoring the network's mining status.",
@@ -3601,8 +3629,8 @@
         "author_name": "Wladimir J. van der Laan",
         "merge_time_days": 210,
         "categories": [
-          "Core Infrastructure",
-          "P2P Network"
+          "P2P Network",
+          "Core Infrastructure"
         ],
         "impact_category": "Network & Privacy",
         "public_summary": "This PR improves Bitcoin Core's ability to discover local network addresses on Windows, leading to more reliable peer connections and network communication. By using a modern Windows API, it enhances network address detection.",
@@ -3780,12 +3808,12 @@
         "pr": "#32432",
         "description": "wallet, rpc: Use `OUTPUT_TYPES` to describe the output types instead of hardcoding them",
         "author": "w0xlt",
-        "author_uuid": "auto_woltx",
-        "author_name": "woltx",
+        "author_uuid": "auto_w0xlt",
+        "author_name": "w0xlt",
         "merge_time_days": 55,
         "categories": [
-          "Wallet & Keys",
-          "Core Infrastructure"
+          "Core Infrastructure",
+          "Wallet & Keys"
         ],
         "impact_category": "Maintenance & Tech Debt",
         "public_summary": "This PR refactors how output types are described within the wallet and RPC interfaces, moving away from hardcoded values to a more robust `OUTPUT_TYPES` enum. This improves code maintainability and consistency for describing transaction outputs.",
@@ -3823,8 +3851,8 @@
         "pr": "#32977",
         "description": "wallet: Remove wallet version and several legacy related functions",
         "author": "w0xlt",
-        "author_uuid": "auto_woltx",
-        "author_name": "woltx",
+        "author_uuid": "auto_w0xlt",
+        "author_name": "w0xlt",
         "merge_time_days": 31,
         "categories": [
           "Wallet & Keys"
@@ -3978,7 +4006,7 @@
   {
     "version": "27.2",
     "status": "released",
-    "last_active_date": "Oct 30, 2024",
+    "last_active_date": "Nov 04, 2024",
     "summary": "Release notes and changes for Bitcoin Core 27.2.",
     "release_summary": "Bitcoin Core version 27.2 includes critical security fixes, notably resolving unsigned integer overflows in the script interpreter. This release enhances wallet functionality by enabling legacy wallet migration to descriptor wallets without a Berkeley DB dependency, and introduces new options for RPC interface security and transaction policies. Further improvements focus on refining P2P network behavior for increased resilience.",
     "total_prs_in_release": 428,
@@ -4599,7 +4627,7 @@
   {
     "version": "27.1",
     "status": "released",
-    "last_active_date": "Jun 07, 2024",
+    "last_active_date": "Jun 12, 2024",
     "summary": "Release notes and changes for Bitcoin Core 27.1.",
     "release_summary": "Bitcoin Core version 27.1 integrates various bug fixes and performance enhancements across the P2P network, RPC interface, and wallet infrastructure. This release includes updates to transaction relay policies, improvements in network peer discovery, and foundational changes for wallet development.",
     "total_prs_in_release": 183,
@@ -4648,8 +4676,8 @@
         "author_name": "Matthew Zipkin",
         "merge_time_days": 8,
         "categories": [
-          "Core Infrastructure",
-          "P2P Network"
+          "P2P Network",
+          "Core Infrastructure"
         ],
         "impact_category": "Network & Privacy",
         "public_summary": "This PR refines and clarifies the log messages related to proxy connections, making them more concise and easier to understand. It improves network debugging by reducing redundant information and providing clearer context for proxy-related events.",
@@ -4818,8 +4846,8 @@
         "merge_time_days": 803,
         "categories": [
           "Wallet & Keys",
-          "Core Infrastructure",
-          "Ecosystem"
+          "Ecosystem",
+          "Core Infrastructure"
         ],
         "impact_category": "Wallet & User Tools",
         "public_summary": "This PR improves how addresses are displayed when interacting with external signers, such as hardware wallets. It ensures that addresses are presented clearly and accurately to the user, enhancing security and user experience during transaction signing.",
@@ -4998,7 +5026,7 @@
   {
     "version": "27.0",
     "status": "released",
-    "last_active_date": "Mar 29, 2024",
+    "last_active_date": "Apr 16, 2024",
     "summary": "Release notes and changes for Bitcoin Core 27.0.",
     "release_summary": "Bitcoin Core 27.0 introduces significant enhancements to network privacy and security, notably with the default enablement of BIP324 v2 transport and improved handling of mutated blocks. Wallet functionality is expanded through new RPCs for descriptor management, better performance for descriptor wallets, and increased awareness of conflicting transactions. This release also modernizes the build system by requiring a C++20 compliant compiler and deprecates the `libbitcoinconsensus` library.",
     "total_prs_in_release": 114,
@@ -5197,7 +5225,7 @@
   {
     "version": "26.1",
     "status": "released",
-    "last_active_date": "Mar 22, 2024",
+    "last_active_date": "Apr 02, 2024",
     "summary": "Release notes and changes for Bitcoin Core 26.1.",
     "release_summary": "This point release incorporates various bug fixes and performance enhancements across the wallet, RPC, and P2P network components. It includes improvements for node robustness, user RPC configuration, and wallet efficiency. Security for macOS builds has also been hardened.",
     "total_prs_in_release": 18,
@@ -5256,7 +5284,7 @@
   {
     "version": "26.0",
     "status": "released",
-    "last_active_date": "Oct 30, 2023",
+    "last_active_date": "Dec 07, 2023",
     "summary": "Release notes and changes for Bitcoin Core 26.0.",
     "release_summary": "This release incorporates key enhancements across wallet capabilities, network performance, and node synchronization. Wallet functionality is expanded with MiniTapscript for Taproot outputs and improved transaction fee management for unconfirmed ancestor transactions. Node operation benefits from parallel compact block downloads and refined AssumeUTXO features for faster initial synchronization.",
     "total_prs_in_release": 99,
@@ -5473,8 +5501,8 @@
         "author_name": "Mark Erhardt",
         "merge_time_days": 357,
         "categories": [
-          "Wallet & Keys",
-          "Ecosystem"
+          "Ecosystem",
+          "Wallet & Keys"
         ],
         "impact_category": "Wallet & User Tools",
         "public_summary": "This PR introduces the capability to bump the feerate of unconfirmed ancestor transactions, allowing users to accelerate transactions stuck due to low fees. This feature significantly improves the user experience for getting important transactions confirmed more reliably in a dynamic fee environment.",
@@ -5527,7 +5555,7 @@
   {
     "version": "25.2",
     "status": "released",
-    "last_active_date": "Mar 18, 2024",
+    "last_active_date": "Apr 08, 2024",
     "summary": "Release notes and changes for Bitcoin Core 25.2.",
     "release_summary": "This release of Bitcoin Core introduces significant updates to the peer-to-peer network, notably enabling the V2 transport protocol by default and enhancing I2P connectivity. Transaction policy has been updated with the v3 transaction policy to mitigate pinning attacks. Furthermore, wallet functionality is improved with a new coin selection algorithm and more flexible transaction creation options.",
     "total_prs_in_release": 365,
@@ -5604,8 +5632,8 @@
         "author_name": "Ava Chow",
         "merge_time_days": 555,
         "categories": [
-          "Wallet & Keys",
-          "Core Infrastructure"
+          "Core Infrastructure",
+          "Wallet & Keys"
         ],
         "impact_category": "Wallet & User Tools",
         "public_summary": "This PR significantly enhances transaction creation flexibility by allowing users to specify locktime and input sequence numbers. It enables the creation of more complex, custom transactions directly from the Bitcoin Core wallet.",
@@ -5873,8 +5901,8 @@
         "author_name": "Abubakar Sadiq Ismail",
         "merge_time_days": 93,
         "categories": [
-          "Mempool & Fees",
-          "Ecosystem"
+          "Ecosystem",
+          "Mempool & Fees"
         ],
         "impact_category": "Wallet & User Tools",
         "public_summary": "This PR refines how the fee estimator receives updates, enhancing its accuracy and responsiveness to dynamic network conditions. It leads to more precise fee recommendations for users, improving transaction confirmation predictability.",
@@ -6277,7 +6305,7 @@
   {
     "version": "25.0",
     "status": "released",
-    "last_active_date": "May 24, 2023",
+    "last_active_date": "May 26, 2023",
     "summary": "Release notes and changes for Bitcoin Core 25.0.",
     "release_summary": "Bitcoin Core 25.0 incorporates enhancements to peer-to-peer network performance and efficiency, alongside adjustments for improved connectivity, particularly for privacy-preserving networks. This version also introduces significant advancements in wallet functionality, including support for signing Miniscript descriptors. Additionally, it features optimizations for node resource usage and addresses critical bugs in validation logic.",
     "total_prs_in_release": 32,
@@ -6409,8 +6437,8 @@
         "author_name": "Will Clark",
         "merge_time_days": 74,
         "categories": [
-          "Mempool & Fees",
-          "Ecosystem"
+          "Ecosystem",
+          "Mempool & Fees"
         ],
         "impact_category": "Performance & Optimization",
         "public_summary": "This PR reduces the default memory pool size for nodes operating in `-blocksonly` mode. This conserves system resources for users who prioritize block syncing over transaction relay, making the mode more resource-efficient.",
@@ -6449,7 +6477,7 @@
   {
     "version": "24.2",
     "status": "released",
-    "last_active_date": "Oct 17, 2023",
+    "last_active_date": "Oct 23, 2023",
     "summary": "Release notes and changes for Bitcoin Core 24.2.",
     "release_summary": "This release of Bitcoin Core introduces significant enhancements to the peer-to-peer network, including support for encrypted connections, improved connection diversification, and updated mandatory script verification flags for enhanced privacy, security, and resilience. Key improvements include a faster Initial Block Download for wallets, critical fixes for transaction package virtual size limits, new RPC capabilities, and more accurate fee estimation.",
     "total_prs_in_release": 402,
@@ -6638,8 +6666,8 @@
         "author_name": "Pieter Wuille",
         "merge_time_days": 399,
         "categories": [
-          "P2P Network",
-          "Script & Covenants"
+          "Script & Covenants",
+          "P2P Network"
         ],
         "impact_category": "Performance & Optimization",
         "public_summary": "This PR adds a script to the repository that helps in optimizing parameters for the initial blockchain headers synchronization process. This tool assists developers in fine-tuning the node's behavior for faster and more efficient startup.",
@@ -6794,8 +6822,8 @@
         "author_name": "Greg Sanders",
         "merge_time_days": 7,
         "categories": [
-          "Mempool & Fees",
-          "Ecosystem"
+          "Ecosystem",
+          "Mempool & Fees"
         ],
         "impact_category": "Security & Consensus",
         "public_summary": "This PR fixes a critical bug where virtual size limits for transaction packages were not properly enforced, preventing potential denial-of-service vectors. It significantly enhances the security and reliability of transaction processing within the mempool.",
@@ -6851,8 +6879,8 @@
         "author_name": "Anthony Towns",
         "merge_time_days": 316,
         "categories": [
-          "P2P Network",
-          "Consensus"
+          "Consensus",
+          "P2P Network"
         ],
         "impact_category": "Security & Consensus",
         "public_summary": "This PR updates the set of `MANDATORY_SCRIPT_VERIFY_FLAGS` used by Bitcoin Core. This ensures that all script evaluations consistently enforce the latest critical consensus rules.",
@@ -7199,7 +7227,7 @@
   {
     "version": "24.1",
     "status": "released",
-    "last_active_date": "May 10, 2023",
+    "last_active_date": "May 18, 2023",
     "summary": "Release notes and changes for Bitcoin Core 24.1.",
     "release_summary": "Bitcoin Core 24.1 primarily focuses on improving wallet security, P2P network stability, and RPC functionality. Key improvements include enhanced handling of sensitive wallet data, more robust peer synchronization during initial block download, and expanded RPC capabilities for advanced transaction and script analysis.",
     "total_prs_in_release": 426,
@@ -7681,8 +7709,8 @@
         "author_name": "Aur\u00e8le Oul\u00e8s",
         "merge_time_days": 245,
         "categories": [
-          "Wallet & Keys",
-          "Core Infrastructure"
+          "Core Infrastructure",
+          "Wallet & Keys"
         ],
         "impact_category": "Wallet & User Tools",
         "public_summary": "This PR allows users to import wallets on pruned Bitcoin nodes, making it easier to manage existing wallets without needing a full copy of the blockchain. This significantly improves usability for users with limited disk space.",
@@ -7749,7 +7777,7 @@
         "description": "p2p: ProcessAddrFetch(-seednode) is unnecessary if -connect is specified",
         "author": "dhruv",
         "author_uuid": "auto_dhruv_mehta",
-        "author_name": "Dhruv Mehta",
+        "author_name": "dhruv mehta",
         "merge_time_days": 874,
         "categories": [
           "P2P Network"
@@ -7818,8 +7846,8 @@
         "pr": "#26752",
         "description": "wallet: Remove `mempool_sequence` from interface methods",
         "author": "w0xlt",
-        "author_uuid": "auto_woltx",
-        "author_name": "woltx",
+        "author_uuid": "auto_w0xlt",
+        "author_name": "w0xlt",
         "merge_time_days": 9,
         "categories": [
           "Wallet & Keys"
@@ -7864,8 +7892,8 @@
         "author_name": "Seibart Nedor",
         "merge_time_days": 249,
         "categories": [
-          "Wallet & Keys",
-          "Core Infrastructure"
+          "Core Infrastructure",
+          "Wallet & Keys"
         ],
         "impact_category": "Wallet & User Tools",
         "public_summary": "This PR enhances the `bumpfee` and `psbtbumpfee` RPC commands by introducing an `outputs` argument. This new option gives users more granular control over transaction outputs when increasing fees, improving flexibility for advanced fee management.",
@@ -7907,8 +7935,8 @@
         "author_name": "Sjors Provoost",
         "merge_time_days": 627,
         "categories": [
-          "Wallet & Keys",
-          "Core Infrastructure"
+          "Core Infrastructure",
+          "Wallet & Keys"
         ],
         "impact_category": "Wallet & User Tools",
         "public_summary": "This PR enhances the `bumpfee` RPC and GUI functionality by adding support for external signers. This provides greater flexibility for users who manage their private keys outside of Bitcoin Core, such as with hardware wallets.",
@@ -8076,8 +8104,8 @@
         "author_name": "Ishaana Misra",
         "merge_time_days": 215,
         "categories": [
-          "Wallet & Keys",
-          "Core Infrastructure"
+          "Core Infrastructure",
+          "Wallet & Keys"
         ],
         "impact_category": "Wallet & User Tools",
         "public_summary": "This PR adds `minconf` and `maxconf` options to the `sendall` and `fundrawtransaction` RPC commands, giving users greater control over which UTXOs are selected for transactions based on their confirmation depth. This provides more flexibility for advanced wallet users to manage their funds.",
@@ -8203,8 +8231,8 @@
         "author_name": "Aur\u00e8le Oul\u00e8s",
         "merge_time_days": 105,
         "categories": [
-          "Wallet & Keys",
-          "Core Infrastructure"
+          "Core Infrastructure",
+          "Wallet & Keys"
         ],
         "impact_category": "Wallet & User Tools",
         "public_summary": "This PR improves the robustness of wallet label management by sanitizing label names provided through various RPCs, removing problematic characters like leading/trailing whitespace. This ensures consistent and cleaner labels across the Bitcoin Core interface.",
@@ -8229,7 +8257,7 @@
   {
     "version": "24.0.1",
     "status": "released",
-    "last_active_date": "Dec 02, 2022",
+    "last_active_date": "Dec 06, 2022",
     "summary": "Release notes and changes for Bitcoin Core 24.0.1.",
     "release_summary": "Bitcoin Core version 24.0.1 includes various bug fixes, performance improvements, and new features enhancing network robustness and wallet functionality. A significant configuration option has been added to allow users to specify full Replace By Fee (RBF) policy for unconfirmed transactions.",
     "total_prs_in_release": 6,
@@ -8274,7 +8302,7 @@
   {
     "version": "24.0",
     "status": "released",
-    "last_active_date": "Nov 05, 2022",
+    "last_active_date": "Dec 06, 2022",
     "summary": "Release notes and changes for Bitcoin Core 24.0.",
     "release_summary": "Bitcoin Core 24.0 focuses on advancements in wallet capabilities, including enhanced Taproot support and a path for migrating legacy wallets. This release also features improvements to network resilience and efficiency, new transaction policy options, and initiates foundational architectural modularization.",
     "total_prs_in_release": 126,
@@ -8308,8 +8336,8 @@
         "author_name": "muxator",
         "merge_time_days": 19,
         "categories": [
-          "Core Infrastructure",
-          "Script & Covenants"
+          "Script & Covenants",
+          "Core Infrastructure"
         ],
         "impact_category": "Wallet & User Tools",
         "public_summary": "This PR fixes a crash in wallet address derivation that occurred at the maximum 32-bit index value. This improves wallet robustness and prevents unexpected application termination for users with extensive address lists.",
@@ -8337,9 +8365,9 @@
         "author_name": "Ava Chow",
         "merge_time_days": 336,
         "categories": [
-          "Wallet & Keys",
+          "Script & Covenants",
           "Core Infrastructure",
-          "Script & Covenants"
+          "Wallet & Keys"
         ],
         "impact_category": "Strategic Initiatives",
         "public_summary": "This foundational PR added support for Taproot-specific data fields to the Partially Signed Bitcoin Transaction (PSBT) format. It enables wallets and tools to construct and sign complex Taproot transactions.",
@@ -8465,8 +8493,8 @@
         "author_name": "Fabian Jahr",
         "merge_time_days": 36,
         "categories": [
-          "Wallet & Keys",
-          "Core Infrastructure"
+          "Core Infrastructure",
+          "Wallet & Keys"
         ],
         "impact_category": "Wallet & User Tools",
         "public_summary": "This PR ensures that after importing new keys or addresses, the wallet immediately scans the mempool for relevant transactions. This improves the responsiveness of the wallet to newly relevant unconfirmed transactions.",
@@ -8508,8 +8536,8 @@
         "author_name": "Ava Chow",
         "merge_time_days": 765,
         "categories": [
-          "Wallet & Keys",
-          "Core Infrastructure"
+          "Core Infrastructure",
+          "Wallet & Keys"
         ],
         "impact_category": "Strategic Initiatives",
         "public_summary": "This PR introduces a crucial feature allowing users to migrate their old, non-descriptor wallets into the modern descriptor wallet format. This provides enhanced security, better interoperability, and future-proofing for managing Bitcoin funds.",
@@ -8579,8 +8607,8 @@
         "author_name": "Suhas Daftuar",
         "merge_time_days": 1,
         "categories": [
-          "Core Infrastructure",
-          "P2P Network"
+          "P2P Network",
+          "Core Infrastructure"
         ],
         "impact_category": "Performance & Optimization",
         "public_summary": "This PR provides several follow-up improvements and refinements to the block headers synchronization process. These changes enhance the stability, efficiency, and reliability of how Bitcoin Core nodes update their understanding of the blockchain.",
@@ -8636,8 +8664,8 @@
         "author_name": "Ava Chow",
         "merge_time_days": 18,
         "categories": [
-          "Wallet & Keys",
-          "Core Infrastructure"
+          "Core Infrastructure",
+          "Wallet & Keys"
         ],
         "impact_category": "Wallet & User Tools",
         "public_summary": "This PR changes the default wallet behavior to opt-in to Replace-by-Fee (RBF) for transactions. This allows users to more easily replace unconfirmed transactions with higher fee versions if needed.",
@@ -8665,8 +8693,8 @@
         "author_name": "Sebastian Falbesoner",
         "merge_time_days": 164,
         "categories": [
-          "Wallet & Keys",
-          "Core Infrastructure"
+          "Core Infrastructure",
+          "Wallet & Keys"
         ],
         "impact_category": "Performance & Optimization",
         "public_summary": "This PR delivers significant performance improvements to the `getreceivedbyaddress` and `getreceivedbylabel` RPC commands. Users will experience much faster queries when checking received funds for specific addresses or labels, especially with large transaction histories.",
@@ -8709,8 +8737,8 @@
         "author_name": "Antoine Poinsot",
         "merge_time_days": 47,
         "categories": [
-          "Wallet & Keys",
-          "Core Infrastructure"
+          "Core Infrastructure",
+          "Wallet & Keys"
         ],
         "impact_category": "Strategic Initiatives",
         "public_summary": "This PR introduces a powerful new capability to Bitcoin Core's RPC interface, allowing users to track coins by their parent descriptors. This enables more advanced wallet management, improved fund organization, and enhanced privacy insights for derived addresses.",
@@ -8876,7 +8904,7 @@
   {
     "version": "23.1",
     "status": "released",
-    "last_active_date": "Dec 12, 2022",
+    "last_active_date": "Dec 16, 2022",
     "summary": "Release notes and changes for Bitcoin Core 23.1.",
     "release_summary": "Bitcoin Core version 23.1 introduces targeted bug fixes and performance enhancements for its 23.x branch. This release includes improvements to network privacy, core node stability, and optimizations for RPC command processing. Additionally, build system security and cross-compilation reliability have been refined.",
     "total_prs_in_release": 44,
@@ -8906,7 +8934,7 @@
   {
     "version": "23.0",
     "status": "released",
-    "last_active_date": "Mar 03, 2022",
+    "last_active_date": "Apr 25, 2022",
     "summary": "Release notes and changes for Bitcoin Core 23.0.",
     "release_summary": "This release introduces descriptor wallets as the default, including `tr()` (Taproot) descriptors for newly created wallets. It also includes performance optimizations for ARMv8, enhanced network connectivity for non-default ports, and improved application security. Significant build system updates, such as the removal of Gitian and integration of the minisketch library, along with various Guix build process improvements for Windows and macOS, are also part of this version.",
     "total_prs_in_release": 91,
@@ -8981,8 +9009,8 @@
         "author_name": "Sjors Provoost",
         "merge_time_days": 48,
         "categories": [
-          "Core Infrastructure",
-          "P2P Network"
+          "P2P Network",
+          "Core Infrastructure"
         ],
         "impact_category": "Maintenance & Tech Debt",
         "public_summary": "This PR includes follow-up improvements and fixes related to the `getblockfrompeer` RPC command. These refinements enhance the reliability and usability of this command, which is a valuable tool for debugging and network analysis.",
@@ -9021,7 +9049,7 @@
   {
     "version": "22.1",
     "status": "released",
-    "last_active_date": "Nov 30, 2022",
+    "last_active_date": "Dec 15, 2022",
     "summary": "Release notes and changes for Bitcoin Core 22.1.",
     "release_summary": "This maintenance release primarily focuses on significant enhancements to the P2P networking layer, including new protocol support and architectural improvements for peer management and discovery. It incorporates crucial consensus fixes for Tapscript validation to ensure network security and protocol compliance. Additionally, various optimizations have been implemented to improve Initial Block Download and overall transaction relay efficiency.",
     "total_prs_in_release": 1485,
@@ -9037,8 +9065,8 @@
         "pr": "#24157",
         "description": "p2p: Replace RecursiveMutex `cs_totalBytesSent`  with Mutex and rename it",
         "author": "w0xlt",
-        "author_uuid": "auto_woltx",
-        "author_name": "woltx",
+        "author_uuid": "auto_w0xlt",
+        "author_name": "w0xlt",
         "merge_time_days": 90,
         "categories": [
           "P2P Network"
@@ -9127,8 +9155,8 @@
         "author_name": "Sjors Provoost",
         "merge_time_days": 9,
         "categories": [
-          "P2P Network",
-          "Consensus"
+          "Consensus",
+          "P2P Network"
         ],
         "impact_category": "Network & Privacy",
         "public_summary": "This PR updates the network configuration to use the official Signet DNS seed, facilitating easier and more reliable connections to the Signet test network. This is important for developers and testers working on Bitcoin Core.",
@@ -9156,8 +9184,8 @@
         "author_name": "Matthew Baas",
         "merge_time_days": 4,
         "categories": [
-          "P2P Network",
-          "Script & Covenants"
+          "Script & Covenants",
+          "P2P Network"
         ],
         "impact_category": "Network & Privacy",
         "public_summary": "This PR enhances the `makeseeds.py` script, which is vital for Bitcoin Core clients to find initial peers and join the network. By addressing issues and improving its functionality, it ensures new users can reliably connect to the Bitcoin network, bolstering decentralization.",
@@ -9227,8 +9255,8 @@
         "author_name": "Sjors Provoost",
         "merge_time_days": 399,
         "categories": [
-          "Core Infrastructure",
-          "P2P Network"
+          "P2P Network",
+          "Core Infrastructure"
         ],
         "impact_category": "Wallet & User Tools",
         "public_summary": "This PR introduces a new RPC command, `getblockfrompeer`, allowing users to explicitly request a specific block from a chosen peer. This provides a valuable tool for advanced debugging, testing, and customized block retrieval scenarios.",
@@ -9406,8 +9434,8 @@
         "pr": "#24108",
         "description": "Replace RecursiveMutex `cs_addrLocal` with Mutex, and rename it",
         "author": "w0xlt",
-        "author_uuid": "auto_woltx",
-        "author_name": "woltx",
+        "author_uuid": "auto_w0xlt",
+        "author_name": "w0xlt",
         "merge_time_days": 4,
         "categories": [
           "P2P Network"
@@ -9438,8 +9466,8 @@
         "author_name": "Vasil Dimov",
         "merge_time_days": 7,
         "categories": [
-          "Core Infrastructure",
-          "P2P Network"
+          "P2P Network",
+          "Core Infrastructure"
         ],
         "impact_category": "Maintenance & Tech Debt",
         "public_summary": "This update enhances Bitcoin Core's `Sock` class by adding a new method, `GetSockName()`, which wraps the standard `getsockname()` function to retrieve a socket's local address. This improves internal consistency and provides a cleaner way to determine bound addresses.",
@@ -9495,8 +9523,8 @@
         "author_name": "John Newbery",
         "merge_time_days": 226,
         "categories": [
-          "Core Infrastructure",
-          "P2P Network"
+          "P2P Network",
+          "Core Infrastructure"
         ],
         "impact_category": "Network & Privacy",
         "public_summary": "This PR improves how Bitcoin Core manages network connections by encapsulating the Autonomous System map (`asmap`) within the `NetGroupManager`. This makes network group handling more robust and organized, enhancing the peer selection logic for better network health.",
@@ -9538,8 +9566,8 @@
         "author_name": "Martin Zumsande",
         "merge_time_days": 51,
         "categories": [
-          "Core Infrastructure",
-          "P2P Network"
+          "P2P Network",
+          "Core Infrastructure"
         ],
         "impact_category": "Maintenance & Tech Debt",
         "public_summary": "This PR enhances the logging output related to the address manager, providing clearer and more detailed information about how peer addresses are handled. Improved logs make it easier to monitor and diagnose network connectivity issues.",
@@ -9647,12 +9675,12 @@
         "pr": "#24099",
         "description": "Replace `RecursiveMutex cs_mapLocalHost` with Mutex, and rename it",
         "author": "w0xlt",
-        "author_uuid": "auto_woltx",
-        "author_name": "woltx",
+        "author_uuid": "auto_w0xlt",
+        "author_name": "w0xlt",
         "merge_time_days": 1,
         "categories": [
-          "Core Infrastructure",
-          "P2P Network"
+          "P2P Network",
+          "Core Infrastructure"
         ],
         "impact_category": "Maintenance & Tech Debt",
         "public_summary": "This PR improves internal concurrency by replacing a complex mutex with a simpler, more robust one, and clarifies its purpose with a rename. This change enhances the reliability and maintainability of Bitcoin Core's network operations.",
@@ -9736,8 +9764,8 @@
         "author_name": "Vasil Dimov",
         "merge_time_days": 114,
         "categories": [
-          "Core Infrastructure",
-          "P2P Network"
+          "P2P Network",
+          "Core Infrastructure"
         ],
         "impact_category": "Maintenance & Tech Debt",
         "public_summary": "This refactoring improves the internal organization of Bitcoin Core's networking code by integrating socket utility functions directly into the `Sock` class. This makes the code cleaner and more maintainable by centralizing socket operations.",
@@ -9804,7 +9832,7 @@
   {
     "version": "22.0",
     "status": "released",
-    "last_active_date": "Jul 19, 2021",
+    "last_active_date": "Sep 14, 2021",
     "summary": "Release notes and changes for Bitcoin Core 22.0.",
     "release_summary": "Bitcoin Core 22.0 introduces native support for the I2P anonymous network and removes support for Tor v2 hidden services, exclusively utilizing Tor v3. This release provides foundational Taproot support within descriptor wallets, including Bech32m address generation and basic signing capabilities. Significant improvements were made to the build system, transitioning official release binaries to a Guix-based reproducible process, along with enhanced verification tools.",
     "total_prs_in_release": 89,
@@ -9838,8 +9866,8 @@
         "author_name": "Sebastian Falbesoner",
         "merge_time_days": 110,
         "categories": [
-          "Core Infrastructure",
-          "P2P Network"
+          "P2P Network",
+          "Core Infrastructure"
         ],
         "impact_category": "Network & Privacy",
         "public_summary": "This feature exposes a peer's 'high bandwidth mode' state through the `getpeerinfo` RPC, providing users and network analysts with more insight into peer capabilities and network behavior. It enhances network diagnostic tools.",
@@ -9867,9 +9895,9 @@
         "author_name": "Vasil Dimov",
         "merge_time_days": 42,
         "categories": [
-          "P2P Network",
           "Consensus",
-          "Script & Covenants"
+          "Script & Covenants",
+          "P2P Network"
         ],
         "impact_category": "Maintenance & Tech Debt",
         "public_summary": "This PR enforces the use of port 0 for all I2P addresses within Bitcoin Core, standardizing I2P address representation. This simplifies internal network logic and ensures consistent handling of I2P peers.",
@@ -9925,8 +9953,8 @@
         "author_name": "Jon Atack",
         "merge_time_days": 9,
         "categories": [
-          "P2P Network",
-          "Script & Covenants"
+          "Script & Covenants",
+          "P2P Network"
         ],
         "impact_category": "Security & Consensus",
         "public_summary": "This PR removes support for connecting to and advertising Tor v2 addresses within Bitcoin Core's peer-to-peer network. This aligns the client with the Tor network's deprecation of v2 services, improving security and reducing maintenance overhead by moving to more modern Tor protocols.",
@@ -10053,10 +10081,10 @@
         "author_name": "Pieter Wuille",
         "merge_time_days": 17,
         "categories": [
-          "Wallet & Keys",
-          "Core Infrastructure",
           "Consensus",
-          "Script & Covenants"
+          "Script & Covenants",
+          "Core Infrastructure",
+          "Wallet & Keys"
         ],
         "impact_category": "Wallet & User Tools",
         "public_summary": "This PR adds crucial support for inferring `tr()` descriptors, which are used to represent Taproot outputs, making it easier for wallets to correctly identify and manage funds sent to Taproot addresses. This is a significant step towards improved Taproot integration and usability within Bitcoin Core.",
@@ -10081,7 +10109,7 @@
   {
     "version": "0.21.2",
     "status": "released",
-    "last_active_date": "Sep 21, 2021",
+    "last_active_date": "Sep 20, 2022",
     "summary": "Release notes and changes for Bitcoin Core 0.21.2.",
     "release_summary": "This release of Bitcoin Core version 0.21.2 focuses on significant improvements to the peer-to-peer network for enhanced reliability, performance, and resilience. Key updates also include stability and accuracy improvements for the wallet and an important enhancement to the macOS build process.",
     "total_prs_in_release": 291,
@@ -10156,9 +10184,9 @@
         "author_name": "John Newbery",
         "merge_time_days": 33,
         "categories": [
-          "Mempool & Fees",
           "Ecosystem",
-          "P2P Network"
+          "P2P Network",
+          "Mempool & Fees"
         ],
         "impact_category": "Network & Privacy",
         "public_summary": "This PR includes two minor fixes to how nodes broadcast information, improving the reliability and efficiency of transaction and block propagation across the network. These changes contribute to smoother and more consistent network operation.",
@@ -10257,8 +10285,8 @@
         "merge_time_days": 1,
         "categories": [
           "Ecosystem",
-          "Core Infrastructure",
-          "P2P Network"
+          "P2P Network",
+          "Core Infrastructure"
         ],
         "impact_category": "Network & Privacy",
         "public_summary": "This PR includes important fixes for how peer addresses are relayed across the network and managed via RPC, improving the efficiency and accuracy of peer discovery. This enhances network connectivity and helps nodes find and maintain a robust set of connections.",
@@ -10356,8 +10384,8 @@
         "author_name": "John Newbery",
         "merge_time_days": 2,
         "categories": [
-          "Core Infrastructure",
-          "P2P Network"
+          "P2P Network",
+          "Core Infrastructure"
         ],
         "impact_category": "Maintenance & Tech Debt",
         "public_summary": "This PR introduces minor code cleanups to the Autonomous System mapping (`asmap`) logic, which helps Bitcoin Core understand network topology. These refinements improve code readability and maintainability without altering functionality.",
@@ -10470,8 +10498,8 @@
         "author_name": "Jon Atack",
         "merge_time_days": 11,
         "categories": [
-          "Core Infrastructure",
-          "P2P Network"
+          "P2P Network",
+          "Core Infrastructure"
         ],
         "impact_category": "Security & Consensus",
         "public_summary": "This PR includes refinements and fixes related to address rate-limiting across the peer-to-peer network and RPC interfaces, improving the node's resilience against address spam. This helps protect nodes from being overwhelmed by malicious or misbehaving peers.",
@@ -10482,7 +10510,7 @@
         "description": "Default to NODE_WITNESS in nLocalServices",
         "author": "dhruv",
         "author_uuid": "auto_dhruv_mehta",
-        "author_name": "Dhruv Mehta",
+        "author_name": "dhruv mehta",
         "merge_time_days": 166,
         "categories": [
           "P2P Network"
@@ -10496,7 +10524,7 @@
   {
     "version": "0.21.1",
     "status": "released",
-    "last_active_date": "Feb 11, 2021",
+    "last_active_date": "May 02, 2021",
     "summary": "Release notes and changes for Bitcoin Core 0.21.1.",
     "release_summary": "This release primarily focuses on the technical implementation required for the upcoming Taproot soft fork, including its activation parameters and the new Bech32m address format. Additionally, it features security enhancements for wallet RPCs, architectural improvements for signature validation, and increased robustness in network message processing.",
     "total_prs_in_release": 13,
@@ -10541,7 +10569,7 @@
   {
     "version": "0.21.0",
     "status": "released",
-    "last_active_date": "Dec 09, 2020",
+    "last_active_date": "Jan 15, 2021",
     "summary": "Release notes and changes for Bitcoin Core 0.21.0.",
     "release_summary": "Bitcoin Core version 0.21.0 integrates foundational support for future protocol upgrades, introduces significant enhancements to P2P networking and user privacy, and implements architectural improvements to wallet management. The release further focuses on strengthening the node's security posture and improving wallet data integrity.",
     "total_prs_in_release": 104,
@@ -10703,8 +10731,8 @@
         "author_name": "Jon Atack",
         "merge_time_days": 22,
         "categories": [
-          "Core Infrastructure",
-          "P2P Network"
+          "P2P Network",
+          "Core Infrastructure"
         ],
         "impact_category": "Network & Privacy",
         "public_summary": "This PR enhances peer information by exposing the network type (e.g., IPv4, Tor, I2P) in `getpeerinfo` and improves the `-netinfo` CLI. This provides users with more detailed insights into their node's network connections, aiding diagnostics.",
@@ -10803,8 +10831,8 @@
         "author_name": "Vasil Dimov",
         "merge_time_days": 14,
         "categories": [
-          "Core Infrastructure",
-          "P2P Network"
+          "P2P Network",
+          "Core Infrastructure"
         ],
         "impact_category": "Network & Privacy",
         "public_summary": "This PR corrects how peer addresses are advertised in the `version` message during network handshake, ensuring other nodes receive accurate connection information. This improves network health and peer discovery processes.",
@@ -10815,7 +10843,7 @@
   {
     "version": "0.20.2",
     "status": "released",
-    "last_active_date": "Jun 10, 2021",
+    "last_active_date": "Sep 20, 2022",
     "summary": "Release notes and changes for Bitcoin Core 0.20.2.",
     "release_summary": "This minor release implements key components for future protocol upgrades, including Speedy Trial activation parameters for Taproot and the Bech32m address encoding standard. It also enhances the network's resilience, privacy, and performance through improvements to block relay, Tor v3, and I2P connectivity. Wallet functionality sees basic support for Taproot script descriptors and the `testmempoolaccept` RPC gains transaction package testing capabilities.",
     "total_prs_in_release": 778,
@@ -10947,8 +10975,8 @@
         "author_name": "Jon Atack",
         "merge_time_days": 26,
         "categories": [
-          "Core Infrastructure",
-          "P2P Network"
+          "P2P Network",
+          "Core Infrastructure"
         ],
         "impact_category": "Wallet & User Tools",
         "public_summary": "This PR improves the clarity of RPC responses by mapping internal 'unroutable' network statuses to a user-friendly `not_publicly_routable` field, and also automates RPC help text. These changes enhance the usability and consistency of Bitcoin Core's RPC interface.",
@@ -11060,8 +11088,8 @@
         "author_name": "Jon Atack",
         "merge_time_days": 0,
         "categories": [
-          "Core Infrastructure",
-          "P2P Network"
+          "P2P Network",
+          "Core Infrastructure"
         ],
         "impact_category": "Maintenance & Tech Debt",
         "public_summary": "This PR includes several small, targeted improvements across the P2P networking, RPC interface, and fuzzing test components. These minor adjustments enhance the overall stability, reliability, and testability of Bitcoin Core.",
@@ -11075,8 +11103,8 @@
         "author_name": "Hennadii Stepanov",
         "merge_time_days": 41,
         "categories": [
-          "Core Infrastructure",
-          "P2P Network"
+          "P2P Network",
+          "Core Infrastructure"
         ],
         "impact_category": "Maintenance & Tech Debt",
         "public_summary": "This PR cleans up the network module by removing unused compatibility header includes. It reduces code complexity and improves build times by eliminating unnecessary dependencies.",
@@ -11174,10 +11202,10 @@
         "author_name": "Pieter Wuille",
         "merge_time_days": 9,
         "categories": [
-          "Wallet & Keys",
-          "Core Infrastructure",
           "Consensus",
-          "Script & Covenants"
+          "Script & Covenants",
+          "Core Infrastructure",
+          "Wallet & Keys"
         ],
         "impact_category": "Strategic Initiatives",
         "public_summary": "This PR introduces fundamental support for Taproot (P2TR) script descriptors, enabling users to generate and manage Taproot addresses directly within Bitcoin Core. It's a crucial step towards broader Taproot adoption and simplified wallet management for this new address type.",
@@ -11205,8 +11233,8 @@
         "author_name": "Vasil Dimov",
         "merge_time_days": 5,
         "categories": [
-          "Core Infrastructure",
-          "P2P Network"
+          "P2P Network",
+          "Core Infrastructure"
         ],
         "impact_category": "Security & Consensus",
         "public_summary": "This PR enhances the security and stability of I2P connections by enforcing size limits on incoming messages. It prevents potential resource exhaustion attacks from malicious peers.",
@@ -11273,7 +11301,7 @@
         "description": "test: Use mocktime in test_seed_peers",
         "author": "dhruv",
         "author_uuid": "auto_dhruv_mehta",
-        "author_name": "Dhruv Mehta",
+        "author_name": "dhruv mehta",
         "merge_time_days": 0,
         "categories": [
           "P2P Network"
@@ -11318,8 +11346,8 @@
         "author_name": "MarcoFalke",
         "merge_time_days": 5,
         "categories": [
-          "Core Infrastructure",
-          "P2P Network"
+          "P2P Network",
+          "Core Infrastructure"
         ],
         "impact_category": "Maintenance & Tech Debt",
         "public_summary": "This PR clarifies log messages that appear when a specified file does not exist, improving the user experience during debugging. It makes it easier for users to understand and resolve file-related issues within Bitcoin Core.",
@@ -11333,10 +11361,10 @@
         "author_name": "Gloria Zhao",
         "merge_time_days": 144,
         "categories": [
+          "Consensus",
           "Mempool & Fees",
-          "Core Infrastructure",
           "P2P Network",
-          "Consensus"
+          "Core Infrastructure"
         ],
         "impact_category": "Wallet & User Tools",
         "public_summary": "This PR enhances the `testmempoolaccept` RPC to allow testing of transaction packages, where multiple dependent transactions can be submitted together. This is vital for developers and users to simulate and validate complex transaction scenarios, like those involving child-pays-for-parent (CPFP) or coinjoins, before broadcasting them.",
@@ -11464,8 +11492,8 @@
         "author_name": "MarcoFalke",
         "merge_time_days": 48,
         "categories": [
-          "Core Infrastructure",
-          "P2P Network"
+          "P2P Network",
+          "Core Infrastructure"
         ],
         "impact_category": "Maintenance & Tech Debt",
         "public_summary": "This PR enhances network debugging by adding detailed log messages when peers are discouraged or disconnected, with exceptions for trusted peers. It helps advanced users and developers gain better insight into Bitcoin Core's peer management behavior.",
@@ -11521,9 +11549,9 @@
         "author_name": "Jon Atack",
         "merge_time_days": 2,
         "categories": [
-          "P2P Network",
           "Consensus",
-          "Script & Covenants"
+          "Script & Covenants",
+          "P2P Network"
         ],
         "impact_category": "Network & Privacy",
         "public_summary": "This PR adds hardcoded I2P seed nodes to Bitcoin Core. This improves initial connectivity and resilience for users connecting via the privacy-enhancing I2P network.",
@@ -11565,8 +11593,8 @@
         "author_name": "Troy Giorshev",
         "merge_time_days": 203,
         "categories": [
-          "Core Infrastructure",
-          "P2P Network"
+          "P2P Network",
+          "Core Infrastructure"
         ],
         "impact_category": "Network & Privacy",
         "public_summary": "This PR introduces a new feature to capture and log all incoming and outgoing P2P messages on a per-peer basis. This is invaluable for debugging networking issues, analyzing P2P traffic, and understanding peer behavior, significantly aiding network development and troubleshooting.",
@@ -11619,7 +11647,7 @@
         "description": "p2p: No delay in adding fixed seeds if -dnsseed=0 and peers.dat is empty",
         "author": "dhruv",
         "author_uuid": "auto_dhruv_mehta",
-        "author_name": "Dhruv Mehta",
+        "author_name": "dhruv mehta",
         "merge_time_days": 159,
         "categories": [
           "P2P Network"
@@ -11706,8 +11734,8 @@
         "author_name": "Vasil Dimov",
         "merge_time_days": 36,
         "categories": [
-          "Core Infrastructure",
-          "P2P Network"
+          "P2P Network",
+          "Core Infrastructure"
         ],
         "impact_category": "Maintenance & Tech Debt",
         "public_summary": "This PR applies the `[[nodiscard]]` attribute to various methods in the `Sock` class within the networking layer. This compiler attribute helps prevent subtle bugs by ensuring that the return values of these critical network operations are explicitly checked and handled, improving code safety and reliability.",
@@ -11763,8 +11791,8 @@
         "author_name": "Jarol Rodriguez",
         "merge_time_days": 6,
         "categories": [
-          "Core Infrastructure",
-          "P2P Network"
+          "P2P Network",
+          "Core Infrastructure"
         ],
         "impact_category": "Wallet & User Tools",
         "public_summary": "This PR enhances the `listbanned` RPC command by adding more detailed information about ban durations. This helps users better understand and manage their banned peer connections.",
@@ -11790,7 +11818,7 @@
   {
     "version": "0.20.1",
     "status": "released",
-    "last_active_date": "Jul 07, 2020",
+    "last_active_date": "Aug 01, 2020",
     "summary": "Release notes and changes for Bitcoin Core 0.20.1.",
     "release_summary": "This release primarily focuses on refining peer management, enhancing PSBT compatibility and accuracy, and correcting a mining template RPC error. It includes critical bug fixes and improvements to core functionality, improving network resilience and transaction processing reliability.",
     "total_prs_in_release": 10,
@@ -11820,7 +11848,7 @@
   {
     "version": "0.20.0",
     "status": "released",
-    "last_active_date": "May 14, 2020",
+    "last_active_date": "Jun 02, 2020",
     "summary": "Release notes and changes for Bitcoin Core 0.20.0.",
     "release_summary": "Bitcoin Core 0.20.0 focuses on significant security enhancements, P2P network improvements, and key RPC and wallet functionality updates. The release removes several legacy dependencies and protocols to streamline the codebase and improve security. It also introduces new features like a UTXO snapshot tool and enhances network resilience through improved peer diversity.",
     "total_prs_in_release": 71,
@@ -11954,8 +11982,8 @@
         "author_name": "John Newbery",
         "merge_time_days": 23,
         "categories": [
-          "P2P Network",
-          "Consensus"
+          "Consensus",
+          "P2P Network"
         ],
         "impact_category": "Maintenance & Tech Debt",
         "public_summary": "This PR refactors Bitcoin Core's validation state by removing an unused `REJECT` code from `CValidationState`, simplifying error handling. This improves code clarity and maintainability for future development.",
@@ -12011,7 +12039,7 @@
         "description": "Fix misleading error message: Clean stack rule",
         "author": "sanket1729",
         "author_uuid": "auto_sanket_kanjalkar",
-        "author_name": "sanket kanjalkar",
+        "author_name": "Sanket Kanjalkar",
         "merge_time_days": 6,
         "categories": [
           "Consensus"
@@ -12099,8 +12127,8 @@
         "author_name": "Hennadii Stepanov",
         "merge_time_days": 19,
         "categories": [
-          "Core Infrastructure",
-          "P2P Network"
+          "P2P Network",
+          "Core Infrastructure"
         ],
         "impact_category": "Maintenance & Tech Debt",
         "public_summary": "This PR adds a `CNode::ConnectedThroughNetwork` member function to easily identify true network connections. This simplifies logic that differentiates between various peer types, improving code clarity.",
@@ -12213,8 +12241,8 @@
         "author_name": "Jon Atack",
         "merge_time_days": 9,
         "categories": [
-          "Core Infrastructure",
-          "P2P Network"
+          "P2P Network",
+          "Core Infrastructure"
         ],
         "impact_category": "Wallet & User Tools",
         "public_summary": "This PR adds useful information about the last received block and transaction from each peer to the `getpeerinfo` RPC command. This provides users and network operators with better insights into the health and activity of their connections.",
@@ -12242,8 +12270,8 @@
         "author_name": "John Newbery",
         "merge_time_days": 8,
         "categories": [
-          "Core Infrastructure",
-          "P2P Network"
+          "P2P Network",
+          "Core Infrastructure"
         ],
         "impact_category": "Wallet & User Tools",
         "public_summary": "This PR enhances the RPC interface by providing commands to view all known peer addresses in the `addrman` and to manually add new addresses. This improves network diagnostics and allows for more granular control over the node's peer discovery.",
@@ -12383,9 +12411,9 @@
         "author_name": "Suhas Daftuar",
         "merge_time_days": 173,
         "categories": [
-          "Mempool & Fees",
           "Ecosystem",
-          "P2P Network"
+          "P2P Network",
+          "Mempool & Fees"
         ],
         "impact_category": "Network & Privacy",
         "public_summary": "This PR updates the transaction relay mechanism to use 'wtxid' for transactions containing witness data. This improves network efficiency and security by ensuring the full transaction content is accounted for during relay, especially for SegWit transactions.",
@@ -12526,9 +12554,9 @@
         "author_name": "MarcoFalke",
         "merge_time_days": 58,
         "categories": [
-          "Core Infrastructure",
+          "Consensus",
           "P2P Network",
-          "Consensus"
+          "Core Infrastructure"
         ],
         "impact_category": "Maintenance & Tech Debt",
         "public_summary": "This PR enhances logging for transactions rejected from the mempool, providing clearer and more consistent messages. This helps users and node operators diagnose transaction-related issues more effectively.",
@@ -12683,8 +12711,8 @@
         "author_name": "Suhas Daftuar",
         "merge_time_days": 8,
         "categories": [
-          "Mempool & Fees",
           "P2P Network",
+          "Mempool & Fees",
           "Consensus"
         ],
         "impact_category": "Security & Consensus",
@@ -12710,7 +12738,7 @@
         "description": "BIP-325: Signet [consensus]",
         "author": "kallewoof",
         "author_uuid": "auto_karl_johan_alm",
-        "author_name": "Karl Johan Alm",
+        "author_name": "Karl-Johan Alm",
         "merge_time_days": 200,
         "categories": [
           "Consensus"
@@ -12783,8 +12811,8 @@
         "author_name": "Fabian Jahr",
         "merge_time_days": 16,
         "categories": [
-          "Core Infrastructure",
-          "Consensus"
+          "Consensus",
+          "Core Infrastructure"
         ],
         "impact_category": "Wallet & User Tools",
         "public_summary": "This PR enhances the `gettxoutsetinfo` RPC command by adding an option to specify the hashing algorithm used for the UTXO set hash. This offers more flexibility for verifying the UTXO set state.",
@@ -12855,8 +12883,8 @@
         "author_name": "Luke Dashjr",
         "merge_time_days": 102,
         "categories": [
-          "Core Infrastructure",
-          "P2P Network"
+          "P2P Network",
+          "Core Infrastructure"
         ],
         "impact_category": "Maintenance & Tech Debt",
         "public_summary": "This PR refactors the codebase by consolidating disparate functions for converting service flag bits into human-readable names into a single utility function. This significantly enhances code maintainability and reduces duplication across the project.",
@@ -12898,8 +12926,8 @@
         "author_name": "Michael Ford",
         "merge_time_days": 0,
         "categories": [
-          "Core Infrastructure",
-          "P2P Network"
+          "P2P Network",
+          "Core Infrastructure"
         ],
         "impact_category": "Maintenance & Tech Debt",
         "public_summary": "This PR adds a helpful log message at startup, displaying the size of the banlist after expired entries have been removed. This gives node operators better insight into the node's peer management state.",
@@ -12939,7 +12967,7 @@
   {
     "version": "0.19.0",
     "status": "released",
-    "last_active_date": "Oct 02, 2019",
+    "last_active_date": "Nov 24, 2019",
     "summary": "Release notes and changes for Bitcoin Core 0.19.0.",
     "release_summary": "Bitcoin Core 0.19.0 includes improvements to network performance, transaction policy, and wallet functionality. This release enhances block propagation, provides new controls for transaction fee rates, and strengthens network privacy defaults. Various RPC calls and internal processes have also been optimized for better performance and reduced resource usage.",
     "total_prs_in_release": 121,
@@ -12987,8 +13015,8 @@
         "author_name": "patrick strateman",
         "merge_time_days": 6,
         "categories": [
-          "Core Infrastructure",
-          "P2P Network"
+          "P2P Network",
+          "Core Infrastructure"
         ],
         "impact_category": "Network & Privacy",
         "public_summary": "This PR adds a new log entry to notify users when a \"blocks\" message is received from a peer at an unexpected time. This helps in diagnosing network issues or identifying misbehaving peers more easily.",
@@ -13030,8 +13058,8 @@
         "author_name": "Wladimir J. van der Laan",
         "merge_time_days": 1,
         "categories": [
-          "P2P Network",
-          "Script & Covenants"
+          "Script & Covenants",
+          "P2P Network"
         ],
         "impact_category": "Network & Privacy",
         "public_summary": "This PR updates the list of hardcoded network seeds used by Bitcoin Core to discover peers. This ensures new nodes, especially those for the 0.19 release, can reliably connect to the network.",
@@ -13101,7 +13129,7 @@
   {
     "version": "0.18.1",
     "status": "released",
-    "last_active_date": "Jul 19, 2019",
+    "last_active_date": "Aug 14, 2019",
     "summary": "Release notes and changes for Bitcoin Core 0.18.1.",
     "release_summary": "Bitcoin Core 0.18.1 focuses on enhancing wallet reliability, RPC consistency, and network robustness. This release strengthens transaction fee limit enforcement, standardizes address generation for multisignature scripts, and refines error reporting for unspendable funds. Additionally, stability improvements have been made to Tor integration.",
     "total_prs_in_release": 27,
@@ -13161,7 +13189,7 @@
   {
     "version": "0.18.0",
     "status": "released",
-    "last_active_date": "Feb 26, 2020",
+    "last_active_date": "May 02, 2019",
     "summary": "Release notes and changes for Bitcoin Core 0.18.0.",
     "release_summary": "Bitcoin Core 0.18.0 introduces a new command-line tool for offline wallet management and significant enhancements to descriptor support and Partially Signed Bitcoin Transactions. The release improves P2P network performance, security, and communication through better random number generation, memory optimizations, and refined ban management. Additionally, the build system now supports RISC-V, and RPC and configuration options have been updated for improved functionality and robustness.",
     "total_prs_in_release": 739,
@@ -13180,8 +13208,8 @@
         "author_name": "Matt Corallo",
         "merge_time_days": 10,
         "categories": [
-          "Core Infrastructure",
-          "P2P Network"
+          "P2P Network",
+          "Core Infrastructure"
         ],
         "impact_category": "Security & Consensus",
         "public_summary": "This enhancement improves the quality of random numbers used internally by Bitcoin Core by incorporating highly precise timestamps from received network messages. This boosts the security and unpredictability of various internal processes.",
@@ -13364,8 +13392,8 @@
         "author_name": "Greg Sanders",
         "merge_time_days": 65,
         "categories": [
-          "Mempool & Fees",
-          "P2P Network"
+          "P2P Network",
+          "Mempool & Fees"
         ],
         "impact_category": "Network & Privacy",
         "public_summary": "This PR refines the fee filter mechanism to calculate the absolute fee for transactions rather than relying on a stored fee rate. This provides a more accurate and consistent approach for peers to filter transactions based on their actual economic value.",
@@ -13464,8 +13492,8 @@
         "author_name": "Sanjay K",
         "merge_time_days": 22,
         "categories": [
-          "P2P Network",
-          "Script & Covenants"
+          "Script & Covenants",
+          "P2P Network"
         ],
         "impact_category": "Maintenance & Tech Debt",
         "public_summary": "This improvement allows Bitcoin Core's network monitoring scripts to read lists of suspicious hosts from an external file rather than having them hardcoded. This makes it easier to update and distribute these lists, enhancing the flexibility and maintainability of our security measures.",
@@ -13566,8 +13594,8 @@
         "author_name": "John Newbery",
         "merge_time_days": 86,
         "categories": [
-          "Core Infrastructure",
-          "Consensus"
+          "Consensus",
+          "Core Infrastructure"
         ],
         "impact_category": "Maintenance & Tech Debt",
         "public_summary": "This PR effectively retires old BIP9 soft fork deployments by 'burying' them, meaning their state transitions are no longer actively evaluated. This cleans up the codebase and removes historical soft fork logic that is no longer relevant for consensus.",
@@ -13676,7 +13704,7 @@
   {
     "version": "0.17.1",
     "status": "released",
-    "last_active_date": "Nov 23, 2018",
+    "last_active_date": "Dec 25, 2018",
     "summary": "Release notes and changes for Bitcoin Core 0.17.1.",
     "release_summary": "This minor version release of Bitcoin Core 0.17.1 primarily focuses on stability, security, and wallet functionality. It incorporates several bug fixes for transaction creation and wallet management, alongside security enhancements for network binding and wallet signing. Key improvements also extend to the Partially Signed Bitcoin Transaction (PSBT) interface and various RPC commands.",
     "total_prs_in_release": 191,
@@ -13696,8 +13724,8 @@
         "author_name": "Luke Dashjr",
         "merge_time_days": 32,
         "categories": [
-          "Core Infrastructure",
-          "P2P Network"
+          "P2P Network",
+          "Core Infrastructure"
         ],
         "impact_category": "Security & Consensus",
         "public_summary": "This PR changes the default network binding behavior to never use `INADDR_ANY` automatically and issues a warning if it's explicitly configured. This enhances security by preventing the node from inadvertently listening on all available network interfaces, reducing exposure to untrusted networks.",
@@ -13722,7 +13750,7 @@
   {
     "version": "0.17.0",
     "status": "released",
-    "last_active_date": "Sep 27, 2018",
+    "last_active_date": "Oct 07, 2018",
     "summary": "Release notes and changes for Bitcoin Core 0.17.0.",
     "release_summary": "Bitcoin Core 0.17.0 introduces significant advancements in wallet management, including dynamic wallet creation and loading via RPC, and a new 'label' API that supersedes the legacy 'account' system. The release enhances network security and node stability through critical bug fixes, such as addressing crashes from duplicate transaction inputs, and by implementing protections against denial-of-service attacks. Further improvements include optimized resource utilization during block synchronization and streamlined build processes with updated dependencies.",
     "total_prs_in_release": 106,
@@ -13826,8 +13854,8 @@
         "author_name": "Matt Corallo",
         "merge_time_days": 0,
         "categories": [
-          "Ecosystem",
-          "Consensus"
+          "Consensus",
+          "Ecosystem"
         ],
         "impact_category": "Security & Consensus",
         "public_summary": "This critical bug fix resolves a crash that could occur in Bitcoin Core when processing transactions containing duplicate inputs. This significantly improves the robustness and stability of the node, preventing unexpected shutdowns and ensuring more reliable transaction handling.",
@@ -13852,7 +13880,7 @@
   {
     "version": "0.16.1",
     "status": "released",
-    "last_active_date": "Mar 07, 2018",
+    "last_active_date": "Jun 15, 2018",
     "summary": "Release notes and changes for Bitcoin Core 0.16.1.",
     "release_summary": "This minor release of Bitcoin Core version 0.16.1 focuses on improving network stability, security, and node performance. Key updates include refined transaction standardness rules and critical fixes for concurrency issues within block validation. Additionally, the release enhances peer-to-peer network resilience and extends build system compatibility to support a wider range of hardware.",
     "total_prs_in_release": 31,
@@ -13883,7 +13911,7 @@
   {
     "version": "0.16.0",
     "status": "released",
-    "last_active_date": "Feb 12, 2018",
+    "last_active_date": "Feb 26, 2018",
     "summary": "Release notes and changes for Bitcoin Core 0.16.0.",
     "release_summary": "Bitcoin Core 0.16.0 introduces comprehensive Segregated Witness (SegWit) support within the wallet, including native Bech32 address generation and usage, and sets Hierarchical Deterministic (HD) wallets as the default for new installations. The release also includes significant performance enhancements through default SHA256 assembly optimizations and an improved mempool sorting algorithm. Additionally, various RPC methods were updated or deprecated for a more modular interface, alongside general stability and build system improvements.",
     "total_prs_in_release": 52,
@@ -13903,8 +13931,8 @@
         "author_name": "Matt Corallo",
         "merge_time_days": 24,
         "categories": [
-          "P2P Network",
-          "Consensus"
+          "Consensus",
+          "P2P Network"
         ],
         "impact_category": "Security & Consensus",
         "public_summary": "This PR enhances the stability and correctness of Bitcoin Core by ensuring that `ActivateBestChain` fully processes all pending validation interface notifications. This prevents race conditions during chain reorganizations and guarantees that all system components are synchronized with the latest blockchain state.",
@@ -14061,8 +14089,8 @@
         "author_name": "Deleted user",
         "merge_time_days": 5,
         "categories": [
-          "Core Infrastructure",
-          "P2P Network"
+          "P2P Network",
+          "Core Infrastructure"
         ],
         "impact_category": "Wallet & User Tools",
         "public_summary": "This PR enhances the Bitcoin Core GUI's peer table by visually indicating whether each connected peer is inbound or outbound. This improves user experience by providing quick insight into network connectivity states.",
@@ -14076,8 +14104,8 @@
         "author_name": "Wladimir J. van der Laan",
         "merge_time_days": 21,
         "categories": [
-          "P2P Network",
-          "Consensus"
+          "Consensus",
+          "P2P Network"
         ],
         "impact_category": "Performance & Optimization",
         "public_summary": "This PR improves block serving efficiency by allowing nodes to serve historical blocks directly from disk when possible. This reduces memory usage and CPU load, especially for nodes handling many incoming block requests.",
@@ -14105,8 +14133,8 @@
         "author_name": "Matt Corallo",
         "merge_time_days": 0,
         "categories": [
-          "Ecosystem",
-          "Consensus"
+          "Consensus",
+          "Ecosystem"
         ],
         "impact_category": "Security & Consensus",
         "public_summary": "This PR fixes a critical crash bug in Bitcoin Core version 0.16 that could occur when processing transactions with duplicate inputs. This improves the stability and robustness of the client, preventing unexpected service interruptions.",
@@ -14201,7 +14229,7 @@
   {
     "version": "0.15.2",
     "status": "released",
-    "last_active_date": "May 07, 2018",
+    "last_active_date": "Sep 28, 2018",
     "summary": "Release notes and changes for Bitcoin Core 0.15.2.",
     "release_summary": "Bitcoin Core version 0.15.2 delivers enhancements focused on network security and stability, wallet reliability, and correct consensus rule enforcement. The release addresses potential denial-of-service attack vectors and refines peer management, alongside introducing an upgrade path for non-HD wallets to Hierarchical Deterministic (HD) wallets. Various other bugfixes and improvements across P2P, RPC, and wallet components contribute to overall system robustness.",
     "total_prs_in_release": 610,
@@ -14347,8 +14375,8 @@
         "author_name": "Wladimir J. van der Laan",
         "merge_time_days": 18,
         "categories": [
-          "Core Infrastructure",
-          "P2P Network"
+          "P2P Network",
+          "Core Infrastructure"
         ],
         "impact_category": "Maintenance & Tech Debt",
         "public_summary": "This PR refactors the logging of misbehaving peers by moving it to the dedicated \"net\" logging category. This improves log organization, making it easier for users to filter and analyze network-related events.",
@@ -14471,7 +14499,7 @@
   {
     "version": "0.15.1",
     "status": "released",
-    "last_active_date": "Nov 02, 2017",
+    "last_active_date": "Nov 11, 2017",
     "summary": "Release notes and changes for Bitcoin Core 0.15.1.",
     "release_summary": "This release primarily focuses on enhancing network robustness and security against invalid or stale chain data, alongside improvements to wallet stability and mining configuration. Key updates include refined peer management to ensure nodes connect to healthy chains, preventing issues from misconfigured mining options, and safeguarding wallet data integrity.",
     "total_prs_in_release": 126,
@@ -14505,8 +14533,8 @@
         "author_name": "Cristian Mircea Messel",
         "merge_time_days": 5,
         "categories": [
-          "Core Infrastructure",
-          "P2P Network"
+          "P2P Network",
+          "Core Infrastructure"
         ],
         "impact_category": "Wallet & User Tools",
         "public_summary": "This PR improves the robustness of the Bitcoin Core GUI's network settings for proxy configurations. It prevents malformed proxy addresses from causing issues by ensuring settings are properly reset if invalid input is provided.",
@@ -14657,7 +14685,7 @@
   {
     "version": "0.15.0",
     "status": "released",
-    "last_active_date": "Aug 14, 2017",
+    "last_active_date": "Jan 08, 2018",
     "summary": "Release notes and changes for Bitcoin Core 0.15.0.",
     "release_summary": "Bitcoin Core version 0.15.0 introduces initial support for managing multiple independent wallets from a single node instance. This release also features significant performance improvements, particularly in transaction processing and cryptographic hashing, and refines transaction fee estimation for greater accuracy and user control. Further enhancements include improved wallet privacy mechanisms and the removal of coin age-based transaction priority.",
     "total_prs_in_release": 91,
@@ -14730,7 +14758,7 @@
   {
     "version": "0.14.3",
     "status": "released",
-    "last_active_date": "Sep 07, 2017",
+    "last_active_date": "Sep 28, 2018",
     "summary": "Release notes and changes for Bitcoin Core 0.14.3.",
     "release_summary": "Bitcoin Core 0.14.3 includes a critical security update addressing a denial-of-service vulnerability (CVE-2018-17144) exploitable by miners. This release also integrates various bug fixes and performance enhancements, specifically improving network stability, efficiency, and the diagnostic capabilities of wallet RPC commands. These updates collectively contribute to a more robust and performant Bitcoin Core client.",
     "total_prs_in_release": 216,
@@ -14746,8 +14774,8 @@
         "pr": "#10865",
         "description": "Move CloseSocket out of SetSocketNonBlocking and pass socket as const reference",
         "author": "bytting",
-        "author_uuid": "auto_dag_robole",
-        "author_name": "Dag Robole",
+        "author_uuid": "auto_dag_rob_le",
+        "author_name": "Dag Rob\u00f8le",
         "merge_time_days": 6,
         "categories": [
           "P2P Network"
@@ -14845,7 +14873,7 @@
   {
     "version": "0.14.2",
     "status": "released",
-    "last_active_date": "Jun 12, 2017",
+    "last_active_date": "Jun 18, 2017",
     "summary": "Release notes and changes for Bitcoin Core 0.14.2.",
     "release_summary": "This version includes critical security updates to the bundled miniupnpc library, addressing a denial-of-service vulnerability. Network reliability and privacy are enhanced through improvements to Tor integration, more robust header synchronization, and optimized peer selection. Additionally, this release features refined network diagnostics and a more responsive graphical user interface.",
     "total_prs_in_release": 193,
@@ -14963,8 +14991,8 @@
         "author_name": "Wladimir J. van der Laan",
         "merge_time_days": 6,
         "categories": [
-          "Core Infrastructure",
-          "P2P Network"
+          "P2P Network",
+          "Core Infrastructure"
         ],
         "impact_category": "Wallet & User Tools",
         "public_summary": "This PR enhances the `getpeerinfo` RPC command by adding the local listen address for incoming connections. This provides users with more detailed and useful network diagnostics, clarifying how peers are connecting to their node.",
@@ -15059,7 +15087,7 @@
   {
     "version": "0.14.1",
     "status": "released",
-    "last_active_date": "Apr 13, 2017",
+    "last_active_date": "Apr 22, 2017",
     "summary": "Release notes and changes for Bitcoin Core 0.14.1.",
     "release_summary": "This release delivers various bug fixes and performance improvements across the Bitcoin Core client. Key updates include refinements to memory management for the UTXO cache, optimizations for block creation, and enhanced stability in network operations. Several RPC interface changes, including argument renames and improved error handling, are also part of this update.",
     "total_prs_in_release": 177,
@@ -15175,7 +15203,7 @@
   {
     "version": "0.14.0",
     "status": "released",
-    "last_active_date": "Feb 22, 2017",
+    "last_active_date": "Mar 08, 2017",
     "summary": "Release notes and changes for Bitcoin Core 0.14.0.",
     "release_summary": "Bitcoin Core 0.14.0 introduces significant performance enhancements for initial block download and network synchronization through optimizations like assumed-valid blocks and compact block relay. This release also expands RPC capabilities with new commands for wallet management and improved fee handling, alongside various stability and security improvements.",
     "total_prs_in_release": 198,
@@ -15223,8 +15251,8 @@
         "author_name": "MarcoFalke",
         "merge_time_days": 0,
         "categories": [
-          "Mempool & Fees",
-          "P2P Network"
+          "P2P Network",
+          "Mempool & Fees"
         ],
         "impact_category": "Performance & Optimization",
         "public_summary": "This PR, a refinement of #9313, ensures nodes that don't accept free transactions always communicate their minimum fee requirements. This improves network efficiency by preventing the relay of transactions that would be rejected.",
@@ -15350,9 +15378,9 @@
         "author_name": "Alex Morcos",
         "merge_time_days": 5,
         "categories": [
-          "Mempool & Fees",
+          "P2P Network",
           "Ecosystem",
-          "P2P Network"
+          "Mempool & Fees"
         ],
         "impact_category": "Performance & Optimization",
         "public_summary": "This PR introduces a mechanism for nodes to inform peers if they don't accept free transactions by sending a fee filter. This helps optimize network resource usage by avoiding unnecessary transaction relay.",
@@ -15422,8 +15450,8 @@
         "author_name": "Matt Corallo",
         "merge_time_days": 25,
         "categories": [
-          "P2P Network",
-          "Consensus"
+          "Consensus",
+          "P2P Network"
         ],
         "impact_category": "Performance & Optimization",
         "public_summary": "This PR enables nodes to relay compact block messages to peers even before receiving the full block from the originating peer. This significantly reduces block propagation times across the network.",
@@ -15462,7 +15490,7 @@
   {
     "version": "0.13.2",
     "status": "released",
-    "last_active_date": "Dec 19, 2016",
+    "last_active_date": "Jan 03, 2017",
     "summary": "Release notes and changes for Bitcoin Core 0.13.2.",
     "release_summary": "This Bitcoin Core 0.13.2 release provides improvements to network protocol efficiency, transaction handling, and security. It includes updates to compact block relay and mempool admission policies, alongside a critical cryptography library update. Wallet transaction submission behavior has also been refined to improve reliability.",
     "total_prs_in_release": 38,
@@ -15549,7 +15577,7 @@
   {
     "version": "0.13.1",
     "status": "released",
-    "last_active_date": "Oct 25, 2016",
+    "last_active_date": "Oct 27, 2016",
     "summary": "Release notes and changes for Bitcoin Core 0.13.1.",
     "release_summary": "Bitcoin Core 0.13.1 defines activation parameters for the Segregated Witness (SegWit) soft fork and includes significant updates to network protocols. This version introduces compact block relay, alongside various P2P enhancements for privacy and connectivity, and performance optimizations for transaction validation.",
     "total_prs_in_release": 69,
@@ -15762,7 +15790,7 @@
   {
     "version": "0.13.0",
     "status": "released",
-    "last_active_date": "Aug 10, 2016",
+    "last_active_date": "Oct 18, 2016",
     "summary": "Release notes and changes for Bitcoin Core 0.13.0.",
     "release_summary": "This release integrates foundational protocol upgrades, significant security enhancements, and improvements to node performance and wallet architecture. Key developments include the integration of Segregated Witness code and Compact Blocks for network efficiency, alongside the introduction of Hierarchical Deterministic wallets. Overall system robustness and security have been strengthened against various attack vectors.",
     "total_prs_in_release": 47,
@@ -15825,8 +15853,8 @@
         "author_name": "Pieter Wuille",
         "merge_time_days": 18,
         "categories": [
-          "P2P Network",
-          "Consensus"
+          "Consensus",
+          "P2P Network"
         ],
         "impact_category": "Strategic Initiatives",
         "public_summary": "This PR represents a crucial rebase of the Segregated Witness (SegWit) implementation, a major protocol upgrade for Bitcoin. Rebasng ensures the SegWit code is up-to-date with the latest master branch, facilitating its eventual activation and integration.",
@@ -15893,7 +15921,7 @@
   {
     "version": "0.12.0",
     "status": "released",
-    "last_active_date": "Jul 06, 2016",
+    "last_active_date": "Jun 11, 2019",
     "summary": "Release notes and changes for Bitcoin Core 0.12.0.",
     "release_summary": "This release introduces significant performance and security enhancements to transaction validation, notably through libsecp256k1 integration. It also activates important consensus rule upgrades for new transaction features via BIP9, alongside major changes to mempool policy including opt-in Replace-by-Fee. Further improvements focus on P2P network efficiency, bandwidth control, and enhanced user privacy.",
     "total_prs_in_release": 720,
@@ -15997,9 +16025,9 @@
         "author_name": "Drak",
         "merge_time_days": 47,
         "categories": [
-          "Mempool & Fees",
+          "Consensus",
           "Ecosystem",
-          "Consensus"
+          "Mempool & Fees"
         ],
         "impact_category": "Security & Consensus",
         "public_summary": "This PR backports the crucial BIP9 versionbits softfork mechanism along with BIP68, BIP112, and BIP113. It enables the activation of important new transaction features like relative lock-times and `CHECKLOCKTIMEVERIFY`.",
@@ -16055,8 +16083,8 @@
         "author_name": "Wladimir J. van der Laan",
         "merge_time_days": 14,
         "categories": [
-          "Core Infrastructure",
-          "P2P Network"
+          "P2P Network",
+          "Core Infrastructure"
         ],
         "impact_category": "Wallet & User Tools",
         "public_summary": "This PR enhances the `getnetwork` RPC by including a flag indicating whether transaction relay is currently enabled or disabled. This provides users and applications with better insight into the node's network configuration and behavior.",
@@ -16196,8 +16224,8 @@
         "author_name": "Gregory Maxwell",
         "merge_time_days": 10,
         "categories": [
-          "Mempool & Fees",
-          "P2P Network"
+          "P2P Network",
+          "Mempool & Fees"
         ],
         "impact_category": "Performance & Optimization",
         "public_summary": "This PR optimizes transaction retrieval from peers by preventing the mempool from being queried for `GETDATA` requests concerning transactions accepted after the last mempool request. This improves network efficiency and prevents unnecessary processing.",
@@ -16353,8 +16381,8 @@
         "author_name": "Wladimir J. van der Laan",
         "merge_time_days": 0,
         "categories": [
-          "Core Infrastructure",
-          "P2P Network"
+          "P2P Network",
+          "Core Infrastructure"
         ],
         "impact_category": "Performance & Optimization",
         "public_summary": "This PR improves network efficiency by correctly accounting for `verack` messages received from peers that support the `sendheaders` protocol. It ensures proper connection state management and prevents unnecessary retransmissions.",
@@ -16509,8 +16537,8 @@
         "author_name": "Mark Friedenbach",
         "merge_time_days": 69,
         "categories": [
-          "Mempool & Fees",
-          "Consensus"
+          "Consensus",
+          "Mempool & Fees"
         ],
         "impact_category": "Security & Consensus",
         "public_summary": "This PR implements BIP-113, which changes how transaction lock-times are evaluated for transactions within the mempool. It ensures transactions using relative time locks are only considered valid if their lock-time is met based on the median time past of the mempool's ancestors, not just the current block.",
@@ -17105,8 +17133,8 @@
         "author_name": "Wladimir J. van der Laan",
         "merge_time_days": 15,
         "categories": [
-          "Mempool & Fees",
-          "P2P Network"
+          "P2P Network",
+          "Mempool & Fees"
         ],
         "impact_category": "Maintenance & Tech Debt",
         "public_summary": "This PR re-removes unnecessary `ERROR` logging for routine mempool transaction rejections, reducing log spam and making critical errors easier to identify. This significantly improves log readability for node operators and developers.",
@@ -17162,8 +17190,8 @@
         "author_name": "Luke Dashjr",
         "merge_time_days": 19,
         "categories": [
-          "Core Infrastructure",
-          "P2P Network"
+          "P2P Network",
+          "Core Infrastructure"
         ],
         "impact_category": "Network & Privacy",
         "public_summary": "This PR introduces a convenient toggle to enable or disable all network activity for a Bitcoin Core node. This provides users with greater control over network usage and privacy.",
@@ -17314,7 +17342,7 @@
   {
     "version": "0.11.0",
     "status": "released",
-    "last_active_date": "Oct 09, 2015",
+    "last_active_date": "Aug 05, 2015",
     "summary": "Release notes and changes for Bitcoin Core 0.11.0.",
     "release_summary": "Bitcoin Core 0.11.0 introduces significant advancements in node operation and network interaction. Key changes include the addition of automatic block pruning for improved disk space management and initial support for `CHECKLOCKTIMEVERIFY` (BIP65) in the mempool. The release further strengthens network security, efficiency, and privacy through various P2P improvements, DoS mitigations, and Tor stream isolation.",
     "total_prs_in_release": 312,
@@ -17604,8 +17632,8 @@
         "author_name": "Peter Todd",
         "merge_time_days": 4,
         "categories": [
-          "P2P Network",
-          "Consensus"
+          "Consensus",
+          "P2P Network"
         ],
         "impact_category": "Performance & Optimization",
         "public_summary": "This PR backports recent improvements related to handling rejected transactions and blocks to the v0.11 release branch, enhancing network robustness. It ensures older stable versions benefit from critical fixes that prevent re-downloading or re-processing known invalid data.",
@@ -17687,7 +17715,7 @@
   {
     "version": "0.10.0",
     "status": "released",
-    "last_active_date": "May 05, 2015",
+    "last_active_date": "Apr 01, 2015",
     "summary": "Release notes and changes for Bitcoin Core 0.10.0.",
     "release_summary": "This release focuses on significant improvements to network synchronization, transaction fee estimation, and security enhancements for cryptographic operations. It also introduces new capabilities for interacting with the node via RPC and a REST interface.",
     "total_prs_in_release": 1611,
@@ -17789,7 +17817,7 @@
         "description": "don't trickle messages for whitelisted nodes",
         "author": "rubensayshi",
         "author_uuid": "auto_ruben_de_vries",
-        "author_name": "ruben de vries",
+        "author_name": "Ruben de Vries",
         "merge_time_days": 1,
         "categories": [
           "P2P Network"

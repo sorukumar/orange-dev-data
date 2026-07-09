@@ -2,9 +2,9 @@
   "generated_at": "2026-07-08",
   "contributors_tracked": 7647,
   "window_reference": {
-    "anchor_timestamp": "2026-07-08T23:59:59.419765+00:00",
-    "current_window_start": "2026-06-08T23:59:59.419765+00:00",
-    "previous_window_start": "2026-05-09T23:59:59.419765+00:00",
+    "anchor_timestamp": "2026-07-08T23:59:59.554809+00:00",
+    "current_window_start": "2026-06-08T23:59:59.554809+00:00",
+    "previous_window_start": "2026-05-09T23:59:59.554809+00:00",
     "window_days": 30
   },
   "widgets": {
@@ -300,19 +300,29 @@
       "definition": "Random selection of top retired contributors by impact score to feature as ecosystem veterans.",
       "items": [
         {
-          "uuid": "auto_manuel_araoz",
-          "display_name": "manuel araoz",
+          "uuid": "auto_peter_coinkite_inc",
+          "display_name": "Peter (Coinkite Inc)",
+          "impact_score": 28.0
+        },
+        {
+          "uuid": "can_martti_malmi",
+          "display_name": "Martti Malmi",
+          "impact_score": 52.0
+        },
+        {
+          "uuid": "auto_ethan_kosakovsky",
+          "display_name": "ethan kosakovsky",
           "impact_score": 24.0
         },
         {
-          "uuid": "can_omar_shibli",
-          "display_name": "Omar Shibli",
-          "impact_score": 23.0
+          "uuid": "can_laszlo_hanyecz",
+          "display_name": "Laszlo Hanyecz",
+          "impact_score": 48.0
         },
         {
-          "uuid": "auto_elliott_jin",
-          "display_name": "elliott jin",
-          "impact_score": 26.0
+          "uuid": "auto_ruben_de_vries",
+          "display_name": "Ruben de Vries",
+          "impact_score": 28.0
         }
       ]
     }
