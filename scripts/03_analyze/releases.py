@@ -177,8 +177,19 @@ def process_releases():
         notes_path_2 = f"data/sources/bitcoin/doc/release-notes/release-notes-{clean_ms}.0.md"
         is_released = os.path.exists(notes_path_1) or os.path.exists(notes_path_2)
         
+        prs_in_notes = 0
         if is_released:
             actual_notes_path = notes_path_1 if os.path.exists(notes_path_1) else notes_path_2
+            
+            # Parse PR count from release notes for minor releases
+            try:
+                with open(actual_notes_path, 'r', encoding='utf-8') as rn_file:
+                    content = rn_file.read()
+                    prs = re.findall(r'^-\s+#\d+', content, re.MULTILINE)
+                    prs_in_notes = len(prs)
+            except Exception:
+                pass
+                
             rel_path = os.path.relpath(actual_notes_path, "data/sources/bitcoin")
             git_date = get_git_commit_date("data/sources/bitcoin", rel_path)
             
@@ -204,7 +215,7 @@ def process_releases():
             "last_active_date": last_active_date,
             "summary": f"Release notes and changes for Bitcoin Core {milestone}.",
             "release_summary": None,
-            "total_prs_in_release": total_prs_per_milestone.get(milestone, 0),
+            "total_prs_in_release": max(total_prs_per_milestone.get(milestone, 0), prs_in_notes),
             "highlights": [],
             "prs": []
         }
