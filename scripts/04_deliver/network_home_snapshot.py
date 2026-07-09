@@ -17,6 +17,7 @@ REVIEW_EVENTS_PATHS = [
 ]
 SOCIAL_COMBINED_PATH = 'data/raw/social_combined.parquet'
 SOCIAL_THREADS_PATH = 'data/enriched/social_threads.parquet'
+RELEASES_PATH = 'output/tracker/releases.json'
 OUTPUT_PATH = 'output/shared/network_home_snapshot.json'
 
 WINDOW_DAYS = 30
@@ -142,6 +143,42 @@ def generate_snapshot():
 
     current_start = anchor - pd.Timedelta(days=WINDOW_DAYS)
     previous_start = anchor - pd.Timedelta(days=WINDOW_DAYS * 2)
+
+    # Calculate release highlights for the windows
+    releases = []
+    if os.path.exists(RELEASES_PATH):
+        releases = read_json(RELEASES_PATH, [])
+        
+    def get_highlight_release(start_time, end_time):
+        if not releases:
+            return None
+            
+        # 1. Look for a release that actually shipped within this window
+        for r in releases:
+            if r.get('status') == 'released':
+                # Date format is like "Jun 04, 2026"
+                r_date = pd.to_datetime(r.get('date', ''), errors='coerce')
+                if pd.notna(r_date) and start_time.tz_localize(None) <= r_date <= end_time.tz_localize(None):
+                    return {
+                        'version': r.get('version'),
+                        'status': 'shipped',
+                        'date': r.get('date'),
+                        'prs': r.get('total_prs_in_release') or r.get('total_prs', 0)
+                    }
+                    
+        # 2. If nothing shipped recently, highlight the upcoming release
+        upcoming = next((r for r in releases if r.get('status') == 'upcoming'), None)
+        if upcoming:
+            return {
+                'version': upcoming.get('version'),
+                'status': 'upcoming',
+                'date': upcoming.get('last_active_date', ''),
+                'prs': upcoming.get('total_prs_in_release') or upcoming.get('total_prs', 0)
+            }
+            
+        return None
+
+    recent_release_30d = get_highlight_release(current_start, anchor)
 
     # Active contributors current vs previous 30-day windows.
     active_current = count_window(global_series, current_start, anchor)
@@ -366,6 +403,8 @@ def generate_snapshot():
     current_start_7 = anchor - pd.Timedelta(days=7)
     previous_start_7 = anchor - pd.Timedelta(days=14)
 
+    recent_release_7d = get_highlight_release(current_start_7, anchor)
+
     active_current_7d = count_window(global_series, current_start_7, anchor)
     active_previous_7d = count_window(global_series, previous_start_7, current_start_7)
     active_delta_7d = active_current_7d - active_previous_7d
@@ -494,6 +533,7 @@ def generate_snapshot():
                 'definition': 'Most-mentioned BIPs in current 30-day discussion window versus previous 30-day baseline.',
                 'items': recent_bips,
             },
+            'highlighted_release_30d': recent_release_30d,
             'research_activity_30d': {
                 'messages_30d': research_messages_30d,
                 'previous_30d': research_messages_previous_30d,
@@ -533,6 +573,7 @@ def generate_snapshot():
                 'definition': 'Most-mentioned BIPs in current 7-day discussion window versus previous 7-day baseline.',
                 'items': recent_bips_7d,
             },
+            'highlighted_release_7d': recent_release_7d,
             'research_activity_7d': {
                 'messages_7d': research_messages_7d,
                 'previous_7d': research_messages_previous_7d,

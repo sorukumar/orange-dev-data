@@ -2,9 +2,9 @@
   "generated_at": "2026-07-08",
   "contributors_tracked": 7647,
   "window_reference": {
-    "anchor_timestamp": "2026-07-08T23:59:59.316066+00:00",
-    "current_window_start": "2026-06-08T23:59:59.316066+00:00",
-    "previous_window_start": "2026-05-09T23:59:59.316066+00:00",
+    "anchor_timestamp": "2026-07-08T23:59:59.419765+00:00",
+    "current_window_start": "2026-06-08T23:59:59.419765+00:00",
+    "previous_window_start": "2026-05-09T23:59:59.419765+00:00",
     "window_days": 30
   },
   "widgets": {
@@ -90,6 +90,12 @@
           "delta_30d": -9
         }
       ]
+    },
+    "highlighted_release_30d": {
+      "version": "32.0",
+      "status": "upcoming",
+      "date": "Jul 08, 2026",
+      "prs": 46
     },
     "research_activity_30d": {
       "messages_30d": 265,
@@ -229,6 +235,12 @@
         }
       ]
     },
+    "highlighted_release_7d": {
+      "version": "32.0",
+      "status": "upcoming",
+      "date": "Jul 08, 2026",
+      "prs": 46
+    },
     "research_activity_7d": {
       "messages_7d": 38,
       "previous_7d": 87,
@@ -288,19 +300,19 @@
       "definition": "Random selection of top retired contributors by impact score to feature as ecosystem veterans.",
       "items": [
         {
-          "uuid": "auto_marco_pontello",
-          "display_name": "marco pontello",
-          "impact_score": 23.0
-        },
-        {
           "uuid": "auto_manuel_araoz",
           "display_name": "manuel araoz",
           "impact_score": 24.0
         },
         {
-          "uuid": "auto_thomas_kerin",
-          "display_name": "Thomas Kerin",
-          "impact_score": 41.0
+          "uuid": "can_omar_shibli",
+          "display_name": "Omar Shibli",
+          "impact_score": 23.0
+        },
+        {
+          "uuid": "auto_elliott_jin",
+          "display_name": "elliott jin",
+          "impact_score": 26.0
         }
       ]
     }
