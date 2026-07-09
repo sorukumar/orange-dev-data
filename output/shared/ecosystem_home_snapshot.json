@@ -2,9 +2,9 @@
   "generated_at": "2026-07-08",
   "contributors_tracked": 7647,
   "window_reference": {
-    "anchor_timestamp": "2026-07-08T23:59:59.166589+00:00",
-    "current_window_start": "2026-06-08T23:59:59.166589+00:00",
-    "previous_window_start": "2026-05-09T23:59:59.166589+00:00",
+    "anchor_timestamp": "2026-07-08T23:59:59.926600+00:00",
+    "current_window_start": "2026-06-08T23:59:59.926600+00:00",
+    "previous_window_start": "2026-05-09T23:59:59.926600+00:00",
     "window_days": 30
   },
   "widgets": {
@@ -95,7 +95,7 @@
       "version": "31.1",
       "status": "shipped",
       "date": "Jul 06, 2026",
-      "prs": 9
+      "prs": 33
     },
     "research_activity_30d": {
       "messages_30d": 265,
@@ -239,7 +239,7 @@
       "version": "31.1",
       "status": "shipped",
       "date": "Jul 06, 2026",
-      "prs": 9
+      "prs": 33
     },
     "research_activity_7d": {
       "messages_7d": 38,
@@ -300,29 +300,19 @@
       "definition": "Random selection of top retired contributors by impact score to feature as ecosystem veterans.",
       "items": [
         {
-          "uuid": "auto_christopher_gilliard",
-          "display_name": "Christopher Gilliard",
+          "uuid": "can_john_newbery",
+          "display_name": "John Newbery",
+          "impact_score": 35.0
+        },
+        {
+          "uuid": "auto_andy_chase",
+          "display_name": "andy chase",
           "impact_score": 24.0
         },
         {
-          "uuid": "auto_upal_chakraborty",
-          "display_name": "upal chakraborty",
-          "impact_score": 23.0
-        },
-        {
-          "uuid": "auto_manuel_araoz",
-          "display_name": "manuel araoz",
-          "impact_score": 24.0
-        },
-        {
-          "uuid": "can_alan_reiner",
-          "display_name": "Alan Reiner",
-          "impact_score": 26.0
-        },
-        {
-          "uuid": "can_jorge_tim_n",
-          "display_name": "Jorge Tim\u00f3n",
-          "impact_score": 46.0
+          "uuid": "can_nils_schneider",
+          "display_name": "Nils Schneider",
+          "impact_score": 65.0
         }
       ]
     }
