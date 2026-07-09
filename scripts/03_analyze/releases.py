@@ -67,6 +67,31 @@ def process_releases():
     df = pd.read_parquet(INPUT_PR_PARQUET)
     df = df[(df['repository_name'] == 'bitcoin/bitcoin') & (df['merged_at'].notna())].copy()
     
+    # NEW STEP: Override milestones from official release notes
+    pr_to_milestone = {}
+    release_notes_dir = "data/sources/bitcoin/doc/release-notes"
+    if os.path.exists(release_notes_dir):
+        for filename in os.listdir(release_notes_dir):
+            if filename.startswith("release-notes-") and filename.endswith(".md"):
+                version = filename[len("release-notes-"):-3]
+                filepath = os.path.join(release_notes_dir, filename)
+                try:
+                    with open(filepath, 'r', encoding='utf-8') as f:
+                        content = f.read()
+                        pr_nums = re.findall(r'^-\s+#(\d+)', content, re.MULTILINE)
+                        for pr_num in pr_nums:
+                            pr_to_milestone[int(pr_num)] = version
+                except Exception as e:
+                    pass
+                    
+    def override_milestone(row):
+        pr_id = row['pr_number']
+        if pd.notna(pr_id) and int(pr_id) in pr_to_milestone:
+            return pr_to_milestone[int(pr_id)]
+        return row['milestone']
+        
+    df['milestone'] = df.apply(override_milestone, axis=1)
+
     # 1. Compute Release Cutoff Dates from explicitly tagged PRs
     tagged_df = df[df['milestone'].notna()]
     cutoff_dates = {}
