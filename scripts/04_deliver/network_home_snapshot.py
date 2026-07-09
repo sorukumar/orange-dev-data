@@ -157,12 +157,12 @@ def generate_snapshot():
         for r in releases:
             if r.get('status') == 'released':
                 # Date format is like "Jun 04, 2026"
-                r_date = pd.to_datetime(r.get('date', ''), errors='coerce')
+                r_date = pd.to_datetime(r.get('last_active_date', ''), errors='coerce')
                 if pd.notna(r_date) and start_time.tz_localize(None) <= r_date <= end_time.tz_localize(None):
                     return {
                         'version': r.get('version'),
                         'status': 'shipped',
-                        'date': r.get('date'),
+                        'date': r.get('last_active_date'),
                         'prs': r.get('total_prs_in_release') or r.get('total_prs', 0)
                     }
                     
