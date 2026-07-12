@@ -1,19 +1,11 @@
-import os
-import yaml
-import glob
 import re
+import os
+import glob
 
-opensats_files = glob.glob("data/sources/opensats/data/projects/*.mdx")
-for f in opensats_files:
-    with open(f, "r") as file:
+files = glob.glob("data/sources/bitcoin/doc/release-notes/*.md")
+for f in files:
+    with open(f, 'r') as file:
         content = file.read()
-        match = re.match(r"^---\n(.*?)\n---", content, re.DOTALL)
-        if match:
-            frontmatter = yaml.safe_load(match.group(1))
-            git_url = frontmatter.get("git", "")
-            if "github.com" in git_url:
-                parts = git_url.strip("/").split("/")
-                if len(parts) >= 4:
-                    handle = parts[3]
-                    print(f"OpenSats Project: {frontmatter.get('title')}, Handle: {handle}, Git: {git_url}")
-
+        # Find all PRs like "- #12345" or "- #123("
+        prs = re.findall(r'^-\s+#\d+', content, re.MULTILINE)
+        print(f"{os.path.basename(f)}: {len(prs)} PRs found")
