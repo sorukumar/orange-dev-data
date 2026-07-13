@@ -51,44 +51,44 @@
   "impact_score": 2.0,
   "p2016_impact_score": 2.0,
   "modern_impact_score": 0.0,
-  "threads_started": 3.0,
-  "replies_sent": 5.0,
+  "threads_started": 5.0,
+  "replies_sent": 7.0,
   "ml_threads": 0.0,
-  "delving_threads": 3.0,
+  "delving_threads": 5.0,
   "ml_responses": 0.0,
-  "delving_responses": 5.0,
-  "first_active": "2025-01-07T18:02:54.863000",
-  "last_active": "2025-06-13T16:33:29.352000",
+  "delving_responses": 7.0,
+  "first_active": null,
+  "last_active": null,
   "dev_type": "Participant",
   "expertise_domains": [
     "Mining",
-    "L2",
-    "Script"
+    "Script",
+    "L2"
   ],
   "expertise_by_source": {
     "discussion": {
-      "L2": 0.266,
-      "Mining": 0.532,
-      "Script": 0.202
+      "L2": 0.182,
+      "Mining": 0.576,
+      "Script": 0.242
     }
   },
   "expertise_domain_scores": {
-    "L2": 0.266,
-    "Mining": 0.532,
-    "Script": 0.202
+    "L2": 0.182,
+    "Mining": 0.576,
+    "Script": 0.242
   },
-  "p2016_posts": 8.0,
-  "modern_posts": 8.0,
+  "p2016_posts": 12.0,
+  "modern_posts": 12.0,
   "p2016_ml_posts": 0.0,
-  "p2016_delving_posts": 8.0,
+  "p2016_delving_posts": 12.0,
   "modern_ml_posts": 0.0,
-  "modern_delving_posts": 8.0,
+  "modern_delving_posts": 12.0,
   "is_engineer": false,
   "is_reviewer": true,
   "is_researcher": false,
   "is_bip_author": false,
   "global_first_active": "2022-11-08T14:22:24",
-  "global_last_active": "2025-06-13T16:33:29.352000",
+  "global_last_active": "2023-01-13T02:14:52",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -107,9 +107,9 @@
   },
   "last_message": {
     "source": "delving",
-    "subject": "Re: Scaling Noncustodial Mining Payouts with CTV",
-    "date": "2025-06-13",
-    "link": "https://delvingbitcoin.org/t/scaling-noncustodial-mining-payouts-with-ctv/1753/16"
+    "subject": "Re: Fee Selection for CTV-Based Mining Pool Fanouts",
+    "date": "2026-07-09",
+    "link": "https://delvingbitcoin.org/t/fee-selection-for-ctv-based-mining-pool-fanouts/2698/6"
   },
   "social_history": {
     "2025": {
@@ -117,6 +117,15 @@
       "ecash": 2,
       "lightning": 8,
       "mining": 8
+    },
+    "2026": {
+      "covenants": 4,
+      "ecash": 4,
+      "mempool-fees": 4,
+      "mining": 4,
+      "quantum": 4,
+      "scaling": 4,
+      "spam-filtering": 4
     }
   }
 }

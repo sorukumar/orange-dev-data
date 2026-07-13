@@ -17,24 +17,24 @@
   "roles": [
     "BIP Author"
   ],
-  "total_commits": 104.0,
-  "authored_commits": 104.0,
-  "tier1_authored_commits": 104.0,
+  "total_commits": 106.0,
+  "authored_commits": 106.0,
+  "tier1_authored_commits": 106.0,
   "tier2_authored_commits": 0.0,
   "merge_commits": 0.0,
   "tier1_merge_commits": 0.0,
   "tier2_merge_commits": 0.0,
   "self_merges": 0.0,
-  "total_additions": 3905.0,
-  "total_deletions": 744.0,
+  "total_additions": 3919.0,
+  "total_deletions": 755.0,
   "first_core_commit": "2018-12-20T16:56:46+00:00",
-  "last_core_commit": "2026-07-09T00:12:06+00:00",
+  "last_core_commit": "2026-07-12T10:39:54+00:00",
   "first_ecosystem_commit": null,
   "last_ecosystem_commit": null,
   "first_commit": "2018-12-20T16:56:46",
-  "last_commit": "2026-07-09T00:12:06",
-  "p2016_authored_commits": 104.0,
-  "modern_authored_commits": 77.0,
+  "last_commit": "2026-07-12T10:39:54",
+  "p2016_authored_commits": 106.0,
+  "modern_authored_commits": 79.0,
   "co_authored_commits": 40.0,
   "bips_authored": 2.0,
   "p2016_bips_authored": 2.0,
@@ -57,9 +57,9 @@
   "avg_pr_ack_velocity_days": 16.60288532021605,
   "avg_concept_lead_time_days": 24.42146058384774,
   "review_reciprocity": 2.8225806451612905,
-  "hybrid_score": 1.0562,
-  "p2016_hybrid_score": 1.0598,
-  "modern_hybrid_score": 1.0604,
+  "hybrid_score": 1.062,
+  "p2016_hybrid_score": 1.0656,
+  "modern_hybrid_score": 1.0677,
   "impact_score": 47.0,
   "p2016_impact_score": 47.0,
   "modern_impact_score": 47.0,
@@ -69,8 +69,8 @@
   "delving_threads": 9.0,
   "ml_responses": 2.0,
   "delving_responses": 25.0,
-  "first_active": "2024-05-20T17:55:19.232000",
-  "last_active": "2026-04-08T15:38:12.011000",
+  "first_active": null,
+  "last_active": null,
   "dev_type": "Protocol Designer",
   "expertise_domains": [
     "Infrastructure",
@@ -83,10 +83,10 @@
       "Privacy": 0.5
     },
     "code": {
-      "Consensus": 0.246,
-      "Infrastructure": 0.674,
-      "Network": 0.032,
-      "Wallet": 0.048
+      "Consensus": 0.262,
+      "Infrastructure": 0.666,
+      "Network": 0.029,
+      "Wallet": 0.043
     },
     "discussion": {
       "Privacy": 0.667,
@@ -94,10 +94,10 @@
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.0738,
-    "Infrastructure": 0.4522,
+    "Consensus": 0.0786,
+    "Infrastructure": 0.4498,
     "Privacy": 0.3834,
-    "Wallet": 0.081
+    "Wallet": 0.0795
   },
   "p2016_posts": 39.0,
   "modern_posts": 39.0,
@@ -110,7 +110,7 @@
   "is_researcher": true,
   "is_bip_author": true,
   "global_first_active": "2018-12-08T16:14:40",
-  "global_last_active": "2026-07-09T00:12:06",
+  "global_last_active": "2026-07-12T10:39:54",
   "github_location": "Toronto",
   "github_company": null,
   "github_bio": null,
@@ -172,12 +172,12 @@
     "2026": {
       "Build & CI": 0.67,
       "Consensus": 21.17,
-      "Database": 4.0,
+      "Database": 4.67,
       "Documentation": 8.5,
       "GUI": 2.0,
-      "Node & RPC": 3.83,
+      "Node & RPC": 4.5,
       "P2P Network": 2.0,
-      "Tests": 39.17,
+      "Tests": 39.83,
       "Utilities": 2.67
     }
   },

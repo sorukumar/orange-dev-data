@@ -45,40 +45,47 @@
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": null,
-  "hybrid_score": 0.0,
-  "p2016_hybrid_score": 0.0,
+  "hybrid_score": 0.0233,
+  "p2016_hybrid_score": 0.0444,
   "modern_hybrid_score": 0.0,
-  "impact_score": 0.0,
-  "p2016_impact_score": 0.0,
+  "impact_score": 1.0,
+  "p2016_impact_score": 3.0,
   "modern_impact_score": 0.0,
-  "threads_started": 0.0,
-  "replies_sent": 0.0,
-  "ml_threads": 0.0,
+  "threads_started": 5.0,
+  "replies_sent": 4.0,
+  "ml_threads": 5.0,
   "delving_threads": 0.0,
-  "ml_responses": 0.0,
+  "ml_responses": 4.0,
   "delving_responses": 0.0,
-  "first_active": null,
-  "last_active": null,
+  "first_active": "2017-06-11T15:05:24",
+  "last_active": "2019-12-06T12:47:38",
   "dev_type": "Participant",
   "expertise_domains": [
-    "Infrastructure"
+    "Consensus",
+    "Privacy"
   ],
-  "expertise_by_source": {},
-  "expertise_domain_scores": {
-    "Infrastructure": 1.0
+  "expertise_by_source": {
+    "discussion": {
+      "Consensus": 0.667,
+      "Privacy": 0.333
+    }
   },
-  "p2016_posts": 0.0,
+  "expertise_domain_scores": {
+    "Consensus": 0.667,
+    "Privacy": 0.333
+  },
+  "p2016_posts": 9.0,
   "modern_posts": 0.0,
-  "p2016_ml_posts": 0.0,
+  "p2016_ml_posts": 9.0,
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
   "is_engineer": false,
   "is_reviewer": false,
-  "is_researcher": false,
+  "is_researcher": true,
   "is_bip_author": false,
-  "global_first_active": null,
-  "global_last_active": null,
+  "global_first_active": "2017-06-11T15:05:24",
+  "global_last_active": "2019-12-06T12:47:38",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -86,5 +93,31 @@
   "github_blog": null,
   "github_followers": null,
   "activity_status": "",
-  "is_top_50": false
+  "is_top_50": false,
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "[bitcoin-dev] Bitcoin pointers",
+    "date": "2017-06-11",
+    "link": "https://gnusha.org/pi/bitcoindev/FD96E80B-A6ED-436D-876D-423A3C3E7566@gmail.com"
+  },
+  "last_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoin-dev] easypaysy - A layer-two protocol to send payments\n without addresses",
+    "date": "2019-12-06",
+    "link": "https://gnusha.org/pi/bitcoindev/6CB7E73C-57C9-428B-83E6-36113B619BFB@gmail.com"
+  },
+  "social_history": {
+    "2017": {
+      "other": 1,
+      "script-opcodes": 1
+    },
+    "2018": {
+      "privacy": 1,
+      "taproot": 1
+    },
+    "2019": {
+      "other": 4,
+      "taproot": 1
+    }
+  }
 }

@@ -1,8 +1,8 @@
 {
-  "display_name": "w0xlt",
+  "display_name": "woltx",
   "github_login_final": "w0xlt",
   "delving_username_final": null,
-  "uuid": "auto_w0xlt",
+  "uuid": "auto_woltx",
   "badges": null,
   "roles": null,
   "total_commits": 90.0,
@@ -29,56 +29,63 @@
   "modern_bips_authored": 0.0,
   "first_bip_date": null,
   "last_bip_date": null,
-  "avg_review_latency_days": 461.5114073909773,
-  "reviews_count": 581.0,
+  "avg_review_latency_days": 460.49207586618877,
+  "reviews_count": 582.0,
   "avg_approval_latency_days": 336.7730273409642,
   "approvals_count": 546.0,
-  "tier1_reviews_count": 579.0,
+  "tier1_reviews_count": 580.0,
   "tier2_reviews_count": 2.0,
-  "p2016_reviews_count": 581.0,
-  "modern_reviews_count": 304.0,
+  "p2016_reviews_count": 582.0,
+  "modern_reviews_count": 305.0,
   "first_review_date": "2021-11-15T13:41:35",
-  "last_review_date": "2026-07-09T00:00:55",
+  "last_review_date": "2026-07-10T23:36:40",
   "prs_authored": 116.0,
   "tier1_prs_authored": 116.0,
   "tier2_prs_authored": 0.0,
   "avg_pr_ack_velocity_days": 9.518791870915033,
   "avg_concept_lead_time_days": 7.043052151416122,
-  "review_reciprocity": 5.008620689655173,
-  "hybrid_score": 0.233,
-  "p2016_hybrid_score": 0.233,
-  "modern_hybrid_score": 0.2126,
-  "impact_score": 13.0,
-  "p2016_impact_score": 13.0,
+  "review_reciprocity": 5.017241379310345,
+  "hybrid_score": 0.2447,
+  "p2016_hybrid_score": 0.2519,
+  "modern_hybrid_score": 0.2127,
+  "impact_score": 14.0,
+  "p2016_impact_score": 14.0,
   "modern_impact_score": 12.0,
-  "threads_started": 0.0,
-  "replies_sent": 0.0,
-  "ml_threads": 0.0,
+  "threads_started": 4.0,
+  "replies_sent": 3.0,
+  "ml_threads": 4.0,
   "delving_threads": 0.0,
-  "ml_responses": 0.0,
+  "ml_responses": 3.0,
   "delving_responses": 0.0,
-  "first_active": null,
-  "last_active": null,
+  "first_active": "2022-05-23T20:31:23",
+  "last_active": "2022-10-23T02:00:07",
   "dev_type": "Reviewer",
   "expertise_domains": [
-    "Infrastructure"
+    "Privacy",
+    "L2"
   ],
-  "expertise_by_source": {},
-  "expertise_domain_scores": {
-    "Infrastructure": 1.0
+  "expertise_by_source": {
+    "discussion": {
+      "L2": 0.122,
+      "Privacy": 0.878
+    }
   },
-  "p2016_posts": 0.0,
+  "expertise_domain_scores": {
+    "L2": 0.122,
+    "Privacy": 0.878
+  },
+  "p2016_posts": 7.0,
   "modern_posts": 0.0,
-  "p2016_ml_posts": 0.0,
+  "p2016_ml_posts": 7.0,
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
   "is_engineer": false,
   "is_reviewer": true,
-  "is_researcher": false,
+  "is_researcher": true,
   "is_bip_author": false,
   "global_first_active": "2021-11-15T13:41:35",
-  "global_last_active": "2026-07-09T00:00:55",
+  "global_last_active": "2026-07-10T23:36:40",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -128,6 +135,30 @@
       "Tests": 21.5,
       "Utilities": 17.5,
       "Wallet": 0.5
+    }
+  },
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "[bitcoin-dev] =?utf-8?q?_Silent_Payments_=E2=80=93_Non-interactiv?=\n\t=?utf-8?q?e_private_payments_with_no_on-chain_overhead?=",
+    "date": "2022-05-23",
+    "link": "https://gnusha.org/pi/bitcoindev/yAzuw9BsMPNXQIeZG98n6d0-6C1ymv9ZCfKIV9ZZYc97wuVbsjkKF1pqS9Uc4ZTuGyh2nKNeRiDYPuklq64Y4UYQ4ITfnvvQo7vsSChvUMs=@protonmail.com"
+  },
+  "last_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoin-dev] Silent Payment v4 (coinjoin support added)",
+    "date": "2022-10-23",
+    "link": "https://gnusha.org/pi/bitcoindev/c4zJHH8C3dXNRFYDNKZShbmUcHYEl2A0bj8ByqgFxjb4pTOoKOi2_crU7YgZGhbmiCBPb_zrI3uZ0P4eNbpIJ43B-nPg0raxV-nsbl3x8rc=@protonmail.com"
+  },
+  "social_history": {
+    "2022": {
+      "ecash": 1,
+      "mining": 2,
+      "nostr": 1,
+      "privacy": 3,
+      "segwit": 1,
+      "silent-payments": 6,
+      "taproot": 1,
+      "testing-devtools": 1
     }
   }
 }

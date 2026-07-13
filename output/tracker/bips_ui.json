@@ -38,7 +38,7 @@
     "status": "Deployed",
     "theme": "Other",
     "maturity_score": 0.44,
-    "social_mention_count": 24,
+    "social_mention_count": 26,
     "revision_count": 198,
     "code_mention_count": 58,
     "authors": "Pieter Wuille, Jonas Nick, Tim Ruffing"
@@ -143,17 +143,6 @@
     "authors": "Nils Schneider, Matt Corallo"
   },
   {
-    "bip_id": "3",
-    "title": "Updated BIP Process",
-    "status": "Deployed",
-    "theme": "Other",
-    "maturity_score": 0.18,
-    "social_mention_count": 51,
-    "revision_count": 52,
-    "code_mention_count": 0,
-    "authors": "Murch"
-  },
-  {
     "bip_id": "342",
     "title": "Validation of Taproot Scripts",
     "status": "Deployed",
@@ -163,6 +152,17 @@
     "revision_count": 88,
     "code_mention_count": 14,
     "authors": "Pieter Wuille, Jonas Nick, Anthony Towns"
+  },
+  {
+    "bip_id": "360",
+    "title": "Pay-to-Merkle-Root (P2MR)",
+    "status": "Draft",
+    "theme": "Consensus & Soft Forks",
+    "maturity_score": 0.18,
+    "social_mention_count": 110,
+    "revision_count": 3,
+    "code_mention_count": 0,
+    "authors": "Hunter Beast, Ethan Heilman, Isabel Foxen Duke"
   },
   {
     "bip_id": "151",
@@ -176,15 +176,15 @@
     "authors": "Jonas Schnelli"
   },
   {
-    "bip_id": "360",
-    "title": "Pay-to-Merkle-Root (P2MR)",
-    "status": "Draft",
-    "theme": "Consensus & Soft Forks",
-    "maturity_score": 0.17,
-    "social_mention_count": 107,
-    "revision_count": 3,
+    "bip_id": "3",
+    "title": "Updated BIP Process",
+    "status": "Deployed",
+    "theme": "Other",
+    "maturity_score": 0.18,
+    "social_mention_count": 51,
+    "revision_count": 52,
     "code_mention_count": 0,
-    "authors": "Hunter Beast, Ethan Heilman, Isabel Foxen Duke"
+    "authors": "Murch"
   },
   {
     "bip_id": "352",
@@ -253,6 +253,17 @@
     "authors": "Pieter Wuille, Peter Todd, Greg Maxwell, Rusty Russell"
   },
   {
+    "bip_id": "78",
+    "title": "A Simple Payjoin Proposal",
+    "status": "Deployed",
+    "theme": "Other",
+    "maturity_score": 0.13,
+    "social_mention_count": 0,
+    "revision_count": 64,
+    "code_mention_count": 0,
+    "authors": "Nicolas Dorier"
+  },
+  {
     "bip_id": "48",
     "title": "Multi-Script Hierarchy for Multi-Sig Wallets",
     "status": "Deployed",
@@ -273,17 +284,6 @@
     "revision_count": 62,
     "code_mention_count": 0,
     "authors": "Ethan Heilman, Armin Sabouri"
-  },
-  {
-    "bip_id": "78",
-    "title": "A Simple Payjoin Proposal",
-    "status": "Deployed",
-    "theme": "Other",
-    "maturity_score": 0.13,
-    "social_mention_count": 0,
-    "revision_count": 64,
-    "code_mention_count": 0,
-    "authors": "Nicolas Dorier"
   },
   {
     "bip_id": "123",
@@ -335,7 +335,7 @@
     "status": "Draft",
     "theme": "Other",
     "maturity_score": 0.12,
-    "social_mention_count": 19,
+    "social_mention_count": 18,
     "revision_count": 44,
     "code_mention_count": 0,
     "authors": "Shaolin Fry, Luke Dashjr"

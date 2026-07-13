@@ -51,38 +51,41 @@
   "impact_score": 0.0,
   "p2016_impact_score": 0.0,
   "modern_impact_score": 0.0,
-  "threads_started": 1.0,
+  "threads_started": 2.0,
   "replies_sent": 1.0,
   "ml_threads": 0.0,
-  "delving_threads": 1.0,
+  "delving_threads": 2.0,
   "ml_responses": 0.0,
   "delving_responses": 1.0,
-  "first_active": "2026-06-21T05:02:06.083000",
-  "last_active": "2026-06-28T15:42:20.023000",
+  "first_active": null,
+  "last_active": null,
   "dev_type": "Participant",
   "expertise_domains": [
-    "Mining"
+    "Mining",
+    "Consensus"
   ],
   "expertise_by_source": {
     "discussion": {
-      "Mining": 1.0
+      "Consensus": 0.282,
+      "Mining": 0.718
     }
   },
   "expertise_domain_scores": {
-    "Mining": 1.0
+    "Consensus": 0.282,
+    "Mining": 0.718
   },
-  "p2016_posts": 2.0,
-  "modern_posts": 2.0,
+  "p2016_posts": 3.0,
+  "modern_posts": 3.0,
   "p2016_ml_posts": 0.0,
-  "p2016_delving_posts": 2.0,
+  "p2016_delving_posts": 3.0,
   "modern_ml_posts": 0.0,
-  "modern_delving_posts": 2.0,
+  "modern_delving_posts": 3.0,
   "is_engineer": false,
   "is_reviewer": false,
   "is_researcher": false,
   "is_bip_author": false,
-  "global_first_active": "2026-06-21T05:02:06.083000064",
-  "global_last_active": "2026-06-28T15:42:20.023000064",
+  "global_first_active": null,
+  "global_last_active": null,
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -100,13 +103,16 @@
   },
   "last_message": {
     "source": "delving",
-    "subject": "Re: [Research] Bitcoin After Block Rewards : preventing miner's deviation when the Bitcoin rewards is zero",
-    "date": "2026-06-28",
-    "link": "https://delvingbitcoin.org/t/research-bitcoin-after-block-rewards-preventing-miners-deviation-when-the-bitcoin-rewards-is-zero/2626/3"
+    "subject": "Re: Addressing the Diminishing Block Subsidy",
+    "date": "2026-07-11",
+    "link": "https://delvingbitcoin.org/t/addressing-the-diminishing-block-subsidy/2640/24"
   },
   "social_history": {
     "2026": {
-      "mining": 2
+      "bip-process": 1,
+      "hard-fork-block-size": 1,
+      "mining": 3,
+      "utxo-sync": 1
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "display_name": "hunter beast",
+  "display_name": "Hunter Beast",
   "github_login_final": "cryptoquick",
   "delving_username_final": "cryptoquick",
   "uuid": "auto_hunter_beast",
@@ -41,7 +41,7 @@
   "modern_bips_authored": 1.0,
   "first_bip_date": "2026-02-11T14:54:26",
   "last_bip_date": "2026-02-11T14:54:26",
-  "avg_review_latency_days": 2857.392722465887,
+  "avg_review_latency_days": 2827.8004810474536,
   "reviews_count": 14.0,
   "avg_approval_latency_days": 184.00393749999998,
   "approvals_count": 4.0,
@@ -50,7 +50,7 @@
   "p2016_reviews_count": 14.0,
   "modern_reviews_count": 12.0,
   "first_review_date": "2022-04-25T02:49:37",
-  "last_review_date": "2026-07-04T00:24:50",
+  "last_review_date": "2026-07-13T08:17:51",
   "prs_authored": 2.0,
   "tier1_prs_authored": 1.0,
   "tier2_prs_authored": 1.0,
@@ -63,14 +63,14 @@
   "impact_score": 27.0,
   "p2016_impact_score": 29.0,
   "modern_impact_score": 38.0,
-  "threads_started": 18.0,
+  "threads_started": 19.0,
   "replies_sent": 20.0,
   "ml_threads": 4.0,
-  "delving_threads": 14.0,
+  "delving_threads": 15.0,
   "ml_responses": 17.0,
   "delving_responses": 3.0,
-  "first_active": "2024-03-15T19:14:56.566000",
-  "last_active": "2026-02-09T21:15:06.081000",
+  "first_active": null,
+  "last_active": null,
   "dev_type": "Reviewer",
   "expertise_domains": [
     "Consensus",
@@ -82,28 +82,28 @@
       "Consensus": 1.0
     },
     "discussion": {
-      "Consensus": 0.23,
-      "Cryptography": 0.689,
-      "Script": 0.081
+      "Consensus": 0.233,
+      "Cryptography": 0.685,
+      "Script": 0.082
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.78,
-    "Cryptography": 0.1969,
-    "Script": 0.0231
+    "Consensus": 0.7809,
+    "Cryptography": 0.1957,
+    "Script": 0.0234
   },
-  "p2016_posts": 38.0,
-  "modern_posts": 38.0,
+  "p2016_posts": 39.0,
+  "modern_posts": 39.0,
   "p2016_ml_posts": 21.0,
-  "p2016_delving_posts": 17.0,
+  "p2016_delving_posts": 18.0,
   "modern_ml_posts": 21.0,
-  "modern_delving_posts": 17.0,
+  "modern_delving_posts": 18.0,
   "is_engineer": false,
   "is_reviewer": true,
   "is_researcher": true,
   "is_bip_author": true,
   "global_first_active": "2022-04-25T02:49:37",
-  "global_last_active": "2026-07-04T00:24:50",
+  "global_last_active": "2026-07-13T08:17:51",
   "github_location": null,
   "github_company": null,
   "github_bio": "Rust and Bitcoin.\r\nBIP360 - EEXB4PETQL42SbnaqemwV1kiUbhHCw6rPYFpTX7fpump",
@@ -131,35 +131,36 @@
   },
   "last_message": {
     "source": "delving",
-    "subject": "Re: Major BIP 360 Update",
-    "date": "2026-02-09",
-    "link": "https://delvingbitcoin.org/t/major-bip-360-update/2170/16"
+    "subject": "Re: Public key recovery for EC leaves in P2MR (BIP-360)",
+    "date": "2026-07-13",
+    "link": "https://delvingbitcoin.org/t/public-key-recovery-for-ec-leaves-in-p2mr-bip-360/2603/33"
   },
   "social_history": {
     "2024": {
       "covenants": 2,
       "l2-bridges": 2,
-      "lightning": 1,
-      "other": 1,
+      "other": 2,
       "quantum": 9,
       "script-opcodes": 1,
       "taproot": 1
     },
     "2025": {
       "covenants": 1,
-      "other": 7,
-      "lightning": 1,
+      "other": 6,
       "multisig-threshold": 3,
       "quantum": 19,
       "script-opcodes": 1,
       "security": 1,
-      "taproot": 5
+      "taproot": 5,
+      "wallet-keys": 2
     },
     "2026": {
-      "quantum": 4,
+      "other": 2,
+      "quantum": 5,
       "script-opcodes": 4,
       "security": 4,
-      "taproot": 4
+      "taproot": 5,
+      "wallet-keys": 1
     }
   }
 }

@@ -51,13 +51,13 @@
   "impact_score": 12.0,
   "p2016_impact_score": 16.0,
   "modern_impact_score": 25.0,
-  "threads_started": 3.0,
+  "threads_started": 4.0,
   "replies_sent": 53.0,
   "ml_threads": 1.0,
-  "delving_threads": 2.0,
+  "delving_threads": 3.0,
   "ml_responses": 51.0,
   "delving_responses": 2.0,
-  "first_active": null,
+  "first_active": "2023-10-21T09:21:48",
   "last_active": null,
   "dev_type": "Builder",
   "expertise_domains": [
@@ -69,25 +69,25 @@
       "Mempool": 1.0
     },
     "discussion": {
-      "Cryptography": 0.727,
-      "Mempool": 0.273
+      "Cryptography": 0.714,
+      "Mempool": 0.286
     }
   },
   "expertise_domain_scores": {
-    "Cryptography": 0.2908,
-    "Mempool": 0.7092
+    "Cryptography": 0.2856,
+    "Mempool": 0.7144
   },
-  "p2016_posts": 56.0,
-  "modern_posts": 56.0,
+  "p2016_posts": 57.0,
+  "modern_posts": 57.0,
   "p2016_ml_posts": 52.0,
-  "p2016_delving_posts": 4.0,
+  "p2016_delving_posts": 5.0,
   "modern_ml_posts": 52.0,
-  "modern_delving_posts": 4.0,
+  "modern_delving_posts": 5.0,
   "is_engineer": true,
   "is_reviewer": true,
   "is_researcher": true,
   "is_bip_author": false,
-  "global_first_active": "2024-01-31T16:48:02",
+  "global_first_active": "2023-10-21T09:21:48",
   "global_last_active": "2026-06-27T04:45:19",
   "github_location": "Earth",
   "github_company": null,
@@ -111,21 +111,20 @@
     "link": "https://gnusha.org/pi/bitcoindev/CAFC_Vt4-DXkEPZEfXzZQET7P9KSyOrgojGqr8w-xvTECeRn7Zw@mail.gmail.com"
   },
   "last_message": {
-    "source": "mailing_list",
-    "subject": "Re: [bitcoindev] Giving teeth to expected EC disabling: P2XX(-T)(-ML)",
-    "date": "2026-06-25",
-    "link": "https://gnusha.org/pi/bitcoindev/CAFC_Vt7OfZ-rztFP5D5ycpxe3ZQOJJbY5cHgEk73OMYAmnDBjQ@mail.gmail.com"
+    "source": "delving",
+    "subject": "Re: Public key recovery for EC leaves in P2MR (BIP-360)",
+    "date": "2026-07-09",
+    "link": "https://delvingbitcoin.org/t/public-key-recovery-for-ec-leaves-in-p2mr-bip-360/2603/31"
   },
   "social_history": {
     "2023": {
-      "lightning": 3,
+      "other": 10,
       "mempool-fees": 6,
       "mining": 2,
-      "other": 7,
       "quantum": 4,
-      "script-opcodes": 1,
       "security": 2,
-      "spam-filtering": 2
+      "spam-filtering": 2,
+      "taproot": 1
     },
     "2024": {
       "mempool-fees": 4,
@@ -134,21 +133,22 @@
       "security": 2
     },
     "2025": {
-      "other": 15,
-      "lightning": 1,
+      "other": 18,
       "mempool-fees": 1,
       "mining": 2,
       "quantum": 17,
-      "script-opcodes": 4,
       "security": 2,
-      "spam-filtering": 4
+      "spam-filtering": 4,
+      "taproot": 1,
+      "wallet-keys": 1
     },
     "2026": {
-      "other": 17,
-      "lightning": 1,
-      "mempool-fees": 4,
+      "other": 12,
+      "mempool-fees": 5,
       "mining": 1,
-      "quantum": 7
+      "quantum": 8,
+      "taproot": 4,
+      "wallet-keys": 5
     }
   }
 }

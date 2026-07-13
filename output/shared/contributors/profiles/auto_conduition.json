@@ -29,7 +29,7 @@
   "modern_bips_authored": 0.0,
   "first_bip_date": null,
   "last_bip_date": null,
-  "avg_review_latency_days": 1905.1331319926696,
+  "avg_review_latency_days": 1866.5750663737717,
   "reviews_count": 8.0,
   "avg_approval_latency_days": null,
   "approvals_count": 0.0,
@@ -38,7 +38,7 @@
   "p2016_reviews_count": 8.0,
   "modern_reviews_count": 8.0,
   "first_review_date": "2023-10-27T01:02:48",
-  "last_review_date": "2026-07-06T21:41:02",
+  "last_review_date": "2026-07-12T14:18:23",
   "prs_authored": 3.0,
   "tier1_prs_authored": 0.0,
   "tier2_prs_authored": 3.0,
@@ -51,44 +51,44 @@
   "impact_score": 12.0,
   "p2016_impact_score": 16.0,
   "modern_impact_score": 23.0,
-  "threads_started": 20.0,
-  "replies_sent": 105.0,
+  "threads_started": 23.0,
+  "replies_sent": 106.0,
   "ml_threads": 3.0,
-  "delving_threads": 17.0,
+  "delving_threads": 20.0,
   "ml_responses": 84.0,
-  "delving_responses": 21.0,
-  "first_active": "2023-11-22T01:40:54.064000",
-  "last_active": "2026-07-01T02:39:06.584000",
+  "delving_responses": 22.0,
+  "first_active": null,
+  "last_active": null,
   "dev_type": "Participant",
   "expertise_domains": [
     "Cryptography",
     "Consensus",
-    "Script"
+    "Wallet"
   ],
   "expertise_by_source": {
     "discussion": {
-      "Consensus": 0.175,
-      "Cryptography": 0.719,
-      "Script": 0.105
+      "Consensus": 0.22,
+      "Cryptography": 0.661,
+      "Wallet": 0.119
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.1752,
-    "Cryptography": 0.7197,
-    "Script": 0.1051
+    "Consensus": 0.22,
+    "Cryptography": 0.661,
+    "Wallet": 0.119
   },
-  "p2016_posts": 125.0,
-  "modern_posts": 125.0,
+  "p2016_posts": 129.0,
+  "modern_posts": 129.0,
   "p2016_ml_posts": 87.0,
-  "p2016_delving_posts": 38.0,
+  "p2016_delving_posts": 42.0,
   "modern_ml_posts": 87.0,
-  "modern_delving_posts": 38.0,
+  "modern_delving_posts": 42.0,
   "is_engineer": false,
   "is_reviewer": true,
   "is_researcher": true,
   "is_bip_author": false,
   "global_first_active": "2023-10-27T01:02:48",
-  "global_last_active": "2026-07-06T21:41:02",
+  "global_last_active": "2026-07-12T14:18:23",
   "github_location": null,
   "github_company": null,
   "github_bio": "Pseudonymous freelance cypherpunk",
@@ -107,9 +107,9 @@
   },
   "last_message": {
     "source": "delving",
-    "subject": "Re: SHRINCS: 324-byte stateful post-quantum signatures with static backups",
-    "date": "2026-07-01",
-    "link": "https://delvingbitcoin.org/t/shrincs-324-byte-stateful-post-quantum-signatures-with-static-backups/2158/22"
+    "subject": "Re: Public key recovery for EC leaves in P2MR (BIP-360)",
+    "date": "2026-07-09",
+    "link": "https://delvingbitcoin.org/t/public-key-recovery-for-ec-leaves-in-p2mr-bip-360/2603/32"
   },
   "social_history": {
     "2023": {
@@ -117,8 +117,7 @@
       "mempool-fees": 1
     },
     "2024": {
-      "other": 5,
-      "privacy": 2,
+      "other": 7,
       "quantum": 2,
       "wallet-keys": 1
     },
@@ -126,22 +125,23 @@
       "bitvm": 1,
       "covenants": 7,
       "mempool-fees": 1,
-      "other": 9,
+      "other": 8,
       "quantum": 33,
       "script-opcodes": 4,
+      "signatures-sighash": 1,
       "taproot": 4,
       "wallet-keys": 1
     },
     "2026": {
       "bitvm": 11,
       "covenants": 10,
-      "other": 52,
-      "mempool-fees": 8,
-      "privacy": 10,
-      "quantum": 53,
+      "other": 48,
+      "mempool-fees": 12,
+      "quantum": 57,
       "script-opcodes": 10,
-      "taproot": 27,
-      "wallet-keys": 20
+      "signatures-sighash": 18,
+      "taproot": 31,
+      "wallet-keys": 24
     }
   }
 }

@@ -52,40 +52,43 @@
   "p2016_impact_score": 0.0,
   "modern_impact_score": 0.0,
   "threads_started": 5.0,
-  "replies_sent": 4.0,
+  "replies_sent": 5.0,
   "ml_threads": 0.0,
   "delving_threads": 5.0,
   "ml_responses": 0.0,
-  "delving_responses": 4.0,
-  "first_active": "2025-09-26T17:44:40.089000",
-  "last_active": "2026-06-29T17:58:09.313000",
+  "delving_responses": 5.0,
+  "first_active": null,
+  "last_active": null,
   "dev_type": "Participant",
   "expertise_domains": [
     "Mining",
+    "Consensus",
     "Cryptography"
   ],
   "expertise_by_source": {
     "discussion": {
-      "Cryptography": 0.327,
-      "Mining": 0.673
+      "Consensus": 0.246,
+      "Cryptography": 0.246,
+      "Mining": 0.509
     }
   },
   "expertise_domain_scores": {
-    "Cryptography": 0.327,
-    "Mining": 0.673
+    "Consensus": 0.2458,
+    "Cryptography": 0.2458,
+    "Mining": 0.5085
   },
-  "p2016_posts": 9.0,
-  "modern_posts": 9.0,
+  "p2016_posts": 10.0,
+  "modern_posts": 10.0,
   "p2016_ml_posts": 0.0,
-  "p2016_delving_posts": 9.0,
+  "p2016_delving_posts": 10.0,
   "modern_ml_posts": 0.0,
-  "modern_delving_posts": 9.0,
+  "modern_delving_posts": 10.0,
   "is_engineer": false,
   "is_reviewer": false,
   "is_researcher": false,
   "is_bip_author": false,
-  "global_first_active": "2025-09-26T17:44:40.088999936",
-  "global_last_active": "2026-06-29T17:58:09.312999936",
+  "global_first_active": null,
+  "global_last_active": null,
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -104,8 +107,8 @@
   "last_message": {
     "source": "delving",
     "subject": "Re: Addressing the Diminishing Block Subsidy",
-    "date": "2026-06-29",
-    "link": "https://delvingbitcoin.org/t/addressing-the-diminishing-block-subsidy/2640/18"
+    "date": "2026-07-10",
+    "link": "https://delvingbitcoin.org/t/addressing-the-diminishing-block-subsidy/2640/21"
   },
   "social_history": {
     "2025": {
@@ -116,11 +119,11 @@
       "utxo-sync": 1
     },
     "2026": {
-      "bip-process": 1,
-      "hard-fork-block-size": 1,
-      "mining": 4,
+      "bip-process": 2,
+      "hard-fork-block-size": 2,
+      "mining": 5,
       "quantum": 2,
-      "utxo-sync": 1
+      "utxo-sync": 2
     }
   }
 }

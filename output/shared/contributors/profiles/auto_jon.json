@@ -51,44 +51,38 @@
   "impact_score": 0.0,
   "p2016_impact_score": 0.0,
   "modern_impact_score": 0.0,
-  "threads_started": 2.0,
-  "replies_sent": 3.0,
+  "threads_started": 1.0,
+  "replies_sent": 0.0,
   "ml_threads": 0.0,
-  "delving_threads": 2.0,
+  "delving_threads": 1.0,
   "ml_responses": 0.0,
-  "delving_responses": 3.0,
-  "first_active": "2026-01-03T22:17:28.856000",
-  "last_active": "2026-02-21T16:20:44.606000",
+  "delving_responses": 0.0,
+  "first_active": null,
+  "last_active": null,
   "dev_type": "Participant",
   "expertise_domains": [
-    "Mempool",
-    "Consensus",
-    "L2"
+    "Mining"
   ],
   "expertise_by_source": {
     "discussion": {
-      "Consensus": 0.29,
-      "L2": 0.14,
-      "Mempool": 0.57
+      "Mining": 1.0
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.29,
-    "L2": 0.14,
-    "Mempool": 0.57
+    "Mining": 1.0
   },
-  "p2016_posts": 5.0,
-  "modern_posts": 5.0,
+  "p2016_posts": 1.0,
+  "modern_posts": 1.0,
   "p2016_ml_posts": 0.0,
-  "p2016_delving_posts": 5.0,
+  "p2016_delving_posts": 1.0,
   "modern_ml_posts": 0.0,
-  "modern_delving_posts": 5.0,
+  "modern_delving_posts": 1.0,
   "is_engineer": false,
   "is_reviewer": false,
   "is_researcher": false,
   "is_bip_author": false,
-  "global_first_active": "2026-01-03T22:17:28.856000",
-  "global_last_active": "2026-02-21T16:20:44.606000128",
+  "global_first_active": null,
+  "global_last_active": null,
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -100,22 +94,19 @@
   "delving_url": "https://delvingbitcoin.org/u/caraveo",
   "first_message": {
     "source": "delving",
-    "subject": "Re: Ark as a Channel Factory: Compressed Liquidity Management for Improved Payment Feasibility",
-    "date": "2026-01-03",
-    "link": "https://delvingbitcoin.org/t/ark-as-a-channel-factory-compressed-liquidity-management-for-improved-payment-feasibility/2179/3"
+    "subject": "Bitcoin c.h.i.p. - capital hash investment protocol bip",
+    "date": "2025-08-22",
+    "link": "https://delvingbitcoin.org/t/bitcoin-c-h-i-p-capital-hash-investment-protocol-bip/1941/1"
   },
   "last_message": {
     "source": "delving",
-    "subject": "Re: Stateless VTXO Verification: Decoupling Custody from Implementation-Specific Stacks",
-    "date": "2026-02-21",
-    "link": "https://delvingbitcoin.org/t/stateless-vtxo-verification-decoupling-custody-from-implementation-specific-stacks/2267/7"
+    "subject": "Bitcoin c.h.i.p. - capital hash investment protocol bip",
+    "date": "2025-08-22",
+    "link": "https://delvingbitcoin.org/t/bitcoin-c-h-i-p-capital-hash-investment-protocol-bip/1941/1"
   },
   "social_history": {
-    "2026": {
-      "l2-bridges": 1,
-      "lightning": 1,
-      "mempool-fees": 4,
-      "taproot": 4
+    "2025": {
+      "mining": 1
     }
   }
 }

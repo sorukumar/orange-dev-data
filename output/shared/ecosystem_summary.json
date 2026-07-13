@@ -1,38 +1,38 @@
 {
-  "generated_at": "2026-07-08T12:01:52.068725",
+  "generated_at": "2026-07-12T10:26:40.997895",
   "groups": {
     "committers": 1240,
-    "reviewers": 5129,
-    "research": 1655,
+    "reviewers": 5133,
+    "research": 1664,
     "standards": 158,
-    "total_active": 6494,
-    "total_registry": 7647
+    "total_active": 6502,
+    "total_registry": 7655
   },
   "venn_4": {
     "0001": 15,
-    "0010": 1182,
+    "0010": 1186,
     "0011": 23,
-    "0100": 3858,
+    "0100": 3861,
     "0101": 5,
-    "0110": 135,
+    "0110": 136,
     "0111": 36,
     "1000": 132,
     "1001": 1,
     "1010": 11,
     "1011": 1,
-    "1100": 826,
+    "1100": 822,
     "1101": 2,
-    "1110": 192,
+    "1110": 196,
     "1111": 75
   },
   "venn_summary": {
     "code_only": 132,
-    "review_only": 3858,
-    "research_only": 1182,
+    "review_only": 3861,
+    "research_only": 1186,
     "standards_only": 15,
     "all_four": 75,
-    "code_review": 826,
-    "review_research": 135,
+    "code_review": 822,
+    "review_research": 136,
     "research_standards": 23
   },
   "rd_focus": {},
@@ -41,30 +41,30 @@
     "value": "BIP 70"
   },
   "spotlight": {
-    "name": "Sebastian van Staa",
-    "uuid": "auto_sebastian_van_staa",
-    "github_login": "svanstaa",
-    "description": "First-time core contributor recently merged 2 commits."
+    "name": "kallal79",
+    "uuid": "auto_kallal79",
+    "github_login": "kallal79",
+    "description": "First-time core contributor recently merged 1 commit."
   },
   "onboarding": {
-    "new_coders_90d": 21,
+    "new_coders_90d": 20,
     "new_coders_7d": 0,
-    "new_discussants_90d": 85,
-    "new_discussants_7d": 2,
+    "new_discussants_90d": 83,
+    "new_discussants_7d": 4,
     "window_days": 90
   },
   "prs": {
-    "total_merged": 17886,
-    "merged_30d": 130,
-    "merged_prev_30d": 107,
+    "total_merged": 17900,
+    "merged_30d": 116,
+    "merged_prev_30d": 129,
     "merged_7d": 35,
-    "merged_prev_7d": 18
+    "merged_prev_7d": 22
   },
   "commits": {
-    "commits_30d": 661,
-    "commits_prev_30d": 654,
-    "commits_7d": 178,
-    "commits_prev_7d": 136
+    "commits_30d": 615,
+    "commits_prev_30d": 745,
+    "commits_7d": 190,
+    "commits_prev_7d": 93
   },
   "bips": {
     "total": 210,
@@ -75,20 +75,20 @@
       {
         "category": "quantum",
         "label": "Quantum",
-        "count": 171,
-        "share": 25.3
+        "count": 138,
+        "share": 20.0
       },
       {
         "category": "utxo-sync",
         "label": "Utxo Sync",
-        "count": 67,
-        "share": 9.9
+        "count": 70,
+        "share": 10.1
       },
       {
-        "category": "privacy",
-        "label": "Privacy",
-        "count": 52,
-        "share": 7.7
+        "category": "taproot",
+        "label": "Taproot",
+        "count": 65,
+        "share": 9.4
       }
     ],
     "top_bips": [

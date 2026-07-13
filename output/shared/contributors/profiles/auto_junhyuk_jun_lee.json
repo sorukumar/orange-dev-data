@@ -1,8 +1,8 @@
 {
-  "display_name": "Steve Coughlan",
+  "display_name": "Junhyuk Jun Lee",
   "github_login_final": null,
   "delving_username_final": null,
-  "uuid": "auto_steve_coughlan",
+  "uuid": "auto_junhyuk_jun_lee",
   "badges": null,
   "roles": null,
   "total_commits": 0.0,
@@ -45,47 +45,44 @@
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": null,
-  "hybrid_score": 0.0251,
-  "p2016_hybrid_score": 0.0077,
+  "hybrid_score": 0.0,
+  "p2016_hybrid_score": 0.0,
   "modern_hybrid_score": 0.0,
-  "impact_score": 1.0,
+  "impact_score": 0.0,
   "p2016_impact_score": 0.0,
   "modern_impact_score": 0.0,
-  "threads_started": 2.0,
-  "replies_sent": 9.0,
-  "ml_threads": 2.0,
+  "threads_started": 1.0,
+  "replies_sent": 0.0,
+  "ml_threads": 1.0,
   "delving_threads": 0.0,
-  "ml_responses": 9.0,
+  "ml_responses": 0.0,
   "delving_responses": 0.0,
-  "first_active": null,
-  "last_active": null,
+  "first_active": "2026-07-11T17:08:25",
+  "last_active": "2026-07-11T17:08:25",
   "dev_type": "Participant",
   "expertise_domains": [
-    "L2",
-    "Network"
+    "Mining"
   ],
   "expertise_by_source": {
     "discussion": {
-      "L2": 0.5,
-      "Network": 0.5
+      "Mining": 1.0
     }
   },
   "expertise_domain_scores": {
-    "L2": 0.5,
-    "Network": 0.5
+    "Mining": 1.0
   },
   "p2016_posts": 1.0,
-  "modern_posts": 0.0,
+  "modern_posts": 1.0,
   "p2016_ml_posts": 1.0,
   "p2016_delving_posts": 0.0,
-  "modern_ml_posts": 0.0,
+  "modern_ml_posts": 1.0,
   "modern_delving_posts": 0.0,
   "is_engineer": false,
   "is_reviewer": false,
-  "is_researcher": true,
+  "is_researcher": false,
   "is_bip_author": false,
-  "global_first_active": null,
-  "global_last_active": null,
+  "global_first_active": "2026-07-11T17:08:25",
+  "global_last_active": "2026-07-11T17:08:25",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -96,26 +93,19 @@
   "is_top_50": false,
   "first_message": {
     "source": "mailing_list",
-    "subject": "[Bitcoin-development] Building a node crawler to map network",
-    "date": "2011-09-06",
-    "link": "https://gnusha.org/pi/bitcoindev/4E65CEE6.7030002@gmail.com"
+    "subject": "[bitcoindev] [Research] Bitcoin After Block Rewards: preventing miner\n deviation as the block rewards approaches zero",
+    "date": "2026-07-11",
+    "link": "https://gnusha.org/pi/bitcoindev/CAEOyoSPQt=TTN-JOVxmCk9UvD1MMHwoHPSvm34Zf2gv8RjcxNg@mail.gmail.com"
   },
   "last_message": {
     "source": "mailing_list",
-    "subject": "Re: [bitcoin-dev] Why SegWit Anyway?",
-    "date": "2017-11-21",
-    "link": "https://gnusha.org/pi/bitcoindev/CAOPxoMtPvKm0t1ih8vw5YmiGUYjR5Y5a8ZLvjaKo06mH+iHjoA@mail.gmail.com"
+    "subject": "[bitcoindev] [Research] Bitcoin After Block Rewards: preventing miner\n deviation as the block rewards approaches zero",
+    "date": "2026-07-11",
+    "link": "https://gnusha.org/pi/bitcoindev/CAEOyoSPQt=TTN-JOVxmCk9UvD1MMHwoHPSvm34Zf2gv8RjcxNg@mail.gmail.com"
   },
   "social_history": {
-    "2011": {
-      "lightning": 2,
-      "other": 6,
-      "p2p-network": 2
-    },
-    "2017": {
-      "hard-fork-block-size": 1,
-      "mining": 1,
-      "segwit": 1
+    "2026": {
+      "mining": 1
     }
   }
 }

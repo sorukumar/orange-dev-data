@@ -52,12 +52,12 @@
   "p2016_impact_score": 6.0,
   "modern_impact_score": 11.0,
   "threads_started": 7.0,
-  "replies_sent": 14.0,
+  "replies_sent": 15.0,
   "ml_threads": 2.0,
   "delving_threads": 5.0,
   "ml_responses": 8.0,
-  "delving_responses": 6.0,
-  "first_active": null,
+  "delving_responses": 7.0,
+  "first_active": "2020-09-22T01:24:40",
   "last_active": null,
   "dev_type": "Participant",
   "expertise_domains": [
@@ -67,27 +67,27 @@
   ],
   "expertise_by_source": {
     "discussion": {
-      "Cryptography": 0.235,
-      "Mempool": 0.431,
-      "Privacy": 0.333
+      "Cryptography": 0.26,
+      "Mempool": 0.44,
+      "Privacy": 0.3
     }
   },
   "expertise_domain_scores": {
-    "Cryptography": 0.2352,
-    "Mempool": 0.4314,
-    "Privacy": 0.3333
+    "Cryptography": 0.26,
+    "Mempool": 0.44,
+    "Privacy": 0.3
   },
-  "p2016_posts": 21.0,
-  "modern_posts": 19.0,
+  "p2016_posts": 22.0,
+  "modern_posts": 20.0,
   "p2016_ml_posts": 10.0,
-  "p2016_delving_posts": 11.0,
+  "p2016_delving_posts": 12.0,
   "modern_ml_posts": 8.0,
-  "modern_delving_posts": 11.0,
+  "modern_delving_posts": 12.0,
   "is_engineer": false,
   "is_reviewer": true,
   "is_researcher": true,
   "is_bip_author": false,
-  "global_first_active": "2025-07-18T14:12:29",
+  "global_first_active": "2020-09-22T01:24:40",
   "global_last_active": "2026-02-02T14:32:29",
   "github_location": null,
   "github_company": null,
@@ -95,7 +95,7 @@
   "github_twitter": null,
   "github_blog": null,
   "github_followers": null,
-  "activity_status": "New",
+  "activity_status": "Rising",
   "is_top_50": false,
   "github_url": "https://github.com/ArmchairCryptologist",
   "delving_url": "https://delvingbitcoin.org/u/armchaircryptologist",
@@ -106,10 +106,10 @@
     "link": "https://gnusha.org/pi/bitcoindev/Jilb-w5AFlMx809pICIKdhhj3xBynWDlPtRTiJVIoxnC5_1gi6sK7rhOjl4e5HeMr7DDk9NjLdSGc8nWXaDIePDsjroiTd5xLU0xL3_INiY=@protonmail.com"
   },
   "last_message": {
-    "source": "mailing_list",
-    "subject": "Re: [bitcoindev] Aligning privacy incentives in P2MR",
-    "date": "2026-06-26",
-    "link": "https://gnusha.org/pi/bitcoindev/2UBm2dVIs3jNHvlZtgXA_7Pfa09T6bK0BBkpvEZUMV8CNgeOwpG87vmUZ9vEnn0TQIfag2uIbiViizuDaND9UljX9LdDqHYXgJhTlW7OGqs=@protonmail.com"
+    "source": "delving",
+    "subject": "Re: Public key recovery for EC leaves in P2MR (BIP-360)",
+    "date": "2026-07-08",
+    "link": "https://delvingbitcoin.org/t/public-key-recovery-for-ec-leaves-in-p2mr-bip-360/2603/29"
   },
   "social_history": {
     "2020": {
@@ -134,15 +134,15 @@
       "soft-fork-activation": 1
     },
     "2026": {
-      "other": 9,
-      "mempool-fees": 4,
+      "other": 12,
+      "mempool-fees": 5,
       "mining": 1,
       "privacy": 6,
-      "quantum": 1,
+      "quantum": 2,
       "script-opcodes": 4,
+      "signatures-sighash": 3,
       "soft-fork-activation": 2,
-      "spam-filtering": 2,
-      "testing-devtools": 3
+      "spam-filtering": 2
     }
   }
 }
