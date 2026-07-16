@@ -43,21 +43,26 @@ def get_git_commit_date(repo_path, file_path):
         print(f"Error getting git date for {file_path}: {e}")
     return None
 
-def is_high_signal(labels_str, is_recent):
-    if pd.isna(labels_str):
-        return False
-    labels = str(labels_str).lower()
+def is_high_signal(labels_str, is_recent, review_count=0):
+    labels = str(labels_str).lower() if pd.notna(labels_str) else ""
     
-    # Drop low signal unconditionally
-    if any(drop in labels for drop in ['test', 'doc', 'refactor', 'build', 'ci']):
-        return False
-        
-    if is_recent:
-        # Tier 1 (recent): keep broadly
-        return any(keep in labels for keep in ['consensus', 'p2p', 'rpc', 'rest', 'zmq', 'wallet', 'mempool', 'gui', 'policy'])
-    else:
+    tier_1 = ['consensus', 'validation', 'cryptography', 'p2p', 'wallet', 'mempool', 'policy']
+    tier_3 = ['test', 'doc', 'refactor', 'build', 'ci']
+    
+    if not is_recent:
         # Tier 2 (old): strict "super super high signal"
         return any(keep in labels for keep in ['consensus', 'cryptography', 'p2p'])
+        
+    # Check Tier 1 (Threshold 0)
+    if any(keep in labels for keep in tier_1):
+        return True
+        
+    # Check Tier 3 (Typically dropped, Threshold 50)
+    if any(drop in labels for drop in tier_3):
+        return review_count >= 50
+        
+    # Check Tier 2 (Everything else, e.g. 'rpc', 'gui', or no labels, Threshold 25)
+    return review_count >= 25
 
 def process_releases():
     if not os.path.exists(INPUT_PR_PARQUET):
@@ -66,6 +71,14 @@ def process_releases():
 
     df = pd.read_parquet(INPUT_PR_PARQUET)
     df = df[(df['repository_name'] == 'bitcoin/bitcoin') & (df['merged_at'].notna())].copy()
+    
+    # NEW STEP: Load review counts
+    if os.path.exists("data/raw/github_review_events.parquet"):
+        df_rev = pd.read_parquet("data/raw/github_review_events.parquet")
+        review_counts = df_rev.groupby('pr_number').size().to_dict()
+        df['review_count'] = df['pr_number'].map(review_counts).fillna(0)
+    else:
+        df['review_count'] = 0
     
     # NEW STEP: Override milestones from official release notes
     pr_to_milestone = {}
@@ -133,7 +146,8 @@ def process_releases():
         inferred_ms = row['inferred_milestone']
         ms_version = parse_version(inferred_ms)
         is_recent = ms_version >= (24, 0, 0)
-        if not is_high_signal(row['labels'], is_recent):
+        rc = row.get('review_count', 0)
+        if not is_high_signal(row['labels'], is_recent, rc):
             return None
         return inferred_ms
 
