@@ -29,6 +29,8 @@ contributors = [
     for _, row in df[df['cohort_year'].notna()].iterrows()
 ]
 
+
+
 # Consolidated categories
 # 1. North America
 # 2. Europe
