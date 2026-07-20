@@ -1,8 +1,8 @@
 {
-  "display_name": "Steve Shadders",
+  "display_name": "BitMinter operator",
   "github_login_final": null,
   "delving_username_final": null,
-  "uuid": "auto_steve_shadders",
+  "uuid": "auto_bitminter_operator",
   "badges": null,
   "roles": null,
   "total_commits": 0.0,
@@ -45,38 +45,38 @@
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": null,
-  "hybrid_score": 0.0251,
-  "p2016_hybrid_score": 0.0077,
+  "hybrid_score": 0.0269,
+  "p2016_hybrid_score": 0.0,
   "modern_hybrid_score": 0.0,
-  "impact_score": 1.0,
+  "impact_score": 2.0,
   "p2016_impact_score": 0.0,
   "modern_impact_score": 0.0,
-  "threads_started": 2.0,
-  "replies_sent": 9.0,
-  "ml_threads": 2.0,
+  "threads_started": 1.0,
+  "replies_sent": 13.0,
+  "ml_threads": 1.0,
   "delving_threads": 0.0,
-  "ml_responses": 9.0,
+  "ml_responses": 13.0,
   "delving_responses": 0.0,
-  "first_active": "2011-09-06T02:42:30",
-  "last_active": "2017-11-21T07:10:28",
+  "first_active": "2011-10-22T07:26:52",
+  "last_active": "2015-12-26T22:10:09",
   "dev_type": "Participant",
   "expertise_domains": [
-    "L2",
-    "Network"
+    "Mining",
+    "Consensus"
   ],
   "expertise_by_source": {
     "discussion": {
-      "L2": 0.5,
-      "Network": 0.5
+      "Consensus": 0.261,
+      "Mining": 0.739
     }
   },
   "expertise_domain_scores": {
-    "L2": 0.5,
-    "Network": 0.5
+    "Consensus": 0.261,
+    "Mining": 0.739
   },
-  "p2016_posts": 1.0,
+  "p2016_posts": 0.0,
   "modern_posts": 0.0,
-  "p2016_ml_posts": 1.0,
+  "p2016_ml_posts": 0.0,
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
@@ -84,8 +84,8 @@
   "is_reviewer": false,
   "is_researcher": true,
   "is_bip_author": false,
-  "global_first_active": "2011-09-06T02:42:30",
-  "global_last_active": "2017-11-21T07:10:28",
+  "global_first_active": "2011-10-22T07:26:52",
+  "global_last_active": "2015-12-26T22:10:09",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -96,26 +96,32 @@
   "is_top_50": false,
   "first_message": {
     "source": "mailing_list",
-    "subject": "[Bitcoin-development] Building a node crawler to map network",
-    "date": "2011-09-06",
-    "link": "https://gnusha.org/pi/bitcoindev/4E65CEE6.7030002@gmail.com"
+    "subject": "Re: [Bitcoin-development] Help wanted: translations",
+    "date": "2011-10-22",
+    "link": "https://gnusha.org/pi/bitcoindev/4EA2B68C.3050901@bitminter.com"
   },
   "last_message": {
     "source": "mailing_list",
-    "subject": "Re: [bitcoin-dev] Why SegWit Anyway?",
-    "date": "2017-11-21",
-    "link": "https://gnusha.org/pi/bitcoindev/CAOPxoMtPvKm0t1ih8vw5YmiGUYjR5Y5a8ZLvjaKo06mH+iHjoA@mail.gmail.com"
+    "subject": "Re: [bitcoin-dev] We need to fix the block withholding attack",
+    "date": "2015-12-26",
+    "link": "https://gnusha.org/pi/bitcoindev/567F64A1.8020202@bitminter.com"
   },
   "social_history": {
     "2011": {
-      "lightning": 2,
-      "other": 6,
-      "p2p-network": 2
+      "other": 3
     },
-    "2017": {
-      "hard-fork-block-size": 1,
-      "mining": 1,
-      "segwit": 1
+    "2012": {
+      "bip-process": 2,
+      "mining": 2,
+      "other": 2
+    },
+    "2014": {
+      "other": 2
+    },
+    "2015": {
+      "hard-fork-block-size": 2,
+      "mining": 4,
+      "taproot": 1
     }
   }
 }

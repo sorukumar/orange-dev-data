@@ -51,38 +51,35 @@
   "impact_score": 0.0,
   "p2016_impact_score": 0.0,
   "modern_impact_score": 0.0,
-  "threads_started": 3.0,
-  "replies_sent": 2.0,
+  "threads_started": 4.0,
+  "replies_sent": 3.0,
   "ml_threads": 0.0,
-  "delving_threads": 3.0,
+  "delving_threads": 4.0,
   "ml_responses": 0.0,
-  "delving_responses": 2.0,
+  "delving_responses": 3.0,
   "first_active": null,
   "last_active": null,
   "dev_type": "Participant",
   "expertise_domains": [
     "L2",
-    "Privacy",
-    "Mempool"
+    "Privacy"
   ],
   "expertise_by_source": {
     "discussion": {
-      "L2": 0.57,
-      "Mempool": 0.14,
-      "Privacy": 0.29
+      "L2": 0.7,
+      "Privacy": 0.3
     }
   },
   "expertise_domain_scores": {
-    "L2": 0.57,
-    "Mempool": 0.14,
-    "Privacy": 0.29
+    "L2": 0.7,
+    "Privacy": 0.3
   },
-  "p2016_posts": 5.0,
-  "modern_posts": 5.0,
+  "p2016_posts": 7.0,
+  "modern_posts": 7.0,
   "p2016_ml_posts": 0.0,
-  "p2016_delving_posts": 5.0,
+  "p2016_delving_posts": 7.0,
   "modern_ml_posts": 0.0,
-  "modern_delving_posts": 5.0,
+  "modern_delving_posts": 7.0,
   "is_engineer": false,
   "is_reviewer": false,
   "is_researcher": false,
@@ -106,9 +103,9 @@
   },
   "last_message": {
     "source": "delving",
-    "subject": "Re: Latency and Privacy in Lightning",
-    "date": "2025-06-05",
-    "link": "https://delvingbitcoin.org/t/latency-and-privacy-in-lightning/1723/29"
+    "subject": "Re: Onion Message Jamming in the Lightning Network",
+    "date": "2026-07-14",
+    "link": "https://delvingbitcoin.org/t/onion-message-jamming-in-the-lightning-network/2414/18"
   },
   "social_history": {
     "2023": {
@@ -118,6 +115,12 @@
     "2025": {
       "lightning": 4,
       "privacy": 4
+    },
+    "2026": {
+      "ecash": 2,
+      "lightning": 2,
+      "privacy": 2,
+      "taproot": 2
     }
   }
 }

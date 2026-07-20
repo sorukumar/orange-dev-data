@@ -47,42 +47,42 @@
   "review_reciprocity": null,
   "hybrid_score": 0.0052,
   "p2016_hybrid_score": 0.0077,
-  "modern_hybrid_score": 0.0209,
+  "modern_hybrid_score": 0.0208,
   "impact_score": 0.0,
   "p2016_impact_score": 0.0,
   "modern_impact_score": 1.0,
-  "threads_started": 30.0,
-  "replies_sent": 27.0,
+  "threads_started": 33.0,
+  "replies_sent": 28.0,
   "ml_threads": 0.0,
-  "delving_threads": 30.0,
+  "delving_threads": 33.0,
   "ml_responses": 0.0,
-  "delving_responses": 27.0,
+  "delving_responses": 28.0,
   "first_active": null,
   "last_active": null,
   "dev_type": "Participant",
   "expertise_domains": [
     "Script",
-    "Consensus",
+    "L2",
     "Wallet"
   ],
   "expertise_by_source": {
     "discussion": {
-      "Consensus": 0.27,
+      "L2": 0.257,
       "Script": 0.514,
-      "Wallet": 0.216
+      "Wallet": 0.229
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.27,
+    "L2": 0.257,
     "Script": 0.514,
-    "Wallet": 0.216
+    "Wallet": 0.229
   },
-  "p2016_posts": 57.0,
-  "modern_posts": 57.0,
+  "p2016_posts": 61.0,
+  "modern_posts": 61.0,
   "p2016_ml_posts": 0.0,
-  "p2016_delving_posts": 57.0,
+  "p2016_delving_posts": 61.0,
   "modern_ml_posts": 0.0,
-  "modern_delving_posts": 57.0,
+  "modern_delving_posts": 61.0,
   "is_engineer": false,
   "is_reviewer": false,
   "is_researcher": true,
@@ -106,31 +106,31 @@
   },
   "last_message": {
     "source": "delving",
-    "subject": "Re: Input-triggered transaction expiry",
-    "date": "2026-07-12",
-    "link": "https://delvingbitcoin.org/t/input-triggered-transaction-expiry/2667/14"
+    "subject": "A philosophical take on \"expiry\"",
+    "date": "2026-07-17",
+    "link": "https://delvingbitcoin.org/t/a-philosophical-take-on-expiry/2726/1"
   },
   "social_history": {
     "2025": {
-      "other": 37,
+      "other": 54,
       "covenants": 16,
       "lightning": 2,
       "mempool-fees": 3,
-      "mining": 9,
       "multisig-threshold": 7,
       "script-opcodes": 7,
-      "taproot": 15,
-      "wallet-keys": 9
+      "security": 1,
+      "taproot": 15
     },
     "2026": {
-      "other": 15,
-      "covenants": 11,
-      "lightning": 8,
-      "mempool-fees": 10,
-      "multisig-threshold": 8,
-      "script-opcodes": 12,
-      "taproot": 2,
-      "wallet-keys": 1
+      "bip-process": 11,
+      "other": 6,
+      "covenants": 14,
+      "lightning": 11,
+      "mempool-fees": 13,
+      "multisig-threshold": 11,
+      "script-opcodes": 15,
+      "security": 14,
+      "taproot": 2
     }
   }
 }

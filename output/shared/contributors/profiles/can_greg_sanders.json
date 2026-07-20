@@ -37,31 +37,31 @@
   "last_commit": "2026-07-07T14:10:13",
   "p2016_authored_commits": 394.0,
   "modern_authored_commits": 173.0,
-  "co_authored_commits": 48.0,
+  "co_authored_commits": 50.0,
   "bips_authored": 4.0,
   "p2016_bips_authored": 4.0,
   "modern_bips_authored": 3.0,
   "first_bip_date": "2023-02-08T15:11:18",
   "last_bip_date": "2026-03-17T15:01:23",
-  "avg_review_latency_days": 159.3847701843378,
-  "reviews_count": 966.0,
+  "avg_review_latency_days": 159.26959858591454,
+  "reviews_count": 968.0,
   "avg_approval_latency_days": 64.6293299926051,
   "approvals_count": 682.0,
-  "tier1_reviews_count": 938.0,
+  "tier1_reviews_count": 940.0,
   "tier2_reviews_count": 29.0,
-  "p2016_reviews_count": 939.0,
-  "modern_reviews_count": 262.0,
+  "p2016_reviews_count": 941.0,
+  "modern_reviews_count": 264.0,
   "first_review_date": "2014-03-08T17:28:56",
-  "last_review_date": "2026-07-12T21:28:48",
-  "prs_authored": 251.0,
-  "tier1_prs_authored": 236.0,
+  "last_review_date": "2026-07-15T15:11:33",
+  "prs_authored": 252.0,
+  "tier1_prs_authored": 237.0,
   "tier2_prs_authored": 15.0,
-  "avg_pr_ack_velocity_days": 7.7931352321524425,
-  "avg_concept_lead_time_days": 15.253510021097048,
-  "review_reciprocity": 3.848605577689243,
+  "avg_pr_ack_velocity_days": 7.756515926811979,
+  "avg_concept_lead_time_days": 15.146220341435185,
+  "review_reciprocity": 3.8412698412698414,
   "hybrid_score": 1.5767,
-  "p2016_hybrid_score": 1.6737,
-  "modern_hybrid_score": 1.5449,
+  "p2016_hybrid_score": 1.6736,
+  "modern_hybrid_score": 1.5373,
   "impact_score": 61.0,
   "p2016_impact_score": 63.0,
   "modern_impact_score": 60.0,
@@ -108,17 +108,17 @@
     "Wallet": 0.0594
   },
   "p2016_posts": 306.0,
-  "modern_posts": 199.0,
+  "modern_posts": 197.0,
   "p2016_ml_posts": 128.0,
   "p2016_delving_posts": 178.0,
-  "modern_ml_posts": 21.0,
+  "modern_ml_posts": 19.0,
   "modern_delving_posts": 178.0,
   "is_engineer": true,
   "is_reviewer": true,
   "is_researcher": true,
   "is_bip_author": true,
   "global_first_active": "2014-03-08T17:28:56",
-  "global_last_active": "2026-07-12T21:28:48",
+  "global_last_active": "2026-07-15T15:11:33",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -288,9 +288,8 @@
       "other": 1
     },
     "2015": {
-      "other": 4,
-      "mining": 1,
-      "testing-devtools": 1
+      "other": 5,
+      "mining": 1
     },
     "2017": {
       "other": 11,
@@ -312,26 +311,27 @@
       "taproot": 2
     },
     "2020": {
-      "other": 4,
+      "other": 2,
       "mempool-fees": 2,
       "script-opcodes": 3,
+      "security": 2,
       "segwit": 2,
       "taproot": 2
     },
     "2021": {
       "covenants": 1,
       "mempool-fees": 1,
-      "other": 2,
-      "taproot": 1,
-      "testing-devtools": 1
+      "other": 3,
+      "taproot": 1
     },
     "2022": {
-      "other": 24,
+      "other": 19,
       "covenants": 6,
       "lightning": 6,
       "mempool-fees": 34,
       "mining": 5,
       "script-opcodes": 2,
+      "security": 5,
       "segwit": 2,
       "taproot": 1
     },
@@ -340,44 +340,44 @@
       "lightning": 7,
       "mempool-fees": 31,
       "mining": 1,
-      "other": 28,
+      "other": 26,
       "script-opcodes": 12,
+      "security": 3,
       "segwit": 8,
-      "taproot": 16,
-      "testing-devtools": 1
+      "taproot": 16
     },
     "2024": {
       "covenants": 11,
-      "other": 33,
+      "other": 36,
       "lightning": 40,
       "mempool-fees": 64,
       "mining": 30,
       "script-opcodes": 8,
+      "security": 3,
       "segwit": 2,
-      "taproot": 15,
-      "testing-devtools": 6
+      "taproot": 15
     },
     "2025": {
-      "other": 92,
+      "other": 100,
       "covenants": 36,
       "lightning": 40,
       "mempool-fees": 27,
       "mining": 10,
       "script-opcodes": 17,
+      "security": 13,
       "segwit": 16,
-      "taproot": 33,
-      "testing-devtools": 21
+      "taproot": 33
     },
     "2026": {
-      "other": 18,
+      "other": 17,
       "covenants": 8,
       "lightning": 9,
       "mempool-fees": 7,
       "mining": 2,
       "script-opcodes": 5,
+      "security": 7,
       "segwit": 1,
-      "taproot": 2,
-      "testing-devtools": 3
+      "taproot": 2
     }
   }
 }

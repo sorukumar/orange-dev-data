@@ -66,13 +66,13 @@
   ],
   "expertise_by_source": {
     "discussion": {
-      "Consensus": 0.33,
-      "L2": 0.67
+      "Consensus": 0.25,
+      "L2": 0.75
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.33,
-    "L2": 0.67
+    "Consensus": 0.25,
+    "L2": 0.75
   },
   "p2016_posts": 3.0,
   "modern_posts": 3.0,
@@ -109,7 +109,9 @@
   },
   "social_history": {
     "2026": {
+      "ecash": 3,
       "lightning": 3,
+      "privacy": 3,
       "taproot": 3
     }
   }

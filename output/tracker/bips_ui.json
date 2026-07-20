@@ -7,7 +7,7 @@
     "maturity_score": 0.68,
     "social_mention_count": 390,
     "revision_count": 41,
-    "code_mention_count": 98,
+    "code_mention_count": 100,
     "authors": "Gavin Andresen, Mike Hearn"
   },
   {
@@ -50,7 +50,7 @@
     "theme": "Other",
     "maturity_score": 0.39,
     "social_mention_count": 107,
-    "revision_count": 110,
+    "revision_count": 111,
     "code_mention_count": 44,
     "authors": "Ava Chow"
   },
@@ -139,7 +139,7 @@
     "maturity_score": 0.18,
     "social_mention_count": 66,
     "revision_count": 40,
-    "code_mention_count": 32,
+    "code_mention_count": 34,
     "authors": "Nils Schneider, Matt Corallo"
   },
   {
@@ -1903,15 +1903,15 @@
     "authors": "Suhas Daftuar"
   },
   {
-    "bip_id": "180",
-    "title": "Block size/weight fraud proof",
-    "status": "Closed",
+    "bip_id": "197",
+    "title": "Hashed Time-Locked Collateral Contract",
+    "status": "Draft",
     "theme": "Other",
     "maturity_score": 0.02,
     "social_mention_count": 0,
-    "revision_count": 12,
+    "revision_count": 10,
     "code_mention_count": 0,
-    "authors": "Luke Dashjr"
+    "authors": "Matthew Black, Tony Cai"
   },
   {
     "bip_id": "326",
@@ -1980,15 +1980,15 @@
     "authors": "Sean Bowe, Daira Hopwood"
   },
   {
-    "bip_id": "197",
-    "title": "Hashed Time-Locked Collateral Contract",
-    "status": "Draft",
+    "bip_id": "180",
+    "title": "Block size/weight fraud proof",
+    "status": "Closed",
     "theme": "Other",
     "maturity_score": 0.02,
     "social_mention_count": 0,
-    "revision_count": 10,
+    "revision_count": 12,
     "code_mention_count": 0,
-    "authors": "Matthew Black, Tony Cai"
+    "authors": "Luke Dashjr"
   },
   {
     "bip_id": "172",
@@ -2004,6 +2004,17 @@
   {
     "bip_id": "441",
     "title": "Restoration of disabled script (Tapleaf 0xC2)",
+    "status": "Draft",
+    "theme": "Consensus & Soft Forks",
+    "maturity_score": 0.01,
+    "social_mention_count": 0,
+    "revision_count": 4,
+    "code_mention_count": 0,
+    "authors": "Rusty Russell, Julian Moik"
+  },
+  {
+    "bip_id": "440",
+    "title": "Varops Budget For Script Runtime Constraint",
     "status": "Draft",
     "theme": "Consensus & Soft Forks",
     "maturity_score": 0.01,
@@ -2055,6 +2066,17 @@
     "revision_count": 7,
     "code_mention_count": 0,
     "authors": "Pieter Wuille, Ava Chow"
+  },
+  {
+    "bip_id": "177",
+    "title": "Redefine Bitcoin's Base Unit",
+    "status": "Draft",
+    "theme": "Other",
+    "maturity_score": 0.01,
+    "social_mention_count": 3,
+    "revision_count": 4,
+    "code_mention_count": 0,
+    "authors": "John Carvalho"
   },
   {
     "bip_id": "136",
@@ -2123,17 +2145,6 @@
     "authors": "Karl-Johan Alm"
   },
   {
-    "bip_id": "177",
-    "title": "Redefine Bitcoin's Base Unit",
-    "status": "Draft",
-    "theme": "Other",
-    "maturity_score": 0.01,
-    "social_mention_count": 3,
-    "revision_count": 4,
-    "code_mention_count": 0,
-    "authors": "John Carvalho"
-  },
-  {
     "bip_id": "128",
     "title": "Timelock-Recovery Storage Format",
     "status": "Draft",
@@ -2143,17 +2154,6 @@
     "revision_count": 2,
     "code_mention_count": 0,
     "authors": "Oren Z"
-  },
-  {
-    "bip_id": "440",
-    "title": "Varops Budget For Script Runtime Constraint",
-    "status": "Draft",
-    "theme": "Consensus & Soft Forks",
-    "maturity_score": 0.0,
-    "social_mention_count": 0,
-    "revision_count": 2,
-    "code_mention_count": 0,
-    "authors": "Rusty Russell, Julian Moik"
   },
   {
     "bip_id": "450",
@@ -2222,6 +2222,17 @@
     "authors": "Steven Roose, Brandon Black"
   },
   {
+    "bip_id": "89",
+    "title": "Chain Code Delegation",
+    "status": "Draft",
+    "theme": "Other",
+    "maturity_score": 0.0,
+    "social_mention_count": 0,
+    "revision_count": 1,
+    "code_mention_count": 0,
+    "authors": "Jesse Posner, Jurvis Tan"
+  },
+  {
     "bip_id": "393",
     "title": "Output Script Descriptor Annotations",
     "status": "Draft",
@@ -2264,17 +2275,6 @@
     "revision_count": 1,
     "code_mention_count": 4,
     "authors": "Matt Corallo"
-  },
-  {
-    "bip_id": "89",
-    "title": "Chain Code Delegation",
-    "status": "Draft",
-    "theme": "Other",
-    "maturity_score": 0.0,
-    "social_mention_count": 0,
-    "revision_count": 1,
-    "code_mention_count": 0,
-    "authors": "Jesse Posner, Jurvis Tan"
   },
   {
     "bip_id": "376",

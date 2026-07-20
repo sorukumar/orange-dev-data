@@ -1,7 +1,7 @@
 {
   "display_name": "Misha Komarov",
   "github_login_final": null,
-  "delving_username_final": "mishakomarov",
+  "delving_username_final": "nemothenoone",
   "uuid": "auto_misha_komarov",
   "badges": null,
   "roles": null,
@@ -52,40 +52,43 @@
   "p2016_impact_score": 0.0,
   "modern_impact_score": 0.0,
   "threads_started": 3.0,
-  "replies_sent": 0.0,
+  "replies_sent": 2.0,
   "ml_threads": 1.0,
   "delving_threads": 2.0,
   "ml_responses": 0.0,
-  "delving_responses": 0.0,
+  "delving_responses": 2.0,
   "first_active": null,
-  "last_active": "2026-02-23T13:25:41",
+  "last_active": null,
   "dev_type": "Participant",
   "expertise_domains": [
-    "Script",
-    "Consensus"
+    "L2",
+    "Wallet",
+    "Ecosystem"
   ],
   "expertise_by_source": {
     "discussion": {
-      "Consensus": 0.333,
-      "Script": 0.667
+      "Ecosystem": 0.246,
+      "L2": 0.508,
+      "Wallet": 0.246
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.333,
-    "Script": 0.667
+    "Ecosystem": 0.246,
+    "L2": 0.508,
+    "Wallet": 0.246
   },
-  "p2016_posts": 3.0,
-  "modern_posts": 3.0,
+  "p2016_posts": 5.0,
+  "modern_posts": 5.0,
   "p2016_ml_posts": 1.0,
-  "p2016_delving_posts": 2.0,
+  "p2016_delving_posts": 4.0,
   "modern_ml_posts": 1.0,
-  "modern_delving_posts": 2.0,
+  "modern_delving_posts": 4.0,
   "is_engineer": false,
   "is_reviewer": false,
   "is_researcher": false,
   "is_bip_author": false,
   "global_first_active": null,
-  "global_last_active": "2026-02-23T13:25:41",
+  "global_last_active": null,
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -94,26 +97,27 @@
   "github_followers": null,
   "activity_status": "",
   "is_top_50": false,
-  "delving_url": "https://delvingbitcoin.org/u/mishakomarov",
+  "delving_url": "https://delvingbitcoin.org/u/nemothenoone",
   "first_message": {
     "source": "delving",
-    "subject": "Bitcoin PIPEs: Introducting Covenants without Soft Forks",
-    "date": "2024-10-07",
-    "link": "https://delvingbitcoin.org/t/bitcoin-pipes-introducting-covenants-without-soft-forks/1183/1"
+    "subject": "Bitcoin PIPEs v2",
+    "date": "2026-02-12",
+    "link": "https://delvingbitcoin.org/t/bitcoin-pipes-v2/2249/1"
   },
   "last_message": {
-    "source": "mailing_list",
-    "subject": "[bitcoindev] Bitcoin PIPEs v2. Overview and feedback request.",
-    "date": "2026-02-23",
-    "link": "https://gnusha.org/pi/bitcoindev/fcf7d14c-6860-4493-80d5-9959d3760cd1n@googlegroups.com"
+    "source": "delving",
+    "subject": "Re: Bitcoin PIPEs v2",
+    "date": "2026-07-14",
+    "link": "https://delvingbitcoin.org/t/bitcoin-pipes-v2/2249/13"
   },
   "social_history": {
-    "2024": {
-      "covenants": 2,
-      "soft-fork-activation": 2
-    },
     "2026": {
-      "other": 1
+      "bitvm": 4,
+      "covenants": 4,
+      "multisig-threshold": 4,
+      "other": 1,
+      "tokens-runes": 4,
+      "vaults": 4
     }
   }
 }

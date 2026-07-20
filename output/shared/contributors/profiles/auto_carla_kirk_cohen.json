@@ -67,15 +67,15 @@
   ],
   "expertise_by_source": {
     "discussion": {
-      "L2": 0.739,
-      "Mempool": 0.12,
-      "Privacy": 0.141
+      "L2": 0.686,
+      "Mempool": 0.105,
+      "Privacy": 0.209
     }
   },
   "expertise_domain_scores": {
-    "L2": 0.739,
-    "Mempool": 0.12,
-    "Privacy": 0.141
+    "L2": 0.686,
+    "Mempool": 0.105,
+    "Privacy": 0.209
   },
   "p2016_posts": 14.0,
   "modern_posts": 14.0,
@@ -120,7 +120,9 @@
       "privacy": 5
     },
     "2026": {
+      "ecash": 3,
       "lightning": 3,
+      "privacy": 3,
       "taproot": 3
     }
   }

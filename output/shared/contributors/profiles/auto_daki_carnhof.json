@@ -1,5 +1,5 @@
 {
-  "display_name": "Daki Carnhof",
+  "display_name": "Daki CARNHOF",
   "github_login_final": "carnhofdaki",
   "delving_username_final": null,
   "uuid": "auto_daki_carnhof",
@@ -45,11 +45,11 @@
   "avg_pr_ack_velocity_days": 0.0947608024691358,
   "avg_concept_lead_time_days": 0.26787037037037037,
   "review_reciprocity": 2.0,
-  "hybrid_score": 0.0865,
-  "p2016_hybrid_score": 0.0865,
+  "hybrid_score": 0.1988,
+  "p2016_hybrid_score": 0.1988,
   "modern_hybrid_score": 0.0646,
-  "impact_score": 5.0,
-  "p2016_impact_score": 5.0,
+  "impact_score": 11.0,
+  "p2016_impact_score": 11.0,
   "modern_impact_score": 4.0,
   "threads_started": 0.0,
   "replies_sent": 0.0,
@@ -59,11 +59,15 @@
   "delving_responses": 0.0,
   "first_active": null,
   "last_active": null,
-  "dev_type": "Participant",
+  "dev_type": "Builder",
   "expertise_domains": [
     "Infrastructure"
   ],
-  "expertise_by_source": {},
+  "expertise_by_source": {
+    "code": {
+      "Infrastructure": 1.0
+    }
+  },
   "expertise_domain_scores": {
     "Infrastructure": 1.0
   },
@@ -73,7 +77,7 @@
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
-  "is_engineer": false,
+  "is_engineer": true,
   "is_reviewer": true,
   "is_researcher": false,
   "is_bip_author": false,

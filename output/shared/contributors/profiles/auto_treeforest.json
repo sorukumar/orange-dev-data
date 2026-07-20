@@ -61,21 +61,18 @@
   "last_active": null,
   "dev_type": "Participant",
   "expertise_domains": [
-    "L2",
     "Consensus",
-    "Mempool"
+    "L2"
   ],
   "expertise_by_source": {
     "discussion": {
-      "Consensus": 0.403,
-      "L2": 0.403,
-      "Mempool": 0.194
+      "Consensus": 0.8,
+      "L2": 0.2
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.403,
-    "L2": 0.403,
-    "Mempool": 0.194
+    "Consensus": 0.8,
+    "L2": 0.2
   },
   "p2016_posts": 2.0,
   "modern_posts": 2.0,
@@ -117,6 +114,7 @@
       "hard-fork-block-size": 1,
       "mempool-fees": 1,
       "mining": 1,
+      "taproot": 1,
       "utxo-sync": 1
     }
   }

@@ -86,16 +86,16 @@
       "Wallet": 0.333
     },
     "discussion": {
-      "Consensus": 0.069,
-      "L2": 0.528,
-      "Mempool": 0.403
+      "Consensus": 0.07,
+      "L2": 0.535,
+      "Mempool": 0.394
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.0138,
-    "Infrastructure": 0.7001,
-    "L2": 0.1056,
-    "Mempool": 0.0806,
+    "Consensus": 0.014,
+    "Infrastructure": 0.7002,
+    "L2": 0.107,
+    "Mempool": 0.0788,
     "Wallet": 0.0999
   },
   "p2016_posts": 88.0,
@@ -199,7 +199,9 @@
       "signatures-sighash": 7
     },
     "2026": {
+      "other": 1,
       "lightning": 1,
+      "privacy": 1,
       "taproot": 1
     }
   }

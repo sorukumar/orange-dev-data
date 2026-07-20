@@ -47,7 +47,7 @@
   "review_reciprocity": null,
   "hybrid_score": 0.0113,
   "p2016_hybrid_score": 0.019,
-  "modern_hybrid_score": 0.0636,
+  "modern_hybrid_score": 0.0635,
   "impact_score": 1.0,
   "p2016_impact_score": 1.0,
   "modern_impact_score": 4.0,
@@ -66,13 +66,13 @@
   ],
   "expertise_by_source": {
     "discussion": {
-      "L2": 0.55,
-      "Mempool": 0.45
+      "L2": 0.552,
+      "Mempool": 0.448
     }
   },
   "expertise_domain_scores": {
-    "L2": 0.55,
-    "Mempool": 0.45
+    "L2": 0.552,
+    "Mempool": 0.448
   },
   "p2016_posts": 45.0,
   "modern_posts": 45.0,
@@ -127,12 +127,12 @@
       "mining": 2,
       "payment-protocol": 3,
       "security": 14,
-      "signatures-sighash": 2,
-      "spam-filtering": 2,
-      "other": 2
+      "other": 6
     },
     "2026": {
+      "ecash": 2,
       "lightning": 2,
+      "privacy": 2,
       "taproot": 2
     }
   }

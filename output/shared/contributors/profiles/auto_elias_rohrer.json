@@ -70,14 +70,14 @@
       "Consensus": 1.0
     },
     "discussion": {
-      "L2": 0.744,
-      "Privacy": 0.256
+      "L2": 0.713,
+      "Privacy": 0.287
     }
   },
   "expertise_domain_scores": {
     "Consensus": 0.6,
-    "L2": 0.2976,
-    "Privacy": 0.1024
+    "L2": 0.2852,
+    "Privacy": 0.1148
   },
   "p2016_posts": 9.0,
   "modern_posts": 8.0,
@@ -130,7 +130,9 @@
     },
     "2026": {
       "bitvm": 1,
+      "ecash": 1,
       "lightning": 1,
+      "privacy": 1,
       "taproot": 1,
       "utxo-sync": 1
     }

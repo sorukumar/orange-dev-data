@@ -51,10 +51,10 @@
   "impact_score": 0.0,
   "p2016_impact_score": 0.0,
   "modern_impact_score": 0.0,
-  "threads_started": 20.0,
+  "threads_started": 21.0,
   "replies_sent": 7.0,
   "ml_threads": 0.0,
-  "delving_threads": 20.0,
+  "delving_threads": 21.0,
   "ml_responses": 0.0,
   "delving_responses": 7.0,
   "first_active": null,
@@ -66,20 +66,20 @@
   ],
   "expertise_by_source": {
     "discussion": {
-      "Consensus": 0.2,
-      "Script": 0.8
+      "Consensus": 0.216,
+      "Script": 0.784
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.2,
-    "Script": 0.8
+    "Consensus": 0.216,
+    "Script": 0.784
   },
-  "p2016_posts": 27.0,
-  "modern_posts": 27.0,
+  "p2016_posts": 28.0,
+  "modern_posts": 28.0,
   "p2016_ml_posts": 0.0,
-  "p2016_delving_posts": 27.0,
+  "p2016_delving_posts": 28.0,
   "modern_ml_posts": 0.0,
-  "modern_delving_posts": 27.0,
+  "modern_delving_posts": 28.0,
   "is_engineer": false,
   "is_reviewer": false,
   "is_researcher": false,
@@ -103,20 +103,20 @@
   },
   "last_message": {
     "source": "delving",
-    "subject": "Is CSFS+CAT already a general covenant primitive? Three on-chain demonstrations, and an observation for discussion",
-    "date": "2026-06-26",
-    "link": "https://delvingbitcoin.org/t/is-csfs-cat-already-a-general-covenant-primitive-three-on-chain-demonstrations-and-an-observation-for-discussion/2659/1"
+    "subject": "Re: Taproot-native prevout binding via sighash preimage decomposition",
+    "date": "2026-07-13",
+    "link": "https://delvingbitcoin.org/t/taproot-native-prevout-binding-via-sighash-preimage-decomposition/2483/4"
   },
   "social_history": {
     "2026": {
       "other": 11,
-      "bitvm": 5,
-      "covenants": 27,
+      "bitvm": 6,
+      "covenants": 28,
       "lightning": 5,
       "ordinals-inscriptions": 4,
       "script-opcodes": 4,
-      "signatures-sighash": 6,
-      "taproot": 10,
+      "signatures-sighash": 7,
+      "taproot": 11,
       "testing-devtools": 19
     }
   }
