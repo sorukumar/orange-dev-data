@@ -57,6 +57,14 @@ def _clean_subject(subject):
         s = s.replace('[bitcoindev]', '').strip()
     return s
 
+IDENTITY_MAP = {}
+
+
+try:
+    with open("data/cache/thread_summaries_cache.json", "r") as f:
+        THREAD_SUMMARIES = json.load(f)
+except Exception:
+    THREAD_SUMMARIES = {}
 
 def _compute_window(df, window_days):
     """Return raw metrics dict for the given window. Includes _cat_shares for trend calc."""
@@ -96,14 +104,12 @@ def _compute_window(df, window_days):
             "trend": "steady",
         })
 
-    # --- Hot Threads ---
-    # Get opening-post snippet (first non-reply per thread)
+    # Get opening-post snippet (first non-reply per thread, fallback to earliest reply)
     openers = (
-        w[~w['is_reply']]
-        .sort_values('date')
+        df.sort_values(['is_reply', 'date'])
         .groupby('thread_id')
         .first()
-        .reset_index()[['thread_id', 'body_snippet']]
+        .reset_index()[['thread_id', 'body_snippet', 'author_name', 'canonical_id', 'is_reply']]
     )
 
     thread_stats = w.groupby('thread_id').agg(
@@ -120,16 +126,42 @@ def _compute_window(df, window_days):
     thread_stats = thread_stats.sort_values('score', ascending=False)
     thread_stats = thread_stats.merge(openers, on='thread_id', how='left')
 
+    top_overall = thread_stats.head(8)
+    top_delving = thread_stats[thread_stats['source'] == 'delving'].head(8)
+    top_ml = thread_stats[thread_stats['source'] == 'mailing_list'].head(8)
+    
+    combined = pd.concat([top_overall, top_delving, top_ml]).drop_duplicates(subset=['thread_id'])
+    combined = combined.sort_values('score', ascending=False)
+
     hot_threads = []
-    for _, row in thread_stats.head(8).iterrows():
+    for _, row in combined.iterrows():
         cat = row.get('category') or 'other'
         snippet_raw = str(row.get('body_snippet') or '').strip()
         # Truncate cleanly at word boundary
         if len(snippet_raw) > 140:
             snippet_raw = snippet_raw[:137].rsplit(' ', 1)[0] + '…'
+            
+        tid = row['thread_id']
+        insight = None
+        summary = None
+        tech_summary = None
+        if f"tid_{tid}" in THREAD_SUMMARIES:
+            insight = THREAD_SUMMARIES[f"tid_{tid}"].get("pulse_insight")
+            summary = THREAD_SUMMARIES[f"tid_{tid}"].get("public_summary")
+            tech_summary = THREAD_SUMMARIES[f"tid_{tid}"].get("technical_summary")
+        else:
+            subj_clean = row['subject'][:20]
+            if f"thread_{subj_clean}" in THREAD_SUMMARIES:
+                insight = THREAD_SUMMARIES[f"thread_{subj_clean}"].get("pulse_insight")
+                summary = THREAD_SUMMARIES[f"thread_{subj_clean}"].get("public_summary")
+                tech_summary = THREAD_SUMMARIES[f"thread_{subj_clean}"].get("technical_summary")
+
+        raw_uuid = str(row.get('canonical_id', ''))
+        raw_name = str(row.get('author_name', ''))
+        display_name = IDENTITY_MAP.get(raw_uuid, raw_name)
 
         hot_threads.append({
-            "thread_id": row['thread_id'],
+            "thread_id": tid,
             "subject": _clean_subject(row['subject']),
             "category": cat,
             "label": CATEGORY_LABELS.get(cat, cat.replace('-', ' ').title()),
@@ -140,6 +172,12 @@ def _compute_window(df, window_days):
             "source": row.get('source', ''),
             "link": row.get('link', '') or '',
             "snippet": snippet_raw,
+            "insight": insight,
+            "summary": summary,
+            "technical_summary": tech_summary,
+            "author": display_name,
+            "author_uuid": raw_uuid,
+            "is_original_author": not bool(row.get('is_reply', False))
         })
 
     # --- Top BIPs ---
@@ -257,6 +295,17 @@ def generate_discussions_pulse():
         except Exception as e:
             print(f"  Warning: Could not load BIP titles: {e}")
 
+    # Load canonical identity map
+    IDENTITY_MAP = {}
+    if os.path.exists("data/enriched/contributors_unified.parquet"):
+        try:
+            idf = pd.read_parquet("data/enriched/contributors_unified.parquet")
+            for _, row in idf.iterrows():
+                if pd.notna(row.get('uuid')) and pd.notna(row.get('display_name')):
+                    IDENTITY_MAP[str(row['uuid'])] = str(row['display_name'])
+        except Exception as e:
+            print(f"  Warning: Could not load identity map: {e}")
+            
     df = pd.read_parquet(SOCIAL_THREADS_INPUT)
     df['date'] = pd.to_datetime(df['date'])
     
@@ -285,20 +334,34 @@ def generate_discussions_pulse():
         except Exception as e:
             print(f"  Warning: Could not load pulse summary: {e}")
 
-    # Inject into 30d window
     if pulse_editorial:
         w30["pulse_editorial"] = {
             "summary": pulse_editorial.get("summary", ""),
             "insights": pulse_editorial.get("insights", []),
-            "thread_insights": pulse_editorial.get("thread_insights", {}),
         }
         
-        # Enrich hot threads with insights
-        thread_insights = pulse_editorial.get("thread_insights", {})
-        for thread in w30.get("hot_threads", []):
-            tid_str = str(thread.get("thread_id"))
-            if tid_str in thread_insights:
-                thread["insight"] = thread_insights[tid_str]
+    # Enrich hot threads with insights from unified thread summaries
+    thread_cache = {}
+    if os.path.exists("data/cache/thread_summaries_cache.json"):
+        try:
+            with open("data/cache/thread_summaries_cache.json") as f:
+                thread_cache = json.load(f)
+        except Exception as e:
+            print(f"  Warning: Could not load thread summaries cache: {e}")
+            
+    for thread in w30.get("hot_threads", []):
+        tid_str = str(thread.get("thread_id"))
+        
+        # Look up by thread_id first (new robust method)
+        cache_entry = thread_cache.get(f"tid_{tid_str}")
+        
+        # Fallback to subject-based lookup
+        if not cache_entry:
+            subj = str(thread.get("subject", ""))
+            cache_entry = thread_cache.get(f"thread_{subj[:20]}")
+            
+        if cache_entry and isinstance(cache_entry, dict):
+            thread["insight"] = cache_entry.get("pulse_insight", cache_entry.get("public_summary", ""))
 
     # Strip internal keys
     w90.pop('_cat_shares', None)

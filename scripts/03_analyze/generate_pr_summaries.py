@@ -4,6 +4,10 @@ import pandas as pd
 import time
 from dotenv import load_dotenv
 
+import sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
+from scripts.utils.pr_utils import is_high_signal
+
 try:
     from google import genai
     from google.genai.errors import APIError
@@ -121,20 +125,17 @@ def run_summarizer():
         while len(ints) < 3:
             ints.append(0)
         return tuple(ints[:3])
-        
-    def is_high_signal(labels_str, is_recent):
-        if pd.isna(labels_str):
-            return False
-        labels = str(labels_str).lower()
-        if any(drop in labels for drop in ['test', 'doc', 'refactor', 'build', 'ci']):
-            return False
-        if is_recent:
-            return any(keep in labels for keep in ['consensus', 'p2p', 'rpc', 'rest', 'zmq', 'wallet', 'mempool', 'gui', 'policy'])
-        else:
-            return any(keep in labels for keep in ['consensus', 'cryptography', 'p2p'])
 
     df = pd.read_parquet(INPUT_PR_PARQUET)
     df = df[(df['repository_name'] == 'bitcoin/bitcoin') & (df['merged_at'].notna())].copy()
+    
+    # Load review counts to fuel the tier-based logic
+    if os.path.exists("data/raw/github_review_events.parquet"):
+        df_rev = pd.read_parquet("data/raw/github_review_events.parquet")
+        review_counts = df_rev.groupby('pr_number').size().to_dict()
+        df['review_count'] = df['pr_number'].map(review_counts).fillna(0)
+    else:
+        df['review_count'] = 0
     
     tagged_df = df[df['milestone'].notna()]
     cutoff_dates = {}
@@ -160,7 +161,9 @@ def run_summarizer():
         if inferred_ms:
             ms_version = parse_version(inferred_ms)
             is_recent = ms_version >= (24, 0, 0)
-            if not is_high_signal(row['labels'], is_recent):
+            rc = row.get('review_count', 0)
+            title = row.get('title', '')
+            if not is_high_signal(row['labels'], is_recent, rc, title):
                 return None
         return inferred_ms
 

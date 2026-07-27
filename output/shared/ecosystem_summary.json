@@ -1,37 +1,37 @@
 {
-  "generated_at": "2026-07-19T10:24:20.636040",
+  "generated_at": "2026-07-26T09:51:02.863052",
   "groups": {
-    "committers": 1242,
-    "reviewers": 5138,
-    "research": 1668,
-    "standards": 158,
-    "total_active": 6511,
-    "total_registry": 7666
+    "committers": 1245,
+    "reviewers": 5146,
+    "research": 1671,
+    "standards": 159,
+    "total_active": 6523,
+    "total_registry": 7680
   },
   "venn_4": {
     "0001": 15,
-    "0010": 1190,
+    "0010": 1193,
     "0011": 23,
-    "0100": 3864,
+    "0100": 3870,
     "0101": 5,
     "0110": 136,
     "0111": 36,
-    "1000": 132,
+    "1000": 133,
     "1001": 1,
     "1010": 11,
     "1011": 1,
-    "1100": 824,
+    "1100": 826,
     "1101": 2,
-    "1110": 196,
-    "1111": 75
+    "1110": 195,
+    "1111": 76
   },
   "venn_summary": {
-    "code_only": 132,
-    "review_only": 3864,
-    "research_only": 1190,
+    "code_only": 133,
+    "review_only": 3870,
+    "research_only": 1193,
     "standards_only": 15,
-    "all_four": 75,
-    "code_review": 824,
+    "all_four": 76,
+    "code_review": 826,
     "review_research": 136,
     "research_standards": 23
   },
@@ -41,30 +41,30 @@
     "value": "BIP 70"
   },
   "spotlight": {
-    "name": "Shrey",
-    "uuid": "auto_shrey",
+    "name": "Muhammad",
+    "uuid": "auto_muhammad",
     "github_login": "",
     "description": "First-time core contributor recently merged 1 commit."
   },
   "onboarding": {
-    "new_coders_90d": 21,
-    "new_coders_7d": 2,
-    "new_discussants_90d": 80,
-    "new_discussants_7d": 5,
+    "new_coders_90d": 19,
+    "new_coders_7d": 3,
+    "new_discussants_90d": 79,
+    "new_discussants_7d": 3,
     "window_days": 90
   },
   "prs": {
-    "total_merged": 17922,
-    "merged_30d": 109,
-    "merged_prev_30d": 132,
-    "merged_7d": 25,
-    "merged_prev_7d": 32
+    "total_merged": 17955,
+    "merged_30d": 117,
+    "merged_prev_30d": 123,
+    "merged_7d": 34,
+    "merged_prev_7d": 24
   },
   "commits": {
-    "commits_30d": 612,
-    "commits_prev_30d": 731,
-    "commits_7d": 78,
-    "commits_prev_7d": 196
+    "commits_30d": 657,
+    "commits_prev_30d": 729,
+    "commits_7d": 157,
+    "commits_prev_7d": 123
   },
   "bips": {
     "total": 210,
@@ -75,20 +75,20 @@
       {
         "category": "quantum",
         "label": "Quantum",
-        "count": 130,
-        "share": 19.1
+        "count": 128,
+        "share": 18.7
       },
       {
         "category": "utxo-sync",
         "label": "Utxo Sync",
         "count": 70,
-        "share": 10.3
+        "share": 10.2
       },
       {
         "category": "taproot",
         "label": "Taproot",
-        "count": 67,
-        "share": 9.8
+        "count": 68,
+        "share": 9.9
       }
     ],
     "top_bips": [

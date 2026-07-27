@@ -83,30 +83,9 @@ def generate_pulse_summary():
         prompt_context += f"- {theme['label']}: {s30:.1f}% ({'+' if delta >= 0 else ''}{delta:.1f}pp from 90d) — {trend_str}\n"
 
     prompt_context += "\nTOP THREADS (by engagement breadth):\n"
-    
-    # We need to collect opener snippet + top-3 reply snippets
     for i, thread in enumerate(hot_threads[:8]):
         tid = thread['thread_id']
-        t_df = df[df['thread_id'] == tid].sort_values('date')
-        
-        # Get opener snippet
-        opener_mask = ~t_df['is_reply']
-        if opener_mask.any():
-            op_snippet = str(t_df[opener_mask].iloc[0].get('body_snippet', '')).strip()
-        else:
-            op_snippet = ""
-            
-        # Get reply snippets
-        reply_mask = t_df['is_reply']
-        replies = t_df[reply_mask].drop_duplicates('canonical_id').head(3)
-        rep_snippets = [str(s).strip() for s in replies['body_snippet'] if pd.notna(s)]
-        
-        combined_snippet = op_snippet + " " + " ".join(rep_snippets)
-        if len(combined_snippet) > 800:
-            combined_snippet = combined_snippet[:797] + "..."
-            
         prompt_context += f"{i+1}. [{thread['source']}] \"{thread['subject']}\" (ID: {tid}, {thread['reply_count']} replies, {thread['unique_authors']} voices)\n"
-        prompt_context += f"   Context: {combined_snippet}\n"
 
     prompt = f"""You are a senior Bitcoin protocol researcher writing a monthly briefing for fellow contributors.
 
@@ -128,10 +107,7 @@ Output format (JSON):
     "Insight bullet 1 — leads with the biggest delta...",
     "Insight bullet 2...",
     "Insight bullet 3..."
-  ],
-  "thread_insights": {{
-    "<thread_id>": "One sentence: What's the core technical question?"
-  }}
+  ]
 }}
 """
 

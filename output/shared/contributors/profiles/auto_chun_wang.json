@@ -1,8 +1,8 @@
 {
-  "display_name": "JOSE FEMENIAS CA\u00d1UELO",
+  "display_name": "Chun Wang",
   "github_login_final": null,
   "delving_username_final": null,
-  "uuid": "auto_jose_femenias_ca_uelo",
+  "uuid": "auto_chun_wang",
   "badges": null,
   "roles": null,
   "total_commits": 0.0,
@@ -45,38 +45,41 @@
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": null,
-  "hybrid_score": 0.0233,
-  "p2016_hybrid_score": 0.0443,
+  "hybrid_score": 0.0745,
+  "p2016_hybrid_score": 0.0528,
   "modern_hybrid_score": 0.0,
-  "impact_score": 1.0,
+  "impact_score": 4.0,
   "p2016_impact_score": 3.0,
   "modern_impact_score": 0.0,
-  "threads_started": 5.0,
-  "replies_sent": 4.0,
-  "ml_threads": 5.0,
+  "threads_started": 3.0,
+  "replies_sent": 18.0,
+  "ml_threads": 3.0,
   "delving_threads": 0.0,
-  "ml_responses": 4.0,
+  "ml_responses": 18.0,
   "delving_responses": 0.0,
-  "first_active": "2017-06-11T15:05:24",
-  "last_active": "2019-12-06T12:47:38",
+  "first_active": "2015-05-29T18:42:16",
+  "last_active": "2017-06-19T13:01:45",
   "dev_type": "Participant",
   "expertise_domains": [
     "Consensus",
-    "Privacy"
+    "Mining",
+    "Mempool"
   ],
   "expertise_by_source": {
     "discussion": {
-      "Consensus": 0.667,
-      "Privacy": 0.333
+      "Consensus": 0.556,
+      "Mempool": 0.181,
+      "Mining": 0.264
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.667,
-    "Privacy": 0.333
+    "Consensus": 0.5554,
+    "Mempool": 0.1808,
+    "Mining": 0.2637
   },
-  "p2016_posts": 9.0,
+  "p2016_posts": 4.0,
   "modern_posts": 0.0,
-  "p2016_ml_posts": 9.0,
+  "p2016_ml_posts": 4.0,
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
@@ -84,8 +87,8 @@
   "is_reviewer": false,
   "is_researcher": true,
   "is_bip_author": false,
-  "global_first_active": "2017-06-11T15:05:24",
-  "global_last_active": "2019-12-06T12:47:38",
+  "global_first_active": "2015-05-29T18:42:16",
+  "global_last_active": "2017-06-19T13:01:45",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -96,28 +99,32 @@
   "is_top_50": false,
   "first_message": {
     "source": "mailing_list",
-    "subject": "[bitcoin-dev] Bitcoin pointers",
-    "date": "2017-06-11",
-    "link": "https://gnusha.org/pi/bitcoindev/FD96E80B-A6ED-436D-876D-423A3C3E7566@gmail.com"
+    "subject": "Re: [Bitcoin-development] Block Size Increase Requirements",
+    "date": "2015-05-29",
+    "link": "https://gnusha.org/pi/bitcoindev/CAFzgq-xByQ1E_33_m3UpXQFUkGc78HKnA=7XXMshANDuTkNsvA@mail.gmail.com"
   },
   "last_message": {
     "source": "mailing_list",
-    "subject": "Re: [bitcoin-dev] easypaysy - A layer-two protocol to send payments\n without addresses",
-    "date": "2019-12-06",
-    "link": "https://gnusha.org/pi/bitcoindev/6CB7E73C-57C9-428B-83E6-36113B619BFB@gmail.com"
+    "subject": "[bitcoin-dev] An alternative way to protect the network from 51%\n\tattacks threat",
+    "date": "2017-06-19",
+    "link": "https://gnusha.org/pi/bitcoindev/CAFzgq-woP3kWC9wYm=YxA_W=jMoL0AegTtUhTX3kEdMaB3m1rA@mail.gmail.com"
   },
   "social_history": {
+    "2015": {
+      "hard-fork-block-size": 11,
+      "mempool-fees": 4,
+      "mining": 9,
+      "scaling": 2,
+      "script-opcodes": 2,
+      "security": 2,
+      "other": 3
+    },
     "2017": {
-      "other": 1,
-      "script-opcodes": 1
-    },
-    "2018": {
-      "privacy": 1,
-      "taproot": 1
-    },
-    "2019": {
-      "other": 4,
-      "taproot": 1
+      "hard-fork-block-size": 2,
+      "mining": 1,
+      "p2p-network": 1,
+      "other": 2,
+      "soft-fork-activation": 2
     }
   }
 }

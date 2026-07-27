@@ -134,49 +134,8 @@ def main():
         cache["tldr_summary"] = tldr_summary
         with open(cache_path, "w") as f: json.dump(cache, f, indent=2)
 
-    # Gather all items to summarize
-    items_to_summarize = {}
-    for cat, prs in weekly_data.get('categorized_merged_prs', {}).items():
-        for pr in prs:
-            key = f"pr_{pr['pr_number']}"
-            if key not in cache:
-                items_to_summarize[key] = f"Merged PR #{pr['pr_number']}: {pr['title']}"
-
-    for cat, prs in weekly_data.get('categorized_hot_prs', {}).items():
-        for pr in prs:
-            key = f"pr_{pr['pr_number']}"
-            if key not in cache:
-                items_to_summarize[key] = f"Hot PR #{pr['pr_number']} under review: {pr['title']}"
-
-    top_2_threads = weekly_data.get('active_threads', [])[:2]
-    for thread in top_2_threads:
-        key = f"thread_{thread['subject'][:20]}"
-        if key not in cache:
-            items_to_summarize[key] = f"Discussion Thread: {thread['subject']}"
-
-    if items_to_summarize:
-        print(f"Generating bulk summaries for {len(items_to_summarize)} new items...")
-        instruction = """For each item, generate two summaries:
-1. "public_summary": Exactly 1-2 short lines accessible to the general public. Explain exactly what is being done, and focus on the value and benefit of the work rather than just technical details.
-2. "technical_summary": A detailed 4-5 line summary explaining the technical implementation, architectural value, and exactly what needs to be done."""
-        
-        items = list(items_to_summarize.items())
-        for i in range(0, len(items), 10):
-            chunk = dict(items[i:i+10])
-            print(f"Processing chunk {i} to {i+len(chunk)}...")
-            new_summaries = get_bulk_llm_summaries(api_keys, chunk, instruction)
-            
-            if not new_summaries:
-                print("Stopping script due to API limits or failures across all keys.")
-                break
-                
-            for k, v in new_summaries.items():
-                cache[k] = v
-            with open(cache_path, "w") as f: json.dump(cache, f, indent=2)
-            print("Chunk saved successfully.")
-            time.sleep(3)
     else:
-        print("No new items to summarize. Cache is fully warmed.")
+        print("No new items to summarize for TL;DR. Cache is fully warmed.")
 
 if __name__ == "__main__":
     main()

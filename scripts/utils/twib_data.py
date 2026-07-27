@@ -170,6 +170,7 @@ def get_weekly_activity(root_dir, days_back=7):
         recent_social = recent_social.sort_values(by='date')
 
         thread_agg = recent_social.groupby(['source', 'subject']).agg(
+            thread_id=('thread_id', 'first'),
             message_count=('message_id', 'count'),
             link=('link', 'first'),
             author=('author_name', 'first')

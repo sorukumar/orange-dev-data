@@ -5,6 +5,10 @@ import time
 import re
 from dotenv import load_dotenv
 
+import sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
+from scripts.utils.pr_utils import is_high_signal
+
 try:
     from google import genai
     from google.genai.errors import APIError
@@ -113,26 +117,6 @@ def parse_version(v_str):
     while len(ints) < 3:
         ints.append(0)
     return tuple(ints[:3])
-
-def is_high_signal(labels_str, is_recent, review_count=0):
-    labels = str(labels_str).lower() if pd.notna(labels_str) else ""
-    
-    tier_1 = ['consensus', 'validation', 'cryptography', 'p2p', 'wallet', 'mempool', 'policy']
-    tier_3 = ['test', 'doc', 'refactor', 'build', 'ci']
-    
-    if not is_recent:
-        return any(keep in labels for keep in ['consensus', 'cryptography', 'p2p'])
-        
-    # Check Tier 1 (Threshold 0)
-    if any(keep in labels for keep in tier_1):
-        return True
-        
-    # Check Tier 3 (Typically dropped, Threshold 50)
-    if any(drop in labels for drop in tier_3):
-        return review_count >= 50
-        
-    # Check Tier 2 (Everything else, e.g. 'rpc', 'gui', or no labels, Threshold 25)
-    return review_count >= 25
 
 def run_highlights_generator():
     if not os.path.exists(INPUT_PR_PARQUET):

@@ -306,6 +306,7 @@ def process_releases():
                 "author_uuid": author_uuid,
                 "author_name": author_name,
                 "merge_time_days": merge_time_days,
+                "review_count": int(pr.get('review_count', 0)),
                 "categories": categories,
                 "impact_category": impact_category,
                 "public_summary": pub_summary,

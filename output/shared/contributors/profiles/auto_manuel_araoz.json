@@ -36,11 +36,11 @@
   "p2016_authored_commits": 0.0,
   "modern_authored_commits": 0.0,
   "co_authored_commits": 0.0,
-  "bips_authored": 0.0,
+  "bips_authored": 1.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
-  "first_bip_date": null,
-  "last_bip_date": null,
+  "first_bip_date": "2014-04-28T14:04:16",
+  "last_bip_date": "2014-04-28T14:04:16",
   "avg_review_latency_days": 756.3973584806397,
   "reviews_count": 12.0,
   "avg_approval_latency_days": 715.3321634615385,
@@ -57,10 +57,10 @@
   "avg_pr_ack_velocity_days": 18.56082175925926,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 1.7142857142857142,
-  "hybrid_score": 0.4625,
+  "hybrid_score": 0.6008,
   "p2016_hybrid_score": 0.0848,
   "modern_hybrid_score": 0.0542,
-  "impact_score": 24.0,
+  "impact_score": 30.0,
   "p2016_impact_score": 5.0,
   "modern_impact_score": 3.0,
   "threads_started": 1.0,
@@ -71,17 +71,25 @@
   "delving_responses": 0.0,
   "first_active": "2014-04-25T17:27:45",
   "last_active": "2015-09-01T13:22:51",
-  "dev_type": "Reviewer",
+  "dev_type": "Protocol Designer",
   "expertise_domains": [
-    "Wallet"
+    "Wallet",
+    "Infrastructure"
   ],
   "expertise_by_source": {
+    "bips": {
+      "Wallet": 1.0
+    },
+    "code": {
+      "Infrastructure": 1.0
+    },
     "discussion": {
       "Wallet": 1.0
     }
   },
   "expertise_domain_scores": {
-    "Wallet": 1.0
+    "Infrastructure": 0.3,
+    "Wallet": 0.7
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -89,7 +97,7 @@
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
-  "is_engineer": false,
+  "is_engineer": true,
   "is_reviewer": true,
   "is_researcher": true,
   "is_bip_author": true,
@@ -113,6 +121,15 @@
       "Tests": 1.0
     }
   },
+  "bip_list": [
+    {
+      "number": 45,
+      "title": "Structure for Deterministic P2SH Multisignature Wallets",
+      "status": "Complete",
+      "theme": "Wallet & Keys",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0045.mediawiki"
+    }
+  ],
   "first_message": {
     "source": "mailing_list",
     "subject": "[Bitcoin-development] New BIP32 structure for P2SH multisig wallets",

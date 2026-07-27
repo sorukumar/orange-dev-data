@@ -1,8 +1,8 @@
 {
-  "display_name": "Laz1mov",
+  "display_name": "Mark",
   "github_login_final": null,
-  "delving_username_final": "laz1m0v",
-  "uuid": "auto_laz1mov",
+  "delving_username_final": "fightfear",
+  "uuid": "auto_mark_1",
   "badges": null,
   "roles": null,
   "total_commits": 0.0,
@@ -51,35 +51,35 @@
   "impact_score": 0.0,
   "p2016_impact_score": 0.0,
   "modern_impact_score": 0.0,
-  "threads_started": 15.0,
+  "threads_started": 0.0,
   "replies_sent": 1.0,
   "ml_threads": 0.0,
-  "delving_threads": 15.0,
+  "delving_threads": 0.0,
   "ml_responses": 0.0,
   "delving_responses": 1.0,
   "first_active": null,
   "last_active": null,
   "dev_type": "Participant",
   "expertise_domains": [
-    "Script",
-    "Consensus"
+    "Consensus",
+    "Mining"
   ],
   "expertise_by_source": {
     "discussion": {
-      "Consensus": 0.149,
-      "Script": 0.851
+      "Consensus": 0.667,
+      "Mining": 0.333
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.149,
-    "Script": 0.851
+    "Consensus": 0.667,
+    "Mining": 0.333
   },
-  "p2016_posts": 16.0,
-  "modern_posts": 16.0,
+  "p2016_posts": 1.0,
+  "modern_posts": 1.0,
   "p2016_ml_posts": 0.0,
-  "p2016_delving_posts": 16.0,
+  "p2016_delving_posts": 1.0,
   "modern_ml_posts": 0.0,
-  "modern_delving_posts": 16.0,
+  "modern_delving_posts": 1.0,
   "is_engineer": false,
   "is_reviewer": false,
   "is_researcher": false,
@@ -94,38 +94,25 @@
   "github_followers": null,
   "activity_status": "",
   "is_top_50": false,
-  "delving_url": "https://delvingbitcoin.org/u/laz1m0v",
+  "delving_url": "https://delvingbitcoin.org/u/fightfear",
   "first_message": {
     "source": "delving",
-    "subject": "Research Paper on B.R.A.I.N.: Bitcoin Recursive Autonomous Intelligence Network",
-    "date": "2025-03-07",
-    "link": "https://delvingbitcoin.org/t/research-paper-on-b-r-a-i-n-bitcoin-recursive-autonomous-intelligence-network/1497/1"
+    "subject": "Re: Addressing the Diminishing Block Subsidy",
+    "date": "2026-07-23",
+    "link": "https://delvingbitcoin.org/t/addressing-the-diminishing-block-subsidy/2640/25"
   },
   "last_message": {
     "source": "delving",
-    "subject": "Re: Taproot-native prevout binding via sighash preimage decomposition",
-    "date": "2026-05-07",
-    "link": "https://delvingbitcoin.org/t/taproot-native-prevout-binding-via-sighash-preimage-decomposition/2483/2"
+    "subject": "Re: Addressing the Diminishing Block Subsidy",
+    "date": "2026-07-23",
+    "link": "https://delvingbitcoin.org/t/addressing-the-diminishing-block-subsidy/2640/25"
   },
   "social_history": {
-    "2025": {
-      "bitvm": 2,
-      "covenants": 2,
-      "mempool-fees": 1,
-      "mining": 1,
-      "other": 2,
-      "security": 1
-    },
     "2026": {
-      "bitvm": 1,
-      "covenants": 8,
-      "other": 7,
-      "mempool-fees": 1,
-      "mining": 3,
-      "ordinals-inscriptions": 2,
-      "script-opcodes": 4,
-      "security": 1,
-      "taproot": 3
+      "bip-process": 1,
+      "hard-fork-block-size": 1,
+      "mining": 1,
+      "utxo-sync": 1
     }
   }
 }

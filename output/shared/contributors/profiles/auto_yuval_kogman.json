@@ -58,15 +58,15 @@
   "avg_concept_lead_time_days": 85.22662037037037,
   "review_reciprocity": 2.4,
   "hybrid_score": 0.5416,
-  "p2016_hybrid_score": 0.5614,
-  "modern_hybrid_score": 0.5203,
+  "p2016_hybrid_score": 0.5613,
+  "modern_hybrid_score": 0.5205,
   "impact_score": 28.0,
   "p2016_impact_score": 29.0,
   "modern_impact_score": 27.0,
-  "threads_started": 7.0,
+  "threads_started": 8.0,
   "replies_sent": 24.0,
   "ml_threads": 4.0,
-  "delving_threads": 3.0,
+  "delving_threads": 4.0,
   "ml_responses": 22.0,
   "delving_responses": 2.0,
   "first_active": "2018-11-06T09:50:38",
@@ -86,24 +86,24 @@
       "Script": 0.5
     },
     "discussion": {
-      "Consensus": 0.085,
-      "Mempool": 0.153,
-      "Privacy": 0.763
+      "Consensus": 0.088,
+      "Mempool": 0.14,
+      "Privacy": 0.772
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.167,
-    "Infrastructure": 0.4999,
-    "Mempool": 0.0306,
-    "Privacy": 0.1526,
+    "Consensus": 0.1676,
+    "Infrastructure": 0.5,
+    "Mempool": 0.028,
+    "Privacy": 0.1544,
     "Script": 0.15
   },
-  "p2016_posts": 31.0,
-  "modern_posts": 17.0,
+  "p2016_posts": 32.0,
+  "modern_posts": 18.0,
   "p2016_ml_posts": 26.0,
-  "p2016_delving_posts": 5.0,
+  "p2016_delving_posts": 6.0,
   "modern_ml_posts": 12.0,
-  "modern_delving_posts": 5.0,
+  "modern_delving_posts": 6.0,
   "is_engineer": true,
   "is_reviewer": true,
   "is_researcher": true,
@@ -143,9 +143,9 @@
   },
   "last_message": {
     "source": "delving",
-    "subject": "Re: Onion Message Jamming in the Lightning Network",
-    "date": "2026-04-15",
-    "link": "https://delvingbitcoin.org/t/onion-message-jamming-in-the-lightning-network/2414/5"
+    "subject": "Re: RFC: Block-Range Filters (a.k.a. Hierarchical filters)",
+    "date": "2026-07-22",
+    "link": "https://delvingbitcoin.org/t/rfc-block-range-filters-a-k-a-hierarchical-filters/2735/2"
   },
   "social_history": {
     "2018": {
@@ -162,11 +162,11 @@
       "privacy": 1
     },
     "2021": {
-      "utxo-sync": 2
+      "other": 2
     },
     "2022": {
       "mempool-fees": 1,
-      "other": 1
+      "p2p-network": 1
     },
     "2023": {
       "other": 1,
@@ -188,6 +188,7 @@
     "2026": {
       "other": 2,
       "mempool-fees": 4,
+      "p2p-network": 1,
       "privacy": 5,
       "script-opcodes": 4,
       "signatures-sighash": 4,

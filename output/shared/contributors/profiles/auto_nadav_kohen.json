@@ -66,13 +66,13 @@
   ],
   "expertise_by_source": {
     "discussion": {
-      "L2": 0.763,
-      "Wallet": 0.237
+      "L2": 0.783,
+      "Wallet": 0.217
     }
   },
   "expertise_domain_scores": {
-    "L2": 0.763,
-    "Wallet": 0.237
+    "L2": 0.783,
+    "Wallet": 0.217
   },
   "p2016_posts": 10.0,
   "modern_posts": 4.0,
@@ -119,17 +119,17 @@
       "l2-bridges": 1,
       "mining": 1,
       "privacy": 1,
-      "signatures-sighash": 1,
-      "other": 1
+      "other": 1,
+      "taproot": 1
     },
     "2021": {
       "dlc": 1
     },
     "2026": {
       "dlc": 3,
-      "lightning": 2,
-      "mining": 1,
-      "multisig-threshold": 3
+      "lightning": 3,
+      "multisig-threshold": 3,
+      "taproot": 1
     }
   }
 }
