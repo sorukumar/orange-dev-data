@@ -63,16 +63,16 @@ def get_weekly_activity(root_dir, days_back=7):
         print(f"Error reading reviews: {e}")
         reviews_df = pd.DataFrame()
 
-    global_uuid_map = {}
-    if not pr_df.empty:
-        for _, row in pr_df.dropna(subset=['uuid']).drop_duplicates(subset=['author']).iterrows():
-            if 'bot' not in str(row['author']).lower():
-                global_uuid_map[row['author']] = row['uuid']
-                
-    if not reviews_df.empty and 'user' in reviews_df.columns:
-        for _, row in reviews_df.dropna(subset=['uuid']).drop_duplicates(subset=['user']).iterrows():
-            if 'bot' not in str(row['user']).lower() and row['user'] not in global_uuid_map:
-                global_uuid_map[row['user']] = row['uuid']
+    IDENTITY_MAP = {}
+    try:
+        identity_path = os.path.join(root_dir, "data/enriched/contributors_unified.parquet")
+        if os.path.exists(identity_path):
+            idf = pd.read_parquet(identity_path)
+            for _, row in idf.iterrows():
+                if pd.notna(row.get('uuid')) and pd.notna(row.get('display_name')):
+                    IDENTITY_MAP[str(row['uuid'])] = str(row['display_name'])
+    except Exception as e:
+        print(f"Warning: Could not load identity map: {e}")
 
     # 1. Fetch enriched PRs
     try:
@@ -186,17 +186,19 @@ def get_weekly_activity(root_dir, days_back=7):
             message_count=('message_id', 'count'),
             link=('link', 'first'),
             author=('author_name', 'first'),
-            author_username=('author_username', 'first')
+            author_username=('author_username', 'first'),
+            canonical_id=('canonical_id', 'first')
         ).reset_index()
         
         thread_agg = thread_agg.sort_values(by='message_count', ascending=False).head(5)
         social_data = thread_agg.to_dict(orient='records')
         
         for thread in social_data:
-            username_to_lookup = thread.get('author_username') or thread.get('author')
-            uuid = global_uuid_map.get(username_to_lookup)
-            if uuid:
-                thread['author_obj'] = {"username": thread['author'], "uuid": uuid}
+            uuid = str(thread.get('canonical_id', ''))
+            if uuid and uuid != 'nan' and uuid != 'None':
+                display_name = IDENTITY_MAP.get(uuid, thread.get('author'))
+                thread['author_obj'] = {"username": display_name, "uuid": uuid}
+                thread['author'] = display_name
     except Exception as e:
         print(f"Error reading social data: {e}")
         social_data = []
