@@ -63,6 +63,17 @@ def get_weekly_activity(root_dir, days_back=7):
         print(f"Error reading reviews: {e}")
         reviews_df = pd.DataFrame()
 
+    global_uuid_map = {}
+    if not pr_df.empty:
+        for _, row in pr_df.dropna(subset=['uuid']).drop_duplicates(subset=['author']).iterrows():
+            if 'bot' not in str(row['author']).lower():
+                global_uuid_map[row['author']] = row['uuid']
+                
+    if not reviews_df.empty and 'user' in reviews_df.columns:
+        for _, row in reviews_df.dropna(subset=['uuid']).drop_duplicates(subset=['user']).iterrows():
+            if 'bot' not in str(row['user']).lower() and row['user'] not in global_uuid_map:
+                global_uuid_map[row['user']] = row['uuid']
+
     # 1. Fetch enriched PRs
     try:
         merged_prs = pr_df[(pr_df['merged_at'].notna()) & (pr_df['merged_at'] >= start_date) & (pr_df['merged_at'] <= end_date)].copy()
@@ -150,6 +161,7 @@ def get_weekly_activity(root_dir, days_back=7):
                 'pr_number': row['pr_number'],
                 'title': row['title'],
                 'author': row['author'],
+                'author_obj': {"username": row['author'], "uuid": safe_uuid(row['uuid'])},
                 'event_count': row['event_count']
             })
             
@@ -173,11 +185,18 @@ def get_weekly_activity(root_dir, days_back=7):
             thread_id=('thread_id', 'first'),
             message_count=('message_id', 'count'),
             link=('link', 'first'),
-            author=('author_name', 'first')
+            author=('author_name', 'first'),
+            author_username=('author_username', 'first')
         ).reset_index()
         
         thread_agg = thread_agg.sort_values(by='message_count', ascending=False).head(5)
         social_data = thread_agg.to_dict(orient='records')
+        
+        for thread in social_data:
+            username_to_lookup = thread.get('author_username') or thread.get('author')
+            uuid = global_uuid_map.get(username_to_lookup)
+            if uuid:
+                thread['author_obj'] = {"username": thread['author'], "uuid": uuid}
     except Exception as e:
         print(f"Error reading social data: {e}")
         social_data = []

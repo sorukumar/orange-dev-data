@@ -346,7 +346,7 @@ def main():
         newsletter_data["discussions"].append({
             "source": thread['source'].title().replace('_', ' '),
             "subject": thread['subject'],
-            "author": thread.get('author'),
+            "author": thread.get('author_obj') or thread.get('author'),
             "link": thread['link'],
             "message_count": thread['message_count'],
             "summary": public_summary,

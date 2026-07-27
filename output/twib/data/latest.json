@@ -442,7 +442,10 @@
           {
             "number": 35766,
             "title": "p2p: Assume v2transport for addresses from seeds",
-            "author": "mzumsande",
+            "author": {
+              "username": "mzumsande",
+              "uuid": "can_martin_zumsande"
+            },
             "event_count": 13,
             "summary": "This change improves how new nodes connect to the Bitcoin network by assuming a more modern transport protocol for addresses obtained from network seeds. This streamlines initial peer discovery and connection stability by prioritizing v2transport.",
             "technical_summary": "This PR modifies the P2P layer to default to assuming `v2transport` compatibility for peers discovered via DNS seeds or hardcoded seeds. Instead of requiring a full protocol handshake to determine transport version, nodes will proactively attempt `v2transport` connections. This change impacts the initial connection attempts and peer negotiation logic, potentially accelerating the establishment of advanced transport connections with well-behaved peers on startup."
@@ -455,7 +458,10 @@
           {
             "number": 35261,
             "title": "guix: disable LTO in GCC",
-            "author": "fanquake",
+            "author": {
+              "username": "fanquake",
+              "uuid": "can_michael_ford"
+            },
             "event_count": 19,
             "summary": "This PR improves the build process for Bitcoin Core by disabling Link-Time Optimization (LTO) when using GCC with Guix, resolving compilation issues. It ensures reliable and consistent builds for specific environments.",
             "technical_summary": "Guix builds for Bitcoin Core using GCC were encountering errors when LTO was enabled. This change introduces a configuration tweak within the Guix build system to explicitly disable LTO for GCC. This circumvents toolchain-specific issues that LTO introduces, ensuring successful compilation without compromising critical optimizations that would typically be handled by higher-level build flags or alternative compilers."
@@ -463,7 +469,10 @@
           {
             "number": 35746,
             "title": "ci: Test build directory path with spaces",
-            "author": "hebasto",
+            "author": {
+              "username": "hebasto",
+              "uuid": "can_hennadii_stepanov"
+            },
             "event_count": 13,
             "summary": "This PR adds a new test to the continuous integration system to ensure Bitcoin Core can be built correctly even when the build directory path contains spaces. This improves the robustness of the build system across various environments and operating systems.",
             "technical_summary": "This PR introduces a new job or step into the CI pipeline (e.g., GitLab CI, GitHub Actions) that specifically attempts to build Bitcoin Core within a directory path containing spaces. This test aims to identify and prevent issues related to shell escaping or path handling in the build scripts (e.g., `autotools`, `configure`, `make`). It ensures that the build process is resilient to common filesystem path complexities, preventing build failures for users."
@@ -471,7 +480,10 @@
           {
             "number": 35754,
             "title": "ci: pin and verify external inputs",
-            "author": "l0rinc",
+            "author": {
+              "username": "l0rinc",
+              "uuid": "can_lorinc_pap"
+            },
             "event_count": 12,
             "summary": "",
             "technical_summary": ""
@@ -479,7 +491,10 @@
           {
             "number": 35675,
             "title": "mining: add block template manager",
-            "author": "ismaelsadeeq",
+            "author": {
+              "username": "ismaelsadeeq",
+              "uuid": "can_abubakar_sadiq_ismail"
+            },
             "event_count": 11,
             "summary": "",
             "technical_summary": ""
@@ -519,7 +534,10 @@
     {
       "source": "Delving",
       "subject": "Bitcoin Inquisition 29.4",
-      "author": "Anthony Towns",
+      "author": {
+        "username": "Anthony Towns",
+        "uuid": "can_anthony_towns"
+      },
       "link": "https://delvingbitcoin.org/t/bitcoin-inquisition-29-4/2739/1",
       "message_count": 1,
       "summary": "A new version of Bitcoin Inquisition, a testing ground for future Bitcoin features, is now available. This allows developers to explore and experiment with potential advancements before they are integrated into Bitcoin Core.",
