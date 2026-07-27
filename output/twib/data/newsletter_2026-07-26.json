@@ -507,7 +507,10 @@
     {
       "source": "Delving",
       "subject": "Re: A Bitcoin-native LLM: dataset, architecture and open questions",
-      "author": "Breno",
+      "author": {
+        "username": "Breno",
+        "uuid": "auto_breno"
+      },
       "link": "https://delvingbitcoin.org/t/a-bitcoin-native-llm-dataset-architecture-and-open-questions/2550/18",
       "message_count": 5,
       "summary": "Discussions are underway to systematically organize Bitcoin's extensive public knowledge base, encompassing its foundational documents and historical communications. This initiative aims to make Bitcoin's principles and evolution more accessible and better preserved for everyone.",
@@ -516,7 +519,10 @@
     {
       "source": "Delving",
       "subject": "Re: [Research] A clockless vardiff strands a slowing miner",
-      "author": "Eric Price",
+      "author": {
+        "username": "Eric Price",
+        "uuid": "auto_eric_price"
+      },
       "link": "https://delvingbitcoin.org/t/research-a-clockless-vardiff-strands-a-slowing-miner/2718/5",
       "message_count": 4,
       "summary": "Developers are exploring advanced methods to make Bitcoin mining more efficient and fair, especially for operations with fluctuating hardware performance. The goal is to dynamically adjust the work difficulty for each miner, ensuring they always contribute optimally and maximize their earnings without wasted effort.",
@@ -525,7 +531,10 @@
     {
       "source": "Delving",
       "subject": "Re: Addressing the Diminishing Block Subsidy",
-      "author": "Mark",
+      "author": {
+        "username": "Mark",
+        "uuid": "auto_mark_1"
+      },
       "link": "https://delvingbitcoin.org/t/addressing-the-diminishing-block-subsidy/2640/25",
       "message_count": 3,
       "summary": "To secure Bitcoin's future and ensure reliable transactions, developers are actively discussing how to sustainably reward miners as the block reward naturally diminishes, guaranteeing the network's long-term strength.",
@@ -546,7 +555,10 @@
     {
       "source": "Mailing List",
       "subject": "Re: [bitcoindev] Quantum Recovery Of Hashed Address Secured Coins\n With No Confiscatory Risk",
-      "author": "'shinobimonkey' via Bitcoin Development Mailing List",
+      "author": {
+        "username": "shinobimonkey",
+        "uuid": "auto_shinobimonkey"
+      },
       "link": "https://gnusha.org/pi/bitcoindev/gJnvMBYdwA6pJzPtnsuBLrymr9Vs1xQ_xejRrEvET1Tz-FJZ6B_b5z0gaT25Fz2RG1N--cVZikyUclGDoLouOTRNVocOTn-fuBuwiyMCs54=@protonmail.com",
       "message_count": 1,
       "summary": "Developers are iterating on an existing proposal, clarifying its core ideas and underlying assumptions to make it easier to understand and evaluate. This refinement ensures that potential improvements for Bitcoin Core are communicated effectively.",
