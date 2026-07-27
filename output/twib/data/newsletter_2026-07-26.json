@@ -508,10 +508,10 @@
       "source": "Delving",
       "subject": "Re: A Bitcoin-native LLM: dataset, architecture and open questions",
       "author": {
-        "username": "Breno",
-        "uuid": "auto_breno"
+        "username": "thomas suau",
+        "uuid": "auto_thomas_suau"
       },
-      "link": "https://delvingbitcoin.org/t/a-bitcoin-native-llm-dataset-architecture-and-open-questions/2550/18",
+      "link": "https://delvingbitcoin.org/t/a-bitcoin-native-llm-dataset-architecture-and-open-questions/2550/22",
       "message_count": 5,
       "summary": "Discussions are underway to systematically organize Bitcoin's extensive public knowledge base, encompassing its foundational documents and historical communications. This initiative aims to make Bitcoin's principles and evolution more accessible and better preserved for everyone.",
       "technical_summary": "Developers are exploring architectural approaches for structuring Bitcoin's rich open-source knowledge base, which spans BIPs, mailing list archives, and on-chain data. MrHash has outlined a hierarchical design starting with a 'Constitutional Tier' for foundational elements like the whitepaper and genesis block, followed by a 'Drafting Record' for historical communications such as Satoshi's emails. The debate centers on establishing a comprehensive and logical framework to effectively catalog and present critical historical and developmental information."
@@ -523,7 +523,7 @@
         "username": "Eric Price",
         "uuid": "auto_eric_price"
       },
-      "link": "https://delvingbitcoin.org/t/research-a-clockless-vardiff-strands-a-slowing-miner/2718/5",
+      "link": "https://delvingbitcoin.org/t/research-a-clockless-vardiff-strands-a-slowing-miner/2718/8",
       "message_count": 4,
       "summary": "Developers are exploring advanced methods to make Bitcoin mining more efficient and fair, especially for operations with fluctuating hardware performance. The goal is to dynamically adjust the work difficulty for each miner, ensuring they always contribute optimally and maximize their earnings without wasted effort.",
       "technical_summary": "The discussion focuses on architecting an adaptive, clockless vardiff controller to prevent \"stranding\" for miners with variable hashrates. Anthony Towns proposes proxy-level vardiff adjustments using a Y/X multiplier based on instructed hashrate changes and connection activity. Eric Price connects this to a prior controller proposal's \"five rules,\" identifying specific adaptive mechanisms like halving vardiff after 30 seconds of inactivity (\"ease-on-silence\"). The ongoing work involves designing a robust system that dynamically responds to real-time miner performance and explicit instructions for improved mining efficiency."
@@ -532,10 +532,10 @@
       "source": "Delving",
       "subject": "Re: Addressing the Diminishing Block Subsidy",
       "author": {
-        "username": "Mark",
-        "uuid": "auto_mark_1"
+        "username": "Sho",
+        "uuid": "auto_sho"
       },
-      "link": "https://delvingbitcoin.org/t/addressing-the-diminishing-block-subsidy/2640/25",
+      "link": "https://delvingbitcoin.org/t/addressing-the-diminishing-block-subsidy/2640/27",
       "message_count": 3,
       "summary": "To secure Bitcoin's future and ensure reliable transactions, developers are actively discussing how to sustainably reward miners as the block reward naturally diminishes, guaranteeing the network's long-term strength.",
       "technical_summary": "The ongoing discussion addresses the critical challenge of maintaining adequate miner incentives and network security as the block subsidy reduces. While various proposals for supplementing miner revenue are being considered, there is strong pushback against inflationary mechanisms due to their fundamental economic drawbacks. The community recognizes the urgent need for a robust, long-term transition strategy that shifts miner economics towards a sustainable fee-driven model without compromising Bitcoin's architecture or monetary policy. Further technical analysis is focused on viable, non-inflationary solutions."
@@ -556,8 +556,8 @@
       "source": "Mailing List",
       "subject": "Re: [bitcoindev] Quantum Recovery Of Hashed Address Secured Coins\n With No Confiscatory Risk",
       "author": {
-        "username": "shinobimonkey",
-        "uuid": "auto_shinobimonkey"
+        "username": "Shinobi",
+        "uuid": "can_shinobi"
       },
       "link": "https://gnusha.org/pi/bitcoindev/gJnvMBYdwA6pJzPtnsuBLrymr9Vs1xQ_xejRrEvET1Tz-FJZ6B_b5z0gaT25Fz2RG1N--cVZikyUclGDoLouOTRNVocOTn-fuBuwiyMCs54=@protonmail.com",
       "message_count": 1,

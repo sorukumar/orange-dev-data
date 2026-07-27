@@ -174,31 +174,35 @@ def get_weekly_activity(root_dir, days_back=7):
         social_path = os.path.join(root_dir, "data/raw/social_combined.parquet")
         social_df = pd.read_parquet(social_path)
         social_df['date'] = pd.to_datetime(social_df['date'], utc=True)
+        # Pre-compute thread originators from the full social_df
+        thread_openers = social_df.sort_values(by=['is_reply', 'date']).groupby('thread_id').first().reset_index()
+        opener_map = thread_openers.set_index('thread_id')[['author_name', 'canonical_id']].to_dict('index')
+
         recent_social = social_df[(social_df['date'] >= start_date) & (social_df['date'] <= end_date)]
         
         total_threads = len(recent_social.groupby(['source', 'subject']))
-
-        # Sort by date so 'first' gives us the original poster (or earliest in the window)
-        recent_social = recent_social.sort_values(by='date')
-
+        
         thread_agg = recent_social.groupby(['source', 'subject']).agg(
             thread_id=('thread_id', 'first'),
             message_count=('message_id', 'count'),
-            link=('link', 'first'),
-            author=('author_name', 'first'),
-            author_username=('author_username', 'first'),
-            canonical_id=('canonical_id', 'first')
+            link=('link', 'first')
         ).reset_index()
         
         thread_agg = thread_agg.sort_values(by='message_count', ascending=False).head(5)
         social_data = thread_agg.to_dict(orient='records')
         
         for thread in social_data:
-            uuid = str(thread.get('canonical_id', ''))
+            tid = thread.get('thread_id')
+            opener = opener_map.get(tid, {})
+            uuid = str(opener.get('canonical_id', ''))
+            author_name = opener.get('author_name', 'Unknown')
+
             if uuid and uuid != 'nan' and uuid != 'None':
-                display_name = IDENTITY_MAP.get(uuid, thread.get('author'))
+                display_name = IDENTITY_MAP.get(uuid, author_name)
                 thread['author_obj'] = {"username": display_name, "uuid": uuid}
                 thread['author'] = display_name
+            else:
+                thread['author'] = author_name
     except Exception as e:
         print(f"Error reading social data: {e}")
         social_data = []

@@ -193,20 +193,20 @@ The most actively discussed and reviewed open pull requests right now.
 ## 🗣️ Research & Governance
 Top active threads across mailing lists and research forums.
 
-### [Re: A Bitcoin-native LLM: dataset, architecture and open questions](https://delvingbitcoin.org/t/a-bitcoin-native-llm-dataset-architecture-and-open-questions/2550/18)
-**Source:** Delving | **Started By:** Breno | **Messages:** 5
+### [Re: A Bitcoin-native LLM: dataset, architecture and open questions](https://delvingbitcoin.org/t/a-bitcoin-native-llm-dataset-architecture-and-open-questions/2550/22)
+**Source:** Delving | **Started By:** {'username': 'thomas suau', 'uuid': 'auto_thomas_suau'} | **Messages:** 5
 > Discussions are underway to systematically organize Bitcoin's extensive public knowledge base, encompassing its foundational documents and historical communications. This initiative aims to make Bitcoin's principles and evolution more accessible and better preserved for everyone.
 
 **Technical Details:** Developers are exploring architectural approaches for structuring Bitcoin's rich open-source knowledge base, which spans BIPs, mailing list archives, and on-chain data. MrHash has outlined a hierarchical design starting with a 'Constitutional Tier' for foundational elements like the whitepaper and genesis block, followed by a 'Drafting Record' for historical communications such as Satoshi's emails. The debate centers on establishing a comprehensive and logical framework to effectively catalog and present critical historical and developmental information.
 
-### [Re: [Research] A clockless vardiff strands a slowing miner](https://delvingbitcoin.org/t/research-a-clockless-vardiff-strands-a-slowing-miner/2718/5)
-**Source:** Delving | **Started By:** Eric Price | **Messages:** 4
+### [Re: [Research] A clockless vardiff strands a slowing miner](https://delvingbitcoin.org/t/research-a-clockless-vardiff-strands-a-slowing-miner/2718/8)
+**Source:** Delving | **Started By:** {'username': 'Eric Price', 'uuid': 'auto_eric_price'} | **Messages:** 4
 > Developers are exploring advanced methods to make Bitcoin mining more efficient and fair, especially for operations with fluctuating hardware performance. The goal is to dynamically adjust the work difficulty for each miner, ensuring they always contribute optimally and maximize their earnings without wasted effort.
 
 **Technical Details:** The discussion focuses on architecting an adaptive, clockless vardiff controller to prevent "stranding" for miners with variable hashrates. Anthony Towns proposes proxy-level vardiff adjustments using a Y/X multiplier based on instructed hashrate changes and connection activity. Eric Price connects this to a prior controller proposal's "five rules," identifying specific adaptive mechanisms like halving vardiff after 30 seconds of inactivity ("ease-on-silence"). The ongoing work involves designing a robust system that dynamically responds to real-time miner performance and explicit instructions for improved mining efficiency.
 
-### [Re: Addressing the Diminishing Block Subsidy](https://delvingbitcoin.org/t/addressing-the-diminishing-block-subsidy/2640/25)
-**Source:** Delving | **Started By:** Mark | **Messages:** 3
+### [Re: Addressing the Diminishing Block Subsidy](https://delvingbitcoin.org/t/addressing-the-diminishing-block-subsidy/2640/27)
+**Source:** Delving | **Started By:** {'username': 'Sho', 'uuid': 'auto_sho'} | **Messages:** 3
 > To secure Bitcoin's future and ensure reliable transactions, developers are actively discussing how to sustainably reward miners as the block reward naturally diminishes, guaranteeing the network's long-term strength.
 
 **Technical Details:** The ongoing discussion addresses the critical challenge of maintaining adequate miner incentives and network security as the block subsidy reduces. While various proposals for supplementing miner revenue are being considered, there is strong pushback against inflationary mechanisms due to their fundamental economic drawbacks. The community recognizes the urgent need for a robust, long-term transition strategy that shifts miner economics towards a sustainable fee-driven model without compromising Bitcoin's architecture or monetary policy. Further technical analysis is focused on viable, non-inflationary solutions.
@@ -219,7 +219,7 @@ Top active threads across mailing lists and research forums.
 
 ### [Re: [bitcoindev] Quantum Recovery Of Hashed Address Secured Coins
  With No Confiscatory Risk](https://gnusha.org/pi/bitcoindev/gJnvMBYdwA6pJzPtnsuBLrymr9Vs1xQ_xejRrEvET1Tz-FJZ6B_b5z0gaT25Fz2RG1N--cVZikyUclGDoLouOTRNVocOTn-fuBuwiyMCs54=@protonmail.com)
-**Source:** Mailing List | **Started By:** 'shinobimonkey' via Bitcoin Development Mailing List | **Messages:** 1
+**Source:** Mailing List | **Started By:** {'username': 'Shinobi', 'uuid': 'can_shinobi'} | **Messages:** 1
 > Developers are iterating on an existing proposal, clarifying its core ideas and underlying assumptions to make it easier to understand and evaluate. This refinement ensures that potential improvements for Bitcoin Core are communicated effectively.
 
 **Technical Details:** A developer has published a rewritten version of an original message, aiming to address specific feedback received from another contributor and to more precisely articulate the implicit assumptions of the overall technical concept. This revision emphasizes clarity and foundational premises, which is crucial for robust architectural discussion and evaluation within the Bitcoin Core development mailing list, ensuring all aspects of the idea are well-understood before deeper technical analysis or potential integration.
