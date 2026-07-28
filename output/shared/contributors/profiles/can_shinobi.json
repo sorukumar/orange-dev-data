@@ -1,8 +1,8 @@
 {
-  "display_name": "sCrypt",
-  "github_login_final": null,
-  "delving_username_final": "scrypt-ts",
-  "uuid": "auto_scrypt",
+  "display_name": "Shinobi",
+  "github_login_final": "brian_trollz",
+  "delving_username_final": "shinobi",
+  "uuid": "can_shinobi",
   "badges": null,
   "roles": null,
   "total_commits": 0.0,
@@ -45,80 +45,69 @@
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": null,
-  "hybrid_score": 0.0,
-  "p2016_hybrid_score": 0.0,
-  "modern_hybrid_score": 0.0,
+  "hybrid_score": 0.0083,
+  "p2016_hybrid_score": 0.013,
+  "modern_hybrid_score": 0.0384,
   "impact_score": 0.0,
-  "p2016_impact_score": 0.0,
-  "modern_impact_score": 0.0,
+  "p2016_impact_score": 1.0,
+  "modern_impact_score": 2.0,
   "threads_started": 1.0,
-  "replies_sent": 3.0,
-  "ml_threads": 0.0,
-  "delving_threads": 1.0,
-  "ml_responses": 0.0,
-  "delving_responses": 3.0,
-  "first_active": null,
-  "last_active": null,
+  "replies_sent": 2.0,
+  "ml_threads": 1.0,
+  "delving_threads": 0.0,
+  "ml_responses": 2.0,
+  "delving_responses": 0.0,
+  "first_active": "2026-07-14T11:39:14",
+  "last_active": "2026-07-23T19:39:45",
   "dev_type": "Participant",
   "expertise_domains": [
-    "Script",
-    "Mempool"
+    "Cryptography"
   ],
   "expertise_by_source": {
     "discussion": {
-      "Mempool": 0.254,
-      "Script": 0.746
+      "Cryptography": 1.0
     }
   },
   "expertise_domain_scores": {
-    "Mempool": 0.254,
-    "Script": 0.746
+    "Cryptography": 1.0
   },
-  "p2016_posts": 4.0,
-  "modern_posts": 4.0,
-  "p2016_ml_posts": 0.0,
-  "p2016_delving_posts": 4.0,
-  "modern_ml_posts": 0.0,
-  "modern_delving_posts": 4.0,
+  "p2016_posts": 3.0,
+  "modern_posts": 3.0,
+  "p2016_ml_posts": 3.0,
+  "p2016_delving_posts": 0.0,
+  "modern_ml_posts": 3.0,
+  "modern_delving_posts": 0.0,
   "is_engineer": false,
   "is_reviewer": false,
-  "is_researcher": false,
+  "is_researcher": true,
   "is_bip_author": false,
-  "global_first_active": null,
-  "global_last_active": null,
+  "global_first_active": "2026-07-14T11:39:14",
+  "global_last_active": "2026-07-23T19:39:45",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
-  "github_twitter": null,
+  "github_twitter": "brian_trollz",
   "github_blog": null,
   "github_followers": null,
-  "activity_status": "",
+  "activity_status": "New",
   "is_top_50": false,
-  "delving_url": "https://delvingbitcoin.org/u/scrypt-ts",
+  "github_url": "https://github.com/brian_trollz",
+  "delving_url": "https://delvingbitcoin.org/u/shinobi",
   "first_message": {
-    "source": "delving",
-    "subject": "Re: DSL for experimenting with contracts",
-    "date": "2024-04-11",
-    "link": "https://delvingbitcoin.org/t/dsl-for-experimenting-with-contracts/748/14"
+    "source": "mailing_list",
+    "subject": "[bitcoindev] Quantum Recovery Of Hashed Address Secured Coins With No\n Confiscatory Risk",
+    "date": "2026-07-14",
+    "link": "https://gnusha.org/pi/bitcoindev/sdGGYMMWowlFff6Yh8usMel61HVYmV8KPMqT9np2kK7GxPbVaogJ2aJSFe4v16VNLef4eDwNgfReiK-7j-sYn1jlXHPoAPWAwNBbSJxEz3M=@protonmail.com"
   },
   "last_message": {
-    "source": "delving",
-    "subject": "Re: Betting on Bitcoin Upgrades: A Smart Contract Wager on OP_CAT Activation",
-    "date": "2025-04-23",
-    "link": "https://delvingbitcoin.org/t/betting-on-bitcoin-upgrades-a-smart-contract-wager-on-op-cat-activation/1632/8"
+    "source": "mailing_list",
+    "subject": "Re: [bitcoindev] Quantum Recovery Of Hashed Address Secured Coins\n With No Confiscatory Risk",
+    "date": "2026-07-23",
+    "link": "https://gnusha.org/pi/bitcoindev/gJnvMBYdwA6pJzPtnsuBLrymr9Vs1xQ_xejRrEvET1Tz-FJZ6B_b5z0gaT25Fz2RG1N--cVZikyUclGDoLouOTRNVocOTn-fuBuwiyMCs54=@protonmail.com"
   },
   "social_history": {
-    "2024": {
-      "bitvm": 1,
-      "lightning": 1,
-      "mempool-fees": 1,
-      "mining": 1,
-      "taproot": 1
-    },
-    "2025": {
-      "covenants": 3,
-      "script-opcodes": 3,
-      "spam-filtering": 3
+    "2026": {
+      "quantum": 3
     }
   }
 }
