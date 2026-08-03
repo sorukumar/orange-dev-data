@@ -42,7 +42,7 @@
   "first_commit": "2011-04-25T11:23:29",
   "last_commit": "2026-07-23T08:47:03",
   "p2016_authored_commits": 1413.0,
-  "modern_authored_commits": 306.0,
+  "modern_authored_commits": 299.0,
   "co_authored_commits": 152.0,
   "bips_authored": 27.0,
   "p2016_bips_authored": 17.0,
@@ -56,13 +56,13 @@
   "tier1_reviews_count": 4618.0,
   "tier2_reviews_count": 218.0,
   "p2016_reviews_count": 3223.0,
-  "modern_reviews_count": 504.0,
+  "modern_reviews_count": 503.0,
   "first_review_date": "2011-04-23T14:06:52",
   "last_review_date": "2026-07-22T23:33:27",
   "prs_authored": 1125.0,
   "tier1_prs_authored": 1088.0,
   "tier2_prs_authored": 45.0,
-  "avg_pr_ack_velocity_days": 9.975473360918656,
+  "avg_pr_ack_velocity_days": 9.972963029787872,
   "avg_concept_lead_time_days": 17.496251653439153,
   "review_reciprocity": 4.211555555555556,
   "hybrid_score": 3.84,
@@ -71,10 +71,10 @@
   "impact_score": 90.0,
   "p2016_impact_score": 79.0,
   "modern_impact_score": 60.0,
-  "threads_started": 149.0,
+  "threads_started": 152.0,
   "replies_sent": 573.0,
   "ml_threads": 67.0,
-  "delving_threads": 82.0,
+  "delving_threads": 85.0,
   "ml_responses": 456.0,
   "delving_responses": 117.0,
   "first_active": "2011-06-17T05:31:25",
@@ -116,12 +116,12 @@
     "Script": 0.1466,
     "Wallet": 0.0236
   },
-  "p2016_posts": 377.0,
-  "modern_posts": 225.0,
+  "p2016_posts": 380.0,
+  "modern_posts": 228.0,
   "p2016_ml_posts": 178.0,
-  "p2016_delving_posts": 199.0,
+  "p2016_delving_posts": 202.0,
   "modern_ml_posts": 26.0,
-  "modern_delving_posts": 199.0,
+  "modern_delving_posts": 202.0,
   "is_engineer": true,
   "is_reviewer": true,
   "is_researcher": true,
@@ -339,13 +339,14 @@
       "Utilities": 113.0
     },
     "2026": {
-      "Consensus": 3.4,
-      "Documentation": 10.4,
+      "Consensus": 4.4,
+      "Cryptography": 4.0,
+      "Documentation": 13.4,
       "Mempool": 2.83,
       "Merge": 2.0,
       "Node & RPC": 0.9,
-      "Tests": 26.23,
-      "Utilities": 63.23
+      "Tests": 28.23,
+      "Utilities": 69.23
     }
   },
   "bip_list": [
@@ -547,9 +548,9 @@
   },
   "last_message": {
     "source": "delving",
-    "subject": "Re: Segwit commitment to post-quantum witness data?",
-    "date": "2026-07-17",
-    "link": "https://delvingbitcoin.org/t/segwit-commitment-to-post-quantum-witness-data/2702/9"
+    "subject": "Re: Spanning-forest cluster linearization",
+    "date": "2026-07-28",
+    "link": "https://delvingbitcoin.org/t/spanning-forest-cluster-linearization/1419/14"
   },
   "social_history": {
     "2011": {
@@ -672,9 +673,9 @@
       "wallet-keys": 2
     },
     "2026": {
-      "other": 79,
+      "other": 83,
       "hard-fork-block-size": 8,
-      "mempool-fees": 16,
+      "mempool-fees": 17,
       "mining": 10,
       "script-opcodes": 11,
       "segwit": 14,

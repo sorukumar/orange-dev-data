@@ -203,7 +203,7 @@ def main():
     
     for pr in all_merged_prs:
         pr_str = str(pr['pr_number'])
-        summary_obj = pr_cache.get(pr_str, {})
+        summary_obj = pr_cache.get(pr_str, twib_cache.get("prs", {}).get(pr_str, {}))
         
         # Determine the final category
         if isinstance(summary_obj, dict) and summary_obj.get("impact_category"):
@@ -244,7 +244,7 @@ def main():
     
     for pr in all_hot_prs:
         pr_str = str(pr['pr_number'])
-        summary_obj = pr_cache.get(pr_str, {})
+        summary_obj = pr_cache.get(pr_str, twib_cache.get("prs", {}).get(pr_str, {}))
         
         if isinstance(summary_obj, dict) and summary_obj.get("impact_category"):
             cat = summary_obj["impact_category"]
@@ -298,7 +298,7 @@ def main():
         cat_data = {"name": category, "prs": []}
         for pr in prs:
             pr_str = str(pr['pr_number'])
-            summary_obj = pr_cache.get(pr_str, {})
+            summary_obj = pr_cache.get(pr_str, twib_cache.get("prs", {}).get(pr_str, {}))
             
             public_summary = summary_obj.get("public_summary", "") if isinstance(summary_obj, dict) else summary_obj
             technical_summary = summary_obj.get("technical_summary", "") if isinstance(summary_obj, dict) else ""
@@ -318,7 +318,7 @@ def main():
         cat_data = {"name": category, "prs": []}
         for pr in prs:
             pr_str = str(pr['pr_number'])
-            summary_obj = pr_cache.get(pr_str, {})
+            summary_obj = pr_cache.get(pr_str, twib_cache.get("prs", {}).get(pr_str, {}))
             
             public_summary = summary_obj.get("public_summary", "") if isinstance(summary_obj, dict) else summary_obj
             technical_summary = summary_obj.get("technical_summary", "") if isinstance(summary_obj, dict) else ""

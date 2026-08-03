@@ -18,7 +18,7 @@ except ImportError:
 
 SOCIAL_THREADS_INPUT = "data/enriched/social_threads.parquet"
 CACHE_FILE = "data/cache/thread_summaries_cache.json"
-TARGET_MODEL = 'gemini-2.5-flash'
+TARGET_MODEL = 'gemini-3.5-flash'
 
 load_dotenv("/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/.env")
 api_keys = []

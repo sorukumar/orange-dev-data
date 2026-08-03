@@ -18,7 +18,7 @@
     "maturity_score": 0.55,
     "social_mention_count": 277,
     "revision_count": 59,
-    "code_mention_count": 104,
+    "code_mention_count": 106,
     "authors": "Pieter Wuille"
   },
   {
@@ -99,6 +99,17 @@
     "authors": "Amir Taaki"
   },
   {
+    "bip_id": "360",
+    "title": "Pay-to-Merkle-Root (P2MR)",
+    "status": "Draft",
+    "theme": "Consensus & Soft Forks",
+    "maturity_score": 0.19,
+    "social_mention_count": 114,
+    "revision_count": 6,
+    "code_mention_count": 0,
+    "authors": "Hunter Beast, Ethan Heilman, Isabel Foxen Duke"
+  },
+  {
     "bip_id": "75",
     "title": "Out of Band Address Exchange using Payment Protocol Encryption",
     "status": "Deployed",
@@ -132,17 +143,6 @@
     "authors": "Olaoluwa Osuntokun, Alex Akselrod"
   },
   {
-    "bip_id": "21",
-    "title": "URI Scheme",
-    "status": "Closed",
-    "theme": "Other",
-    "maturity_score": 0.18,
-    "social_mention_count": 66,
-    "revision_count": 40,
-    "code_mention_count": 34,
-    "authors": "Nils Schneider, Matt Corallo"
-  },
-  {
     "bip_id": "342",
     "title": "Validation of Taproot Scripts",
     "status": "Deployed",
@@ -154,15 +154,15 @@
     "authors": "Pieter Wuille, Jonas Nick, Anthony Towns"
   },
   {
-    "bip_id": "360",
-    "title": "Pay-to-Merkle-Root (P2MR)",
-    "status": "Draft",
-    "theme": "Consensus & Soft Forks",
+    "bip_id": "21",
+    "title": "URI Scheme",
+    "status": "Closed",
+    "theme": "Other",
     "maturity_score": 0.18,
-    "social_mention_count": 110,
-    "revision_count": 4,
-    "code_mention_count": 0,
-    "authors": "Hunter Beast, Ethan Heilman, Isabel Foxen Duke"
+    "social_mention_count": 66,
+    "revision_count": 40,
+    "code_mention_count": 34,
+    "authors": "Nils Schneider, Matt Corallo"
   },
   {
     "bip_id": "151",
@@ -412,7 +412,7 @@
     "status": "Draft",
     "theme": "Consensus & Soft Forks",
     "maturity_score": 0.1,
-    "social_mention_count": 13,
+    "social_mention_count": 14,
     "revision_count": 38,
     "code_mention_count": 0,
     "authors": "Paul Sztorc, CryptAxe"
@@ -512,7 +512,7 @@
     "theme": "Other",
     "maturity_score": 0.09,
     "social_mention_count": 0,
-    "revision_count": 43,
+    "revision_count": 44,
     "code_mention_count": 0,
     "authors": "Matt Corallo"
   },
@@ -557,7 +557,7 @@
     "maturity_score": 0.08,
     "social_mention_count": 6,
     "revision_count": 33,
-    "code_mention_count": 5,
+    "code_mention_count": 6,
     "authors": "Ava Chow"
   },
   {
@@ -1149,7 +1149,7 @@
     "status": "Complete",
     "theme": "Consensus & Soft Forks",
     "maturity_score": 0.04,
-    "social_mention_count": 15,
+    "social_mention_count": 19,
     "revision_count": 6,
     "code_mention_count": 0,
     "authors": "Dathon Ohm"

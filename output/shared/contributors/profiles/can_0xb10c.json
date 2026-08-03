@@ -39,32 +39,32 @@
   "modern_bips_authored": 0.0,
   "first_bip_date": null,
   "last_bip_date": null,
-  "avg_review_latency_days": 139.24570171252412,
-  "reviews_count": 245.0,
+  "avg_review_latency_days": 138.92090811334384,
+  "reviews_count": 246.0,
   "avg_approval_latency_days": 88.03112081005587,
   "approvals_count": 150.0,
-  "tier1_reviews_count": 240.0,
+  "tier1_reviews_count": 241.0,
   "tier2_reviews_count": 5.0,
-  "p2016_reviews_count": 245.0,
-  "modern_reviews_count": 108.0,
+  "p2016_reviews_count": 246.0,
+  "modern_reviews_count": 109.0,
   "first_review_date": "2019-05-15T18:34:57",
-  "last_review_date": "2026-07-10T22:52:28",
+  "last_review_date": "2026-07-29T07:58:08",
   "prs_authored": 34.0,
   "tier1_prs_authored": 33.0,
   "tier2_prs_authored": 1.0,
   "avg_pr_ack_velocity_days": 1.9146200510855684,
   "avg_concept_lead_time_days": 15.921902913943354,
-  "review_reciprocity": 7.205882352941177,
-  "hybrid_score": 0.5165,
-  "p2016_hybrid_score": 0.528,
-  "modern_hybrid_score": 0.4763,
+  "review_reciprocity": 7.235294117647059,
+  "hybrid_score": 0.5166,
+  "p2016_hybrid_score": 0.5281,
+  "modern_hybrid_score": 0.4765,
   "impact_score": 27.0,
   "p2016_impact_score": 27.0,
   "modern_impact_score": 25.0,
-  "threads_started": 46.0,
+  "threads_started": 48.0,
   "replies_sent": 23.0,
   "ml_threads": 1.0,
-  "delving_threads": 45.0,
+  "delving_threads": 47.0,
   "ml_responses": 7.0,
   "delving_responses": 16.0,
   "first_active": "2021-09-07T11:07:47",
@@ -84,30 +84,30 @@
       "Wallet": 0.003
     },
     "discussion": {
-      "Mempool": 0.341,
-      "Mining": 0.227,
-      "Network": 0.432
+      "Mempool": 0.326,
+      "Mining": 0.256,
+      "Network": 0.419
     }
   },
   "expertise_domain_scores": {
     "Consensus": 0.0102,
-    "Infrastructure": 0.5511,
-    "Mempool": 0.1383,
-    "Mining": 0.0909,
-    "Network": 0.2077
+    "Infrastructure": 0.5509,
+    "Mempool": 0.1322,
+    "Mining": 0.1024,
+    "Network": 0.2024
   },
-  "p2016_posts": 69.0,
-  "modern_posts": 63.0,
+  "p2016_posts": 71.0,
+  "modern_posts": 65.0,
   "p2016_ml_posts": 8.0,
-  "p2016_delving_posts": 61.0,
+  "p2016_delving_posts": 63.0,
   "modern_ml_posts": 2.0,
-  "modern_delving_posts": 61.0,
+  "modern_delving_posts": 63.0,
   "is_engineer": true,
   "is_reviewer": true,
   "is_researcher": true,
   "is_bip_author": false,
   "global_first_active": "2019-05-15T18:34:57",
-  "global_last_active": "2026-07-10T22:52:28",
+  "global_last_active": "2026-07-29T07:58:08",
   "github_location": "Zurich, CH",
   "github_company": "@bitcoin-noc",
   "github_bio": "Bitcoin developer and observer | gpg\r\n982A193E3CE0EED535E09023188CBB2648416AD5 | donate bc1qls5zwwputhasm4y77kalacac70 yzaek2ukxrf9",
@@ -162,7 +162,7 @@
       "Utilities": 5.0
     },
     "2026": {
-      "Build & CI": 18.0,
+      "Build & CI": 19.0,
       "P2P Network": 1.0,
       "Tests": 5.0
     }
@@ -175,9 +175,9 @@
   },
   "last_message": {
     "source": "delving",
-    "subject": "Re: Public archive for Delving Bitcoin",
-    "date": "2026-06-23",
-    "link": "https://delvingbitcoin.org/t/public-archive-for-delving-bitcoin/87/12"
+    "subject": "Re: Transaction rate-limiting",
+    "date": "2026-07-27",
+    "link": "https://delvingbitcoin.org/t/transaction-rate-limiting/2744/2"
   },
   "social_history": {
     "2021": {
@@ -217,14 +217,14 @@
       "taproot": 9
     },
     "2026": {
-      "other": 21,
+      "other": 22,
       "core-dev": 12,
       "hard-fork-block-size": 1,
       "mempool-fees": 12,
-      "mining": 6,
+      "mining": 7,
       "p2p-network": 3,
       "spam-filtering": 1,
-      "taproot": 1,
+      "taproot": 2,
       "testing-devtools": 9
     }
   }

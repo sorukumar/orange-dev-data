@@ -29,7 +29,7 @@
   "modern_bips_authored": 0.0,
   "first_bip_date": null,
   "last_bip_date": null,
-  "avg_review_latency_days": 676.0051215277778,
+  "avg_review_latency_days": 952.6943638710826,
   "reviews_count": 6.0,
   "avg_approval_latency_days": 12.240590277777779,
   "approvals_count": 1.0,
@@ -38,27 +38,27 @@
   "p2016_reviews_count": 6.0,
   "modern_reviews_count": 3.0,
   "first_review_date": "2020-05-18T08:54:27",
-  "last_review_date": "2026-07-22T00:46:10",
+  "last_review_date": "2026-07-27T19:09:06",
   "prs_authored": 3.0,
   "tier1_prs_authored": 0.0,
   "tier2_prs_authored": 3.0,
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 2.0,
-  "hybrid_score": 0.1916,
-  "p2016_hybrid_score": 0.2768,
+  "hybrid_score": 0.1927,
+  "p2016_hybrid_score": 0.2788,
   "modern_hybrid_score": 0.4115,
   "impact_score": 11.0,
   "p2016_impact_score": 15.0,
   "modern_impact_score": 22.0,
   "threads_started": 36.0,
-  "replies_sent": 149.0,
+  "replies_sent": 151.0,
   "ml_threads": 8.0,
   "delving_threads": 28.0,
-  "ml_responses": 96.0,
-  "delving_responses": 53.0,
+  "ml_responses": 97.0,
+  "delving_responses": 54.0,
   "first_active": "2015-02-15T15:40:24",
-  "last_active": "2026-07-21T19:18:38",
+  "last_active": null,
   "dev_type": "Participant",
   "expertise_domains": [
     "Privacy",
@@ -74,18 +74,18 @@
     "Consensus": 0.462,
     "Privacy": 0.538
   },
-  "p2016_posts": 184.0,
-  "modern_posts": 143.0,
-  "p2016_ml_posts": 103.0,
-  "p2016_delving_posts": 81.0,
-  "modern_ml_posts": 62.0,
-  "modern_delving_posts": 81.0,
+  "p2016_posts": 186.0,
+  "modern_posts": 145.0,
+  "p2016_ml_posts": 104.0,
+  "p2016_delving_posts": 82.0,
+  "modern_ml_posts": 63.0,
+  "modern_delving_posts": 82.0,
   "is_engineer": false,
   "is_reviewer": true,
   "is_researcher": true,
   "is_bip_author": false,
   "global_first_active": "2015-02-15T15:40:24",
-  "global_last_active": "2026-07-22T00:46:10",
+  "global_last_active": "2026-07-27T19:09:06",
   "github_location": null,
   "github_company": "None",
   "github_bio": "none",
@@ -103,10 +103,10 @@
     "link": "https://gnusha.org/pi/bitcoindev/54E11248.6090401@gmail.com"
   },
   "last_message": {
-    "source": "mailing_list",
-    "subject": "[bitcoindev] Re: BIP draft: CISA for Taproot Key Path Spends",
-    "date": "2026-07-21",
-    "link": "https://gnusha.org/pi/bitcoindev/74cecbeb-94d1-4181-9caa-3f60c54d6b08n@googlegroups.com"
+    "source": "delving",
+    "subject": "Re: PQC output type discussion",
+    "date": "2026-07-30",
+    "link": "https://delvingbitcoin.org/t/pqc-output-type-discussion/2749/4"
   },
   "social_history": {
     "2015": {
@@ -157,14 +157,14 @@
       "taproot": 20
     },
     "2026": {
-      "other": 78,
+      "other": 80,
       "bitvm": 11,
       "mempool-fees": 8,
       "multisig-threshold": 7,
       "privacy": 15,
-      "quantum": 14,
+      "quantum": 15,
       "signatures-sighash": 6,
-      "taproot": 13
+      "taproot": 14
     }
   }
 }

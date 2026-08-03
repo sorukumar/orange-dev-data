@@ -1,8 +1,8 @@
 {
-  "display_name": "Geir Harald Hansen",
+  "display_name": "Ram",
   "github_login_final": null,
   "delving_username_final": null,
-  "uuid": "auto_geir_harald_hansen",
+  "uuid": "auto_ram",
   "badges": null,
   "roles": null,
   "total_commits": 0.0,
@@ -45,47 +45,40 @@
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": null,
-  "hybrid_score": 0.0269,
+  "hybrid_score": 0.0,
   "p2016_hybrid_score": 0.0,
   "modern_hybrid_score": 0.0,
-  "impact_score": 2.0,
+  "impact_score": 0.0,
   "p2016_impact_score": 0.0,
   "modern_impact_score": 0.0,
   "threads_started": 1.0,
-  "replies_sent": 13.0,
+  "replies_sent": 0.0,
   "ml_threads": 1.0,
   "delving_threads": 0.0,
-  "ml_responses": 13.0,
+  "ml_responses": 0.0,
   "delving_responses": 0.0,
-  "first_active": "2011-10-22T07:26:52",
-  "last_active": "2015-12-26T22:10:09",
+  "first_active": "2026-07-29T12:21:51",
+  "last_active": "2026-07-29T12:21:51",
   "dev_type": "Participant",
   "expertise_domains": [
-    "Mining",
-    "Consensus"
+    "Infrastructure"
   ],
-  "expertise_by_source": {
-    "discussion": {
-      "Consensus": 0.261,
-      "Mining": 0.739
-    }
-  },
+  "expertise_by_source": {},
   "expertise_domain_scores": {
-    "Consensus": 0.261,
-    "Mining": 0.739
+    "Infrastructure": 1.0
   },
-  "p2016_posts": 0.0,
-  "modern_posts": 0.0,
-  "p2016_ml_posts": 0.0,
+  "p2016_posts": 1.0,
+  "modern_posts": 1.0,
+  "p2016_ml_posts": 1.0,
   "p2016_delving_posts": 0.0,
-  "modern_ml_posts": 0.0,
+  "modern_ml_posts": 1.0,
   "modern_delving_posts": 0.0,
   "is_engineer": false,
   "is_reviewer": false,
-  "is_researcher": true,
+  "is_researcher": false,
   "is_bip_author": false,
-  "global_first_active": "2011-10-22T07:26:52",
-  "global_last_active": "2015-12-26T22:10:09",
+  "global_first_active": "2026-07-29T12:21:51",
+  "global_last_active": "2026-07-29T12:21:51",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -96,32 +89,19 @@
   "is_top_50": false,
   "first_message": {
     "source": "mailing_list",
-    "subject": "Re: [Bitcoin-development] Help wanted: translations",
-    "date": "2011-10-22",
-    "link": "https://gnusha.org/pi/bitcoindev/4EA2B68C.3050901@bitminter.com"
+    "subject": "[bitcoindev] [BIP Proposal] Stale Tip Relay",
+    "date": "2026-07-29",
+    "link": "https://gnusha.org/pi/bitcoindev/d92f1615-368b-4406-b326-a1799c72a555n@googlegroups.com"
   },
   "last_message": {
     "source": "mailing_list",
-    "subject": "Re: [bitcoin-dev] We need to fix the block withholding attack",
-    "date": "2015-12-26",
-    "link": "https://gnusha.org/pi/bitcoindev/567F64A1.8020202@bitminter.com"
+    "subject": "[bitcoindev] [BIP Proposal] Stale Tip Relay",
+    "date": "2026-07-29",
+    "link": "https://gnusha.org/pi/bitcoindev/d92f1615-368b-4406-b326-a1799c72a555n@googlegroups.com"
   },
   "social_history": {
-    "2011": {
-      "other": 3
-    },
-    "2012": {
-      "bip-process": 2,
-      "mining": 2,
-      "other": 2
-    },
-    "2014": {
-      "other": 2
-    },
-    "2015": {
-      "hard-fork-block-size": 2,
-      "mining": 4,
-      "taproot": 1
+    "2026": {
+      "other": 1
     }
   }
 }

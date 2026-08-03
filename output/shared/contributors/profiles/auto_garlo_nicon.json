@@ -45,18 +45,18 @@
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": null,
-  "hybrid_score": 0.0407,
-  "p2016_hybrid_score": 0.0668,
-  "modern_hybrid_score": 0.2309,
+  "hybrid_score": 0.0406,
+  "p2016_hybrid_score": 0.0667,
+  "modern_hybrid_score": 0.2318,
   "impact_score": 2.0,
   "p2016_impact_score": 4.0,
   "modern_impact_score": 13.0,
   "threads_started": 19.0,
-  "replies_sent": 50.0,
+  "replies_sent": 51.0,
   "ml_threads": 0.0,
   "delving_threads": 19.0,
   "ml_responses": 30.0,
-  "delving_responses": 20.0,
+  "delving_responses": 21.0,
   "first_active": "2024-04-08T14:11:53",
   "last_active": null,
   "dev_type": "Participant",
@@ -74,12 +74,12 @@
     "Mempool": 0.476,
     "Mining": 0.524
   },
-  "p2016_posts": 69.0,
-  "modern_posts": 69.0,
+  "p2016_posts": 70.0,
+  "modern_posts": 70.0,
   "p2016_ml_posts": 30.0,
-  "p2016_delving_posts": 39.0,
+  "p2016_delving_posts": 40.0,
   "modern_ml_posts": 30.0,
-  "modern_delving_posts": 39.0,
+  "modern_delving_posts": 40.0,
   "is_engineer": false,
   "is_reviewer": false,
   "is_researcher": true,
@@ -103,9 +103,9 @@
   },
   "last_message": {
     "source": "delving",
-    "subject": "Re: Segwit commitment to post-quantum witness data?",
-    "date": "2026-07-12",
-    "link": "https://delvingbitcoin.org/t/segwit-commitment-to-post-quantum-witness-data/2702/2"
+    "subject": "Re: [BIP Draft] Segregated Data: a prunable, script-isolated block region for data carriage",
+    "date": "2026-07-28",
+    "link": "https://delvingbitcoin.org/t/bip-draft-segregated-data-a-prunable-script-isolated-block-region-for-data-carriage/2641/45"
   },
   "social_history": {
     "2024": {
@@ -131,12 +131,12 @@
       "testing-devtools": 11
     },
     "2026": {
-      "other": 9,
+      "other": 12,
       "covenants": 2,
       "mempool-fees": 2,
-      "mining": 1,
+      "mining": 2,
       "quantum": 7,
-      "script-opcodes": 2,
+      "script-opcodes": 3,
       "taproot": 1,
       "testing-devtools": 4
     }

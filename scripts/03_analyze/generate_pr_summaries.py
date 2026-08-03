@@ -30,7 +30,7 @@ if not api_keys:
     print("Warning: No GEMINI_API_KEY found in .env")
 
 # The BEST model available for the free tier constraints
-TARGET_MODEL = 'gemini-2.5-flash'
+TARGET_MODEL = 'gemini-3.5-flash'
 
 def load_cache(path):
     if os.path.exists(path):
@@ -127,7 +127,7 @@ def run_summarizer():
         return tuple(ints[:3])
 
     df = pd.read_parquet(INPUT_PR_PARQUET)
-    df = df[(df['repository_name'] == 'bitcoin/bitcoin') & (df['merged_at'].notna())].copy()
+    df = df[(df['repository_name'] == 'bitcoin/bitcoin')].copy() # removed merged_at.notna() to include open PRs
     
     # Load review counts to fuel the tier-based logic
     if os.path.exists("data/raw/github_review_events.parquet"):
@@ -140,16 +140,16 @@ def run_summarizer():
     tagged_df = df[df['milestone'].notna()]
     cutoff_dates = {}
     for ms, group in tagged_df.groupby('milestone'):
-        cutoff_dates[ms] = pd.to_datetime(group['merged_at'], utc=True).max()
+        cutoff_dates[ms] = pd.to_datetime(group.get('merged_at'), utc=True).max()
         
     sorted_cutoffs = sorted([(ms, date) for ms, date in cutoff_dates.items() if pd.notna(date)], key=lambda x: parse_version(x[0]))
     
     def infer_milestone(row):
         if pd.notna(row['milestone']):
             return row['milestone']
-        merged = pd.to_datetime(row['merged_at'], utc=True)
+        merged = pd.to_datetime(row.get('merged_at'), utc=True)
         if pd.isna(merged):
-            return None
+            return "Upcoming"
         inferred_ms = None
         for ms, cutoff in sorted_cutoffs:
             if merged <= cutoff:
@@ -158,27 +158,41 @@ def run_summarizer():
         if not inferred_ms and sorted_cutoffs:
             inferred_ms = sorted_cutoffs[-1][0]
         
-        if inferred_ms:
-            ms_version = parse_version(inferred_ms)
-            is_recent = ms_version >= (24, 0, 0)
-            rc = row.get('review_count', 0)
-            title = row.get('title', '')
-            if not is_high_signal(row['labels'], is_recent, rc, title):
-                return None
         return inferred_ms
 
     df['milestone'] = df.apply(infer_milestone, axis=1)
     df = df[df['milestone'].notna()]
         
     unique_milestones = list(df['milestone'].unique())
-    target_milestones = sorted(unique_milestones, key=parse_version, reverse=True)
+    target_milestones = sorted([m for m in unique_milestones if m != "Upcoming"], key=parse_version, reverse=True)
+    if "Upcoming" in unique_milestones:
+        target_milestones.insert(0, "Upcoming")
     
     # Sort dataframe by merged_at/created_at descending (most recent first)
     if 'merged_at' in df.columns and 'created_at' in df.columns:
         df['sort_time'] = df['merged_at'].fillna(df['created_at'])
         df = df.sort_values(by='sort_time', ascending=False)
     
+    twib_pr_numbers = set()
+    try:
+        from scripts.utils.twib_data import get_weekly_activity
+        root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+        weekly = get_weekly_activity(root_dir, days_back=7)
+        for cat, prs in weekly.get('categorized_merged_prs', {}).items():
+            for pr in prs: twib_pr_numbers.add(str(pr['pr_number']))
+        for cat, prs in weekly.get('categorized_hot_prs', {}).items():
+            for pr in prs: twib_pr_numbers.add(str(pr['pr_number']))
+    except Exception as e:
+        print(f"Failed to load TWIB PRs: {e}")
+
+    twib_cache_path = "data/cache/twib_summaries.json"
+    twib_cache = load_cache(twib_cache_path)
+    if "prs" not in twib_cache:
+        twib_cache["prs"] = {}
+    twib_prs_cache = twib_cache["prs"]
+    
     pr_batch_to_fetch = {}
+    pr_destinations = {}
     
     # Process milestones in descending version order
     for ms in target_milestones:
@@ -188,8 +202,25 @@ def run_summarizer():
         for _, pr in ms_prs.iterrows():
             pr_num = str(pr['pr_number'])
             title = pr['title']
-            if pr_num not in pr_cache:
-                pr_batch_to_fetch[pr_num] = title
+            
+            is_recent = ms == "Upcoming" or parse_version(ms) >= (24, 0, 0)
+            rc = pr.get('review_count', 0)
+            passes_signal = is_high_signal(pr.get('labels'), is_recent, rc, title)
+            is_twib = pr_num in twib_pr_numbers
+            is_open = ms == "Upcoming"
+            
+            # Do not attempt to backfill all historical open PRs, only the ones hot this week!
+            if is_open and not is_twib:
+                continue
+            
+            if passes_signal:
+                if pr_num not in pr_cache:
+                    pr_batch_to_fetch[pr_num] = title
+                    pr_destinations[pr_num] = 'main'
+            elif is_twib:
+                if pr_num not in pr_cache and pr_num not in twib_prs_cache:
+                    pr_batch_to_fetch[pr_num] = title
+                    pr_destinations[pr_num] = 'twib'
 
     if not pr_batch_to_fetch:
         print("All PRs are already summarized!")
@@ -197,7 +228,10 @@ def run_summarizer():
         
     print(f"Need to summarize {len(pr_batch_to_fetch)} PRs.")
     
+    # Prioritize TWIB PRs so they get summarized first before API limits hit
     items = list(pr_batch_to_fetch.items())
+    items.sort(key=lambda x: 0 if str(x[0]) in twib_pr_numbers else 1)
+    
     for i in range(0, len(items), 10):  # Chunk of 10 per the user's request for higher quality & safety
         chunk = dict(items[i:i+10])
         print(f"Processing chunk {i} to {i+len(chunk)}...")
@@ -208,8 +242,14 @@ def run_summarizer():
             break
             
         for k, v in new_summaries.items():
-            pr_cache[k] = v
+            if pr_destinations.get(k) == 'main':
+                pr_cache[k] = v
+            else:
+                twib_prs_cache[k] = v
+        
         save_cache(CACHE_FILE, pr_cache)
+        twib_cache["prs"] = twib_prs_cache
+        save_cache(twib_cache_path, twib_cache)
         print("Chunk saved successfully.")
         time.sleep(3)
         
