@@ -24,11 +24,11 @@
   "p2016_authored_commits": 0.0,
   "modern_authored_commits": 0.0,
   "co_authored_commits": 0.0,
-  "bips_authored": 0.0,
-  "p2016_bips_authored": 0.0,
-  "modern_bips_authored": 0.0,
-  "first_bip_date": null,
-  "last_bip_date": null,
+  "bips_authored": 2.0,
+  "p2016_bips_authored": 2.0,
+  "modern_bips_authored": 2.0,
+  "first_bip_date": "2026-03-28T23:02:59",
+  "last_bip_date": "2026-03-28T23:02:59",
   "avg_review_latency_days": 785.388396990741,
   "reviews_count": 4.0,
   "avg_approval_latency_days": 6.956886574074074,
@@ -45,12 +45,12 @@
   "avg_pr_ack_velocity_days": 16.231122685185184,
   "avg_concept_lead_time_days": 14.26925925925926,
   "review_reciprocity": 1.3333333333333333,
-  "hybrid_score": 0.0675,
-  "p2016_hybrid_score": 0.0675,
-  "modern_hybrid_score": 0.0675,
-  "impact_score": 4.0,
-  "p2016_impact_score": 4.0,
-  "modern_impact_score": 4.0,
+  "hybrid_score": 0.6222,
+  "p2016_hybrid_score": 0.6222,
+  "modern_hybrid_score": 0.6222,
+  "impact_score": 31.0,
+  "p2016_impact_score": 31.0,
+  "modern_impact_score": 31.0,
   "threads_started": 0.0,
   "replies_sent": 0.0,
   "ml_threads": 0.0,
@@ -61,11 +61,15 @@
   "last_active": null,
   "dev_type": "Participant",
   "expertise_domains": [
-    "Infrastructure"
+    "Consensus"
   ],
-  "expertise_by_source": {},
+  "expertise_by_source": {
+    "bips": {
+      "Consensus": 1.0
+    }
+  },
   "expertise_domain_scores": {
-    "Infrastructure": 1.0
+    "Consensus": 1.0
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -76,7 +80,7 @@
   "is_engineer": false,
   "is_reviewer": true,
   "is_researcher": false,
-  "is_bip_author": false,
+  "is_bip_author": true,
   "global_first_active": "2025-01-23T11:02:28",
   "global_last_active": "2026-05-01T20:26:58",
   "github_location": null,
@@ -87,5 +91,21 @@
   "github_followers": 12.0,
   "activity_status": "Active",
   "is_top_50": false,
-  "github_url": "https://github.com/jmoik"
+  "github_url": "https://github.com/jmoik",
+  "bip_list": [
+    {
+      "number": 440,
+      "title": "Varops Budget For Script Runtime Constraint",
+      "status": "Draft",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0440.mediawiki"
+    },
+    {
+      "number": 441,
+      "title": "Restoration of disabled script (Tapleaf 0xC2)",
+      "status": "Draft",
+      "theme": "Consensus & Soft Forks",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0441.mediawiki"
+    }
+  ]
 }

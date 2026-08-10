@@ -235,6 +235,8 @@ def main():
         "delving (archive)":             ("data/sources/delving",                 False),
         "bitcoin-github-metadata (PRs)": ("data/sources/bitcoin-github-metadata", False),
         "bips-github-metadata (PRs)":    ("data/sources/bips-github-metadata",    False),
+        "secp256k1-github-metadata (PRs)":("data/sources/secp256k1-github-metadata", False),
+        "gui-github-metadata (PRs)":     ("data/sources/gui-github-metadata",     False),
         "mailing_list/shard_0":          ("data/sources/mailing_list/shard_0",    True),   # bare repo
         "secp256k1":                     ("data/sources/secp256k1",               False),
         "gui":                           ("data/sources/gui",                     False),
@@ -259,6 +261,8 @@ def main():
     run("git -C data/sources/bips pull origin master", cwd=root_dir)
     run("git -C data/sources/bitcoin-github-metadata pull origin master", cwd=root_dir)
     run("git -C data/sources/bips-github-metadata pull origin master", cwd=root_dir)
+    run("git -C data/sources/secp256k1-github-metadata pull origin master", cwd=root_dir)
+    run("git -C data/sources/gui-github-metadata pull origin master", cwd=root_dir)
     run("git -C data/sources/delving pull origin master", cwd=root_dir)
     run("git -C data/sources/mailing_list/shard_0 fetch origin", cwd=root_dir)
     run("git -C data/sources/secp256k1 pull origin master", cwd=root_dir)

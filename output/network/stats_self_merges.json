@@ -1,6 +1,39 @@
 {
-  "generated_at": "2026-08-03T15:55:06.970367+00:00",
+  "generated_at": "2026-08-10T18:59:55.602337+00:00",
   "self_merges": [
+    {
+      "maintainer_id": "can_michael_ford",
+      "maintainer_name": "Michael Ford",
+      "repository": "bitcoin/bitcoin",
+      "pr_number": 35870,
+      "url": "https://github.com/bitcoin/bitcoin/pull/35870",
+      "title": "guix: move `python-minimal` to Linux GUI build",
+      "merged_at": "2026-08-04T09:23:13+00:00",
+      "ack_count": 2,
+      "category": "Light Review"
+    },
+    {
+      "maintainer_id": "can_michael_ford",
+      "maintainer_name": "Michael Ford",
+      "repository": "bitcoin/bitcoin",
+      "pr_number": 35869,
+      "url": "https://github.com/bitcoin/bitcoin/pull/35869",
+      "title": "lint: (re-)add contrib/guix for Python linting",
+      "merged_at": "2026-08-03T12:30:04+00:00",
+      "ack_count": 2,
+      "category": "Light Review"
+    },
+    {
+      "maintainer_id": "can_wladimir_j_van_der_laan",
+      "maintainer_name": "Wladimir J. van der Laan",
+      "repository": "bitcoin-core/gui",
+      "pr_number": 949,
+      "url": "https://github.com/bitcoin-core/gui/pull/949",
+      "title": "Fix `-Wsfinae-incomplete` warnings when building with GCC 16.x",
+      "merged_at": "2026-07-22T09:12:19+00:00",
+      "ack_count": 1,
+      "category": "Light Review"
+    },
     {
       "maintainer_id": "can_hennadii_stepanov",
       "maintainer_name": "Hennadii Stepanov",
@@ -28217,6 +28250,28 @@
       "category": "Light Review"
     },
     {
+      "maintainer_id": "can_michael_ford",
+      "maintainer_name": "Michael Ford",
+      "repository": "bitcoin-core/gui",
+      "pr_number": 35870,
+      "url": "https://github.com/bitcoin-core/gui/pull/35870",
+      "title": null,
+      "merged_at": null,
+      "ack_count": 0,
+      "category": "Ninja Merge"
+    },
+    {
+      "maintainer_id": "can_michael_ford",
+      "maintainer_name": "Michael Ford",
+      "repository": "bitcoin-core/gui",
+      "pr_number": 35869,
+      "url": "https://github.com/bitcoin-core/gui/pull/35869",
+      "title": null,
+      "merged_at": null,
+      "ack_count": 0,
+      "category": "Ninja Merge"
+    },
+    {
       "maintainer_id": "can_hennadii_stepanov",
       "maintainer_name": "Hennadii Stepanov",
       "repository": "bitcoin-core/gui",
@@ -53319,17 +53374,6 @@
       "category": "Ninja Merge"
     },
     {
-      "maintainer_id": "can_wladimir_j_van_der_laan",
-      "maintainer_name": "Wladimir J. van der Laan",
-      "repository": "bitcoin-core/gui",
-      "pr_number": 949,
-      "url": "https://github.com/bitcoin-core/gui/pull/949",
-      "title": null,
-      "merged_at": null,
-      "ack_count": 0,
-      "category": "Ninja Merge"
-    },
-    {
       "maintainer_id": "can_pieter_wuille",
       "maintainer_name": "Pieter Wuille",
       "repository": "bitcoin-core/gui",
@@ -53423,10 +53467,10 @@
       "repository": "bitcoin-core/gui",
       "pr_number": 941,
       "url": "https://github.com/bitcoin-core/gui/pull/941",
-      "title": null,
+      "title": "bugfix: Close transaction detail windows when switching wallets",
       "merged_at": null,
-      "ack_count": 0,
-      "category": "Ninja Merge"
+      "ack_count": 1,
+      "category": "Light Review"
     },
     {
       "maintainer_id": "can_wladimir_j_van_der_laan",

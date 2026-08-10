@@ -36,11 +36,11 @@
   "p2016_authored_commits": 0.0,
   "modern_authored_commits": 0.0,
   "co_authored_commits": 0.0,
-  "bips_authored": 2.0,
-  "p2016_bips_authored": 2.0,
-  "modern_bips_authored": 2.0,
-  "first_bip_date": "2026-03-28T23:02:59",
-  "last_bip_date": "2026-03-28T23:02:59",
+  "bips_authored": 0.0,
+  "p2016_bips_authored": 0.0,
+  "modern_bips_authored": 0.0,
+  "first_bip_date": null,
+  "last_bip_date": null,
   "avg_review_latency_days": null,
   "reviews_count": 0.0,
   "avg_approval_latency_days": null,
@@ -57,12 +57,12 @@
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": null,
-  "hybrid_score": 0.5547,
-  "p2016_hybrid_score": 0.5547,
-  "modern_hybrid_score": 0.5547,
-  "impact_score": 28.0,
-  "p2016_impact_score": 28.0,
-  "modern_impact_score": 28.0,
+  "hybrid_score": 0.35,
+  "p2016_hybrid_score": 0.0,
+  "modern_hybrid_score": 0.0,
+  "impact_score": 19.0,
+  "p2016_impact_score": 0.0,
+  "modern_impact_score": 0.0,
   "threads_started": 0.0,
   "replies_sent": 0.0,
   "ml_threads": 0.0,
@@ -73,15 +73,11 @@
   "last_active": null,
   "dev_type": "Participant",
   "expertise_domains": [
-    "Consensus"
+    "Infrastructure"
   ],
-  "expertise_by_source": {
-    "bips": {
-      "Consensus": 1.0
-    }
-  },
+  "expertise_by_source": {},
   "expertise_domain_scores": {
-    "Consensus": 1.0
+    "Infrastructure": 1.0
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -93,30 +89,14 @@
   "is_reviewer": false,
   "is_researcher": false,
   "is_bip_author": true,
-  "global_first_active": "2026-03-28T23:02:59",
-  "global_last_active": "2026-03-28T23:02:59",
+  "global_first_active": null,
+  "global_last_active": null,
   "github_location": null,
   "github_company": null,
   "github_bio": null,
   "github_twitter": null,
   "github_blog": null,
   "github_followers": null,
-  "activity_status": "New",
-  "is_top_50": false,
-  "bip_list": [
-    {
-      "number": 440,
-      "title": "Varops Budget For Script Runtime Constraint",
-      "status": "Draft",
-      "theme": "Consensus & Soft Forks",
-      "link": "https://github.com/bitcoin/bips/blob/master/bip-0440.mediawiki"
-    },
-    {
-      "number": 441,
-      "title": "Restoration of disabled script (Tapleaf 0xC2)",
-      "status": "Draft",
-      "theme": "Consensus & Soft Forks",
-      "link": "https://github.com/bitcoin/bips/blob/master/bip-0441.mediawiki"
-    }
-  ]
+  "activity_status": "",
+  "is_top_50": false
 }

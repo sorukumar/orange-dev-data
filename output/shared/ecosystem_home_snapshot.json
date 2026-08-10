@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-08-02",
-  "contributors_tracked": 7694,
+  "generated_at": "2026-08-09",
+  "contributors_tracked": 7722,
   "window_reference": {
-    "anchor_timestamp": "2026-08-02T23:59:59.694017+00:00",
-    "current_window_start": "2026-07-03T23:59:59.694017+00:00",
-    "previous_window_start": "2026-06-03T23:59:59.694017+00:00",
+    "anchor_timestamp": "2026-08-09T23:59:59.486085+00:00",
+    "current_window_start": "2026-07-10T23:59:59.486085+00:00",
+    "previous_window_start": "2026-06-10T23:59:59.486085+00:00",
     "window_days": 30
   },
   "widgets": {
     "active_contributors_30d": {
-      "value": 130,
-      "previous_30d": 59,
-      "delta_30d": 71,
+      "value": 149,
+      "previous_30d": 43,
+      "delta_30d": 106,
       "window_days": 30,
       "definition": "Contributors with global_last_active in current 30-day window, compared to the previous 30-day window.",
-      "latest_activity_date": "2026-08-03"
+      "latest_activity_date": "2026-08-10"
     },
     "top_reviewers_30d": {
       "window_days": 30,
@@ -23,37 +23,37 @@
         {
           "uuid": "auto_sebastian_kung",
           "display_name": "Sebastian Kung",
-          "reviews_30d": 118,
-          "previous_30d": 130,
-          "delta_30d": -12
+          "reviews_30d": 104,
+          "previous_30d": 137,
+          "delta_30d": -33
         },
         {
           "uuid": "can_marcofalke",
           "display_name": "MarcoFalke",
-          "reviews_30d": 68,
-          "previous_30d": 85,
-          "delta_30d": -17
+          "reviews_30d": 86,
+          "previous_30d": 97,
+          "delta_30d": -11
         },
         {
           "uuid": "can_lorinc_pap",
           "display_name": "Lorinc Pap",
-          "reviews_30d": 57,
-          "previous_30d": 52,
-          "delta_30d": 5
+          "reviews_30d": 64,
+          "previous_30d": 62,
+          "delta_30d": 2
         },
         {
-          "uuid": "can_ava_chow",
-          "display_name": "Ava Chow",
-          "reviews_30d": 52,
-          "previous_30d": 28,
-          "delta_30d": 24
+          "uuid": "can_hennadii_stepanov",
+          "display_name": "Hennadii Stepanov",
+          "reviews_30d": 62,
+          "previous_30d": 56,
+          "delta_30d": 6
         },
         {
           "uuid": "can_michael_ford",
           "display_name": "Michael Ford",
-          "reviews_30d": 46,
-          "previous_30d": 53,
-          "delta_30d": -7
+          "reviews_30d": 58,
+          "previous_30d": 58,
+          "delta_30d": 0
         }
       ],
       "aliases_collapsed": 0
@@ -67,49 +67,49 @@
           "title": "Pay-to-Merkle-Root (P2MR)",
           "primary_author": "Hunter Beast",
           "primary_author_uuid": "auto_hunter_beast",
-          "mentions_30d": 27,
-          "previous_30d": 29,
-          "delta_30d": -2
+          "mentions_30d": 20,
+          "previous_30d": 20,
+          "delta_30d": 0
         },
         {
-          "bip_id": "340",
-          "title": "Schnorr Signatures for secp256k1",
-          "primary_author": "Pieter Wuille",
-          "primary_author_uuid": "can_pieter_wuille",
-          "mentions_30d": 19,
-          "previous_30d": 53,
-          "delta_30d": -34
+          "bip_id": "110",
+          "title": "Reduced Data Temporary Softfork",
+          "primary_author": "Dathon Ohm",
+          "primary_author_uuid": "auto_dathon_ohm",
+          "mentions_30d": 12,
+          "previous_30d": 2,
+          "delta_30d": 10
         },
         {
-          "bip_id": "32",
-          "title": "Hierarchical Deterministic Wallets",
-          "primary_author": "Pieter Wuille",
-          "primary_author_uuid": "can_pieter_wuille",
-          "mentions_30d": 10,
-          "previous_30d": 23,
-          "delta_30d": -13
+          "bip_id": "300",
+          "title": "Hashrate Escrows (Consensus layer)",
+          "primary_author": "Paul Sztorc",
+          "primary_author_uuid": "can_paul_sztorc",
+          "mentions_30d": 6,
+          "previous_30d": 0,
+          "delta_30d": 6
         }
       ]
     },
     "highlighted_release_30d": {
-      "version": "31.1",
-      "status": "shipped",
-      "date": "Jul 06, 2026",
-      "prs": 28
+      "version": "32.0",
+      "status": "upcoming",
+      "date": "Aug 10, 2026",
+      "prs": 63
     },
     "research_activity_30d": {
-      "messages_30d": 192,
-      "previous_30d": 311,
-      "delta_30d": -119,
+      "messages_30d": 183,
+      "previous_30d": 265,
+      "delta_30d": -82,
       "momentum": "cooling",
       "definition": "Combined Delving Bitcoin and mailing list discussion volume in current 30 days versus previous 30 days."
     },
     "discussion_voices_30d": {
-      "value": 68,
-      "previous_30d": 89,
-      "delta_30d": -21,
-      "messages_30d": 192,
-      "messages_previous_30d": 311
+      "value": 71,
+      "previous_30d": 68,
+      "delta_30d": 3,
+      "messages_30d": 183,
+      "messages_previous_30d": 265
     },
     "topic_momentum_30d": {
       "window_days": 30,
@@ -118,86 +118,86 @@
         {
           "topic": "mining",
           "label": "Mining",
-          "mentions_30d": 39,
-          "previous_30d": 27,
-          "delta_30d": 12
-        },
-        {
-          "topic": "taproot",
-          "label": "Taproot",
-          "mentions_30d": 35,
-          "previous_30d": 31,
-          "delta_30d": 4
+          "mentions_30d": 34,
+          "previous_30d": 33,
+          "delta_30d": 1
         },
         {
           "topic": "quantum",
           "label": "Quantum",
-          "mentions_30d": 26,
-          "previous_30d": 24,
-          "delta_30d": 2
+          "mentions_30d": 27,
+          "previous_30d": 13,
+          "delta_30d": 14
+        },
+        {
+          "topic": "taproot",
+          "label": "Taproot",
+          "mentions_30d": 19,
+          "previous_30d": 30,
+          "delta_30d": -11
         },
         {
           "topic": "lightning",
           "label": "Lightning",
-          "mentions_30d": 16,
+          "mentions_30d": 18,
           "previous_30d": 15,
-          "delta_30d": 1
+          "delta_30d": 3
         },
         {
-          "topic": "privacy",
-          "label": "Privacy",
+          "topic": "utxo-sync",
+          "label": "Utxo Sync",
           "mentions_30d": 11,
-          "previous_30d": 39,
-          "delta_30d": -28
+          "previous_30d": 42,
+          "delta_30d": -31
         }
       ]
     },
     "active_contributors_7d": {
-      "value": 72,
-      "previous_7d": 31,
-      "delta_7d": 41,
+      "value": 71,
+      "previous_7d": 37,
+      "delta_7d": 34,
       "window_days": 7,
       "definition": "Contributors with global_last_active in current 7-day window, compared to the previous 7-day window.",
-      "latest_activity_date": "2026-08-03"
+      "latest_activity_date": "2026-08-10"
     },
     "top_reviewers_7d": {
       "window_days": 7,
       "definition": "Top reviewers by unique PRs reviewed in current 7-day window (comments/reviews only), with previous 7-day comparison.",
       "items": [
         {
-          "uuid": "can_jon_atack",
-          "display_name": "Jon Atack",
-          "reviews_7d": 12,
-          "previous_7d": 9,
-          "delta_7d": 3
-        },
-        {
           "uuid": "can_marcofalke",
           "display_name": "MarcoFalke",
-          "reviews_7d": 12,
-          "previous_7d": 11,
-          "delta_7d": 1
+          "reviews_7d": 40,
+          "previous_7d": 22,
+          "delta_7d": 18
+        },
+        {
+          "uuid": "auto_sebastian_kung",
+          "display_name": "Sebastian Kung",
+          "reviews_7d": 39,
+          "previous_7d": 2,
+          "delta_7d": 37
         },
         {
           "uuid": "can_lorinc_pap",
           "display_name": "Lorinc Pap",
-          "reviews_7d": 9,
-          "previous_7d": 24,
-          "delta_7d": -15
+          "reviews_7d": 26,
+          "previous_7d": 15,
+          "delta_7d": 11
         },
         {
-          "uuid": "auto_pol_espinasa",
-          "display_name": "Pol Espinasa",
-          "reviews_7d": 7,
-          "previous_7d": 2,
-          "delta_7d": 5
+          "uuid": "can_hennadii_stepanov",
+          "display_name": "Hennadii Stepanov",
+          "reviews_7d": 25,
+          "previous_7d": 16,
+          "delta_7d": 9
         },
         {
-          "uuid": "auto_matthew_zipkin",
-          "display_name": "Matthew Zipkin",
-          "reviews_7d": 7,
-          "previous_7d": 4,
-          "delta_7d": 3
+          "uuid": "can_michael_ford",
+          "display_name": "Michael Ford",
+          "reviews_7d": 23,
+          "previous_7d": 8,
+          "delta_7d": 15
         }
       ],
       "aliases_collapsed": 0
@@ -207,92 +207,92 @@
       "definition": "Most-mentioned BIPs in current 7-day discussion window versus previous 7-day baseline.",
       "items": [
         {
-          "bip_id": "360",
-          "title": "Pay-to-Merkle-Root (P2MR)",
-          "primary_author": "Hunter Beast",
-          "primary_author_uuid": "auto_hunter_beast",
-          "mentions_7d": 8,
-          "previous_7d": 0,
-          "delta_7d": 8
-        },
-        {
           "bip_id": "110",
           "title": "Reduced Data Temporary Softfork",
           "primary_author": "Dathon Ohm",
           "primary_author_uuid": "auto_dathon_ohm",
           "mentions_7d": 6,
-          "previous_7d": 0,
-          "delta_7d": 6
+          "previous_7d": 6,
+          "delta_7d": 0
         },
         {
-          "bip_id": "300",
-          "title": "Hashrate Escrows (Consensus layer)",
-          "primary_author": "Paul Sztorc",
-          "primary_author_uuid": "can_paul_sztorc",
-          "mentions_7d": 6,
+          "bip_id": "360",
+          "title": "Pay-to-Merkle-Root (P2MR)",
+          "primary_author": "Hunter Beast",
+          "primary_author_uuid": "auto_hunter_beast",
+          "mentions_7d": 3,
+          "previous_7d": 8,
+          "delta_7d": -5
+        },
+        {
+          "bip_id": "459",
+          "title": "BIP 459",
+          "primary_author": "Unknown",
+          "primary_author_uuid": null,
+          "mentions_7d": 1,
           "previous_7d": 0,
-          "delta_7d": 6
+          "delta_7d": 1
         }
       ]
     },
     "highlighted_release_7d": {
       "version": "32.0",
       "status": "upcoming",
-      "date": "Jul 29, 2026",
-      "prs": 115
+      "date": "Aug 10, 2026",
+      "prs": 63
     },
     "research_activity_7d": {
-      "messages_7d": 45,
-      "previous_7d": 28,
-      "delta_7d": 17,
-      "momentum": "rising",
+      "messages_7d": 37,
+      "previous_7d": 45,
+      "delta_7d": -8,
+      "momentum": "cooling",
       "definition": "Combined Delving Bitcoin and mailing list discussion volume in current 7 days versus previous 7 days."
     },
     "discussion_voices_7d": {
-      "value": 21,
-      "previous_7d": 16,
-      "delta_7d": 5,
-      "messages_7d": 45,
-      "messages_previous_7d": 28
+      "value": 25,
+      "previous_7d": 21,
+      "delta_7d": 4,
+      "messages_7d": 37,
+      "messages_previous_7d": 45
     },
     "topic_momentum_7d": {
       "window_days": 7,
       "definition": "Most active research topics in current 7-day discussion window versus previous 7-day baseline.",
       "items": [
         {
-          "topic": "taproot",
-          "label": "Taproot",
-          "mentions_7d": 9,
-          "previous_7d": 1,
+          "topic": "bip-process",
+          "label": "Bip Process",
+          "mentions_7d": 8,
+          "previous_7d": 0,
           "delta_7d": 8
+        },
+        {
+          "topic": "soft-fork-activation",
+          "label": "Soft Fork Activation",
+          "mentions_7d": 4,
+          "previous_7d": 0,
+          "delta_7d": 4
         },
         {
           "topic": "utxo-sync",
           "label": "Utxo Sync",
-          "mentions_7d": 7,
-          "previous_7d": 0,
-          "delta_7d": 7
+          "mentions_7d": 4,
+          "previous_7d": 7,
+          "delta_7d": -3
         },
         {
-          "topic": "lightning",
-          "label": "Lightning",
-          "mentions_7d": 7,
-          "previous_7d": 0,
-          "delta_7d": 7
+          "topic": "multisig-threshold",
+          "label": "Multisig Threshold",
+          "mentions_7d": 3,
+          "previous_7d": 1,
+          "delta_7d": 2
         },
         {
           "topic": "mining",
           "label": "Mining",
-          "mentions_7d": 7,
-          "previous_7d": 8,
-          "delta_7d": -1
-        },
-        {
-          "topic": "quantum",
-          "label": "Quantum",
-          "mentions_7d": 6,
-          "previous_7d": 2,
-          "delta_7d": 4
+          "mentions_7d": 3,
+          "previous_7d": 7,
+          "delta_7d": -4
         }
       ]
     },
@@ -300,14 +300,19 @@
       "definition": "Random selection of top retired contributors by impact score to feature as ecosystem veterans.",
       "items": [
         {
-          "uuid": "can_johnson_lau",
-          "display_name": "Johnson Lau",
-          "impact_score": 63.0
+          "uuid": "auto_james_macwhyte",
+          "display_name": "james macwhyte",
+          "impact_score": 28.0
         },
         {
-          "uuid": "can_nils_schneider",
-          "display_name": "Nils Schneider",
-          "impact_score": 65.0
+          "uuid": "auto_peter_coinkite_inc",
+          "display_name": "Peter (Coinkite Inc)",
+          "impact_score": 28.0
+        },
+        {
+          "uuid": "can_gavin_andresen",
+          "display_name": "Gavin Andresen",
+          "impact_score": 86.0
         },
         {
           "uuid": "auto_manuel_araoz",
@@ -315,15 +320,15 @@
           "impact_score": 30.0
         },
         {
-          "uuid": "auto_andy_chase",
-          "display_name": "andy chase",
-          "impact_score": 24.0
+          "uuid": "auto_ryan_havar",
+          "display_name": "ryan havar",
+          "impact_score": 32.0
         }
       ]
     }
   },
   "quality": {
-    "bots_excluded": 16,
+    "bots_excluded": 17,
     "bot_filter_tokens": [
       "bot",
       "automerge",

@@ -57,50 +57,53 @@
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 9.5,
-  "hybrid_score": 0.4978,
-  "p2016_hybrid_score": 0.5243,
-  "modern_hybrid_score": 0.666,
+  "hybrid_score": 0.4974,
+  "p2016_hybrid_score": 0.5235,
+  "modern_hybrid_score": 0.6412,
   "impact_score": 26.0,
   "p2016_impact_score": 27.0,
-  "modern_impact_score": 33.0,
-  "threads_started": 36.0,
-  "replies_sent": 85.0,
+  "modern_impact_score": 32.0,
+  "threads_started": 37.0,
+  "replies_sent": 88.0,
   "ml_threads": 4.0,
-  "delving_threads": 32.0,
+  "delving_threads": 33.0,
   "ml_responses": 25.0,
-  "delving_responses": 60.0,
+  "delving_responses": 63.0,
   "first_active": "2023-06-11T04:19:18",
-  "last_active": "2026-04-02T03:49:53",
+  "last_active": null,
   "dev_type": "Reviewer",
   "expertise_domains": [
     "Consensus",
-    "Script"
+    "Script",
+    "Mining"
   ],
   "expertise_by_source": {
     "bips": {
       "Consensus": 1.0
     },
     "discussion": {
-      "Consensus": 0.268,
-      "Script": 0.732
+      "Consensus": 0.262,
+      "Mining": 0.167,
+      "Script": 0.571
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.7909,
-    "Script": 0.2091
+    "Consensus": 0.7891,
+    "Mining": 0.0477,
+    "Script": 0.1631
   },
-  "p2016_posts": 121.0,
-  "modern_posts": 118.0,
+  "p2016_posts": 125.0,
+  "modern_posts": 121.0,
   "p2016_ml_posts": 29.0,
-  "p2016_delving_posts": 92.0,
-  "modern_ml_posts": 26.0,
-  "modern_delving_posts": 92.0,
+  "p2016_delving_posts": 96.0,
+  "modern_ml_posts": 25.0,
+  "modern_delving_posts": 96.0,
   "is_engineer": false,
   "is_reviewer": true,
   "is_researcher": true,
   "is_bip_author": true,
   "global_first_active": "2023-06-11T04:19:18",
-  "global_last_active": "2026-04-02T03:49:53",
+  "global_last_active": "2026-03-24T19:51:28",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -127,10 +130,10 @@
     "link": "https://gnusha.org/pi/bitcoindev/mZy1LRBcpmxS4m217WThcZnHLH1gq8hrDaSfgqIfwxEqcodVPvcOKWHamj-6obEFXTVVAraN_ACPCDejaH_VY8wBF6cYGwwiKZyC0UGv238=@protonmail.com"
   },
   "last_message": {
-    "source": "mailing_list",
-    "subject": "Re: [bitcoindev] Algorithm Agility for Bitcoin to maintain security\n in the face of quantum and classic breaks in the signature algorithms",
-    "date": "2026-04-02",
-    "link": "https://gnusha.org/pi/bitcoindev/iOcCeyNQe4dgGq-PR5L4-rQR5CCNNno8GbY5wz2wv3rTJDeA4OxUv_8ukGngIBbrjrubbDi-_Q6D4xu5b7QOr-4GXma6vbxW3cLuOeBrXNM=@protonmail.com"
+    "source": "delving",
+    "subject": "Re: Universal opt-in replay protection?",
+    "date": "2026-08-10",
+    "link": "https://delvingbitcoin.org/t/universal-opt-in-replay-protection/2792/7"
   },
   "social_history": {
     "2023": {
@@ -165,6 +168,7 @@
       "taproot": 11
     },
     "2026": {
+      "mining": 4,
       "quantum": 2
     }
   }

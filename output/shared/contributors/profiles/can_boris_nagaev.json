@@ -45,50 +45,53 @@
   "avg_pr_ack_velocity_days": 0.19991898148148146,
   "avg_concept_lead_time_days": 0.1012037037037037,
   "review_reciprocity": 1.3333333333333333,
-  "hybrid_score": 0.2222,
-  "p2016_hybrid_score": 0.2906,
+  "hybrid_score": 0.2216,
+  "p2016_hybrid_score": 0.2895,
   "modern_hybrid_score": 0.4809,
   "impact_score": 12.0,
   "p2016_impact_score": 16.0,
   "modern_impact_score": 25.0,
   "threads_started": 4.0,
-  "replies_sent": 53.0,
+  "replies_sent": 54.0,
   "ml_threads": 1.0,
   "delving_threads": 3.0,
-  "ml_responses": 51.0,
+  "ml_responses": 52.0,
   "delving_responses": 2.0,
   "first_active": "2023-10-21T09:21:48",
-  "last_active": null,
+  "last_active": "2026-08-05T18:26:25",
   "dev_type": "Builder",
   "expertise_domains": [
     "Mempool",
-    "Cryptography"
+    "Cryptography",
+    "Consensus"
   ],
   "expertise_by_source": {
     "code": {
       "Mempool": 1.0
     },
     "discussion": {
-      "Cryptography": 0.714,
-      "Mempool": 0.286
+      "Consensus": 0.146,
+      "Cryptography": 0.604,
+      "Mempool": 0.25
     }
   },
   "expertise_domain_scores": {
-    "Cryptography": 0.2856,
-    "Mempool": 0.7144
+    "Consensus": 0.0584,
+    "Cryptography": 0.2416,
+    "Mempool": 0.7
   },
-  "p2016_posts": 57.0,
-  "modern_posts": 57.0,
-  "p2016_ml_posts": 52.0,
+  "p2016_posts": 58.0,
+  "modern_posts": 58.0,
+  "p2016_ml_posts": 53.0,
   "p2016_delving_posts": 5.0,
-  "modern_ml_posts": 52.0,
+  "modern_ml_posts": 53.0,
   "modern_delving_posts": 5.0,
   "is_engineer": true,
   "is_reviewer": true,
   "is_researcher": true,
   "is_bip_author": false,
   "global_first_active": "2023-10-21T09:21:48",
-  "global_last_active": "2026-06-27T04:45:19",
+  "global_last_active": "2026-08-05T18:26:25",
   "github_location": "Earth",
   "github_company": null,
   "github_bio": "Developer",
@@ -111,10 +114,10 @@
     "link": "https://gnusha.org/pi/bitcoindev/CAFC_Vt4-DXkEPZEfXzZQET7P9KSyOrgojGqr8w-xvTECeRn7Zw@mail.gmail.com"
   },
   "last_message": {
-    "source": "delving",
-    "subject": "Re: Public key recovery for EC leaves in P2MR (BIP-360)",
-    "date": "2026-07-09",
-    "link": "https://delvingbitcoin.org/t/public-key-recovery-for-ec-leaves-in-p2mr-bip-360/2603/31"
+    "source": "mailing_list",
+    "subject": "Re: [bitcoindev] BIP draft: CISA for Taproot Key Path Spends",
+    "date": "2026-08-05",
+    "link": "https://gnusha.org/pi/bitcoindev/bc77e7a7-fb5a-4563-90bf-e6a3f98ed351n@googlegroups.com"
   },
   "social_history": {
     "2023": {
@@ -143,11 +146,11 @@
       "wallet-keys": 1
     },
     "2026": {
-      "other": 12,
+      "other": 13,
       "mempool-fees": 5,
       "mining": 1,
       "quantum": 8,
-      "taproot": 4,
+      "taproot": 5,
       "wallet-keys": 5
     }
   }
