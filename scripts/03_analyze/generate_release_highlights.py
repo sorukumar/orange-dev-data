@@ -54,25 +54,26 @@ def generate_version_highlight(version, pr_subset, official_notes=None):
     if official_notes:
         notes_section = f"\nOfficial Release Notes Anchor:\n{official_notes[:8000]}\n" # Trim to avoid token limits
 
-    prompt = f"""You are the lead technical writer for Bitcoin Core. Your task is to analyze a list of Pull Request summaries that were merged into version {version} and synthesize a strict, factual "Release Highlights" summary.
+    prompt = f"""You are writing a release summary for Bitcoin Core version {version}, in the style of Bitcoin Optech. 
+Your task is to analyze a list of Pull Request summaries and synthesize a highly readable, insightful "Release Highlights" summary.
 
 Input Data (List of PR Summaries):
 {json.dumps(pr_subset, indent=2)}
 {notes_section}
 ### Your Directives:
-1. TONE: Be dry, objective, and strictly factual. Do NOT use marketing fluff, hyperbole (e.g., "game-changing", "revolutionary"), or emojis. 
-2. EVALUATION RUBRIC: When deciding what constitutes a "Highlight", prioritize changes in this strict order:
+1. THE SO WHAT?: Do not just list technical changes. You must explain *why* these changes matter and who they impact. For example, instead of saying "Refactored mempool eviction," explain "This improves memory efficiency for node runners."
+2. TONE: Be professional, insightful, and clear. Avoid marketing fluff or emojis, but make it highly readable and engaging for a technical audience.
+3. EVALUATION RUBRIC: When deciding what constitutes a "Highlight", prioritize changes with the biggest user impact:
    - Consensus rules and network security
-   - P2P network privacy and node performance (CPU/Mem/Disk)
-   - Wallet architecture and new RPC methods
-   - Build systems and significant testing frameworks
-   Ignore all minor refactors, typo fixes, and routine dependency updates.
+   - P2P network privacy and node performance (CPU/Mem/Disk) for node runners
+   - Wallet architecture and new RPC methods for wallet developers
+   Ignore minor refactors, typo fixes, and routine dependency updates.
 
 ### Output format:
 You MUST return a valid JSON object with exactly these two keys:
 
-1. "release_summary": A 2-3 sentence paragraph explaining the overarching technical themes of this release. Focus only on the facts of what changed.
-2. "highlights": An array of 3 to 5 strings. Each string must be a single-sentence bullet point describing a major architectural or feature change. Start each bullet with a bolded category tag (e.g., "**P2P:** Added support for V2 transport protocol.").
+1. "release_summary": A 3-4 sentence paragraph explaining the overarching themes of this release. Focus heavily on "The So What" and the tangible impact on the ecosystem.
+2. "highlights": An array of 3 to 5 strings. Each string must be a single-sentence bullet point describing a major change and its direct impact. Start each bullet with a bolded category tag based on the affected user (e.g., "**For Node Runners:**", "**For Wallet Developers:**", or "**Core Stability:**").
 
 Do NOT wrap the output in markdown blocks, return raw JSON only.
 """
@@ -141,7 +142,14 @@ def run_highlights_generator():
     for ms, group in tagged_df.groupby('milestone'):
         cutoff_dates[ms] = pd.to_datetime(group['merged_at'], utc=True).max()
         
-    sorted_cutoffs = sorted([(ms, date) for ms, date in cutoff_dates.items() if pd.notna(date)], key=lambda x: parse_version(x[0]))
+    def is_major_release(ms):
+        pv = parse_version(ms)
+        if pv[0] >= 22:
+            return pv[1] == 0 and pv[2] == 0
+        else:
+            return pv[2] == 0
+
+    sorted_cutoffs = sorted([(ms, date) for ms, date in cutoff_dates.items() if pd.notna(date) and is_major_release(ms)], key=lambda x: parse_version(x[0]))
     
     def infer_milestone(row):
         if pd.notna(row['milestone']):
@@ -201,6 +209,11 @@ def run_highlights_generator():
         # --- Staleness check: skip if the PR count hasn't changed ---
         current_pr_count = len(pr_subset)
         cached_entry = highlights_cache.get(ms_str)
+        
+        # Preserve history: do not regenerate summaries for older versions even if PR count changes
+        if cached_entry and parse_version(ms_str) < (28, 0, 0):
+            continue
+            
         if cached_entry and cached_entry.get("pr_count") == current_pr_count:
             continue  # Summary is still fresh, skip
             

@@ -70,6 +70,19 @@ def process_releases():
         return
 
     df = pd.read_parquet(INPUT_PR_PARQUET)
+    
+    # Calculate milestone progress using all PRs (open and closed) before filtering
+    df_all = df[df['repository_name'] == 'bitcoin/bitcoin'].copy()
+    milestone_stats = {}
+    for ms, group in df_all.groupby('milestone'):
+        if pd.isna(ms): continue
+        open_count = len(group[group['merged_at'].isna() & group['closed_at'].isna()])
+        closed_count = len(group[group['merged_at'].notna() | group['closed_at'].notna()])
+        milestone_stats[ms] = {
+            "open_prs": open_count,
+            "closed_prs": closed_count
+        }
+        
     df = df[(df['repository_name'] == 'bitcoin/bitcoin') & (df['merged_at'].notna())].copy()
     
     # NEW STEP: Load review counts
@@ -113,7 +126,14 @@ def process_releases():
         cutoff_dates[ms] = max_date
         
     # Sort cutoffs by version
-    sorted_cutoffs = sorted([(ms, date) for ms, date in cutoff_dates.items() if pd.notna(date)], key=lambda x: parse_version(x[0]))
+    def is_major_release(ms):
+        pv = parse_version(ms)
+        if pv[0] >= 22:
+            return pv[1] == 0 and pv[2] == 0
+        else:
+            return pv[2] == 0
+
+    sorted_cutoffs = sorted([(ms, date) for ms, date in cutoff_dates.items() if pd.notna(date) and is_major_release(ms)], key=lambda x: parse_version(x[0]))
     
     def infer_milestone_only(row):
         if pd.notna(row['milestone']):
@@ -258,6 +278,9 @@ def process_releases():
             "highlights": [],
             "prs": []
         }
+        
+        if milestone in milestone_stats:
+            release_obj["milestone_progress"] = milestone_stats[milestone]
         
         # Inject AI highlights if available
         if str(milestone) in highlights_cache:
