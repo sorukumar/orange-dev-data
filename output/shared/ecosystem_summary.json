@@ -1,38 +1,38 @@
 {
-  "generated_at": "2026-08-09T13:59:18.341155",
+  "generated_at": "2026-08-16T08:46:49.109553",
   "groups": {
-    "committers": 1252,
-    "reviewers": 5173,
-    "research": 1680,
+    "committers": 1254,
+    "reviewers": 5187,
+    "research": 1684,
     "standards": 159,
-    "total_active": 6556,
-    "total_registry": 7722
+    "total_active": 6573,
+    "total_registry": 7740
   },
   "venn_4": {
     "0001": 13,
-    "0010": 1196,
+    "0010": 1199,
     "0011": 24,
-    "0100": 3889,
+    "0100": 3900,
     "0101": 6,
-    "0110": 140,
+    "0110": 141,
     "0111": 36,
     "1000": 137,
     "1001": 1,
     "1010": 11,
     "1011": 1,
-    "1100": 828,
+    "1100": 830,
     "1101": 2,
     "1110": 196,
     "1111": 76
   },
   "venn_summary": {
     "code_only": 137,
-    "review_only": 3889,
-    "research_only": 1196,
+    "review_only": 3900,
+    "research_only": 1199,
     "standards_only": 13,
     "all_four": 76,
-    "code_review": 828,
-    "review_research": 140,
+    "code_review": 830,
+    "review_research": 141,
     "research_standards": 24
   },
   "rd_focus": {},
@@ -44,51 +44,51 @@
     "name": "cyb3ralbert",
     "uuid": "auto_cyb3ralbert",
     "github_login": "cyb3ralbert",
-    "description": "First-time core contributor recently merged 2 commits."
+    "description": "First-time core contributor recently merged 3 commits."
   },
   "onboarding": {
-    "new_coders_90d": 23,
-    "new_coders_7d": 5,
-    "new_discussants_90d": 72,
-    "new_discussants_7d": 4,
+    "new_coders_90d": 22,
+    "new_coders_7d": 2,
+    "new_discussants_90d": 70,
+    "new_discussants_7d": 6,
     "window_days": 90
   },
   "prs": {
-    "total_merged": 18045,
-    "merged_30d": 145,
-    "merged_prev_30d": 133,
-    "merged_7d": 53,
-    "merged_prev_7d": 25
+    "total_merged": 18079,
+    "merged_30d": 154,
+    "merged_prev_30d": 120,
+    "merged_7d": 38,
+    "merged_prev_7d": 49
   },
   "commits": {
-    "commits_30d": 645,
-    "commits_prev_30d": 833,
-    "commits_7d": 197,
-    "commits_prev_7d": 101
+    "commits_30d": 776,
+    "commits_prev_30d": 895,
+    "commits_7d": 122,
+    "commits_prev_7d": 268
   },
   "bips": {
     "total": 210,
-    "active_recently": 97
+    "active_recently": 98
   },
   "discussion_pulse": {
     "topics": [
       {
         "category": "quantum",
         "label": "Quantum",
-        "count": 111,
-        "share": 16.6
+        "count": 108,
+        "share": 16.1
       },
       {
         "category": "mining",
         "label": "Mining",
-        "count": 79,
-        "share": 11.8
+        "count": 94,
+        "share": 14.1
       },
       {
         "category": "taproot",
         "label": "Taproot",
-        "count": 79,
-        "share": 11.8
+        "count": 77,
+        "share": 11.5
       }
     ],
     "top_bips": [

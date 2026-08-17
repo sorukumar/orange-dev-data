@@ -45,20 +45,20 @@
   "avg_pr_ack_velocity_days": 0.09181712962962962,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 2.6666666666666665,
-  "hybrid_score": 0.215,
-  "p2016_hybrid_score": 0.3013,
+  "hybrid_score": 0.2179,
+  "p2016_hybrid_score": 0.3062,
   "modern_hybrid_score": 0.4348,
   "impact_score": 12.0,
   "p2016_impact_score": 17.0,
   "modern_impact_score": 23.0,
   "threads_started": 24.0,
-  "replies_sent": 110.0,
+  "replies_sent": 114.0,
   "ml_threads": 3.0,
   "delving_threads": 21.0,
-  "ml_responses": 88.0,
+  "ml_responses": 92.0,
   "delving_responses": 22.0,
   "first_active": null,
-  "last_active": null,
+  "last_active": "2026-08-15T11:52:10",
   "dev_type": "Participant",
   "expertise_domains": [
     "Cryptography",
@@ -67,28 +67,28 @@
   ],
   "expertise_by_source": {
     "discussion": {
-      "Consensus": 0.22,
-      "Cryptography": 0.678,
-      "Wallet": 0.102
+      "Consensus": 0.224,
+      "Cryptography": 0.672,
+      "Wallet": 0.103
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.22,
-    "Cryptography": 0.678,
-    "Wallet": 0.102
+    "Consensus": 0.2242,
+    "Cryptography": 0.6727,
+    "Wallet": 0.1031
   },
-  "p2016_posts": 134.0,
-  "modern_posts": 134.0,
-  "p2016_ml_posts": 91.0,
+  "p2016_posts": 138.0,
+  "modern_posts": 138.0,
+  "p2016_ml_posts": 95.0,
   "p2016_delving_posts": 43.0,
-  "modern_ml_posts": 91.0,
+  "modern_ml_posts": 95.0,
   "modern_delving_posts": 43.0,
   "is_engineer": false,
   "is_reviewer": true,
   "is_researcher": true,
   "is_bip_author": false,
   "global_first_active": "2023-10-27T01:02:48",
-  "global_last_active": "2026-07-12T14:18:23",
+  "global_last_active": "2026-08-15T11:52:10",
   "github_location": null,
   "github_company": null,
   "github_bio": "Pseudonymous freelance cypherpunk",
@@ -106,10 +106,10 @@
     "link": "https://delvingbitcoin.org/t/off-chain-dlc-ticketing-systems/214/1"
   },
   "last_message": {
-    "source": "delving",
-    "subject": "Re: PQC output type discussion",
-    "date": "2026-08-05",
-    "link": "https://delvingbitcoin.org/t/pqc-output-type-discussion/2749/5"
+    "source": "mailing_list",
+    "subject": "Re: [bitcoindev] Giving teeth to expected EC disabling: P2XX(-T)(-ML)",
+    "date": "2026-08-15",
+    "link": "https://gnusha.org/pi/bitcoindev/irB0rm4rUG6GyaLnf1vUsNFW8BBJXAuh8-FIJ_s75xjgFgbOuTdaEGQ30PYzjtawVv5UVIC5xs7Uq_Cm9BPSyC73A-xGwT5J2oYsKE8QiPE=@proton.me"
   },
   "social_history": {
     "2023": {
@@ -135,13 +135,13 @@
     "2026": {
       "bitvm": 11,
       "covenants": 10,
-      "other": 51,
+      "other": 54,
       "mempool-fees": 12,
-      "quantum": 61,
+      "quantum": 62,
       "script-opcodes": 10,
       "signatures-sighash": 18,
       "taproot": 32,
-      "wallet-keys": 24
+      "wallet-keys": 25
     }
   }
 }

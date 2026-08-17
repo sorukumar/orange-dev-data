@@ -41,7 +41,7 @@
   "modern_bips_authored": 4.0,
   "first_bip_date": "2023-09-06T10:16:35",
   "last_bip_date": "2026-03-03T13:38:26",
-  "avg_review_latency_days": 1370.6543957860924,
+  "avg_review_latency_days": 1370.654395786092,
   "reviews_count": 21.0,
   "avg_approval_latency_days": 1248.861099537037,
   "approvals_count": 7.0,
@@ -57,16 +57,16 @@
   "avg_pr_ack_velocity_days": 73.69123346560846,
   "avg_concept_lead_time_days": 0.7398755787037037,
   "review_reciprocity": 2.1,
-  "hybrid_score": 0.9782,
+  "hybrid_score": 0.9783,
   "p2016_hybrid_score": 1.01,
-  "modern_hybrid_score": 1.1217,
+  "modern_hybrid_score": 1.1225,
   "impact_score": 44.0,
   "p2016_impact_score": 45.0,
   "modern_impact_score": 49.0,
-  "threads_started": 31.0,
+  "threads_started": 32.0,
   "replies_sent": 53.0,
   "ml_threads": 6.0,
-  "delving_threads": 25.0,
+  "delving_threads": 26.0,
   "ml_responses": 32.0,
   "delving_responses": 21.0,
   "first_active": "2018-09-06T15:32:44",
@@ -81,20 +81,20 @@
       "Consensus": 1.0
     },
     "discussion": {
-      "Consensus": 0.212,
-      "Script": 0.788
+      "Consensus": 0.216,
+      "Script": 0.784
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.7749,
-    "Script": 0.2251
+    "Consensus": 0.776,
+    "Script": 0.224
   },
-  "p2016_posts": 84.0,
-  "modern_posts": 75.0,
+  "p2016_posts": 85.0,
+  "modern_posts": 76.0,
   "p2016_ml_posts": 38.0,
-  "p2016_delving_posts": 46.0,
+  "p2016_delving_posts": 47.0,
   "modern_ml_posts": 29.0,
-  "modern_delving_posts": 46.0,
+  "modern_delving_posts": 47.0,
   "is_engineer": false,
   "is_reviewer": true,
   "is_researcher": true,
@@ -149,9 +149,9 @@
   },
   "last_message": {
     "source": "delving",
-    "subject": "Re: CTV-only Vault Concept v0.1.0 release",
-    "date": "2026-05-28",
-    "link": "https://delvingbitcoin.org/t/ctv-only-vault-concept-v0-1-0-release/2539/2"
+    "subject": "Re: Reducing Bitcoin Full Node Storage Without Consensus Changes",
+    "date": "2026-08-11",
+    "link": "https://delvingbitcoin.org/t/reducing-bitcoin-full-node-storage-without-consensus-changes/2790/2"
   },
   "social_history": {
     "2018": {
@@ -184,7 +184,7 @@
       "script-opcodes": 13,
       "signatures-sighash": 5,
       "soft-fork-activation": 8,
-      "taproot": 16
+      "taproot": 18
     },
     "2025": {
       "bip-process": 1,
@@ -197,8 +197,9 @@
       "taproot": 9
     },
     "2026": {
+      "bip-process": 1,
+      "other": 9,
       "covenants": 2,
-      "other": 8,
       "taproot": 1
     }
   }

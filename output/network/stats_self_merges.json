@@ -1,6 +1,39 @@
 {
-  "generated_at": "2026-08-10T18:59:55.602337+00:00",
+  "generated_at": "2026-08-17T13:47:23.741902+00:00",
   "self_merges": [
+    {
+      "maintainer_id": "can_michael_ford",
+      "maintainer_name": "Michael Ford",
+      "repository": "bitcoin/bitcoin",
+      "pr_number": 35982,
+      "url": "https://github.com/bitcoin/bitcoin/pull/35982",
+      "title": "Update minisketch subtree to latest master",
+      "merged_at": "2026-08-17T08:51:33+00:00",
+      "ack_count": 1,
+      "category": "Light Review"
+    },
+    {
+      "maintainer_id": "can_michael_ford",
+      "maintainer_name": "Michael Ford",
+      "repository": "bitcoin/bitcoin",
+      "pr_number": 35960,
+      "url": "https://github.com/bitcoin/bitcoin/pull/35960",
+      "title": "common: remove `::runtime_error` from `RunCommandParseJSON`",
+      "merged_at": "2026-08-14T15:20:40+00:00",
+      "ack_count": 4,
+      "category": "Administrative Merge"
+    },
+    {
+      "maintainer_id": "can_hennadii_stepanov",
+      "maintainer_name": "Hennadii Stepanov",
+      "repository": "bitcoin/bitcoin",
+      "pr_number": 35931,
+      "url": "https://github.com/bitcoin/bitcoin/pull/35931",
+      "title": "ci: Check DLL imports of cross-built `bitcoind.exe`",
+      "merged_at": "2026-08-12T08:56:29+00:00",
+      "ack_count": 2,
+      "category": "Light Review"
+    },
     {
       "maintainer_id": "can_michael_ford",
       "maintainer_name": "Michael Ford",
@@ -28248,6 +28281,39 @@
       "merged_at": null,
       "ack_count": 2,
       "category": "Light Review"
+    },
+    {
+      "maintainer_id": "can_michael_ford",
+      "maintainer_name": "Michael Ford",
+      "repository": "bitcoin-core/gui",
+      "pr_number": 35982,
+      "url": "https://github.com/bitcoin-core/gui/pull/35982",
+      "title": null,
+      "merged_at": null,
+      "ack_count": 0,
+      "category": "Ninja Merge"
+    },
+    {
+      "maintainer_id": "can_michael_ford",
+      "maintainer_name": "Michael Ford",
+      "repository": "bitcoin-core/gui",
+      "pr_number": 35960,
+      "url": "https://github.com/bitcoin-core/gui/pull/35960",
+      "title": null,
+      "merged_at": null,
+      "ack_count": 0,
+      "category": "Ninja Merge"
+    },
+    {
+      "maintainer_id": "can_hennadii_stepanov",
+      "maintainer_name": "Hennadii Stepanov",
+      "repository": "bitcoin-core/gui",
+      "pr_number": 35931,
+      "url": "https://github.com/bitcoin-core/gui/pull/35931",
+      "title": null,
+      "merged_at": null,
+      "ack_count": 0,
+      "category": "Ninja Merge"
     },
     {
       "maintainer_id": "can_michael_ford",

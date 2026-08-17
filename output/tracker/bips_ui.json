@@ -18,7 +18,7 @@
     "maturity_score": 0.55,
     "social_mention_count": 277,
     "revision_count": 59,
-    "code_mention_count": 106,
+    "code_mention_count": 112,
     "authors": "Pieter Wuille"
   },
   {
@@ -51,7 +51,7 @@
     "maturity_score": 0.39,
     "social_mention_count": 107,
     "revision_count": 111,
-    "code_mention_count": 44,
+    "code_mention_count": 46,
     "authors": "Ava Chow"
   },
   {
@@ -143,6 +143,17 @@
     "authors": "Eric Lombrozo, Johnson Lau, Pieter Wuille"
   },
   {
+    "bip_id": "3",
+    "title": "Updated BIP Process",
+    "status": "Deployed",
+    "theme": "Other",
+    "maturity_score": 0.19,
+    "social_mention_count": 51,
+    "revision_count": 53,
+    "code_mention_count": 0,
+    "authors": "Murch"
+  },
+  {
     "bip_id": "342",
     "title": "Validation of Taproot Scripts",
     "status": "Deployed",
@@ -174,17 +185,6 @@
     "revision_count": 20,
     "code_mention_count": 6,
     "authors": "Jonas Schnelli"
-  },
-  {
-    "bip_id": "3",
-    "title": "Updated BIP Process",
-    "status": "Deployed",
-    "theme": "Other",
-    "maturity_score": 0.18,
-    "social_mention_count": 51,
-    "revision_count": 52,
-    "code_mention_count": 0,
-    "authors": "Murch"
   },
   {
     "bip_id": "119",
@@ -302,7 +302,7 @@
     "status": "Complete",
     "theme": "Other",
     "maturity_score": 0.12,
-    "social_mention_count": 18,
+    "social_mention_count": 17,
     "revision_count": 47,
     "code_mention_count": 0,
     "authors": "Shaolin Fry, Luke Dashjr"
@@ -341,26 +341,26 @@
     "authors": "Pieter Wuille, Greg Maxwell"
   },
   {
+    "bip_id": "38",
+    "title": "Passphrase-protected private key",
+    "status": "Deployed",
+    "theme": "Other",
+    "maturity_score": 0.12,
+    "social_mention_count": 37,
+    "revision_count": 31,
+    "code_mention_count": 0,
+    "authors": "Mike Caldwell, Aaron Voisine"
+  },
+  {
     "bip_id": "324",
     "title": "Version 2 P2P Encrypted Transport Protocol",
     "status": "Deployed",
     "theme": "P2P Network",
     "maturity_score": 0.12,
     "social_mention_count": 49,
-    "revision_count": 20,
+    "revision_count": 21,
     "code_mention_count": 120,
     "authors": "Dhruv Mehta, Tim Ruffing, Jonas Schnelli, Pieter Wuille"
-  },
-  {
-    "bip_id": "38",
-    "title": "Passphrase-protected private key",
-    "status": "Deployed",
-    "theme": "Other",
-    "maturity_score": 0.11,
-    "social_mention_count": 32,
-    "revision_count": 31,
-    "code_mention_count": 0,
-    "authors": "Mike Caldwell, Aaron Voisine"
   },
   {
     "bip_id": "20",
@@ -550,6 +550,17 @@
     "authors": "Justus Ranvier"
   },
   {
+    "bip_id": "118",
+    "title": "SIGHASH_ANYPREVOUT for Taproot Scripts",
+    "status": "Draft",
+    "theme": "Consensus & Soft Forks",
+    "maturity_score": 0.08,
+    "social_mention_count": 36,
+    "revision_count": 14,
+    "code_mention_count": 0,
+    "authors": "Christian Decker, Anthony Towns"
+  },
+  {
     "bip_id": "370",
     "title": "PSBT Version 2",
     "status": "Deployed",
@@ -557,7 +568,7 @@
     "maturity_score": 0.08,
     "social_mention_count": 6,
     "revision_count": 33,
-    "code_mention_count": 6,
+    "code_mention_count": 10,
     "authors": "Ava Chow"
   },
   {
@@ -682,28 +693,6 @@
     "authors": "Wladimir J. van der Laan"
   },
   {
-    "bip_id": "118",
-    "title": "SIGHASH_ANYPREVOUT for Taproot Scripts",
-    "status": "Draft",
-    "theme": "Consensus & Soft Forks",
-    "maturity_score": 0.07,
-    "social_mention_count": 29,
-    "revision_count": 14,
-    "code_mention_count": 0,
-    "authors": "Christian Decker, Anthony Towns"
-  },
-  {
-    "bip_id": "110",
-    "title": "Reduced Data Temporary Softfork",
-    "status": "Complete",
-    "theme": "Consensus & Soft Forks",
-    "maturity_score": 0.06,
-    "social_mention_count": 27,
-    "revision_count": 8,
-    "code_mention_count": 0,
-    "authors": "Dathon Ohm"
-  },
-  {
     "bip_id": "61",
     "title": "Reject P2P message",
     "status": "Deployed",
@@ -713,6 +702,17 @@
     "revision_count": 12,
     "code_mention_count": 24,
     "authors": "Gavin Andresen"
+  },
+  {
+    "bip_id": "110",
+    "title": "Reduced Data Temporary Softfork",
+    "status": "Closed",
+    "theme": "Consensus & Soft Forks",
+    "maturity_score": 0.06,
+    "social_mention_count": 27,
+    "revision_count": 9,
+    "code_mention_count": 0,
+    "authors": "Dathon Ohm"
   },
   {
     "bip_id": "87",
@@ -726,17 +726,6 @@
     "authors": "Robert Spigler"
   },
   {
-    "bip_id": "46",
-    "title": "Address Scheme for Timelocked Fidelity Bonds",
-    "status": "Draft",
-    "theme": "Other",
-    "maturity_score": 0.06,
-    "social_mention_count": 0,
-    "revision_count": 32,
-    "code_mention_count": 0,
-    "authors": "Chris Belcher, Thebora Kompanioni"
-  },
-  {
     "bip_id": "137",
     "title": "Signatures of Messages using Private Keys",
     "status": "Deployed",
@@ -746,6 +735,17 @@
     "revision_count": 31,
     "code_mention_count": 0,
     "authors": "Christopher Gilliard"
+  },
+  {
+    "bip_id": "46",
+    "title": "Address Scheme for Timelocked Fidelity Bonds",
+    "status": "Draft",
+    "theme": "Other",
+    "maturity_score": 0.06,
+    "social_mention_count": 0,
+    "revision_count": 32,
+    "code_mention_count": 0,
+    "authors": "Chris Belcher, Thebora Kompanioni"
   },
   {
     "bip_id": "49",
@@ -1969,17 +1969,6 @@
     "authors": "Amir Taaki"
   },
   {
-    "bip_id": "199",
-    "title": "Hashed Time-Locked Contract transactions",
-    "status": "Closed",
-    "theme": "Other",
-    "maturity_score": 0.02,
-    "social_mention_count": 0,
-    "revision_count": 9,
-    "code_mention_count": 0,
-    "authors": "Sean Bowe, Daira Hopwood"
-  },
-  {
     "bip_id": "180",
     "title": "Block size/weight fraud proof",
     "status": "Closed",
@@ -1991,6 +1980,17 @@
     "authors": "Luke Dashjr"
   },
   {
+    "bip_id": "199",
+    "title": "Hashed Time-Locked Contract transactions",
+    "status": "Closed",
+    "theme": "Other",
+    "maturity_score": 0.02,
+    "social_mention_count": 0,
+    "revision_count": 9,
+    "code_mention_count": 0,
+    "authors": "Sean Bowe, Daira Hopwood"
+  },
+  {
     "bip_id": "172",
     "title": "Define Bitcoin Subunits as Satoshis",
     "status": "Draft",
@@ -2000,6 +2000,17 @@
     "revision_count": 3,
     "code_mention_count": 0,
     "authors": "OceanSlim"
+  },
+  {
+    "bip_id": "448",
+    "title": "Taproot-native (Re)bindable Transactions",
+    "status": "Draft",
+    "theme": "Consensus & Soft Forks",
+    "maturity_score": 0.01,
+    "social_mention_count": 7,
+    "revision_count": 1,
+    "code_mention_count": 0,
+    "authors": "Gregory Sanders, Antoine Poinsot, Steven Roose"
   },
   {
     "bip_id": "441",
@@ -2068,15 +2079,26 @@
     "authors": "Pieter Wuille, Ava Chow"
   },
   {
-    "bip_id": "177",
-    "title": "Redefine Bitcoin's Base Unit",
+    "bip_id": "178",
+    "title": "Version Extended WIF",
     "status": "Draft",
     "theme": "Other",
     "maturity_score": 0.01,
-    "social_mention_count": 3,
-    "revision_count": 4,
+    "social_mention_count": 0,
+    "revision_count": 7,
     "code_mention_count": 0,
-    "authors": "John Carvalho"
+    "authors": "Karl-Johan Alm"
+  },
+  {
+    "bip_id": "179",
+    "title": "Name for payment recipient identifiers",
+    "status": "Complete",
+    "theme": "Other",
+    "maturity_score": 0.01,
+    "social_mention_count": 0,
+    "revision_count": 6,
+    "code_mention_count": 0,
+    "authors": "Emil Engler, Luke Dashjr"
   },
   {
     "bip_id": "136",
@@ -2123,26 +2145,15 @@
     "authors": "Chris Stewart"
   },
   {
-    "bip_id": "179",
-    "title": "Name for payment recipient identifiers",
-    "status": "Complete",
-    "theme": "Other",
-    "maturity_score": 0.01,
-    "social_mention_count": 0,
-    "revision_count": 6,
-    "code_mention_count": 0,
-    "authors": "Emil Engler, Luke Dashjr"
-  },
-  {
-    "bip_id": "178",
-    "title": "Version Extended WIF",
+    "bip_id": "177",
+    "title": "Redefine Bitcoin's Base Unit",
     "status": "Draft",
     "theme": "Other",
     "maturity_score": 0.01,
-    "social_mention_count": 0,
-    "revision_count": 7,
+    "social_mention_count": 3,
+    "revision_count": 4,
     "code_mention_count": 0,
-    "authors": "Karl-Johan Alm"
+    "authors": "John Carvalho"
   },
   {
     "bip_id": "128",
@@ -2178,17 +2189,6 @@
     "authors": "Jeremy Rubin"
   },
   {
-    "bip_id": "448",
-    "title": "Taproot-native (Re)bindable Transactions",
-    "status": "Draft",
-    "theme": "Consensus & Soft Forks",
-    "maturity_score": 0.0,
-    "social_mention_count": 0,
-    "revision_count": 1,
-    "code_mention_count": 0,
-    "authors": "Gregory Sanders, Antoine Poinsot, Steven Roose"
-  },
-  {
     "bip_id": "446",
     "title": "OP_TEMPLATEHASH",
     "status": "Draft",
@@ -2211,6 +2211,17 @@
     "authors": "moonsettler, Brandon Black"
   },
   {
+    "bip_id": "89",
+    "title": "Chain Code Delegation",
+    "status": "Deployed",
+    "theme": "Other",
+    "maturity_score": 0.0,
+    "social_mention_count": 0,
+    "revision_count": 2,
+    "code_mention_count": 0,
+    "authors": "Jesse Posner, Jurvis Tan"
+  },
+  {
     "bip_id": "346",
     "title": "OP_TXHASH",
     "status": "Draft",
@@ -2222,15 +2233,26 @@
     "authors": "Steven Roose, Brandon Black"
   },
   {
-    "bip_id": "89",
-    "title": "Chain Code Delegation",
+    "bip_id": "95",
+    "title": "Testnet 5",
     "status": "Draft",
     "theme": "Other",
     "maturity_score": 0.0,
     "social_mention_count": 0,
     "revision_count": 1,
     "code_mention_count": 0,
-    "authors": "Jesse Posner, Jurvis Tan"
+    "authors": "Pol Espinasa, Fabian Jahr"
+  },
+  {
+    "bip_id": "376",
+    "title": "Spending Silent Payment outputs with PSBTs",
+    "status": "Draft",
+    "theme": "Privacy",
+    "maturity_score": 0.0,
+    "social_mention_count": 0,
+    "revision_count": 1,
+    "code_mention_count": 0,
+    "authors": "nymius"
   },
   {
     "bip_id": "393",
@@ -2275,28 +2297,6 @@
     "revision_count": 1,
     "code_mention_count": 4,
     "authors": "Matt Corallo"
-  },
-  {
-    "bip_id": "376",
-    "title": "Spending Silent Payment outputs with PSBTs",
-    "status": "Draft",
-    "theme": "Privacy",
-    "maturity_score": 0.0,
-    "social_mention_count": 0,
-    "revision_count": 1,
-    "code_mention_count": 0,
-    "authors": "nymius"
-  },
-  {
-    "bip_id": "95",
-    "title": "Testnet 5",
-    "status": "Draft",
-    "theme": "Other",
-    "maturity_score": 0.0,
-    "social_mention_count": 0,
-    "revision_count": 1,
-    "code_mention_count": 0,
-    "authors": "Pol Espinasa, Fabian Jahr"
   },
   {
     "bip_id": "451",

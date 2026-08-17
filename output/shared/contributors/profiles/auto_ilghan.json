@@ -47,7 +47,7 @@
   "review_reciprocity": null,
   "hybrid_score": 0.0052,
   "p2016_hybrid_score": 0.0077,
-  "modern_hybrid_score": 0.021,
+  "modern_hybrid_score": 0.0211,
   "impact_score": 0.0,
   "p2016_impact_score": 0.0,
   "modern_impact_score": 1.0,
@@ -66,13 +66,13 @@
   ],
   "expertise_by_source": {
     "discussion": {
-      "Consensus": 0.254,
-      "Script": 0.746
+      "Consensus": 0.25,
+      "Script": 0.75
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.254,
-    "Script": 0.746
+    "Consensus": 0.25,
+    "Script": 0.75
   },
   "p2016_posts": 7.0,
   "modern_posts": 7.0,
@@ -110,7 +110,6 @@
   "social_history": {
     "2025": {
       "covenants": 7,
-      "mempool-fees": 7,
       "script-opcodes": 7,
       "taproot": 7,
       "vaults": 7

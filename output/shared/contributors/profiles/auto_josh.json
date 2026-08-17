@@ -47,42 +47,39 @@
   "review_reciprocity": null,
   "hybrid_score": 0.0052,
   "p2016_hybrid_score": 0.0077,
-  "modern_hybrid_score": 0.021,
+  "modern_hybrid_score": 0.0211,
   "impact_score": 0.0,
   "p2016_impact_score": 0.0,
   "modern_impact_score": 1.0,
   "threads_started": 33.0,
-  "replies_sent": 28.0,
+  "replies_sent": 29.0,
   "ml_threads": 0.0,
   "delving_threads": 33.0,
   "ml_responses": 0.0,
-  "delving_responses": 28.0,
+  "delving_responses": 29.0,
   "first_active": null,
   "last_active": null,
   "dev_type": "Participant",
   "expertise_domains": [
     "Script",
-    "L2",
-    "Wallet"
+    "L2"
   ],
   "expertise_by_source": {
     "discussion": {
-      "L2": 0.257,
-      "Script": 0.514,
-      "Wallet": 0.229
+      "L2": 0.25,
+      "Script": 0.75
     }
   },
   "expertise_domain_scores": {
-    "L2": 0.257,
-    "Script": 0.514,
-    "Wallet": 0.229
+    "L2": 0.25,
+    "Script": 0.75
   },
-  "p2016_posts": 61.0,
-  "modern_posts": 61.0,
+  "p2016_posts": 62.0,
+  "modern_posts": 62.0,
   "p2016_ml_posts": 0.0,
-  "p2016_delving_posts": 61.0,
+  "p2016_delving_posts": 62.0,
   "modern_ml_posts": 0.0,
-  "modern_delving_posts": 61.0,
+  "modern_delving_posts": 62.0,
   "is_engineer": false,
   "is_reviewer": false,
   "is_researcher": true,
@@ -106,9 +103,9 @@
   },
   "last_message": {
     "source": "delving",
-    "subject": "A philosophical take on \"expiry\"",
-    "date": "2026-07-17",
-    "link": "https://delvingbitcoin.org/t/a-philosophical-take-on-expiry/2726/1"
+    "subject": "Re: Expiring HTLCs without free relay",
+    "date": "2026-08-11",
+    "link": "https://delvingbitcoin.org/t/expiring-htlcs-without-free-relay/2663/6"
   },
   "social_history": {
     "2025": {
@@ -124,12 +121,12 @@
     "2026": {
       "bip-process": 11,
       "other": 6,
-      "covenants": 14,
+      "covenants": 15,
       "lightning": 11,
-      "mempool-fees": 13,
+      "mempool-fees": 14,
       "multisig-threshold": 11,
-      "script-opcodes": 15,
-      "security": 14,
+      "script-opcodes": 16,
+      "security": 15,
       "taproot": 2
     }
   }

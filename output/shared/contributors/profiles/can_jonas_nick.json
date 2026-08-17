@@ -50,7 +50,7 @@
   "tier1_reviews_count": 337.0,
   "tier2_reviews_count": 61.0,
   "p2016_reviews_count": 383.0,
-  "modern_reviews_count": 94.0,
+  "modern_reviews_count": 91.0,
   "first_review_date": "2015-03-11T23:42:40",
   "last_review_date": "2026-07-22T19:30:13",
   "prs_authored": 112.0,
@@ -59,20 +59,20 @@
   "avg_pr_ack_velocity_days": 8.94121495627572,
   "avg_concept_lead_time_days": 11.727422839506172,
   "review_reciprocity": 3.4285714285714284,
-  "hybrid_score": 1.4091,
-  "p2016_hybrid_score": 1.4587,
-  "modern_hybrid_score": 0.6499,
+  "hybrid_score": 1.409,
+  "p2016_hybrid_score": 1.4585,
+  "modern_hybrid_score": 0.648,
   "impact_score": 57.0,
   "p2016_impact_score": 58.0,
   "modern_impact_score": 32.0,
-  "threads_started": 15.0,
+  "threads_started": 17.0,
   "replies_sent": 51.0,
   "ml_threads": 7.0,
-  "delving_threads": 8.0,
+  "delving_threads": 10.0,
   "ml_responses": 48.0,
   "delving_responses": 3.0,
   "first_active": "2015-06-14T12:45:48",
-  "last_active": "2026-08-10T03:08:39",
+  "last_active": null,
   "dev_type": "Protocol Designer",
   "expertise_domains": [
     "Infrastructure",
@@ -89,29 +89,29 @@
       "Wallet": 0.016
     },
     "discussion": {
-      "Consensus": 0.264,
-      "Cryptography": 0.358,
-      "Wallet": 0.377
+      "Consensus": 0.255,
+      "Cryptography": 0.382,
+      "Wallet": 0.364
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.3029,
-    "Cryptography": 0.0716,
-    "Infrastructure": 0.5453,
-    "Wallet": 0.0802
+    "Consensus": 0.3009,
+    "Cryptography": 0.0764,
+    "Infrastructure": 0.5451,
+    "Wallet": 0.0776
   },
-  "p2016_posts": 65.0,
-  "modern_posts": 37.0,
+  "p2016_posts": 67.0,
+  "modern_posts": 39.0,
   "p2016_ml_posts": 54.0,
-  "p2016_delving_posts": 11.0,
+  "p2016_delving_posts": 13.0,
   "modern_ml_posts": 26.0,
-  "modern_delving_posts": 11.0,
+  "modern_delving_posts": 13.0,
   "is_engineer": true,
   "is_reviewer": true,
   "is_researcher": true,
   "is_bip_author": true,
   "global_first_active": "2015-03-11T23:42:40",
-  "global_last_active": "2026-08-10T03:08:39",
+  "global_last_active": "2026-07-22T19:30:13",
   "github_location": null,
   "github_company": null,
   "github_bio": "GPG 36C7 1A37 C9D9 88BD E825  08D9 B1A7 0E4F 8DCD 0366",
@@ -213,10 +213,10 @@
     "link": "https://gnusha.org/pi/bitcoindev/557DBDCC.5040106@student.ethz.ch"
   },
   "last_message": {
-    "source": "mailing_list",
-    "subject": "Re: [bitcoindev] Motion to remove Luke Dashjr from BIP Editors",
-    "date": "2026-08-10",
-    "link": "https://gnusha.org/pi/bitcoindev/cb930bf6-985c-47f1-bf99-0bc9ebd650b9@gmail.com"
+    "source": "delving",
+    "subject": "Re: Libshrincs: A C implementation with a machine-checked security proof",
+    "date": "2026-08-11",
+    "link": "https://delvingbitcoin.org/t/libshrincs-a-c-implementation-with-a-machine-checked-security-proof/2795/2"
   },
   "social_history": {
     "2015": {
@@ -269,7 +269,7 @@
     "2026": {
       "other": 3,
       "covenants": 4,
-      "quantum": 8,
+      "quantum": 10,
       "script-opcodes": 4,
       "taproot": 4
     }

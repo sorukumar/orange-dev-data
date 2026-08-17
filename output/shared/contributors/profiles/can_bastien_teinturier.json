@@ -58,15 +58,15 @@
   "avg_concept_lead_time_days": 0.38824652777777774,
   "review_reciprocity": 7.4,
   "hybrid_score": 0.6448,
-  "p2016_hybrid_score": 0.6701,
-  "modern_hybrid_score": 0.5023,
+  "p2016_hybrid_score": 0.67,
+  "modern_hybrid_score": 0.5025,
   "impact_score": 32.0,
   "p2016_impact_score": 33.0,
   "modern_impact_score": 26.0,
-  "threads_started": 28.0,
+  "threads_started": 29.0,
   "replies_sent": 60.0,
   "ml_threads": 1.0,
-  "delving_threads": 27.0,
+  "delving_threads": 28.0,
   "ml_responses": 21.0,
   "delving_responses": 39.0,
   "first_active": "2020-04-22T03:55:42",
@@ -86,24 +86,22 @@
       "Wallet": 0.333
     },
     "discussion": {
-      "Consensus": 0.07,
-      "L2": 0.535,
-      "Mempool": 0.394
+      "L2": 0.569,
+      "Mempool": 0.431
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.014,
-    "Infrastructure": 0.7002,
-    "L2": 0.107,
-    "Mempool": 0.0788,
+    "Infrastructure": 0.7001,
+    "L2": 0.1138,
+    "Mempool": 0.0862,
     "Wallet": 0.0999
   },
-  "p2016_posts": 88.0,
-  "modern_posts": 70.0,
+  "p2016_posts": 89.0,
+  "modern_posts": 71.0,
   "p2016_ml_posts": 22.0,
-  "p2016_delving_posts": 66.0,
+  "p2016_delving_posts": 67.0,
   "modern_ml_posts": 4.0,
-  "modern_delving_posts": 66.0,
+  "modern_delving_posts": 67.0,
   "is_engineer": true,
   "is_reviewer": true,
   "is_researcher": true,
@@ -152,9 +150,9 @@
   },
   "last_message": {
     "source": "delving",
-    "subject": "Re: Onion Message Jamming in the Lightning Network",
-    "date": "2026-04-14",
-    "link": "https://delvingbitcoin.org/t/onion-message-jamming-in-the-lightning-network/2414/3"
+    "subject": "Disclosure: LND doesn't wait for enough confirmations when closing channels",
+    "date": "2026-08-13",
+    "link": "https://delvingbitcoin.org/t/disclosure-lnd-doesnt-wait-for-enough-confirmations-when-closing-channels/2800/1"
   },
   "social_history": {
     "2020": {
@@ -202,6 +200,7 @@
       "other": 1,
       "lightning": 1,
       "privacy": 1,
+      "security": 1,
       "taproot": 1
     }
   }
