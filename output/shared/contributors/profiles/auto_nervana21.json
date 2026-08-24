@@ -23,66 +23,74 @@
   "last_commit": "2026-05-21T18:26:26",
   "p2016_authored_commits": 4.0,
   "modern_authored_commits": 4.0,
-  "co_authored_commits": 0.0,
+  "co_authored_commits": 2.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
   "first_bip_date": null,
   "last_bip_date": null,
-  "avg_review_latency_days": 161.1327999874875,
-  "reviews_count": 36.0,
-  "avg_approval_latency_days": 142.46161436899862,
-  "approvals_count": 36.0,
-  "tier1_reviews_count": 36.0,
+  "avg_review_latency_days": 151.23216171472103,
+  "reviews_count": 37.0,
+  "avg_approval_latency_days": 137.48590153769842,
+  "approvals_count": 37.0,
+  "tier1_reviews_count": 37.0,
   "tier2_reviews_count": 0.0,
-  "p2016_reviews_count": 36.0,
-  "modern_reviews_count": 36.0,
+  "p2016_reviews_count": 37.0,
+  "modern_reviews_count": 37.0,
   "first_review_date": "2025-07-16T23:05:27",
-  "last_review_date": "2026-08-16T23:28:53",
-  "prs_authored": 11.0,
+  "last_review_date": "2026-08-23T17:15:37",
+  "prs_authored": 12.0,
   "tier1_prs_authored": 10.0,
-  "tier2_prs_authored": 1.0,
+  "tier2_prs_authored": 2.0,
   "avg_pr_ack_velocity_days": 4.477141203703704,
   "avg_concept_lead_time_days": 17.843697916666667,
-  "review_reciprocity": 3.272727272727273,
-  "hybrid_score": 0.262,
-  "p2016_hybrid_score": 0.262,
-  "modern_hybrid_score": 0.262,
+  "review_reciprocity": 3.0833333333333335,
+  "hybrid_score": 0.2709,
+  "p2016_hybrid_score": 0.275,
+  "modern_hybrid_score": 0.2988,
   "impact_score": 15.0,
   "p2016_impact_score": 15.0,
-  "modern_impact_score": 15.0,
-  "threads_started": 0.0,
-  "replies_sent": 0.0,
-  "ml_threads": 0.0,
+  "modern_impact_score": 16.0,
+  "threads_started": 1.0,
+  "replies_sent": 1.0,
+  "ml_threads": 1.0,
   "delving_threads": 0.0,
-  "ml_responses": 0.0,
+  "ml_responses": 1.0,
   "delving_responses": 0.0,
-  "first_active": null,
-  "last_active": null,
+  "first_active": "2026-08-18T03:00:01",
+  "last_active": "2026-08-21T15:29:23",
   "dev_type": "Builder",
   "expertise_domains": [
-    "Infrastructure"
+    "Infrastructure",
+    "Mempool",
+    "Wallet"
   ],
   "expertise_by_source": {
     "code": {
       "Infrastructure": 1.0
+    },
+    "discussion": {
+      "Mempool": 0.667,
+      "Wallet": 0.333
     }
   },
   "expertise_domain_scores": {
-    "Infrastructure": 1.0
+    "Infrastructure": 0.6,
+    "Mempool": 0.2668,
+    "Wallet": 0.1332
   },
-  "p2016_posts": 0.0,
-  "modern_posts": 0.0,
-  "p2016_ml_posts": 0.0,
+  "p2016_posts": 2.0,
+  "modern_posts": 2.0,
+  "p2016_ml_posts": 2.0,
   "p2016_delving_posts": 0.0,
-  "modern_ml_posts": 0.0,
+  "modern_ml_posts": 2.0,
   "modern_delving_posts": 0.0,
   "is_engineer": true,
   "is_reviewer": true,
-  "is_researcher": false,
+  "is_researcher": true,
   "is_bip_author": false,
   "global_first_active": "2025-05-20T19:02:54",
-  "global_last_active": "2026-08-16T23:28:53",
+  "global_last_active": "2026-08-23T17:15:37",
   "github_location": "Earth",
   "github_company": null,
   "github_bio": "Bitcoin. Rust.\r\nGPG: 4B2D601F1E63068E",
@@ -101,6 +109,25 @@
       "Node & RPC": 2.0,
       "Tests": 1.0,
       "Utilities": 1.0
+    }
+  },
+  "first_message": {
+    "source": "mailing_list",
+    "subject": "[bitcoindev] [BIP Proposal] Anti-Fee-Sniping with LockTime",
+    "date": "2026-08-18",
+    "link": "https://gnusha.org/pi/bitcoindev/wWGWjMw9TI22vp4VzCm4xJJS3IGA1UhndMKynUkB04BqeoRjhe-QbDbJU-GMQq0nnOnXuB__u8KcdIcxU5i8Cy9pbTbtJ7Hi583FzLVojek=@pm.me"
+  },
+  "last_message": {
+    "source": "mailing_list",
+    "subject": "Re: [bitcoindev] Re: [BIP Proposal] Anti-Fee-Sniping with LockTime",
+    "date": "2026-08-21",
+    "link": "https://gnusha.org/pi/bitcoindev/WCgkJmyQ8exgIWF_AXmaycRFvGbLtOwTExlanZ3qkAS1to6Ecb4VduhTFqC42Bc3XE9AIPvpx30Ebe5Vl2NeKarBMUzw8syjsAzgxIZOVso=@pm.me"
+  },
+  "social_history": {
+    "2026": {
+      "mempool-fees": 1,
+      "other": 1,
+      "wallet-keys": 1
     }
   }
 }

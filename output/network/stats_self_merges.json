@@ -1,6 +1,17 @@
 {
-  "generated_at": "2026-08-17T13:47:23.741902+00:00",
+  "generated_at": "2026-08-24T15:23:28.647532+00:00",
   "self_merges": [
+    {
+      "maintainer_id": "can_michael_ford",
+      "maintainer_name": "Michael Ford",
+      "repository": "bitcoin/bitcoin",
+      "pr_number": 36051,
+      "url": "https://github.com/bitcoin/bitcoin/pull/36051",
+      "title": "ci: use ruff 0.16.x",
+      "merged_at": "2026-08-21T12:40:29+00:00",
+      "ack_count": 3,
+      "category": "Administrative Merge"
+    },
     {
       "maintainer_id": "can_michael_ford",
       "maintainer_name": "Michael Ford",
@@ -28281,6 +28292,17 @@
       "merged_at": null,
       "ack_count": 2,
       "category": "Light Review"
+    },
+    {
+      "maintainer_id": "can_michael_ford",
+      "maintainer_name": "Michael Ford",
+      "repository": "bitcoin-core/gui",
+      "pr_number": 36051,
+      "url": "https://github.com/bitcoin-core/gui/pull/36051",
+      "title": null,
+      "merged_at": null,
+      "ack_count": 0,
+      "category": "Ninja Merge"
     },
     {
       "maintainer_id": "can_michael_ford",

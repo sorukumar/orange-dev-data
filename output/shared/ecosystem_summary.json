@@ -1,37 +1,37 @@
 {
-  "generated_at": "2026-08-16T08:46:49.109553",
+  "generated_at": "2026-08-23T10:22:56.616216",
   "groups": {
-    "committers": 1254,
-    "reviewers": 5187,
-    "research": 1684,
+    "committers": 1258,
+    "reviewers": 5196,
+    "research": 1686,
     "standards": 159,
-    "total_active": 6573,
-    "total_registry": 7740
+    "total_active": 6584,
+    "total_registry": 7752
   },
   "venn_4": {
     "0001": 13,
-    "0010": 1199,
+    "0010": 1200,
     "0011": 24,
-    "0100": 3900,
+    "0100": 3906,
     "0101": 6,
     "0110": 141,
     "0111": 36,
-    "1000": 137,
+    "1000": 138,
     "1001": 1,
     "1010": 11,
     "1011": 1,
-    "1100": 830,
+    "1100": 832,
     "1101": 2,
-    "1110": 196,
+    "1110": 197,
     "1111": 76
   },
   "venn_summary": {
-    "code_only": 137,
-    "review_only": 3900,
-    "research_only": 1199,
+    "code_only": 138,
+    "review_only": 3906,
+    "research_only": 1200,
     "standards_only": 13,
     "all_four": 76,
-    "code_review": 830,
+    "code_review": 832,
     "review_research": 141,
     "research_standards": 24
   },
@@ -44,51 +44,51 @@
     "name": "cyb3ralbert",
     "uuid": "auto_cyb3ralbert",
     "github_login": "cyb3ralbert",
-    "description": "First-time core contributor recently merged 3 commits."
+    "description": "First-time core contributor recently merged 4 commits."
   },
   "onboarding": {
-    "new_coders_90d": 22,
-    "new_coders_7d": 2,
-    "new_discussants_90d": 70,
-    "new_discussants_7d": 6,
+    "new_coders_90d": 24,
+    "new_coders_7d": 4,
+    "new_discussants_90d": 68,
+    "new_discussants_7d": 2,
     "window_days": 90
   },
   "prs": {
-    "total_merged": 18079,
-    "merged_30d": 154,
-    "merged_prev_30d": 120,
-    "merged_7d": 38,
-    "merged_prev_7d": 49
+    "total_merged": 18122,
+    "merged_30d": 160,
+    "merged_prev_30d": 129,
+    "merged_7d": 51,
+    "merged_prev_7d": 30
   },
   "commits": {
-    "commits_30d": 776,
-    "commits_prev_30d": 895,
-    "commits_7d": 122,
-    "commits_prev_7d": 268
+    "commits_30d": 832,
+    "commits_prev_30d": 932,
+    "commits_7d": 149,
+    "commits_prev_7d": 149
   },
   "bips": {
     "total": 210,
-    "active_recently": 98
+    "active_recently": 99
   },
   "discussion_pulse": {
     "topics": [
       {
         "category": "quantum",
         "label": "Quantum",
-        "count": 108,
-        "share": 16.1
+        "count": 97,
+        "share": 15.1
       },
       {
         "category": "mining",
         "label": "Mining",
-        "count": 94,
-        "share": 14.1
+        "count": 93,
+        "share": 14.5
       },
       {
         "category": "taproot",
         "label": "Taproot",
-        "count": 77,
-        "share": 11.5
+        "count": 73,
+        "share": 11.4
       }
     ],
     "top_bips": [
@@ -107,7 +107,7 @@
       {
         "bip_id": "39",
         "title": "Mnemonic code for generating deterministic keys",
-        "mentions": 222,
+        "mentions": 224,
         "theme": "Wallet & Keys"
       }
     ],

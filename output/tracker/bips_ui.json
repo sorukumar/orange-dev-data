@@ -18,7 +18,7 @@
     "maturity_score": 0.55,
     "social_mention_count": 277,
     "revision_count": 59,
-    "code_mention_count": 112,
+    "code_mention_count": 122,
     "authors": "Pieter Wuille"
   },
   {
@@ -27,7 +27,7 @@
     "status": "Deployed",
     "theme": "Wallet & Keys",
     "maturity_score": 0.52,
-    "social_mention_count": 222,
+    "social_mention_count": 224,
     "revision_count": 86,
     "code_mention_count": 3,
     "authors": "Marek Palatinus, Pavol Rusnak, Aaron Voisine, Sean Bowe"
@@ -51,7 +51,7 @@
     "maturity_score": 0.39,
     "social_mention_count": 107,
     "revision_count": 111,
-    "code_mention_count": 46,
+    "code_mention_count": 50,
     "authors": "Ava Chow"
   },
   {
@@ -302,7 +302,7 @@
     "status": "Complete",
     "theme": "Other",
     "maturity_score": 0.12,
-    "social_mention_count": 17,
+    "social_mention_count": 19,
     "revision_count": 47,
     "code_mention_count": 0,
     "authors": "Shaolin Fry, Luke Dashjr"
@@ -346,7 +346,7 @@
     "status": "Deployed",
     "theme": "Other",
     "maturity_score": 0.12,
-    "social_mention_count": 37,
+    "social_mention_count": 40,
     "revision_count": 31,
     "code_mention_count": 0,
     "authors": "Mike Caldwell, Aaron Voisine"
@@ -423,10 +423,21 @@
     "status": "Draft",
     "theme": "Consensus & Soft Forks",
     "maturity_score": 0.1,
-    "social_mention_count": 14,
+    "social_mention_count": 13,
     "revision_count": 38,
     "code_mention_count": 0,
     "authors": "Paul Sztorc, CryptAxe"
+  },
+  {
+    "bip_id": "85",
+    "title": "Deterministic Entropy From BIP32 Keychains",
+    "status": "Deployed",
+    "theme": "Other",
+    "maturity_score": 0.1,
+    "social_mention_count": 9,
+    "revision_count": 42,
+    "code_mention_count": 0,
+    "authors": "Ethan Kosakovsky, Aneesh Karve"
   },
   {
     "bip_id": "62",
@@ -449,17 +460,6 @@
     "revision_count": 36,
     "code_mention_count": 58,
     "authors": "Mark Friedenbach, BtcDrak, Nicolas Dorier, kinoshitajona"
-  },
-  {
-    "bip_id": "85",
-    "title": "Deterministic Entropy From BIP32 Keychains",
-    "status": "Deployed",
-    "theme": "Other",
-    "maturity_score": 0.09,
-    "social_mention_count": 9,
-    "revision_count": 40,
-    "code_mention_count": 0,
-    "authors": "Ethan Kosakovsky, Aneesh Karve"
   },
   {
     "bip_id": "67",
@@ -645,7 +645,7 @@
     "maturity_score": 0.07,
     "social_mention_count": 0,
     "revision_count": 35,
-    "code_mention_count": 0,
+    "code_mention_count": 8,
     "authors": "Salvatore Ingala"
   },
   {
@@ -726,6 +726,17 @@
     "authors": "Robert Spigler"
   },
   {
+    "bip_id": "380",
+    "title": "Output Script Descriptors General Operation",
+    "status": "Deployed",
+    "theme": "Script & Smart Contracts",
+    "maturity_score": 0.06,
+    "social_mention_count": 2,
+    "revision_count": 26,
+    "code_mention_count": 4,
+    "authors": "Pieter Wuille, Ava Chow"
+  },
+  {
     "bip_id": "137",
     "title": "Signatures of Messages using Private Keys",
     "status": "Deployed",
@@ -781,17 +792,6 @@
     "authors": "Marco Pontello"
   },
   {
-    "bip_id": "380",
-    "title": "Output Script Descriptors General Operation",
-    "status": "Deployed",
-    "theme": "Script & Smart Contracts",
-    "maturity_score": 0.05,
-    "social_mention_count": 0,
-    "revision_count": 26,
-    "code_mention_count": 4,
-    "authors": "Pieter Wuille, Ava Chow"
-  },
-  {
     "bip_id": "375",
     "title": "Sending Silent Payments with PSBTs",
     "status": "Draft",
@@ -838,11 +838,11 @@
   {
     "bip_id": "351",
     "title": "Private Payments",
-    "status": "Draft",
+    "status": "Closed",
     "theme": "Other",
     "maturity_score": 0.05,
     "social_mention_count": 0,
-    "revision_count": 24,
+    "revision_count": 26,
     "code_mention_count": 0,
     "authors": "Alfred Hodler, Clark Moody"
   },
@@ -1172,7 +1172,7 @@
     "theme": "Other",
     "maturity_score": 0.04,
     "social_mention_count": 0,
-    "revision_count": 19,
+    "revision_count": 20,
     "code_mention_count": 6,
     "authors": "Jonas Nick, Tim Ruffing, Elliott Jin"
   },
@@ -1612,7 +1612,7 @@
     "theme": "Script & Smart Contracts",
     "maturity_score": 0.02,
     "social_mention_count": 0,
-    "revision_count": 10,
+    "revision_count": 11,
     "code_mention_count": 4,
     "authors": "Pieter Wuille, Andrew Poelstra, Sanket Kanjalkar, Antoine Poinsot, Ava Chow"
   },

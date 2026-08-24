@@ -51,35 +51,32 @@
   "impact_score": 0.0,
   "p2016_impact_score": 0.0,
   "modern_impact_score": 0.0,
-  "threads_started": 1.0,
-  "replies_sent": 1.0,
+  "threads_started": 2.0,
+  "replies_sent": 3.0,
   "ml_threads": 0.0,
-  "delving_threads": 1.0,
+  "delving_threads": 2.0,
   "ml_responses": 0.0,
-  "delving_responses": 1.0,
+  "delving_responses": 3.0,
   "first_active": null,
   "last_active": null,
   "dev_type": "Participant",
   "expertise_domains": [
-    "Wallet",
-    "Script"
+    "Wallet"
   ],
   "expertise_by_source": {
     "discussion": {
-      "Script": 0.333,
-      "Wallet": 0.667
+      "Wallet": 1.0
     }
   },
   "expertise_domain_scores": {
-    "Script": 0.333,
-    "Wallet": 0.667
+    "Wallet": 1.0
   },
-  "p2016_posts": 2.0,
-  "modern_posts": 2.0,
+  "p2016_posts": 5.0,
+  "modern_posts": 5.0,
   "p2016_ml_posts": 0.0,
-  "p2016_delving_posts": 2.0,
+  "p2016_delving_posts": 5.0,
   "modern_ml_posts": 0.0,
-  "modern_delving_posts": 2.0,
+  "modern_delving_posts": 5.0,
   "is_engineer": false,
   "is_reviewer": false,
   "is_researcher": false,
@@ -103,15 +100,17 @@
   },
   "last_message": {
     "source": "delving",
-    "subject": "Re: Towards New Self-Custody Best Practices",
-    "date": "2026-08-07",
-    "link": "https://delvingbitcoin.org/t/towards-new-self-custody-best-practices/2768/3"
+    "subject": "Re: Generate truly random seed words using only dice or playing cards",
+    "date": "2026-08-18",
+    "link": "https://delvingbitcoin.org/t/generate-truly-random-seed-words-using-only-dice-or-playing-cards/2814/3"
   },
   "social_history": {
     "2026": {
-      "multisig-threshold": 2,
-      "security": 2,
-      "vaults": 2
+      "multisig-threshold": 3,
+      "security": 3,
+      "taproot": 3,
+      "vaults": 3,
+      "wallet-keys": 5
     }
   }
 }

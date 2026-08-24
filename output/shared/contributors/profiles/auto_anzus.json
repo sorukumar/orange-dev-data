@@ -51,38 +51,38 @@
   "impact_score": 0.0,
   "p2016_impact_score": 0.0,
   "modern_impact_score": 0.0,
-  "threads_started": 4.0,
-  "replies_sent": 0.0,
+  "threads_started": 9.0,
+  "replies_sent": 1.0,
   "ml_threads": 0.0,
-  "delving_threads": 4.0,
+  "delving_threads": 9.0,
   "ml_responses": 0.0,
-  "delving_responses": 0.0,
+  "delving_responses": 1.0,
   "first_active": null,
   "last_active": null,
   "dev_type": "Participant",
   "expertise_domains": [
-    "Cryptography",
+    "Wallet",
     "Script",
-    "Mempool"
+    "Cryptography"
   ],
   "expertise_by_source": {
     "discussion": {
-      "Cryptography": 0.453,
-      "Mempool": 0.219,
-      "Script": 0.328
+      "Cryptography": 0.276,
+      "Script": 0.31,
+      "Wallet": 0.414
     }
   },
   "expertise_domain_scores": {
-    "Cryptography": 0.453,
-    "Mempool": 0.219,
-    "Script": 0.328
+    "Cryptography": 0.276,
+    "Script": 0.31,
+    "Wallet": 0.414
   },
-  "p2016_posts": 4.0,
-  "modern_posts": 4.0,
+  "p2016_posts": 10.0,
+  "modern_posts": 10.0,
   "p2016_ml_posts": 0.0,
-  "p2016_delving_posts": 4.0,
+  "p2016_delving_posts": 10.0,
   "modern_ml_posts": 0.0,
-  "modern_delving_posts": 4.0,
+  "modern_delving_posts": 10.0,
   "is_engineer": false,
   "is_reviewer": false,
   "is_researcher": false,
@@ -106,18 +106,21 @@
   },
   "last_message": {
     "source": "delving",
-    "subject": "Re: Deterministic UTXO consolidation under volatile fee regimes",
-    "date": "2026-08-17",
-    "link": "https://delvingbitcoin.org/t/deterministic-utxo-consolidation-under-volatile-fee-regimes/2257/2"
+    "subject": "Re: Seedroller and keyderiver: cli tools to generate BIP39 seed words and derive BIP380 keys",
+    "date": "2026-08-24",
+    "link": "https://delvingbitcoin.org/t/seedroller-and-keyderiver-cli-tools-to-generate-bip39-seed-words-and-derive-bip380-keys/2822/2"
   },
   "social_history": {
     "2026": {
-      "mempool-fees": 1,
-      "multisig-threshold": 1,
-      "quantum": 2,
-      "security": 1,
-      "vaults": 3,
-      "wallet-keys": 2
+      "mempool-fees": 2,
+      "other": 2,
+      "multisig-threshold": 2,
+      "privacy": 2,
+      "quantum": 3,
+      "security": 2,
+      "taproot": 2,
+      "vaults": 6,
+      "wallet-keys": 7
     }
   }
 }

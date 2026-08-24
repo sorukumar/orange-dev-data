@@ -59,14 +59,14 @@
   "review_reciprocity": null,
   "hybrid_score": 0.3601,
   "p2016_hybrid_score": 0.3666,
-  "modern_hybrid_score": 0.4029,
+  "modern_hybrid_score": 0.4038,
   "impact_score": 19.0,
   "p2016_impact_score": 20.0,
-  "modern_impact_score": 21.0,
-  "threads_started": 5.0,
+  "modern_impact_score": 22.0,
+  "threads_started": 6.0,
   "replies_sent": 16.0,
   "ml_threads": 1.0,
-  "delving_threads": 4.0,
+  "delving_threads": 5.0,
   "ml_responses": 3.0,
   "delving_responses": 13.0,
   "first_active": null,
@@ -82,23 +82,23 @@
       "Network": 1.0
     },
     "discussion": {
-      "Cryptography": 0.235,
-      "Mempool": 0.309,
-      "Privacy": 0.456
+      "Cryptography": 0.242,
+      "Mempool": 0.303,
+      "Privacy": 0.455
     }
   },
   "expertise_domain_scores": {
-    "Cryptography": 0.0671,
-    "Mempool": 0.0883,
+    "Cryptography": 0.0691,
+    "Mempool": 0.0866,
     "Network": 0.7143,
-    "Privacy": 0.1303
+    "Privacy": 0.13
   },
-  "p2016_posts": 21.0,
-  "modern_posts": 21.0,
+  "p2016_posts": 22.0,
+  "modern_posts": 22.0,
   "p2016_ml_posts": 4.0,
-  "p2016_delving_posts": 17.0,
+  "p2016_delving_posts": 18.0,
   "modern_ml_posts": 4.0,
-  "modern_delving_posts": 17.0,
+  "modern_delving_posts": 18.0,
   "is_engineer": false,
   "is_reviewer": false,
   "is_researcher": true,
@@ -131,9 +131,9 @@
   },
   "last_message": {
     "source": "delving",
-    "subject": "Re: Disposing of \"dust attack\" UTXOs",
-    "date": "2026-05-16",
-    "link": "https://delvingbitcoin.org/t/disposing-of-dust-attack-utxos/2215/35"
+    "subject": "Seedroller and keyderiver: cli tools to generate BIP39 seed words and derive BIP380 keys",
+    "date": "2026-08-22",
+    "link": "https://delvingbitcoin.org/t/seedroller-and-keyderiver-cli-tools-to-generate-bip39-seed-words-and-derive-bip380-keys/2822/1"
   },
   "social_history": {
     "2026": {
@@ -142,7 +142,8 @@
       "privacy": 17,
       "script-opcodes": 17,
       "signatures-sighash": 18,
-      "testing-devtools": 17
+      "testing-devtools": 17,
+      "wallet-keys": 1
     }
   }
 }

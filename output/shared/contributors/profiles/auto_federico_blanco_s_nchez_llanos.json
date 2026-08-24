@@ -51,32 +51,35 @@
   "impact_score": 0.0,
   "p2016_impact_score": 0.0,
   "modern_impact_score": 0.0,
-  "threads_started": 2.0,
+  "threads_started": 3.0,
   "replies_sent": 0.0,
   "ml_threads": 0.0,
-  "delving_threads": 2.0,
+  "delving_threads": 3.0,
   "ml_responses": 0.0,
   "delving_responses": 0.0,
   "first_active": null,
   "last_active": null,
   "dev_type": "Participant",
   "expertise_domains": [
-    "Mempool"
+    "Mempool",
+    "Privacy"
   ],
   "expertise_by_source": {
     "discussion": {
-      "Mempool": 1.0
+      "Mempool": 0.67,
+      "Privacy": 0.33
     }
   },
   "expertise_domain_scores": {
-    "Mempool": 1.0
+    "Mempool": 0.67,
+    "Privacy": 0.33
   },
-  "p2016_posts": 2.0,
-  "modern_posts": 2.0,
+  "p2016_posts": 3.0,
+  "modern_posts": 3.0,
   "p2016_ml_posts": 0.0,
-  "p2016_delving_posts": 2.0,
+  "p2016_delving_posts": 3.0,
   "modern_ml_posts": 0.0,
-  "modern_delving_posts": 2.0,
+  "modern_delving_posts": 3.0,
   "is_engineer": false,
   "is_reviewer": false,
   "is_researcher": false,
@@ -102,11 +105,12 @@
     "source": "delving",
     "subject": "Re: Deterministic UTXO consolidation under volatile fee regimes",
     "date": "2026-08-17",
-    "link": "https://delvingbitcoin.org/t/deterministic-utxo-consolidation-under-volatile-fee-regimes/2257/3"
+    "link": "https://delvingbitcoin.org/t/deterministic-utxo-consolidation-under-volatile-fee-regimes/2257/5"
   },
   "social_history": {
     "2026": {
-      "mempool-fees": 2
+      "mempool-fees": 3,
+      "privacy": 3
     }
   }
 }
