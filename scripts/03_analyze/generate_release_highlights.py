@@ -31,7 +31,7 @@ for k, v in os.environ.items():
 if not api_keys:
     print("Warning: No GEMINI_API_KEY found in .env")
 
-TARGET_MODEL = 'gemini-2.5-flash'
+TARGET_MODEL = os.environ.get('GEMINI_TARGET_MODEL', 'gemini-1.5-flash')
 
 def load_cache(path):
     if os.path.exists(path):

@@ -45,41 +45,41 @@
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": null,
-  "hybrid_score": 0.0052,
+  "hybrid_score": 0.0051,
   "p2016_hybrid_score": 0.0077,
   "modern_hybrid_score": 0.021,
   "impact_score": 0.0,
   "p2016_impact_score": 0.0,
   "modern_impact_score": 1.0,
-  "threads_started": 9.0,
-  "replies_sent": 14.0,
+  "threads_started": 10.0,
+  "replies_sent": 15.0,
   "ml_threads": 0.0,
-  "delving_threads": 9.0,
+  "delving_threads": 10.0,
   "ml_responses": 0.0,
-  "delving_responses": 14.0,
+  "delving_responses": 15.0,
   "first_active": null,
   "last_active": null,
   "dev_type": "Participant",
   "expertise_domains": [
-    "Script",
-    "Mining"
+    "Mining",
+    "Script"
   ],
   "expertise_by_source": {
     "discussion": {
-      "Mining": 0.441,
-      "Script": 0.559
+      "Mining": 0.538,
+      "Script": 0.462
     }
   },
   "expertise_domain_scores": {
-    "Mining": 0.441,
-    "Script": 0.559
+    "Mining": 0.538,
+    "Script": 0.462
   },
-  "p2016_posts": 23.0,
-  "modern_posts": 23.0,
+  "p2016_posts": 25.0,
+  "modern_posts": 25.0,
   "p2016_ml_posts": 0.0,
-  "p2016_delving_posts": 23.0,
+  "p2016_delving_posts": 25.0,
   "modern_ml_posts": 0.0,
-  "modern_delving_posts": 23.0,
+  "modern_delving_posts": 25.0,
   "is_engineer": false,
   "is_reviewer": false,
   "is_researcher": true,
@@ -103,9 +103,9 @@
   },
   "last_message": {
     "source": "delving",
-    "subject": "Re: Add comparison to BIP-118 in BIP-448",
-    "date": "2026-08-13",
-    "link": "https://delvingbitcoin.org/t/add-comparison-to-bip-118-in-bip-448/2799/6"
+    "subject": "Re: Pragmatic definition of consensus for light clients",
+    "date": "2026-08-26",
+    "link": "https://delvingbitcoin.org/t/pragmatic-definition-of-consensus-for-light-clients/2842/5"
   },
   "social_history": {
     "2025": {
@@ -117,14 +117,14 @@
     },
     "2026": {
       "bip-process": 4,
-      "bitvm": 3,
+      "other": 33,
       "covenants": 8,
-      "other": 31,
       "mining": 3,
       "multisig-threshold": 5,
       "script-opcodes": 4,
       "sidechains-drivechain": 1,
-      "tokens-runes": 4
+      "tokens-runes": 4,
+      "utxo-sync": 5
     }
   }
 }

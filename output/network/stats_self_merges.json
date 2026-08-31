@@ -1,6 +1,17 @@
 {
-  "generated_at": "2026-08-24T15:23:28.647532+00:00",
+  "generated_at": "2026-08-31T15:41:06.801647+00:00",
   "self_merges": [
+    {
+      "maintainer_id": "can_hennadii_stepanov",
+      "maintainer_name": "Hennadii Stepanov",
+      "repository": "bitcoin/bitcoin",
+      "pr_number": 36107,
+      "url": "https://github.com/bitcoin/bitcoin/pull/36107",
+      "title": "iwyu: Fix warnings in `src/init` and treat them as errors",
+      "merged_at": "2026-08-28T11:47:23+00:00",
+      "ack_count": 1,
+      "category": "Light Review"
+    },
     {
       "maintainer_id": "can_michael_ford",
       "maintainer_name": "Michael Ford",
@@ -28292,6 +28303,17 @@
       "merged_at": null,
       "ack_count": 2,
       "category": "Light Review"
+    },
+    {
+      "maintainer_id": "can_hennadii_stepanov",
+      "maintainer_name": "Hennadii Stepanov",
+      "repository": "bitcoin-core/gui",
+      "pr_number": 36107,
+      "url": "https://github.com/bitcoin-core/gui/pull/36107",
+      "title": null,
+      "merged_at": null,
+      "ack_count": 0,
+      "category": "Ninja Merge"
     },
     {
       "maintainer_id": "can_michael_ford",

@@ -42,7 +42,7 @@
   "first_commit": "2011-04-25T11:23:29",
   "last_commit": "2026-07-23T08:47:03",
   "p2016_authored_commits": 1413.0,
-  "modern_authored_commits": 290.0,
+  "modern_authored_commits": 287.0,
   "co_authored_commits": 154.0,
   "bips_authored": 27.0,
   "p2016_bips_authored": 17.0,
@@ -56,7 +56,7 @@
   "tier1_reviews_count": 4621.0,
   "tier2_reviews_count": 220.0,
   "p2016_reviews_count": 3228.0,
-  "modern_reviews_count": 499.0,
+  "modern_reviews_count": 492.0,
   "first_review_date": "2011-04-23T14:06:52",
   "last_review_date": "2026-08-22T14:45:44",
   "prs_authored": 1127.0,
@@ -67,16 +67,16 @@
   "review_reciprocity": 4.208518189884649,
   "hybrid_score": 3.8402,
   "p2016_hybrid_score": 2.5726,
-  "modern_hybrid_score": 1.5429,
+  "modern_hybrid_score": 1.5426,
   "impact_score": 90.0,
   "p2016_impact_score": 79.0,
   "modern_impact_score": 60.0,
-  "threads_started": 153.0,
-  "replies_sent": 578.0,
+  "threads_started": 154.0,
+  "replies_sent": 581.0,
   "ml_threads": 67.0,
-  "delving_threads": 86.0,
+  "delving_threads": 87.0,
   "ml_responses": 458.0,
-  "delving_responses": 120.0,
+  "delving_responses": 123.0,
   "first_active": "2011-06-17T05:31:25",
   "last_active": null,
   "dev_type": "Protocol Designer",
@@ -116,12 +116,12 @@
     "Script": 0.1466,
     "Wallet": 0.0236
   },
-  "p2016_posts": 386.0,
-  "modern_posts": 234.0,
+  "p2016_posts": 390.0,
+  "modern_posts": 238.0,
   "p2016_ml_posts": 180.0,
-  "p2016_delving_posts": 206.0,
+  "p2016_delving_posts": 210.0,
   "modern_ml_posts": 28.0,
-  "modern_delving_posts": 206.0,
+  "modern_delving_posts": 210.0,
   "is_engineer": true,
   "is_reviewer": true,
   "is_researcher": true,
@@ -549,8 +549,8 @@
   "last_message": {
     "source": "delving",
     "subject": "Re: Segwit commitment to post-quantum witness data?",
-    "date": "2026-08-20",
-    "link": "https://delvingbitcoin.org/t/segwit-commitment-to-post-quantum-witness-data/2702/12"
+    "date": "2026-08-26",
+    "link": "https://delvingbitcoin.org/t/segwit-commitment-to-post-quantum-witness-data/2702/14"
   },
   "social_history": {
     "2011": {
@@ -560,30 +560,30 @@
       "script-opcodes": 4
     },
     "2012": {
-      "other": 53,
+      "other": 44,
       "mempool-fees": 2,
       "mining": 11,
+      "p2p-network": 11,
       "script-opcodes": 4,
-      "segwit": 1,
-      "wallet-keys": 2
+      "segwit": 1
     },
     "2013": {
       "other": 47,
       "hard-fork-block-size": 4,
       "mempool-fees": 3,
       "mining": 6,
+      "p2p-network": 4,
       "script-opcodes": 2,
-      "taproot": 2,
-      "wallet-keys": 4
+      "taproot": 2
     },
     "2014": {
-      "other": 53,
+      "other": 64,
       "mempool-fees": 12,
       "mining": 5,
+      "p2p-network": 1,
       "script-opcodes": 19,
       "segwit": 9,
-      "taproot": 1,
-      "wallet-keys": 12
+      "taproot": 1
     },
     "2015": {
       "other": 85,
@@ -595,92 +595,94 @@
       "taproot": 1
     },
     "2016": {
-      "other": 19,
+      "other": 15,
       "hard-fork-block-size": 1,
       "mempool-fees": 2,
+      "p2p-network": 5,
       "script-opcodes": 4,
       "segwit": 5,
-      "taproot": 1,
-      "wallet-keys": 1
+      "taproot": 1
     },
     "2017": {
-      "other": 18,
+      "other": 16,
       "hard-fork-block-size": 1,
       "mining": 1,
+      "p2p-network": 2,
       "segwit": 6,
       "taproot": 1
     },
     "2018": {
-      "other": 20,
+      "other": 28,
       "mempool-fees": 2,
+      "p2p-network": 3,
       "script-opcodes": 1,
       "segwit": 3,
-      "taproot": 7,
-      "wallet-keys": 11
+      "taproot": 7
     },
     "2019": {
       "mining": 1,
-      "other": 6,
+      "other": 5,
+      "p2p-network": 1,
       "script-opcodes": 5,
       "segwit": 8,
       "taproot": 11
     },
     "2020": {
       "mining": 2,
-      "other": 10,
+      "other": 11,
       "segwit": 8,
-      "taproot": 7,
-      "wallet-keys": 1
+      "taproot": 7
     },
     "2021": {
       "other": 17,
       "mempool-fees": 3,
       "mining": 1,
+      "p2p-network": 3,
       "segwit": 8,
-      "taproot": 7,
-      "wallet-keys": 3
+      "taproot": 7
     },
     "2022": {
-      "other": 8,
+      "other": 5,
       "mempool-fees": 2,
+      "p2p-network": 3,
       "taproot": 2
     },
     "2023": {
-      "other": 13,
+      "other": 14,
       "mempool-fees": 24,
       "mining": 1,
+      "p2p-network": 3,
       "script-opcodes": 6,
-      "taproot": 6,
-      "wallet-keys": 4
+      "taproot": 6
     },
     "2024": {
       "other": 40,
       "hard-fork-block-size": 4,
       "mempool-fees": 25,
       "mining": 14,
+      "p2p-network": 5,
       "script-opcodes": 7,
       "segwit": 1,
-      "taproot": 4,
-      "wallet-keys": 5
+      "taproot": 4
     },
     "2025": {
-      "other": 83,
+      "other": 79,
       "hard-fork-block-size": 9,
       "mempool-fees": 61,
       "mining": 67,
+      "p2p-network": 6,
       "script-opcodes": 10,
-      "taproot": 11,
-      "wallet-keys": 2
+      "taproot": 11
     },
     "2026": {
-      "other": 108,
-      "hard-fork-block-size": 13,
-      "mempool-fees": 21,
+      "other": 129,
+      "hard-fork-block-size": 14,
+      "mempool-fees": 23,
       "mining": 10,
+      "p2p-network": 9,
       "script-opcodes": 11,
-      "segwit": 16,
-      "taproot": 27,
-      "wallet-keys": 11
+      "segwit": 17,
+      "taproot": 34
     }
   }
 }

@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-23T10:22:56.616216",
+  "generated_at": "2026-08-30T10:40:30.079920",
   "groups": {
-    "committers": 1258,
-    "reviewers": 5196,
-    "research": 1686,
+    "committers": 1260,
+    "reviewers": 5207,
+    "research": 1689,
     "standards": 159,
-    "total_active": 6584,
-    "total_registry": 7752
+    "total_active": 6598,
+    "total_registry": 7767
   },
   "venn_4": {
     "0001": 13,
-    "0010": 1200,
+    "0010": 1203,
     "0011": 24,
-    "0100": 3906,
+    "0100": 3915,
     "0101": 6,
     "0110": 141,
     "0111": 36,
@@ -20,18 +20,18 @@
     "1001": 1,
     "1010": 11,
     "1011": 1,
-    "1100": 832,
+    "1100": 834,
     "1101": 2,
     "1110": 197,
     "1111": 76
   },
   "venn_summary": {
     "code_only": 138,
-    "review_only": 3906,
-    "research_only": 1200,
+    "review_only": 3915,
+    "research_only": 1203,
     "standards_only": 13,
     "all_four": 76,
-    "code_review": 832,
+    "code_review": 834,
     "review_research": 141,
     "research_standards": 24
   },
@@ -41,30 +41,30 @@
     "value": "BIP 70"
   },
   "spotlight": {
-    "name": "cyb3ralbert",
-    "uuid": "auto_cyb3ralbert",
-    "github_login": "cyb3ralbert",
+    "name": "Shuvam Pandey",
+    "uuid": "auto_shuvam_pandey",
+    "github_login": "shuv-amp",
     "description": "First-time core contributor recently merged 4 commits."
   },
   "onboarding": {
-    "new_coders_90d": 24,
-    "new_coders_7d": 4,
-    "new_discussants_90d": 68,
-    "new_discussants_7d": 2,
+    "new_coders_90d": 26,
+    "new_coders_7d": 2,
+    "new_discussants_90d": 69,
+    "new_discussants_7d": 3,
     "window_days": 90
   },
   "prs": {
-    "total_merged": 18122,
-    "merged_30d": 160,
-    "merged_prev_30d": 129,
-    "merged_7d": 51,
-    "merged_prev_7d": 30
+    "total_merged": 18152,
+    "merged_30d": 162,
+    "merged_prev_30d": 133,
+    "merged_7d": 35,
+    "merged_prev_7d": 46
   },
   "commits": {
     "commits_30d": 832,
-    "commits_prev_30d": 932,
-    "commits_7d": 149,
-    "commits_prev_7d": 149
+    "commits_prev_30d": 913,
+    "commits_7d": 153,
+    "commits_prev_7d": 180
   },
   "bips": {
     "total": 210,
@@ -73,22 +73,22 @@
   "discussion_pulse": {
     "topics": [
       {
-        "category": "quantum",
-        "label": "Quantum",
-        "count": 97,
-        "share": 15.1
-      },
-      {
         "category": "mining",
         "label": "Mining",
-        "count": 93,
-        "share": 14.5
+        "count": 101,
+        "share": 15.4
       },
       {
-        "category": "taproot",
-        "label": "Taproot",
-        "count": 73,
-        "share": 11.4
+        "category": "quantum",
+        "label": "Quantum",
+        "count": 92,
+        "share": 14.0
+      },
+      {
+        "category": "utxo-sync",
+        "label": "Utxo Sync",
+        "count": 69,
+        "share": 10.5
       }
     ],
     "top_bips": [
@@ -107,7 +107,7 @@
       {
         "bip_id": "39",
         "title": "Mnemonic code for generating deterministic keys",
-        "mentions": 224,
+        "mentions": 225,
         "theme": "Wallet & Keys"
       }
     ],

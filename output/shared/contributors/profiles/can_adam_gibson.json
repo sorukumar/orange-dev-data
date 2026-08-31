@@ -45,20 +45,20 @@
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 2.0,
-  "hybrid_score": 0.1962,
-  "p2016_hybrid_score": 0.2847,
+  "hybrid_score": 0.1965,
+  "p2016_hybrid_score": 0.2851,
   "modern_hybrid_score": 0.4115,
   "impact_score": 11.0,
   "p2016_impact_score": 16.0,
   "modern_impact_score": 22.0,
-  "threads_started": 37.0,
-  "replies_sent": 156.0,
+  "threads_started": 40.0,
+  "replies_sent": 157.0,
   "ml_threads": 8.0,
-  "delving_threads": 29.0,
+  "delving_threads": 32.0,
   "ml_responses": 102.0,
-  "delving_responses": 54.0,
+  "delving_responses": 55.0,
   "first_active": "2015-02-15T15:40:24",
-  "last_active": "2026-08-19T10:18:40",
+  "last_active": null,
   "dev_type": "Participant",
   "expertise_domains": [
     "Privacy",
@@ -66,26 +66,26 @@
   ],
   "expertise_by_source": {
     "discussion": {
-      "Consensus": 0.462,
-      "Privacy": 0.538
+      "Consensus": 0.44,
+      "Privacy": 0.56
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.462,
-    "Privacy": 0.538
+    "Consensus": 0.44,
+    "Privacy": 0.56
   },
-  "p2016_posts": 192.0,
-  "modern_posts": 148.0,
+  "p2016_posts": 196.0,
+  "modern_posts": 152.0,
   "p2016_ml_posts": 109.0,
-  "p2016_delving_posts": 83.0,
+  "p2016_delving_posts": 87.0,
   "modern_ml_posts": 65.0,
-  "modern_delving_posts": 83.0,
+  "modern_delving_posts": 87.0,
   "is_engineer": false,
   "is_reviewer": true,
   "is_researcher": true,
   "is_bip_author": false,
   "global_first_active": "2015-02-15T15:40:24",
-  "global_last_active": "2026-08-19T10:18:40",
+  "global_last_active": "2026-08-11T23:29:43",
   "github_location": null,
   "github_company": "None",
   "github_bio": "none",
@@ -103,10 +103,10 @@
     "link": "https://gnusha.org/pi/bitcoindev/54E11248.6090401@gmail.com"
   },
   "last_message": {
-    "source": "mailing_list",
-    "subject": "Re: [bitcoindev] Giving teeth to expected EC disabling: P2XX(-T)(-ML)",
-    "date": "2026-08-19",
-    "link": "https://gnusha.org/pi/bitcoindev/baff534c-a392-4af7-8264-998c3390fe84n@googlegroups.com"
+    "source": "delving",
+    "subject": "Re: Pragmatic definition of consensus for light clients",
+    "date": "2026-08-27",
+    "link": "https://delvingbitcoin.org/t/pragmatic-definition-of-consensus-for-light-clients/2842/10"
   },
   "social_history": {
     "2015": {
@@ -157,14 +157,14 @@
       "taproot": 20
     },
     "2026": {
-      "other": 87,
+      "other": 94,
       "bitvm": 11,
-      "mempool-fees": 9,
-      "multisig-threshold": 7,
-      "privacy": 15,
-      "quantum": 16,
+      "mempool-fees": 15,
+      "multisig-threshold": 9,
+      "privacy": 16,
+      "quantum": 17,
       "signatures-sighash": 6,
-      "taproot": 14
+      "taproot": 16
     }
   }
 }

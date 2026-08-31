@@ -14,7 +14,8 @@ def _call_gemini(api_keys, prompt, is_json=False):
         client = genai.Client(api_key=current_key)
         for attempt in range(2):
             try:
-                response = client.models.generate_content(model='gemini-2.5-flash', contents=prompt)
+                target_model = os.environ.get('GEMINI_TARGET_MODEL', 'gemini-1.5-flash')
+                response = client.models.generate_content(model=target_model, contents=prompt)
                 text = response.text.strip()
                 if is_json:
                     if text.startswith("```json"): text = text[7:]

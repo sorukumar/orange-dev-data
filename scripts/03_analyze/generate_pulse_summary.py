@@ -18,7 +18,7 @@ except ImportError:
     HAS_GENAI = False
 
 PULSE_SUMMARY_FILE = "data/raw/pulse_summary.json"
-TARGET_MODEL = 'gemini-2.5-flash'
+TARGET_MODEL = os.environ.get('GEMINI_TARGET_MODEL', 'gemini-1.5-flash')
 
 # Load API keys
 load_dotenv("/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/.env")

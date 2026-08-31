@@ -45,18 +45,18 @@
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": null,
-  "hybrid_score": 0.0407,
-  "p2016_hybrid_score": 0.0666,
-  "modern_hybrid_score": 0.2255,
+  "hybrid_score": 0.0411,
+  "p2016_hybrid_score": 0.0671,
+  "modern_hybrid_score": 0.2269,
   "impact_score": 2.0,
   "p2016_impact_score": 4.0,
   "modern_impact_score": 13.0,
   "threads_started": 21.0,
-  "replies_sent": 51.0,
+  "replies_sent": 52.0,
   "ml_threads": 0.0,
   "delving_threads": 21.0,
   "ml_responses": 30.0,
-  "delving_responses": 21.0,
+  "delving_responses": 22.0,
   "first_active": "2024-04-08T14:11:53",
   "last_active": null,
   "dev_type": "Participant",
@@ -66,20 +66,20 @@
   ],
   "expertise_by_source": {
     "discussion": {
-      "Mempool": 0.435,
-      "Mining": 0.565
+      "Mempool": 0.409,
+      "Mining": 0.591
     }
   },
   "expertise_domain_scores": {
-    "Mempool": 0.435,
-    "Mining": 0.565
+    "Mempool": 0.409,
+    "Mining": 0.591
   },
-  "p2016_posts": 72.0,
-  "modern_posts": 72.0,
+  "p2016_posts": 73.0,
+  "modern_posts": 73.0,
   "p2016_ml_posts": 30.0,
-  "p2016_delving_posts": 42.0,
+  "p2016_delving_posts": 43.0,
   "modern_ml_posts": 30.0,
-  "modern_delving_posts": 42.0,
+  "modern_delving_posts": 43.0,
   "is_engineer": false,
   "is_reviewer": false,
   "is_researcher": true,
@@ -103,9 +103,9 @@
   },
   "last_message": {
     "source": "delving",
-    "subject": "Re: Universal opt-in replay protection?",
-    "date": "2026-08-10",
-    "link": "https://delvingbitcoin.org/t/universal-opt-in-replay-protection/2792/6"
+    "subject": "Re: Disabling min-difficulty blocks on testnet4",
+    "date": "2026-08-29",
+    "link": "https://delvingbitcoin.org/t/disabling-min-difficulty-blocks-on-testnet4/2350/4"
   },
   "social_history": {
     "2024": {
@@ -131,14 +131,14 @@
       "testing-devtools": 11
     },
     "2026": {
-      "other": 14,
+      "other": 16,
       "covenants": 2,
       "mempool-fees": 2,
-      "mining": 4,
+      "mining": 5,
       "quantum": 7,
       "script-opcodes": 3,
       "taproot": 2,
-      "testing-devtools": 4
+      "testing-devtools": 5
     }
   }
 }

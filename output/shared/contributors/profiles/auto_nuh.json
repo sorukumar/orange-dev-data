@@ -45,44 +45,44 @@
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": null,
-  "hybrid_score": 0.0,
-  "p2016_hybrid_score": 0.0,
-  "modern_hybrid_score": 0.0,
+  "hybrid_score": 0.0051,
+  "p2016_hybrid_score": 0.0077,
+  "modern_hybrid_score": 0.021,
   "impact_score": 0.0,
   "p2016_impact_score": 0.0,
-  "modern_impact_score": 0.0,
-  "threads_started": 6.0,
-  "replies_sent": 12.0,
+  "modern_impact_score": 1.0,
+  "threads_started": 7.0,
+  "replies_sent": 18.0,
   "ml_threads": 0.0,
-  "delving_threads": 6.0,
+  "delving_threads": 7.0,
   "ml_responses": 0.0,
-  "delving_responses": 12.0,
+  "delving_responses": 18.0,
   "first_active": null,
   "last_active": null,
   "dev_type": "Participant",
   "expertise_domains": [
-    "Script",
-    "Mining"
+    "Mining",
+    "Script"
   ],
   "expertise_by_source": {
     "discussion": {
-      "Mining": 0.467,
-      "Script": 0.533
+      "Mining": 0.605,
+      "Script": 0.395
     }
   },
   "expertise_domain_scores": {
-    "Mining": 0.467,
-    "Script": 0.533
+    "Mining": 0.605,
+    "Script": 0.395
   },
-  "p2016_posts": 18.0,
-  "modern_posts": 18.0,
+  "p2016_posts": 25.0,
+  "modern_posts": 25.0,
   "p2016_ml_posts": 0.0,
-  "p2016_delving_posts": 18.0,
+  "p2016_delving_posts": 25.0,
   "modern_ml_posts": 0.0,
-  "modern_delving_posts": 18.0,
+  "modern_delving_posts": 25.0,
   "is_engineer": false,
   "is_reviewer": false,
-  "is_researcher": false,
+  "is_researcher": true,
   "is_bip_author": false,
   "global_first_active": null,
   "global_last_active": null,
@@ -92,7 +92,7 @@
   "github_twitter": null,
   "github_blog": null,
   "github_followers": null,
-  "activity_status": "",
+  "activity_status": "Active",
   "is_top_50": false,
   "delving_url": "https://delvingbitcoin.org/u/nuh",
   "first_message": {
@@ -103,17 +103,16 @@
   },
   "last_message": {
     "source": "delving",
-    "subject": "Re: Running Core's real consensus code inside a zkVM",
-    "date": "2026-08-17",
-    "link": "https://delvingbitcoin.org/t/running-cores-real-consensus-code-inside-a-zkvm/2811/9"
+    "subject": "Re: Pragmatic definition of consensus for light clients",
+    "date": "2026-08-27",
+    "link": "https://delvingbitcoin.org/t/pragmatic-definition-of-consensus-for-light-clients/2842/13"
   },
   "social_history": {
     "2025": {
       "bitvm": 4,
       "covenants": 3,
       "script-opcodes": 3,
-      "taproot": 3,
-      "other": 1
+      "other": 4
     },
     "2026": {
       "bitvm": 5,
@@ -121,9 +120,10 @@
       "mining": 13,
       "scaling": 9,
       "script-opcodes": 10,
-      "segwit": 5,
+      "other": 6,
+      "soft-fork-activation": 7,
       "spam-filtering": 9,
-      "taproot": 1
+      "utxo-sync": 7
     }
   }
 }

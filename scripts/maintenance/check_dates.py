@@ -2,7 +2,7 @@ import os
 import pandas as pd
 
 def check_dates():
-    raw_dir = os.path.join(os.path.dirname(__file__), "..", "data", "raw")
+    raw_dir = os.path.join(os.path.dirname(__file__), "..", "..", "data", "raw")
     print("=== LATEST DATES FROM RAW PARQUET FILES ===")
     if not os.path.exists(raw_dir):
         print(f"Raw directory not found: {raw_dir}")

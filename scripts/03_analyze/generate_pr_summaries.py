@@ -30,7 +30,7 @@ if not api_keys:
     print("Warning: No GEMINI_API_KEY found in .env")
 
 # The BEST model available for the free tier constraints
-TARGET_MODEL = 'gemini-3.5-flash'
+TARGET_MODEL = os.environ.get('GEMINI_TARGET_MODEL', 'gemini-1.5-flash')
 
 def load_cache(path):
     if os.path.exists(path):
