@@ -168,9 +168,9 @@
           "source": "mailing_list",
           "link": "https://gnusha.org/pi/bitcoindev/2fb38fb8-2584-4550-b268-ee7138de419bn@googlegroups.com",
           "snippet": "Thanks for your reply Antoine.   You're correct that we do not specify cost accounting. The SHRINCS BIP is  currently purely\u2026",
-          "insight": "The SHRINCS BIP is confirmed to be solely a cryptographic primitive, explicitly not dictating cost accounting or deployment specifics.",
-          "summary": "The SHRINCS BIP, a new cryptographic proposal for Bitcoin, is being designed for foundational flexibility. It focuses purely on cryptographic aspects, allowing it to be integrated broadly without dictating specific deployment or cost models.",
-          "technical_summary": "'conduition' clarified that the SHRINCS BIP is purely cryptographic, intentionally omitting cost accounting specifications. This design choice ensures the proposal remains agnostic to its deployment context and specific integration methods. The discussion highlights an architectural decision to separate cryptographic primitives from economic and operational considerations, deferring such details to subsequent implementation layers.",
+          "insight": "The central technical question is whether the SHRINCS BIP should extend its scope to include cost accounting, or maintain its current focus as a purely cryptographic, deployment-agnostic proposal.",
+          "summary": "A new cryptographic proposal, SHRINCS, is being developed to potentially enhance Bitcoin's capabilities. It's designed to be flexible, focusing on core cryptographic improvements without dictating its final integration details.",
+          "technical_summary": "The current discussion confirms the SHRINCS BIP is deliberately scoped as a purely cryptographic proposal, explicitly not specifying \"cost accounting\" details. This design choice makes the BIP deployment-agnostic, separating its core cryptographic primitives from specific economic or resource models. Future integration efforts will need to address how cost accounting and other system-level considerations interface with the SHRINCS framework, as these are out of its current scope.",
           "author": "'conduition' via Bitcoin Development Mailing List",
           "author_uuid": "auto_conduition",
           "is_original_author": false

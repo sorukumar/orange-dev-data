@@ -198,9 +198,9 @@ Top active threads across mailing lists and research forums.
 ### [[bitcoindev] Re: SHRINCS: an efficient hash-based signature scheme
  for Bitcoin (first draft)](https://gnusha.org/pi/bitcoindev/2fb38fb8-2584-4550-b268-ee7138de419bn@googlegroups.com)
 **Source:** Mailing List | **Started By:** {'username': 'conduition', 'uuid': 'auto_conduition'} | **Messages:** 2
-> A new cryptographic proposal, SHRINCS, is designed to be highly versatile and efficient, focusing purely on its core cryptographic functions without imposing specific usage costs or deployment methods. This ensures it can be integrated broadly for future Bitcoin improvements.
+> A new cryptographic proposal, SHRINCS, is being developed to potentially enhance Bitcoin's capabilities. It's designed to be flexible, focusing on core cryptographic improvements without dictating its final integration details.
 
-**Technical Details:** Developer 'conduition' clarified that the SHRINCS BIP is exclusively a cryptographic proposal, intentionally omitting any specification for cost accounting. This architectural decision ensures the BIP remains deployment-agnostic and focused purely on its cryptographic primitives, allowing for flexible integration without dictating execution costs. This addresses an apparent concern raised by 'Antoine' regarding the scope of the SHRINCS specification.
+**Technical Details:** The current discussion confirms the SHRINCS BIP is deliberately scoped as a purely cryptographic proposal, explicitly not specifying "cost accounting" details. This design choice makes the BIP deployment-agnostic, separating its core cryptographic primitives from specific economic or resource models. Future integration efforts will need to address how cost accounting and other system-level considerations interface with the SHRINCS framework, as these are out of its current scope.
 
 ### [Re: Block-wide Signature Aggregation via SNARKs](https://delvingbitcoin.org/t/block-wide-signature-aggregation-via-snarks/2875/3)
 **Source:** Delving | **Started By:** {'username': 'conduition', 'uuid': 'auto_conduition'} | **Messages:** 2
