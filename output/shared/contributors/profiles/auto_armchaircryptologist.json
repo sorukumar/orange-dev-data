@@ -45,18 +45,18 @@
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": null,
-  "hybrid_score": 0.0883,
-  "p2016_hybrid_score": 0.1067,
-  "modern_hybrid_score": 0.1996,
+  "hybrid_score": 0.0882,
+  "p2016_hybrid_score": 0.1065,
+  "modern_hybrid_score": 0.1999,
   "impact_score": 5.0,
   "p2016_impact_score": 6.0,
   "modern_impact_score": 11.0,
   "threads_started": 7.0,
-  "replies_sent": 15.0,
+  "replies_sent": 16.0,
   "ml_threads": 2.0,
   "delving_threads": 5.0,
   "ml_responses": 8.0,
-  "delving_responses": 7.0,
+  "delving_responses": 8.0,
   "first_active": "2020-09-22T01:24:40",
   "last_active": null,
   "dev_type": "Participant",
@@ -67,22 +67,22 @@
   ],
   "expertise_by_source": {
     "discussion": {
-      "Cryptography": 0.26,
-      "Mempool": 0.44,
-      "Privacy": 0.3
+      "Cryptography": 0.261,
+      "Mempool": 0.435,
+      "Privacy": 0.304
     }
   },
   "expertise_domain_scores": {
-    "Cryptography": 0.26,
-    "Mempool": 0.44,
-    "Privacy": 0.3
+    "Cryptography": 0.261,
+    "Mempool": 0.435,
+    "Privacy": 0.304
   },
-  "p2016_posts": 22.0,
-  "modern_posts": 20.0,
+  "p2016_posts": 23.0,
+  "modern_posts": 21.0,
   "p2016_ml_posts": 10.0,
-  "p2016_delving_posts": 12.0,
+  "p2016_delving_posts": 13.0,
   "modern_ml_posts": 8.0,
-  "modern_delving_posts": 12.0,
+  "modern_delving_posts": 13.0,
   "is_engineer": false,
   "is_reviewer": true,
   "is_researcher": true,
@@ -107,9 +107,9 @@
   },
   "last_message": {
     "source": "delving",
-    "subject": "Re: Public key recovery for EC leaves in P2MR (BIP-360)",
-    "date": "2026-07-08",
-    "link": "https://delvingbitcoin.org/t/public-key-recovery-for-ec-leaves-in-p2mr-bip-360/2603/29"
+    "subject": "Re: Addressing the Diminishing Block Subsidy",
+    "date": "2026-09-07",
+    "link": "https://delvingbitcoin.org/t/addressing-the-diminishing-block-subsidy/2640/29"
   },
   "social_history": {
     "2020": {
@@ -121,28 +121,28 @@
       "mining": 1
     },
     "2023": {
-      "other": 2,
+      "hard-fork-block-size": 1,
       "mempool-fees": 2,
       "mining": 1,
-      "spam-filtering": 1
+      "other": 2
     },
     "2025": {
-      "other": 1,
+      "hard-fork-block-size": 1,
       "mempool-fees": 2,
       "quantum": 4,
       "script-opcodes": 1,
       "soft-fork-activation": 1
     },
     "2026": {
-      "other": 12,
+      "other": 16,
+      "hard-fork-block-size": 1,
       "mempool-fees": 5,
-      "mining": 1,
+      "mining": 2,
       "privacy": 6,
       "quantum": 2,
       "script-opcodes": 4,
       "signatures-sighash": 3,
-      "soft-fork-activation": 2,
-      "spam-filtering": 2
+      "soft-fork-activation": 2
     }
   }
 }

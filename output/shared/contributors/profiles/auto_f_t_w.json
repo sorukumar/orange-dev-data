@@ -51,10 +51,10 @@
   "impact_score": 0.0,
   "p2016_impact_score": 0.0,
   "modern_impact_score": 0.0,
-  "threads_started": 4.0,
+  "threads_started": 5.0,
   "replies_sent": 5.0,
   "ml_threads": 0.0,
-  "delving_threads": 4.0,
+  "delving_threads": 5.0,
   "ml_responses": 0.0,
   "delving_responses": 5.0,
   "first_active": null,
@@ -62,24 +62,27 @@
   "dev_type": "Participant",
   "expertise_domains": [
     "Script",
-    "Mempool"
+    "Mempool",
+    "Consensus"
   ],
   "expertise_by_source": {
     "discussion": {
-      "Mempool": 0.4,
-      "Script": 0.6
+      "Consensus": 0.234,
+      "Mempool": 0.362,
+      "Script": 0.404
     }
   },
   "expertise_domain_scores": {
-    "Mempool": 0.4,
-    "Script": 0.6
+    "Consensus": 0.234,
+    "Mempool": 0.362,
+    "Script": 0.404
   },
-  "p2016_posts": 9.0,
-  "modern_posts": 9.0,
+  "p2016_posts": 10.0,
+  "modern_posts": 10.0,
   "p2016_ml_posts": 0.0,
-  "p2016_delving_posts": 9.0,
+  "p2016_delving_posts": 10.0,
   "modern_ml_posts": 0.0,
-  "modern_delving_posts": 9.0,
+  "modern_delving_posts": 10.0,
   "is_engineer": false,
   "is_reviewer": false,
   "is_researcher": false,
@@ -103,9 +106,9 @@
   },
   "last_message": {
     "source": "delving",
-    "subject": "Re: Letting Untrusted LLMs Sign Bitcoin Batches: MCP Bridge + TEE-Enforced 25-Tx Daisy Chains",
-    "date": "2026-04-12",
-    "link": "https://delvingbitcoin.org/t/letting-untrusted-llms-sign-bitcoin-batches-mcp-bridge-tee-enforced-25-tx-daisy-chains/2410/2"
+    "subject": "Re: PSBT/MuSig2 coordination over Nostr relays: transport invariants for nonce safety under at-least-once delivery",
+    "date": "2026-09-07",
+    "link": "https://delvingbitcoin.org/t/psbt-musig2-coordination-over-nostr-relays-transport-invariants-for-nonce-safety-under-at-least-once-delivery/2852/5"
   },
   "social_history": {
     "2025": {
@@ -119,13 +122,13 @@
     },
     "2026": {
       "bitvm": 2,
-      "covenants": 2,
+      "covenants": 3,
+      "other": 5,
       "payment-protocol": 2,
-      "other": 1,
       "script-opcodes": 2,
       "segwit": 2,
       "spam-filtering": 2,
-      "taproot": 2,
+      "taproot": 3,
       "testing-devtools": 2
     }
   }

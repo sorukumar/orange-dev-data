@@ -18,7 +18,7 @@
     "maturity_score": 0.55,
     "social_mention_count": 277,
     "revision_count": 59,
-    "code_mention_count": 122,
+    "code_mention_count": 124,
     "authors": "Pieter Wuille"
   },
   {
@@ -51,7 +51,7 @@
     "maturity_score": 0.39,
     "social_mention_count": 107,
     "revision_count": 111,
-    "code_mention_count": 54,
+    "code_mention_count": 56,
     "authors": "Ava Chow"
   },
   {
@@ -302,7 +302,7 @@
     "status": "Complete",
     "theme": "Other",
     "maturity_score": 0.12,
-    "social_mention_count": 17,
+    "social_mention_count": 19,
     "revision_count": 47,
     "code_mention_count": 0,
     "authors": "Shaolin Fry, Luke Dashjr"
@@ -315,7 +315,7 @@
     "maturity_score": 0.12,
     "social_mention_count": 42,
     "revision_count": 29,
-    "code_mention_count": 12,
+    "code_mention_count": 16,
     "authors": "Antoine Poinsot, Matt Corallo"
   },
   {
@@ -359,7 +359,7 @@
     "maturity_score": 0.12,
     "social_mention_count": 50,
     "revision_count": 21,
-    "code_mention_count": 120,
+    "code_mention_count": 124,
     "authors": "Dhruv Mehta, Tim Ruffing, Jonas Schnelli, Pieter Wuille"
   },
   {
@@ -423,7 +423,7 @@
     "status": "Draft",
     "theme": "Consensus & Soft Forks",
     "maturity_score": 0.1,
-    "social_mention_count": 13,
+    "social_mention_count": 14,
     "revision_count": 38,
     "code_mention_count": 0,
     "authors": "Paul Sztorc, CryptAxe"
@@ -458,7 +458,7 @@
     "maturity_score": 0.09,
     "social_mention_count": 14,
     "revision_count": 36,
-    "code_mention_count": 58,
+    "code_mention_count": 62,
     "authors": "Mark Friedenbach, BtcDrak, Nicolas Dorier, kinoshitajona"
   },
   {
@@ -733,7 +733,7 @@
     "maturity_score": 0.06,
     "social_mention_count": 3,
     "revision_count": 26,
-    "code_mention_count": 4,
+    "code_mention_count": 6,
     "authors": "Pieter Wuille, Ava Chow"
   },
   {
@@ -913,17 +913,6 @@
     "authors": "Chris Priest"
   },
   {
-    "bip_id": "99",
-    "title": "Motivation and deployment of consensus rule changes ([soft/hard]forks)",
-    "status": "Closed",
-    "theme": "Consensus & Soft Forks",
-    "maturity_score": 0.05,
-    "social_mention_count": 1,
-    "revision_count": 25,
-    "code_mention_count": 0,
-    "authors": "Jorge Tim\u00f3n"
-  },
-  {
     "bip_id": "35",
     "title": "mempool message",
     "status": "Deployed",
@@ -957,6 +946,17 @@
     "authors": "Luke Dashjr"
   },
   {
+    "bip_id": "101",
+    "title": "Increase maximum block size",
+    "status": "Closed",
+    "theme": "Consensus & Soft Forks",
+    "maturity_score": 0.05,
+    "social_mention_count": 15,
+    "revision_count": 11,
+    "code_mention_count": 0,
+    "authors": "Gavin Andresen"
+  },
+  {
     "bip_id": "14",
     "title": "Protocol Version and User Agent",
     "status": "Deployed",
@@ -968,15 +968,37 @@
     "authors": "Amir Taaki, Patrick Strateman"
   },
   {
-    "bip_id": "101",
-    "title": "Increase maximum block size",
+    "bip_id": "99",
+    "title": "Motivation and deployment of consensus rule changes ([soft/hard]forks)",
     "status": "Closed",
     "theme": "Consensus & Soft Forks",
     "maturity_score": 0.05,
-    "social_mention_count": 15,
-    "revision_count": 11,
+    "social_mention_count": 1,
+    "revision_count": 25,
+    "code_mention_count": 0,
+    "authors": "Jorge Tim\u00f3n"
+  },
+  {
+    "bip_id": "11",
+    "title": "M-of-N Standard Transactions",
+    "status": "Deployed",
+    "theme": "Other",
+    "maturity_score": 0.04,
+    "social_mention_count": 0,
+    "revision_count": 21,
     "code_mention_count": 0,
     "authors": "Gavin Andresen"
+  },
+  {
+    "bip_id": "353",
+    "title": "DNS Payment Instructions",
+    "status": "Complete",
+    "theme": "Other",
+    "maturity_score": 0.04,
+    "social_mention_count": 0,
+    "revision_count": 18,
+    "code_mention_count": 0,
+    "authors": "Matt Corallo, Bastien Teinturier"
   },
   {
     "bip_id": "19",
@@ -1045,17 +1067,6 @@
     "authors": "Amir Taaki"
   },
   {
-    "bip_id": "11",
-    "title": "M-of-N Standard Transactions",
-    "status": "Deployed",
-    "theme": "Other",
-    "maturity_score": 0.04,
-    "social_mention_count": 0,
-    "revision_count": 21,
-    "code_mention_count": 0,
-    "authors": "Gavin Andresen"
-  },
-  {
     "bip_id": "79",
     "title": "Bustapay :: a practical coinjoin protocol",
     "status": "Closed",
@@ -1065,17 +1076,6 @@
     "revision_count": 19,
     "code_mention_count": 0,
     "authors": "Ryan Havar"
-  },
-  {
-    "bip_id": "12",
-    "title": "OP_EVAL",
-    "status": "Closed",
-    "theme": "Consensus & Soft Forks",
-    "maturity_score": 0.04,
-    "social_mention_count": 2,
-    "revision_count": 19,
-    "code_mention_count": 2,
-    "authors": "Gavin Andresen"
   },
   {
     "bip_id": "121",
@@ -1177,6 +1177,28 @@
     "authors": "Jonas Nick, Tim Ruffing, Elliott Jin"
   },
   {
+    "bip_id": "12",
+    "title": "OP_EVAL",
+    "status": "Closed",
+    "theme": "Consensus & Soft Forks",
+    "maturity_score": 0.04,
+    "social_mention_count": 2,
+    "revision_count": 19,
+    "code_mention_count": 2,
+    "authors": "Gavin Andresen"
+  },
+  {
+    "bip_id": "74",
+    "title": "Allow zero value OP_RETURN in Payment Protocol",
+    "status": "Closed",
+    "theme": "P2P Network",
+    "maturity_score": 0.03,
+    "social_mention_count": 6,
+    "revision_count": 10,
+    "code_mention_count": 0,
+    "authors": "Toby Padilla"
+  },
+  {
     "bip_id": "77",
     "title": "Async Payjoin",
     "status": "Draft",
@@ -1197,17 +1219,6 @@
     "revision_count": 16,
     "code_mention_count": 0,
     "authors": "Luke Dashjr"
-  },
-  {
-    "bip_id": "74",
-    "title": "Allow zero value OP_RETURN in Payment Protocol",
-    "status": "Closed",
-    "theme": "P2P Network",
-    "maturity_score": 0.03,
-    "social_mention_count": 6,
-    "revision_count": 10,
-    "code_mention_count": 0,
-    "authors": "Toby Padilla"
   },
   {
     "bip_id": "109",
@@ -1241,17 +1252,6 @@
     "revision_count": 11,
     "code_mention_count": 4,
     "authors": "Gavin Andresen"
-  },
-  {
-    "bip_id": "353",
-    "title": "DNS Payment Instructions",
-    "status": "Complete",
-    "theme": "Other",
-    "maturity_score": 0.03,
-    "social_mention_count": 0,
-    "revision_count": 17,
-    "code_mention_count": 0,
-    "authors": "Matt Corallo, Bastien Teinturier"
   },
   {
     "bip_id": "350",
@@ -1481,7 +1481,7 @@
     "maturity_score": 0.03,
     "social_mention_count": 0,
     "revision_count": 14,
-    "code_mention_count": 0,
+    "code_mention_count": 2,
     "authors": "Pieter Wuille, Ava Chow"
   },
   {
@@ -2019,7 +2019,7 @@
     "theme": "Consensus & Soft Forks",
     "maturity_score": 0.01,
     "social_mention_count": 0,
-    "revision_count": 4,
+    "revision_count": 5,
     "code_mention_count": 0,
     "authors": "Rusty Russell, Julian Moik"
   },
@@ -2173,7 +2173,7 @@
     "theme": "Privacy",
     "maturity_score": 0.0,
     "social_mention_count": 0,
-    "revision_count": 1,
+    "revision_count": 2,
     "code_mention_count": 0,
     "authors": "Yuri S Villas Boas, Andr\u00e9 Fidencio Gon\u00e7alves"
   },

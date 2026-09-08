@@ -1,8 +1,8 @@
 {
-  "display_name": "3D",
+  "display_name": "Lillian",
   "github_login_final": null,
-  "delving_username_final": null,
-  "uuid": "auto_id_55fac2",
+  "delving_username_final": "lillianwang",
+  "uuid": "auto_lillian",
   "badges": null,
   "roles": null,
   "total_commits": 0.0,
@@ -45,71 +45,73 @@
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": null,
-  "hybrid_score": 0.0084,
-  "p2016_hybrid_score": 0.013,
-  "modern_hybrid_score": 0.0389,
-  "impact_score": 1.0,
-  "p2016_impact_score": 1.0,
-  "modern_impact_score": 2.0,
-  "threads_started": 2.0,
+  "hybrid_score": 0.0,
+  "p2016_hybrid_score": 0.0,
+  "modern_hybrid_score": 0.0,
+  "impact_score": 0.0,
+  "p2016_impact_score": 0.0,
+  "modern_impact_score": 0.0,
+  "threads_started": 1.0,
   "replies_sent": 0.0,
-  "ml_threads": 2.0,
-  "delving_threads": 0.0,
+  "ml_threads": 0.0,
+  "delving_threads": 1.0,
   "ml_responses": 0.0,
   "delving_responses": 0.0,
-  "first_active": "2026-05-26T19:17:15",
-  "last_active": "2026-05-31T09:13:03",
+  "first_active": null,
+  "last_active": null,
   "dev_type": "Participant",
   "expertise_domains": [
-    "Cryptography",
-    "Wallet"
+    "Script",
+    "Mempool"
   ],
   "expertise_by_source": {
     "discussion": {
-      "Cryptography": 0.8,
-      "Wallet": 0.2
+      "Mempool": 0.25,
+      "Script": 0.75
     }
   },
   "expertise_domain_scores": {
-    "Cryptography": 0.8,
-    "Wallet": 0.2
+    "Mempool": 0.25,
+    "Script": 0.75
   },
-  "p2016_posts": 2.0,
-  "modern_posts": 2.0,
-  "p2016_ml_posts": 2.0,
-  "p2016_delving_posts": 0.0,
-  "modern_ml_posts": 2.0,
-  "modern_delving_posts": 0.0,
+  "p2016_posts": 1.0,
+  "modern_posts": 1.0,
+  "p2016_ml_posts": 0.0,
+  "p2016_delving_posts": 1.0,
+  "modern_ml_posts": 0.0,
+  "modern_delving_posts": 1.0,
   "is_engineer": false,
   "is_reviewer": false,
-  "is_researcher": true,
+  "is_researcher": false,
   "is_bip_author": false,
-  "global_first_active": "2026-05-26T19:17:15",
-  "global_last_active": "2026-05-31T09:13:03",
+  "global_first_active": null,
+  "global_last_active": null,
   "github_location": null,
   "github_company": null,
   "github_bio": null,
   "github_twitter": null,
   "github_blog": null,
   "github_followers": null,
-  "activity_status": "New",
+  "activity_status": "",
   "is_top_50": false,
+  "delving_url": "https://delvingbitcoin.org/u/lillianwang",
   "first_message": {
-    "source": "mailing_list",
-    "subject": "[bitcoindev] [BIP Proposal] Hybrid SPHINCS+ / secp256k1 Key\n Derivation for Quantum-Resistant Paper Wallets",
-    "date": "2026-05-26",
-    "link": "https://gnusha.org/pi/bitcoindev/bpSypbIuSoDinhE-Y4CrVI5LGHrJ_I79xYUzpYswA5JGkbASwibq94UozeR2jsu48vH6FZLdEBPpWHgIuVtSpUNy-tRpnGfe1hce2ti8k5w=@protonmail.com"
+    "source": "delving",
+    "subject": "Comparing Bitcoin Covenant Proposals for Vaults",
+    "date": "2026-09-04",
+    "link": "https://delvingbitcoin.org/t/comparing-bitcoin-covenant-proposals-for-vaults/2877/1"
   },
   "last_message": {
-    "source": "mailing_list",
-    "subject": "[bitcoindev] Simple Setup for SPHINCS+ Bitcoin-style Address (proof-of-concept)",
-    "date": "2026-05-31",
-    "link": "https://gnusha.org/pi/bitcoindev/Z-5YrpxXl7xqYc-R3WBlTHkr5kVE5sIC4rU3W5H1AzGvrHfOcegWUj11nJZBaLJJV8En14lPAB2x7S9eQmocJDYNHAKdr6hRC-qgqyeTMwo=@protonmail.com"
+    "source": "delving",
+    "subject": "Comparing Bitcoin Covenant Proposals for Vaults",
+    "date": "2026-09-04",
+    "link": "https://delvingbitcoin.org/t/comparing-bitcoin-covenant-proposals-for-vaults/2877/1"
   },
   "social_history": {
     "2026": {
-      "quantum": 2,
-      "wallet-keys": 1
+      "covenants": 1,
+      "mempool-fees": 1,
+      "vaults": 1
     }
   }
 }

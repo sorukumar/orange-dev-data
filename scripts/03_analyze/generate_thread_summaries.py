@@ -129,6 +129,11 @@ def run_thread_summarizer():
         while api_key_idx < len(api_keys) and not result:
             try:
                 result = generate_llm_summary(client, context)
+                if result is None:
+                    print(f"Key {api_key_idx + 1} returned None (likely 503). Rotating...")
+                    api_key_idx += 1
+                    if api_key_idx < len(api_keys):
+                        client = genai.Client(api_key=api_keys[api_key_idx])
             except APIError as e:
                 if e.code == 429 or e.code == 404:
                     print(f"Key {api_key_idx + 1} hit {e.code}. Rotating...")

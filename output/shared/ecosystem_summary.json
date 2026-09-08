@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-08-30T10:40:30.079920",
+  "generated_at": "2026-09-06T19:29:17.765517",
   "groups": {
-    "committers": 1260,
-    "reviewers": 5207,
-    "research": 1689,
+    "committers": 1261,
+    "reviewers": 5216,
+    "research": 1693,
     "standards": 159,
-    "total_active": 6598,
-    "total_registry": 7767
+    "total_active": 6610,
+    "total_registry": 7780
   },
   "venn_4": {
-    "0001": 13,
-    "0010": 1203,
-    "0011": 24,
-    "0100": 3915,
+    "0001": 12,
+    "0010": 1206,
+    "0011": 25,
+    "0100": 3924,
     "0101": 6,
     "0110": 141,
-    "0111": 36,
+    "0111": 35,
     "1000": 138,
     "1001": 1,
     "1010": 11,
@@ -23,17 +23,17 @@
     "1100": 834,
     "1101": 2,
     "1110": 197,
-    "1111": 76
+    "1111": 77
   },
   "venn_summary": {
     "code_only": 138,
-    "review_only": 3915,
-    "research_only": 1203,
-    "standards_only": 13,
-    "all_four": 76,
+    "review_only": 3924,
+    "research_only": 1206,
+    "standards_only": 12,
+    "all_four": 77,
     "code_review": 834,
     "review_research": 141,
-    "research_standards": 24
+    "research_standards": 25
   },
   "rd_focus": {},
   "hotspot": {
@@ -48,23 +48,23 @@
   },
   "onboarding": {
     "new_coders_90d": 26,
-    "new_coders_7d": 2,
-    "new_discussants_90d": 69,
-    "new_discussants_7d": 3,
+    "new_coders_7d": 1,
+    "new_discussants_90d": 54,
+    "new_discussants_7d": 6,
     "window_days": 90
   },
   "prs": {
-    "total_merged": 18152,
-    "merged_30d": 162,
-    "merged_prev_30d": 133,
-    "merged_7d": 35,
-    "merged_prev_7d": 46
+    "total_merged": 18184,
+    "merged_30d": 145,
+    "merged_prev_30d": 148,
+    "merged_7d": 33,
+    "merged_prev_7d": 34
   },
   "commits": {
-    "commits_30d": 832,
-    "commits_prev_30d": 913,
-    "commits_7d": 153,
-    "commits_prev_7d": 180
+    "commits_30d": 699,
+    "commits_prev_30d": 1018,
+    "commits_7d": 111,
+    "commits_prev_7d": 209
   },
   "bips": {
     "total": 210,
@@ -75,20 +75,20 @@
       {
         "category": "mining",
         "label": "Mining",
-        "count": 101,
-        "share": 15.4
+        "count": 99,
+        "share": 16.2
       },
       {
         "category": "quantum",
         "label": "Quantum",
-        "count": 92,
-        "share": 14.0
+        "count": 84,
+        "share": 13.7
       },
       {
         "category": "utxo-sync",
         "label": "Utxo Sync",
-        "count": 69,
-        "share": 10.5
+        "count": 68,
+        "share": 11.1
       }
     ],
     "top_bips": [

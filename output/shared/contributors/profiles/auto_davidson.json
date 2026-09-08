@@ -51,35 +51,32 @@
   "impact_score": 0.0,
   "p2016_impact_score": 0.0,
   "modern_impact_score": 0.0,
-  "threads_started": 5.0,
+  "threads_started": 6.0,
   "replies_sent": 2.0,
   "ml_threads": 0.0,
-  "delving_threads": 5.0,
+  "delving_threads": 6.0,
   "ml_responses": 0.0,
   "delving_responses": 2.0,
   "first_active": null,
   "last_active": null,
   "dev_type": "Participant",
   "expertise_domains": [
-    "Consensus",
-    "L2"
+    "Consensus"
   ],
   "expertise_by_source": {
     "discussion": {
-      "Consensus": 0.556,
-      "L2": 0.444
+      "Consensus": 1.0
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.556,
-    "L2": 0.444
+    "Consensus": 1.0
   },
-  "p2016_posts": 7.0,
-  "modern_posts": 7.0,
+  "p2016_posts": 8.0,
+  "modern_posts": 8.0,
   "p2016_ml_posts": 0.0,
-  "p2016_delving_posts": 7.0,
+  "p2016_delving_posts": 8.0,
   "modern_ml_posts": 0.0,
-  "modern_delving_posts": 7.0,
+  "modern_delving_posts": 8.0,
   "is_engineer": false,
   "is_reviewer": false,
   "is_researcher": false,
@@ -103,9 +100,9 @@
   },
   "last_message": {
     "source": "delving",
-    "subject": "Re: New Utreexo releases",
-    "date": "2026-04-06",
-    "link": "https://delvingbitcoin.org/t/new-utreexo-releases/2371/3"
+    "subject": "Implicit Deletions and Improvements in Utreexo IBD",
+    "date": "2026-09-05",
+    "link": "https://delvingbitcoin.org/t/implicit-deletions-and-improvements-in-utreexo-ibd/2881/1"
   },
   "social_history": {
     "2023": {
@@ -132,8 +129,8 @@
       "utxo-sync": 2
     },
     "2026": {
-      "data-structures": 1,
-      "utxo-sync": 1
+      "data-structures": 2,
+      "utxo-sync": 2
     }
   }
 }

@@ -24,11 +24,11 @@
   "p2016_authored_commits": 0.0,
   "modern_authored_commits": 0.0,
   "co_authored_commits": 0.0,
-  "bips_authored": 0.0,
-  "p2016_bips_authored": 0.0,
-  "modern_bips_authored": 0.0,
-  "first_bip_date": null,
-  "last_bip_date": null,
+  "bips_authored": 1.0,
+  "p2016_bips_authored": 1.0,
+  "modern_bips_authored": 1.0,
+  "first_bip_date": "2026-05-20T14:51:22",
+  "last_bip_date": "2026-05-20T14:51:22",
   "avg_review_latency_days": null,
   "reviews_count": 0.0,
   "avg_approval_latency_days": null,
@@ -45,12 +45,12 @@
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": null,
-  "hybrid_score": 0.019,
-  "p2016_hybrid_score": 0.0326,
-  "modern_hybrid_score": 0.1176,
-  "impact_score": 1.0,
-  "p2016_impact_score": 2.0,
-  "modern_impact_score": 7.0,
+  "hybrid_score": 0.369,
+  "p2016_hybrid_score": 0.3826,
+  "modern_hybrid_score": 0.471,
+  "impact_score": 20.0,
+  "p2016_impact_score": 21.0,
+  "modern_impact_score": 25.0,
   "threads_started": 5.0,
   "replies_sent": 14.0,
   "ml_threads": 4.0,
@@ -61,11 +61,14 @@
   "last_active": null,
   "dev_type": "Participant",
   "expertise_domains": [
+    "Privacy",
     "Cryptography",
-    "Wallet",
-    "Script"
+    "Wallet"
   ],
   "expertise_by_source": {
+    "bips": {
+      "Privacy": 1.0
+    },
     "discussion": {
       "Cryptography": 0.583,
       "Script": 0.167,
@@ -73,9 +76,10 @@
     }
   },
   "expertise_domain_scores": {
-    "Cryptography": 0.583,
-    "Script": 0.167,
-    "Wallet": 0.25
+    "Cryptography": 0.1666,
+    "Privacy": 0.7143,
+    "Script": 0.0477,
+    "Wallet": 0.0714
   },
   "p2016_posts": 19.0,
   "modern_posts": 16.0,
@@ -86,9 +90,9 @@
   "is_engineer": false,
   "is_reviewer": false,
   "is_researcher": true,
-  "is_bip_author": false,
+  "is_bip_author": true,
   "global_first_active": "2023-05-02T03:31:19",
-  "global_last_active": null,
+  "global_last_active": "2026-05-20T14:51:22",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -97,6 +101,15 @@
   "github_followers": null,
   "activity_status": "Active",
   "is_top_50": false,
+  "bip_list": [
+    {
+      "number": 450,
+      "title": "Formosa\u2014Seed encoding by themed mnemonic stories",
+      "status": "Draft",
+      "theme": "Privacy",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0450.mediawiki"
+    }
+  ],
   "first_message": {
     "source": "mailing_list",
     "subject": "[bitcoin-dev] Formosa --- proposed improvement upon BIP39",

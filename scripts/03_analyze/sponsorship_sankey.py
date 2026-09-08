@@ -53,7 +53,7 @@ def main():
             
     # 2. Load Sponsors
     try:
-        with open('metadata/sponsors.json') as f:
+        with open('../orange-funding-data/data/enriched/sponsors_merged.json') as f:
             sponsors_data = json.load(f).get('sponsored_developers', [])
     except Exception as e:
         print(f"Error loading sponsors.json: {e}")
