@@ -47,7 +47,7 @@
   "review_reciprocity": null,
   "hybrid_score": 0.0051,
   "p2016_hybrid_score": 0.0077,
-  "modern_hybrid_score": 0.0211,
+  "modern_hybrid_score": 0.021,
   "impact_score": 0.0,
   "p2016_impact_score": 0.0,
   "modern_impact_score": 1.0,
@@ -58,24 +58,24 @@
   "ml_responses": 0.0,
   "delving_responses": 37.0,
   "first_active": null,
-  "last_active": null,
+  "last_active": "2026-05-21T06:50:04.940000",
   "dev_type": "Participant",
   "expertise_domains": [
+    "Consensus",
     "Wallet",
-    "Script",
-    "Consensus"
+    "Script"
   ],
   "expertise_by_source": {
     "discussion": {
-      "Consensus": 0.289,
-      "Script": 0.356,
-      "Wallet": 0.356
+      "Consensus": 0.346,
+      "Script": 0.327,
+      "Wallet": 0.327
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.2887,
-    "Script": 0.3556,
-    "Wallet": 0.3556
+    "Consensus": 0.346,
+    "Script": 0.327,
+    "Wallet": 0.327
   },
   "p2016_posts": 51.0,
   "modern_posts": 51.0,
@@ -88,7 +88,7 @@
   "is_researcher": true,
   "is_bip_author": false,
   "global_first_active": null,
-  "global_last_active": null,
+  "global_last_active": "2026-05-21T06:50:04.940000",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -114,7 +114,6 @@
     "2023": {
       "other": 9,
       "covenants": 3,
-      "script-opcodes": 6,
       "taproot": 6,
       "wallet-keys": 6
     },
@@ -123,7 +122,7 @@
       "covenants": 4,
       "mining": 1,
       "multisig-threshold": 5,
-      "script-opcodes": 5,
+      "script-opcodes": 2,
       "taproot": 5,
       "wallet-keys": 8
     },

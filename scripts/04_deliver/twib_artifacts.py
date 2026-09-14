@@ -86,6 +86,21 @@ def build_markdown_from_json(data):
                 lines.append(f"> {pr['summary']}")
             lines.append("")
             
+    # 3.5 Dev Meeting
+    meeting = data.get("meeting")
+    if meeting:
+        lines.append("## 🗓️ Dev Meeting")
+        lines.append(f"Summary of the core dev IRC meeting on {meeting['date']} with {meeting.get('participant_count', '?')} participants.")
+        lines.append("")
+        for topic in meeting.get("topics_discussed", []):
+            lines.append(f"- {topic}")
+        if meeting.get("action_items"):
+            lines.append("")
+            lines.append("**Action Items:**")
+            for item in meeting["action_items"]:
+                lines.append(f"- {item}")
+        lines.append("")
+            
     # 4. Discussions
     lines.append("## 🗣️ Research & Governance")
     lines.append("Top active threads across mailing lists and research forums.")
@@ -156,6 +171,24 @@ def main():
         with open(pr_cache_path, "r") as f:
             try: pr_cache = json.load(f)
             except: pass
+
+    # Load meeting summaries
+    meeting_summaries = []
+    meeting_path = os.path.join(root_dir, "data", "raw", "meeting_summaries.json")
+    if os.path.exists(meeting_path):
+        try:
+            with open(meeting_path, "r") as f:
+                meeting_summaries = json.load(f)
+        except: pass
+        
+    twib_meeting = None
+    start_dt = pd.to_datetime(weekly_data['start_date'])
+    end_dt = pd.to_datetime(weekly_data['end_date'])
+    for m in meeting_summaries:
+        m_dt = pd.to_datetime(m['date'])
+        if start_dt <= m_dt <= end_dt:
+            twib_meeting = m
+            break
 
     # Flatten all merged PRs from weekly_data
     all_merged_prs = []
@@ -283,6 +316,7 @@ def main():
             "new_contributors": len(weekly_data['new_contributors'])
         },
         "tldr": tldr_cleaned,
+        "meeting": twib_meeting,
         "categories": { "merged": [], "hot": [] },
         "discussions": [],
         "shoutouts": {

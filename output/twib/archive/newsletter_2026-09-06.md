@@ -182,9 +182,26 @@ The most actively discussed and reviewed open pull requests right now.
 **Author:** [@ViniciusCestarii](https://github.com/ViniciusCestarii) | **[Maintenance & Tech Debt]** *(Activity: 13 review events this week)*
 > This PR adds new tests to `transaction_tests.cpp` to cover 'live mutants' identified during mutation testing. This enhances the test suite's effectiveness, ensuring critical transaction logic is robustly validated against subtle changes.
 
-#### [#36124: http: Make `HTTPRequest` update state internally](https://github.com/bitcoin/bitcoin/pull/36124)
-**Author:** [@hodlinator](https://github.com/hodlinator) | **[Maintenance & Tech Debt]** *(Activity: 12 review events this week)*
-> This PR refines the HTTP request handling by allowing the `HTTPRequest` object to manage its internal state. This improves the clarity and encapsulation of the HTTP server's operation.
+#### [#36118: test: tolerate race condition in interface_http.py](https://github.com/bitcoin/bitcoin/pull/36118)
+**Author:** [@pinheadmz](https://github.com/pinheadmz) | **[Maintenance & Tech Debt]** *(Activity: 12 review events this week)*
+> This PR addresses a race condition that intermittently caused failures in HTTP interface tests. By making the test more robust against timing variations, it eliminates flakiness and improves the reliability of the automated test suite.
+
+## 🗓️ Dev Meeting
+Summary of the core dev IRC meeting on 2026-09-03 with 88 participants.
+
+- QA Working Group updates, including mutation analysis for silent payments and script interpreter, and parallelization efforts.
+- QML GUI Working Group progress on staging branch and issue fixes.
+- Benchmarking Working Group updates on quadratic iteration fixes, IBD performance improvements, and future profiling plans.
+- Kernel Working Group progress on script evaluation tracer and collaboration with fuzzing efforts.
+- Discussion on remaining items for the upcoming release milestone and HTTP agent findings.
+
+**Action Items:**
+- Review PR #36096 (rpc: avoid quadratic JSON construction).
+- Review remaining items in milestone #84 before the branch-off.
+- Provide feedback on `bitcoinfuzz/bitcoinfuzz/pull/647` for differential fuzzing.
+- Continue triaging agent findings in the new HTTP implementation.
+- Experiment with parallel undo/block flushes for IBD.
+- Profile neutered validation-less and UTXO-less nodes to identify bottlenecks.
 
 ## 🗣️ Research & Governance
 Top active threads across mailing lists and research forums.
@@ -195,6 +212,12 @@ Top active threads across mailing lists and research forums.
 
 **Technical Details:** The discussion highlights that current multi-party custody arrangements, including 2-of-3 multisig, MuSig2 Taproot aggregates, and covenant-free time-locked vaults, predominantly route PSBTs and signing rounds through a coordinator often run by a wallet vendor. This architecture presents a centralization point for coordination. The technical debate revolves around exploring alternative, more decentralized methods for exchanging PSBTs and managing signing rounds, aiming to improve privacy, robustness, and reduce reliance on third-party infrastructure. This could involve investigating peer-to-peer communication protocols or novel shared state mechanisms among signing participants.
 
+### [Re: Block-wide Signature Aggregation via SNARKs](https://delvingbitcoin.org/t/block-wide-signature-aggregation-via-snarks/2875/3)
+**Source:** Delving | **Started By:** {'username': 'conduition', 'uuid': 'auto_conduition'} | **Messages:** 2
+> To prepare Bitcoin for quantum threats, developers are exploring ways to reduce the size of new, quantum-resistant transaction signatures. The goal is to make these future-proof transactions efficient, ensuring they don't bloat the network or increase costs for running nodes.
+
+**Technical Details:** The discussion revolves around mitigating the large size of post-quantum (PQ) signatures to reduce their impact on block propagation and archival node resources. Evaluation of ZKP-based compression methods is underway, with Groth16 being dismissed due to its quantum insecurity and trusted setup. LeanVM is highlighted as a more interesting, potential alternative for compressing PQ signatures, while the relevance of BitVM in this context is also being questioned.
+
 ### [[bitcoindev] Re: SHRINCS: an efficient hash-based signature scheme
  for Bitcoin (first draft)](https://gnusha.org/pi/bitcoindev/2fb38fb8-2584-4550-b268-ee7138de419bn@googlegroups.com)
 **Source:** Mailing List | **Started By:** {'username': 'conduition', 'uuid': 'auto_conduition'} | **Messages:** 2
@@ -202,27 +225,21 @@ Top active threads across mailing lists and research forums.
 
 **Technical Details:** The current discussion confirms the SHRINCS BIP is deliberately scoped as a purely cryptographic proposal, explicitly not specifying "cost accounting" details. This design choice makes the BIP deployment-agnostic, separating its core cryptographic primitives from specific economic or resource models. Future integration efforts will need to address how cost accounting and other system-level considerations interface with the SHRINCS framework, as these are out of its current scope.
 
-### [Re: Block-wide Signature Aggregation via SNARKs](https://delvingbitcoin.org/t/block-wide-signature-aggregation-via-snarks/2875/3)
-**Source:** Delving | **Started By:** {'username': 'conduition', 'uuid': 'auto_conduition'} | **Messages:** 2
-> To prepare Bitcoin for quantum threats, developers are exploring ways to reduce the size of new, quantum-resistant transaction signatures. The goal is to make these future-proof transactions efficient, ensuring they don't bloat the network or increase costs for running nodes.
-
-**Technical Details:** The discussion revolves around mitigating the large size of post-quantum (PQ) signatures to reduce their impact on block propagation and archival node resources. Evaluation of ZKP-based compression methods is underway, with Groth16 being dismissed due to its quantum insecurity and trusted setup. LeanVM is highlighted as a more interesting, potential alternative for compressing PQ signatures, while the relevance of BitVM in this context is also being questioned.
-
 ### [Re: Silent Payments coinbase](https://delvingbitcoin.org/t/silent-payments-coinbase/2833/5)
 **Source:** Delving | **Started By:** {'username': 'Marathon Gary', 'uuid': 'auto_marathon_gary'} | **Messages:** 2
 > Bitcoin mining pools are exploring direct, on-chain miner payouts within the coinbase transaction. This innovation could simplify payment processes and potentially reduce transaction overhead for miners.
 
 **Technical Details:** The discussion revolves around mining pools embedding multiple miner payouts directly into the coinbase transaction's scriptSig. A key architectural concern is the limited extranonce space within the coinbase, especially when accounting for future block height encoding requirements. `average_gary`'s recent comment suggests this space constraint might be manageable, particularly with the introduction of proposals like BIP323, which aims to provide more flexible methods for committing arbitrary data in the coinbase. Further work is needed to design and standardize how pools can utilize this space efficiently for direct payouts while maintaining network compatibility.
 
-### [Re: Segwit commitment to post-quantum witness data?](https://delvingbitcoin.org/t/segwit-commitment-to-post-quantum-witness-data/2702/16)
-**Source:** Delving | **Started By:** {'username': 'Pieter Wuille', 'uuid': 'can_pieter_wuille'} | **Messages:** 1
-> Bitcoin developers are discussing how to safely integrate future post-quantum security protections into transactions without risking network spam. By properly anchoring these advanced signatures to the blockchain, the network can transition to quantum-resistant security while keeping nodes safe from denial-of-service attacks.
+### [Implicit Deletions and Improvements in Utreexo IBD](https://delvingbitcoin.org/t/implicit-deletions-and-improvements-in-utreexo-ibd/2881/1)
+**Source:** Delving | **Started By:** {'username': 'Davidson', 'uuid': 'auto_davidson'} | **Messages:** 1
+> Utreexo is being explored as a method to significantly reduce the amount of data nodes need to store to verify transactions, making it easier and faster for new participants to join and secure the Bitcoin network. It aims to compact the entire set of unspent transactions.
 
-**Technical Details:** The debate focuses on whether post-quantum (PQ) signature commitments should be structured per-input or per-transaction within a proposed block extension. Addressing a suggestion to omit PQ signatures from the block commitment entirely, Pieter Wuille highlighted lessons from the 2015-2017 Segregated Witness design. Without committing to the PQ witnesses in the block hash (such as a witness root), relay nodes could cheaply construct and propagate infinite invalid permutations of valid blocks. Thus, developers agree that a formal cryptographic commitment inside the block structure is strictly necessary to prevent block-malleability DoS vectors.
+**Technical Details:** The discussion introduces Utreexo, a dynamic accumulator designed to represent the full UTXO set with just a few hashes. Its core technical approach involves structuring the UTXO data as a forest of perfect Merkle trees, enabling this highly compact representation. This architecture promises substantial reductions in node state size, though the current context only outlines its foundational mechanism without delving into specific implementation challenges, integration strategies, or ongoing architectural debates within Bitcoin Core.
 
 ## 🏆 Contributor Shoutouts
 ### ✍️ Top Authors
-The most active PR authors this week: [@hodlinator](https://github.com/hodlinator), [@fanquake](https://github.com/fanquake), [@maflcko](https://github.com/maflcko), [@ViniciusCestarii](https://github.com/ViniciusCestarii), [@hebasto](https://github.com/hebasto)
+The most active PR authors this week: [@hodlinator](https://github.com/hodlinator), [@fanquake](https://github.com/fanquake), [@maflcko](https://github.com/maflcko), [@hebasto](https://github.com/hebasto), [@pinheadmz](https://github.com/pinheadmz)
 
 ### 🕵️ Top Reviewers
 Providing critical review and testing: [@jeanpablojp](https://github.com/jeanpablojp), [@maflcko](https://github.com/maflcko), [@sedited](https://github.com/sedited), [@l0rinc](https://github.com/l0rinc), [@hodlinator](https://github.com/hodlinator)

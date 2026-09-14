@@ -1,0 +1,920 @@
+--- Log opened Thu Aug 27 00:00:13 2026
+00:02 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+00:02 -!- enochazariah_ [uid710351@id-710351.hampstead.irccloud.com] has joined #bitcoin-core-dev
+00:02 -!- enochazariah [~enochazar@user/enochazariah] has joined #bitcoin-core-dev
+00:03 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+00:04 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+00:04 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+00:06 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+00:06 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+00:12 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+00:12 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+00:18 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+00:18 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+00:21 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+00:21 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+00:22 -!- robszarka [~szarka@2603:3003:4eac:100:76ae:58ec:3559:25d0] has joined #bitcoin-core-dev
+00:24 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+00:25 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+00:25 -!- szarka [~szarka@2603:3003:4eac:100:9832:2298:ff08:91f3] has quit [Ping timeout: 243 seconds]
+00:30 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+00:31 -!- tegila_ [~tegila@189.37.66.31] has joined #bitcoin-core-dev
+00:32 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+00:34 -!- tegila [~tegila@189.37.68.25] has quit [Ping timeout: 250 seconds]
+00:36 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+00:37 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+00:39 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+00:40 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+00:42 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+00:42 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+00:48 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+00:48 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+00:54 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+00:54 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+01:02 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+01:05 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+01:06 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+01:10 -!- jerryf [~jerryf@user/jerryf] has quit [Ping timeout: 241 seconds]
+01:17 -!- Guyver2 [~Guyver@77-174-98-73.fixed.kpn.net] has joined #bitcoin-core-dev
+01:37 -!- enochazariah [~enochazar@user/enochazariah] has quit [Ping timeout: 244 seconds]
+02:32 -!- smartin2 [~Thunderbi@78.56.226.85] has joined #bitcoin-core-dev
+02:35 -!- smartin [~Thunderbi@78.56.226.85] has quit [Ping timeout: 264 seconds]
+02:35 -!- smartin2 is now known as smartin
+02:51 -!- midnight [~midnight@user/midnight] has quit [Ping timeout: 260 seconds]
+02:51 -!- midnight_ [~midnight@user/midnight] has joined #bitcoin-core-dev
+02:51 -!- cold [~cold@user/cold] has quit [Ping timeout: 254 seconds]
+02:51 -!- _cold [~cold@user/cold] has joined #bitcoin-core-dev
+03:00 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+03:00 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+03:06 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+03:06 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+03:10 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+03:11 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+03:12 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+03:16 -!- jerryf_ [~jerryf@user/jerryf] has quit [Ping timeout: 249 seconds]
+03:18 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+03:19 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+03:24 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+03:26 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+03:30 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+03:30 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+03:32 -!- Guyver2 [~Guyver@77-174-98-73.fixed.kpn.net] has left #bitcoin-core-dev [Closing Window]
+03:36 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+03:36 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+03:42 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+03:45 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+03:48 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+03:49 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+03:54 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+03:54 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+04:00 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+04:00 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+04:00 -!- enochazariah_ [uid710351@id-710351.hampstead.irccloud.com] has quit [Quit: Connection closed for inactivity]
+04:06 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+04:06 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+04:12 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+04:16 -!- jerryf [~jerryf@user/jerryf] has quit [Ping timeout: 266 seconds]
+04:18 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+04:18 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+04:24 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+04:27 -!- jerryf [~jerryf@user/jerryf] has quit [Ping timeout: 264 seconds]
+04:29 -!- bitdex [~bitdex@gateway/tor-sasl/bitdex] has quit [Remote host closed the connection]
+04:29 -!- bitdex [~bitdex@gateway/tor-sasl/bitdex] has joined #bitcoin-core-dev
+04:32 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+04:32 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+04:34 -!- mudsip [~mudsip@user/mudsip] has joined #bitcoin-core-dev
+04:35 -!- mudsip [~mudsip@user/mudsip] has quit [Client Quit]
+04:39 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+04:39 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+04:47 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+04:47 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+04:54 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+04:57 -!- jerryf [~jerryf@user/jerryf] has quit [Ping timeout: 269 seconds]
+05:00 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+05:00 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+05:07 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+05:08 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+05:10 -!- memset [~memset@gateway/tor-sasl/memset] has quit [Remote host closed the connection]
+05:10 -!- memset [~memset@gateway/tor-sasl/memset] has joined #bitcoin-core-dev
+05:12 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+05:13 -!- Guest63 [~Guest63@2804:14d:1288:8572:20a2:b6c9:93fa:1503] has joined #bitcoin-core-dev
+05:13 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+05:16 -!- Guest63 [~Guest63@2804:14d:1288:8572:20a2:b6c9:93fa:1503] has quit [Client Quit]
+05:18 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+05:18 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+05:24 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+05:24 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+05:30 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+05:30 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+05:36 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+05:36 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+05:42 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+05:42 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+05:43 -!- Guest63 [~Guest63@2804:14d:1288:8572:20a2:b6c9:93fa:1503] has joined #bitcoin-core-dev
+05:43 -!- Guest63 [~Guest63@2804:14d:1288:8572:20a2:b6c9:93fa:1503] has quit [Client Quit]
+05:48 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+05:48 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+05:50 -!- nervana21 [~bitnode@user/nervana21] has joined #bitcoin-core-dev
+05:54 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+05:54 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+05:59 -!- nervana21 [~bitnode@user/nervana21] has quit [Ping timeout: 251 seconds]
+06:00 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+06:00 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+06:06 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+06:06 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+06:06 -!- memset [~memset@gateway/tor-sasl/memset] has quit [Remote host closed the connection]
+06:07 -!- memset [~memset@gateway/tor-sasl/memset] has joined #bitcoin-core-dev
+06:11 -!- eugenesiegel [~eugenesie@user/eugenesiegel] has joined #bitcoin-core-dev
+06:12 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+06:12 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+06:16 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+06:17 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+06:18 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+06:19 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+06:24 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+06:24 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+06:30 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+06:30 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+06:36 -!- moneyball_______ is now known as Moneyball
+06:36 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+06:37 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+06:37 < Moneyball> #topic Bitcoin Core and AI usage, perception and reality
+06:42 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+06:42 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+06:47 -!- purpleKarrot [~purpleKar@user/purpleKarrot] has joined #bitcoin-core-dev
+06:48 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+06:49 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+06:49 -!- jonatack [~jonatack@user/jonatack] has quit [Quit: WeeChat 4.10.0]
+06:54 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+06:54 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+06:54 -!- bugs_ [~bugs@user/bugs/x-5128603] has joined #bitcoin-core-dev
+07:00 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+07:00 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+07:08 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+07:10 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+07:15 -!- nervana21 [~bitnode@user/nervana21] has joined #bitcoin-core-dev
+07:15 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+07:18 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+07:19 -!- nervana21 [~bitnode@user/nervana21] has quit [Ping timeout: 254 seconds]
+07:21 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+07:21 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+07:27 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+07:27 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+07:30 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+07:30 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+07:30 -!- deadmanoz [~deadmanoz@user/deadmanoz] has quit [Ping timeout: 270 seconds]
+07:31 -!- deadmanoz [~deadmanoz@user/deadmanoz] has joined #bitcoin-core-dev
+07:33 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+07:33 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+07:39 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+07:39 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+07:45 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+07:45 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+07:46 -!- antanst71255 [~antanst@user/antanst] has quit [Quit: Ping timeout (120 seconds)]
+07:47 -!- antanst71255 [~antanst@user/antanst] has joined #bitcoin-core-dev
+07:47 -!- Earnestly [~earnest@user/earnestly] has quit [Ping timeout: 241 seconds]
+07:49 -!- Earnestly [~earnest@user/earnestly] has joined #bitcoin-core-dev
+07:51 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+07:52 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+07:56 -!- nervana21 [~bitnode@user/nervana21] has joined #bitcoin-core-dev
+07:59 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+08:00 -!- nervana21 [~bitnode@user/nervana21] has quit [Ping timeout: 245 seconds]
+08:03 -!- jerryf [~jerryf@user/jerryf] has quit [Ping timeout: 245 seconds]
+08:06 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+08:06 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+08:09 -!- nervana21 [~bitnode@user/nervana21] has joined #bitcoin-core-dev
+08:10 -!- andrewtoth [~andrewtot@gateway/tor-sasl/andrewtoth] has joined #bitcoin-core-dev
+08:12 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+08:12 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+08:18 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+08:18 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+08:24 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+08:24 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+08:30 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+08:30 -!- memset [~memset@gateway/tor-sasl/memset] has quit [Remote host closed the connection]
+08:30 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+08:31 -!- memset [~memset@gateway/tor-sasl/memset] has joined #bitcoin-core-dev
+08:32 -!- janb84 [~janb84@user/janb84] has quit [Read error: Connection reset by peer]
+08:32 -!- janb84 [~janb84@user/janb84] has joined #bitcoin-core-dev
+08:33 -!- antanst71255 [~antanst@user/antanst] has quit [Quit: Ping timeout (120 seconds)]
+08:34 -!- antanst71255 [~antanst@user/antanst] has joined #bitcoin-core-dev
+08:36 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+08:36 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+08:38 -!- antanst71255 [~antanst@user/antanst] has quit [Client Quit]
+08:38 -!- antanst71255 [~antanst@user/antanst] has joined #bitcoin-core-dev
+08:42 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+08:42 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+08:44 -!- antanst71255 [~antanst@user/antanst] has quit [Ping timeout: 242 seconds]
+08:46 -!- antanst71255 [~antanst@user/antanst] has joined #bitcoin-core-dev
+08:48 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+08:48 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+08:54 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+08:54 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+08:59 -!- pseudoramdom [~pseudoram@2001:1890:2013:5102::582] has joined #bitcoin-core-dev
+08:59 -!- pseudoramdom [~pseudoram@user/pseudoramdom] has changed host
+09:00 -!- tigerMafia [~tigerMafi@user/watAboutMe] has joined #bitcoin-core-dev
+09:00 < stickies-v> #startmeeting
+09:00 < corebot> stickies-v: Meeting started at 2026-08-27T16:00+0000
+09:00 < corebot> stickies-v: Current chairs: stickies-v
+09:00 < corebot> stickies-v: Useful commands: #action #info #idea #link #topic #motion #vote #close #endmeeting
+09:00 < corebot> stickies-v: See also: https://hcoop-meetbot.readthedocs.io/en/stable/
+09:00 < eugenesiegel> hi
+09:00 < corebot> stickies-v: Participants should now identify themselves with '#here' or with an alias like '#here FirstLast'
+09:00 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+09:00 < yuvicc> hi
+09:00 < sedited> hi
+09:00 < dergoegge> hi
+09:00 < pseudoramdom> hi
+09:00 < janb84> hi
+09:00 < andrewtoth> hi
+09:00 < lightlike> hi
+09:00 < stickies-v> #bitcoin-core-dev Meeting: _aj_ abubakarsadiq achow101 andrewtoth b10c brunoerg cfields danielabrozzoni darosior dergoegge dzxzg eugenesiegel fanquake fjahr furszy hebasto hodlinator instagibbs janb84 jarolrod johnny9dev jonatack josie jurraca kanzure kevkevin laanwj lightlike l0rinc maflcko marcofleon maxedw Murch pinheadmz provoostenator pseudoramdom ryanofsky sdaftuar sedited sipa sliv3r__ sr_gi stickies-v 
+09:00 < stickies-v> stringintech theStack vasild willcl-ark
+09:00 < Moneyball> hi
+09:00 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+09:00 < johnny9dev> hi
+09:00 < danielabrozzoni> hi
+09:00 < hebasto> hi
+09:00 < tigerMafia> hi
+09:00 < stringintech> hi
+09:00 -!- l0rinc [~l0rinc@user/l0rinc] has joined #bitcoin-core-dev
+09:00 < nervana21> hi
+09:00 < pinheadmz> Yo
+09:00 < l0rinc> hi
+09:01 < yancy> hi
+09:01 < stickies-v> There is one pre-proposed meeting topics this week. Any last minute ones to add?
+09:01 < dergoegge> Steve had one above
+09:02 < dergoegge> "Bitcoin Core and AI usage, perception and reality"
+09:02 -!- dzxzg [~instrumen@user/dzxzg] has joined #bitcoin-core-dev
+09:02 < stickies-v> yup, that's the "one", ty
+09:02 < dzxzg> hi
+09:02 < dergoegge> oh sorry misread the message
+09:02 < stickies-v> #topic Fuzzing WG Update (dergoegge, marcofleon)
+09:03 < dergoegge> no update, but i did want to mention that this is a cool PR: https://github.com/bitcoin/bitcoin/pull/36098
+09:03 < maxedw> hi
+09:03 < stickies-v> #topic Kernel WG Update (sedited)
+09:03 < sedited> nothing from me
+09:04 -!- winterrdog [~winterrdo@102.222.234.125] has joined #bitcoin-core-dev
+09:05 < stickies-v> #topic Benchmarking WG Update (l0rinc, andrewtoth)
+09:05 < l0rinc> Recently I've been focusing on finding accidental quadratic algos throughout the codebase (after bumping into one in #35889), had a few good findings
+09:05 < corebot> https://github.com/bitcoin/bitcoin/issues/35889 | rpc: avoid quadratic `gettxspendingprevout` work and preserve order by l0rinc · Pull Request #35889 · bitcoin/bitcoin · GitHub
+09:05 < l0rinc> rebasing and reviewing similar findings, that's it from me
+09:05 < andrewtoth> nothing from me
+09:06 < stickies-v> #topic QML GUI WG Update (johnny9dev)
+09:06 -!- Murch[m] [~murch@user/murch] has changed host
+09:06 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+09:06 < johnny9dev> We have a new contributor to the project, uqlidi, who has been helping fix up bugs and compatibility issues with the qml. pseudoramdom has been doing a lot of good work addressing feedback on the preview release and making really nice design updates to all of the views. epicleafies has also been addressing feedback on the Acitivity page
+09:07 < johnny9dev> I made a good number of updates to the first staging branch pr (bitcoin-core/gui-qml#871)
+09:07 < corebot> https://github.com/bitcoin-core/gui-qml/issues/871 | Staging Initial Foundational commits by johnny9 · Pull Request #871 · bitcoin-core/gui-qml · GitHub
+09:07 < bitcoin-git> [gui-qml] uqlidi opened pull request #881: fix: make `CoreCheckBox` import `org.bitcoincore.qt` (qt6...fix/make-corecheckbox-import-bitcoincore-qt) https://github.com/bitcoin-core/gui-qml/pull/881
+09:07 < bitcoin-git> [bitcoin] fanquake opened pull request #36100: ci: use LLVM 23 in *san, fuzz, *cross jobs (master...ci_llvm_23) https://github.com/bitcoin/bitcoin/pull/36100
+09:07 < bitcoin-git> [bitcoin] fanquake pushed 3 commits to master: https://github.com/bitcoin/bitcoin/compare/da1cb4dd90e5...204256c73f28
+09:07 < bitcoin-git> bitcoin/master d564b02 Hennadii Stepanov: iwyu: Add temporary mapping to work around upstream bug
+09:07 < bitcoin-git> bitcoin/master b3ff9c4 Hennadii Stepanov: iwyu: Fix warnings in `src/interfaces` and treat them as errors
+09:07 < bitcoin-git> bitcoin/master 204256c merge-script: Merge bitcoin/bitcoin#35900: iwyu: Fix warnings in `src/interfaces` and tr...
+09:07 < bitcoin-git> [bitcoin] fanquake merged pull request #35900: iwyu: Fix warnings in `src/interfaces` and treat them as errors (master...260805-iwyu-interfaces) https://github.com/bitcoin/bitcoin/pull/35900
+09:07 < bitcoin-git> [bitcoin] purpleKarrot opened pull request #36101: doc: Add an error handling strategy (master...error-handling-strategy) https://github.com/bitcoin/bitcoin/pull/36101
+09:07 < bitcoin-git> [bitcoin] hodlinator opened pull request #36102: util: Replace !ContainsNoNUL() with ContainsNUL() (master...2026/08/ContainsNUL) https://github.com/bitcoin/bitcoin/pull/36102
+09:07 < bitcoin-git> [bitcoin] fanquake opened pull request #36103: validation: remove unused code (master...validation_dead_code) https://github.com/bitcoin/bitcoin/pull/36103
+09:07 < Murch[m]> hi
+09:07 < achow101> hi
+09:07 < johnny9dev> as a reminder, the staging branch is what we hope to merge into bitcoin/bitcoin
+09:07 -!- winterrdog [~winterrdo@102.222.234.125] has quit [Read error: Connection reset by peer]
+09:08 < johnny9dev> I got some really good feedback on it already and have shifted some things around. One of the bigger changes will be balancing our test automation strategy by including an integration suite that run QtTest to test the Gui+Node in process
+09:08 < hebasto> asking for more eyes in qml#881 as it paves the way for further work on the staging branch
+09:08 < corebot> hebasto: Error: That URL raised <HTTP Error 404: Not Found>
+09:08 < Murch[m]> It’s great to see the progress y’all are making. Maybe we can do another testing party when you think it’s in a good place for that
+09:09 < johnny9dev> this will let us move a lot of our end to end functional regression tests into a c++ qttest target
+09:09 < johnny9dev> 871*
+09:09 < hebasto> ^ yes, https://github.com/bitcoin-core/gui-qml/pull/871
+09:10 < johnny9dev> I'm iterating on the description to try to make it clear what the decisions currently made are and I hope that the current description should at least make it clear the main things the PR does to create the initial foundation
+09:10 -!- jonatack [~jonatack@user/jonatack] has joined #bitcoin-core-dev
+09:11 < hodlinator> hi
+09:11 < jonatack> hi
+09:11 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+09:12 < johnny9dev> but yeah looking for feedback and opinions on the staging PR now as it will have a significant impact on the staging going forward.
+09:12 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+09:12 < johnny9dev> and everything learned from the foundation staging PR i will be working to add to our development qt6 branch
+09:12 < johnny9dev> that is all 
+09:13 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+09:14 < stickies-v> #topic Bitcoin Core and AI usage, perception and reality (Moneyball)
+09:14 < Moneyball> Several people, including donors have approached me expressing concern that Bitcoin Core devs "aren't paranoid enough about AI cyber threats" and that the Core project isn't sufficiently leveraging AI tools for tasks like assisting issue and PR triage, code review, and test case development.
+09:14 < Moneyball> I've spoken to a few Core devs, so I am aware of some AI activity and usage within Core, but to be honest I don't have a clear sense of the extent of its use. I sense that it is used more than the current perception suggests. It is also my sense that its usage could increase further. In any case, I don't really have anything substantial to share with folks.
+09:14 < Moneyball> Thoughts on publishing more about how individuals or the project as a whole is utilizing AI for offense and defense?
+09:15 -!- satsfy_ [~satsfy@user/satsfy] has quit [Ping timeout: 242 seconds]
+09:17 < pinheadmz> We're all using Claude lol
+09:17 < pinheadmz> There's a few engineers like furszy building their own harness and scanning for things 24/7 or however many tokens he gets per week
+09:18 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+09:18 < pinheadmz> Not to mention Rob Ham and "red team"
+09:18 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+09:18 < achow101> plenty of people are using ai for assistance. but just because it exists also does not mean that everyone needs to use it
+09:18 < yuvicc> project loupe as well ig
+09:18 < stickies-v> I use LLMs quite heavily for additional review. I'll do my own manual review, have an LLM do its own parallel pass, and then combine both / dive deeper from there
+09:19 < achow101> and frankly, ai use has produced so much noise and garbage that i'm not interested in seeing more from people who don't know what they're doing
+09:19 < Moneyball> I think that attitude is the problem
+09:19 < stickies-v> but yeah I prefer people owning their reviews instead of fully automated AI reports which seem to be very very noisy on our codebase
+09:19 < Moneyball> I'm well aware of where AI is and is not valuable.
+09:19 < eugenesiegel> I am not involved in red team or project loupe or anything and i can't speak for the project as a whole, but I don't use claude that much except for dumb scripts. I also think a lot more effort could be spent training people to actually spot bug classes instead of relying so much on AI but that's probably a whole conversation. I'd also be worried
+09:19 < eugenesiegel> about this encouraging or forcing contributors to use AI and I can think of another project that uses it really heavily and I honestly think the quality of the codebase has gone down since. Probably have more opinions that can't fit in here, and I'm not an ai doomer or anything...
+09:20 < Murch[m]> My impression is that many or most of the Bitcoin Core contributors have started incorporating AI tooling into their workflows and given their prior expertise get great use out of it.
+09:21 < Moneyball> My high level point is "how does the bitcoin ecosystem know what the Core project is and is not doing with respect to AI in order to reassure folks that the contributors to the project aren't sticking their heads in the sand"
+09:21 < dzxzg> So a broad spectrum of views and ways that people are using it
+09:21 < Moneyball> I'm here to help. I'm aware of several efforts. Not all. But I don't really know what to tell people who ask.
+09:21 < achow101> The "project" is not using it in any way. individuals are using ai in a variety of ways
+09:21 < sedited> Moneyball, I'm not sure where the impression of sticking their heads in the send comes from.
+09:21 < jonatack> Moneyball: from where do these folks get their impressions
+09:21 < eugenesiegel> I kind of equate ai scanning to something like sqlmap where you scan for low hanging fruit (i.e. common bug classes like reading past end of buffer, etc) and more complicated bugs are probably not going to be found with it (yet).
+09:22 < andrewtoth> I use AI tools for absolutely everything. I don't think I can go back to not being able to use it. I never post text I expect other humans to read from AI though, I always rewrite in my own words so I am sure I understand what I'm writing.
+09:22 < Moneyball> yes achow101 that is precisely why i said contributors
+09:22 < Moneyball> as i knew you'd have snide remarks
+09:22 < sedited> We're frustrated with slop contributions, yes, but I think many of us are using the tools pretty effectively.
+09:23 < andrewtoth> eugenesiegel: I see the opposite. It's finding obscure bugs that would be very difficult for humans to find.
+09:23 < Moneyball> jonatack i'm not sure where people get their impressions but wherever they search or look i don't think they'd find the answer to the question
+09:23 < eugenesiegel> andrewtoth: where? in bitcoin core or somewhere else?
+09:24 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+09:24 -!- winterrdog [~winterrdo@102.222.234.125] has joined #bitcoin-core-dev
+09:24 < andrewtoth> clightning is one example, I haven't seen the bugs that were found though
+09:24 < johnny9dev> What can be done even? As these things seem to get better it doesnt look like anything other than people being even more productive?
+09:24 < Moneyball> one approach that project goose is trying to deal with slop is https://goose-docs.ai/blog/2026/07/30/issues-are-the-new-prs/
+09:25 < Moneyball> a group of us are meeting in a couple of weeks to discuss learnings from Loupe and red team, how projects can handle triage of these reports, and we will be publishing best practices. this will include l0rinc and justin from Localhost
+09:25 < lightlike> there are different ways: a few people use AI to find ideas for issues/PRs (I don't), more people (including me) use it as a tool in PRs / issues they've come up with by themselves.
+09:26 -!- winterrdog [~winterrdo@102.222.234.125] has quit [Read error: Connection reset by peer]
+09:26 < eugenesiegel> andrewtoth: I haven't really seen an example of something that's so complicated a human couldn't find it, but if I'm sticking my head in the sand I'd like to know. May be anecdotal, but I haven't seen nearly the same amount of attention given to something like syzkaller in the past (linux kernel fuzzer) compared to the attention AI is getting now
+09:27 < andrewtoth> what about the zcash inflation bug?
+09:27 < Moneyball> eugenesiegal i can definitely state that Loupe has found many, many vulns across dozens of projects. some are high severity. many are medium severity but these can be chained together to create a high severity outcome
+09:27 -!- antanst71255 [~antanst@user/antanst] has quit [Ping timeout: 258 seconds]
+09:27 < eugenesiegel> andrewtoth: I don't know much about the zcash bug, so I'm probably out of the loop
+09:28 < johnny9dev> Even if a human can find it the speed and thoroughness of the frontier models are undeniable 
+09:28 < andrewtoth> Moneyball: if the AI can't chain the medium severity bugs itself to produce the high severity, then I find these claims kind of hand-wavy
+09:29 < andrewtoth> eugenesiegel: https://forum.zcashcommunity.com/t/the-orchard-counterfeiting-vulnerability-and-next-steps/56015
+09:29 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+09:29 < eugenesiegel> Moneyball: speaking from experience, some of the codebases I've seen in the space are really lacking on the security side and are missing really basic checks. but i'll wait for public disclosure to judge for myself
+09:29 < sedited> Moneyball, "issues as PRs" has not worked well here so far. Many bots do take things off the issue tracker, but a lot of them produce slop that then needs more triaging and work from more people. Take this PR from today for example, which took away attention from a bunch of us, but didn't do anything to move things forward: https://github.com/bitcoin/bitcoin/pull/36055 . Can obviously say
+09:29 < sedited> that the problem is the issue tracker, but would take significant reform to change.
+09:30 < dergoegge> Personally I think core has been holding up well against the "AI threat" because we have very strong testing for most important things, that other project like e.g. some of the lightning impls have not invested in the prior years
+09:30 < sedited> dergoegge +1
+09:30 < jonatack> I use free AI sometimes to verify things. I don't use it at all (for now) for writing. I would like to ramp up on open source models but in El Salvador it is hard to obtain hardware without importing it yourself. Frontier token use is a cost I believe I can't take on alone.
+09:30 < jonatack> dergoegge: agree
+09:30 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+09:30 < johnny9dev> yes bitcoin's strong engineering fundamentals are paying off
+09:31 < dergoegge> That said I do think AI vuln scanning is obviously a part of any project that wants to take security seriously
+09:31 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+09:31 < jonatack> yes
+09:31 < Moneyball> sedited i'd be happy to engage you and interested folks on exploring how to handle AI noise. can follow up after
+09:31 < l0rinc> I started scanning for bugs and either fixing them or reporting them to security list (to Core and a few other projects) for the past few months. Unfortunately this is often costing me thousands of dollars per day so far but OpenSats just approved a mini-grant that I could use to continue these scans.
+09:32 < l0rinc> I understand that some people think the findings are garbage - which was the case up until a few months ago -, but that's not the case anymore, basically all of the findings are real now, but without the cyber capabilities only the low-severity ones gets surfaced.
+09:33 < eugenesiegel> andrewtoth: thanks for the link. I just don't know how to evaluate this, so I don't really know how complicated it is. Though there's something to be said that it wasn't found prior and was only found via AI
+09:33 -!- satsfy_ [~satsfy@user/satsfy] has joined #bitcoin-core-dev
+09:33 < achow101> Moneyball: I don't understand what the concern in your original question is. Do people think that ai is not being used?
+09:33 < Moneyball> also the question of "how is Core utilizing AI" isn't just about AI security scanning but also other use cases of AI
+09:34 < Moneyball> achow101 people have a belief the Core project is behind the curve. I don't have anything to point them to that counters that view
+09:34 < tigerMafia> Moneyball: about mindless AI PRs (slop) - i agree with achow101, if someone is does not know what they're doing, LLMs will just amplify that skill issue a lot more and make it a pain for the reviewers. personally, i have been faced with fully AI PRs where authors bank on reviewers to steer their harness (not so good). if someone copy-pastes AI output, bit for bit, i ignore the PR. 
+09:34 < maxedw> I got to see Furzy's harness in action and it was quite impressive, I know he has been scanning the codebase for months. If external people want to help in those efforts he could probably massively benefit from access to the most capable model without the security classifiers.
+09:35 -!- winterrdog [~winterrdo@102.222.234.125] has joined #bitcoin-core-dev
+09:35 < Moneyball> tigerMafia i fully appreciate that and sympathize with you. we're seeing it across many projects and as mentioned there are various attempts to combating it.
+09:35 -!- Rob1Ham [~Rob1Ham@136.41.161.69] has joined #bitcoin-core-dev
+09:36 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+09:36 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+09:37 < pseudoramdom> How are other projects giving the perception of "using AI" apart from just scanning issues? 
+09:37 -!- winterrdog [~winterrdo@102.222.234.125] has quit [Read error: Connection reset by peer]
+09:37 < Murch[m]> My take away is that many contributors have been using AI, the project has stood up well to recent red team probing, but AI tools have not been incorporated at the project level yet. Presumably the absence of the latter is what prompts the concern
+09:37 < dergoegge> Not to jinx it but, maybe the fact that the bitcoin network is still up and running, is a hint that core is not behind on things?
+09:37 < jonatack> Moneyball: AI has been (over-)used to prompt finished-looking, verbose, often nonsensical, techno-babbly BIP drafts by nyms that (often) open them directly as PRs to the BIPs repo. OTOH, it is being used well by established bitcoin protocol devs to propose useful BIPs.
+09:37 < sedited> sounds like the problem is more that people are not blogging enough :P
+09:37 < Murch[m]> pseudoramdom: E.g., automatic review of new issues and PRs by agents
+09:37 < achow101> perhaps people are more interested in doing useful things with ai rathe than talking about it
+09:38 -!- winterrdog [~winterrdo@102.222.234.125] has joined #bitcoin-core-dev
+09:38 < andrewtoth> I would not be happy if we had a copilot-like bot that posted automatic review comments, if that is an idea someone would have
+09:39 < l0rinc> andrewtoth: copilot is not very smart, but making drahtbot smarter to find non-surface level findings would be very useful
+09:39 < yancy> Perhaps part of the perception issue is also that core is a C++ code base, and AI is not maybe as effective at writing C++ as it is Rust due to the type system.  Just speculating why perception is different from the reality.
+09:39 < johnny9dev> It does almost feel too early to add anything additional to bitcoin core. On top of it, bitcoin core is likely extremely well understood already by llms so is there any markdown file that can even really add any additional value to this?
+09:39 < l0rinc> yancy: LLMs are very proficient in C++ now
+09:39 < johnny9dev> codex is very good at modern c++
+09:39 < andrewtoth> l0rinc: I don't want automatic comments from bots. If a reviewer uses a smart AI and then triages the results in their own words, ensuring no false positives, that would be welcome.
+09:39 < tigerMafia> andrewtoth: +1
+09:40 < lightlike> agree, AI during review is most helpful if you can interact with it / steer it into directions where real issues may be. an automatic AI review isn't helpful, everyone can do a rough analysis locally and then take it from there.
+09:40 < andrewtoth> I can run my own AI reviewer myself, I don't need it posting on my PR
+09:40 < l0rinc> andrewtoth: I sympathise with the feeling, but some PRs have so many bugs that I would prefer an AI point them out so by the time we get to it the trivial ones are already handled
+09:40 -!- winterrdog [~winterrdo@102.222.234.125] has quit [Read error: Connection reset by peer]
+09:41 < andrewtoth> no
+09:41 < l0rinc> yes :)
+09:41 < eugenesiegel> are there certain areas that LLMs are lacking in or are security engineers cooked?
+09:41 < achow101> i absolutely do not want automated review
+09:42 < maxedw> also not a fan of automated review, I use privately and find 4/5 complaints are non-issues or random opinion
+09:42 < tigerMafia> andrewtoth: +1. already github has an issue with handling comments.. now imagine the volume of comments that would be made by copilot
+09:42 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+09:42 -!- Rob1Ham_ [~Rob1Ham@136.41.161.69] has joined #bitcoin-core-dev
+09:43 < Moneyball> eugenesiegel there is still value in the human driving the LLM to find security vulns. being a subject matter expert helps.
+09:43 -!- Rob1Ham_ [~Rob1Ham@136.41.161.69] has left #bitcoin-core-dev []
+09:44 < l0rinc> I also don't like spammy comments, but if configured well, an automated AI review would be extremely useful. We all have PTSD from last year's models which were mostly noise: that's not the case anymore.
+09:45 < Murch[m]> Well, seeing the garbage we get in Optech and the BIPs repository, it doesn’t seem everyone has stopped using last year’s models
+09:45 < jonatack> :D
+09:45 -!- winterrdog [~winterrdo@102.222.234.125] has joined #bitcoin-core-dev
+09:45 < _aj_> have individual contributors run automatied AI reviews, read/understand them, then pass on the key findings without huge chunks of AI claude-ish verbiage
+09:45 < eugenesiegel> do people have certain prompts they use for this? Even when I ask claude benign security-related questions, it refuses to respond. And I haven't gotten access to the chinese models yet :/
+09:45 -!- jerryf [~jerryf@user/jerryf] has quit [Ping timeout: 248 seconds]
+09:45 < tigerMafia> eugenesiegel: chinese models tend to respond, no qualms
+09:46 < andrewtoth> _aj_: +1
+09:47 -!- winterrdog [~winterrdo@102.222.234.125] has quit [Read error: Connection reset by peer]
+09:47 -!- winterrdog [~winterrdo@102.222.234.125] has joined #bitcoin-core-dev
+09:47 < janb84> _aj_: for now the best strategy I think
+09:47 < l0rinc> _aj_: absolutely, but that's a lot of work, it shouldn't be the only way to receive feedback - this way I personally just ignore reviewing PRs that aren't structured well. Maybe we could enable AI review for new contributors only and see how well it performs.
+09:47 < fanquake> _aj_: mixed output on that front. I think we still need to push for better understanding of issues before they are being forwarded, along with the production of accompanying (functional) tests
+09:48 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+09:48 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+09:48 < andrewtoth> the "read/understand them" part is the hardest
+09:48 < andrewtoth> otherwise you offload that onto the author, rather than that being the reviewer's job
+09:49 < l0rinc> if the AI only receives a patch (without any tool calling and full repo access) we can't expect depth. But a proper review bot that checks out the change and does its thing is extremely capable lately!
+09:50 < willcl-ark> people are worried we don't have enough AI in the Github repo?
+09:50 < tigerMafia> :)
+09:50 < andrewtoth> l0rinc: we can all do that locally though, no need to pollute github with it
+09:50 < l0rinc> we can, but most people aren't and we're commenting on stuff that an AI could have found
+09:50 < Moneyball> willcl-ark not sure if that is a joke or actual question
+09:51 < achow101> l0rinc: so?
+09:51 < willcl-ark> Moneyball: I'm catching up from "donors have approached me expressing concern that Bitcoin Core devs "aren't paranoid enough about AI cyber threats" and that the Core project isn't sufficiently leveraging AI tools for tasks like assisting issue and PR triage, code review, and test case development."
+09:51 -!- winterrdog [~winterrdo@102.222.234.125] has quit [Read error: Connection reset by peer]
+09:51 -!- winterrdog [~winterrdo@102.222.234.125] has joined #bitcoin-core-dev
+09:51 -!- winterrdog [~winterrdo@102.222.234.125] has quit [Client Quit]
+09:51 < l0rinc> ahow101: so if human review is the bottleneck, let's use AIs to help with the low hanging comments
+09:51 < achow101> ai found an issue, human finds an issue, same result, issue is found and fixed
+09:52 < achow101> like if i'm reviewing a pr, and someone else reviews the same pr, and we both find the same issue, that's not a problem. don't see why it would be any different if an ai did it or not
+09:53 < l0rinc> achow101: no, it's like proofreading a document and you find typos - a spell checker should have caught those instead of wasting human reviewer efforts
+09:54 -!- Rob1Ham [~Rob1Ham@136.41.161.69] has quit [Quit: Client closed]
+09:54 -!- Rob1Ham_ [~Rob1Ham@user/Rob1Ham-:72140] has joined #bitcoin-core-dev
+09:54 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+09:54 < _aj_> l0rinc: same applies to a linter or running CI; in this case the idea is that they're not quite reliable enough to run as part of CI on every PR, so you should run them yourself as an author or reviewer
+09:54 < achow101> i don't think it's wasting, but i get your point
+09:55 < eugenesiegel> do people have any tips to make the output of the llms less noisy or to focus on things that are actionable?
+09:55 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+09:55 < Rob1Ham_> Hello everyone, first time using IRC in 20 years, I was told to join, happy to help however I can.
+09:55 -!- Rob1Ham_ is now known as Rob1Ham
+09:55 < willcl-ark> AFAIK ~ everyone is using AI tooling locally to assist with coding, review, building tooling, benchmarking, test case development, fuzzing, whatever else they're working on. The only thing "missing" for these worried people therefore is the "lack" of automated bot review in Github?
+09:55 < johnny9dev> eugenesiegel: not joking, tell it thats what you want
+09:56 < l0rinc> _aj_: "they're not quite reliable enough to run as part of CI on every PR" - I'd argue they absolutely are reliable enough now, given proper prompting and context and price
+09:56 < _aj_> l0rinc: other people don't agree, and arguing isn't going to convince them
+09:56 < Murch[m]> willcl-ark: That seems to be the takeaway
+09:56 < Moneyball> willcl-ark no one said anything about automated bot review in github as what is lacking in public communications
+09:56 < jonatack> willcl-ark: could also use hardware or token budgets, but maybe that's only me
+09:56 < Moneyball> murch how is that the takeaway? it seems made up? i never said that
+09:57 < andrewtoth> Can we just have a guideline to run your code through an LLM before posting? Nobody wants to read the output of an LLM on your PR, they want humans to write and respond to.
+09:57 < willcl-ark> OK perhaps I'm missing what is being looked for here. Publishing which tools we use and how?
+09:57 < johnny9dev> can't someone just go and try to secretly prove out an AI review bot?
+09:57 < Murch[m]>  “the Core project isn't sufficiently leveraging AI tools for tasks like assisting issue and PR triage, code review, and test case development.”
+09:57 < sipa> i'm not sure what the point of this discussion is
+09:58 < Moneyball> murch that statement doesn't imply or state that auto review bots in github is required?
+09:58 < Murch[m]> Well, if you have a different take away, how about you share yours
+09:58 < jonatack> Moneyball: you would like info to point to, that can reassure worried people IIUC
+09:58 < willcl-ark> jonatack: I mean, I wouldn't be opposed to a dev token fund; then people could see how many token we were using!
+09:58 < stickies-v> we're also coming up on time. I suggest we wrap this up and if there are follow up specifics to be discussed after today's initial discussion, we can do that next week?
+09:58 < dergoegge> I think the takeaway is that we should be communicating our work more (which we discussed at prior coredevs as well)
+09:59 < lightlike> Moneyball: then what do you suggest should change from the status quo, where already almost everyone  uses AI locally, with a few projects doing systematic bug finding? What would be "state of the art" if the status quo isnt?
+09:59 < sipa> Moneyball: are you asking what people are using? trying to encourage some kind of usage? better documenting? 
+09:59 < Moneyball> sipa i was asked to come here to raise this topic. i'm merely asking "what content can be shared with inquiring minds about how the Core project isn't behind the times on utilizing AI." i have never brought up the topic of "you must use a review bot in github" that is made up.
+09:59 < andrewtoth> that was me bringing up it was a bad idea, sorry for the noise
+09:59 < Moneyball> andrewtoth no worries
+10:00 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+10:00 < willcl-ark> I think that's the main way one would see issue and pr triage/review taking place in the open by AI
+10:00 < achow101> Moneyball: then this discussion should suffice as public documentation that it's happening
+10:00 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+10:00 < Rob1Ham> I have plenty of thoughts on the topic, but don't wish to further derail the conversation if it is out of scope for this discussion. I'm happy to share my perspective at another time or individually, anyone is welcome to reach out to me anytime.
+10:01 < bitcoin-git> [bitcoin] maflcko opened pull request #36104:  refactor: Enforce iwyu on src/init  (master...2608-iwyu-init) https://github.com/bitcoin/bitcoin/pull/36104
+10:01 < Murch[m]> Moneyball: your initial topic prompt specifically stated that people had the impression that we were behind the curve on AI, because “the Core project isn't sufficiently leveraging AI tools for tasks like assisting issue and PR triage, code review, and test case development.”, so it’s confusing to me that you push back on me concluding that someone looked at our repository and found it strange that we don’t have automated PR review.
+10:01 < jonatack> Rob1Ham: after the meeting can work, too, if people aren't against
+10:01 < BlueMatt> speaking on the LDK end, where we have a project that takes security very seriously but is also a rather complicated set of code - we get very high value with having a cheap opus review bot do a first pass on PRs. It regularly finds real issues, and that's a *really* dumb bot, people doing manual review passes with better LLMs obviously finds much more. On the security side, LLMs are better at finding almost any class of bug than humans at 
+10:01 < BlueMatt> this point, there's almost no question, and if its not true give it about two months.
+10:02 < Moneyball> achow101 i can summarize this discussion and post about it or speak about it. i'd have many more detailed questions though. i could write these questions down and share. then if any Core dev is so inclined, you could answer them in a post or here or privately with me and let me know what you are comfortable with sharing publicly
+10:02 < BlueMatt[m]> there's a lot of value in being a subject-matter expert and driving it in the right direction
+10:02 < Rob1Ham> My very brief summary is that the past month, of using either the frontier labs with cyber approved access, or the most recent open source models have seen a considerable step function in capability in finding vulnerabilites. I've used these tools for years and the past few months is a serious step fucntion.
+10:02 < l0rinc> BlueMatt: +1
+10:02 < Moneyball> murch sorry i just don't see how my statement in any way asserts auto bot github activity. it is made up.
+10:03 < BlueMatt[m]> LLMs are also at the point where I have very little desire to review human-authored code - LLMs are just better.
+10:03 < dergoegge> I had a similar discussion with Steve somewhere else, and suggested that he bring this up here. Specifically the public comms aspect.
+10:03 < dergoegge> Even though this may have derailed at the end here, I think there were some good points being made, and I'm sure this discussion can continue at a future coredev
+10:03 < dergoegge> Thank you, moneyball!
+10:03 < achow101> Moneyball: please do that
+10:03 < BlueMatt[m]> of course I also have no desire to review purely LLM-authored code where a human wasn't involved in taking a lot of care with how the code gets structured
+10:03 < Moneyball> achow101 will do. thank you.
+10:04 < l0rinc> moneyball: thanks for bringing up the topic
+10:04 < stickies-v> thanks for the discussion everyone, let's wrap it up here
+10:05 < stickies-v> #endmeeting
+10:05 < corebot> stickies-v: Meeting ended at 2026-08-27T17:05+0000
+10:05 < corebot> stickies-v: Raw log: https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-08-27_16_00.log.json
+10:05 < corebot> stickies-v: Formatted log: https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-08-27_16_00.log.html
+10:05 < corebot> stickies-v: Minutes: https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-08-27_16_00.html
+10:05 < Rob1Ham> jonatack: happy to either after this or at a later time, my goal is to take the learnings and even the harness and make those public after some time as well so others can improve on it and make it work for their specific needs
+10:05 < sedited> also, branch off is around the corner, please review https://github.com/bitcoin/bitcoin/milestone/84
+10:06 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+10:06 < johnny9dev> I am personally very curious about when building a harness was very valuable. My experience has been each time I build one, the new model just does all of what i needed already so I just wasted a lot of time when I could have been focused on my work and waiting for the new model 
+10:06 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+10:06 -!- jonatack [~jonatack@user/jonatack] has quit [Ping timeout: 246 seconds]
+10:07 -!- jonatack [~jonatack@user/jonatack] has joined #bitcoin-core-dev
+10:07 < johnny9dev> or an example of a good working review harness would be interesting
+10:09 < Rob1Ham> johnny9dev: I've found the harness to be a very signifigant differentiator in the quality of the outputs, in being able to direct certain patterns/behaviors in finding issues
+10:09 -!- dzxzg [~instrumen@user/dzxzg] has quit [Quit: onversation terminated!]
+10:10 < Rob1Ham> I've also been able to run circles out of claude/chatgpt with my harness using kimi k3/deepseekv4pro glm 5.3 etc
+10:11 < Rob1Ham> A harness also has dials that allow you to deal with precision and recall of scans, meaning do you want to only surface 100% true confirmed positive issues, or just try to get all things that are plausibly wrong with a code base, so you can use that dialing and fine tuning for different parts of the software development lifecycle based on the auidence consuming it and the intent of the
+10:11 < Rob1Ham> review.
+10:11 -!- jadi [~jadi@s216-232-13-176.bc.hsia.telus.net] has joined #bitcoin-core-dev
+10:12 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+10:12 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+10:13 -!- Guest18 [~Guest79@d75-157-212-231.bchsia.telus.net] has joined #bitcoin-core-dev
+10:13 < johnny9dev> Are you able to share your harness publically?
+10:13 < Rob1Ham> johnny9dev:  My goal is to do so! I'm trying to clean up the user experience and make it easy to configure all of the kinds of scans.
+10:14 < Rob1Ham> My inital harness was built in 30 minutes using kimi k3 in opencode to set up several loops of issues
+10:14 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+10:14 < Rob1Ham> which was a step up in performance when compared to just using a single session window
+10:14 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+10:14 < Rob1Ham> The intention is to have it tested among codebases i've scanned previoulsy, and use that for feedback and giving maintainers a time to review stuff before making it generally available, and its configurable so you can switch out models however you want.
+10:15 < Rob1Ham> and open source so other projects or teams can modify it to meet their own needs, or just take the concepts and have people reimpliment it however they wish
+10:15 < johnny9dev> Meaning instead of doing a full scan you have different prompts run separately for targeted classes of issues?
+10:16 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+10:16 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+10:18 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+10:18 < Rob1Ham> johnny9dev: exactly, I have a general quick scan looking at targetted issues such as entropy, key misamangemnet, supplychain issues, possible loss of fund codepaths etc, versus ones that are more open ended to let it be creative
+10:18 < Rob1Ham> It also somewhat turns into a bespoke harness for each codebase as it does more scans over time to identify issues
+10:18 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+10:19 < Rob1Ham> I've also done stuff like built a library hook, where it will scan a codebase, see which cryptographic concepts are being utilized, and then look for divergences between the academic theory versus code implmentations to find issues
+10:20 < johnny9dev> it certainly sounds like that will be valuable as a shared harness project  
+10:21 < Rob1Ham> I'm far from the final expert, so if nothing else can be a handy resource others can use to build even better security tools
+10:24 -!- nervana21 [~bitnode@user/nervana21] has quit [Ping timeout: 246 seconds]
+10:24 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+10:25 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+10:26 -!- pseudoramdom [~pseudoram@user/pseudoramdom] has quit [Remote host closed the connection]
+10:26 -!- twistedline [~bitcoin@1tbit.com] has quit [Ping timeout: 252 seconds]
+10:28 < johnny9dev> Rob1Ham: thank you for putting effort towards this
+10:30 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+10:30 -!- luke-jr_ [~luke-jr@user/luke-jr] has joined #bitcoin-core-dev
+10:30 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+10:35 -!- tigerMafia [~tigerMafi@user/watAboutMe] has quit [Quit: tigerMafia]
+10:35 < Rob1Ham> johnny9dev: happy to help, while I havent opened the code yet, i'm an open book about what I'm doing and happy to help anyone however I can as they explore adding the tools
+10:36 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+10:36 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+10:42 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+10:42 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+10:47 -!- bugs_ [~bugs@user/bugs/x-5128603] has quit [Quit: Leaving]
+10:48 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+10:48 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+10:48 -!- pseudoramdom [~pseudoram@2001:1890:2013:5102::582] has joined #bitcoin-core-dev
+10:49 -!- jeanpablojp [uid765865@user/jeanpablojp] has joined #bitcoin-core-dev
+10:54 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+10:55 -!- jerryf [~jerryf@user/jerryf] has quit [Ping timeout: 261 seconds]
+10:57 -!- pseudoramdom [~pseudoram@2001:1890:2013:5102::582] has quit [Remote host closed the connection]
+10:57 -!- pseudoramdom [~pseudoram@user/pseudoramdom] has joined #bitcoin-core-dev
+10:58 -!- pseudoramdom [~pseudoram@user/pseudoramdom] has quit [Remote host closed the connection]
+11:00 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+11:00 -!- ___nick___ [~quassel@82-132-236-253.dab.02.net] has quit [Ping timeout: 262 seconds]
+11:00 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+11:03 -!- jonatack [~jonatack@user/jonatack] has quit [Ping timeout: 248 seconds]
+11:03 -!- dzxzg [~dzxzg@user/dzxzg] has joined #bitcoin-core-dev
+11:04 -!- jonatack [~jonatack@user/jonatack] has joined #bitcoin-core-dev
+11:05 -!- pseudoramdom [~pseudoram@user/pseudoramdom] has joined #bitcoin-core-dev
+11:06 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+11:06 -!- cncr04s_ [~cncr04s@ns1.afxr.net] has joined #bitcoin-core-dev
+11:06 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+11:07 -!- amiti_____ [sid373138@id-373138.lymington.irccloud.com] has joined #bitcoin-core-dev
+11:07 -!- pseudoramdom [~pseudoram@user/pseudoramdom] has quit [Remote host closed the connection]
+11:07 -!- hebasto_ [sid449604@id-449604.uxbridge.irccloud.com] has joined #bitcoin-core-dev
+11:07 -!- corebot` [~limnoria@user/core-meetbot] has joined #bitcoin-core-dev
+11:08 -!- cncr04s [~cncr04s@ns1.afxr.net] has quit [Ping timeout: 240 seconds]
+11:08 -!- corebot [~limnoria@user/core-meetbot] has quit [Ping timeout: 254 seconds]
+11:08 -!- S3RK [~S3RK@user/s3rk] has quit [Ping timeout: 264 seconds]
+11:08 -!- S3RK [~S3RK@user/s3rk] has joined #bitcoin-core-dev
+11:09 -!- hebasto [sid449604@id-449604.uxbridge.irccloud.com] has quit [Ping timeout: 259 seconds]
+11:09 -!- amiti____ [sid373138@id-373138.lymington.irccloud.com] has quit [Ping timeout: 259 seconds]
+11:09 -!- hebasto_ is now known as hebasto
+11:11 < pinheadmz> fanquake #35632 is in the 32 milestone but how urgent is that. I think the most proper fix is probably in #35780 but that wont be ready for a while. is it worth opening a short term fix for the intermittent test before branch off?
+11:11 < corebot`> https://github.com/bitcoin/bitcoin/issues/35632 | intermittent ci failure: interface_http.py", line 558, in check_whitespace_in_headers // ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine · Issue #35632 · bitcoin/bitcoin · GitHub
+11:11 < corebot`> https://github.com/bitcoin/bitcoin/issues/35780 | http: linger-close after parse errors so clients can read the reply by b-l-u-e · Pull Request #35780 · bitcoin/bitcoin · GitHub
+11:12 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+11:12 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+11:18 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+11:18 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+11:20 -!- corebot` is now known as corebot
+11:24 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+11:24 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+11:31 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+11:31 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+11:38 -!- l0rinc [~l0rinc@user/l0rinc] has quit [Quit: l0rinc]
+11:39 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+11:39 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+11:41 -!- hacker4web3bitco [~hacker4we@user/hacker4web3bitco] has quit [Ping timeout: 261 seconds]
+11:41 -!- hacker4web3bitco [~hacker4we@user/hacker4web3bitco] has joined #bitcoin-core-dev
+11:42 -!- corpus [~corpus@135.129.124.58] has joined #bitcoin-core-dev
+11:44 -!- Rob1Ham [~Rob1Ham@user/Rob1Ham-:72140] has quit [Ping timeout: 257 seconds]
+11:44 -!- corpus [~corpus@135.129.124.58] has quit [Client Quit]
+11:45 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+11:45 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+11:51 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+11:52 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+11:57 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+11:57 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+12:00 -!- jonatack [~jonatack@user/jonatack] has quit [Ping timeout: 255 seconds]
+12:02 -!- jonatack [~jonatack@user/jonatack] has joined #bitcoin-core-dev
+12:03 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+12:03 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+12:09 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+12:09 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+12:15 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+12:15 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+12:16 < fanquake> pinheadz: if you're get a short-term fix in mind, worthwhile I think
+12:16 < fanquake> (at least for a look)
+12:27 -!- twistedline [~bitcoin@1tbit.com] has joined #bitcoin-core-dev
+12:45 -!- hacker4web3bitco [~hacker4we@user/hacker4web3bitco] has quit [Ping timeout: 241 seconds]
+12:45 -!- hacker4web3bitco [~hacker4we@user/hacker4web3bitco] has joined #bitcoin-core-dev
+12:57 -!- jonatack [~jonatack@user/jonatack] has quit [Ping timeout: 250 seconds]
+13:02 -!- jonatack [~jonatack@user/jonatack] has joined #bitcoin-core-dev
+13:07 -!- jonatack [~jonatack@user/jonatack] has quit [Ping timeout: 249 seconds]
+13:08 -!- dzxzgtwo [~instrumen@user/dzxzg] has joined #bitcoin-core-dev
+13:08 -!- jonatack [~jonatack@user/jonatack] has joined #bitcoin-core-dev
+13:09 -!- jadi [~jadi@s216-232-13-176.bc.hsia.telus.net] has quit [Quit: jadi]
+13:10 -!- Rob1Ham [~Rob1Ham@user/Rob1Ham-:72140] has joined #bitcoin-core-dev
+13:16 < fjahr> FYI, we have another asmap run in one week: https://github.com/bitcoin-core/asmap-data/issues/68
+13:18 -!- twistedline [~bitcoin@1tbit.com] has quit [Ping timeout: 257 seconds]
+13:22 -!- twistedline [~bitcoin@1tbit.com] has joined #bitcoin-core-dev
+13:23 -!- jonatack [~jonatack@user/jonatack] has quit [Ping timeout: 262 seconds]
+13:25 -!- twistedline [~bitcoin@1tbit.com] has quit [Remote host closed the connection]
+13:25 -!- Rob1Ham [~Rob1Ham@user/Rob1Ham-:72140] has quit [Ping timeout: 253 seconds]
+13:27 -!- twistedline [~bitcoin@1tbit.com] has joined #bitcoin-core-dev
+13:38 -!- jadi [~jadi@s216-232-13-176.bc.hsia.telus.net] has joined #bitcoin-core-dev
+13:43 -!- twistedline [~bitcoin@1tbit.com] has quit [Ping timeout: 243 seconds]
+13:45 -!- l0rinc [~l0rinc@user/l0rinc] has joined #bitcoin-core-dev
+13:48 -!- twistedline [~bitcoin@73.172.152.22] has joined #bitcoin-core-dev
+13:53 -!- dzxzgtwo [~instrumen@user/dzxzg] has quit [Quit: onversation terminated!]
+13:54 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+13:55 -!- twistedline [~bitcoin@73.172.152.22] has quit [Ping timeout: 273 seconds]
+13:55 -!- twistedline_ [~bitcoin@73.172.152.22] has joined #bitcoin-core-dev
+13:56 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+14:00 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+14:00 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+14:05 -!- twistedline [~bitcoin@1tbit.com] has joined #bitcoin-core-dev
+14:06 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+14:06 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+14:07 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+14:08 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+14:09 -!- twistedline_ [~bitcoin@73.172.152.22] has quit [Ping timeout: 261 seconds]
+14:12 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+14:12 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+14:18 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+14:18 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+14:23 -!- jadi [~jadi@s216-232-13-176.bc.hsia.telus.net] has quit [Quit: jadi]
+14:24 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+14:24 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+14:30 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+14:30 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+14:36 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+14:38 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+14:40 -!- tigerMafia [~tigerMafi@user/watAboutMe] has joined #bitcoin-core-dev
+14:40 -!- tigerMafia [~tigerMafi@user/watAboutMe] has quit [Client Quit]
+14:40 -!- winterrdog [~winterrdo@user/watAboutMe] has joined #bitcoin-core-dev
+14:42 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+14:43 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+14:45 < winterrdog> pinheadmz: i had worked on sth similar in my repo before but never committed/pushed it since i found a similar PR open. i’ve committed what i had and pushed it here: https://github.com/winterrdog/bitcoin/pull/2. might be of help, take a look
+14:47 -!- smartin [~Thunderbi@78.56.226.85] has quit [Remote host closed the connection]
+14:48 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+14:48 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+14:51 -!- winterrdog [~winterrdo@user/watAboutMe] has quit [Quit: winterrdog]
+14:54 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+14:54 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+14:54 -!- jonatack [~jonatack@user/jonatack] has joined #bitcoin-core-dev
+15:01 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+15:01 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+15:06 -!- Guest18 [~Guest79@d75-157-212-231.bchsia.telus.net] has quit [Quit: Client closed]
+15:07 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+15:07 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+15:10 -!- SpellChecker_ [~SpellChec@user/SpellChecker] has quit [Quit: bye]
+15:11 -!- afiore [~afiore@user/afiore] has quit [Quit: GNU inetutils 1.3a (telnet)]
+15:11 -!- ghost43 [~ghost43@gateway/tor-sasl/ghost43] has quit [Quit: Leaving]
+15:11 -!- SpellChecker [~SpellChec@user/SpellChecker] has joined #bitcoin-core-dev
+15:11 -!- ghost43 [~ghost43@gateway/tor-sasl/ghost43] has joined #bitcoin-core-dev
+15:11 -!- afiore [~afiore@user/afiore] has joined #bitcoin-core-dev
+15:12 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+15:12 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+15:14 -!- memset [~memset@gateway/tor-sasl/memset] has quit [Ping timeout: 264 seconds]
+15:15 -!- memset [~memset@gateway/tor-sasl/memset] has joined #bitcoin-core-dev
+15:16 -!- memset [~memset@gateway/tor-sasl/memset] has quit [Remote host closed the connection]
+15:16 -!- andrewtoth [~andrewtot@gateway/tor-sasl/andrewtoth] has quit [Remote host closed the connection]
+15:17 -!- andrewtoth_ [~andrewtot@gateway/tor-sasl/andrewtoth] has joined #bitcoin-core-dev
+15:18 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+15:18 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+15:20 -!- memset [~memset@gateway/tor-sasl/memset] has joined #bitcoin-core-dev
+15:22 -!- _andrewtoth_ [~andrewtot@gateway/tor-sasl/andrewtoth] has joined #bitcoin-core-dev
+15:22 -!- andrewtoth_ [~andrewtot@gateway/tor-sasl/andrewtoth] has quit [Remote host closed the connection]
+15:24 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+15:25 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+15:30 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+15:30 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+15:36 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+15:36 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+15:42 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+15:42 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+15:45 -!- l0rinc [~l0rinc@user/l0rinc] has quit [Quit: l0rinc]
+15:48 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+15:48 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+15:49 -!- jonatack [~jonatack@user/jonatack] has quit [Ping timeout: 253 seconds]
+15:54 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+15:54 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+16:00 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+16:01 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+16:06 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+16:06 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+16:12 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+16:12 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+16:20 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+16:20 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+16:22 -!- dzxzg [~dzxzg@user/dzxzg] has quit [Ping timeout: 264 seconds]
+16:27 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+16:27 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+16:33 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+16:33 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+16:37 -!- ghost43 [~ghost43@gateway/tor-sasl/ghost43] has quit [Ping timeout: 269 seconds]
+16:37 -!- ghost43 [~ghost43@gateway/tor-sasl/ghost43] has joined #bitcoin-core-dev
+16:39 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+16:39 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+16:39 -!- l0rinc [~l0rinc@user/l0rinc] has joined #bitcoin-core-dev
+16:45 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+16:45 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+16:51 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+16:51 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+16:57 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+16:57 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+17:04 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+17:04 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+17:06 -!- jonatack [~jonatack@user/jonatack] has joined #bitcoin-core-dev
+17:09 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+17:09 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+17:11 -!- PaperSword [~Thunderbi@securemail.qrsnap.io] has quit [Remote host closed the connection]
+17:15 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+17:17 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+17:17 -!- PaperSword [~Thunderbi@securemail.qrsnap.io] has joined #bitcoin-core-dev
+17:18 -!- eugenesiegel [~eugenesie@user/eugenesiegel] has quit [Quit: Client closed]
+17:21 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+17:21 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+17:22 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+17:22 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+17:27 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+17:27 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+17:33 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+17:33 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+17:39 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+17:40 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+17:45 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+17:45 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+17:49 -!- l0rinc [~l0rinc@user/l0rinc] has quit [Ping timeout: 248 seconds]
+17:50 -!- memset [~memset@gateway/tor-sasl/memset] has quit [Remote host closed the connection]
+17:50 -!- memset [~memset@gateway/tor-sasl/memset] has joined #bitcoin-core-dev
+17:51 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+17:51 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+17:57 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+17:57 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+18:03 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+18:03 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+18:07 -!- ___nick___ [~quassel@82-132-238-188.dab.02.net] has joined #bitcoin-core-dev
+18:07 -!- ___nick___ [~quassel@82-132-238-188.dab.02.net] has quit [Client Quit]
+18:09 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+18:09 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+18:09 -!- ___nick___ [~quassel@82-132-238-188.dab.02.net] has joined #bitcoin-core-dev
+18:15 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+18:17 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+18:21 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+18:22 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+18:28 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+18:30 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+18:36 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+18:36 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+18:39 -!- l0rinc [~l0rinc@user/l0rinc] has joined #bitcoin-core-dev
+18:42 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+18:42 -!- l0rinc [~l0rinc@user/l0rinc] has quit [Read error: Connection reset by peer]
+18:42 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+18:42 -!- l0rinc [~l0rinc@user/l0rinc] has joined #bitcoin-core-dev
+18:48 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+18:48 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+18:54 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+18:54 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+19:00 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+19:00 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+19:06 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+19:06 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+19:07 -!- jonatack [~jonatack@user/jonatack] has quit [Quit: WeeChat 4.10.0]
+19:12 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+19:12 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+19:18 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+19:18 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+19:21 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+19:22 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+19:23 -!- jonatack [~jonatack@user/jonatack] has joined #bitcoin-core-dev
+19:24 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+19:24 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+19:30 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+19:30 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+19:36 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+19:36 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+19:42 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+19:43 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+19:48 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+19:48 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+19:54 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+19:54 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+20:00 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+20:03 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+20:06 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+20:07 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+20:12 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+20:14 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+20:14 -!- afiore_ [~afiore@user/afiore] has joined #bitcoin-core-dev
+20:15 -!- afiore [~afiore@user/afiore] has quit [Quit: GNU inetutils 1.3a (telnet)]
+20:15 -!- afiore_ is now known as afiore
+20:17 -!- dviola [~diego@user/dviola] has quit [Remote host closed the connection]
+20:17 -!- diego [~diego@2804:14c:5781:8ef3:6a16:a749:b59:acad] has joined #bitcoin-core-dev
+20:18 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+20:18 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+20:24 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+20:24 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+20:30 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+20:30 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+20:36 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+20:37 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+20:38 -!- luke-jr [~luke-jr@user/luke-jr] has joined #bitcoin-core-dev
+20:39 -!- luke-jr_ [~luke-jr@user/luke-jr] has quit [Ping timeout: 268 seconds]
+20:42 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+20:42 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+20:48 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+20:49 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+20:54 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+20:54 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+21:00 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+21:01 -!- cmirror [~cmirror@4.53.92.114] has quit [Remote host closed the connection]
+21:01 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+21:01 -!- cmirror [~cmirror@4.53.92.114] has joined #bitcoin-core-dev
+21:06 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+21:06 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+21:10 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+21:11 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+21:12 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+21:13 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+21:18 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+21:18 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+21:24 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+21:24 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+21:30 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+21:30 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+21:36 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+21:36 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+21:42 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+21:42 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+21:48 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+21:48 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+21:54 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+21:54 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+22:00 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+22:03 -!- l0rinc [~l0rinc@user/l0rinc] has quit [Quit: l0rinc]
+22:05 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+22:06 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+22:06 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+22:12 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+22:12 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+22:18 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+22:19 -!- praxeology [~praxeolog@user/praxeology] has quit [Ping timeout: 253 seconds]
+22:20 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+22:24 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+22:24 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+22:29 -!- sliv3r__ [~sliv3r__@user/sliv3r-:76883] has quit [Ping timeout: 252 seconds]
+22:30 -!- sliv3r__ [~sliv3r__@user/sliv3r-:76883] has joined #bitcoin-core-dev
+22:30 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+22:30 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+22:36 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+22:36 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+22:42 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+22:42 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+22:48 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+22:48 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+22:54 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+22:54 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+22:56 -!- tegila [~tegila@189.37.66.203] has joined #bitcoin-core-dev
+22:59 -!- tegila_ [~tegila@189.37.66.31] has quit [Ping timeout: 247 seconds]
+23:00 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+23:00 -!- mudsip [~mudsip@user/mudsip] has joined #bitcoin-core-dev
+23:02 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+23:02 -!- mudsip [~mudsip@user/mudsip] has quit [Client Quit]
+23:06 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+23:07 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+23:10 -!- Guest48 [~Guest48@2605:59c8:8ea:3408:60ad:78ec:97b5:eb5a] has joined #bitcoin-core-dev
+23:11 -!- Guest48 [~Guest48@2605:59c8:8ea:3408:60ad:78ec:97b5:eb5a] has quit [Client Quit]
+23:12 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+23:12 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+23:18 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+23:18 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+23:24 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+23:24 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+23:30 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+23:33 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+23:36 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+23:36 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+23:42 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+23:42 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+23:46 -!- memset [~memset@gateway/tor-sasl/memset] has quit [Remote host closed the connection]
+23:47 -!- memset [~memset@gateway/tor-sasl/memset] has joined #bitcoin-core-dev
+23:48 -!- jerryf_ [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+23:48 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+23:54 -!- jerryf_ [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+23:55 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+--- Log closed Fri Aug 28 00:00:03 2026

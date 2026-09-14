@@ -4,7 +4,7 @@ import hashlib
 import time
 import pandas as pd
 from datetime import datetime
-from dotenv import load_dotenv
+from datetime import datetime
 
 import sys
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', '04_deliver'))
@@ -20,7 +20,14 @@ except ImportError:
 PULSE_SUMMARY_FILE = "data/raw/pulse_summary.json"
 
 # Load API keys
-load_dotenv("/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/.env")
+env_path = "/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/.env"
+if os.path.exists(env_path):
+    with open(env_path, "r") as f:
+        for line in f:
+            if "=" in line and not line.strip().startswith("#"):
+                key, val = line.strip().split("=", 1)
+                os.environ[key.strip()] = val.strip().strip("'").strip('"')
+
 TARGET_MODEL = os.environ.get('GEMINI_TARGET_MODEL', 'gemini-1.5-flash')
 api_keys = []
 for k, v in os.environ.items():

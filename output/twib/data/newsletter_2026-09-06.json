@@ -3,7 +3,7 @@
   "end_date": "2026-09-06",
   "stats": {
     "total_merged": 26,
-    "total_reviews": 471,
+    "total_reviews": 469,
     "total_threads": 19,
     "new_contributors": 0
   },
@@ -11,6 +11,41 @@
     "Significant work went into hardening core network robustness against misbehaving peers and DoS attempts (e.g., clock sync, V2 message validation, HTTP throttling), alongside performance optimizations for validation (parallel prevout fetching) and extensive testing infrastructure improvements.",
     "Active conceptual discussions are advancing future protocol enhancements, particularly around improved privacy (Silent Payments), robust multi-party signing coordination (PSBT/MuSig2 over Nostr), and long-term cryptographic resilience (post-quantum signatures, SNARK-based aggregation)."
   ],
+  "meeting": {
+    "date": "2026-09-03",
+    "url": "local://2026-09-03.log",
+    "participant_count": 88,
+    "key_participants": [
+      "fjahr",
+      "corebot",
+      "l0rinc",
+      "sedited",
+      "brunoerg"
+    ],
+    "topics_discussed": [
+      "QA Working Group updates, including mutation analysis for silent payments and script interpreter, and parallelization efforts.",
+      "QML GUI Working Group progress on staging branch and issue fixes.",
+      "Benchmarking Working Group updates on quadratic iteration fixes, IBD performance improvements, and future profiling plans.",
+      "Kernel Working Group progress on script evaluation tracer and collaboration with fuzzing efforts.",
+      "Discussion on remaining items for the upcoming release milestone and HTTP agent findings."
+    ],
+    "decisions_made": [],
+    "action_items": [
+      "Review PR #36096 (rpc: avoid quadratic JSON construction).",
+      "Review remaining items in milestone #84 before the branch-off.",
+      "Provide feedback on `bitcoinfuzz/bitcoinfuzz/pull/647` for differential fuzzing.",
+      "Continue triaging agent findings in the new HTTP implementation.",
+      "Experiment with parallel undo/block flushes for IBD.",
+      "Profile neutered validation-less and UTXO-less nodes to identify bottlenecks."
+    ],
+    "mentioned_prs": [
+      36096,
+      36000,
+      35641,
+      647
+    ],
+    "_text_hash": "a23e2d3d7690e1c2381540a115e89d24"
+  },
   "categories": {
     "merged": [
       {
@@ -415,15 +450,15 @@
             "technical_summary": "Mutation testing involves introducing small, syntactic changes (mutants) into the code and checking if existing tests fail. 'Live mutants' are those changes that don't cause any existing tests to fail, indicating a lack of test coverage for that specific code path or logic. This PR specifically targets and adds new test cases to `transaction_tests.cpp` to kill these live mutants, thereby increasing the confidence in the correctness and stability of transaction-related logic."
           },
           {
-            "number": 36124,
-            "title": "http: Make `HTTPRequest` update state internally",
+            "number": 36118,
+            "title": "test: tolerate race condition in interface_http.py",
             "author": {
-              "username": "hodlinator",
-              "uuid": "can_hodlinator"
+              "username": "pinheadmz",
+              "uuid": "auto_matthew_zipkin"
             },
             "event_count": 12,
-            "summary": "This PR refines the HTTP request handling by allowing the `HTTPRequest` object to manage its internal state. This improves the clarity and encapsulation of the HTTP server's operation.",
-            "technical_summary": "Previously, the `HTTPRequest` object's state updates might have been managed externally. This change modifies the `HTTPRequest` class to internally handle its state transitions, likely through methods that directly manipulate its member variables. This reduces external dependencies and simplifies the logic where `HTTPRequest` instances are used, making the HTTP server more robust."
+            "summary": "This PR addresses a race condition that intermittently caused failures in HTTP interface tests. By making the test more robust against timing variations, it eliminates flakiness and improves the reliability of the automated test suite.",
+            "technical_summary": "The fix involves adjusting the `interface_http.py` test script to gracefully handle a timing-sensitive scenario during HTTP interactions. This likely entails adding retry logic, explicit delays, or more robust synchronization mechanisms within the test framework to ensure the test only fails for actual bugs and not for transient timing issues."
           }
         ]
       }
@@ -443,18 +478,6 @@
       "technical_summary": "The discussion highlights that current multi-party custody arrangements, including 2-of-3 multisig, MuSig2 Taproot aggregates, and covenant-free time-locked vaults, predominantly route PSBTs and signing rounds through a coordinator often run by a wallet vendor. This architecture presents a centralization point for coordination. The technical debate revolves around exploring alternative, more decentralized methods for exchanging PSBTs and managing signing rounds, aiming to improve privacy, robustness, and reduce reliance on third-party infrastructure. This could involve investigating peer-to-peer communication protocols or novel shared state mechanisms among signing participants."
     },
     {
-      "source": "Mailing List",
-      "subject": "[bitcoindev] Re: SHRINCS: an efficient hash-based signature scheme\n for Bitcoin (first draft)",
-      "author": {
-        "username": "conduition",
-        "uuid": "auto_conduition"
-      },
-      "link": "https://gnusha.org/pi/bitcoindev/2fb38fb8-2584-4550-b268-ee7138de419bn@googlegroups.com",
-      "message_count": 2,
-      "summary": "A new cryptographic proposal, SHRINCS, is being developed to potentially enhance Bitcoin's capabilities. It's designed to be flexible, focusing on core cryptographic improvements without dictating its final integration details.",
-      "technical_summary": "The current discussion confirms the SHRINCS BIP is deliberately scoped as a purely cryptographic proposal, explicitly not specifying \"cost accounting\" details. This design choice makes the BIP deployment-agnostic, separating its core cryptographic primitives from specific economic or resource models. Future integration efforts will need to address how cost accounting and other system-level considerations interface with the SHRINCS framework, as these are out of its current scope."
-    },
-    {
       "source": "Delving",
       "subject": "Re: Block-wide Signature Aggregation via SNARKs",
       "author": {
@@ -465,6 +488,18 @@
       "message_count": 2,
       "summary": "To prepare Bitcoin for quantum threats, developers are exploring ways to reduce the size of new, quantum-resistant transaction signatures. The goal is to make these future-proof transactions efficient, ensuring they don't bloat the network or increase costs for running nodes.",
       "technical_summary": "The discussion revolves around mitigating the large size of post-quantum (PQ) signatures to reduce their impact on block propagation and archival node resources. Evaluation of ZKP-based compression methods is underway, with Groth16 being dismissed due to its quantum insecurity and trusted setup. LeanVM is highlighted as a more interesting, potential alternative for compressing PQ signatures, while the relevance of BitVM in this context is also being questioned."
+    },
+    {
+      "source": "Mailing List",
+      "subject": "[bitcoindev] Re: SHRINCS: an efficient hash-based signature scheme\n for Bitcoin (first draft)",
+      "author": {
+        "username": "conduition",
+        "uuid": "auto_conduition"
+      },
+      "link": "https://gnusha.org/pi/bitcoindev/2fb38fb8-2584-4550-b268-ee7138de419bn@googlegroups.com",
+      "message_count": 2,
+      "summary": "A new cryptographic proposal, SHRINCS, is being developed to potentially enhance Bitcoin's capabilities. It's designed to be flexible, focusing on core cryptographic improvements without dictating its final integration details.",
+      "technical_summary": "The current discussion confirms the SHRINCS BIP is deliberately scoped as a purely cryptographic proposal, explicitly not specifying \"cost accounting\" details. This design choice makes the BIP deployment-agnostic, separating its core cryptographic primitives from specific economic or resource models. Future integration efforts will need to address how cost accounting and other system-level considerations interface with the SHRINCS framework, as these are out of its current scope."
     },
     {
       "source": "Delving",
@@ -480,15 +515,15 @@
     },
     {
       "source": "Delving",
-      "subject": "Re: Segwit commitment to post-quantum witness data?",
+      "subject": "Implicit Deletions and Improvements in Utreexo IBD",
       "author": {
-        "username": "Pieter Wuille",
-        "uuid": "can_pieter_wuille"
+        "username": "Davidson",
+        "uuid": "auto_davidson"
       },
-      "link": "https://delvingbitcoin.org/t/segwit-commitment-to-post-quantum-witness-data/2702/16",
+      "link": "https://delvingbitcoin.org/t/implicit-deletions-and-improvements-in-utreexo-ibd/2881/1",
       "message_count": 1,
-      "summary": "Bitcoin developers are discussing how to safely integrate future post-quantum security protections into transactions without risking network spam. By properly anchoring these advanced signatures to the blockchain, the network can transition to quantum-resistant security while keeping nodes safe from denial-of-service attacks.",
-      "technical_summary": "The debate focuses on whether post-quantum (PQ) signature commitments should be structured per-input or per-transaction within a proposed block extension. Addressing a suggestion to omit PQ signatures from the block commitment entirely, Pieter Wuille highlighted lessons from the 2015-2017 Segregated Witness design. Without committing to the PQ witnesses in the block hash (such as a witness root), relay nodes could cheaply construct and propagate infinite invalid permutations of valid blocks. Thus, developers agree that a formal cryptographic commitment inside the block structure is strictly necessary to prevent block-malleability DoS vectors."
+      "summary": "Utreexo is being explored as a method to significantly reduce the amount of data nodes need to store to verify transactions, making it easier and faster for new participants to join and secure the Bitcoin network. It aims to compact the entire set of unspent transactions.",
+      "technical_summary": "The discussion introduces Utreexo, a dynamic accumulator designed to represent the full UTXO set with just a few hashes. Its core technical approach involves structuring the UTXO data as a forest of perfect Merkle trees, enabling this highly compact representation. This architecture promises substantial reductions in node state size, though the current context only outlines its foundational mechanism without delving into specific implementation challenges, integration strategies, or ongoing architectural debates within Bitcoin Core."
     }
   ],
   "shoutouts": {
@@ -517,15 +552,15 @@
       },
       {
         "user": {
-          "username": "ViniciusCestarii",
-          "uuid": "auto_vinicius_cestari"
+          "username": "hebasto",
+          "uuid": "can_hennadii_stepanov"
         },
         "count": 2
       },
       {
         "user": {
-          "username": "hebasto",
-          "uuid": "can_hennadii_stepanov"
+          "username": "pinheadmz",
+          "uuid": "auto_matthew_zipkin"
         },
         "count": 2
       }
@@ -846,7 +881,7 @@
       },
       {
         "username": "w0xlt",
-        "uuid": "auto_w0xlt"
+        "uuid": "auto_woltx"
       },
       {
         "username": "willcl-ark",

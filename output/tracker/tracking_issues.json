@@ -1,0 +1,2339 @@
+[
+  {
+    "issue_id": 28722,
+    "project_name": "Multiprocess",
+    "description": "Decouples Bitcoin Core into separate process binaries (gui, node, wallet) communicating over IPC for enhanced security and process isolation.",
+    "category": "Architecture & IPC",
+    "champion": "Ryan Ofsky",
+    "bip": null,
+    "title": "Multiprocess tracking issue",
+    "url": "https://github.com/bitcoin/bitcoin/issues/28722",
+    "created_at": "2023-10-24T18:22:37Z",
+    "updated_at": "2026-09-14T09:22:08Z",
+    "total_tasks": 235,
+    "completed_tasks": 204,
+    "completion_percentage": 87,
+    "tasks": [
+      {
+        "text": "#34978",
+        "is_completed": false,
+        "linked_prs": [
+          34978
+        ]
+      },
+      {
+        "text": "#35084",
+        "is_completed": false,
+        "linked_prs": [
+          35084
+        ]
+      },
+      {
+        "text": "#35118",
+        "is_completed": true,
+        "linked_prs": [
+          35118
+        ]
+      },
+      {
+        "text": "#32387",
+        "is_completed": false,
+        "linked_prs": [
+          32387
+        ]
+      },
+      {
+        "text": "#35454",
+        "is_completed": false,
+        "linked_prs": [
+          35454
+        ]
+      },
+      {
+        "text": "#35715",
+        "is_completed": true,
+        "linked_prs": [
+          35715
+        ]
+      },
+      {
+        "text": "#35720",
+        "is_completed": true,
+        "linked_prs": [
+          35720
+        ]
+      },
+      {
+        "text": "Upstream [libmultiprocess pulls](https://github.com/chaincodelabs/libmultiprocess/pulls)",
+        "is_completed": false,
+        "linked_prs": []
+      },
+      {
+        "text": "#33922",
+        "is_completed": false,
+        "linked_prs": [
+          33922
+        ]
+      },
+      {
+        "text": "#34020",
+        "is_completed": true,
+        "linked_prs": [
+          34020
+        ]
+      },
+      {
+        "text": "#34672",
+        "is_completed": false,
+        "linked_prs": [
+          34672
+        ]
+      },
+      {
+        "text": "#30437",
+        "is_completed": false,
+        "linked_prs": [
+          30437
+        ]
+      },
+      {
+        "text": "#33421",
+        "is_completed": false,
+        "linked_prs": [
+          33421
+        ]
+      },
+      {
+        "text": "#34672",
+        "is_completed": false,
+        "linked_prs": [
+          34672
+        ]
+      },
+      {
+        "text": "#35037",
+        "is_completed": false,
+        "linked_prs": [
+          35037
+        ]
+      },
+      {
+        "text": "#35598",
+        "is_completed": false,
+        "linked_prs": [
+          35598
+        ]
+      },
+      {
+        "text": "#35671",
+        "is_completed": false,
+        "linked_prs": [
+          35671
+        ]
+      },
+      {
+        "text": "Tracking issue #33777",
+        "is_completed": false,
+        "linked_prs": [
+          33777
+        ]
+      },
+      {
+        "text": "#29409",
+        "is_completed": false,
+        "linked_prs": [
+          29409
+        ]
+      },
+      {
+        "text": "#10102",
+        "is_completed": false,
+        "linked_prs": [
+          10102
+        ]
+      },
+      {
+        "text": "#19460",
+        "is_completed": false,
+        "linked_prs": [
+          19460
+        ]
+      },
+      {
+        "text": "#19461",
+        "is_completed": false,
+        "linked_prs": [
+          19461
+        ]
+      },
+      {
+        "text": "#32898",
+        "is_completed": false,
+        "linked_prs": [
+          32898
+        ]
+      },
+      {
+        "text": "#33747",
+        "is_completed": false,
+        "linked_prs": [
+          33747
+        ]
+      },
+      {
+        "text": "#34906",
+        "is_completed": false,
+        "linked_prs": [
+          34906
+        ]
+      },
+      {
+        "text": "#23015",
+        "is_completed": false,
+        "linked_prs": [
+          23015
+        ]
+      },
+      {
+        "text": "#32669",
+        "is_completed": false,
+        "linked_prs": [
+          32669
+        ]
+      },
+      {
+        "text": "#33387",
+        "is_completed": false,
+        "linked_prs": [
+          33387
+        ]
+      },
+      {
+        "text": "#33756",
+        "is_completed": false,
+        "linked_prs": [
+          33756
+        ]
+      },
+      {
+        "text": "#33899",
+        "is_completed": false,
+        "linked_prs": [
+          33899
+        ]
+      },
+      {
+        "text": "#33940",
+        "is_completed": false,
+        "linked_prs": [
+          33940
+        ]
+      },
+      {
+        "text": "#34732",
+        "is_completed": true,
+        "linked_prs": [
+          34732
+        ]
+      },
+      {
+        "text": "#34928",
+        "is_completed": false,
+        "linked_prs": [
+          34928
+        ]
+      },
+      {
+        "text": "#34981",
+        "is_completed": false,
+        "linked_prs": [
+          34981
+        ]
+      },
+      {
+        "text": "#35142",
+        "is_completed": false,
+        "linked_prs": [
+          35142
+        ]
+      },
+      {
+        "text": "#35361",
+        "is_completed": true,
+        "linked_prs": [
+          35361
+        ]
+      },
+      {
+        "text": "#35491",
+        "is_completed": true,
+        "linked_prs": [
+          35491
+        ]
+      },
+      {
+        "text": "https://github.com/bitcoin-core/bitcoincore.org/issues/1247",
+        "is_completed": false,
+        "linked_prs": []
+      },
+      {
+        "text": "~#10242~ <!-- merged 2017-04-21 -->",
+        "is_completed": true,
+        "linked_prs": [
+          10242
+        ]
+      },
+      {
+        "text": "~#10295~ <!-- merged 2017-05-23 -->",
+        "is_completed": true,
+        "linked_prs": [
+          10295
+        ]
+      },
+      {
+        "text": "~#10600~ <!-- merged 2017-11-15 -->",
+        "is_completed": true,
+        "linked_prs": [
+          10600
+        ]
+      },
+      {
+        "text": "~#10244~ <!-- merged 2018-04-05 -->",
+        "is_completed": true,
+        "linked_prs": [
+          10244
+        ]
+      },
+      {
+        "text": "~#10605~ <!-- merged 2018-08-31 -->",
+        "is_completed": true,
+        "linked_prs": [
+          10605
+        ]
+      },
+      {
+        "text": "~#14636~ <!-- merged 2018-11-07 -->",
+        "is_completed": true,
+        "linked_prs": [
+          14636
+        ]
+      },
+      {
+        "text": "~#14437~ <!-- merged 2018-11-09 -->",
+        "is_completed": true,
+        "linked_prs": [
+          14437
+        ]
+      },
+      {
+        "text": "~#14711~ <!-- merged 2019-01-30 -->",
+        "is_completed": true,
+        "linked_prs": [
+          14711
+        ]
+      },
+      {
+        "text": "~#15342~ <!-- merged 2019-02-05 -->",
+        "is_completed": true,
+        "linked_prs": [
+          15342
+        ]
+      },
+      {
+        "text": "~#15373~ <!-- merged 2019-02-11 -->",
+        "is_completed": true,
+        "linked_prs": [
+          15373
+        ]
+      },
+      {
+        "text": "~#15288~ <!-- merged 2019-03-04 -->",
+        "is_completed": true,
+        "linked_prs": [
+          15288
+        ]
+      },
+      {
+        "text": "~#15531~ <!-- merged 2019-03-05 -->",
+        "is_completed": true,
+        "linked_prs": [
+          15531
+        ]
+      },
+      {
+        "text": "~#10973~ <!-- merged 2019-03-21 -->",
+        "is_completed": true,
+        "linked_prs": [
+          10973
+        ]
+      },
+      {
+        "text": "~#16839~ <!-- merged 2019-10-30 -->",
+        "is_completed": true,
+        "linked_prs": [
+          16839
+        ]
+      },
+      {
+        "text": "~#17906~ <!-- merged 2020-01-14 -->",
+        "is_completed": true,
+        "linked_prs": [
+          17906
+        ]
+      },
+      {
+        "text": "~#18278~ <!-- merged 2020-03-23 -->",
+        "is_completed": true,
+        "linked_prs": [
+          18278
+        ]
+      },
+      {
+        "text": "~#16367~ <!-- merged 2020-04-10 -->",
+        "is_completed": true,
+        "linked_prs": [
+          16367
+        ]
+      },
+      {
+        "text": "~#17999~ <!-- merged 2020-04-10 -->",
+        "is_completed": true,
+        "linked_prs": [
+          17999
+        ]
+      },
+      {
+        "text": "~#18743~ <!-- merged 2020-05-07 -->",
+        "is_completed": true,
+        "linked_prs": [
+          18743
+        ]
+      },
+      {
+        "text": "~#18587~ <!-- merged 2020-05-20 -->",
+        "is_completed": true,
+        "linked_prs": [
+          18587
+        ]
+      },
+      {
+        "text": "~#18677~ <!-- merged 2020-05-21 -->",
+        "is_completed": true,
+        "linked_prs": [
+          18677
+        ]
+      },
+      {
+        "text": "~#20494~ <!-- merged 2020-12-01 -->",
+        "is_completed": true,
+        "linked_prs": [
+          20494
+        ]
+      },
+      {
+        "text": "~#20046~ <!-- merged 2020-12-10 -->",
+        "is_completed": true,
+        "linked_prs": [
+          20046
+        ]
+      },
+      {
+        "text": "~#21035~ <!-- merged 2021-03-15 -->",
+        "is_completed": true,
+        "linked_prs": [
+          21035
+        ]
+      },
+      {
+        "text": "~#21732~ <!-- merged 2021-04-23 -->",
+        "is_completed": true,
+        "linked_prs": [
+          21732
+        ]
+      },
+      {
+        "text": "~#19160~ <!-- merged 2021-04-27 -->",
+        "is_completed": true,
+        "linked_prs": [
+          19160
+        ]
+      },
+      {
+        "text": "~#22216~ <!-- merged 2021-06-11 -->",
+        "is_completed": true,
+        "linked_prs": [
+          22216
+        ]
+      },
+      {
+        "text": "~#22214~ <!-- merged 2021-06-12 -->",
+        "is_completed": true,
+        "linked_prs": [
+          22214
+        ]
+      },
+      {
+        "text": "~#22218~ <!-- merged 2021-07-22 -->",
+        "is_completed": true,
+        "linked_prs": [
+          22218
+        ]
+      },
+      {
+        "text": "~bitcoin-core/gui#360~ <!-- merged 2021-08-12 -->",
+        "is_completed": true,
+        "linked_prs": []
+      },
+      {
+        "text": "~#22215~ <!-- merged 2021-08-18 -->",
+        "is_completed": true,
+        "linked_prs": [
+          22215
+        ]
+      },
+      {
+        "text": "~#22217~ <!-- merged 2021-08-22 -->",
+        "is_completed": true,
+        "linked_prs": [
+          22217
+        ]
+      },
+      {
+        "text": "~#19101~ <!-- merged 2021-08-19 -->",
+        "is_completed": true,
+        "linked_prs": [
+          19101
+        ]
+      },
+      {
+        "text": "~#22848~ <!-- merged 2021-09-06 -->",
+        "is_completed": true,
+        "linked_prs": [
+          22848
+        ]
+      },
+      {
+        "text": "~#22219~ <!-- merged 2021-09-16 -->",
+        "is_completed": true,
+        "linked_prs": [
+          22219
+        ]
+      },
+      {
+        "text": "~#23003~ <!-- merged 2021-10-13 -->",
+        "is_completed": true,
+        "linked_prs": [
+          23003
+        ]
+      },
+      {
+        "text": "~#23006~ <!-- merged 2021-10-26 -->",
+        "is_completed": true,
+        "linked_prs": [
+          23006
+        ]
+      },
+      {
+        "text": "~#23004~ <!-- merged 2021-11-15 -->",
+        "is_completed": true,
+        "linked_prs": [
+          23004
+        ]
+      },
+      {
+        "text": "~#23005~ <!-- merged 2021-11-15 -->",
+        "is_completed": true,
+        "linked_prs": [
+          23005
+        ]
+      },
+      {
+        "text": "~#23499~ <!-- merged 2021-11-16 -->",
+        "is_completed": true,
+        "linked_prs": [
+          23499
+        ]
+      },
+      {
+        "text": "~#28721~ <!-- merged 2023-11-13 -->",
+        "is_completed": true,
+        "linked_prs": [
+          28721
+        ]
+      },
+      {
+        "text": "~#28907~ <!-- merged 2023-11-22 -->",
+        "is_completed": true,
+        "linked_prs": [
+          28907
+        ]
+      },
+      {
+        "text": "~#28978~ <!-- merged 2024-01-02 -->",
+        "is_completed": true,
+        "linked_prs": [
+          28978
+        ]
+      },
+      {
+        "text": "~#28921~ <!-- merged 2024-01-23 -->",
+        "is_completed": true,
+        "linked_prs": [
+          28921
+        ]
+      },
+      {
+        "text": "~#28929~ <!-- merged 2024-05-15 -->",
+        "is_completed": true,
+        "linked_prs": [
+          28929
+        ]
+      },
+      {
+        "text": "~#30509~ <!-- merged 2024-09-09 -->",
+        "is_completed": true,
+        "linked_prs": [
+          30509
+        ]
+      },
+      {
+        "text": "~#30510~ <!-- merged 2024-09-25 -->",
+        "is_completed": true,
+        "linked_prs": [
+          30510
+        ]
+      },
+      {
+        "text": "~#31196~ <!-- merged 2024-12-18 -->",
+        "is_completed": true,
+        "linked_prs": [
+          31196
+        ]
+      },
+      {
+        "text": "~#31197~ <!-- merged 2024-12-17 -->",
+        "is_completed": true,
+        "linked_prs": [
+          31197
+        ]
+      },
+      {
+        "text": "~#30940~ <!-- merged 2024-09-27 -->",
+        "is_completed": true,
+        "linked_prs": [
+          30940
+        ]
+      },
+      {
+        "text": "~#30955~ <!-- merged 2024-10-10 -->",
+        "is_completed": true,
+        "linked_prs": [
+          30955
+        ]
+      },
+      {
+        "text": "~#31105~ <!-- merged 2024-10-21 -->",
+        "is_completed": true,
+        "linked_prs": [
+          31105
+        ]
+      },
+      {
+        "text": "~#31003~ <!-- closed 2024-11-14 -->",
+        "is_completed": true,
+        "linked_prs": [
+          31003
+        ]
+      },
+      {
+        "text": "~#31288~ <!-- merged 2024-11-20 -->",
+        "is_completed": true,
+        "linked_prs": [
+          31288
+        ]
+      },
+      {
+        "text": "~#31480~ <!-- merged 2024-12-12 -->",
+        "is_completed": true,
+        "linked_prs": [
+          31480
+        ]
+      },
+      {
+        "text": "~#31318~ <!-- merged 2024-12-17 -->",
+        "is_completed": true,
+        "linked_prs": [
+          31318
+        ]
+      },
+      {
+        "text": "~#31196~ <!-- merged 2024-12-18 -->",
+        "is_completed": true,
+        "linked_prs": [
+          31196
+        ]
+      },
+      {
+        "text": "~#31740~ <!-- merged 2025-01-29 -->",
+        "is_completed": true,
+        "linked_prs": [
+          31740
+        ]
+      },
+      {
+        "text": "~#31151~ <!-- closed 2025-01-27 -->",
+        "is_completed": true,
+        "linked_prs": [
+          31151
+        ]
+      },
+      {
+        "text": "~#31455~ <!-- closed 2025-02-03 -->",
+        "is_completed": true,
+        "linked_prs": [
+          31455
+        ]
+      },
+      {
+        "text": "~#31763~ <!-- closed 2025-02-03 -->",
+        "is_completed": true,
+        "linked_prs": [
+          31763
+        ]
+      },
+      {
+        "text": "~#31815~ <!-- closed 2025-02-10 -->",
+        "is_completed": true,
+        "linked_prs": [
+          31815
+        ]
+      },
+      {
+        "text": "~#31834~ <!-- merged 2025-02-11 -->",
+        "is_completed": true,
+        "linked_prs": [
+          31834
+        ]
+      },
+      {
+        "text": "~#31945~ <!-- merged 2025-02-25 -->",
+        "is_completed": true,
+        "linked_prs": [
+          31945
+        ]
+      },
+      {
+        "text": "~#31283~ <!-- merged 2025-03-12 -->",
+        "is_completed": true,
+        "linked_prs": [
+          31283
+        ]
+      },
+      {
+        "text": "~#31827~ <!-- closed 2025-02-21 -->",
+        "is_completed": true,
+        "linked_prs": [
+          31827
+        ]
+      },
+      {
+        "text": "~#31564~ <!-- closed 2025-03-04 -->",
+        "is_completed": true,
+        "linked_prs": [
+          31564
+        ]
+      },
+      {
+        "text": "~#31866~ <!-- merged 2025-03-20 -->",
+        "is_completed": true,
+        "linked_prs": [
+          31866
+        ]
+      },
+      {
+        "text": "~#31992~ <!-- merged 2025-03-29 -->",
+        "is_completed": true,
+        "linked_prs": [
+          31992
+        ]
+      },
+      {
+        "text": "~#31741~ <!-- merged 2025-04-11 -->",
+        "is_completed": true,
+        "linked_prs": [
+          31741
+        ]
+      },
+      {
+        "text": "~#30975~ <!-- closed 2025-04-11 -->",
+        "is_completed": true,
+        "linked_prs": [
+          30975
+        ]
+      },
+      {
+        "text": "~#31785~ <!-- merged 2025-04-14 -->",
+        "is_completed": true,
+        "linked_prs": [
+          31785
+        ]
+      },
+      {
+        "text": "~#32271~ <!-- merged 2025-04-17 -->",
+        "is_completed": true,
+        "linked_prs": [
+          32271
+        ]
+      },
+      {
+        "text": "~#32378~ <!-- merged 2025-05-14 -->",
+        "is_completed": true,
+        "linked_prs": [
+          32378
+        ]
+      },
+      {
+        "text": "~#31375~ <!-- merged 2025-05-27 -->",
+        "is_completed": true,
+        "linked_prs": [
+          31375
+        ]
+      },
+      {
+        "text": "~#32634~ <!-- merged 2025-05-29 -->",
+        "is_completed": true,
+        "linked_prs": [
+          32634
+        ]
+      },
+      {
+        "text": "~#32641~ <!-- merged 2025-05-30 -->",
+        "is_completed": true,
+        "linked_prs": [
+          32641
+        ]
+      },
+      {
+        "text": "~#32690~ <!-- merged 2025-06-11 -->",
+        "is_completed": true,
+        "linked_prs": [
+          32690
+        ]
+      },
+      {
+        "text": "~#31981~ <!-- merged 2025-06-19 -->",
+        "is_completed": true,
+        "linked_prs": [
+          31981
+        ]
+      },
+      {
+        "text": "~#32760~ <!-- merged 2025-06-16 -->",
+        "is_completed": true,
+        "linked_prs": [
+          32760
+        ]
+      },
+      {
+        "text": "~#32781~ <!-- merged 2025-06-23 -->",
+        "is_completed": true,
+        "linked_prs": [
+          32781
+        ]
+      },
+      {
+        "text": "~#31679~ <!-- merged 2025-08-07 -->",
+        "is_completed": true,
+        "linked_prs": [
+          31679
+        ]
+      },
+      {
+        "text": "~#31802~ <!-- merged 2025-08-20 -->",
+        "is_completed": true,
+        "linked_prs": [
+          31802
+        ]
+      },
+      {
+        "text": "~#32345~ <!-- merged 2025-08-18 -->",
+        "is_completed": true,
+        "linked_prs": [
+          32345
+        ]
+      },
+      {
+        "text": "~#33190~ <!-- closed 2025-08-19 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33190
+        ]
+      },
+      {
+        "text": "~#33222~ <!-- merged 2025-08-21 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33222
+        ]
+      },
+      {
+        "text": "~#33233~ <!-- merged 2025-08-22 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33233
+        ]
+      },
+      {
+        "text": "~#33241~ <!-- merged 2025-08-25 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33241
+        ]
+      },
+      {
+        "text": "~#33219~ <!-- closed 2025-08-26 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33219
+        ]
+      },
+      {
+        "text": "~#33235~ <!-- merged 2025-09-04 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33235
+        ]
+      },
+      {
+        "text": "~#33290~ <!-- closed 2025-09-05 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33290
+        ]
+      },
+      {
+        "text": "~#33315~ <!-- closed 2025-09-05 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33315
+        ]
+      },
+      {
+        "text": "~#33201~ <!-- merged 2025-09-05 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33201
+        ]
+      },
+      {
+        "text": "~#33322~ <!-- merged 2025-09-08 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33322
+        ]
+      },
+      {
+        "text": "~#33176~ <!-- closed 2025-09-08 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33176
+        ]
+      },
+      {
+        "text": "~#33308~ <!-- merged 2025-09-08 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33308
+        ]
+      },
+      {
+        "text": "~#33279~ <!-- closed 2025-09-08 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33279
+        ]
+      },
+      {
+        "text": "~#33281~ <!-- closed 2025-09-08 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33281
+        ]
+      },
+      {
+        "text": "~#33312~ <!-- merged 2025-09-08 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33312
+        ]
+      },
+      {
+        "text": "~#33256~ <!-- closed 2025-09-08 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33256
+        ]
+      },
+      {
+        "text": "~#33342~ <!-- merged 2025-09-09 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33342
+        ]
+      },
+      {
+        "text": "~#33348~ <!-- merged 2025-09-09 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33348
+        ]
+      },
+      {
+        "text": "~#33372~ <!-- closed 2025-09-12 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33372
+        ]
+      },
+      {
+        "text": "~#33380~ <!-- merged 2025-09-16 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33380
+        ]
+      },
+      {
+        "text": "~#33412~ <!-- merged 2025-09-19 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33412
+        ]
+      },
+      {
+        "text": "~#33244~ <!-- closed 2025-09-19 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33244
+        ]
+      },
+      {
+        "text": "~#33277~ <!-- closed 2025-09-19 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33277
+        ]
+      },
+      {
+        "text": "~#33374~ <!-- closed 2025-09-20 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33374
+        ]
+      },
+      {
+        "text": "~#33459~ <!-- merged 2025-09-23 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33459
+        ]
+      },
+      {
+        "text": "~#33229~ <!-- merged 2025-09-25 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33229
+        ]
+      },
+      {
+        "text": "~#33417~ <!-- closed 2025-09-18 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33417
+        ]
+      },
+      {
+        "text": "~#33420~ <!-- merged 2025-09-18 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33420
+        ]
+      },
+      {
+        "text": "~#31618~ <!-- closed 2025-10-06 -->",
+        "is_completed": true,
+        "linked_prs": [
+          31618
+        ]
+      },
+      {
+        "text": "~#33518~ <!-- merged 2025-10-10 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33518
+        ]
+      },
+      {
+        "text": "~#33519~ <!-- merged 2025-10-16 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33519
+        ]
+      },
+      {
+        "text": "~#33517~ <!-- merged 2025-10-14 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33517
+        ]
+      },
+      {
+        "text": "~#33647~ <!-- closed 2025-10-20 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33647
+        ]
+      },
+      {
+        "text": "~#32275~ <!-- closed 2025-10-13 -->",
+        "is_completed": true,
+        "linked_prs": [
+          32275
+        ]
+      },
+      {
+        "text": "~#30983~ <!-- closed 2025-10-27 -->",
+        "is_completed": true,
+        "linked_prs": [
+          30983
+        ]
+      },
+      {
+        "text": "~#31109~ <!-- closed 2025-10-27 -->",
+        "is_completed": true,
+        "linked_prs": [
+          31109
+        ]
+      },
+      {
+        "text": "~#31756~ <!-- closed 2025-10-27 -->",
+        "is_completed": true,
+        "linked_prs": [
+          31756
+        ]
+      },
+      {
+        "text": "~#33439~ <!-- closed 2025-10-27 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33439
+        ]
+      },
+      {
+        "text": "~#31098~ <!-- closed 2025-10-28 -->",
+        "is_completed": true,
+        "linked_prs": [
+          31098
+        ]
+      },
+      {
+        "text": "~#33749~ <!-- merged 2025-10-31 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33749
+        ]
+      },
+      {
+        "text": "~#33445~ <!-- merged 2025-11-04 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33445
+        ]
+      },
+      {
+        "text": "~#33676~ <!-- merged 2025-11-10 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33676
+        ]
+      },
+      {
+        "text": "~#33575~ <!-- closed 2025-11-10 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33575
+        ]
+      },
+      {
+        "text": "~#33745~ <!-- merged 2025-11-12 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33745
+        ]
+      },
+      {
+        "text": "~#33511~ <!-- merged 2025-11-12 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33511
+        ]
+      },
+      {
+        "text": "~#33554~ <!-- closed 2025-11-18 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33554
+        ]
+      },
+      {
+        "text": "~#33884~ <!-- closed 2025-11-20 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33884
+        ]
+      },
+      {
+        "text": "~#33880~ <!-- merged 2025-11-20 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33880
+        ]
+      },
+      {
+        "text": "~#33890~ <!-- closed 2025-11-20 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33890
+        ]
+      },
+      {
+        "text": "~#33463~ <!-- closed 2025-11-24 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33463
+        ]
+      },
+      {
+        "text": "~#33996~ <!-- merged 2025-12-03 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33996
+        ]
+      },
+      {
+        "text": "~#33774~ <!-- merged 2025-12-04 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33774
+        ]
+      },
+      {
+        "text": "~#33623~ <!-- merged 2025-12-09 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33623
+        ]
+      },
+      {
+        "text": "~#34030~ <!-- closed 2025-12-11 -->",
+        "is_completed": true,
+        "linked_prs": [
+          34030
+        ]
+      },
+      {
+        "text": "~#34003~ <!-- merged 2025-12-16 -->",
+        "is_completed": true,
+        "linked_prs": [
+          34003
+        ]
+      },
+      {
+        "text": "~#34102~ <!-- merged 2025-12-30 -->",
+        "is_completed": true,
+        "linked_prs": [
+          34102
+        ]
+      },
+      {
+        "text": "~#33819~ <!-- merged 2026-01-13 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33819
+        ]
+      },
+      {
+        "text": "~#34363~ <!-- merged 2026-01-21 -->",
+        "is_completed": true,
+        "linked_prs": [
+          34363
+        ]
+      },
+      {
+        "text": "~#34187~ <!-- closed 2026-01-21 -->",
+        "is_completed": true,
+        "linked_prs": [
+          34187
+        ]
+      },
+      {
+        "text": "~#33576~ <!-- closed 2026-01-22 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33576
+        ]
+      },
+      {
+        "text": "~#34016~ <!-- closed 2026-01-28 -->",
+        "is_completed": true,
+        "linked_prs": [
+          34016
+        ]
+      },
+      {
+        "text": "~#32420~ <!-- merged 2026-02-02 -->",
+        "is_completed": true,
+        "linked_prs": [
+          32420
+        ]
+      },
+      {
+        "text": "~#33936~ <!-- closed 2026-02-04 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33936
+        ]
+      },
+      {
+        "text": "~#34452~ <!-- merged 2026-02-07 -->",
+        "is_completed": true,
+        "linked_prs": [
+          34452
+        ]
+      },
+      {
+        "text": "~#34568~ <!-- merged 2026-02-20 -->",
+        "is_completed": true,
+        "linked_prs": [
+          34568
+        ]
+      },
+      {
+        "text": "~#34284~ <!-- closed 2026-02-20 -->",
+        "is_completed": true,
+        "linked_prs": [
+          34284
+        ]
+      },
+      {
+        "text": "~#33965~ <!-- merged 2026-02-12 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33965
+        ]
+      },
+      {
+        "text": "~#34184~ <!-- merged 2026-02-24 -->",
+        "is_completed": true,
+        "linked_prs": [
+          34184
+        ]
+      },
+      {
+        "text": "~#33994~ <!-- closed 2026-02-25 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33994
+        ]
+      },
+      {
+        "text": "~#34661~ <!-- merged 2026-02-27 -->",
+        "is_completed": true,
+        "linked_prs": [
+          34661
+        ]
+      },
+      {
+        "text": "~#34422~ <!-- merged 2026-03-03 -->",
+        "is_completed": true,
+        "linked_prs": [
+          34422
+        ]
+      },
+      {
+        "text": "~#33923~ <!-- closed 2026-03-03 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33923
+        ]
+      },
+      {
+        "text": "~#34250~ <!-- closed 2026-03-03 -->",
+        "is_completed": true,
+        "linked_prs": [
+          34250
+        ]
+      },
+      {
+        "text": "~#34706~ <!-- merged 2026-03-04 -->",
+        "is_completed": true,
+        "linked_prs": [
+          34706
+        ]
+      },
+      {
+        "text": "~#34715~ <!-- merged 2026-03-04 -->",
+        "is_completed": true,
+        "linked_prs": [
+          34715
+        ]
+      },
+      {
+        "text": "~#34711~ <!-- closed 2026-03-04 -->",
+        "is_completed": true,
+        "linked_prs": [
+          34711
+        ]
+      },
+      {
+        "text": "~#34756~ <!-- closed 2026-03-09 -->",
+        "is_completed": true,
+        "linked_prs": [
+          34756
+        ]
+      },
+      {
+        "text": "~#34797~ <!-- closed 2026-03-11 -->",
+        "is_completed": true,
+        "linked_prs": [
+          34797
+        ]
+      },
+      {
+        "text": "~#34664~ <!-- closed 2026-03-11 -->",
+        "is_completed": true,
+        "linked_prs": [
+          34664
+        ]
+      },
+      {
+        "text": "~#34818~ <!-- merged 2026-03-12 -->",
+        "is_completed": true,
+        "linked_prs": [
+          34818
+        ]
+      },
+      {
+        "text": "~#34825~ <!-- merged 2026-03-16 -->",
+        "is_completed": true,
+        "linked_prs": [
+          34825
+        ]
+      },
+      {
+        "text": "~#33897~ <!-- closed 2026-03-19 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33897
+        ]
+      },
+      {
+        "text": "~#34845~ <!-- closed 2026-03-19 -->",
+        "is_completed": true,
+        "linked_prs": [
+          34845
+        ]
+      },
+      {
+        "text": "~#33795~ <!-- closed 2026-03-21 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33795
+        ]
+      },
+      {
+        "text": "~#34727~ <!-- merged 2026-03-24 -->",
+        "is_completed": true,
+        "linked_prs": [
+          34727
+        ]
+      },
+      {
+        "text": "~#33341~ <!-- closed 2026-03-24 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33341
+        ]
+      },
+      {
+        "text": "~#33402~ <!-- closed 2026-03-27 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33402
+        ]
+      },
+      {
+        "text": "~#34804~ <!-- closed 2026-03-30 -->",
+        "is_completed": true,
+        "linked_prs": [
+          34804
+        ]
+      },
+      {
+        "text": "~#32297~ <!-- merged 2026-03-30 -->",
+        "is_completed": true,
+        "linked_prs": [
+          32297
+        ]
+      },
+      {
+        "text": "~#32802~ <!-- closed 2026-03-31 -->",
+        "is_completed": true,
+        "linked_prs": [
+          32802
+        ]
+      },
+      {
+        "text": "~#34952~ <!-- closed 2026-03-31 -->",
+        "is_completed": true,
+        "linked_prs": [
+          34952
+        ]
+      },
+      {
+        "text": "~#34777~ <!-- closed 2026-04-01 -->",
+        "is_completed": true,
+        "linked_prs": [
+          34777
+        ]
+      },
+      {
+        "text": "~#34782~ <!-- closed 2026-04-01 -->",
+        "is_completed": true,
+        "linked_prs": [
+          34782
+        ]
+      },
+      {
+        "text": "~#34975~ <!-- closed 2026-04-03 -->",
+        "is_completed": true,
+        "linked_prs": [
+          34975
+        ]
+      },
+      {
+        "text": "~#34014~ <!-- closed 2026-04-05 -->",
+        "is_completed": true,
+        "linked_prs": [
+          34014
+        ]
+      },
+      {
+        "text": "~#33385~ <!-- merged 2026-04-07 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33385
+        ]
+      },
+      {
+        "text": "~#35010~ <!-- closed 2026-04-07 -->",
+        "is_completed": true,
+        "linked_prs": [
+          35010
+        ]
+      },
+      {
+        "text": "~#34977~ <!-- merged 2026-04-07 -->",
+        "is_completed": true,
+        "linked_prs": [
+          34977
+        ]
+      },
+      {
+        "text": "~#35014~ <!-- merged 2026-04-07 -->",
+        "is_completed": true,
+        "linked_prs": [
+          35014
+        ]
+      },
+      {
+        "text": "~#34723~ <!-- closed 2026-04-07 -->",
+        "is_completed": true,
+        "linked_prs": [
+          34723
+        ]
+      },
+      {
+        "text": "~#35028~ <!-- closed 2026-04-08 -->",
+        "is_completed": true,
+        "linked_prs": [
+          35028
+        ]
+      },
+      {
+        "text": "~#35036~ <!-- closed 2026-04-09 -->",
+        "is_completed": true,
+        "linked_prs": [
+          35036
+        ]
+      },
+      {
+        "text": "~#34860~ <!-- merged 2026-05-17 -->",
+        "is_completed": true,
+        "linked_prs": [
+          34860
+        ]
+      },
+      {
+        "text": "~#33966~ <!-- merged 2026-05-26 -->",
+        "is_completed": true,
+        "linked_prs": [
+          33966
+        ]
+      },
+      {
+        "text": "~#35393~ <!-- closed 2026-05-27 -->",
+        "is_completed": true,
+        "linked_prs": [
+          35393
+        ]
+      },
+      {
+        "text": "~#35401~ <!-- closed 2026-05-28 -->",
+        "is_completed": true,
+        "linked_prs": [
+          35401
+        ]
+      },
+      {
+        "text": "~#34644~ <!-- merged 2026-05-28 -->",
+        "is_completed": true,
+        "linked_prs": [
+          34644
+        ]
+      },
+      {
+        "text": "~#35431~ <!-- merged 2026-06-04 -->",
+        "is_completed": true,
+        "linked_prs": [
+          35431
+        ]
+      },
+      {
+        "text": "~#35466~ <!-- merged 2026-06-06 -->",
+        "is_completed": true,
+        "linked_prs": [
+          35466
+        ]
+      },
+      {
+        "text": "~#35418~ <!-- merged 2026-06-12 -->",
+        "is_completed": true,
+        "linked_prs": [
+          35418
+        ]
+      },
+      {
+        "text": "~#35523~ <!-- merged 2026-06-13 -->",
+        "is_completed": true,
+        "linked_prs": [
+          35523
+        ]
+      },
+      {
+        "text": "~#35545~ <!-- closed 2026-06-17 -->",
+        "is_completed": true,
+        "linked_prs": [
+          35545
+        ]
+      },
+      {
+        "text": "~#35403~ <!-- merged 2026-06-23 -->",
+        "is_completed": true,
+        "linked_prs": [
+          35403
+        ]
+      }
+    ]
+  },
+  {
+    "issue_id": 33691,
+    "project_name": "SENDTEMPLATE",
+    "description": "P2P protocol extension allowing nodes to announce and request block templates directly to accelerate block propagation across the network.",
+    "category": "P2P & Relaying",
+    "champion": "BIP Drafting WG",
+    "bip": null,
+    "title": "Template Sharing Tracking Issue",
+    "url": "https://github.com/bitcoin/bitcoin/issues/33691",
+    "created_at": "2025-10-23T16:11:55Z",
+    "updated_at": "2026-08-28T06:22:29Z",
+    "total_tasks": 13,
+    "completed_tasks": 5,
+    "completion_percentage": 38,
+    "tasks": [
+      {
+        "text": "inquisition.bitcoin-signet.net",
+        "is_completed": false,
+        "linked_prs": []
+      },
+      {
+        "text": "mainnet: cornflower.erisian.com.au provides templates currently",
+        "is_completed": true,
+        "linked_prs": []
+      },
+      {
+        "text": "warnet simulation?",
+        "is_completed": false,
+        "linked_prs": []
+      },
+      {
+        "text": "Quick population of mempool on initial start",
+        "is_completed": false,
+        "linked_prs": []
+      },
+      {
+        "text": "Quicker relay of top-of-mempool transactions",
+        "is_completed": false,
+        "linked_prs": []
+      },
+      {
+        "text": "Improved compact block propagation with diverse mempool policies",
+        "is_completed": false,
+        "linked_prs": []
+      },
+      {
+        "text": "Transaction rebroadcast without participation of sender/receiver",
+        "is_completed": false,
+        "linked_prs": []
+      },
+      {
+        "text": "Include 2MvB of transactions, not just the next block",
+        "is_completed": true,
+        "linked_prs": []
+      },
+      {
+        "text": "Send templates shortly after construction",
+        "is_completed": true,
+        "linked_prs": []
+      },
+      {
+        "text": "Coordinate template construction with INV announcements better",
+        "is_completed": true,
+        "linked_prs": []
+      },
+      {
+        "text": "Send diffs since prior templates to reduce bandwidth",
+        "is_completed": true,
+        "linked_prs": []
+      },
+      {
+        "text": "Use set reconciliation to improve compact block reconstruction (see delving discussion)",
+        "is_completed": false,
+        "linked_prs": []
+      },
+      {
+        "text": "Use reduced siphash to make compact block calculations faster?",
+        "is_completed": false,
+        "linked_prs": []
+      }
+    ]
+  },
+  {
+    "issue_id": 27587,
+    "project_name": "Bitcoin Kernel Library",
+    "description": "Extracting consensus validation logic into a standalone libbitcoinkernel C++ library with zero external state dependencies.",
+    "category": "Consensus Kernel",
+    "champion": "Carl Dong / Thechuan",
+    "bip": null,
+    "title": "Bitcoin Kernel Library Project Tracking",
+    "url": "https://github.com/bitcoin/bitcoin/issues/27587",
+    "created_at": "2023-05-06T08:27:17Z",
+    "updated_at": "2026-07-31T22:56:44Z",
+    "total_tasks": 0,
+    "completed_tasks": 0,
+    "completion_percentage": 0,
+    "tasks": []
+  },
+  {
+    "issue_id": 30249,
+    "project_name": "Erlay",
+    "description": "Bandwidth-efficient transaction relay protocol (BIP330) that reduces node P2P bandwidth usage by up to 40% using set-reconciliation.",
+    "category": "P2P & Networking",
+    "champion": "Gleb Naumenko / Pieter Wuille",
+    "bip": "BIP 330",
+    "title": "Erlay Project Tracking",
+    "url": "https://github.com/bitcoin/bitcoin/issues/30249",
+    "created_at": "2024-06-07T18:35:46Z",
+    "updated_at": "2026-07-29T12:15:49Z",
+    "total_tasks": 17,
+    "completed_tasks": 9,
+    "completion_percentage": 53,
+    "tasks": [
+      {
+        "text": "Minisketch in Bitcoin Core",
+        "is_completed": true,
+        "linked_prs": []
+      },
+      {
+        "text": "Main feature: #23114",
+        "is_completed": true,
+        "linked_prs": [
+          23114
+        ]
+      },
+      {
+        "text": "#23670",
+        "is_completed": true,
+        "linked_prs": [
+          23670
+        ]
+      },
+      {
+        "text": "#23496",
+        "is_completed": true,
+        "linked_prs": [
+          23496
+        ]
+      },
+      {
+        "text": "#26272",
+        "is_completed": true,
+        "linked_prs": [
+          26272
+        ]
+      },
+      {
+        "text": "Subtree updates: #24262, #25502, #26373",
+        "is_completed": true,
+        "linked_prs": [
+          25502,
+          26373,
+          24262
+        ]
+      },
+      {
+        "text": "Peer-to-peer",
+        "is_completed": false,
+        "linked_prs": []
+      },
+      {
+        "text": "Main feature: #23443",
+        "is_completed": true,
+        "linked_prs": [
+          23443
+        ]
+      },
+      {
+        "text": "Follow-up: #26359",
+        "is_completed": true,
+        "linked_prs": [
+          26359
+        ]
+      },
+      {
+        "text": "#27797",
+        "is_completed": true,
+        "linked_prs": [
+          27797
+        ]
+      },
+      {
+        "text": "Main feature: #35591",
+        "is_completed": false,
+        "linked_prs": [
+          35591
+        ]
+      },
+      {
+        "text": "#30116",
+        "is_completed": false,
+        "linked_prs": [
+          30116
+        ]
+      },
+      {
+        "text": "Tx reconciliation request",
+        "is_completed": false,
+        "linked_prs": []
+      },
+      {
+        "text": "Main feature: Tx reconciliation response (sending and handling)",
+        "is_completed": false,
+        "linked_prs": []
+      },
+      {
+        "text": "Main feature: Tx reconciliation extension request",
+        "is_completed": false,
+        "linked_prs": []
+      },
+      {
+        "text": "Main feature: Tx reconciliation extension response (sending and handling)",
+        "is_completed": false,
+        "linked_prs": []
+      },
+      {
+        "text": "Test: Full integration functional test",
+        "is_completed": false,
+        "linked_prs": []
+      }
+    ]
+  },
+  {
+    "issue_id": 33777,
+    "project_name": "Mining Interface",
+    "description": "Clean abstraction layer for block template creation and Stratum v2 mining pool communication decoupled from node internal state.",
+    "category": "Mining & Stratum",
+    "champion": "Bitcoin Core Mining WG",
+    "bip": null,
+    "title": "Mining interface tracking issue",
+    "url": "https://github.com/bitcoin/bitcoin/issues/33777",
+    "created_at": "2025-11-04T15:05:33Z",
+    "updated_at": "2026-07-23T09:30:02Z",
+    "total_tasks": 13,
+    "completed_tasks": 5,
+    "completion_percentage": 38,
+    "tasks": [
+      {
+        "text": "#34020",
+        "is_completed": true,
+        "linked_prs": [
+          34020
+        ]
+      },
+      {
+        "text": "#34644",
+        "is_completed": true,
+        "linked_prs": [
+          34644
+        ]
+      },
+      {
+        "text": "#34672",
+        "is_completed": true,
+        "linked_prs": [
+          34672
+        ]
+      },
+      {
+        "text": "#35403",
+        "is_completed": true,
+        "linked_prs": [
+          35403
+        ]
+      },
+      {
+        "text": "https://github.com/bitcoin/bitcoin/pull/32387",
+        "is_completed": false,
+        "linked_prs": [
+          32387
+        ]
+      },
+      {
+        "text": "https://github.com/bitcoin-core/libmultiprocess/pull/231",
+        "is_completed": false,
+        "linked_prs": []
+      },
+      {
+        "text": "https://github.com/bitcoin-core/libmultiprocess/pull/274",
+        "is_completed": true,
+        "linked_prs": []
+      },
+      {
+        "text": "#35671",
+        "is_completed": false,
+        "linked_prs": [
+          35671
+        ]
+      },
+      {
+        "text": "#33899",
+        "is_completed": false,
+        "linked_prs": [
+          33899
+        ]
+      },
+      {
+        "text": "#33922",
+        "is_completed": false,
+        "linked_prs": [
+          33922
+        ]
+      },
+      {
+        "text": "#33756",
+        "is_completed": false,
+        "linked_prs": [
+          33756
+        ]
+      },
+      {
+        "text": "#35300",
+        "is_completed": false,
+        "linked_prs": [
+          35300
+        ]
+      },
+      {
+        "text": "#30437",
+        "is_completed": false,
+        "linked_prs": [
+          30437
+        ]
+      }
+    ]
+  },
+  {
+    "issue_id": 31246,
+    "project_name": "MuSig2",
+    "description": "Implementation of Schnorr multi-signatures (BIP327) enabling 2-of-2 and n-of-n multisig key aggregation natively in the wallet.",
+    "category": "Cryptography & Wallet",
+    "champion": "Jonas Nick / Tim Ruffing",
+    "bip": "BIP 327",
+    "title": "MuSig2 Tracking Issue",
+    "url": "https://github.com/bitcoin/bitcoin/issues/31246",
+    "created_at": "2024-11-07T18:21:23Z",
+    "updated_at": "2026-04-29T17:04:21Z",
+    "total_tasks": 14,
+    "completed_tasks": 14,
+    "completion_percentage": 100,
+    "tasks": [
+      {
+        "text": "libsecp:",
+        "is_completed": true,
+        "linked_prs": []
+      },
+      {
+        "text": "libsecp module: https://github.com/bitcoin-core/secp256k1/pull/1479",
+        "is_completed": true,
+        "linked_prs": []
+      },
+      {
+        "text": "libsecp named structs: https://github.com/bitcoin-core/secp256k1/pull/1628",
+        "is_completed": true,
+        "linked_prs": []
+      },
+      {
+        "text": "libsecp subtree update: #31216",
+        "is_completed": true,
+        "linked_prs": [
+          31216
+        ]
+      },
+      {
+        "text": "Refactors",
+        "is_completed": true,
+        "linked_prs": []
+      },
+      {
+        "text": "#31242",
+        "is_completed": true,
+        "linked_prs": [
+          31242
+        ]
+      },
+      {
+        "text": "#31243",
+        "is_completed": true,
+        "linked_prs": [
+          31243
+        ]
+      },
+      {
+        "text": "Non-default sighashes in PSBT: #31622",
+        "is_completed": true,
+        "linked_prs": [
+          31622
+        ]
+      },
+      {
+        "text": "Descriptor:  #31244",
+        "is_completed": true,
+        "linked_prs": [
+          31244
+        ]
+      },
+      {
+        "text": "PSBT: #31247",
+        "is_completed": true,
+        "linked_prs": [
+          31247
+        ]
+      },
+      {
+        "text": "Signing: #29675",
+        "is_completed": true,
+        "linked_prs": [
+          29675
+        ]
+      },
+      {
+        "text": "Followups: #33636",
+        "is_completed": true,
+        "linked_prs": [
+          33636
+        ]
+      },
+      {
+        "text": "Miniscript and fixes: #34141",
+        "is_completed": true,
+        "linked_prs": [
+          34141
+        ]
+      },
+      {
+        "text": "PSBT fixes: #34010",
+        "is_completed": true,
+        "linked_prs": [
+          34010
+        ]
+      }
+    ]
+  },
+  {
+    "issue_id": 30289,
+    "project_name": "Cluster Mempool",
+    "description": "Redesign of Bitcoin Core's mempool into independent transaction clusters to optimize block template construction and Fee-Estimation / RBF.",
+    "category": "Mempool & Consensus",
+    "champion": "Suzi Peled / Pieter Wuille",
+    "bip": null,
+    "title": "Cluster mempool tracking issue",
+    "url": "https://github.com/bitcoin/bitcoin/issues/30289",
+    "created_at": "2024-06-14T13:21:36Z",
+    "updated_at": "2026-02-25T13:39:14Z",
+    "total_tasks": 33,
+    "completed_tasks": 33,
+    "completion_percentage": 100,
+    "tasks": [
+      {
+        "text": "[#29242 FeeFrac type](https://github.com/bitcoin/bitcoin/pull/29242)",
+        "is_completed": true,
+        "linked_prs": [
+          29242
+        ]
+      },
+      {
+        "text": "[#30535 Add FeeFrac::EvaluateFee](https://github.com/bitcoin/bitcoin/pull/30535)",
+        "is_completed": true,
+        "linked_prs": [
+          30535
+        ]
+      },
+      {
+        "text": "[#32240 Fix integer overflow in FeeFrac fuzz test](https://github.com/bitcoin/bitcoin/pull/32240)",
+        "is_completed": true,
+        "linked_prs": [
+          32240
+        ]
+      },
+      {
+        "text": "[#32300 Fix different overflow in FeeFrac fuzz test](https://github.com/bitcoin/bitcoin/pull/32300)",
+        "is_completed": true,
+        "linked_prs": [
+          32300
+        ]
+      },
+      {
+        "text": "[#30160 BitSet type](https://github.com/bitcoin/bitcoin/pull/30160)",
+        "is_completed": true,
+        "linked_prs": [
+          30160
+        ]
+      },
+      {
+        "text": "[#30161 VecDeque type](https://github.com/bitcoin/bitcoin/pull/30161)",
+        "is_completed": true,
+        "linked_prs": [
+          30161
+        ]
+      },
+      {
+        "text": "[#30126 Base linearization algorithm](https://github.com/bitcoin/bitcoin/pull/30126)",
+        "is_completed": true,
+        "linked_prs": [
+          30126
+        ]
+      },
+      {
+        "text": "[#30605 Split tests from tests-of-tests](https://github.com/bitcoin/bitcoin/pull/30605)",
+        "is_completed": true,
+        "linked_prs": [
+          30605
+        ]
+      },
+      {
+        "text": "[#30857 Extend `DepGraph` functionality](https://github.com/bitcoin/bitcoin/pull/30857)",
+        "is_completed": true,
+        "linked_prs": [
+          30857
+        ]
+      },
+      {
+        "text": "[#30285 Merging and postprocessing of linearizations](https://github.com/bitcoin/bitcoin/pull/30285)",
+        "is_completed": true,
+        "linked_prs": [
+          30285
+        ]
+      },
+      {
+        "text": "[#30286 Optimized candidate search](https://github.com/bitcoin/bitcoin/pull/30286)",
+        "is_completed": true,
+        "linked_prs": [
+          30286
+        ]
+      },
+      {
+        "text": "[#32545 Replace linearization with SFL](https://github.com/bitcoin/bitcoin/pull/32545)",
+        "is_completed": true,
+        "linked_prs": [
+          32545
+        ]
+      },
+      {
+        "text": "[#34259 SFL chunk minimization](https://github.com/bitcoin/bitcoin/pull/34259)",
+        "is_completed": true,
+        "linked_prs": [
+          34259
+        ]
+      },
+      {
+        "text": "[#34023 SFL optimizations](https://github.com/bitcoin/bitcoin/pull/34023)",
+        "is_completed": true,
+        "linked_prs": [
+          34023
+        ]
+      },
+      {
+        "text": "[#34616 SFL cost model](https://github.com/bitcoin/bitcoin/pull/34616)",
+        "is_completed": true,
+        "linked_prs": [
+          34616
+        ]
+      },
+      {
+        "text": "[#31363 TxGraph basics](https://github.com/bitcoin/bitcoin/pull/31363)",
+        "is_completed": true,
+        "linked_prs": [
+          31363
+        ]
+      },
+      {
+        "text": "[#32151 TxGraph basics follow-up](https://github.com/bitcoin/bitcoin/pull/32151)",
+        "is_completed": true,
+        "linked_prs": [
+          32151
+        ]
+      },
+      {
+        "text": "[#32177 TxGraph increase fuzz coverage](https://github.com/bitcoin/bitcoin/pull/32177)",
+        "is_completed": true,
+        "linked_prs": [
+          32177
+        ]
+      },
+      {
+        "text": "[#32191 Make TxGraph fuzzing more deterministic](https://github.com/bitcoin/bitcoin/pull/32191)",
+        "is_completed": true,
+        "linked_prs": [
+          32191
+        ]
+      },
+      {
+        "text": "[#33354 Use enum Level instead of bool main_only](https://github.com/bitcoin/bitcoin/pull/33354)",
+        "is_completed": true,
+        "linked_prs": [
+          33354
+        ]
+      },
+      {
+        "text": "[#33862 Drop support for `TxGraph::Ref` move assignment](https://github.com/bitcoin/bitcoin/pull/33862)",
+        "is_completed": true,
+        "linked_prs": [
+          33862
+        ]
+      },
+      {
+        "text": "[#34257 Deterministic order of transactions](https://github.com/bitcoin/bitcoin/pull/34257)",
+        "is_completed": true,
+        "linked_prs": [
+          34257
+        ]
+      },
+      {
+        "text": "[#31444 TxGraph mining/eviction](https://github.com/bitcoin/bitcoin/pull/31444)",
+        "is_completed": true,
+        "linked_prs": [
+          31444
+        ]
+      },
+      {
+        "text": "[#33469 Use `std::unordered_set` for skipped clusters](https://github.com/bitcoin/bitcoin/pull/33469)",
+        "is_completed": true,
+        "linked_prs": [
+          33469
+        ]
+      },
+      {
+        "text": "[#31553 TxGraph reorgs](https://github.com/bitcoin/bitcoin/pull/31553)",
+        "is_completed": true,
+        "linked_prs": [
+          31553
+        ]
+      },
+      {
+        "text": "[#32263 TxGraph work controls](https://github.com/bitcoin/bitcoin/pull/32263)",
+        "is_completed": true,
+        "linked_prs": [
+          32263
+        ]
+      },
+      {
+        "text": "[#33157 TxGraph memory usage](https://github.com/bitcoin/bitcoin/pull/33157)",
+        "is_completed": true,
+        "linked_prs": [
+          33157
+        ]
+      },
+      {
+        "text": "[#34085 TxGraph exploiting SFL better](https://github.com/bitcoin/bitcoin/pull/34085)",
+        "is_completed": true,
+        "linked_prs": [
+          34085
+        ]
+      },
+      {
+        "text": "[#31122 Changesets for mempool](https://github.com/bitcoin/bitcoin/pull/31122)",
+        "is_completed": true,
+        "linked_prs": [
+          31122
+        ]
+      },
+      {
+        "text": "[#33629 Cluster mempool implementation](https://github.com/bitcoin/bitcoin/pull/33629)",
+        "is_completed": true,
+        "linked_prs": [
+          33629
+        ]
+      },
+      {
+        "text": "[#33591 Cluster mempool optimizations and cleanups](https://github.com/bitcoin/bitcoin/pull/33591)",
+        "is_completed": true,
+        "linked_prs": [
+          33591
+        ]
+      },
+      {
+        "text": "[#34384 Remove epoch-based graph traversal](https://github.com/bitcoin/bitcoin/pull/34384)",
+        "is_completed": true,
+        "linked_prs": [
+          34384
+        ]
+      },
+      {
+        "text": "[#34615 Report mempool optimality](https://github.com/bitcoin/bitcoin/pull/34615)",
+        "is_completed": true,
+        "linked_prs": [
+          34615
+        ]
+      }
+    ]
+  }
+]

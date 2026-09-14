@@ -45,20 +45,20 @@
   "avg_pr_ack_velocity_days": 0.09181712962962962,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 3.0,
-  "hybrid_score": 0.2278,
-  "p2016_hybrid_score": 0.3203,
+  "hybrid_score": 0.2369,
+  "p2016_hybrid_score": 0.3347,
   "modern_hybrid_score": 0.4381,
   "impact_score": 13.0,
-  "p2016_impact_score": 17.0,
+  "p2016_impact_score": 18.0,
   "modern_impact_score": 23.0,
-  "threads_started": 30.0,
-  "replies_sent": 124.0,
+  "threads_started": 32.0,
+  "replies_sent": 128.0,
   "ml_threads": 5.0,
-  "delving_threads": 25.0,
-  "ml_responses": 99.0,
-  "delving_responses": 25.0,
+  "delving_threads": 27.0,
+  "ml_responses": 100.0,
+  "delving_responses": 28.0,
   "first_active": null,
-  "last_active": "2026-09-07T15:53:13",
+  "last_active": "2026-09-14T04:49:01.612000",
   "dev_type": "Participant",
   "expertise_domains": [
     "Cryptography",
@@ -66,26 +66,26 @@
   ],
   "expertise_by_source": {
     "discussion": {
-      "Consensus": 0.24,
-      "Cryptography": 0.76
+      "Consensus": 0.234,
+      "Cryptography": 0.766
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.24,
-    "Cryptography": 0.76
+    "Consensus": 0.234,
+    "Cryptography": 0.766
   },
-  "p2016_posts": 154.0,
-  "modern_posts": 154.0,
-  "p2016_ml_posts": 104.0,
-  "p2016_delving_posts": 50.0,
-  "modern_ml_posts": 104.0,
-  "modern_delving_posts": 50.0,
+  "p2016_posts": 160.0,
+  "modern_posts": 160.0,
+  "p2016_ml_posts": 105.0,
+  "p2016_delving_posts": 55.0,
+  "modern_ml_posts": 105.0,
+  "modern_delving_posts": 55.0,
   "is_engineer": false,
   "is_reviewer": true,
   "is_researcher": true,
   "is_bip_author": false,
   "global_first_active": "2023-10-27T01:02:48",
-  "global_last_active": "2026-09-07T15:53:13",
+  "global_last_active": "2026-09-14T04:49:01.612000",
   "github_location": null,
   "github_company": null,
   "github_bio": "Pseudonymous freelance cypherpunk",
@@ -103,10 +103,10 @@
     "link": "https://delvingbitcoin.org/t/off-chain-dlc-ticketing-systems/214/1"
   },
   "last_message": {
-    "source": "mailing_list",
-    "subject": "Re: [bitcoindev] Standardizing public key exposure classification for\n existing outputs",
-    "date": "2026-09-07",
-    "link": "https://gnusha.org/pi/bitcoindev/9QUT0_vQUMszAr1ZQw9EsjX9S-gnVFJDD7g4eYgeovhYaOu84nmqJUs8vuDtaPSexGIKkiG3xNpo_jEnVMeJPSnxARXvcOah5jujNBBOdeU=@proton.me"
+    "source": "delving",
+    "subject": "Re: PQC output type discussion",
+    "date": "2026-09-14",
+    "link": "https://delvingbitcoin.org/t/pqc-output-type-discussion/2749/27"
   },
   "social_history": {
     "2023": {
@@ -114,28 +114,30 @@
       "mempool-fees": 1
     },
     "2024": {
-      "other": 7,
+      "other": 5,
+      "privacy": 2,
       "quantum": 2,
       "wallet-keys": 1
     },
     "2025": {
       "bitvm": 1,
-      "covenants": 7,
+      "other": 18,
       "mempool-fees": 1,
-      "other": 12,
       "quantum": 33,
+      "segwit": 1,
       "signatures-sighash": 1,
       "taproot": 4,
       "wallet-keys": 1
     },
     "2026": {
-      "other": 92,
-      "bitvm": 16,
-      "covenants": 10,
-      "mempool-fees": 15,
-      "quantum": 74,
-      "signatures-sighash": 20,
-      "taproot": 38,
+      "other": 102,
+      "bitvm": 18,
+      "mempool-fees": 18,
+      "privacy": 16,
+      "quantum": 80,
+      "segwit": 17,
+      "signatures-sighash": 21,
+      "taproot": 41,
       "wallet-keys": 25
     }
   }

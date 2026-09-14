@@ -46,7 +46,7 @@
   "avg_concept_lead_time_days": null,
   "review_reciprocity": null,
   "hybrid_score": 0.025,
-  "p2016_hybrid_score": 0.0396,
+  "p2016_hybrid_score": 0.0395,
   "modern_hybrid_score": 0.0,
   "impact_score": 1.0,
   "p2016_impact_score": 2.0,
@@ -58,24 +58,24 @@
   "ml_responses": 5.0,
   "delving_responses": 0.0,
   "first_active": "2018-09-20T11:19:56",
-  "last_active": null,
+  "last_active": "2024-10-03T15:18:51.917000",
   "dev_type": "Participant",
   "expertise_domains": [
     "Consensus",
     "Wallet",
-    "Privacy"
+    "Ecosystem"
   ],
   "expertise_by_source": {
     "discussion": {
-      "Consensus": 0.435,
-      "Privacy": 0.13,
-      "Wallet": 0.435
+      "Consensus": 0.468,
+      "Ecosystem": 0.117,
+      "Wallet": 0.416
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.435,
-    "Privacy": 0.13,
-    "Wallet": 0.435
+    "Consensus": 0.4675,
+    "Ecosystem": 0.1169,
+    "Wallet": 0.4156
   },
   "p2016_posts": 8.0,
   "modern_posts": 1.0,
@@ -88,7 +88,7 @@
   "is_researcher": true,
   "is_bip_author": false,
   "global_first_active": "2018-09-20T11:19:56",
-  "global_last_active": null,
+  "global_last_active": "2024-10-03T15:18:51.916999936",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -125,7 +125,6 @@
       "payment-protocol": 1
     },
     "2024": {
-      "script-opcodes": 1,
       "silent-payments": 1,
       "taproot": 1,
       "wallet-keys": 1

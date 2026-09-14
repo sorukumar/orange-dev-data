@@ -34,53 +34,54 @@
   "first_commit": "2016-09-09T06:57:08",
   "last_commit": "2026-07-25T10:15:44",
   "p2016_authored_commits": 375.0,
-  "modern_authored_commits": 109.0,
+  "modern_authored_commits": 102.0,
   "co_authored_commits": 104.0,
-  "bips_authored": 5.0,
-  "p2016_bips_authored": 5.0,
-  "modern_bips_authored": 1.0,
+  "bips_authored": 6.0,
+  "p2016_bips_authored": 6.0,
+  "modern_bips_authored": 2.0,
   "first_bip_date": "2018-04-30T10:58:23",
-  "last_bip_date": "2025-12-05T15:27:13",
-  "avg_review_latency_days": 343.4740526551477,
+  "last_bip_date": "2026-08-21T17:49:20",
+  "avg_review_latency_days": 346.28657109276884,
   "reviews_count": 758.0,
   "avg_approval_latency_days": 177.75859291657275,
   "approvals_count": 367.0,
   "tier1_reviews_count": 688.0,
   "tier2_reviews_count": 70.0,
   "p2016_reviews_count": 756.0,
-  "modern_reviews_count": 287.0,
+  "modern_reviews_count": 281.0,
   "first_review_date": "2015-10-05T09:24:46",
-  "last_review_date": "2026-09-03T17:44:41",
+  "last_review_date": "2026-09-08T21:51:22",
   "prs_authored": 163.0,
   "tier1_prs_authored": 137.0,
   "tier2_prs_authored": 26.0,
   "avg_pr_ack_velocity_days": 10.282331948089823,
   "avg_concept_lead_time_days": 22.08440843621399,
   "review_reciprocity": 4.6503067484662575,
-  "hybrid_score": 1.8759,
-  "p2016_hybrid_score": 1.8796,
-  "modern_hybrid_score": 1.243,
-  "impact_score": 68.0,
-  "p2016_impact_score": 68.0,
-  "modern_impact_score": 53.0,
-  "threads_started": 141.0,
-  "replies_sent": 529.0,
+  "hybrid_score": 1.9539,
+  "p2016_hybrid_score": 1.9575,
+  "modern_hybrid_score": 1.4471,
+  "impact_score": 69.0,
+  "p2016_impact_score": 69.0,
+  "modern_impact_score": 58.0,
+  "threads_started": 142.0,
+  "replies_sent": 530.0,
   "ml_threads": 27.0,
-  "delving_threads": 114.0,
+  "delving_threads": 115.0,
   "ml_responses": 305.0,
-  "delving_responses": 224.0,
+  "delving_responses": 225.0,
   "first_active": "2015-08-02T17:35:45",
-  "last_active": null,
+  "last_active": "2026-09-09T16:41:25.580000",
   "dev_type": "Protocol Designer",
   "expertise_domains": [
     "Infrastructure",
     "Consensus",
-    "Mempool"
+    "Network"
   ],
   "expertise_by_source": {
     "bips": {
-      "Consensus": 0.6,
-      "Infrastructure": 0.4
+      "Consensus": 0.5,
+      "Infrastructure": 0.333,
+      "Network": 0.167
     },
     "code": {
       "Consensus": 0.096,
@@ -91,31 +92,31 @@
       "Wallet": 0.026
     },
     "discussion": {
-      "Mempool": 0.382,
-      "Mining": 0.294,
-      "Script": 0.324
+      "Mempool": 0.394,
+      "Mining": 0.273,
+      "Script": 0.333
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.3287,
-    "Infrastructure": 0.3967,
-    "Mempool": 0.0836,
-    "Mining": 0.0588,
-    "Network": 0.0549,
-    "Script": 0.0696
+    "Consensus": 0.2787,
+    "Infrastructure": 0.3632,
+    "Mempool": 0.086,
+    "Mining": 0.0546,
+    "Network": 0.1384,
+    "Script": 0.0714
   },
-  "p2016_posts": 642.0,
-  "modern_posts": 406.0,
+  "p2016_posts": 644.0,
+  "modern_posts": 407.0,
   "p2016_ml_posts": 304.0,
-  "p2016_delving_posts": 338.0,
-  "modern_ml_posts": 76.0,
-  "modern_delving_posts": 330.0,
+  "p2016_delving_posts": 340.0,
+  "modern_ml_posts": 75.0,
+  "modern_delving_posts": 332.0,
   "is_engineer": true,
   "is_reviewer": true,
   "is_researcher": true,
   "is_bip_author": true,
   "global_first_active": "2015-08-02T17:35:45",
-  "global_last_active": "2026-09-03T17:44:41",
+  "global_last_active": "2026-09-09T16:41:25.580000",
   "github_location": "Brisbane, Australia",
   "github_company": null,
   "github_bio": "Donation address: 1E9nGC81XmryvyrUJkxibUWUtudwLxFMZp",
@@ -250,6 +251,13 @@
       "link": "https://github.com/bitcoin/bips/blob/master/bip-0325.mediawiki"
     },
     {
+      "number": 332,
+      "title": "Stale Tip Relay",
+      "status": "Draft",
+      "theme": "P2P Network",
+      "link": "https://github.com/bitcoin/bips/blob/master/bip-0332.mediawiki"
+    },
+    {
       "number": 341,
       "title": "Taproot: SegWit version 1 spending rules",
       "status": "Deployed",
@@ -279,9 +287,9 @@
   },
   "last_message": {
     "source": "delving",
-    "subject": "Re: Faster txid hash tables with SipHash-1-3-UJ",
-    "date": "2026-08-28",
-    "link": "https://delvingbitcoin.org/t/faster-txid-hash-tables-with-siphash-1-3-uj/2834/3"
+    "subject": "Re: Universal opt-in replay protection?",
+    "date": "2026-09-09",
+    "link": "https://delvingbitcoin.org/t/universal-opt-in-replay-protection/2792/12"
   },
   "social_history": {
     "2015": {
@@ -363,7 +371,7 @@
       "testing-devtools": 4
     },
     "2024": {
-      "other": 127,
+      "other": 128,
       "covenants": 36,
       "lightning": 30,
       "mempool-fees": 59,
@@ -385,14 +393,14 @@
       "testing-devtools": 17
     },
     "2026": {
-      "other": 109,
-      "covenants": 7,
+      "other": 119,
+      "covenants": 10,
       "lightning": 4,
       "mempool-fees": 18,
-      "mining": 31,
+      "mining": 32,
       "script-opcodes": 10,
       "soft-fork-activation": 6,
-      "taproot": 15,
+      "taproot": 18,
       "testing-devtools": 20
     }
   }

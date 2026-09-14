@@ -1,0 +1,259 @@
+--- Log opened Thu Jul 16 00:00:33 2026
+00:05 -!- GoldenGoose_ [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has quit [Remote host closed the connection]
+00:10 -!- GoldenGoose [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has joined #bitcoin-core-dev
+00:11 -!- GoldenGoose_ [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has joined #bitcoin-core-dev
+00:14 -!- GoldenGoose [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has quit [Ping timeout: 255 seconds]
+00:29 -!- Guyver2 [Guyver@77-174-98-73.fixed.kpn.net] has joined #bitcoin-core-dev
+00:30 -!- GoldenGoose_ [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has quit [Remote host closed the connection]
+00:35 -!- GoldenGoose [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has joined #bitcoin-core-dev
+00:36 -!- GoldenGoose_ [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has joined #bitcoin-core-dev
+00:39 -!- GoldenGoose [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has quit [Ping timeout: 242 seconds]
+00:40 -!- WizJin [~Wizzy@user/WizJin] has quit [Quit: Leaving]
+00:47 -!- Guyver2 [Guyver@77-174-98-73.fixed.kpn.net] has left #bitcoin-core-dev [Closing Window]
+00:55 -!- GoldenGoose_ [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has quit [Remote host closed the connection]
+01:00 -!- GoldenGoose [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has joined #bitcoin-core-dev
+01:01 -!- GoldenGoose_ [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has joined #bitcoin-core-dev
+01:04 -!- GoldenGoose [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has quit [Ping timeout: 245 seconds]
+01:20 -!- GoldenGoose_ [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has quit [Remote host closed the connection]
+01:25 -!- GoldenGoose [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has joined #bitcoin-core-dev
+01:26 -!- GoldenGoose_ [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has joined #bitcoin-core-dev
+01:29 -!- GoldenGoose [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has quit [Ping timeout: 268 seconds]
+01:45 -!- GoldenGoose_ [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has quit [Remote host closed the connection]
+01:50 -!- GoldenGoose [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has joined #bitcoin-core-dev
+01:51 -!- GoldenGoose_ [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has joined #bitcoin-core-dev
+01:54 -!- GoldenGoose [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has quit [Ping timeout: 241 seconds]
+01:58 < bitcoin-git> [bitcoin] maflcko closed pull request #35647: test: avoid http.client for malformed header checks (master...fix-interface-http-whitespace-headers) https://github.com/bitcoin/bitcoin/pull/35647
+02:32 -!- smartin2 [~Thunderbi@78.56.226.85] has joined #bitcoin-core-dev
+02:33 -!- memset [~memset@gateway/tor-sasl/memset] has quit [Remote host closed the connection]
+02:33 -!- memset [~memset@gateway/tor-sasl/memset] has joined #bitcoin-core-dev
+02:34 -!- smartin [~Thunderbi@78.56.226.85] has quit [Ping timeout: 265 seconds]
+02:34 -!- smartin2 is now known as smartin
+02:54 -!- GoldenGoose_ [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has quit [Remote host closed the connection]
+02:55 -!- GoldenGoose [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has joined #bitcoin-core-dev
+02:56 -!- GoldenGoose_ [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has joined #bitcoin-core-dev
+02:57 -!- memset [~memset@gateway/tor-sasl/memset] has quit [Remote host closed the connection]
+02:58 -!- GoldenGoose [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has quit [Read error: Connection reset by peer]
+03:07 -!- memset [~memset@gateway/tor-sasl/memset] has joined #bitcoin-core-dev
+03:07 -!- memset [~memset@gateway/tor-sasl/memset] has quit [Read error: Connection reset by peer]
+03:12 -!- memset [~memset@gateway/tor-sasl/memset] has joined #bitcoin-core-dev
+03:19 -!- GoldenGoose_ [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has quit [Remote host closed the connection]
+03:20 -!- GoldenGoose [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has joined #bitcoin-core-dev
+03:21 -!- GoldenGoose_ [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has joined #bitcoin-core-dev
+03:22 < bitcoin-git> [bitcoin] pinheadmz opened pull request #35735: Add state to HTTPRequest (master...http-req-state) https://github.com/bitcoin/bitcoin/pull/35735
+03:22 -!- GoldenGoose [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has quit [Read error: Connection reset by peer]
+03:26 -!- memset [~memset@gateway/tor-sasl/memset] has quit [Remote host closed the connection]
+03:26 -!- memset [~memset@gateway/tor-sasl/memset] has joined #bitcoin-core-dev
+03:52 -!- GoldenGoose_ [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has quit [Remote host closed the connection]
+03:55 -!- GoldenGoose [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has joined #bitcoin-core-dev
+03:56 -!- GoldenGoose_ [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has joined #bitcoin-core-dev
+03:59 -!- GoldenGoose [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has quit [Ping timeout: 240 seconds]
+05:19 -!- diego [~diego@177.34.233.87] has quit [Ping timeout: 255 seconds]
+06:17 -!- diego [~diego@2804:14c:5781:8ef3:6a16:a749:b59:acad] has joined #bitcoin-core-dev
+06:28 -!- satsfy [~satsfy@user/satsfy] has quit [Read error: Connection reset by peer]
+06:28 -!- satsfy [~satsfy@user/satsfy] has joined #bitcoin-core-dev
+06:43 -!- bugs_ [~bugs@user/bugs/x-5128603] has joined #bitcoin-core-dev
+06:51 -!- diego [~diego@2804:14c:5781:8ef3:6a16:a749:b59:acad] has left #bitcoin-core-dev []
+06:51 -!- dviola [~diego@user/dviola] has joined #bitcoin-core-dev
+07:05 -!- cfields [~cfields@user/cfields] has quit [Read error: Connection reset by peer]
+07:06 -!- cfields [~cfields@user/cfields] has joined #bitcoin-core-dev
+07:10 < bitcoin-git> [gui] diegoviola opened pull request #948: GUI/Intro: Skip intro dialog when -blocksdir is manually passed (master...intro-blocksdir-fix) https://github.com/bitcoin-core/gui/pull/948
+07:10 < dviola> figured it out
+07:11 -!- deadmano- [~deadmanoz@user/deadmanoz] has joined #bitcoin-core-dev
+07:12 -!- deadmanoz [~deadmanoz@user/deadmanoz] has quit [Ping timeout: 265 seconds]
+07:17 -!- eugenesiegel [~eugenesie@user/eugenesiegel] has joined #bitcoin-core-dev
+07:46 < dviola> tested with: truncate -s 2T hugedisk.img; mkfs.ext4 hugedisk.img; mkdir hugedisk; chown diego:diego hugedisk; mount hugedisk.img hugedisk/ ; bitcoin-qt -blocksdir=/home/diego/hugedisk
+07:54 < dviola> *mount hugedisk.img hugedisk/ ; chown diego:diego hugedisk;
+07:59 -!- WizJin [~Wizzy@user/WizJin] has joined #bitcoin-core-dev
+08:10 -!- upekkha [~Advanced@2a01:4f8:1c0c:49df::1] has quit []
+08:10 -!- upekkha [~Advanced@2a01:4f8:1c0c:49df::1] has joined #bitcoin-core-dev
+08:20 -!- Guest64 [~Guest64@2800:200:f5b0:1021:45f0:1619:882d:6d3] has joined #bitcoin-core-dev
+08:21 -!- Guest64 [~Guest64@2800:200:f5b0:1021:45f0:1619:882d:6d3] has quit [Client Quit]
+08:27 -!- HG [~HG@2800:200:f5b0:1021:45f0:1619:882d:6d3] has joined #bitcoin-core-dev
+08:28 -!- HG is now known as Guest3910
+08:35 -!- l0rinc [~l0rinc@user/l0rinc] has joined #bitcoin-core-dev
+08:36 -!- viniciuscestari [~viniciusc@2804:30c:b3c:ec00:7e95:1332:ae97:7005] has joined #bitcoin-core-dev
+08:36 -!- viniciuscestari [~viniciusc@2804:30c:b3c:ec00:7e95:1332:ae97:7005] has quit [Client Quit]
+08:41 < brunoerg> I cannot attend the meeting today, updates QA WG: changed both bitcoincore.space and secp256k1.space to not be a SPA, so it’s easier to reference specific mutants in PRs/issues. (e.g. https://bitcoincore.space/src/addrman.cpp#1013)
+08:41 < corebot> brunoerg: Error: That URL raised <HTTP Error 404: Not Found>
+08:42 < brunoerg> Also, updated the mutation analysis of libsecp and expanded it (now covering src/hsort_impl.h). We are also expanding Core’s one to cover net_processing.
+08:53 -!- winterrdog [~winterrdo@102.222.234.45] has joined #bitcoin-core-dev
+08:57 -!- Guest3910 [~HG@2800:200:f5b0:1021:45f0:1619:882d:6d3] has quit [Quit: Client closed]
+08:59 -!- viniciuscestari [~viniciusc@2804:30c:b3c:ec00:7e95:1332:ae97:7005] has joined #bitcoin-core-dev
+09:00 < stickies-v> #startmeeting
+09:00 < corebot> stickies-v: Meeting started at 2026-07-16T16:00+0000
+09:00 < corebot> stickies-v: Current chairs: stickies-v
+09:00 < corebot> stickies-v: Useful commands: #action #info #idea #link #topic #motion #vote #close #endmeeting
+09:00 < corebot> stickies-v: See also: https://hcoop-meetbot.readthedocs.io/en/stable/
+09:00 < corebot> stickies-v: Participants should now identify themselves with '#here' or with an alias like '#here FirstLast'
+09:00 < stickies-v> #bitcoin-core-dev Meeting: _aj_ abubakarsadiq achow101 andrewtoth b10c brunoerg cfields danielabrozzoni darosior dergoegge dzxzg eugenesiegel fanquake fjahr furszy hebasto hodlinator instagibbs janb84 jarolrod johnny9dev jonatack josie jurraca kanzure kevkevin laanwj lightlike l0rinc maflcko marcofleon maxedw Murch pinheadmz provoostenator pseudoramdom ryanofsky sdaftuar sedited sipa sliv3r__ sr_gi stickies-v 
+09:00 < stickies-v> stringintech theStack vasild willcl-ark
+09:00 < eugenesiegel> hi
+09:00 < janb84> hi
+09:00 < cfields> hi
+09:00 < andrewtoth> hi
+09:00 < stickies-v> There are no pre-proposed meeting topics this week. Any last minute ones to add?
+09:00 < hebasto> hi
+09:00 < maxedw> hi
+09:00 < sipa> hi
+09:01 < johnny9dev> hi
+09:01 -!- viniciuscestari [~viniciusc@2804:30c:b3c:ec00:7e95:1332:ae97:7005] has quit [Client Quit]
+09:01 < Murch[m]> hi
+09:02 < stickies-v> #topic Benchmarking WG Update (l0rinc, andrewtoth)
+09:02 < l0rinc> hi
+09:02 < andrewtoth> Just wanted to say thanks to everyone who helped in any way to get #35295 across the finish line. That's all.
+09:02 < lightlike> hi
+09:02 < corebot> https://github.com/bitcoin/bitcoin/issues/35295 | validation: fetch block input prevouts in parallel during ConnectBlock by andrewtoth · Pull Request #35295 · bitcoin/bitcoin · GitHub
+09:02 < l0rinc> nothing urgent from me, thanks
+09:02 -!- viniciuscestari [~viniciusc@177.130.226.249] has joined #bitcoin-core-dev
+09:03 < stickies-v> i've seen a lot of people talk about the speedups on twitter!
+09:03 < stickies-v> #topic QML GUI WG Update (johnny9dev)
+09:03 < l0rinc> (just finished a reindex chainstate for https://github.com/bitcoin/bitcoin/pull/35215 in 3 hours on one of my servers by the way :D)
+09:03 < johnny9dev> Updated https://bitcoincore.app/ with permanent links to our latest preview builds.
+09:03 -!- viniciuscestari [~viniciusc@177.130.226.249] has quit [Client Quit]
+09:04 < johnny9dev> Will be sharing it increasingly with more people to get feedback and help hunt down bugs
+09:05 < johnny9dev> that's all for now
+09:05 -!- asd57 [~asd@2804:30c:b3c:ec00:d856:af0c:96bc:d104] has joined #bitcoin-core-dev
+09:05 < stickies-v> giving it a go now 👍
+09:06 < stickies-v> #topic QA WG Update (brunoerg)
+09:06 < stickies-v> brunoerg shared his update right before the meeting: https://www.erisian.com.au/bitcoin-core-dev/log-2026-07-16.html#l-178
+09:06 -!- andrewtoth [~andrewtot@gateway/tor-sasl/andrewtoth] has quit [Remote host closed the connection]
+09:06 -!- _flooded [~flooded@146.70.45.235] has quit [Read error: Connection reset by peer]
+09:07 < stickies-v> that's it for the WG updates today. Anything else to discuss?
+09:07 -!- andrewtoth [~andrewtot@gateway/tor-sasl/andrewtoth] has joined #bitcoin-core-dev
+09:07 -!- _flooded [~flooded@146.70.45.235] has joined #bitcoin-core-dev
+09:08 < stickies-v> #endmeeting
+09:08 < corebot> stickies-v: Meeting ended at 2026-07-16T16:08+0000
+09:08 < corebot> stickies-v: Raw log: https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-07-16_16_00.log.json
+09:08 < corebot> stickies-v: Formatted log: https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-07-16_16_00.log.html
+09:08 < corebot> stickies-v: Minutes: https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-07-16_16_00.html
+09:11 < yancy> hi
+09:11 < yancy> oops lol.  bye.
+09:12 -!- asd57 [~asd@2804:30c:b3c:ec00:d856:af0c:96bc:d104] has quit [Quit: Client closed]
+09:23 -!- l0rinc [~l0rinc@user/l0rinc] has quit [Quit: l0rinc]
+09:31 -!- dzxzg [~saroyan@user/dzxzg] has joined #bitcoin-core-dev
+09:43 -!- l0rinc [~l0rinc@user/l0rinc] has joined #bitcoin-core-dev
+10:10 -!- winterrdog [~winterrdo@102.222.234.45] has quit [Ping timeout: 250 seconds]
+10:27 -!- cotsuka [~cotsuka@user/cotsuka] has quit [Read error: Connection reset by peer]
+10:29 -!- andrewtoth [~andrewtot@gateway/tor-sasl/andrewtoth] has quit [Remote host closed the connection]
+10:30 -!- cotsuka [~cotsuka@user/cotsuka] has joined #bitcoin-core-dev
+10:39 < bitcoin-git> [bitcoin] ekzyis opened pull request #35736: bitcoin-util: replace netmagic command with getchainparams command (master...util-getchainparams) https://github.com/bitcoin/bitcoin/pull/35736
+10:49 -!- ufo [~ufo@dhcp-147-81-53-12.hawaiiantel.net] has joined #bitcoin-core-dev
+10:52 -!- ufo [~ufo@dhcp-147-81-53-12.hawaiiantel.net] has quit [Client Quit]
+10:53 -!- babyUFO [~babyUFO@dhcp-147-81-53-12.hawaiiantel.net] has joined #bitcoin-core-dev
+11:02 -!- l0rinc [~l0rinc@user/l0rinc] has quit [Quit: l0rinc]
+11:06 < dviola> pablomartin4btc: thanks for the concept ACK!
+11:22 < bitcoin-git> [bitcoin] hebasto opened pull request #35737: test: Move cluster_linearize.h contents into cluster_linearize namespace (master...260716-cluster-unused) https://github.com/bitcoin/bitcoin/pull/35737
+11:33 -!- vysn [~vysn@user/vysn] has joined #bitcoin-core-dev
+11:38 -!- eugenesiegel [~eugenesie@user/eugenesiegel] has quit [Ping timeout: 245 seconds]
+11:38 -!- l0rinc [~l0rinc@user/l0rinc] has joined #bitcoin-core-dev
+11:46 -!- l0rinc [~l0rinc@user/l0rinc] has quit [Quit: l0rinc]
+11:52 -!- dzxzg [~saroyan@user/dzxzg] has quit [Quit: Konversation terminated!]
+12:02 -!- babyUFO [~babyUFO@dhcp-147-81-53-12.hawaiiantel.net] has quit [Quit: Client closed]
+12:09 -!- l0rinc [~l0rinc@user/l0rinc] has joined #bitcoin-core-dev
+12:42 -!- vysn [~vysn@user/vysn] has quit [Remote host closed the connection]
+12:53 -!- l0rinc [~l0rinc@user/l0rinc] has quit [Quit: l0rinc]
+13:12 -!- bugs_ [~bugs@user/bugs/x-5128603] has quit [Quit: Leaving]
+13:23 -!- dzxzg [~saroyan@user/dzxzg] has joined #bitcoin-core-dev
+13:38 -!- l0rinc [~l0rinc@user/l0rinc] has joined #bitcoin-core-dev
+14:25 -!- dzxzg [~saroyan@user/dzxzg] has quit [Quit: Konversation terminated!]
+14:30 -!- babyUFO [~babyUFO@dhcp-147-81-53-12.hawaiiantel.net] has joined #bitcoin-core-dev
+14:43 < bitcoin-git> [bitcoin] andrewtoth opened pull request #35738: coins: parallel input prevout fetching followups (master...coinsviewoverlay-followups) https://github.com/bitcoin/bitcoin/pull/35738
+14:44 -!- andrewtoth [~andrewtot@gateway/tor-sasl/andrewtoth] has joined #bitcoin-core-dev
+14:45 -!- babyUFO [~babyUFO@dhcp-147-81-53-12.hawaiiantel.net] has quit [Quit: Client closed]
+14:45 -!- babyUFO [~babyUFO@dhcp-147-81-53-12.hawaiiantel.net] has joined #bitcoin-core-dev
+14:59 -!- PaperSword [~Thunderbi@securemail.qrsnap.io] has joined #bitcoin-core-dev
+15:02 -!- WizJin_ [~Wizzy@43.249.228.209] has joined #bitcoin-core-dev
+15:05 -!- WizJin [~Wizzy@user/WizJin] has quit [Ping timeout: 256 seconds]
+15:17 -!- memset [~memset@gateway/tor-sasl/memset] has quit [Remote host closed the connection]
+15:17 -!- memset [~memset@gateway/tor-sasl/memset] has joined #bitcoin-core-dev
+15:20 -!- dviola [~diego@user/dviola] has quit [Ping timeout: 259 seconds]
+15:21 -!- andrewtoth [~andrewtot@gateway/tor-sasl/andrewtoth] has quit [Remote host closed the connection]
+15:22 -!- andrewtoth [~andrewtot@gateway/tor-sasl/andrewtoth] has joined #bitcoin-core-dev
+15:24 -!- andrewtoth [~andrewtot@gateway/tor-sasl/andrewtoth] has quit [Remote host closed the connection]
+15:26 -!- GoldenGoose_ [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has quit [Remote host closed the connection]
+15:30 -!- GoldenGoose [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has joined #bitcoin-core-dev
+15:31 -!- GoldenGoose_ [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has joined #bitcoin-core-dev
+15:31 -!- GoldenGoose [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has quit [Read error: Connection reset by peer]
+15:34 -!- diego [~diego@2804:14c:5781:8ef3:6a16:a749:b59:acad] has joined #bitcoin-core-dev
+16:13 < bitcoin-git> [bitcoin] andrewtoth opened pull request #35739: Bench pr 35215 (master...bench-pr-35215) https://github.com/bitcoin/bitcoin/pull/35739
+16:13 < bitcoin-git> [bitcoin] andrewtoth closed pull request #35739: Bench pr 35215 (master...bench-pr-35215) https://github.com/bitcoin/bitcoin/pull/35739
+16:49 -!- memset [~memset@gateway/tor-sasl/memset] has quit [Remote host closed the connection]
+16:50 -!- memset [~memset@gateway/tor-sasl/memset] has joined #bitcoin-core-dev
+16:55 -!- l0rinc [~l0rinc@user/l0rinc] has quit [Quit: l0rinc]
+17:02 -!- babyUFO [~babyUFO@dhcp-147-81-53-12.hawaiiantel.net] has quit [Quit: Client closed]
+17:37 -!- GoldenGoose_ [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has quit [Remote host closed the connection]
+17:40 -!- GoldenGoose [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has joined #bitcoin-core-dev
+17:41 -!- GoldenGoose_ [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has joined #bitcoin-core-dev
+17:44 -!- GoldenGoose [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has quit [Ping timeout: 252 seconds]
+18:08 -!- l0rinc [~l0rinc@user/l0rinc] has joined #bitcoin-core-dev
+18:09 -!- l0rinc [~l0rinc@user/l0rinc] has quit [Client Quit]
+18:11 -!- l0rinc [~l0rinc@user/l0rinc] has joined #bitcoin-core-dev
+18:19 -!- diego [~diego@2804:14c:5781:8ef3:6a16:a749:b59:acad] has quit [Ping timeout: 254 seconds]
+18:21 -!- diego [~diego@2804:14c:5781:8ef3:6a16:a749:b59:acad] has joined #bitcoin-core-dev
+18:32 -!- GoldenGoose_ [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has quit [Remote host closed the connection]
+18:35 -!- GoldenGoose [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has joined #bitcoin-core-dev
+18:36 -!- GoldenGoose_ [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has joined #bitcoin-core-dev
+18:39 -!- GoldenGoose [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has quit [Ping timeout: 249 seconds]
+19:05 -!- GoldenGoose_ [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has quit [Remote host closed the connection]
+19:10 -!- GoldenGoose [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has joined #bitcoin-core-dev
+19:11 -!- GoldenGoose_ [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has joined #bitcoin-core-dev
+19:15 -!- GoldenGoose [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has quit [Ping timeout: 265 seconds]
+19:29 -!- WizJin_ [~Wizzy@43.249.228.209] has quit [Quit: Leaving]
+19:37 -!- willcl-ark [~willcl-ar@user/willcl-ark] has quit [Ping timeout: 276 seconds]
+19:40 -!- willcl-ark [~willcl-ar@user/willcl-ark] has joined #bitcoin-core-dev
+19:45 -!- dzxzg [~saroyan@user/dzxzg] has joined #bitcoin-core-dev
+19:49 -!- deadmanoz [~deadmanoz@user/deadmanoz] has joined #bitcoin-core-dev
+19:49 -!- ozdeadman [~deadmanoz@user/deadmanoz] has quit [Ping timeout: 252 seconds]
+20:00 -!- dzxzg [~saroyan@user/dzxzg] has quit [Quit: Konversation terminated!]
+20:00 -!- bitdex [~bitdex@gateway/tor-sasl/bitdex] has joined #bitcoin-core-dev
+20:09 -!- svanstaa [~quassel@2a00:4841:173c:bf00:e94e:c61a:bc64:e17a] has joined #bitcoin-core-dev
+20:09 -!- svanstaa_ [~quassel@2a00:4841:173c:bf00:359a:63f3:f5d6:ca96] has quit [Ping timeout: 267 seconds]
+20:16 -!- GoldenGoose_ [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has quit [Remote host closed the connection]
+20:20 -!- GoldenGoose [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has joined #bitcoin-core-dev
+20:21 -!- GoldenGoose_ [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has joined #bitcoin-core-dev
+20:24 -!- GoldenGoose [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has quit [Ping timeout: 255 seconds]
+20:40 -!- GoldenGoose_ [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has quit [Remote host closed the connection]
+20:45 -!- GoldenGoose [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has joined #bitcoin-core-dev
+20:46 -!- GoldenGoose_ [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has joined #bitcoin-core-dev
+20:49 -!- GoldenGoose [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has quit [Ping timeout: 254 seconds]
+20:54 -!- l0rinc [~l0rinc@user/l0rinc] has quit [Quit: l0rinc]
+21:01 -!- cmirror [~cmirror@4.53.92.114] has quit [Remote host closed the connection]
+21:01 -!- cmirror [~cmirror@4.53.92.114] has joined #bitcoin-core-dev
+21:05 -!- GoldenGoose_ [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has quit [Remote host closed the connection]
+21:10 -!- GoldenGoose [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has joined #bitcoin-core-dev
+21:11 -!- GoldenGoose_ [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has joined #bitcoin-core-dev
+21:14 -!- GoldenGoose [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has quit [Ping timeout: 259 seconds]
+21:24 < bitcoin-git> [bitcoin] b-l-u-e opened pull request #35740: http: linger-close after parse errors so clients can read the reply (master...http-lingering-close) https://github.com/bitcoin/bitcoin/pull/35740
+21:24 < bitcoin-git> [bitcoin] b-l-u-e closed pull request #35740: http: linger-close after parse errors so clients can read the reply (master...http-lingering-close) https://github.com/bitcoin/bitcoin/pull/35740
+21:49 -!- l0rinc [~l0rinc@user/l0rinc] has joined #bitcoin-core-dev
+21:50 -!- l0rinc [~l0rinc@user/l0rinc] has quit [Remote host closed the connection]
+21:51 -!- l0rinc [~l0rinc@user/l0rinc] has joined #bitcoin-core-dev
+22:02 -!- GoldenGoose_ [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has quit [Remote host closed the connection]
+22:05 -!- GoldenGoose [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has joined #bitcoin-core-dev
+22:06 -!- GoldenGoose_ [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has joined #bitcoin-core-dev
+22:10 -!- GoldenGoose [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has quit [Ping timeout: 268 seconds]
+22:25 -!- GoldenGoose_ [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has quit [Remote host closed the connection]
+22:30 -!- GoldenGoose [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has joined #bitcoin-core-dev
+22:31 -!- GoldenGoose_ [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has joined #bitcoin-core-dev
+22:34 -!- GoldenGoose [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has quit [Ping timeout: 259 seconds]
+22:50 -!- GoldenGoose_ [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has quit [Remote host closed the connection]
+22:55 -!- GoldenGoose [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has joined #bitcoin-core-dev
+22:56 -!- GoldenGoose_ [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has joined #bitcoin-core-dev
+22:59 -!- GoldenGoose [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has quit [Ping timeout: 264 seconds]
+23:03 -!- spynx [~spynxic@spynxic.powered.by.lunarbnc.net] has joined #bitcoin-core-dev
+23:03 -!- spynxic [~spynxic@spynxic.powered.by.lunarbnc.net] has quit [Read error: Connection reset by peer]
+23:15 -!- GoldenGoose_ [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has quit [Remote host closed the connection]
+23:18 -!- tarotfied [~tarotfied@user/tarotfied] has quit [Quit: WeeChat 4.1.1]
+23:20 -!- GoldenGoose [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has joined #bitcoin-core-dev
+23:21 -!- GoldenGoose_ [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has joined #bitcoin-core-dev
+23:22 -!- bitdex [~bitdex@gateway/tor-sasl/bitdex] has quit [Remote host closed the connection]
+23:23 -!- bitdex [~bitdex@gateway/tor-sasl/bitdex] has joined #bitcoin-core-dev
+23:24 -!- GoldenGoose [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has quit [Ping timeout: 245 seconds]
+23:29 -!- bitdex [~bitdex@gateway/tor-sasl/bitdex] has quit [Remote host closed the connection]
+23:30 -!- tarotfied [~tarotfied@user/tarotfied] has joined #bitcoin-core-dev
+23:33 -!- bitdex [~bitdex@gateway/tor-sasl/bitdex] has joined #bitcoin-core-dev
+23:40 -!- GoldenGoose_ [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has quit [Remote host closed the connection]
+23:45 -!- GoldenGoose [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has joined #bitcoin-core-dev
+23:46 -!- GoldenGoose_ [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has joined #bitcoin-core-dev
+23:49 -!- GoldenGoose [~GoldenGoo@172-234-90-113.ip.linodeusercontent.com] has quit [Ping timeout: 249 seconds]
+--- Log closed Fri Jul 17 00:00:34 2026

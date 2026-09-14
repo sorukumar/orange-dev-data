@@ -281,6 +281,9 @@ def main():
     run("python3 scripts/01_ingest/delving.py", cwd=root_dir)
     run("python3 scripts/01_ingest/mailing_list.py", cwd=root_dir)
     run("python3 scripts/01_ingest/github_metadata.py", cwd=root_dir)
+    run("python3 scripts/01_ingest/tracking_issues.py", cwd=root_dir)
+    run("python3 scripts/01_ingest/optech.py", cwd=root_dir)
+    run("python3 scripts/01_ingest/irc_meetings.py", cwd=root_dir)
     run("python3 scripts/01_ingest/automated_sponsors.py", cwd=root_dir)
     count_step("After Phase 1 — raw source files extracted", root_dir)
 
@@ -324,11 +327,13 @@ def main():
     run("python3 scripts/03_analyze/unify_contributors.py", cwd=root_dir)
     count_step("After unify_contributors — grand join complete", root_dir)
 
-    print("\n--- PHASE 3.5: LLM Summarization ---")
+    print("\n--- PHASE 3.5: LLM Summarization & Cross-Referencing ---")
     run("python3 scripts/03_analyze/generate_pr_summaries.py", cwd=root_dir)
     run("python3 scripts/03_analyze/generate_thread_summaries.py", cwd=root_dir)
     run("python3 scripts/03_analyze/generate_release_highlights.py", cwd=root_dir)
     run("python3 scripts/03_analyze/generate_pulse_summary.py", cwd=root_dir)
+    run("python3 scripts/03_analyze/generate_meeting_summary.py", cwd=root_dir)
+    run("python3 scripts/03_analyze/optech_crossref.py", cwd=root_dir)
 
     # PHASE 4: Delivery (Enriched -> Output)
     print("\n--- PHASE 4: Artifact Generation ---")
@@ -342,6 +347,8 @@ def main():
     run("python3 scripts/04_deliver/discussions_pulse.py", cwd=root_dir)
     run("python3 scripts/04_deliver/ecosystem_home_snapshot.py", cwd=root_dir)
     run("python3 scripts/04_deliver/self_merge_receipts.py", cwd=root_dir)
+    run("cp data/raw/tracking_issues.json output/tracker/tracking_issues.json", cwd=root_dir)
+    run("cp data/raw/meeting_summaries.json output/shared/meeting_summaries.json", cwd=root_dir)
     run("python3 scripts/04_deliver/twib_artifacts.py", cwd=root_dir)
     count_step("FINAL — ecosystem summary", root_dir)
 

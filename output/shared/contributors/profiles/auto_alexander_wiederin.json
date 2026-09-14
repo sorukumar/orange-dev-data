@@ -29,25 +29,25 @@
   "modern_bips_authored": 0.0,
   "first_bip_date": null,
   "last_bip_date": null,
-  "avg_review_latency_days": 152.01345792483662,
-  "reviews_count": 23.0,
-  "avg_approval_latency_days": 67.71384038800706,
-  "approvals_count": 17.0,
-  "tier1_reviews_count": 23.0,
+  "avg_review_latency_days": 145.31678224665637,
+  "reviews_count": 26.0,
+  "avg_approval_latency_days": 64.46457947530864,
+  "approvals_count": 20.0,
+  "tier1_reviews_count": 26.0,
   "tier2_reviews_count": 0.0,
-  "p2016_reviews_count": 23.0,
-  "modern_reviews_count": 22.0,
+  "p2016_reviews_count": 26.0,
+  "modern_reviews_count": 25.0,
   "first_review_date": "2023-05-30T12:38:58",
-  "last_review_date": "2026-09-04T19:11:18",
+  "last_review_date": "2026-09-11T09:37:35",
   "prs_authored": 6.0,
   "tier1_prs_authored": 6.0,
   "tier2_prs_authored": 0.0,
   "avg_pr_ack_velocity_days": 0.2553935185185185,
   "avg_concept_lead_time_days": 0.4717708333333333,
-  "review_reciprocity": 3.8333333333333335,
-  "hybrid_score": 0.2457,
-  "p2016_hybrid_score": 0.2457,
-  "modern_hybrid_score": 0.2443,
+  "review_reciprocity": 4.333333333333333,
+  "hybrid_score": 0.261,
+  "p2016_hybrid_score": 0.261,
+  "modern_hybrid_score": 0.2598,
   "impact_score": 14.0,
   "p2016_impact_score": 14.0,
   "modern_impact_score": 14.0,
@@ -61,15 +61,18 @@
   "last_active": null,
   "dev_type": "Builder",
   "expertise_domains": [
-    "Consensus"
+    "Consensus",
+    "Infrastructure"
   ],
   "expertise_by_source": {
     "code": {
-      "Consensus": 1.0
+      "Consensus": 0.8,
+      "Infrastructure": 0.2
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 1.0
+    "Consensus": 0.8,
+    "Infrastructure": 0.2
   },
   "p2016_posts": 0.0,
   "modern_posts": 0.0,
@@ -82,7 +85,7 @@
   "is_researcher": false,
   "is_bip_author": false,
   "global_first_active": "2023-05-30T12:38:58",
-  "global_last_active": "2026-09-04T19:11:18",
+  "global_last_active": "2026-09-11T09:37:35",
   "github_location": "London",
   "github_company": null,
   "github_bio": "Funded by Spiral\r\n\r\ngithub.wiederin.alexander [at] gmail.com",

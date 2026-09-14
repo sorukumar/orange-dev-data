@@ -1,39 +1,39 @@
 {
-  "generated_at": "2026-09-06T19:42:32.107736",
+  "generated_at": "2026-09-13T11:14:52.125888",
   "groups": {
-    "committers": 1261,
-    "reviewers": 5216,
-    "research": 1693,
+    "committers": 1267,
+    "reviewers": 5233,
+    "research": 1696,
     "standards": 159,
-    "total_active": 6610,
-    "total_registry": 7780
+    "total_active": 6632,
+    "total_registry": 7804
   },
   "venn_4": {
     "0001": 12,
-    "0010": 1206,
-    "0011": 25,
-    "0100": 3924,
+    "0010": 1207,
+    "0011": 26,
+    "0100": 3938,
     "0101": 6,
     "0110": 141,
     "0111": 35,
-    "1000": 138,
+    "1000": 141,
     "1001": 1,
     "1010": 11,
     "1011": 1,
-    "1100": 834,
+    "1100": 836,
     "1101": 2,
-    "1110": 197,
-    "1111": 77
+    "1110": 199,
+    "1111": 76
   },
   "venn_summary": {
-    "code_only": 138,
-    "review_only": 3924,
-    "research_only": 1206,
+    "code_only": 141,
+    "review_only": 3938,
+    "research_only": 1207,
     "standards_only": 12,
-    "all_four": 77,
-    "code_review": 834,
+    "all_four": 76,
+    "code_review": 836,
     "review_research": 141,
-    "research_standards": 25
+    "research_standards": 26
   },
   "rd_focus": {},
   "hotspot": {
@@ -47,48 +47,48 @@
     "description": "First-time core contributor recently merged 4 commits."
   },
   "onboarding": {
-    "new_coders_90d": 26,
-    "new_coders_7d": 1,
+    "new_coders_90d": 28,
+    "new_coders_7d": 8,
     "new_discussants_90d": 54,
-    "new_discussants_7d": 6,
+    "new_discussants_7d": 2,
     "window_days": 90
   },
   "prs": {
-    "total_merged": 18184,
-    "merged_30d": 145,
-    "merged_prev_30d": 148,
-    "merged_7d": 33,
-    "merged_prev_7d": 34
+    "total_merged": 18235,
+    "merged_30d": 172,
+    "merged_prev_30d": 139,
+    "merged_7d": 59,
+    "merged_prev_7d": 25
   },
   "commits": {
-    "commits_30d": 699,
-    "commits_prev_30d": 1018,
-    "commits_7d": 111,
-    "commits_prev_7d": 209
+    "commits_30d": 820,
+    "commits_prev_30d": 998,
+    "commits_7d": 213,
+    "commits_prev_7d": 127
   },
   "bips": {
-    "total": 210,
-    "active_recently": 99
+    "total": 211,
+    "active_recently": 100
   },
   "discussion_pulse": {
     "topics": [
       {
-        "category": "mining",
-        "label": "Mining",
-        "count": 99,
-        "share": 16.2
-      },
-      {
         "category": "quantum",
         "label": "Quantum",
-        "count": 83,
-        "share": 13.6
+        "count": 91,
+        "share": 15.0
+      },
+      {
+        "category": "mining",
+        "label": "Mining",
+        "count": 88,
+        "share": 14.5
       },
       {
         "category": "utxo-sync",
         "label": "Utxo Sync",
-        "count": 68,
-        "share": 11.1
+        "count": 67,
+        "share": 11.0
       }
     ],
     "top_bips": [

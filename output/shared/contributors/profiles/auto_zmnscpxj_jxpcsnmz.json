@@ -47,18 +47,18 @@
   "review_reciprocity": null,
   "hybrid_score": 0.0051,
   "p2016_hybrid_score": 0.0077,
-  "modern_hybrid_score": 0.0211,
+  "modern_hybrid_score": 0.021,
   "impact_score": 0.0,
   "p2016_impact_score": 0.0,
   "modern_impact_score": 1.0,
-  "threads_started": 60.0,
-  "replies_sent": 58.0,
+  "threads_started": 62.0,
+  "replies_sent": 59.0,
   "ml_threads": 0.0,
-  "delving_threads": 60.0,
+  "delving_threads": 62.0,
   "ml_responses": 0.0,
-  "delving_responses": 58.0,
+  "delving_responses": 59.0,
   "first_active": null,
-  "last_active": null,
+  "last_active": "2026-09-14T06:13:03.016000",
   "dev_type": "Participant",
   "expertise_domains": [
     "L2",
@@ -66,26 +66,26 @@
   ],
   "expertise_by_source": {
     "discussion": {
-      "L2": 0.783,
-      "Wallet": 0.217
+      "L2": 0.795,
+      "Wallet": 0.205
     }
   },
   "expertise_domain_scores": {
-    "L2": 0.783,
-    "Wallet": 0.217
+    "L2": 0.795,
+    "Wallet": 0.205
   },
-  "p2016_posts": 118.0,
-  "modern_posts": 118.0,
+  "p2016_posts": 121.0,
+  "modern_posts": 121.0,
   "p2016_ml_posts": 0.0,
-  "p2016_delving_posts": 118.0,
+  "p2016_delving_posts": 121.0,
   "modern_ml_posts": 0.0,
-  "modern_delving_posts": 118.0,
+  "modern_delving_posts": 121.0,
   "is_engineer": false,
   "is_reviewer": false,
   "is_researcher": true,
   "is_bip_author": false,
   "global_first_active": null,
-  "global_last_active": null,
+  "global_last_active": "2026-09-14T06:13:03.016000",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -97,15 +97,15 @@
   "delving_url": "https://delvingbitcoin.org/u/zmnscpxj",
   "first_message": {
     "source": "delving",
-    "subject": "[Lightning] Batched Splicing Considered Risky",
+    "subject": "Batched Splicing Considered Risky",
     "date": "2023-11-08",
-    "link": "https://delvingbitcoin.org/t/lightning-batched-splicing-considered-risky/170/1"
+    "link": "https://delvingbitcoin.org/t/batched-splicing-considered-risky/170/1"
   },
   "last_message": {
     "source": "delving",
-    "subject": "Re: P2share: how to turn any network (or testnet!) into a bitcoin miner",
-    "date": "2026-08-06",
-    "link": "https://delvingbitcoin.org/t/p2share-how-to-turn-any-network-or-testnet-into-a-bitcoin-miner/2093/28"
+    "subject": "Re: Addressing the Diminishing Block Subsidy",
+    "date": "2026-09-14",
+    "link": "https://delvingbitcoin.org/t/addressing-the-diminishing-block-subsidy/2640/30"
   },
   "social_history": {
     "2023": {
@@ -136,12 +136,13 @@
       "quantum": 9
     },
     "2026": {
-      "other": 18,
+      "other": 25,
       "covenants": 4,
       "l2-bridges": 2,
       "lightning": 13,
-      "mining": 1,
+      "mining": 4,
       "multisig-threshold": 14,
+      "quantum": 2,
       "taproot": 2
     }
   }

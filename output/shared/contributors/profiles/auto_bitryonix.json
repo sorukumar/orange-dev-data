@@ -51,14 +51,14 @@
   "impact_score": 0.0,
   "p2016_impact_score": 0.0,
   "modern_impact_score": 0.0,
-  "threads_started": 6.0,
+  "threads_started": 7.0,
   "replies_sent": 0.0,
   "ml_threads": 0.0,
-  "delving_threads": 6.0,
+  "delving_threads": 7.0,
   "ml_responses": 0.0,
   "delving_responses": 0.0,
   "first_active": null,
-  "last_active": null,
+  "last_active": "2026-09-09T18:29:35.403000",
   "dev_type": "Participant",
   "expertise_domains": [
     "Script",
@@ -67,28 +67,28 @@
   ],
   "expertise_by_source": {
     "discussion": {
-      "Consensus": 0.25,
-      "Mining": 0.25,
-      "Script": 0.5
+      "Consensus": 0.247,
+      "Mining": 0.247,
+      "Script": 0.506
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.25,
-    "Mining": 0.25,
-    "Script": 0.5
+    "Consensus": 0.247,
+    "Mining": 0.247,
+    "Script": 0.506
   },
-  "p2016_posts": 6.0,
-  "modern_posts": 6.0,
+  "p2016_posts": 7.0,
+  "modern_posts": 7.0,
   "p2016_ml_posts": 0.0,
-  "p2016_delving_posts": 6.0,
+  "p2016_delving_posts": 7.0,
   "modern_ml_posts": 0.0,
-  "modern_delving_posts": 6.0,
+  "modern_delving_posts": 7.0,
   "is_engineer": false,
   "is_reviewer": false,
   "is_researcher": false,
   "is_bip_author": false,
   "global_first_active": null,
-  "global_last_active": null,
+  "global_last_active": "2026-09-09T18:29:35.403000064",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -100,21 +100,24 @@
   "delving_url": "https://delvingbitcoin.org/u/bitryonix",
   "first_message": {
     "source": "delving",
-    "subject": "Boomerang: Bitcoin Cold Storage with Built-In Duress Protection",
+    "subject": "Boomerang: Bitcoin Cold Storage with Built-In Coercion Resistance",
     "date": "2026-02-08",
-    "link": "https://delvingbitcoin.org/t/boomerang-bitcoin-cold-storage-with-built-in-duress-protection/2239/1"
+    "link": "https://delvingbitcoin.org/t/boomerang-bitcoin-cold-storage-with-built-in-coercion-resistance/2239/1"
   },
   "last_message": {
     "source": "delving",
-    "subject": "Re: Boomerang: Bitcoin Cold Storage with Built-In Coercion Resistance",
-    "date": "2026-08-28",
-    "link": "https://delvingbitcoin.org/t/boomerang-bitcoin-cold-storage-with-built-in-coercion-resistance/2239/7"
+    "subject": "Re: Unspendable keys in descriptors",
+    "date": "2026-09-09",
+    "link": "https://delvingbitcoin.org/t/unspendable-keys-in-descriptors/304/33"
   },
   "social_history": {
     "2026": {
       "mining": 6,
+      "silent-payments": 1,
       "soft-fork-activation": 6,
-      "vaults": 6
+      "taproot": 1,
+      "vaults": 6,
+      "wallet-keys": 1
     }
   }
 }

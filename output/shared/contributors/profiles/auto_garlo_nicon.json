@@ -45,9 +45,9 @@
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": null,
-  "hybrid_score": 0.041,
-  "p2016_hybrid_score": 0.0669,
-  "modern_hybrid_score": 0.2276,
+  "hybrid_score": 0.0411,
+  "p2016_hybrid_score": 0.067,
+  "modern_hybrid_score": 0.2286,
   "impact_score": 2.0,
   "p2016_impact_score": 4.0,
   "modern_impact_score": 13.0,
@@ -58,7 +58,7 @@
   "ml_responses": 30.0,
   "delving_responses": 22.0,
   "first_active": "2024-04-08T14:11:53",
-  "last_active": null,
+  "last_active": "2026-08-29T20:21:29.892000",
   "dev_type": "Participant",
   "expertise_domains": [
     "Mining",
@@ -66,13 +66,13 @@
   ],
   "expertise_by_source": {
     "discussion": {
-      "Mempool": 0.409,
-      "Mining": 0.591
+      "Mempool": 0.429,
+      "Mining": 0.571
     }
   },
   "expertise_domain_scores": {
-    "Mempool": 0.409,
-    "Mining": 0.591
+    "Mempool": 0.429,
+    "Mining": 0.571
   },
   "p2016_posts": 73.0,
   "modern_posts": 73.0,
@@ -85,7 +85,7 @@
   "is_researcher": true,
   "is_bip_author": false,
   "global_first_active": "2024-04-08T14:11:53",
-  "global_last_active": null,
+  "global_last_active": "2026-08-29T20:21:29.892000",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -131,13 +131,13 @@
       "testing-devtools": 11
     },
     "2026": {
-      "other": 17,
-      "covenants": 2,
+      "other": 21,
+      "covenants": 4,
       "mempool-fees": 2,
       "mining": 5,
       "quantum": 7,
       "script-opcodes": 3,
-      "taproot": 2,
+      "taproot": 4,
       "testing-devtools": 5
     }
   }

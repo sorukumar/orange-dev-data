@@ -29,28 +29,28 @@
   "modern_bips_authored": 0.0,
   "first_bip_date": null,
   "last_bip_date": null,
-  "avg_review_latency_days": 209.7385575810185,
-  "reviews_count": 91.0,
-  "avg_approval_latency_days": 47.346733440170944,
-  "approvals_count": 84.0,
-  "tier1_reviews_count": 88.0,
+  "avg_review_latency_days": 236.91342330367476,
+  "reviews_count": 96.0,
+  "avg_approval_latency_days": 46.15689277873234,
+  "approvals_count": 89.0,
+  "tier1_reviews_count": 93.0,
   "tier2_reviews_count": 3.0,
-  "p2016_reviews_count": 91.0,
-  "modern_reviews_count": 91.0,
+  "p2016_reviews_count": 96.0,
+  "modern_reviews_count": 96.0,
   "first_review_date": "2026-08-03T23:45:59",
-  "last_review_date": "2026-09-07T22:31:02",
+  "last_review_date": "2026-09-14T13:53:19",
   "prs_authored": 12.0,
   "tier1_prs_authored": 7.0,
   "tier2_prs_authored": 5.0,
   "avg_pr_ack_velocity_days": 2.482650462962963,
   "avg_concept_lead_time_days": 5.2366319444444445,
-  "review_reciprocity": 7.583333333333333,
-  "hybrid_score": 0.1654,
-  "p2016_hybrid_score": 0.1654,
-  "modern_hybrid_score": 0.1654,
-  "impact_score": 9.0,
-  "p2016_impact_score": 9.0,
-  "modern_impact_score": 9.0,
+  "review_reciprocity": 8.0,
+  "hybrid_score": 0.3234,
+  "p2016_hybrid_score": 0.3234,
+  "modern_hybrid_score": 0.3234,
+  "impact_score": 18.0,
+  "p2016_impact_score": 18.0,
+  "modern_impact_score": 18.0,
   "threads_started": 5.0,
   "replies_sent": 1.0,
   "ml_threads": 1.0,
@@ -58,21 +58,28 @@
   "ml_responses": 0.0,
   "delving_responses": 1.0,
   "first_active": null,
-  "last_active": "2026-08-06T08:51:55",
-  "dev_type": "Reviewer",
+  "last_active": null,
+  "dev_type": "Builder",
   "expertise_domains": [
+    "Wallet",
     "Cryptography",
-    "Consensus"
+    "Infrastructure"
   ],
   "expertise_by_source": {
+    "code": {
+      "Infrastructure": 0.286,
+      "Wallet": 0.714
+    },
     "discussion": {
-      "Consensus": 0.389,
-      "Cryptography": 0.611
+      "Consensus": 0.38,
+      "Cryptography": 0.62
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.389,
-    "Cryptography": 0.611
+    "Consensus": 0.152,
+    "Cryptography": 0.248,
+    "Infrastructure": 0.1716,
+    "Wallet": 0.4284
   },
   "p2016_posts": 6.0,
   "modern_posts": 6.0,
@@ -80,12 +87,12 @@
   "p2016_delving_posts": 5.0,
   "modern_ml_posts": 1.0,
   "modern_delving_posts": 5.0,
-  "is_engineer": false,
+  "is_engineer": true,
   "is_reviewer": true,
   "is_researcher": false,
   "is_bip_author": false,
   "global_first_active": "2026-08-03T23:45:59",
-  "global_last_active": "2026-09-07T22:31:02",
+  "global_last_active": "2026-09-14T13:53:19",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -118,12 +125,13 @@
     "2026": {
       "mempool-fees": 3,
       "multisig-threshold": 1,
+      "privacy": 1,
       "quantum": 5,
       "scaling": 1,
+      "segwit": 1,
       "taproot": 3,
       "testing-devtools": 3,
-      "utxo-sync": 1,
-      "wallet-keys": 1
+      "other": 2
     }
   }
 }

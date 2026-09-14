@@ -1,6 +1,17 @@
 {
-  "generated_at": "2026-09-08T00:43:04.266240+00:00",
+  "generated_at": "2026-09-14T16:15:19.780766+00:00",
   "self_merges": [
+    {
+      "maintainer_id": "can_michael_ford",
+      "maintainer_name": "Michael Ford",
+      "repository": "bitcoin/bitcoin",
+      "pr_number": 36218,
+      "url": "https://github.com/bitcoin/bitcoin/pull/36218",
+      "title": "build: avoid `pipe2` on Darwin (for now)",
+      "merged_at": "2026-09-10T16:03:27+00:00",
+      "ack_count": 2,
+      "category": "Light Review"
+    },
     {
       "maintainer_id": "can_hennadii_stepanov",
       "maintainer_name": "Hennadii Stepanov",
@@ -28303,6 +28314,17 @@
       "merged_at": null,
       "ack_count": 2,
       "category": "Light Review"
+    },
+    {
+      "maintainer_id": "can_michael_ford",
+      "maintainer_name": "Michael Ford",
+      "repository": "bitcoin-core/gui",
+      "pr_number": 36218,
+      "url": "https://github.com/bitcoin-core/gui/pull/36218",
+      "title": null,
+      "merged_at": null,
+      "ack_count": 0,
+      "category": "Ninja Merge"
     },
     {
       "maintainer_id": "can_hennadii_stepanov",

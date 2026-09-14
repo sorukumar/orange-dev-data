@@ -340,6 +340,15 @@ def generate_discussions_pulse():
             "insights": pulse_editorial.get("insights", []),
         }
         
+    # Load meeting summaries if available
+    meeting_summaries = []
+    if os.path.exists("data/raw/meeting_summaries.json"):
+        try:
+            with open("data/raw/meeting_summaries.json") as f:
+                meeting_summaries = json.load(f)[:4] # get latest 4
+        except Exception as e:
+            print(f"  Warning: Could not load meeting summaries: {e}")
+        
     # Enrich hot threads with insights from unified thread summaries
     thread_cache = {}
     if os.path.exists("data/cache/thread_summaries_cache.json"):
@@ -373,6 +382,7 @@ def generate_discussions_pulse():
     generated_at_t1 = (datetime.now() - pd.Timedelta(days=1)).strftime('%Y-%m-%d')
     output = {
         "generated_at": generated_at_t1,
+        "meeting_summaries": meeting_summaries,
         "windows": {
             "7d": w7 or {},
             "30d": w30,

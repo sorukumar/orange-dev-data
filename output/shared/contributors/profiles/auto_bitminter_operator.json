@@ -1,8 +1,8 @@
 {
-  "display_name": "Wang Chun",
+  "display_name": "BitMinter operator",
   "github_login_final": null,
   "delving_username_final": null,
-  "uuid": "auto_wang_chun",
+  "uuid": "auto_bitminter_operator",
   "badges": null,
   "roles": null,
   "total_commits": 0.0,
@@ -45,41 +45,38 @@
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": null,
-  "hybrid_score": 0.0742,
-  "p2016_hybrid_score": 0.0525,
+  "hybrid_score": 0.0267,
+  "p2016_hybrid_score": 0.0,
   "modern_hybrid_score": 0.0,
-  "impact_score": 4.0,
-  "p2016_impact_score": 3.0,
+  "impact_score": 2.0,
+  "p2016_impact_score": 0.0,
   "modern_impact_score": 0.0,
-  "threads_started": 3.0,
-  "replies_sent": 18.0,
-  "ml_threads": 3.0,
+  "threads_started": 1.0,
+  "replies_sent": 13.0,
+  "ml_threads": 1.0,
   "delving_threads": 0.0,
-  "ml_responses": 18.0,
+  "ml_responses": 13.0,
   "delving_responses": 0.0,
-  "first_active": "2015-05-29T18:42:16",
-  "last_active": "2017-06-19T13:01:45",
+  "first_active": "2011-10-22T07:26:52",
+  "last_active": null,
   "dev_type": "Participant",
   "expertise_domains": [
-    "Consensus",
     "Mining",
-    "Mempool"
+    "Consensus"
   ],
   "expertise_by_source": {
     "discussion": {
-      "Consensus": 0.556,
-      "Mempool": 0.181,
-      "Mining": 0.264
+      "Consensus": 0.261,
+      "Mining": 0.739
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.5554,
-    "Mempool": 0.1808,
-    "Mining": 0.2637
+    "Consensus": 0.261,
+    "Mining": 0.739
   },
-  "p2016_posts": 4.0,
+  "p2016_posts": 0.0,
   "modern_posts": 0.0,
-  "p2016_ml_posts": 4.0,
+  "p2016_ml_posts": 0.0,
   "p2016_delving_posts": 0.0,
   "modern_ml_posts": 0.0,
   "modern_delving_posts": 0.0,
@@ -87,8 +84,8 @@
   "is_reviewer": false,
   "is_researcher": true,
   "is_bip_author": false,
-  "global_first_active": "2015-05-29T18:42:16",
-  "global_last_active": "2017-06-19T13:01:45",
+  "global_first_active": "2011-10-22T07:26:52",
+  "global_last_active": null,
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -99,32 +96,32 @@
   "is_top_50": false,
   "first_message": {
     "source": "mailing_list",
-    "subject": "Re: [Bitcoin-development] Block Size Increase Requirements",
-    "date": "2015-05-29",
-    "link": "https://gnusha.org/pi/bitcoindev/CAFzgq-xByQ1E_33_m3UpXQFUkGc78HKnA=7XXMshANDuTkNsvA@mail.gmail.com"
+    "subject": "Re: [Bitcoin-development] Help wanted: translations",
+    "date": "2011-10-22",
+    "link": "https://gnusha.org/pi/bitcoindev/4EA2B68C.3050901@bitminter.com"
   },
   "last_message": {
     "source": "mailing_list",
-    "subject": "[bitcoin-dev] An alternative way to protect the network from 51%\n\tattacks threat",
-    "date": "2017-06-19",
-    "link": "https://gnusha.org/pi/bitcoindev/CAFzgq-woP3kWC9wYm=YxA_W=jMoL0AegTtUhTX3kEdMaB3m1rA@mail.gmail.com"
+    "subject": "Re: [bitcoin-dev] We need to fix the block withholding attack",
+    "date": "2015-12-26",
+    "link": "https://gnusha.org/pi/bitcoindev/567F64A1.8020202@bitminter.com"
   },
   "social_history": {
-    "2015": {
-      "hard-fork-block-size": 11,
-      "mempool-fees": 4,
-      "mining": 9,
-      "scaling": 2,
-      "script-opcodes": 2,
-      "security": 2,
+    "2011": {
       "other": 3
     },
-    "2017": {
+    "2012": {
+      "bip-process": 2,
+      "mining": 2,
+      "other": 2
+    },
+    "2014": {
+      "other": 2
+    },
+    "2015": {
       "hard-fork-block-size": 2,
-      "mining": 1,
-      "p2p-network": 1,
-      "other": 2,
-      "soft-fork-activation": 2
+      "mining": 4,
+      "taproot": 1
     }
   }
 }

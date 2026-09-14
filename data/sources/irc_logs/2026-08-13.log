@@ -1,0 +1,386 @@
+--- Log opened Thu Aug 13 00:01:00 2026
+00:34 -!- Guyver2 [~Guyver@77.174.98.73] has joined #bitcoin-core-dev
+00:52 -!- Sjors[m] [~provooste@2620:6e:a000:ce11::1f] has quit [Ping timeout: 244 seconds]
+00:52 -!- b10c[m] [~b10cb10cm@2620:6e:a000:ce11::1c] has quit [Ping timeout: 260 seconds]
+00:52 -!- BlueMattMtrxBot [~bluemattm@2620:6e:a000:ce11::52] has quit [Ping timeout: 260 seconds]
+00:52 -!- stratospher[m] [~stratosph@2620:6e:a000:ce11::1e] has quit [Ping timeout: 268 seconds]
+00:52 -!- Murch[m] [~murch@2620:6e:a000:ce11::1b] has quit [Ping timeout: 252 seconds]
+00:52 -!- bitcoin-git [~bitcoin-g@2620:6e:a000:ce11::21] has quit [Ping timeout: 267 seconds]
+00:53 -!- BlueMatt[m] [~bluematt@2620:6e:a000:ce11::d] has quit [Ping timeout: 258 seconds]
+01:07 -!- BlueMattMtrxBot [~bluemattm@2620:6e:a000:ce11::52] has joined #bitcoin-core-dev
+01:07 -!- b10c[m] [~b10cb10cm@2620:6e:a000:ce11::1c] has joined #bitcoin-core-dev
+01:10 -!- stratospher[m] [~stratosph@2620:6e:a000:ce11::1e] has joined #bitcoin-core-dev
+01:11 -!- Murch[m] [~murch@2620:6e:a000:ce11::1b] has joined #bitcoin-core-dev
+01:11 -!- Sjors[m] [~provooste@2620:6e:a000:ce11::1f] has joined #bitcoin-core-dev
+01:12 -!- bitcoin-git [~bitcoin-g@2620:6e:a000:ce11::21] has joined #bitcoin-core-dev
+01:12 -!- BlueMatt[m] [~bluematt@2620:6e:a000:ce11::d] has joined #bitcoin-core-dev
+01:31 -!- Guyver2 [~Guyver@77.174.98.73] has left #bitcoin-core-dev [Closing Window]
+02:00 < bitcoin-git> [bitcoin] naiyoma opened pull request #35963: doc : update cjdns docs to discourage using onlynet option (master...2026_2/cjdns_doc_update) https://github.com/bitcoin/bitcoin/pull/35963
+02:03 < bitcoin-git> [bitcoin] sedited pushed 2 commits to master: https://github.com/bitcoin/bitcoin/compare/b2c45888fde0...11090c8bb359
+02:03 < bitcoin-git> bitcoin/master 800ad9c Jon Atack: doc: release note I2P ElGamal sunset
+02:03 < bitcoin-git> bitcoin/master 11090c8 merge-script: Merge bitcoin/bitcoin#35951: doc: release note about I2P ElGamal sunset
+02:03 < bitcoin-git> [bitcoin] sedited merged pull request #35951: doc: release note about I2P ElGamal sunset (master...2026-08-i2p-elgamal-sunset) https://github.com/bitcoin/bitcoin/pull/35951
+03:16 < bitcoin-git> [bitcoin] hebasto closed pull request #32367: cmake: Check user-defined `APPEND_*FLAGS` variables early (master...250428-enable-lang) https://github.com/bitcoin/bitcoin/pull/32367
+03:22 < bitcoin-git> [gui-qml] hebasto merged pull request #855: Fix crash when clearing send recipients (qt6...fix-send-crash) https://github.com/bitcoin-core/gui-qml/pull/855
+03:36 -!- conman [~con@2403-5803-70b2-0-e7e3-c8af-f797-4d9b.ip6.aussiebb.net] has quit [Quit: Konversation terminated!]
+03:37 -!- conman [~con@180-150-21-3.b49615.mel.static.aussiebb.net] has joined #bitcoin-core-dev
+03:59 -!- Earnestly [~earnest@user/earnestly] has quit [Ping timeout: 246 seconds]
+04:00 -!- Earnestly [~earnest@user/earnestly] has joined #bitcoin-core-dev
+04:58 -!- diego [~diego@2804:14c:5781:8ef3:6a16:a749:b59:acad] has left #bitcoin-core-dev []
+05:00 -!- jackielove4u [~jackielov@user/jackielove4u] has quit [Ping timeout: 256 seconds]
+05:16 -!- bitdex [~bitdex@gateway/tor-sasl/bitdex] has quit [Quit: = ""]
+05:27 -!- dviola [~diego@user/dviola] has joined #bitcoin-core-dev
+06:05 -!- purpleKarrot [~purpleKar@user/purpleKarrot] has joined #bitcoin-core-dev
+06:15 -!- memset [~memset@gateway/tor-sasl/memset] has joined #bitcoin-core-dev
+06:38 -!- jonatack [~jonatack@user/jonatack] has joined #bitcoin-core-dev
+06:43 -!- ghost43 [~ghost43@gateway/tor-sasl/ghost43] has quit [Remote host closed the connection]
+06:43 -!- memset [~memset@gateway/tor-sasl/memset] has quit [Remote host closed the connection]
+06:43 -!- ghost43 [~ghost43@gateway/tor-sasl/ghost43] has joined #bitcoin-core-dev
+06:43 -!- memset [~memset@gateway/tor-sasl/memset] has joined #bitcoin-core-dev
+06:56 -!- jonatack [~jonatack@user/jonatack] has quit [Ping timeout: 258 seconds]
+06:56 -!- jonatack [~jonatack@user/jonatack] has joined #bitcoin-core-dev
+07:10 -!- bugs_ [~bugs@user/bugs/x-5128603] has joined #bitcoin-core-dev
+07:23 -!- l0rinc [~l0rinc@user/l0rinc] has joined #bitcoin-core-dev
+07:27 -!- eugenesiegel [~eugenesie@user/eugenesiegel] has joined #bitcoin-core-dev
+07:27 -!- Guest68 [~Guest68@27.100.208.202] has joined #bitcoin-core-dev
+07:28 -!- ozdeadman [~deadmanoz@user/deadmanoz] has joined #bitcoin-core-dev
+07:29 -!- PaperSword [~Thunderbi@securemail.qrsnap.io] has joined #bitcoin-core-dev
+07:29 -!- deadmanoz [~deadmanoz@user/deadmanoz] has quit [Ping timeout: 264 seconds]
+07:41 -!- Guest68 [~Guest68@27.100.208.202] has quit [Ping timeout: 245 seconds]
+07:45 -!- l0rinc [~l0rinc@user/l0rinc] has quit [Quit: l0rinc]
+07:48 -!- adil [~Thunderbi@2400:ff00:180:3903:cdc0:de2f:48d:7608] has joined #bitcoin-core-dev
+07:52 -!- sr_gi [~sr_gi@46.231.244.218] has joined #bitcoin-core-dev
+07:53 -!- jonatack [~jonatack@user/jonatack] has quit [Ping timeout: 248 seconds]
+07:54 -!- jonatack [~jonatack@user/jonatack] has joined #bitcoin-core-dev
+07:55 -!- adil [~Thunderbi@2400:ff00:180:3903:cdc0:de2f:48d:7608] has quit [Quit: adil]
+08:04 -!- l0rinc [~l0rinc@user/l0rinc] has joined #bitcoin-core-dev
+08:10 -!- rustaceanrob [~rustacean@46.231.244.218] has joined #bitcoin-core-dev
+08:18 -!- pzafonte_ [~pzafonte@user/pzafonte] has joined #bitcoin-core-dev
+08:19 -!- purpleKarrot [~purpleKar@user/purpleKarrot] has quit [Quit: purpleKarrot]
+08:20 -!- purpleKarrot [~purpleKar@user/purpleKarrot] has joined #bitcoin-core-dev
+08:24 -!- eugenesiegel [~eugenesie@user/eugenesiegel] has quit [Ping timeout: 245 seconds]
+08:26 < fjahr> #proposedmeetingtopic Kartograf 0.5.0
+08:35 -!- l0rinc [~l0rinc@user/l0rinc] has quit [Quit: l0rinc]
+08:38 -!- rustaceanrob [~rustacean@46.231.244.218] has quit [Ping timeout: 245 seconds]
+08:53 -!- jonatack [~jonatack@user/jonatack] has quit [Ping timeout: 256 seconds]
+08:53 -!- eugenesiegel [~eugenesie@user/eugenesiegel] has joined #bitcoin-core-dev
+08:54 -!- enochazariah_ [uid710351@id-710351.hampstead.irccloud.com] has joined #bitcoin-core-dev
+08:58 -!- jurraca [~jurraca@user/jurraca] has joined #bitcoin-core-dev
+09:00 < fjahr> #startmeeting
+09:00 < corebot> fjahr: Meeting started at 2026-08-13T16:00+0000
+09:00 < corebot> fjahr: Current chairs: fjahr
+09:00 < corebot> fjahr: Useful commands: #action #info #idea #link #topic #motion #vote #close #endmeeting
+09:00 < corebot> fjahr: See also: https://hcoop-meetbot.readthedocs.io/en/stable/
+09:00 < corebot> fjahr: Participants should now identify themselves with '#here' or with an alias like '#here FirstLast'
+09:00 -!- nervana21 [~nervana21@2800:e2:2280:1995:5c04:990b:da0b:bab6] has joined #bitcoin-core-dev
+09:00 < yuvicc> Hi
+09:00 < dergoegge> hi
+09:00 < fjahr> #bitcoin-core-dev Meeting: _aj_ abubakarsadiq achow101 andrewtoth b10c brunoerg cfields danielabrozzoni darosior dergoegge dzxzg eugenesiegel fanquake fjahr furszy hebasto hodlinator instagibbs janb84 jarolrod johnny9dev jonatack josie jurraca kanzure kevkevin laanwj lightlike l0rinc maflcko marcofleon maxedw Murch pinheadmz provoostenator pseudoramdom ryanofsky sdaftuar sedited sipa sliv3r__ sr_gi stickies-v stringintech theStack 
+09:00 < fjahr> vasild willcl-ark
+09:00 -!- l0rinc [~l0rinc@user/l0rinc] has joined #bitcoin-core-dev
+09:00 < eugenesiegel> hi
+09:00 < brunoerg> hi
+09:00 < l0rinc> hi
+09:00 < hebasto> hi
+09:00 < jurraca> hi
+09:00 < janb84> hi
+09:00 < lightlike> hi
+09:00 < stickies-v> hi
+09:00 < fjahr> There are two pre-proposed meeting topics this week. Any last minute ones to add?
+09:00 < stringintech> hi
+09:00 -!- viniciuscestarii [~viniciusc@2804:30c:4010:8700:df44:a34f:dd5:6ec8] has joined #bitcoin-core-dev
+09:01 < sr_gi> hi
+09:01 < kanzure> hi
+09:01 < johnny9dev> hi
+09:01 -!- cfields [~cfields@user/cfields] has joined #bitcoin-core-dev
+09:01 < purpleKarrot> hi
+09:01 < cfields> hi
+09:01 < fjahr> Starting with the working groups...
+09:01 < fjahr> #topic Fuzzing WG Update (dergoegge, marcofleon)
+09:01 < dergoegge> I have some fun things to share
+09:02 < dergoegge> I've vibed up an extension to https://github.com/antithesishq/bombadil that can test the qml gui
+09:02 < dergoegge> https://drive.google.com/file/d/1ioXLPUTvnxi9oo1gn4Hb6ggHsXVb26KY/view this is a video of the fuzzer working
+09:02 -!- jonatack [~jonatack@user/jonatack] has joined #bitcoin-core-dev
+09:02 -!- dzxzg [~saroyan@user/dzxzg] has joined #bitcoin-core-dev
+09:03 < dzxzg> hi
+09:03 < dergoegge> I also had claude use fuzzamoto to test a vibe coded node implementation (rbitcoin) over the weekend
+09:03 < dergoegge> It found a lot of bugs: https://github.com/reardencode/rbitcoin/tree/master/docs/external_findings (a couple of them are from the red team, the rest is from fuzzamoto)
+09:03 < dergoegge> Not an attempt to dunk on the implementation but perhaps this increases the confidence in the types of bugs that fuzzamoto can find
+09:04 < willcl-ark> hi
+09:04 < dergoegge> There are some funny ones in there too imo
+09:04 < dergoegge> that's it
+09:04 < dergoegge> actually i think eugene has something to share as well
+09:04 < eugenesiegel> Hi yes
+09:05 < eugenesiegel> I've been working on something called incremental snapshots for fuzzamoto and wrote up a short blog post about benchmarking it:
+09:05 < eugenesiegel> https://crypt-iq.github.io/2026/08/07/incrementalsnapshots.html
+09:05 < eugenesiegel> It's basically a way to speed up the fuzzer and focus on deeper code paths
+09:05 < dergoegge> 🚀
+09:05 < eugenesiegel> that's it, if you have any questions or something was unclear let me know
+09:05 < marcofleon> lfg
+09:05 < brunoerg> nice
+09:05 < sipa> really cool
+09:06 < fjahr> #topic Benchmarking WG Update (l0rinc, andrewtoth)
+09:06 < l0rinc> #35531 is ready for review, I think it would fit nicely with the other optimizations we did in this release
+09:06 < corebot> https://github.com/bitcoin/bitcoin/issues/35531 | txindex: hash keys and pack positions to reduce disk usage by andrewtoth · Pull Request #35531 · bitcoin/bitcoin · GitHub
+09:06 < l0rinc> and the good news is that I have benchmarked bitcoindev1337's idea to prefetch blocks before connection and it does show a significant speedup, more than my 5% estimation, so it's worth a deeper investigation!
+09:06 < l0rinc> bitcoindev1337 do you want to push something or do you want us to do it? If the latter, what's your github username to add you as coauthor?
+09:07 < l0rinc> that's it from me
+09:07 < fjahr> #topic QML GUI WG Update (johnny9dev)
+09:08 < johnny9dev> We got a ton of feedback last week on the preview and have started working on those issues. The project board will continue to the be place where we track the work.
+09:08 < johnny9dev> We currently have about 80 issues we want to complete before starting our PR and about 20 that we think need to have complete before it is releasable.
+09:09 < johnny9dev> I think the feedback/impressions i got on the current staging branch were all i needed to decide to change course. I am now working on just taking the best version of what we have and building up the application in stages. This will include introducing all of our testing frameworks right from the start. The different stages will be very similar to our current git history on the project
+09:09 < johnny9dev> 1. Introduce the build and main  2.add first node lifecycle and model. 3. add onboarding, settings, and node running features 4. add desktop wallet creation 5. add send/activity/receive .... with he last few stages will be adding feature pages to the app.
+09:09 -!- l0rinc [~l0rinc@user/l0rinc] has quit [Quit: l0rinc]
+09:09 < johnny9dev> this should make cleaner history and easier to review. I will make an effort to attribute each commit with all contributors involved
+09:10 < johnny9dev> When I get closer I think I will create an issue in bitcoin/bitcoin with the plan and include tracking all of the steps we need to complete and look to start the PR for the first chunk.
+09:10 < johnny9dev> thats all for this week
+09:10 -!- Murch[m] [~murch@user/murch] has changed host
+09:10 < fjahr> #topic QA WG Update (brunoerg)
+09:11 < brunoerg> Hi, published at https://bitcoincore.space the latest analysis for src/psbt.cpp and src/private_broadcast.cpp. Also, spent some time filtering the survived mutants for src/script/interpreter.cpp, so the surviving ones may be most of interesting ones to be addressed. That's all, thanks.
+09:11 < fjahr> That's it for the WGs
+09:11 < fjahr> #topic Compiler diversity: to drop MSVC or keep it? (hebasto)
+09:12 < hebasto> hi
+09:12 < hebasto> On Windows, as on most other systems, there is more than one compiler that can be used to build Bitcoin Core.
+09:12 < hebasto> Clang provides the clang-cl.exe tool, which is compatible with MSVC's cl.exe. The latter point is important when it comes to a shared libbitcoinkernel.dll.
+09:12 < hebasto> While it's possible to use clang-cl.exe now, #31507 improves the build experience and makes Clang support first-class on Windows.
+09:12 < corebot> https://github.com/bitcoin/bitcoin/issues/31507 | build: Use clang-cl to build on Windows natively by hebasto · Pull Request #31507 · bitcoin/bitcoin · GitHub
+09:12 < hebasto> At some point, reviewers suggested that support for MSVC, which produces inferior binaries, could be dropped entirely.
+09:12 < hebasto> Dropping MSVC support has many benefits, but the drawback is that it reduces the diversity of compilers testing the Bitcoin Core codebase, which was noted by cfields during the last CoreDev.
+09:12 < hebasto> Here is the question for today's meeting:
+09:13 < hebasto> Do we want to keep MSVC as a supported compiler?
+09:13 < purpleKarrot> Should this be a vote?
+09:13 < cfields> I think that depends on the meaning of "support".
+09:13 < emzy> hi
+09:14 < fanquake> I think this also came up because #31507 (which drops it) was tagged for 32, but there are other PRs like #24773 open, which add more MSVC specific code
+09:14 < corebot> https://github.com/bitcoin/bitcoin/issues/31507 | build: Use clang-cl to build on Windows natively by hebasto · Pull Request #31507 · bitcoin/bitcoin · GitHub
+09:14 < corebot> https://github.com/bitcoin/bitcoin/issues/24773 | Enable HW-accelerated implementations of SHA256 for MSVC builds by hebasto · Pull Request #24773 · bitcoin/bitcoin · GitHub
+09:14 < fanquake> Confusing to have simeltaneous PRs open which drop support for a thing, and add more support for a thing
+09:14 < hebasto> by support I mean workaroands for compiler bugs (https://gist.github.com/hebasto/aa42915f88faa4a0ee02655bb55ee624) and MSVC- specifc diagnostics
+09:15 < purpleKarrot> By support I understand having a requirement that the code builds and tests run successfully when using MSVC as the compiler. Everything else (workaround for bugs, etc) are downstream from that requirement.
+09:16 < cfields> I think it'd be a shame to stop building/testing against non-(gcc|clang). I think "should we avoid pessimizing because MSVC doesn't support X" is a different question.
+09:16 < hebasto> note that clang-cl still uses MS's standard library
+09:16 < sedited> hi
+09:17 < fanquake> We also don't want to end up in any one of these "nightly" support loops, where no real CI is run, and we have to continue to re-factor/change code to support something after the fact
+09:18 < fanquake> (similar to what we've seen with all the BSDs lately)
+09:18 < hebasto> fanquake: we can keep a MSVC ci job in the main repo though
+09:19 < dzxzg> if a MSVC ci job was kept in the main repo what would be changing about our support for MSVC
+09:19 < cfields> hebasto: could you describe exactly what you mean by dropping support, then? Explicitly allowing MSVC builds to fail? Ripping out the MSVC ifdefs?
+09:20 < cfields> Asking because as-of-now, release builds are mingw. So strictly as far as users are concerned, MSVC is "unsupported".
+09:21 < hebasto> https://github.com/bitcoin/bitcoin/pull/31507/changes/96d2380dc40e703e342dc0fad5d294cc49b25ff9 removes the ci jobs, documentation and msvc-specific diagnostics from the build system
+09:21 < hebasto> yes, it's not related to release binaries
+09:22 < hebasto> but we support building from source on Windows
+09:25 < cfields> I still think it'd be a shame to lose that diversit. But that's easy to say as someone who doesn't do any work to keep msvc compiling.
+09:25 < cfields> *diversity
+09:26 < hebasto> fanquake: do you agree to keep the current msvc support?
+09:26 < cfields> Perhaps there's a middle-ground keeping some subset of builds working? kernel? bitcoind?
+09:28 < fanquake> I don't mind that much. As mentioned, this doesn't meaningfully change our release binaries, but that was also a reason to push back, because 31507 is adding support for clang, awhich dds *another* way to compile for windows (new ci jobs, more build complexity etc), without actually improving anything we ship
+09:28 < fanquake> Some pushback here too: https://github.com/bitcoin/bitcoin/pull/31507#issuecomment-3928937728
+09:28 -!- sr_gi [~sr_gi@46.231.244.218] has quit [Quit: Client closed]
+09:29 < sedited> it would be the only platform where we support targeting it with three different toolchains.
+09:29 < hebasto> well, clang-cl produces much better binaries for people who prefer build from source on Windows
+09:29 < fanquake> basically, if the motivation to use clang, was to avoid all the MSVC compiler bugs/ICE, then we are we continuing to keep supporting/testing it, with all the baggage
+09:29 < fanquake> *why are we
+09:29 < fanquake> Especially given off all the compilers we use, it's the only one we can't actually fix
+09:30 < fanquake> (can't submit patches upstream, microsoft forum for supporting bugs close to useless etc)
+09:30 -!- sr_gi [~sr_gi@46.231.244.218] has joined #bitcoin-core-dev
+09:30 < purpleKarrot> We should not mix two different topic. We want to build release binaries with the compiler that produces the best binaries. And we want a diverse test setup to find issues in the code.
+09:30 < cfields> sedited: good point. And with the fewest eyeballs.
+09:31 < fanquake> purpleKarrot: the only issues we've found with MSVC so far, as bugs in the compiler, as far as I'm aware
+09:31 < fanquake> Not sure what the "best" compiler is for building releases, but it needs to be an open source one
+09:32 < cfields> fanquake: yeah, ok, I withdraw my objection. I suppose it's philosophical without much grounding in reality these days. It may be diverse, but it's also shitty :p
+09:32 < dzxzg> +1, although having compiler diversity is nice, MSVC is by far the most opaque when issues arise, it is hard to weigh an uncertain but possible benefit that MSVC might catch something that otherwise would have gone unnoticed against the real and constant maintenance cost
+09:33 < sipa> (only half following, am travelling) I think it makes sense to have two different levels of "support", (1) whatever our published release binaries use and (2) systems/platforms where we think people should ve able to build for, but without testing guarantees. For example, I think some BSDs fall in the second category.
+09:33 -!- Guest86 [~Guest86@91.234.25.253] has joined #bitcoin-core-dev
+09:33 -!- Guest86 [~Guest86@91.234.25.253] has quit [Client Quit]
+09:33 < sipa> And (2) is great to help for testing diversity too, but doesn't need specifically optimizing for
+09:33 < fanquake> sipa: sure, but that maintains the loop of merging, and having to continually re-factor/fix code
+09:34 < fanquake> where breakage is reported after the fact
+09:34 < fanquake> wasting reviewer time, and creating churn
+09:35 < fanquake> Maybe that is fine, and the build can just remain broken on those platforms/in the cis, until people want to circle back to it
+09:35 < jonatack> hi
+09:36 < janb84> If it does not provide new code issue/insight abd only compiler issues/bugs that need workarounds, i do not see what it brings us
+09:36 < hebasto> cfields: did I get it correctly that you are no longer against dropping msvc support?
+09:36 < sipa> fanquake: or we can choose to treat MSVC as not even falling under (2) ?
+09:36 < fanquake> (maybe we should just have more jobs in the CI in the repo)
+09:37 < sipa> there can even more fine-grained levels i guess, e.g. a "no CI for this config, but we accept patches to fix for"
+09:37 < hebasto> ^^ this seems reasonable
+09:38 < cfields> hebasto: not on the grounds of benefiting from diversity, at least.
+09:38 < lightlike> do we know if we have users/devs who build with msvc (and tend complain if something breaks), or is it just CI?
+09:38 < stickies-v> accepting patches but not running in ci seems like the worst of both worlds to me tbh
+09:39 < dzxzg> lightlike: we have some since it's currently the only supported windows build system, but I imagine we would have close to 0 after clang-cl support is merged and is used in the build instructions
+09:39 < hebasto> lightlike: I build from source on Windows, but prefer clang-cl
+09:39 < sedited> yeah, msvc patches are already getting close to no review. Not having it in CI will probably drop that to zero.
+09:39 < cfields> dzxzg: hmm? Not the only one for Windows.
+09:40 < dzxzg> *native windows not WSL or cross-compiling
+09:40 < sipa> stickies-v: i think that is the reality for e.g. FreeBSD, or has been in the past at leasr; i'm more trying classifying thr current reality than suggesting a policy
+09:42 < fjahr> Let's tie this topic up in the next 2-3 minutes and possibly continue after the meeting
+09:43 < stickies-v> if it's not helping us catch a lot of bugs, it's not used much, and it's a closed source and painful toolchain to use, fully dropping support seems sensible to me, but i'm not really involved with it so happy either way if ppl want to support it
+09:43 < hebasto> could end up keep support for both msvc and clnag-cl for a single release cycle and decide later?
+09:43 < hebasto> * clang-cl
+09:44 < sipa> m
+09:44 < cfields> stickies-v: +1. I think I'm onboard with that opinion now. It'd be different if it were open and we could improve it. But thinking towards a future where we (for ex) migrate to c++26, it's hard to imagine supporting MSVC doing anything for us but slowing us down.
+09:45 < fjahr> sedited: Did you still want to give a kernel update?
+09:45 < sedited> not today
+09:45 < hebasto> so let's drop msvc support
+09:46 < sedited> ack
+09:46 < janb84> ack
+09:47 < bitcoin-git> [bitcoin] laxmanacharya8 opened pull request #35964: fuzz: add coverage for GetQueryParameterFromUri (master...fuzz-query-parameter) https://github.com/bitcoin/bitcoin/pull/35964
+09:47 < stickies-v> maybe open an issue for it?
+09:47 < cfields> hebasto: how about opening an issue with a concrete proposal and we can resume discussing there? 
+09:47 < hebasto> will do
+09:48 < cfields> It's still unclear to me exactly how much you propose we drop. For ex, ripping out everything from CMake would mean that no one could even _try_ to build it anymore.
+09:48 < fjahr> Sorry, let me squeeze in my lil topic and continue discussion in the issue :)
+09:48 < fjahr> #topic Kartograf 0.5.0 (fjahr)
+09:48 < fjahr> Hi, we have a new release for kartograf, v0.5.0. The big headline is that there are two bugfixes that are breaking reproducible results so with this new version you are not able reproduce the maps that were created with an older version of kartograf and included in the asmap-data repository. For this reason I am proposing to add a note on that in the asmap-data repo to make users aware of this: 
+09:48 < fjahr> https://github.com/bitcoin-core/asmap-data/pull/67 In the past we have seen many users just use master and that might lead to some false alarm in the future.
+09:49 < fjahr> Some more info for people to understand the impact: The two bugfixes are 1. https://github.com/asmap/kartograf/pull/145 A bug in the merge code prevented shorter prefixes from being merged when longer prefixes where already present in the higher priority input of the map. This means the results after the fix with the same inputs have more entries and larger coverage but the new coverage appears to be mostly unutilised address space 
+09:49 < fjahr> included in IRR DBs, so the real impact is for our purpose appears to be small. On the last 5 historical maps, the impact to the bitcoin network is that 3-4 peers which previously did not have a mapping do have one with the new map. See a more detailed analysis by Joris here: https://gist.github.com/jorisstrakeljahn/30235e943db90f78fecb9e397ffee9c5
+09:49 < fjahr> 2. https://github.com/asmap/kartograf/pull/148 The IRR DBs we were downloading have inconsistent formatting and since we expected them to always end with an empty line, sometimes the very last entry was skipped when that was not the case. This only resulted in in a single additional prefix mapping (if any) in the final file in the recent runs and bitcoin nodes mappings were not affected by it.
+09:49 < fjahr> Also, I previously stated that I don’t think releases make sense for us because participants usually just use master anyway but in this case it makes communication a lot easier so I guess we aren’t moving away from it for now.
+09:49 < fjahr> Happy to hear feedback on this. Of course we did some additional (AI assisted) review of the code base to ensure we aren’t leaving any other breaking changes we would want on the table that we could bundle with this. But we couldn’t find anything else.
+09:50 < fjahr> And sorry for dumping a wall of text but the kartograf repo doesn't get so many eyes so I rather put it here directly.
+09:50 < sipa> do we expect more agreement on the kartograf output with these changes?
+09:50 < sipa> (among participants all running 0.5.0)
+09:51 < fjahr> Afaict that should be unrelated, the disagreement typically come from rpki which these changes don't have impact on
+09:54 < sipa> ok
+09:54 < fjahr> We still don't know where the recent rise in mismatches comes from exactly but the last one was better so the smaller changes in the downloading steps we made might have helped
+09:54 < fjahr> Last one was 7/10 matches
+09:54 < sipa> nice
+09:56 < fjahr> "My code doesn't work, I have no idea why; My code works, I have no idea why"
+09:57 < fanquake> Next asmap run likely to be the one included in 32.0 ?
+09:57 -!- ___nick___ [~quassel@82-132-237-142.dab.02.net] has quit [Ping timeout: 264 seconds]
+09:58 < fjahr> Yeah, good queue I guess: feature freeze is in 1 week. Any last minute comments on that?
+09:58 < sipa> does new asmap data count as a feature? :)
+09:58 < fanquake> I think new asmap data is more like chainparams and similar
+09:58 < fanquake> So just pre branch off
+09:59 < fjahr> Yeah, no, but I forgot about making room for that topic :)
+09:59 < sipa> also fyi i'll be back from vacation tomorrow, i hooe to do some reviews for 32 where valuable still
+10:00 < fjahr> #endmeeting
+10:00 < corebot> fjahr: Meeting ended at 2026-08-13T17:00+0000
+10:00 < corebot> fjahr: Raw log: https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-08-13_16_00.log.json
+10:00 < corebot> fjahr: Formatted log: https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-08-13_16_00.log.html
+10:00 < corebot> fjahr: Minutes: https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-08-13_16_00.html
+10:01 -!- jurraca [~jurraca@user/jurraca] has quit [Quit: leaving]
+10:02 -!- rustaceanrob [~rustacean@81-206-55-94.fixed.kpn.net] has joined #bitcoin-core-dev
+10:02 -!- dzxzg [~saroyan@user/dzxzg] has quit [Quit: Konversation terminated!]
+10:09 -!- eugenesiegel [~eugenesie@user/eugenesiegel] has quit [Ping timeout: 245 seconds]
+10:09 -!- sr_gi [~sr_gi@46.231.244.218] has quit [Ping timeout: 245 seconds]
+10:13 -!- jon_atack [~jonatack@user/jonatack] has joined #bitcoin-core-dev
+10:13 -!- jonatack [~jonatack@user/jonatack] has quit [Ping timeout: 244 seconds]
+10:18 -!- l0rinc [~l0rinc@user/l0rinc] has joined #bitcoin-core-dev
+10:21 -!- l0rinc [~l0rinc@user/l0rinc] has quit [Client Quit]
+10:24 -!- l0rinc [~l0rinc@user/l0rinc] has joined #bitcoin-core-dev
+10:35 -!- viniciuscestarii [~viniciusc@2804:30c:4010:8700:df44:a34f:dd5:6ec8] has quit [Quit: Client closed]
+10:49 -!- eugenesiegel [~eugenesie@user/eugenesiegel] has joined #bitcoin-core-dev
+10:52 -!- satsfy [~satsfy@user/satsfy] has quit [Ping timeout: 244 seconds]
+11:00 -!- jon_atack [~jonatack@user/jonatack] has quit [Ping timeout: 252 seconds]
+11:01 -!- bitcoindev1337 [~bitcoinde@user/bitcoindev1337] has joined #bitcoin-core-dev
+11:01 < bitcoindev1337> l0rinc: did you get a chance to benchmark it
+11:02 -!- jonatack [~jonatack@user/jonatack] has joined #bitcoin-core-dev
+11:03 -!- dzxzg [~dzxzg@user/dzxzg] has joined #bitcoin-core-dev
+11:11 <@pinheadmz> dergoegge that QML GUI fuzzer is sick <3
+11:17 < l0rinc> bitcoindev1337: yes, please see a few lines above.
+11:18 < l0rinc> I can reproduce the speedup on SSD: good news is you were right and my 5% estimation was wrong - it's almost 30% faster now that the other optimizations have landed. Do you want to push a PR for this or do you want us to take it from here?
+11:21 -!- rustaceanrob [~rustacean@81-206-55-94.fixed.kpn.net] has quit [Quit: rustaceanrob]
+11:23 < bitcoindev1337> l0rinc: if you'd like to take it from here that's good with me
+11:24 < bitcoindev1337> the ai code is obviously... kinda weird
+11:24 < l0rinc> thank you for the suggestion, it's the perfect time after the parallel fetcher landed - can you please give me your github name to add you as coauthor (unless you don't want that, of course, in which case I'll just refer to you as bitcoindev1337)
+11:24 < bitcoindev1337> i'd rather just be bitcoindev1337 thank you though
+11:26 -!- sliv3r__ [~sliv3r__@user/sliv3r-:76883] has quit [Quit: ZNC 1.8.2+deb3.1+deb12u1 - https://znc.in]
+11:26 -!- sliv3r__- [~sliv3r__@user/sliv3r-:76883] has joined #bitcoin-core-dev
+11:28 < bitcoin-git> [bitcoin] rustaceanrob opened pull request #35965: refactor: test: Add debug output for Coin in coins_tests (master...coins-tests-eq) https://github.com/bitcoin/bitcoin/pull/35965
+11:29 -!- purpleKarrot [~purpleKar@user/purpleKarrot] has quit [Quit: purpleKarrot]
+11:30 < bitcoindev1337> i was inspired to look by the prevout fetcher
+11:30 < bitcoindev1337> l0rinc good luck and goodbye
+11:30 -!- bitcoindev1337 [~bitcoinde@user/bitcoindev1337] has quit [Quit: Client closed]
+11:44 -!- satsfy [~satsfy@user/satsfy] has joined #bitcoin-core-dev
+11:44 -!- enochazariah_ [uid710351@id-710351.hampstead.irccloud.com] has quit [Quit: Connection closed for inactivity]
+11:56 -!- sliv3r__- [~sliv3r__@user/sliv3r-:76883] has quit [Ping timeout: 246 seconds]
+11:57 -!- sliv3r__ [~sliv3r__@user/sliv3r-:76883] has joined #bitcoin-core-dev
+12:17 -!- sliv3r__ [~sliv3r__@user/sliv3r-:76883] has quit [Ping timeout: 256 seconds]
+12:18 -!- sliv3r__ [~sliv3r__@user/sliv3r-:76883] has joined #bitcoin-core-dev
+12:29 -!- WizJin [~Wizzy@user/WizJin] has quit [Quit: Leaving]
+12:42 -!- nervana21 [~nervana21@2800:e2:2280:1995:5c04:990b:da0b:bab6] has quit [Quit: Client closed]
+12:47 -!- jonatack [~jonatack@user/jonatack] has quit [Ping timeout: 264 seconds]
+12:48 < bitcoin-git> [bitcoin] l0rinc closed pull request #35952: kernel: prevent dangling iterators from temporary ranges (master...l0rinc/kernel-range-iterator-lifetime) https://github.com/bitcoin/bitcoin/pull/35952
+12:49 < bitcoin-git> [bitcoin] l0rinc reopened pull request #35952: kernel: prevent dangling iterators from temporary ranges (master...l0rinc/kernel-range-iterator-lifetime) https://github.com/bitcoin/bitcoin/pull/35952
+12:49 -!- dzxzg2 [~dzxzg@user/dzxzg] has joined #bitcoin-core-dev
+12:50 -!- dzxzg [~dzxzg@user/dzxzg] has quit [Ping timeout: 265 seconds]
+12:51 < _aj_> darosior: it appears that i've claimed a couple of testnet4 blocks via my bitaxe and your pool fwiw; all at difficulty 1. (and a whole bunch of other blocks that didn't make it into the chain)
+13:10 -!- bugs_ [~bugs@user/bugs/x-5128603] has quit [Quit: Leaving]
+13:26 -!- janb84 [~janb84@user/janb84] has quit [Read error: Connection reset by peer]
+13:26 -!- janb84 [~janb84@user/janb84] has joined #bitcoin-core-dev
+13:28 -!- l0rinc [~l0rinc@user/l0rinc] has quit [Quit: l0rinc]
+13:35 -!- l0rinc [~l0rinc@user/l0rinc] has joined #bitcoin-core-dev
+14:16 -!- memset [~memset@gateway/tor-sasl/memset] has quit [Remote host closed the connection]
+14:17 -!- memset [~memset@gateway/tor-sasl/memset] has joined #bitcoin-core-dev
+14:17 -!- BrandonOdiwuor [~BrandonOd@41.90.140.168] has quit [Quit: Client closed]
+15:07 -!- Guest51 [~Guest51@2a02:8388:6b8b:7080:aea0:33fc:983c:28a2] has joined #bitcoin-core-dev
+15:14 -!- Guest51 [~Guest51@2a02:8388:6b8b:7080:aea0:33fc:983c:28a2] has quit [Quit: Client closed]
+15:18 -!- mudsip [~mudsip@user/mudsip] has joined #bitcoin-core-dev
+15:19 -!- mudsip [~mudsip@user/mudsip] has quit [Client Quit]
+15:26 < bitcoin-git> [bitcoin] vicjuma opened pull request #35966: wallet, rpc: log instead of returning false (master...fix-misleading-wallet-encryption-error) https://github.com/bitcoin/bitcoin/pull/35966
+15:30 -!- sliv3r__ [~sliv3r__@user/sliv3r-:76883] has quit [Read error: Connection reset by peer]
+15:30 -!- eugenesiegel [~eugenesie@user/eugenesiegel] has quit [Quit: Client closed]
+15:30 -!- sliv3r__- [~sliv3r__@user/sliv3r-:76883] has joined #bitcoin-core-dev
+16:08 -!- jonatack [~jonatack@user/jonatack] has joined #bitcoin-core-dev
+16:30 -!- jonatack [~jonatack@user/jonatack] has quit [Ping timeout: 264 seconds]
+16:30 -!- jonatack [~jonatack@user/jonatack] has joined #bitcoin-core-dev
+16:33 -!- ghost43 [~ghost43@gateway/tor-sasl/ghost43] has quit [Ping timeout: 252 seconds]
+16:33 -!- dzxzg2 [~dzxzg@user/dzxzg] has quit [Remote host closed the connection]
+16:33 -!- ghost43 [~ghost43@gateway/tor-sasl/ghost43] has joined #bitcoin-core-dev
+16:38 -!- ghost43 [~ghost43@gateway/tor-sasl/ghost43] has quit [Ping timeout: 252 seconds]
+16:40 -!- ghost43 [~ghost43@gateway/tor-sasl/ghost43] has joined #bitcoin-core-dev
+16:54 -!- l0rinc [~l0rinc@user/l0rinc] has quit [Quit: l0rinc]
+17:05 -!- afiore [~afiore@user/afiore] has quit [Remote host closed the connection]
+17:07 -!- afiore [~afiore@user/afiore] has joined #bitcoin-core-dev
+17:09 -!- ghost43_ [~ghost43@gateway/tor-sasl/ghost43] has joined #bitcoin-core-dev
+17:09 -!- ghost43 [~ghost43@gateway/tor-sasl/ghost43] has quit [Ping timeout: 252 seconds]
+17:25 -!- jonatack [~jonatack@user/jonatack] has quit [Read error: Connection reset by peer]
+17:55 -!- l0rinc [~l0rinc@user/l0rinc] has joined #bitcoin-core-dev
+18:10 -!- sliv3r__- [~sliv3r__@user/sliv3r-:76883] has quit [Ping timeout: 249 seconds]
+18:11 -!- sliv3r__ [~sliv3r__@user/sliv3r-:76883] has joined #bitcoin-core-dev
+18:25 -!- memset [~memset@gateway/tor-sasl/memset] has quit [Remote host closed the connection]
+18:33 -!- memset [~memset@gateway/tor-sasl/memset] has joined #bitcoin-core-dev
+18:40 -!- adil [~Thunderbi@2402:4000:2100:3891:28e1:7a6b:9fdb:3b6e] has joined #bitcoin-core-dev
+18:50 -!- l0rinc [~l0rinc@user/l0rinc] has quit [Quit: l0rinc]
+18:53 -!- l0rinc [~l0rinc@user/l0rinc] has joined #bitcoin-core-dev
+19:11 -!- adil [~Thunderbi@2402:4000:2100:3891:28e1:7a6b:9fdb:3b6e] has quit [Quit: adil]
+19:17 -!- jonatack [~jonatack@user/jonatack] has joined #bitcoin-core-dev
+19:20 -!- l0rinc [~l0rinc@user/l0rinc] has quit [Quit: l0rinc]
+19:24 -!- l0rinc [~l0rinc@user/l0rinc] has joined #bitcoin-core-dev
+19:35 -!- Guest68 [~Guest68@205.147.29.17] has joined #bitcoin-core-dev
+19:50 -!- l0rinc [~l0rinc@user/l0rinc] has quit [Quit: l0rinc]
+19:58 -!- l0rinc [~l0rinc@user/l0rinc] has joined #bitcoin-core-dev
+20:07 -!- jonatack [~jonatack@user/jonatack] has quit [Read error: Connection reset by peer]
+20:20 -!- dviola [~diego@user/dviola] has quit [Ping timeout: 248 seconds]
+20:22 -!- diego [~diego@2804:14c:5781:8ef3:6a16:a749:b59:acad] has joined #bitcoin-core-dev
+20:25 -!- Guest68 [~Guest68@205.147.29.17] has quit [Quit: Client closed]
+20:32 -!- l0rinc [~l0rinc@user/l0rinc] has quit [Quit: l0rinc]
+20:50 -!- BrandonOdiwuor [~BrandonOd@41.90.140.168] has joined #bitcoin-core-dev
+20:56 -!- sliv3r__ [~sliv3r__@user/sliv3r-:76883] has quit [Ping timeout: 251 seconds]
+20:58 -!- sliv3r__ [~sliv3r__@user/sliv3r-:76883] has joined #bitcoin-core-dev
+21:01 -!- cmirror [~cmirror@4.53.92.114] has quit [Remote host closed the connection]
+21:01 -!- cmirror [~cmirror@4.53.92.114] has joined #bitcoin-core-dev
+21:26 -!- l0rinc [~l0rinc@user/l0rinc] has joined #bitcoin-core-dev
+21:28 -!- BrandonOdiwuor [~BrandonOd@41.90.140.168] has quit [Quit: Client closed]
+21:29 -!- memset [~memset@gateway/tor-sasl/memset] has quit [Remote host closed the connection]
+21:39 -!- memset [~memset@gateway/tor-sasl/memset] has joined #bitcoin-core-dev
+21:41 -!- phungus8153520 [~phungus@47.24.199.213] has joined #bitcoin-core-dev
+21:54 -!- sliv3r__ [~sliv3r__@user/sliv3r-:76883] has quit [Quit: ZNC 1.8.2+deb3.1+deb12u1 - https://znc.in]
+21:54 -!- sliv3r__ [~sliv3r__@user/sliv3r-:76883] has joined #bitcoin-core-dev
+22:03 -!- syrup_trap2444 [~syrup_tra@user/syrup-trap:47109] has joined #bitcoin-core-dev
+22:05 -!- syrup_trap244 [~syrup_tra@user/syrup-trap:47109] has quit [Ping timeout: 241 seconds]
+22:30 < bitcoin-git> [gui-qml] pseudoramdom opened pull request #860: Improve Send and Send Review pages (qt6...send-improvements) https://github.com/bitcoin-core/gui-qml/pull/860
+22:49 -!- sliv3r__ [~sliv3r__@user/sliv3r-:76883] has quit [Read error: Connection reset by peer]
+22:49 -!- sliv3r__- [~sliv3r__@user/sliv3r-:76883] has joined #bitcoin-core-dev
+23:09 -!- dermoth [~dermoth@user/dermoth] has quit [Ping timeout: 258 seconds]
+23:14 -!- l0rinc [~l0rinc@user/l0rinc] has quit [Quit: l0rinc]
+23:16 -!- dermoth [~dermoth@user/dermoth] has joined #bitcoin-core-dev
+23:22 -!- memset [~memset@gateway/tor-sasl/memset] has quit [Remote host closed the connection]
+23:23 -!- memset [~memset@gateway/tor-sasl/memset] has joined #bitcoin-core-dev
+23:42 -!- memset [~memset@gateway/tor-sasl/memset] has quit [Remote host closed the connection]
+23:42 -!- memset [~memset@gateway/tor-sasl/memset] has joined #bitcoin-core-dev
+23:50 -!- memset [~memset@gateway/tor-sasl/memset] has quit [Remote host closed the connection]
+23:50 -!- memset [~memset@gateway/tor-sasl/memset] has joined #bitcoin-core-dev
+--- Log closed Fri Aug 14 00:00:00 2026

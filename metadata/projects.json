@@ -1,0 +1,51 @@
+{
+  "30249": {
+    "project_name": "Erlay",
+    "description": "Bandwidth-efficient transaction relay protocol (BIP330) that reduces node P2P bandwidth usage by up to 40% using set-reconciliation.",
+    "category": "P2P & Networking",
+    "champion": "Gleb Naumenko / Pieter Wuille",
+    "bip": "BIP 330"
+  },
+  "30289": {
+    "project_name": "Cluster Mempool",
+    "description": "Redesign of Bitcoin Core's mempool into independent transaction clusters to optimize block template construction and Fee-Estimation / RBF.",
+    "category": "Mempool & Consensus",
+    "champion": "Suzi Peled / Pieter Wuille",
+    "bip": null
+  },
+  "28722": {
+    "project_name": "Multiprocess",
+    "description": "Decouples Bitcoin Core into separate process binaries (gui, node, wallet) communicating over IPC for enhanced security and process isolation.",
+    "category": "Architecture & IPC",
+    "champion": "Ryan Ofsky",
+    "bip": null
+  },
+  "33777": {
+    "project_name": "Mining Interface",
+    "description": "Clean abstraction layer for block template creation and Stratum v2 mining pool communication decoupled from node internal state.",
+    "category": "Mining & Stratum",
+    "champion": "Bitcoin Core Mining WG",
+    "bip": null
+  },
+  "31246": {
+    "project_name": "MuSig2",
+    "description": "Implementation of Schnorr multi-signatures (BIP327) enabling 2-of-2 and n-of-n multisig key aggregation natively in the wallet.",
+    "category": "Cryptography & Wallet",
+    "champion": "Jonas Nick / Tim Ruffing",
+    "bip": "BIP 327"
+  },
+  "27587": {
+    "project_name": "Bitcoin Kernel Library",
+    "description": "Extracting consensus validation logic into a standalone libbitcoinkernel C++ library with zero external state dependencies.",
+    "category": "Consensus Kernel",
+    "champion": "Carl Dong / Thechuan",
+    "bip": null
+  },
+  "33691": {
+    "project_name": "SENDTEMPLATE",
+    "description": "P2P protocol extension allowing nodes to announce and request block templates directly to accelerate block propagation across the network.",
+    "category": "P2P & Relaying",
+    "champion": "BIP Drafting WG",
+    "bip": null
+  }
+}

@@ -36,7 +36,7 @@
   "first_commit": "2019-04-23T18:59:02",
   "last_commit": "2026-08-03T11:08:11",
   "p2016_authored_commits": 308.0,
-  "modern_authored_commits": 108.0,
+  "modern_authored_commits": 107.0,
   "co_authored_commits": 29.0,
   "bips_authored": 4.0,
   "p2016_bips_authored": 4.0,
@@ -50,7 +50,7 @@
   "tier1_reviews_count": 347.0,
   "tier2_reviews_count": 30.0,
   "p2016_reviews_count": 377.0,
-  "modern_reviews_count": 211.0,
+  "modern_reviews_count": 209.0,
   "first_review_date": "2019-02-27T10:46:16",
   "last_review_date": "2026-09-04T21:15:24",
   "prs_authored": 133.0,
@@ -59,9 +59,9 @@
   "avg_pr_ack_velocity_days": 14.37791173696845,
   "avg_concept_lead_time_days": 17.877950027233116,
   "review_reciprocity": 2.8345864661654137,
-  "hybrid_score": 1.5595,
-  "p2016_hybrid_score": 1.6816,
-  "modern_hybrid_score": 1.7,
+  "hybrid_score": 1.5597,
+  "p2016_hybrid_score": 1.6817,
+  "modern_hybrid_score": 1.6998,
   "impact_score": 61.0,
   "p2016_impact_score": 64.0,
   "modern_impact_score": 64.0,
@@ -72,7 +72,7 @@
   "ml_responses": 102.0,
   "delving_responses": 63.0,
   "first_active": "2020-04-24T10:00:16",
-  "last_active": "2026-08-10T10:30:57",
+  "last_active": null,
   "dev_type": "Protocol Designer",
   "expertise_domains": [
     "Consensus",
@@ -105,10 +105,10 @@
     "Wallet": 0.0105
   },
   "p2016_posts": 271.0,
-  "modern_posts": 235.0,
+  "modern_posts": 234.0,
   "p2016_ml_posts": 128.0,
   "p2016_delving_posts": 143.0,
-  "modern_ml_posts": 92.0,
+  "modern_ml_posts": 91.0,
   "modern_delving_posts": 143.0,
   "is_engineer": true,
   "is_reviewer": true,
@@ -268,7 +268,7 @@
     "2023": {
       "covenants": 3,
       "other": 18,
-      "script-opcodes": 7
+      "script-opcodes": 4
     },
     "2024": {
       "other": 29,
@@ -276,7 +276,7 @@
       "covenants": 1,
       "mempool-fees": 5,
       "mining": 26,
-      "script-opcodes": 28,
+      "script-opcodes": 26,
       "security": 31,
       "testing-devtools": 24,
       "utxo-sync": 21

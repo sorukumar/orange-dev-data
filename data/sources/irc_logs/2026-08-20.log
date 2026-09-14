@@ -1,0 +1,420 @@
+--- Log opened Thu Aug 20 00:00:07 2026
+00:17 -!- enochazariah_ [uid710351@id-710351.hampstead.irccloud.com] has joined #bitcoin-core-dev
+00:18 -!- enochazariah [~enochazar@user/enochazariah] has joined #bitcoin-core-dev
+00:47 -!- smartin [~Thunderbi@78.56.226.85] has quit [Quit: smartin]
+00:47 -!- smartin [~Thunderbi@78.56.226.85] has joined #bitcoin-core-dev
+00:56 -!- Guyver2 [~Guyver@77-174-98-73.fixed.kpn.net] has joined #bitcoin-core-dev
+01:28 -!- tarotfied [~tarotfied@user/tarotfied] has quit [Quit: WeeChat 4.1.1]
+01:29 -!- tarotfied [~tarotfied@user/tarotfied] has joined #bitcoin-core-dev
+01:36 -!- justache [~justache@user/justache] has quit [Quit: ZNC 1.10.1 - https://znc.in]
+01:41 -!- sliv3r__ [~sliv3r__@user/sliv3r-:76883] has quit [Ping timeout: 260 seconds]
+01:44 -!- sliv3r__ [~sliv3r__@user/sliv3r-:76883] has joined #bitcoin-core-dev
+02:16 -!- justache [~justache@user/justache] has joined #bitcoin-core-dev
+02:23 -!- Guyver2 [~Guyver@77-174-98-73.fixed.kpn.net] has left #bitcoin-core-dev [Closing Window]
+02:24 -!- tegila_ [~tegila@189.37.66.209] has joined #bitcoin-core-dev
+02:26 -!- Earnestly [~earnest@user/earnestly] has joined #bitcoin-core-dev
+02:27 -!- tegila [~tegila@189.37.64.225] has quit [Ping timeout: 265 seconds]
+02:32 -!- smartin2 [~Thunderbi@78.56.226.85] has joined #bitcoin-core-dev
+02:33 -!- smartin [~Thunderbi@78.56.226.85] has quit [Ping timeout: 255 seconds]
+02:33 -!- smartin2 is now known as smartin
+02:34 -!- enochazariah [~enochazar@user/enochazariah] has quit [Ping timeout: 263 seconds]
+02:35 -!- BGL [~twenty@75.149.171.58] has quit [Ping timeout: 260 seconds]
+02:38 -!- enochazariah [~enochazar@user/enochazariah] has joined #bitcoin-core-dev
+02:38 -!- zumbi [~zumbi@debian/zumbi] has quit [Server closed connection]
+02:39 -!- zumbi [~zumbi@debian/zumbi] has joined #bitcoin-core-dev
+03:00 -!- afiore_ [~afiore@user/afiore] has joined #bitcoin-core-dev
+03:03 -!- afiore [~afiore@user/afiore] has quit [Remote host closed the connection]
+03:03 -!- afiore_ is now known as afiore
+03:36 -!- syrup_trap2444 [~syrup_tra@user/syrup-trap:47109] has quit [Server closed connection]
+03:39 -!- syrup_trap2444 [~syrup_tra@user/syrup-trap:47109] has joined #bitcoin-core-dev
+03:44 -!- Pasha [~Pasha@user/pasha] has joined #bitcoin-core-dev
+04:01 -!- BGL [~twenty@75.149.171.58] has joined #bitcoin-core-dev
+04:04 -!- afiore [~afiore@user/afiore] has quit [Remote host closed the connection]
+04:04 -!- afiore [~afiore@user/afiore] has joined #bitcoin-core-dev
+04:25 -!- sliv3r__- [~sliv3r__@user/sliv3r-:76883] has joined #bitcoin-core-dev
+04:27 -!- sliv3r__ [~sliv3r__@user/sliv3r-:76883] has quit [Read error: Connection reset by peer]
+04:50 -!- Guest92 [~Guest92@103.153.251.71] has joined #bitcoin-core-dev
+04:51 -!- Guest92 [~Guest92@103.153.251.71] has quit [Client Quit]
+05:09 -!- Artea [~Lufia@artea.pt] has quit [Server closed connection]
+05:14 -!- afiore [~afiore@user/afiore] has quit [Remote host closed the connection]
+05:14 -!- afiore_ [~afiore@user/afiore] has joined #bitcoin-core-dev
+05:14 -!- afiore_ is now known as afiore
+05:23 -!- sliv3r__- [~sliv3r__@user/sliv3r-:76883] has quit [Ping timeout: 266 seconds]
+05:25 -!- sliv3r__ [~sliv3r__@user/sliv3r-:76883] has joined #bitcoin-core-dev
+05:29 -!- afiore_ [~afiore@user/afiore] has joined #bitcoin-core-dev
+05:29 -!- jerryf [~jerryf@user/jerryf] has quit [Ping timeout: 252 seconds]
+05:30 -!- memset_ [~memset@gateway/tor-sasl/memset] has quit [Ping timeout: 252 seconds]
+05:30 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+05:31 -!- memset [~memset@gateway/tor-sasl/memset] has joined #bitcoin-core-dev
+05:31 -!- Artea [~Lufia@artea.pt] has joined #bitcoin-core-dev
+05:31 -!- afiore [~afiore@user/afiore] has quit [Ping timeout: 252 seconds]
+05:31 -!- afiore_ is now known as afiore
+05:37 -!- sliv3r__ [~sliv3r__@user/sliv3r-:76883] has quit [Ping timeout: 260 seconds]
+05:37 -!- sliv3r__ [~sliv3r__@user/sliv3r-:76883] has joined #bitcoin-core-dev
+05:58 -!- Guest25 [~Guest77@95.173.83.47] has joined #bitcoin-core-dev
+05:58 -!- Guest25 [~Guest77@95.173.83.47] has quit [Client Quit]
+05:58 -!- moneyindabank [~moneyinda@95.173.83.47] has joined #bitcoin-core-dev
+06:05 -!- SpellChecker [~SpellChec@user/SpellChecker] has quit [Quit: bye]
+06:05 -!- SpellChecker_ [~SpellChec@user/SpellChecker] has joined #bitcoin-core-dev
+06:08 -!- afiore [~afiore@user/afiore] has quit [Remote host closed the connection]
+06:09 -!- afiore [~afiore@user/afiore] has joined #bitcoin-core-dev
+06:10 -!- moneyindabank [~moneyinda@95.173.83.47] has quit [Quit: Client closed]
+06:16 -!- moneyindabank [~moneyinda@95.173.83.47] has joined #bitcoin-core-dev
+06:25 -!- andrewtoth_ [~andrewtot@gateway/tor-sasl/andrewtoth] has joined #bitcoin-core-dev
+06:27 -!- _andrewtoth_ [~andrewtot@gateway/tor-sasl/andrewtoth] has quit [Ping timeout: 252 seconds]
+06:28 -!- SpellChecker_ [~SpellChec@user/SpellChecker] has quit [Remote host closed the connection]
+06:30 -!- SpellChecker [~SpellChec@user/SpellChecker] has joined #bitcoin-core-dev
+06:31 -!- enochazariah [~enochazar@user/enochazariah] has quit [Ping timeout: 274 seconds]
+06:31 -!- moneyindabank [~moneyinda@95.173.83.47] has quit [Quit: Client closed]
+06:33 -!- moneyindabank [~moneyinda@95.173.83.47] has joined #bitcoin-core-dev
+06:35 -!- moneyindabank57 [~moneyinda@95.173.83.47] has joined #bitcoin-core-dev
+06:35 -!- moneyindabank57 [~moneyinda@95.173.83.47] has quit [Client Quit]
+06:40 -!- sliv3r__- [~sliv3r__@user/sliv3r-:76883] has joined #bitcoin-core-dev
+06:40 -!- sliv3r__ [~sliv3r__@user/sliv3r-:76883] has quit [Read error: Connection reset by peer]
+06:43 -!- enochazariah [~enochazar@user/enochazariah] has joined #bitcoin-core-dev
+06:43 -!- bitdex [~bitdex@gateway/tor-sasl/bitdex] has joined #bitcoin-core-dev
+06:48 -!- Pasha95 [~Pasha@user/pasha] has joined #bitcoin-core-dev
+06:49 -!- moneyindabank [~moneyinda@95.173.83.47] has quit [Quit: Client closed]
+06:51 -!- Pasha [~Pasha@user/pasha] has quit [Ping timeout: 256 seconds]
+07:02 -!- memset [~memset@gateway/tor-sasl/memset] has quit [Remote host closed the connection]
+07:03 -!- memset [~memset@gateway/tor-sasl/memset] has joined #bitcoin-core-dev
+07:05 -!- SpellChecker [~SpellChec@user/SpellChecker] has quit [Remote host closed the connection]
+07:05 -!- SpellChecker [~SpellChec@user/SpellChecker] has joined #bitcoin-core-dev
+07:16 -!- durandal__ [~paul@94.196.64.209.threembb.co.uk] has quit [Remote host closed the connection]
+07:16 -!- durandal__ [~paul@94.196.64.209.threembb.co.uk] has joined #bitcoin-core-dev
+07:19 -!- afiore_ [~afiore@user/afiore] has joined #bitcoin-core-dev
+07:19 -!- afiore [~afiore@user/afiore] has quit [Remote host closed the connection]
+07:19 -!- afiore_ is now known as afiore
+07:22 -!- rustaceanrob [~rustacean@167.98.176.190] has joined #bitcoin-core-dev
+07:29 -!- bugs_ [~bugs@user/bugs/x-5128603] has joined #bitcoin-core-dev
+07:30 -!- ozdeadman [~deadmanoz@user/deadmanoz] has joined #bitcoin-core-dev
+07:30 -!- deadmanoz [~deadmanoz@user/deadmanoz] has quit [Ping timeout: 256 seconds]
+07:30 -!- Pasha49 [~Pasha95@user/pasha] has joined #bitcoin-core-dev
+07:31 -!- Pasha17 [~Pasha49@user/pasha] has joined #bitcoin-core-dev
+07:31 -!- bugs_ [~bugs@user/bugs/x-5128603] has quit [Client Quit]
+07:34 -!- Pasha95 [~Pasha@user/pasha] has quit [Ping timeout: 259 seconds]
+07:34 -!- Pasha49 [~Pasha95@user/pasha] has quit [Ping timeout: 247 seconds]
+07:50 -!- takinbo [~takinbo@user/takinbo] has quit [Server closed connection]
+07:51 -!- sliv3r__- [~sliv3r__@user/sliv3r-:76883] has quit [Read error: Connection reset by peer]
+07:51 -!- sliv3r__ [~sliv3r__@user/sliv3r-:76883] has joined #bitcoin-core-dev
+07:52 -!- takinbo [~takinbo@user/takinbo] has joined #bitcoin-core-dev
+07:52 -!- Guest40 [~Guest40@169.58.94.11] has joined #bitcoin-core-dev
+07:55 -!- Guest40 [~Guest40@169.58.94.11] has quit [Client Quit]
+08:12 -!- stevenroose [~steven@irc.roose.io] has quit [Server closed connection]
+08:12 -!- stevenroose [~steven@irc.roose.io] has joined #bitcoin-core-dev
+08:18 -!- memset [~memset@gateway/tor-sasl/memset] has quit [Remote host closed the connection]
+08:19 -!- memset [~memset@gateway/tor-sasl/memset] has joined #bitcoin-core-dev
+08:44 -!- andrewtoth_ [~andrewtot@gateway/tor-sasl/andrewtoth] has quit [Remote host closed the connection]
+08:47 -!- dzxzg [~instrumen@user/dzxzg] has joined #bitcoin-core-dev
+08:48 -!- sr_gi [~sr_gi@2001:1c00:e998:5900:29d0:29f0:956b:9bc6] has joined #bitcoin-core-dev
+08:55 -!- Earnestly [~earnest@user/earnestly] has quit [Ping timeout: 260 seconds]
+08:56 -!- l0rinc [~l0rinc@user/l0rinc] has joined #bitcoin-core-dev
+08:57 -!- winterrdog [~winterrdo@102.222.234.137] has joined #bitcoin-core-dev
+08:57 -!- nervana21 [~nervana21@2800:e2:2280:1995:fc4d:a3fe:861:a2c7] has joined #bitcoin-core-dev
+09:00 < stickies-v> #startmeeting
+09:00 < corebot> stickies-v: Meeting started at 2026-08-20T16:00+0000
+09:00 < corebot> stickies-v: Current chairs: stickies-v
+09:00 < corebot> stickies-v: Useful commands: #action #info #idea #link #topic #motion #vote #close #endmeeting
+09:00 < corebot> stickies-v: See also: https://hcoop-meetbot.readthedocs.io/en/stable/
+09:00 < corebot> stickies-v: Participants should now identify themselves with '#here' or with an alias like '#here FirstLast'
+09:00 < cfields> hi
+09:00 < l0rinc> hi
+09:00 < brunoerg> hi
+09:00 < dzxzg> hi 
+09:00 < lightlike> hi
+09:00 < sr_gi> hi
+09:00 < hebasto> hi
+09:00 < danielabrozzoni> hi
+09:00 < stickies-v> #bitcoin-core-dev Meeting: _aj_ abubakarsadiq achow101 andrewtoth b10c brunoerg cfields danielabrozzoni darosior dergoegge dzxzg eugenesiegel fanquake fjahr furszy hebasto hodlinator instagibbs janb84 jarolrod johnny9dev jonatack josie jurraca kanzure kevkevin laanwj lightlike l0rinc maflcko marcofleon maxedw Murch pinheadmz provoostenator pseudoramdom ryanofsky sdaftuar sedited sipa sliv3r__ sr_gi stickies-v 
+09:00 < stickies-v> stringintech theStack vasild willcl-ark
+09:00 < dergoegge> hi
+09:00 < janb84> hi
+09:00 -!- tigerMafia [~tigerMafi@user/watAboutMe] has joined #bitcoin-core-dev
+09:00 < stickies-v> There are no pre-proposed meeting topics this week. Any last minute ones to add?
+09:01 < enochazariah> hi
+09:01 < jonatack> hi
+09:02 < johnny9dev> hi
+09:02 < stickies-v> #topic Fuzzing WG Update (dergoegge, marcofleon)
+09:02 < dergoegge> no update
+09:02 < hodlinator> hi
+09:02 < stickies-v> #topic Benchmarking WG Update (l0rinc, andrewtoth)
+09:03 < l0rinc> #35889 was merged, is a similar follow-up #36032
+09:03 < corebot> https://github.com/bitcoin/bitcoin/issues/35889 | rpc: avoid quadratic `gettxspendingprevout` work and preserve order by l0rinc · Pull Request #35889 · bitcoin/bitcoin · GitHub
+09:03 -!- musaHaruna [uid732742@id-732742.hampstead.irccloud.com] has joined #bitcoin-core-dev
+09:03 < corebot> https://github.com/bitcoin/bitcoin/issues/36032 | rpc: avoid quadratic output lookups by l0rinc · Pull Request #36032 · bitcoin/bitcoin · GitHub
+09:03 < l0rinc> #35531 was also merged, #36002 is a follow-up to make it work for pruned nodes
+09:03 < corebot> https://github.com/bitcoin/bitcoin/issues/35531 | txindex: hash keys and pack positions to reduce disk usage by andrewtoth · Pull Request #35531 · bitcoin/bitcoin · GitHub
+09:03 < corebot> https://github.com/bitcoin/bitcoin/issues/36002 | txindex: allow running in pruned mode by andrewtoth · Pull Request #36002 · bitcoin/bitcoin · GitHub
+09:03 < Murch[m]> hi
+09:04 < l0rinc> and as mentioned before here, #36000 was opened since
+09:04 < corebot> https://github.com/bitcoin/bitcoin/issues/36000 | validation: prefetch blocks while connecting by l0rinc · Pull Request #36000 · bitcoin/bitcoin · GitHub
+09:04 < l0rinc> it shines on HDDs especially
+09:04 < sipa> hi
+09:05 < hodlinator> nice!
+09:05 < l0rinc> as mentioned here before, I'm investigating if we can extend it in a future PR with different thread context-independent `CheckBlock` validations
+09:06 < l0rinc> sipa: you mentioned you were thinking of redesigning validation to be multitreaded, does this interfere with that?
+09:06 -!- kanzure [~kanzure@user/kanzure] has quit [Server closed connection]
+09:06 < stickies-v> wdym with "different thread context-independent `CheckBlock` validations"?
+09:07 < sipa> l0rinc: not pursuing that right now
+09:07 -!- kanzure [~kanzure@user/kanzure] has joined #bitcoin-core-dev
+09:07 < l0rinc> #36000 loads the blocks on different threads, so we can do some of the check (the ones that don't require extra connection context) there basically for free
+09:07 < corebot> https://github.com/bitcoin/bitcoin/issues/36000 | validation: prefetch blocks while connecting by l0rinc · Pull Request #36000 · bitcoin/bitcoin · GitHub
+09:08 < l0rinc> that's it from me, thanks
+09:08 < stickies-v> i see, just CheckBlock on multiple threads
+09:08 -!- maxedw_ is now known as maxedw
+09:08 < l0rinc> yes
+09:09 < stickies-v> #topic QML GUI WG Update (johnny9dev)
+09:10 < johnny9dev> Started the first PR into the gui-qml "staging" branch at https://github.com/bitcoin-core/gui-qml/pull/871
+09:10 -!- winterrdog [~winterrdo@102.222.234.137] has quit [Read error: Connection reset by peer]
+09:10 -!- winterrdog [~winterrdo@102.222.234.137] has joined #bitcoin-core-dev
+09:11 < johnny9dev> The idea is to reconstruct the project with clean, mergable history using everything we've learned building the project. I need to work on the description still
+09:12 < johnny9dev> The first 2 or 3 PR will likely be the most interesting as it will establish the core pieces (build, test, app lifecycle, and basic models)
+09:14 < johnny9dev> so I think that is the plan to move towards getting this upstreamed. I will give these PRs plenty of time to get review from anyone that would potentially be interested in them
+09:14 < johnny9dev> and i think now is a good time to get started
+09:14 < johnny9dev> thats all for now
+09:16 < stickies-v> #topic QA WG Update (brunoerg)
+09:16 < brunoerg> no update
+09:16 < cfields> proposed topic: potential feature-freeze exception for vectorized-chacha20
+09:17 < stickies-v> #topic potential feature-freeze exception for vectorized-chacha20 (cfields)
+09:17 < cfields> Very sorry for coming down to the wire here, but I'm curious if there's any appetite for an exception to the feature freeze for the vectorized chacha20 impl. It speeds up chacha20 by 1.5-3x (depending on platform/compiler), which is currently one of the most obvious pain points that shows up in flame graphs. I opened the PR months ago but I've been waiting to see what happened with upstream GCC (they're working on a substantial vectorization 
+09:17 < cfields> improvement that I assumed existed there while working on the PR. They've responded to my bug reports and I'm confident that the improvements will land, but haven't yet so I've decided to pivot). I'm working on a 128bit version (with l0rinc's help) that should perform better everywhere (though can be replaced with a better 256bit version once GCC gets its act together).
+09:18 < cfields> I can commit to spending the next week working on it if there's interest in doing some focused review for v32.
+09:18 < cfields> #34083
+09:18 < corebot> https://github.com/bitcoin/bitcoin/issues/34083 | Add initial vectorized chacha20 implementation for 2-3x speedup by theuni · Pull Request #34083 · bitcoin/bitcoin · GitHub
+09:19 < sipa> next week is a bad time for me, i don't think i can commit to reviewing
+09:19 < cfields> Nothing about it is urgent, it'd just be a nice speedup to ship for 32.
+09:19 < l0rinc> It's not technically a feature, optimizations can be considered bugfixes - I can continue reviewing
+09:19 < stickies-v> this looks like a cool improvement but i think it'd be equally cool to ship in 33?
+09:20 -!- viniciuscestarii [~viniciusc@2804:30c:1634:d500:cda9:99be:fc5c:3aac] has joined #bitcoin-core-dev
+09:21 < cfields> Ok, wfm.
+09:21 < l0rinc> I'm fine with both, we have a few other optimizations lined up anyway
+09:22 < cfields> my fault for letting it sit there for so long.
+09:22 < cfields> thanks. next topic :)
+09:22 < stickies-v> so yeah, PSA: today is feature freeze
+09:23 < stickies-v> should we talk a bit more about the co-authorship thing? i don't really care much about/for it but it seems to have come up a few times
+09:24 < stickies-v> i think one group sees it as a tool to figure out who knows the most about a piece of code/is a person to talk to, another sees it as a way to give credit / say thank you
+09:25 < stickies-v> oh and also it was mentioned as a way to express copyright
+09:26 < sr_gi> Context?
+09:26 < sipa> stickies-v: i was just comparing it with copyright as a bar
+09:27 < stickies-v> sr_gi: https://bitcoin-irc.chaincode.com/bitcoin-core-dev/2026-08-18#1247067 (and following days)
+09:27 < corebot> stickies-v: Error: That URL raised <HTTP Error 404: Not Found>
+09:27 < sr_gi> :tumbsup:
+09:27 < stickies-v> sipa: oh sorry, thanks for correcting
+09:27 < sipa> i see it as a way of giving credit, and the bar that sounds reasonable for that seems to roughly match the point where someome could claim cooyright
+09:27 < l0rinc> copyright is a bad example here: https://github.com/bitcoin/bitcoin/pull/35794#issuecomment-5072615311: Relevant U.S. Copyright Office guidance page 5
+09:27 < l0rinc> > Applicants should not list an AI technology or the company that provided it as an author or co-author simply because they used it.
+09:28 -!- winterrdog [~winterrdo@102.222.234.137] has quit [Read error: Connection reset by peer]
+09:29 < stickies-v> i use it when someone has contributed significant amounts of code, or in rare cases even when there was no/little code but a significant amount of architectural/design ideas that made me change course
+09:29 < l0rinc> I also see it as giving credit to thank people who helped in shaping the outcome. A good recent example is https://x.com/Rob1Ham/status/2090271687090520435, Rob spent a lot of time and money on finding these, the least we can do is acknowledge his work by adding him as coauthor.
+09:29 < sr_gi> I've been using it myself to give credit, specially if someone else has started the work and I've picked it up later, but the base is still theirs (e.g. Gleb with Erlay)
+09:29 < sipa> How so? AI tools don't have copyright, and we don't add them as co-author.
+09:30 < sipa> So the analogy seems to work.
+09:30 -!- winterrdog [~winterrdo@102.222.234.137] has joined #bitcoin-core-dev
+09:30 < l0rinc> AI is tool, we don't add clang-tidy as coauthor either
+09:30 < l0rinc> we don't need to thank the AIs (yet)
+09:31 < sipa> I'm not sure if you're agreeing or disagreeing with me.
+09:31 < l0rinc> I think I'm mostly agreeing
+09:31 < dzxzg> I don't know if it's something that needs to have well-defined meaning, everyone probably uses it a little bit differently, but all use it to mean some variation of "this person helped make this change." anything more detailed would probably need to be resolved case-by-case between the author and (alleged) coauthor
+09:31 < sipa> My position is that you should add someone as co-author if they could reasonably claim copyright. 
+09:31 < stickies-v> sipa: that sounds like a good heuristic to me
+09:32 < sipa> It's a way of giving credit, but for actually contributed code, not.ideas.
+09:32 < sipa> It does not imply the co-author understands the entire commit.
+09:32 < l0rinc> I am very much against copyright, so the analogy gives me the creeps 
+09:32 < johnny9dev> just an fyi, I'll be making heavy use of co-authored-by in the gui-qml staging commits as I will be compressing the large history into something digestible. The co-authors will all have been involved with constructing the relevant piece in some significant way. I will make sure I only co-author the person if I believe they can speak on the functionality introduced.
+09:32 -!- winterrdog [~winterrdo@102.222.234.137] has quit [Client Quit]
+09:33 < l0rinc> is there a drawback to thanking people this way? What's the reason for the pushback exactly, that it's interpreted as distributing blame?
+09:33 < shiza> hi
+09:33 < shiza> I read it was something about grants
+09:33 < sipa> l0rinc: ok, read it as "contributed a nontrivial piece of code of at least 5-10 lines" then
+09:34 < l0rinc> what the reason for avoiding it for 1-5 lines? Is it a grant-thing as mentioned?
+09:34 < sipa> l0rinc: i think it is weird to credit anyone who contributed ideas or helped with benchmarks or whatever, it's a collaborative project where everyone builds on one another. Authorship is a higher bar than that.
+09:35 < sipa> Or suggested a few single line changes.
+09:35 < fanquake> Yea. My pushback to https://github.com/bitcoin/bitcoin/pull/36000#discussion_r3806893819, was that I'd barely looked at the code, so I didn't see why I'd be a co-author
+09:35 < shiza> 2026-08-14 21:28:42     _aj_    are we using co-author to mean "wrote some of the code in this commit" or "contributed to the design" these days? i thought the former, but i've seen a few cases where the latter seems to be more in play? does the distinction matter for some people's grant KPIs?
+09:35 < fanquake> I guess AJ was similarly confused here, https://github.com/bitcoin/bitcoin/pull/35920#issuecomment-5273356225, about the request to be added as co-author
+09:35 < sr_gi> l0rinc: reading the piece that stickies-v shared I see the issue as *not giving credit* instead of doing so, but I haven't read the whole history
+09:35 < lightlike> different policies becomes a problem when people expect others to add them as coauthors (in the way they would do it to them), but the other person has a stricter policy and declines the request.
+09:36 < fanquake> *about the request for someone else to be added as co-author
+09:36 < l0rinc> "Authorship is a higher bar than that" - if someone contributed meaningfully I just add them as main author in that case, like: https://github.com/bitcoin/bitcoin/pull/35752/commits
+09:37 < sipa> you can contribute a meaningful amount of code without being the main author of a commit
+09:38 < stickies-v> alright, i think we can wrap up on this
+09:38 < stickies-v> anything else to discuss?
+09:39 < l0rinc> thanks for the feedback
+09:40 -!- svanstaa [~svanstaa@2a00:4841:173c:bf00:aaaa:7538:c837:10aa] has joined #bitcoin-core-dev
+09:40 < stickies-v> #endmeeting
+09:40 < corebot> stickies-v: Meeting ended at 2026-08-20T16:40+0000
+09:40 < corebot> stickies-v: Raw log: https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-08-20_16_00.log.json
+09:40 < corebot> stickies-v: Formatted log: https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-08-20_16_00.log.html
+09:40 < corebot> stickies-v: Minutes: https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-08-20_16_00.html
+09:42 < jonatack> I think co-authored-by credits are up to the PR author at their own discretion (I generally happily add anyone that contributed meaningfully), but not something that one would ask for.
+09:43 -!- nervana21 [~nervana21@2800:e2:2280:1995:fc4d:a3fe:861:a2c7] has quit [Quit: Client closed]
+09:44 < tigerMafia> jonatack: +1
+09:45 < jonatack> As for grant KPIs, I don't think those credits make any difference in the overall scheme of things. At least not when I review grant applications and reports. If you were already a reviewer of the PR in question, which would generally be the case, that's enough ;)
+09:46 < lightlike> well, at least in the gray areas. In clear cases where someone actually wrote most of the code of a commit, I think they should at least be co-author, if not first author, and I wouldn't think it rude to ask for it.
+09:46 < jonatack> I look much, more more at the quality/value of the review.
+09:47 < jonatack> lightlike: agree, fair, I would think the author should add the credit without needing to be asked.
+09:47 -!- rustaceanrob [~rustacean@167.98.176.190] has quit [Ping timeout: 252 seconds]
+09:49 < sr_gi> jonatack: But that is a bit of a contradiction right? If it's at the author's discretion but they should do so without being asked, it bears the question of what's the criteria
+09:50 < sr_gi> To be clear, I do agree with it being the author's discretion, and I do think, by definition, that people should not expect parity
+09:52 -!- enochazariah [~enochazar@user/enochazariah] has quit [Ping timeout: 248 seconds]
+09:53 < jonatack> sr_gi: yes. kindness and empathy, I guess. there isn't necessarily parity there either, and we all have our days :shrug:
+09:56 -!- sr_gi [~sr_gi@2001:1c00:e998:5900:29d0:29f0:956b:9bc6] has quit [Quit: Client closed]
+09:57 -!- Earnestly [~earnest@user/earnestly] has joined #bitcoin-core-dev
+09:57 -!- dzxzg [~instrumen@user/dzxzg] has quit [Quit: onversation terminated!]
+09:59 -!- sr_gi [~sr_gi@2001:1c00:e998:5900:29d0:29f0:956b:9bc6] has joined #bitcoin-core-dev
+10:05 -!- dzxzg [~instrumen@user/dzxzg] has joined #bitcoin-core-dev
+10:06 -!- sr_gi [~sr_gi@2001:1c00:e998:5900:29d0:29f0:956b:9bc6] has quit [Quit: Client closed]
+10:08 -!- dzxzg [~instrumen@user/dzxzg] has quit [Client Quit]
+10:15 -!- viniciuscestarii [~viniciusc@2804:30c:1634:d500:cda9:99be:fc5c:3aac] has quit [Quit: Client closed]
+10:25 -!- tigerMafia [~tigerMafi@user/watAboutMe] has quit [Quit: tigerMafia]
+10:28 < Earnestly> Would it be desirable to apply standard optimisations to miniscript such as constant folding, dead code elimination, etc?
+10:31 < Earnestly> (Including script)
+10:39 < nkaretnikov> i don’t understand why people are debating attribution. git has this built in. make people write their commits or submit patches and it’s clear which lines they added or not. if they cannot provide a patch or contributed in some other way, explicitly mention this in the commit message. seems like this solves all the concerns above.
+10:46 -!- Pasha28 [~Pasha17@user/pasha] has joined #bitcoin-core-dev
+10:49 -!- Pasha17 [~Pasha49@user/pasha] has quit [Ping timeout: 265 seconds]
+11:02 -!- Pasha97 [~Pasha28@user/pasha] has joined #bitcoin-core-dev
+11:05 -!- dzxzg [~dzxzg@user/dzxzg] has joined #bitcoin-core-dev
+11:05 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+11:06 -!- Pasha28 [~Pasha17@user/pasha] has quit [Ping timeout: 261 seconds]
+11:07 -!- jerryf [~jerryf@user/jerryf] has joined #bitcoin-core-dev
+11:12 -!- musaHaruna [uid732742@id-732742.hampstead.irccloud.com] has quit [Quit: Connection closed for inactivity]
+11:17 -!- enochazariah [~enochazar@user/enochazariah] has joined #bitcoin-core-dev
+11:28 -!- sliv3r__ [~sliv3r__@user/sliv3r-:76883] has quit [Quit: ZNC 1.8.2+deb3.1+deb12u1 - https://znc.in]
+11:28 -!- sliv3r__- [~sliv3r__@user/sliv3r-:76883] has joined #bitcoin-core-dev
+11:48 -!- sliv3r__- [~sliv3r__@user/sliv3r-:76883] has quit [Read error: Connection reset by peer]
+11:50 -!- sliv3r__ [~sliv3r__@user/sliv3r-:76883] has joined #bitcoin-core-dev
+12:07 -!- ghost43_ [~ghost43@gateway/tor-sasl/ghost43] has joined #bitcoin-core-dev
+12:09 -!- ghost43 [~ghost43@gateway/tor-sasl/ghost43] has quit [Ping timeout: 252 seconds]
+12:11 -!- mudsip [~mudsip@user/mudsip] has joined #bitcoin-core-dev
+12:13 -!- mudsip [~mudsip@user/mudsip] has quit [Client Quit]
+12:16 -!- svanstaa [~svanstaa@2a00:4841:173c:bf00:aaaa:7538:c837:10aa] has quit [Quit: Client closed]
+12:35 < Sjors[m]> <nkaretnikov> "i don’t understand why people..." <- We are quite picky about each PR having a clear commit history, from a functionally perspective, not who wrote which line.
+12:35 < Sjors[m]> So most feedback gets folded into an existing commit.
+12:37 < Sjors[m]> For grants people are probably better off asking for a reference than to max out co-authorship.
+12:40 -!- Pasha7 [~Pasha97@user/pasha] has joined #bitcoin-core-dev
+12:41 -!- jonatack [~jonatack@user/jonatack] has quit [Ping timeout: 245 seconds]
+12:44 -!- Pasha97 [~Pasha28@user/pasha] has quit [Ping timeout: 259 seconds]
+12:52 -!- Pasha14 [~Pasha7@user/pasha] has joined #bitcoin-core-dev
+12:53 -!- Pasha15 [~Pasha14@user/pasha] has joined #bitcoin-core-dev
+12:56 -!- Pasha7 [~Pasha97@user/pasha] has quit [Ping timeout: 269 seconds]
+12:58 -!- Pasha14 [~Pasha7@user/pasha] has quit [Ping timeout: 253 seconds]
+13:02 -!- Pasha31 [~Pasha15@user/pasha] has joined #bitcoin-core-dev
+13:04 -!- ___nick___ [~quassel@82-132-237-27.dab.02.net] has quit [Ping timeout: 252 seconds]
+13:05 -!- Pasha15 [~Pasha14@user/pasha] has quit [Ping timeout: 240 seconds]
+13:08 -!- Pasha20 [~Pasha31@user/pasha] has joined #bitcoin-core-dev
+13:11 -!- Pasha97 [~Pasha20@user/pasha] has joined #bitcoin-core-dev
+13:12 -!- Pasha31 [~Pasha15@user/pasha] has quit [Ping timeout: 246 seconds]
+13:15 -!- Pasha20 [~Pasha31@user/pasha] has quit [Ping timeout: 248 seconds]
+13:20 < achow101> the only times I add people as co-author is if they dropped a diff/suggestion that ends up being a majority of a commit. I don't think it makes sense to be adding coauthorship for line by line suggestions left during review.
+13:21 < achow101> even when I take someone's commit wholesale into my pr, and make my own changes to it, i can't even be bothered to add myself as a co-author
+13:22 -!- Pasha71 [~Pasha97@user/pasha] has joined #bitcoin-core-dev
+13:26 -!- Pasha97 [~Pasha20@user/pasha] has quit [Ping timeout: 245 seconds]
+13:32 -!- jonatack [~jonatack@user/jonatack] has joined #bitcoin-core-dev
+13:36 -!- Pasha24 [~Pasha71@user/pasha] has joined #bitcoin-core-dev
+13:41 -!- Pasha71 [~Pasha97@user/pasha] has quit [Ping timeout: 269 seconds]
+13:45 < afiore> Hi. Regarding the co-author discussion, I feel the need to speak up because of my experience with IP law and the USPTO (I'm not a lawyer).
+13:45 < afiore> Re: #35794, "don't have to" doesn't equate to "will be protected in the future for past committed work" - i.e. ex post facto would likely not apply.
+13:45 < corebot> https://github.com/bitcoin/bitcoin/issues/35794 | doc: Discourage adding AI agents as commit (co)-authors by sedited · Pull Request #35794 · bitcoin/bitcoin · GitHub
+13:45 < afiore> The document that l0rinc cites also states "Based on these developments, the Office concludes that public guidance is needed on the registration of works containing AI-generated content"; i.e., this guidance only applies to *registering* with the copyright the office - not defending unregistered copywritten work now or in the future.
+13:46 < afiore> Further more, the way these LLMs are used are not "tools"; they are full-fledged systems of copyright violation concealed amongst layers of relatively good-faith use. For example, there is ongoing litigation that will set industry precedent, once all appeals are exhausted: https://githubcopilotlitigation.com/case-updates.html
+13:46 < afiore> In my view, not only should co-authorship be included for future-proofing (it's literally not the commit author's intellectual product), but people should also re-think how they commit atomically so they don't need co-authorship to begin with.
+13:46 < afiore> Further more, a friendly "shout-out" or acknowledgement of attribution doesn't equate to co-authorship. It seems, in most cases, people are conflating the two. I think descriptive acknowledgements are great and can be included in the log.
+13:49 -!- enochazariah [~enochazar@user/enochazariah] has quit [Ping timeout: 260 seconds]
+13:59 -!- Pasha24 [~Pasha71@user/pasha] has quit [Quit: Client closed]
+13:59 -!- Pasha24 [~Pasha24@user/pasha] has joined #bitcoin-core-dev
+14:23 -!- Pasha25 [~Pasha24@user/pasha] has joined #bitcoin-core-dev
+14:25 -!- jackielove4u [~jackielov@user/jackielove4u] has quit [Server closed connection]
+14:25 -!- jackielove4u [~jackielov@user/jackielove4u] has joined #bitcoin-core-dev
+14:27 -!- Pasha24 [~Pasha24@user/pasha] has quit [Ping timeout: 258 seconds]
+14:47 -!- PaperSword [~Thunderbi@securemail.qrsnap.io] has quit [Remote host closed the connection]
+14:48 -!- emcy__ [~paul@188.29.203.62.threembb.co.uk] has joined #bitcoin-core-dev
+14:48 < l0rinc> LLMs are tools, they can't hold the copyright, they shouldn't be added as coathors any more than my laptop being a coauthor.
+14:50 -!- durandal__ [~paul@94.196.64.209.threembb.co.uk] has quit [Ping timeout: 245 seconds]
+14:52 < l0rinc> While I'm not sure about the recent pushback against the co-author trailer in commit messages (I don't see how it's different from any other way of thanking people who helped), I understand if some people feel it puts pressure on the co-authors to review and take responsibility. So from now on I'll use it for non-trivial help only - though not just code: I don't see how explaining the problem in words is any different from doing it in code when it
+14:52 < l0rinc>  comes to shaping the final state.
+14:58 -!- PaperSword [~Thunderbi@securemail.qrsnap.io] has joined #bitcoin-core-dev
+15:03 -!- jonatack [~jonatack@user/jonatack] has quit [Ping timeout: 248 seconds]
+15:14 -!- memset [~memset@gateway/tor-sasl/memset] has quit [Remote host closed the connection]
+15:15 -!- memset [~memset@gateway/tor-sasl/memset] has joined #bitcoin-core-dev
+15:53 -!- Pasha25 [~Pasha24@user/pasha] has quit [Quit: Client closed]
+15:53 -!- Pasha25 [~Pasha25@user/pasha] has joined #bitcoin-core-dev
+15:58 -!- otoburb [~otoburb@user/otoburb] has quit [Server closed connection]
+16:03 -!- otoburb [~otoburb@user/otoburb] has joined #bitcoin-core-dev
+16:07 -!- enochazariah_ [uid710351@id-710351.hampstead.irccloud.com] has quit [Quit: Connection closed for inactivity]
+16:26 -!- memset [~memset@gateway/tor-sasl/memset] has quit [Remote host closed the connection]
+16:26 -!- memset [~memset@gateway/tor-sasl/memset] has joined #bitcoin-core-dev
+16:30 -!- jonatack [~jonatack@user/jonatack] has joined #bitcoin-core-dev
+16:45 -!- l0rinc [~l0rinc@user/l0rinc] has quit [Quit: l0rinc]
+16:57 -!- ___nick___ [~quassel@82-132-237-63.dab.02.net] has joined #bitcoin-core-dev
+16:57 -!- l0rinc [~l0rinc@user/l0rinc] has joined #bitcoin-core-dev
+17:02 -!- jonatack [~jonatack@user/jonatack] has quit [Ping timeout: 274 seconds]
+17:06 -!- jonatack [~jonatack@user/jonatack] has joined #bitcoin-core-dev
+17:14 -!- l0rinc [~l0rinc@user/l0rinc] has quit [Quit: l0rinc]
+17:16 -!- rustaceanrob [~rustacean@80.169.112.131] has joined #bitcoin-core-dev
+17:20 -!- rustaceanrob [~rustacean@80.169.112.131] has quit [Ping timeout: 243 seconds]
+17:37 -!- jonatack [~jonatack@user/jonatack] has quit [Read error: Connection reset by peer]
+17:38 -!- l0rinc [~l0rinc@user/l0rinc] has joined #bitcoin-core-dev
+18:05 -!- jrayhawk [~jrayhawk@user/jrayhawk] has quit [Server closed connection]
+18:05 -!- jrayhawk [~jrayhawk@user/jrayhawk] has joined #bitcoin-core-dev
+18:07 -!- pinheadmz [~pinheadmz@165.227.93.117] has quit [Server closed connection]
+18:07 -!- pinheadmz [~pinheadmz@165.227.93.117] has joined #bitcoin-core-dev
+18:09 -!- ___nick___ [~quassel@82-132-237-63.dab.02.net] has quit [Quit: https://quassel-irc.org - Chat comfortably. Anywhere.]
+18:10 -!- Guest94 [~Guest79@d75-157-212-231.bchsia.telus.net] has joined #bitcoin-core-dev
+18:12 -!- dzxzg [~dzxzg@user/dzxzg] has quit [Remote host closed the connection]
+18:13 -!- ___nick___ [~quassel@82-132-237-63.dab.02.net] has joined #bitcoin-core-dev
+18:30 -!- memset [~memset@gateway/tor-sasl/memset] has quit [Remote host closed the connection]
+18:30 -!- memset [~memset@gateway/tor-sasl/memset] has joined #bitcoin-core-dev
+18:47 -!- adil [~Thunderbi@2402:4000:b280:2f01:2c3c:e70:efde:da9e] has joined #bitcoin-core-dev
+18:50 -!- tinova4 [~tinova@217.160.209.135] has quit [Server closed connection]
+18:50 -!- tinova4 [~tinova@217.160.209.135] has joined #bitcoin-core-dev
+19:03 -!- Pasha99 [~Pasha25@user/pasha] has joined #bitcoin-core-dev
+19:03 -!- adil [~Thunderbi@2402:4000:b280:2f01:2c3c:e70:efde:da9e] has quit [Quit: adil]
+19:07 -!- Pasha25 [~Pasha25@user/pasha] has quit [Ping timeout: 269 seconds]
+19:11 -!- sdaftuar [~sdaftuar@user/sdaftuar] has quit [Read error: Connection reset by peer]
+19:11 -!- bcdarc [~bcdarc@4.53.92.114] has quit [Read error: Connection reset by peer]
+19:11 -!- cmirror [~cmirror@4.53.92.114] has quit [Read error: Connection reset by peer]
+19:12 -!- bcdarc [~bcdarc@4.53.92.114] has joined #bitcoin-core-dev
+19:15 -!- sdaftuar [~sdaftuar@user/sdaftuar] has joined #bitcoin-core-dev
+19:19 -!- l0rinc_ [~l0rinc@user/l0rinc] has joined #bitcoin-core-dev
+19:21 -!- l0rinc [~l0rinc@user/l0rinc] has quit [Ping timeout: 246 seconds]
+19:28 -!- l0rinc_ [~l0rinc@user/l0rinc] has quit [Ping timeout: 260 seconds]
+19:30 -!- l0rinc [~l0rinc@user/l0rinc] has joined #bitcoin-core-dev
+19:41 -!- we6jboIRC [~we6jbo@user/we6jboIRC] has joined #bitcoin-core-dev
+19:44 -!- we6jboIRC [~we6jbo@user/we6jboIRC] has left #bitcoin-core-dev [inactive]
+19:47 -!- phantomcircuit [~phantomci@192.241.205.97] has quit [Server closed connection]
+19:47 -!- phantomcircuit [~phantomci@192.241.205.97] has joined #bitcoin-core-dev
+19:48 -!- l0rinc [~l0rinc@user/l0rinc] has quit [Quit: l0rinc]
+20:00 -!- jonatack [~jonatack@user/jonatack] has joined #bitcoin-core-dev
+20:31 -!- johnzweng [~johnzweng@zweng.at] has quit [Server closed connection]
+20:31 -!- johnzweng [~johnzweng@zweng.at] has joined #bitcoin-core-dev
+20:49 -!- jonatack [~jonatack@user/jonatack] has quit [Ping timeout: 261 seconds]
+21:01 -!- cmirror [~cmirror@4.53.92.114] has joined #bitcoin-core-dev
+21:04 -!- l0rinc [~l0rinc@user/l0rinc] has joined #bitcoin-core-dev
+21:17 -!- Andreadcorreia [sid737293@id-737293.uxbridge.irccloud.com] has quit [Server closed connection]
+21:17 -!- Andreadcorreia [sid737293@id-737293.uxbridge.irccloud.com] has joined #bitcoin-core-dev
+21:37 -!- TheRec [~toto@user/therec] has quit [Server closed connection]
+21:38 -!- TheRec [~toto@84-74-100-31.dclient.hispeed.ch] has joined #bitcoin-core-dev
+21:38 -!- TheRec [~toto@user/therec] has changed host
+22:25 -!- memset [~memset@gateway/tor-sasl/memset] has quit [Ping timeout: 252 seconds]
+22:26 -!- memset [~memset@gateway/tor-sasl/memset] has joined #bitcoin-core-dev
+22:43 -!- Pasha46 [~Pasha99@user/pasha] has joined #bitcoin-core-dev
+22:44 -!- moneyindabank [~moneyinda@95.173.83.47] has joined #bitcoin-core-dev
+22:46 -!- smartin [~Thunderbi@78.56.226.85] has quit [Read error: Connection reset by peer]
+22:47 -!- smartin [~Thunderbi@78.56.226.85] has joined #bitcoin-core-dev
+22:47 -!- Pasha99 [~Pasha25@user/pasha] has quit [Ping timeout: 256 seconds]
+22:49 -!- Ara [~Ara@user/ara] has quit [Server closed connection]
+22:51 -!- moneyindabank [~moneyinda@95.173.83.47] has quit [Quit: Client closed]
+22:51 -!- Ara [~Ara@user/ara] has joined #bitcoin-core-dev
+22:52 -!- cshmny [~cshmny@95.173.83.47] has joined #bitcoin-core-dev
+23:07 -!- Guest16 [~Guest16@95.173.83.47] has joined #bitcoin-core-dev
+23:10 -!- cshmny [~cshmny@95.173.83.47] has quit [Quit: Client closed]
+23:10 -!- cshmny [~cshmny@95.173.83.47] has joined #bitcoin-core-dev
+23:11 -!- cshmny [~cshmny@95.173.83.47] has quit [Client Quit]
+23:11 -!- cshmny [~cshmny@95.173.83.47] has joined #bitcoin-core-dev
+23:15 -!- jerryf [~jerryf@user/jerryf] has quit [Remote host closed the connection]
+23:19 -!- l0rinc [~l0rinc@user/l0rinc] has quit [Quit: l0rinc]
+23:26 -!- bitdex [~bitdex@gateway/tor-sasl/bitdex] has quit [Ping timeout: 252 seconds]
+23:34 -!- bitdex [~bitdex@gateway/tor-sasl/bitdex] has joined #bitcoin-core-dev
+23:50 -!- emzy [~quassel@user/emzy] has quit [Server closed connection]
+23:51 -!- emzy [~quassel@user/emzy] has joined #bitcoin-core-dev
+--- Log closed Fri Aug 21 00:00:07 2026
