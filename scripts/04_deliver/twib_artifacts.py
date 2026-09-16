@@ -397,9 +397,14 @@ def main():
     json_filename = os.path.join(output_dir, f"newsletter_{today_str}.json")
     latest_json = os.path.join(output_dir, "latest.json")
     archive_index_file = os.path.join(output_dir, "archive_index.json")
+    meetings_json_file = os.path.join(output_dir, "meetings.json")
     
     with open(json_filename, "w") as f: json.dump(newsletter_data, f, indent=2)
     with open(latest_json, "w") as f: json.dump(newsletter_data, f, indent=2)
+
+    # Export historical meeting summaries for meetings.html
+    sorted_meetings = sorted(meeting_summaries, key=lambda x: x.get("date", ""), reverse=True)
+    with open(meetings_json_file, "w") as f: json.dump(sorted_meetings, f, indent=2)
         
     archive_index = []
     if os.path.exists(archive_index_file):
@@ -418,7 +423,7 @@ def main():
     markdown_report = build_markdown_from_json(newsletter_data)
     with open(md_filename, "w") as f: f.write(markdown_report)
 
-    print(f"✅ Generated TWIB Artifacts to output/twib/ for {today_str}")
+    print(f"✅ Generated TWIB Artifacts (including meetings.json) to output/twib/ for {today_str}")
 
 if __name__ == "__main__":
     main()
