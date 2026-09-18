@@ -1,5 +1,34 @@
 [
   {
+    "date": "2026-09-17",
+    "url": "https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-09-17_16_00.log.json",
+    "participant_count": 25,
+    "key_participants": [
+      "fjahr",
+      "johnny9dev",
+      "brunoerg",
+      "andrewtoth_",
+      "sipa"
+    ],
+    "topics_discussed": [
+      "QA Working Group update (no update this week, big one expected next week)",
+      "QML GUI Working Group update (tracking issue #36289 opened, new contributor Andrea fixed a high-priority issue)",
+      "Benchmarking Working Group update (no update)",
+      "General call for reviews on milestone 84",
+      "Discussion on PR #36284 for potential inclusion in v32"
+    ],
+    "decisions_made": [],
+    "action_items": [
+      "johnny9dev to use issue #36289 to share the plan for merging gui-qml and help organize/prioritize remaining issues",
+      "Review PR #36284 for potential inclusion in v32",
+      "Review items in milestone 84"
+    ],
+    "mentioned_prs": [
+      36284
+    ],
+    "_text_hash": "320919a11a602daaea4c1121ff39fb36"
+  },
+  {
     "date": "2026-09-10",
     "url": "https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-09-10_16_00.log.json",
     "participant_count": 28,
