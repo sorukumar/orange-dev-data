@@ -58,21 +58,18 @@
   "ml_responses": 0.0,
   "delving_responses": 0.0,
   "first_active": null,
-  "last_active": "2026-09-04T18:21:56.145000",
+  "last_active": null,
   "dev_type": "Participant",
   "expertise_domains": [
-    "Script",
-    "Mempool"
+    "Script"
   ],
   "expertise_by_source": {
     "discussion": {
-      "Mempool": 0.25,
-      "Script": 0.75
+      "Script": 1.0
     }
   },
   "expertise_domain_scores": {
-    "Mempool": 0.25,
-    "Script": 0.75
+    "Script": 1.0
   },
   "p2016_posts": 1.0,
   "modern_posts": 1.0,
@@ -85,7 +82,7 @@
   "is_researcher": false,
   "is_bip_author": false,
   "global_first_active": null,
-  "global_last_active": "2026-09-04T18:21:56.144999936",
+  "global_last_active": null,
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -111,6 +108,7 @@
     "2026": {
       "covenants": 1,
       "mempool-fees": 1,
+      "security": 1,
       "vaults": 1
     }
   }

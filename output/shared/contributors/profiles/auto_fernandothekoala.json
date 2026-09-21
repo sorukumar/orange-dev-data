@@ -51,41 +51,44 @@
   "impact_score": 0.0,
   "p2016_impact_score": 0.0,
   "modern_impact_score": 0.0,
-  "threads_started": 5.0,
-  "replies_sent": 3.0,
+  "threads_started": 2.0,
+  "replies_sent": 2.0,
   "ml_threads": 0.0,
-  "delving_threads": 5.0,
+  "delving_threads": 2.0,
   "ml_responses": 0.0,
-  "delving_responses": 3.0,
+  "delving_responses": 2.0,
   "first_active": null,
-  "last_active": "2025-09-16T09:59:52.531000",
+  "last_active": null,
   "dev_type": "Participant",
   "expertise_domains": [
-    "Mempool",
-    "Script"
+    "Script",
+    "Mining",
+    "Mempool"
   ],
   "expertise_by_source": {
     "discussion": {
-      "Mempool": 0.519,
-      "Script": 0.481
+      "Mempool": 0.14,
+      "Mining": 0.29,
+      "Script": 0.57
     }
   },
   "expertise_domain_scores": {
-    "Mempool": 0.519,
-    "Script": 0.481
+    "Mempool": 0.14,
+    "Mining": 0.29,
+    "Script": 0.57
   },
-  "p2016_posts": 8.0,
-  "modern_posts": 8.0,
+  "p2016_posts": 4.0,
+  "modern_posts": 4.0,
   "p2016_ml_posts": 0.0,
-  "p2016_delving_posts": 8.0,
+  "p2016_delving_posts": 4.0,
   "modern_ml_posts": 0.0,
-  "modern_delving_posts": 8.0,
+  "modern_delving_posts": 4.0,
   "is_engineer": false,
   "is_reviewer": false,
   "is_researcher": false,
   "is_bip_author": false,
   "global_first_active": null,
-  "global_last_active": "2025-09-16T09:59:52.531000064",
+  "global_last_active": null,
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -103,17 +106,15 @@
   },
   "last_message": {
     "source": "delving",
-    "subject": "Re: Addressing community concerns and objections regarding my recent proposal to relax Bitcoin Core's standardness limits on OP_RETURN outputs",
-    "date": "2025-09-16",
-    "link": "https://delvingbitcoin.org/t/addressing-community-concerns-and-objections-regarding-my-recent-proposal-to-relax-bitcoin-cores-standardness-limits-on-op-return-outputs/1697/9"
+    "subject": "Re: A Comprehensive OP_RETURN Limits Q&A Resource to Combat Misinformation",
+    "date": "2025-09-09",
+    "link": "https://delvingbitcoin.org/t/a-comprehensive-op-return-limits-q-a-resource-to-combat-misinformation/1689/4"
   },
   "social_history": {
     "2025": {
-      "mempool-fees": 4,
       "mining": 4,
-      "script-opcodes": 8,
-      "security": 3,
-      "spam-filtering": 5
+      "script-opcodes": 4,
+      "spam-filtering": 2
     }
   }
 }

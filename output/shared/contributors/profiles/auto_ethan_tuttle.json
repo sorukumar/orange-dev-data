@@ -51,14 +51,14 @@
   "impact_score": 2.0,
   "p2016_impact_score": 2.0,
   "modern_impact_score": 2.0,
-  "threads_started": 8.0,
+  "threads_started": 9.0,
   "replies_sent": 10.0,
   "ml_threads": 0.0,
-  "delving_threads": 8.0,
+  "delving_threads": 9.0,
   "ml_responses": 0.0,
   "delving_responses": 10.0,
   "first_active": null,
-  "last_active": "2024-07-21T19:48:40.045000",
+  "last_active": null,
   "dev_type": "Participant",
   "expertise_domains": [
     "L2",
@@ -66,26 +66,26 @@
   ],
   "expertise_by_source": {
     "discussion": {
-      "L2": 0.529,
-      "Mining": 0.471
+      "L2": 0.525,
+      "Mining": 0.475
     }
   },
   "expertise_domain_scores": {
-    "L2": 0.529,
-    "Mining": 0.471
+    "L2": 0.525,
+    "Mining": 0.475
   },
-  "p2016_posts": 18.0,
-  "modern_posts": 17.0,
+  "p2016_posts": 19.0,
+  "modern_posts": 16.0,
   "p2016_ml_posts": 0.0,
-  "p2016_delving_posts": 18.0,
+  "p2016_delving_posts": 19.0,
   "modern_ml_posts": 0.0,
-  "modern_delving_posts": 17.0,
+  "modern_delving_posts": 16.0,
   "is_engineer": false,
   "is_reviewer": true,
   "is_researcher": false,
   "is_bip_author": false,
   "global_first_active": "2023-12-19T15:28:57",
-  "global_last_active": "2024-07-21T19:48:40.044999936",
+  "global_last_active": "2023-12-19T15:28:57",
   "github_location": null,
   "github_company": "FOSS",
   "github_bio": "npub1tmycvul7aj4fxhypg5qkjgsjtx30zvnrfeufrgx9xlwtv0hne7cs67el78\r\n\r\ntuttle.ethan@protonmail.com\r\n",
@@ -104,9 +104,9 @@
   },
   "last_message": {
     "source": "delving",
-    "subject": "Re: Ecash TIDES using Cashu and Stratum v2",
-    "date": "2024-07-21",
-    "link": "https://delvingbitcoin.org/t/ecash-tides-using-cashu-and-stratum-v2/870/30"
+    "subject": "Re: Block-wide Signature Aggregation via SNARKs",
+    "date": "2026-09-16",
+    "link": "https://delvingbitcoin.org/t/block-wide-signature-aggregation-via-snarks/2875/9"
   },
   "social_history": {
     "2023": {
@@ -114,13 +114,19 @@
       "ecash": 3,
       "mining": 1,
       "privacy": 1,
-      "scaling": 1,
+      "other": 1,
       "spam-filtering": 2
     },
     "2024": {
       "ecash": 11,
       "lightning": 11,
       "mining": 11
+    },
+    "2026": {
+      "bitvm": 1,
+      "mining": 1,
+      "quantum": 1,
+      "other": 1
     }
   }
 }

@@ -45,20 +45,20 @@
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": null,
-  "hybrid_score": 0.0883,
-  "p2016_hybrid_score": 0.1067,
-  "modern_hybrid_score": 0.2005,
+  "hybrid_score": 0.0882,
+  "p2016_hybrid_score": 0.1066,
+  "modern_hybrid_score": 0.2008,
   "impact_score": 5.0,
   "p2016_impact_score": 6.0,
   "modern_impact_score": 11.0,
-  "threads_started": 7.0,
-  "replies_sent": 16.0,
+  "threads_started": 6.0,
+  "replies_sent": 17.0,
   "ml_threads": 2.0,
-  "delving_threads": 5.0,
+  "delving_threads": 4.0,
   "ml_responses": 8.0,
-  "delving_responses": 8.0,
+  "delving_responses": 9.0,
   "first_active": "2020-09-22T01:24:40",
-  "last_active": "2026-09-07T17:29:04.121000",
+  "last_active": null,
   "dev_type": "Participant",
   "expertise_domains": [
     "Mempool",
@@ -67,15 +67,15 @@
   ],
   "expertise_by_source": {
     "discussion": {
-      "Cryptography": 0.261,
-      "Mempool": 0.435,
-      "Privacy": 0.304
+      "Cryptography": 0.289,
+      "Mempool": 0.4,
+      "Privacy": 0.311
     }
   },
   "expertise_domain_scores": {
-    "Cryptography": 0.261,
-    "Mempool": 0.435,
-    "Privacy": 0.304
+    "Cryptography": 0.289,
+    "Mempool": 0.4,
+    "Privacy": 0.311
   },
   "p2016_posts": 23.0,
   "modern_posts": 21.0,
@@ -88,7 +88,7 @@
   "is_researcher": true,
   "is_bip_author": false,
   "global_first_active": "2020-09-22T01:24:40",
-  "global_last_active": "2026-09-07T17:29:04.120999936",
+  "global_last_active": "2026-02-02T14:32:29",
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -107,9 +107,9 @@
   },
   "last_message": {
     "source": "delving",
-    "subject": "Re: Addressing the Diminishing Block Subsidy",
-    "date": "2026-09-07",
-    "link": "https://delvingbitcoin.org/t/addressing-the-diminishing-block-subsidy/2640/29"
+    "subject": "Re: PQC output type discussion",
+    "date": "2026-09-17",
+    "link": "https://delvingbitcoin.org/t/pqc-output-type-discussion/2749/33"
   },
   "social_history": {
     "2020": {
@@ -121,28 +121,26 @@
       "mining": 1
     },
     "2023": {
-      "hard-fork-block-size": 1,
+      "other": 2,
       "mempool-fees": 2,
       "mining": 1,
-      "other": 2
+      "taproot": 1
     },
     "2025": {
-      "hard-fork-block-size": 1,
-      "mempool-fees": 2,
-      "quantum": 4,
-      "script-opcodes": 1,
-      "soft-fork-activation": 1
+      "other": 2,
+      "mempool-fees": 1,
+      "quantum": 4
     },
     "2026": {
-      "other": 16,
-      "hard-fork-block-size": 1,
-      "mempool-fees": 5,
+      "other": 17,
+      "mempool-fees": 6,
       "mining": 2,
-      "privacy": 6,
-      "quantum": 2,
+      "privacy": 7,
+      "quantum": 3,
       "script-opcodes": 4,
-      "signatures-sighash": 3,
-      "soft-fork-activation": 2
+      "taproot": 3,
+      "testing-devtools": 4,
+      "utxo-sync": 4
     }
   }
 }

@@ -19,52 +19,52 @@
   "roles": [
     "BIP Author"
   ],
-  "total_commits": 370.0,
-  "authored_commits": 370.0,
-  "tier1_authored_commits": 369.0,
+  "total_commits": 12.0,
+  "authored_commits": 12.0,
+  "tier1_authored_commits": 11.0,
   "tier2_authored_commits": 1.0,
   "merge_commits": 0.0,
   "tier1_merge_commits": 0.0,
   "tier2_merge_commits": 0.0,
   "self_merges": 0.0,
-  "total_additions": 16689.0,
-  "total_deletions": 5347.0,
-  "first_core_commit": "2017-07-31T07:44:51+00:00",
-  "last_core_commit": "2026-09-07T08:32:32+00:00",
+  "total_additions": 157.0,
+  "total_deletions": 207.0,
+  "first_core_commit": "2018-05-14T12:54:23+00:00",
+  "last_core_commit": "2025-10-27T10:30:49+00:00",
   "first_ecosystem_commit": "2021-05-26T16:29:40+00:00",
   "last_ecosystem_commit": "2021-05-26T16:29:40+00:00",
-  "first_commit": "2017-07-31T07:44:51",
-  "last_commit": "2026-09-07T08:32:32",
-  "p2016_authored_commits": 370.0,
-  "modern_authored_commits": 76.0,
-  "co_authored_commits": 31.0,
+  "first_commit": "2018-05-14T12:54:23",
+  "last_commit": "2025-10-27T10:30:49",
+  "p2016_authored_commits": 12.0,
+  "modern_authored_commits": 3.0,
+  "co_authored_commits": 0.0,
   "bips_authored": 3.0,
   "p2016_bips_authored": 3.0,
   "modern_bips_authored": 0.0,
   "first_bip_date": "2018-07-05T20:45:34",
   "last_bip_date": "2022-10-07T13:59:24",
-  "avg_review_latency_days": 1287.555618827755,
-  "reviews_count": 865.0,
-  "avg_approval_latency_days": 1185.9464049181672,
-  "approvals_count": 574.0,
-  "tier1_reviews_count": 833.0,
+  "avg_review_latency_days": 1279.4842306575642,
+  "reviews_count": 110.0,
+  "avg_approval_latency_days": 958.8053503898635,
+  "approvals_count": 63.0,
+  "tier1_reviews_count": 58.0,
   "tier2_reviews_count": 52.0,
-  "p2016_reviews_count": 865.0,
-  "modern_reviews_count": 348.0,
+  "p2016_reviews_count": 110.0,
+  "modern_reviews_count": 57.0,
   "first_review_date": "2018-08-05T00:31:52",
-  "last_review_date": "2026-09-14T06:43:13",
-  "prs_authored": 210.0,
-  "tier1_prs_authored": 201.0,
+  "last_review_date": "2026-09-10T14:35:23",
+  "prs_authored": 18.0,
+  "tier1_prs_authored": 9.0,
   "tier2_prs_authored": 9.0,
-  "avg_pr_ack_velocity_days": 9.506470269097223,
-  "avg_concept_lead_time_days": 32.87669367283951,
-  "review_reciprocity": 4.119047619047619,
-  "hybrid_score": 1.3764,
-  "p2016_hybrid_score": 1.4234,
-  "modern_hybrid_score": 0.6861,
-  "impact_score": 56.0,
-  "p2016_impact_score": 57.0,
-  "modern_impact_score": 34.0,
+  "avg_pr_ack_velocity_days": 1.6427713477366257,
+  "avg_concept_lead_time_days": 0.7549614197530864,
+  "review_reciprocity": 6.111111111111111,
+  "hybrid_score": 1.3396,
+  "p2016_hybrid_score": 1.3865,
+  "modern_hybrid_score": 0.6737,
+  "impact_score": 55.0,
+  "p2016_impact_score": 56.0,
+  "modern_impact_score": 33.0,
   "threads_started": 11.0,
   "replies_sent": 64.0,
   "ml_threads": 6.0,
@@ -72,7 +72,7 @@
   "ml_responses": 57.0,
   "delving_responses": 7.0,
   "first_active": "2014-08-06T17:22:31",
-  "last_active": "2026-02-27T10:52:17.147000",
+  "last_active": null,
   "dev_type": "Protocol Designer",
   "expertise_domains": [
     "Infrastructure",
@@ -85,9 +85,9 @@
       "Network": 0.333
     },
     "code": {
-      "Infrastructure": 0.979,
+      "Infrastructure": 0.978,
       "Network": 0.008,
-      "Wallet": 0.013
+      "Wallet": 0.014
     },
     "discussion": {
       "Cryptography": 0.522,
@@ -96,7 +96,7 @@
   },
   "expertise_domain_scores": {
     "Cryptography": 0.1044,
-    "Infrastructure": 0.6272,
+    "Infrastructure": 0.6269,
     "Network": 0.1689,
     "Privacy": 0.0956
   },
@@ -111,7 +111,7 @@
   "is_researcher": true,
   "is_bip_author": true,
   "global_first_active": "2014-08-06T17:22:31",
-  "global_last_active": "2026-09-14T06:43:13",
+  "global_last_active": "2026-09-10T14:35:23",
   "github_location": "Germany",
   "github_company": null,
   "github_bio": "full-stack cryptographer",
@@ -123,9 +123,6 @@
   "github_url": "https://github.com/real-or-random",
   "delving_url": "https://delvingbitcoin.org/u/real-or-random",
   "commit_history": {
-    "2017": {
-      "Utilities": 1.0
-    },
     "2018": {
       "GUI": 2.67,
       "Node & RPC": 0.67,
@@ -133,48 +130,19 @@
       "Wallet": 4.0
     },
     "2019": {
-      "Build & CI": 6.0,
-      "Documentation": 2.0,
-      "Utilities": 35.0
-    },
-    "2020": {
-      "Build & CI": 3.33,
-      "Documentation": 0.33,
-      "Utilities": 26.33
+      "Utilities": 4.0
     },
     "2021": {
-      "Build & CI": 19.33,
-      "Documentation": 6.33,
-      "Utilities": 46.33,
+      "Documentation": 2.0,
       "Wallet": 1.0
     },
-    "2022": {
-      "Build & CI": 12.0,
-      "Documentation": 4.5,
-      "Utilities": 55.5
-    },
     "2023": {
-      "Build & CI": 25.33,
-      "Documentation": 17.83,
+      "Documentation": 2.0,
       "P2P Network": 3.0,
-      "Tests": 1.0,
-      "Utilities": 38.83
-    },
-    "2024": {
-      "Build & CI": 8.5,
-      "Documentation": 4.0,
-      "Utilities": 12.5
+      "Tests": 1.0
     },
     "2025": {
-      "Build & CI": 4.5,
-      "Documentation": 4.5,
-      "Tests": 2.0,
-      "Utilities": 9.0
-    },
-    "2026": {
-      "Build & CI": 2.0,
-      "Documentation": 4.0,
-      "Utilities": 16.0
+      "Tests": 2.0
     }
   },
   "bip_list": [

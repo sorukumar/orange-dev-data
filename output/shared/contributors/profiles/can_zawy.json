@@ -45,20 +45,20 @@
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": null,
-  "hybrid_score": 0.02,
+  "hybrid_score": 0.0199,
   "p2016_hybrid_score": 0.0372,
-  "modern_hybrid_score": 0.021,
+  "modern_hybrid_score": 0.0212,
   "impact_score": 1.0,
   "p2016_impact_score": 2.0,
   "modern_impact_score": 1.0,
-  "threads_started": 36.0,
-  "replies_sent": 45.0,
+  "threads_started": 41.0,
+  "replies_sent": 52.0,
   "ml_threads": 10.0,
-  "delving_threads": 26.0,
+  "delving_threads": 31.0,
   "ml_responses": 5.0,
-  "delving_responses": 40.0,
+  "delving_responses": 47.0,
   "first_active": "2017-10-09T16:26:50",
-  "last_active": "2025-10-08T10:15:08.411000",
+  "last_active": null,
   "dev_type": "Participant",
   "expertise_domains": [
     "Mining",
@@ -66,26 +66,26 @@
   ],
   "expertise_by_source": {
     "discussion": {
-      "Consensus": 0.286,
-      "Mining": 0.714
+      "Consensus": 0.262,
+      "Mining": 0.738
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.286,
-    "Mining": 0.714
+    "Consensus": 0.262,
+    "Mining": 0.738
   },
-  "p2016_posts": 81.0,
-  "modern_posts": 66.0,
+  "p2016_posts": 93.0,
+  "modern_posts": 78.0,
   "p2016_ml_posts": 15.0,
-  "p2016_delving_posts": 66.0,
+  "p2016_delving_posts": 78.0,
   "modern_ml_posts": 0.0,
-  "modern_delving_posts": 66.0,
+  "modern_delving_posts": 78.0,
   "is_engineer": false,
   "is_reviewer": false,
   "is_researcher": true,
   "is_bip_author": false,
   "global_first_active": "2017-10-09T16:26:50",
-  "global_last_active": "2025-10-08T10:15:08.411000064",
+  "global_last_active": null,
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -103,9 +103,9 @@
   },
   "last_message": {
     "source": "delving",
-    "subject": "CSAM is the elephant in the room",
-    "date": "2025-10-08",
-    "link": "https://delvingbitcoin.org/t/csam-is-the-elephant-in-the-room/2035/1"
+    "subject": "Re: Bounds on chain length with BIP-54 timewarp fixes",
+    "date": "2026-09-21",
+    "link": "https://delvingbitcoin.org/t/bounds-on-chain-length-with-bip-54-timewarp-fixes/2899/20"
   },
   "social_history": {
     "2017": {
@@ -126,10 +126,9 @@
       "consensus-cleanup": 19,
       "hard-fork-block-size": 10,
       "mining": 20,
-      "script-opcodes": 5,
+      "other": 10,
       "security": 14,
-      "testing-devtools": 19,
-      "other": 5
+      "testing-devtools": 19
     },
     "2025": {
       "consensus-cleanup": 6,
@@ -139,6 +138,12 @@
       "other": 3,
       "security": 1,
       "testing-devtools": 6
+    },
+    "2026": {
+      "consensus-cleanup": 12,
+      "mining": 12,
+      "spam-filtering": 12,
+      "testing-devtools": 12
     }
   }
 }

@@ -1,94 +1,6 @@
 {
-  "generated_at": "2026-09-14T16:15:19.780766+00:00",
+  "generated_at": "2026-09-21T15:32:49.287086+00:00",
   "self_merges": [
-    {
-      "maintainer_id": "can_michael_ford",
-      "maintainer_name": "Michael Ford",
-      "repository": "bitcoin/bitcoin",
-      "pr_number": 36218,
-      "url": "https://github.com/bitcoin/bitcoin/pull/36218",
-      "title": "build: avoid `pipe2` on Darwin (for now)",
-      "merged_at": "2026-09-10T16:03:27+00:00",
-      "ack_count": 2,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_hennadii_stepanov",
-      "maintainer_name": "Hennadii Stepanov",
-      "repository": "bitcoin/bitcoin",
-      "pr_number": 36107,
-      "url": "https://github.com/bitcoin/bitcoin/pull/36107",
-      "title": "iwyu: Fix warnings in `src/init` and treat them as errors",
-      "merged_at": "2026-08-28T11:47:23+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_michael_ford",
-      "maintainer_name": "Michael Ford",
-      "repository": "bitcoin/bitcoin",
-      "pr_number": 36051,
-      "url": "https://github.com/bitcoin/bitcoin/pull/36051",
-      "title": "ci: use ruff 0.16.x",
-      "merged_at": "2026-08-21T12:40:29+00:00",
-      "ack_count": 3,
-      "category": "Administrative Merge"
-    },
-    {
-      "maintainer_id": "can_michael_ford",
-      "maintainer_name": "Michael Ford",
-      "repository": "bitcoin/bitcoin",
-      "pr_number": 35982,
-      "url": "https://github.com/bitcoin/bitcoin/pull/35982",
-      "title": "Update minisketch subtree to latest master",
-      "merged_at": "2026-08-17T08:51:33+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_michael_ford",
-      "maintainer_name": "Michael Ford",
-      "repository": "bitcoin/bitcoin",
-      "pr_number": 35960,
-      "url": "https://github.com/bitcoin/bitcoin/pull/35960",
-      "title": "common: remove `::runtime_error` from `RunCommandParseJSON`",
-      "merged_at": "2026-08-14T15:20:40+00:00",
-      "ack_count": 4,
-      "category": "Administrative Merge"
-    },
-    {
-      "maintainer_id": "can_hennadii_stepanov",
-      "maintainer_name": "Hennadii Stepanov",
-      "repository": "bitcoin/bitcoin",
-      "pr_number": 35931,
-      "url": "https://github.com/bitcoin/bitcoin/pull/35931",
-      "title": "ci: Check DLL imports of cross-built `bitcoind.exe`",
-      "merged_at": "2026-08-12T08:56:29+00:00",
-      "ack_count": 2,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_michael_ford",
-      "maintainer_name": "Michael Ford",
-      "repository": "bitcoin/bitcoin",
-      "pr_number": 35870,
-      "url": "https://github.com/bitcoin/bitcoin/pull/35870",
-      "title": "guix: move `python-minimal` to Linux GUI build",
-      "merged_at": "2026-08-04T09:23:13+00:00",
-      "ack_count": 2,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_michael_ford",
-      "maintainer_name": "Michael Ford",
-      "repository": "bitcoin/bitcoin",
-      "pr_number": 35869,
-      "url": "https://github.com/bitcoin/bitcoin/pull/35869",
-      "title": "lint: (re-)add contrib/guix for Python linting",
-      "merged_at": "2026-08-03T12:30:04+00:00",
-      "ack_count": 2,
-      "category": "Light Review"
-    },
     {
       "maintainer_id": "can_wladimir_j_van_der_laan",
       "maintainer_name": "Wladimir J. van der Laan",
@@ -97,61 +9,6 @@
       "url": "https://github.com/bitcoin-core/gui/pull/949",
       "title": "Fix `-Wsfinae-incomplete` warnings when building with GCC 16.x",
       "merged_at": "2026-07-22T09:12:19+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_hennadii_stepanov",
-      "maintainer_name": "Hennadii Stepanov",
-      "repository": "bitcoin/bitcoin",
-      "pr_number": 35746,
-      "url": "https://github.com/bitcoin/bitcoin/pull/35746",
-      "title": "ci: Test build directory path with spaces",
-      "merged_at": "2026-07-22T07:37:34+00:00",
-      "ack_count": 2,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_michael_ford",
-      "maintainer_name": "Michael Ford",
-      "repository": "bitcoin/bitcoin",
-      "pr_number": 35412,
-      "url": "https://github.com/bitcoin/bitcoin/pull/35412",
-      "title": "ci: add NetBSD Clang cross job",
-      "merged_at": "2026-07-10T09:14:47+00:00",
-      "ack_count": 2,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_michael_ford",
-      "maintainer_name": "Michael Ford",
-      "repository": "bitcoin/bitcoin",
-      "pr_number": 35649,
-      "url": "https://github.com/bitcoin/bitcoin/pull/35649",
-      "title": "depends: move FreeBSD SDK handling to CI",
-      "merged_at": "2026-07-08T13:45:51+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_michael_ford",
-      "maintainer_name": "Michael Ford",
-      "repository": "bitcoin/bitcoin",
-      "pr_number": 35669,
-      "url": "https://github.com/bitcoin/bitcoin/pull/35669",
-      "title": "doc: archive release notes for v31.1",
-      "merged_at": "2026-07-08T09:12:06+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_michael_ford",
-      "maintainer_name": "Michael Ford",
-      "repository": "bitcoin/bitcoin",
-      "pr_number": 35640,
-      "url": "https://github.com/bitcoin/bitcoin/pull/35640",
-      "title": "ci: use a 8x instance over 16x for riscv job",
-      "merged_at": "2026-07-03T15:08:37+00:00",
       "ack_count": 1,
       "category": "Light Review"
     },
@@ -4103,28 +3960,6 @@
       "merged_at": "2023-05-14T10:15:39+00:00",
       "ack_count": 2,
       "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 1300,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/1300",
-      "title": "Avoid normalize conditional on VERIFY",
-      "merged_at": "2023-05-11T12:30:45+00:00",
-      "ack_count": 2,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 1066,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/1066",
-      "title": "Abstract out and merge all the magnitude/normalized logic",
-      "merged_at": "2023-05-11T12:24:11+00:00",
-      "ack_count": 3,
-      "category": "Administrative Merge"
     },
     {
       "maintainer_id": "can_michael_ford",
@@ -9825,17 +9660,6 @@
       "category": "Administrative Merge"
     },
     {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 831,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/831",
-      "title": "Safegcd inverses, drop Jacobi symbols, remove libgmp",
-      "merged_at": "2021-03-18T00:04:26+00:00",
-      "ack_count": 4,
-      "category": "Administrative Merge"
-    },
-    {
       "maintainer_id": "can_marcofalke",
       "maintainer_name": "MarcoFalke",
       "repository": "bitcoin/bitcoin",
@@ -11057,17 +10881,6 @@
       "category": "Light Review"
     },
     {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 830,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/830",
-      "title": "Rip out non-endomorphism code + dependencies",
-      "merged_at": "2020-10-14T18:11:33+00:00",
-      "ack_count": 3,
-      "category": "Administrative Merge"
-    },
-    {
       "maintainer_id": "can_marcofalke",
       "maintainer_name": "MarcoFalke",
       "repository": "bitcoin/bitcoin",
@@ -11088,17 +10901,6 @@
       "merged_at": "2020-10-08T11:19:10+00:00",
       "ack_count": 1,
       "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 808,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/808",
-      "title": "Exhaustive test improvements + exhaustive schnorrsig tests",
-      "merged_at": "2020-09-26T03:44:28+00:00",
-      "ack_count": 3,
-      "category": "Administrative Merge"
     },
     {
       "maintainer_id": "can_marcofalke",
@@ -14302,61 +14104,6 @@
       "category": "Light Review"
     },
     {
-      "maintainer_id": "can_gregory_maxwell",
-      "maintainer_name": "Gregory Maxwell",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 634,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/634",
-      "title": "Add a descriptive comment for secp256k1_ecmult_const.",
-      "merged_at": "2019-06-04T23:06:38+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_gregory_maxwell",
-      "maintainer_name": "Gregory Maxwell",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 629,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/629",
-      "title": "Avoid calling _is_zero when _set_b32 fails.",
-      "merged_at": "2019-05-29T21:48:02+00:00",
-      "ack_count": 4,
-      "category": "Administrative Merge"
-    },
-    {
-      "maintainer_id": "can_gregory_maxwell",
-      "maintainer_name": "Gregory Maxwell",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 630,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/630",
-      "title": "Note intention of timing sidechannel freeness.",
-      "merged_at": "2019-05-29T20:30:52+00:00",
-      "ack_count": 0,
-      "category": "Ninja Merge"
-    },
-    {
-      "maintainer_id": "can_gregory_maxwell",
-      "maintainer_name": "Gregory Maxwell",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 628,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/628",
-      "title": "Fix ability to compile tests without -DVERIFY.",
-      "merged_at": "2019-05-29T14:25:01+00:00",
-      "ack_count": 2,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_gregory_maxwell",
-      "maintainer_name": "Gregory Maxwell",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 627,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/627",
-      "title": "Guard memcmp in tests against mixed size inputs.",
-      "merged_at": "2019-05-29T14:24:19+00:00",
-      "ack_count": 3,
-      "category": "Administrative Merge"
-    },
-    {
       "maintainer_id": "can_marcofalke",
       "maintainer_name": "MarcoFalke",
       "repository": "bitcoin/bitcoin",
@@ -14808,28 +14555,6 @@
       "category": "Administrative Merge"
     },
     {
-      "maintainer_id": "can_gregory_maxwell",
-      "maintainer_name": "Gregory Maxwell",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 599,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/599",
-      "title": "Switch x86_64 asm to use \"i\" instead of \"n\" for immediate values.",
-      "merged_at": "2019-03-11T18:31:23+00:00",
-      "ack_count": 2,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_gregory_maxwell",
-      "maintainer_name": "Gregory Maxwell",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 597,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/597",
-      "title": "Add $(COMMON_LIB) to exhaustive tests to fix ARM asm build",
-      "merged_at": "2019-03-10T22:45:03+00:00",
-      "ack_count": 2,
-      "category": "Light Review"
-    },
-    {
       "maintainer_id": "can_wladimir_j_van_der_laan",
       "maintainer_name": "Wladimir J. van der Laan",
       "repository": "bitcoin/bitcoin",
@@ -14938,17 +14663,6 @@
       "merged_at": "2019-02-25T16:46:04+00:00",
       "ack_count": 2,
       "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_gregory_maxwell",
-      "maintainer_name": "Gregory Maxwell",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 591,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/591",
-      "title": "Make bench_internal obey secp256k1_fe_sqrt's contract wrt aliasing.",
-      "merged_at": "2019-02-24T19:21:14+00:00",
-      "ack_count": 3,
-      "category": "Administrative Merge"
     },
     {
       "maintainer_id": "can_marcofalke",
@@ -16568,17 +16282,6 @@
       "category": "Light Review"
     },
     {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 490,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/490",
-      "title": "Disambiguate bench functions and types",
-      "merged_at": "2017-12-21T22:06:55+00:00",
-      "ack_count": 0,
-      "category": "Ninja Merge"
-    },
-    {
       "maintainer_id": "can_wladimir_j_van_der_laan",
       "maintainer_name": "Wladimir J. van der Laan",
       "repository": "bitcoin/bitcoin",
@@ -16598,17 +16301,6 @@
       "title": "contrib: fix typo in install_db4.sh help message",
       "merged_at": "2017-12-19T10:34:06+00:00",
       "ack_count": 2,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 480,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/480",
-      "title": "Enable benchmark building by default",
-      "merged_at": "2017-12-18T22:39:55+00:00",
-      "ack_count": 1,
       "category": "Light Review"
     },
     {
@@ -16722,17 +16414,6 @@
       "category": "Ninja Merge"
     },
     {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 479,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/479",
-      "title": "Get rid of reserved _t in type names",
-      "merged_at": "2017-11-08T23:35:58+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
       "maintainer_id": "can_jonas_schnelli",
       "maintainer_name": "Jonas Schnelli",
       "repository": "bitcoin/bitcoin",
@@ -16773,17 +16454,6 @@
       "url": "https://github.com/bitcoin/bitcoin/pull/11433",
       "title": "qa: Restore bitcoin-util-test py2 compatibility",
       "merged_at": "2017-10-03T19:28:52+00:00",
-      "ack_count": 2,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 478,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/478",
-      "title": "Fixed multiple typos",
-      "merged_at": "2017-09-25T01:55:43+00:00",
       "ack_count": 2,
       "category": "Light Review"
     },
@@ -17800,28 +17470,6 @@
       "category": "Light Review"
     },
     {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 427,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/427",
-      "title": "Remove Schnorr from travis as well",
-      "merged_at": "2016-11-28T05:12:21+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 425,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/425",
-      "title": "Remove Schnorr experiment",
-      "merged_at": "2016-11-25T19:30:36+00:00",
-      "ack_count": 2,
-      "category": "Light Review"
-    },
-    {
       "maintainer_id": "can_wladimir_j_van_der_laan",
       "maintainer_name": "Wladimir J. van der Laan",
       "repository": "bitcoin/bitcoin",
@@ -18438,17 +18086,6 @@
       "category": "Light Review"
     },
     {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 405,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/405",
-      "title": "Make secp256k1_fe_sqrt constant time",
-      "merged_at": "2016-07-09T17:40:04+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
       "maintainer_id": "can_wladimir_j_van_der_laan",
       "maintainer_name": "Wladimir J. van der Laan",
       "repository": "bitcoin/bitcoin",
@@ -18468,17 +18105,6 @@
       "title": "wallet: Revert input selection post-pruning",
       "merged_at": "2016-07-06T05:21:54+00:00",
       "ack_count": 2,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 402,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/402",
-      "title": "Add support for testing quadratic residues",
-      "merged_at": "2016-07-04T12:00:38+00:00",
-      "ack_count": 1,
       "category": "Light Review"
     },
     {
@@ -18638,17 +18264,6 @@
     {
       "maintainer_id": "can_pieter_wuille",
       "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 398,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/398",
-      "title": "Test whether ECDH and Schnorr are enabled for JNI",
-      "merged_at": "2016-05-30T17:58:32+00:00",
-      "ack_count": 0,
-      "category": "Ninja Merge"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
       "repository": "bitcoin/bitcoin",
       "pr_number": 7891,
       "url": "https://github.com/bitcoin/bitcoin/pull/7891",
@@ -18676,17 +18291,6 @@
       "url": "https://github.com/bitcoin/bitcoin/pull/8102",
       "title": "Bugfix: use global ::fRelayTxes instead of CNode in version send",
       "merged_at": "2016-05-26T18:15:33+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 366,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/366",
-      "title": "ARM assembly implementation of field_10x26 inner (rebase of #173)",
-      "merged_at": "2016-05-25T17:02:18+00:00",
       "ack_count": 1,
       "category": "Light Review"
     },
@@ -19351,17 +18955,6 @@
       "category": "Administrative Merge"
     },
     {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 360,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/360",
-      "title": "Add experimental features to configure",
-      "merged_at": "2015-12-12T20:42:21+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
       "maintainer_id": "can_wladimir_j_van_der_laan",
       "maintainer_name": "Wladimir J. van der Laan",
       "repository": "bitcoin/bitcoin",
@@ -19437,17 +19030,6 @@
       "merged_at": "2015-12-02T09:18:31+00:00",
       "ack_count": 3,
       "category": "Administrative Merge"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 302,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/302",
-      "title": "Add sage verification script for the group laws",
-      "merged_at": "2015-12-01T20:02:32+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
     },
     {
       "maintainer_id": "can_wladimir_j_van_der_laan",
@@ -19535,17 +19117,6 @@
       "title": "[Qt] add startup option to reset Qt settings",
       "merged_at": "2015-11-25T08:05:39+00:00",
       "ack_count": 2,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 356,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/356",
-      "title": "Benchmark against OpenSSL verification",
-      "merged_at": "2015-11-24T20:55:40+00:00",
-      "ack_count": 1,
       "category": "Light Review"
     },
     {
@@ -19659,28 +19230,6 @@
       "category": "Administrative Merge"
     },
     {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 351,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/351",
-      "title": "Turn secp256k1_ec_pubkey_serialize outlen to in/out",
-      "merged_at": "2015-11-05T19:49:52+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 348,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/348",
-      "title": "Improvements for coordinate decompression",
-      "merged_at": "2015-11-05T00:33:03+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
       "maintainer_id": "can_wladimir_j_van_der_laan",
       "maintainer_name": "Wladimir J. van der Laan",
       "repository": "bitcoin/bitcoin",
@@ -19747,17 +19296,6 @@
       "category": "Administrative Merge"
     },
     {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 342,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/342",
-      "title": "Make lax_der_privatekey_parsing.h not depend on internal code",
-      "merged_at": "2015-10-26T18:47:52+00:00",
-      "ack_count": 2,
-      "category": "Light Review"
-    },
-    {
       "maintainer_id": "can_wladimir_j_van_der_laan",
       "maintainer_name": "Wladimir J. van der Laan",
       "repository": "bitcoin/bitcoin",
@@ -19791,17 +19329,6 @@
       "category": "Light Review"
     },
     {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 339,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/339",
-      "title": "[API BREAK] Explicit flag handling (rebase + modification of #324)",
-      "merged_at": "2015-10-25T19:10:57+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
       "maintainer_id": "can_jeff_garzik",
       "maintainer_name": "Jeff Garzik",
       "repository": "bitcoin/bitcoin",
@@ -19813,17 +19340,6 @@
       "category": "Administrative Merge"
     },
     {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 334,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/334",
-      "title": "Overhaul ECDSA signature parsing: strict DER, compact sigs, tests, lower-S",
-      "merged_at": "2015-10-22T22:24:22+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
       "maintainer_id": "can_wladimir_j_van_der_laan",
       "maintainer_name": "Wladimir J. van der Laan",
       "repository": "bitcoin/bitcoin",
@@ -19833,17 +19349,6 @@
       "merged_at": "2015-10-22T08:24:03+00:00",
       "ack_count": 2,
       "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 338,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/338",
-      "title": "Bugfix: swap arguments to noncefp",
-      "merged_at": "2015-10-21T14:12:00+00:00",
-      "ack_count": 0,
-      "category": "Ninja Merge"
     },
     {
       "maintainer_id": "can_wladimir_j_van_der_laan",
@@ -19978,17 +19483,6 @@
       "category": "Administrative Merge"
     },
     {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 294,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/294",
-      "title": "[API BREAK] Remove _t in types due to being POSIX-reserved",
-      "merged_at": "2015-09-22T19:26:47+00:00",
-      "ack_count": 2,
-      "category": "Light Review"
-    },
-    {
       "maintainer_id": "can_wladimir_j_van_der_laan",
       "maintainer_name": "Wladimir J. van der Laan",
       "repository": "bitcoin/bitcoin",
@@ -20011,17 +19505,6 @@
       "category": "Administrative Merge"
     },
     {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 295,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/295",
-      "title": "Print success",
-      "merged_at": "2015-09-19T19:24:38+00:00",
-      "ack_count": 2,
-      "category": "Light Review"
-    },
-    {
       "maintainer_id": "can_wladimir_j_van_der_laan",
       "maintainer_name": "Wladimir J. van der Laan",
       "repository": "bitcoin/bitcoin",
@@ -20029,17 +19512,6 @@
       "url": "https://github.com/bitcoin/bitcoin/pull/6692",
       "title": "devtools: don't push if signing fails in github-merge",
       "merged_at": "2015-09-18T14:02:23+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 293,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/293",
-      "title": "[API BREAK] Change argument order to out/outin/in",
-      "merged_at": "2015-09-04T18:22:55+00:00",
       "ack_count": 1,
       "category": "Light Review"
     },
@@ -20066,28 +19538,6 @@
       "category": "Administrative Merge"
     },
     {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 291,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/291",
-      "title": "Move ECDSA pubkey recovery key to a module",
-      "merged_at": "2015-08-28T03:03:20+00:00",
-      "ack_count": 3,
-      "category": "Administrative Merge"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 289,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/289",
-      "title": "API documentation improvements",
-      "merged_at": "2015-08-27T20:47:06+00:00",
-      "ack_count": 3,
-      "category": "Administrative Merge"
-    },
-    {
       "maintainer_id": "can_wladimir_j_van_der_laan",
       "maintainer_name": "Wladimir J. van der Laan",
       "repository": "bitcoin/bitcoin",
@@ -20096,28 +19546,6 @@
       "title": "Make logging for validation optional",
       "merged_at": "2015-08-11T15:36:57+00:00",
       "ack_count": 2,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 283,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/283",
-      "title": "Actually test static precomputation in Travis",
-      "merged_at": "2015-08-03T20:44:00+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 212,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/212",
-      "title": "Implement Schnorr signatures",
-      "merged_at": "2015-08-03T20:34:21+00:00",
-      "ack_count": 1,
       "category": "Light Review"
     },
     {
@@ -20165,17 +19593,6 @@
       "category": "Light Review"
     },
     {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 278,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/278",
-      "title": "Introduce callback functions for dealing with errors",
-      "merged_at": "2015-07-29T15:52:45+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
       "maintainer_id": "can_wladimir_j_van_der_laan",
       "maintainer_name": "Wladimir J. van der Laan",
       "repository": "bitcoin/bitcoin",
@@ -20187,28 +19604,6 @@
       "category": "Administrative Merge"
     },
     {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 282,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/282",
-      "title": "[API CHANGE] Introduce pubkey and signature types",
-      "merged_at": "2015-07-26T15:42:35+00:00",
-      "ack_count": 2,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 269,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/269",
-      "title": "Change RFC6979 implementation to be a generic PRNG",
-      "merged_at": "2015-07-24T21:44:30+00:00",
-      "ack_count": 2,
-      "category": "Light Review"
-    },
-    {
       "maintainer_id": "can_wladimir_j_van_der_laan",
       "maintainer_name": "Wladimir J. van der Laan",
       "repository": "bitcoin/bitcoin",
@@ -20218,17 +19613,6 @@
       "merged_at": "2015-07-24T09:09:00+00:00",
       "ack_count": 2,
       "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 274,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/274",
-      "title": "Make ecmult static precomputation default",
-      "merged_at": "2015-07-16T02:39:26+00:00",
-      "ack_count": 0,
-      "category": "Ninja Merge"
     },
     {
       "maintainer_id": "can_wladimir_j_van_der_laan",
@@ -20261,17 +19645,6 @@
       "title": "tests: Remove old sh-based test framework",
       "merged_at": "2015-07-14T11:00:14+00:00",
       "ack_count": 2,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 270,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/270",
-      "title": "Verify the result of GMP modular inverse using non-GMP code",
-      "merged_at": "2015-07-14T00:27:37+00:00",
-      "ack_count": 1,
       "category": "Light Review"
     },
     {
@@ -20429,17 +19802,6 @@
       "category": "Administrative Merge"
     },
     {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 247,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/247",
-      "title": "Tiny optimization",
-      "merged_at": "2015-06-13T12:49:41+00:00",
-      "ack_count": 4,
-      "category": "Administrative Merge"
-    },
-    {
       "maintainer_id": "can_wladimir_j_van_der_laan",
       "maintainer_name": "Wladimir J. van der Laan",
       "repository": "bitcoin/bitcoin",
@@ -20583,17 +19945,6 @@
       "category": "Administrative Merge"
     },
     {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 210,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/210",
-      "title": "Effective affine precomputation (by Peter Dettman)",
-      "merged_at": "2015-04-30T19:54:56+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
       "maintainer_id": "can_wladimir_j_van_der_laan",
       "maintainer_name": "Wladimir J. van der Laan",
       "repository": "bitcoin/bitcoin",
@@ -20638,28 +19989,6 @@
       "category": "Ninja Merge"
     },
     {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 237,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/237",
-      "title": "Fix typo: avg -> max",
-      "merged_at": "2015-04-12T15:40:09+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 208,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/208",
-      "title": "[API BREAK] Introduce explicit contexts",
-      "merged_at": "2015-04-11T08:02:26+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
       "maintainer_id": "can_wladimir_j_van_der_laan",
       "maintainer_name": "Wladimir J. van der Laan",
       "repository": "bitcoin/bitcoin",
@@ -20690,17 +20019,6 @@
       "title": "Use GetAncestor to compute new target",
       "merged_at": "2015-04-07T22:13:26+00:00",
       "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 229,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/229",
-      "title": "Add ability to pass extra entropy to rfc6979",
-      "merged_at": "2015-03-27T20:58:57+00:00",
-      "ack_count": 2,
       "category": "Light Review"
     },
     {
@@ -20783,17 +20101,6 @@
     {
       "maintainer_id": "can_pieter_wuille",
       "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 221,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/221",
-      "title": "Get rid of hex format and some binary conversions",
-      "merged_at": "2015-03-02T10:45:39+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
       "repository": "bitcoin/bitcoin",
       "pr_number": 5832,
       "url": "https://github.com/bitcoin/bitcoin/pull/5832",
@@ -20801,50 +20108,6 @@
       "merged_at": "2015-03-01T11:13:23+00:00",
       "ack_count": 4,
       "category": "Administrative Merge"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 215,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/215",
-      "title": "Use RFC6979 for test PRNGs",
-      "merged_at": "2015-02-24T10:39:04+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 216,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/216",
-      "title": "Use faster byteswapping and avoid alignment-increasing casts",
-      "merged_at": "2015-02-24T10:23:01+00:00",
-      "ack_count": 2,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 214,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/214",
-      "title": "Improve signing API documentation & specification",
-      "merged_at": "2015-02-16T19:29:22+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 213,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/213",
-      "title": "Removed gotos, which are hard to trace and maintain.",
-      "merged_at": "2015-02-13T18:41:23+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
     },
     {
       "maintainer_id": "can_wladimir_j_van_der_laan",
@@ -20858,17 +20121,6 @@
       "category": "Light Review"
     },
     {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 161,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/161",
-      "title": "Some assembly for scalar operations",
-      "merged_at": "2015-02-07T02:22:21+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
       "maintainer_id": "can_wladimir_j_van_der_laan",
       "maintainer_name": "Wladimir J. van der Laan",
       "repository": "bitcoin/bitcoin",
@@ -20876,61 +20128,6 @@
       "url": "https://github.com/bitcoin/bitcoin/pull/5711",
       "title": "Push down RPC locks",
       "merged_at": "2015-02-04T09:23:23+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 207,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/207",
-      "title": "Benchmarks for all internal operations",
-      "merged_at": "2015-02-03T04:58:08+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 203,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/203",
-      "title": "Add group operation counts",
-      "merged_at": "2015-01-29T04:37:45+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 199,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/199",
-      "title": "Introduce compact storage types",
-      "merged_at": "2015-01-25T13:16:20+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 196,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/196",
-      "title": "Get rid of variable-length hex string conversions",
-      "merged_at": "2015-01-25T02:15:44+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 191,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/191",
-      "title": "Reduce the amount of runtime-initialized constants",
-      "merged_at": "2015-01-23T04:10:58+00:00",
       "ack_count": 1,
       "category": "Light Review"
     },
@@ -20968,28 +20165,6 @@
       "category": "Light Review"
     },
     {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 176,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/176",
-      "title": "Rework group tests",
-      "merged_at": "2015-01-02T15:29:04+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 163,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/163",
-      "title": "[API BREAK] Use rfc6979 as default nonce-generation function",
-      "merged_at": "2014-12-23T13:40:55+00:00",
-      "ack_count": 0,
-      "category": "Ninja Merge"
-    },
-    {
       "maintainer_id": "can_wladimir_j_van_der_laan",
       "maintainer_name": "Wladimir J. van der Laan",
       "repository": "bitcoin/bitcoin",
@@ -20997,17 +20172,6 @@
       "url": "https://github.com/bitcoin/bitcoin/pull/5517",
       "title": "contrib: make github-merge require signing",
       "merged_at": "2014-12-23T10:28:22+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 154,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/154",
-      "title": "Weak normalization",
-      "merged_at": "2014-12-22T21:19:07+00:00",
       "ack_count": 1,
       "category": "Light Review"
     },
@@ -21025,50 +20189,6 @@
     {
       "maintainer_id": "can_pieter_wuille",
       "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 169,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/169",
-      "title": "Make signing fail if a too small buffer is passed.",
-      "merged_at": "2014-12-18T20:59:25+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 168,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/168",
-      "title": "Remove GMP field implementation",
-      "merged_at": "2014-12-18T00:21:08+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 123,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/123",
-      "title": "Avoid field inverse for r == x comparison",
-      "merged_at": "2014-12-16T22:30:07+00:00",
-      "ack_count": 2,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 160,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/160",
-      "title": "Configure options reorganization",
-      "merged_at": "2014-12-16T12:59:28+00:00",
-      "ack_count": 0,
-      "category": "Ninja Merge"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
       "repository": "bitcoin/bitcoin",
       "pr_number": 5357,
       "url": "https://github.com/bitcoin/bitcoin/pull/5357",
@@ -21078,50 +20198,6 @@
       "category": "Administrative Merge"
     },
     {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 150,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/150",
-      "title": "[API BREAK] Fix ECDSA message hashes to 32 bytes",
-      "merged_at": "2014-12-11T00:39:40+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 151,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/151",
-      "title": "X86 travis",
-      "merged_at": "2014-12-11T00:23:48+00:00",
-      "ack_count": 0,
-      "category": "Ninja Merge"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 149,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/149",
-      "title": "Really compile with -O3 by default",
-      "merged_at": "2014-12-10T23:50:27+00:00",
-      "ack_count": 0,
-      "category": "Ninja Merge"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 142,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/142",
-      "title": "Avoid the stack in assembly and use explicit registers",
-      "merged_at": "2014-12-10T23:49:36+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
       "maintainer_id": "can_wladimir_j_van_der_laan",
       "maintainer_name": "Wladimir J. van der Laan",
       "repository": "bitcoin/bitcoin",
@@ -21129,83 +20205,6 @@
       "url": "https://github.com/bitcoin/bitcoin/pull/5449",
       "title": "contrib: show pull # in prompt for github-merge script",
       "merged_at": "2014-12-09T14:34:18+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 146,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/146",
-      "title": "Compile with -O3 by default",
-      "merged_at": "2014-12-09T10:20:59+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 136,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/136",
-      "title": "Improve the benchmarks",
-      "merged_at": "2014-12-09T01:40:44+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 118,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/118",
-      "title": "Tweak precomputed table size for G",
-      "merged_at": "2014-12-07T13:37:17+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 137,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/137",
-      "title": "Variable time normalize",
-      "merged_at": "2014-12-07T13:35:30+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 128,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/128",
-      "title": "Convert YASM code to inline assembly",
-      "merged_at": "2014-12-07T13:34:29+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 138,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/138",
-      "title": "Allocate precomputation arrays on the heap",
-      "merged_at": "2014-12-07T12:19:29+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 140,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/140",
-      "title": "Another redundant secp256k1_fe_normalize",
-      "merged_at": "2014-12-06T17:18:10+00:00",
       "ack_count": 1,
       "category": "Light Review"
     },
@@ -21223,50 +20222,6 @@
     {
       "maintainer_id": "can_pieter_wuille",
       "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 134,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/134",
-      "title": "Make scalar_add_bit test's overflow detection exact",
-      "merged_at": "2014-12-04T11:21:15+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 127,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/127",
-      "title": "Multiplication-only lambda splitter without bignum",
-      "merged_at": "2014-12-03T20:23:05+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 132,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/132",
-      "title": "Use constant-time conditional moves instead of byte slicing",
-      "merged_at": "2014-12-03T20:21:49+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 133,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/133",
-      "title": "Avoid undefined shift behaviour",
-      "merged_at": "2014-12-03T20:20:33+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
       "repository": "bitcoin/bitcoin",
       "pr_number": 5401,
       "url": "https://github.com/bitcoin/bitcoin/pull/5401",
@@ -21274,17 +20229,6 @@
       "merged_at": "2014-12-02T17:56:13+00:00",
       "ack_count": 2,
       "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 131,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/131",
-      "title": "Fix typo",
-      "merged_at": "2014-12-02T17:37:01+00:00",
-      "ack_count": 0,
-      "category": "Ninja Merge"
     },
     {
       "maintainer_id": "can_gavin_andresen",
@@ -21295,116 +20239,6 @@
       "title": "Mempool resurrect test",
       "merged_at": "2014-12-02T17:00:03+00:00",
       "ack_count": 2,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 129,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/129",
-      "title": "Bugfix: b is restricted, not r",
-      "merged_at": "2014-12-02T16:52:51+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 119,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/119",
-      "title": "Make the num module optional",
-      "merged_at": "2014-12-02T15:42:58+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 124,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/124",
-      "title": "Enforce and use r != b for field multiplication",
-      "merged_at": "2014-12-02T15:39:28+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 126,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/126",
-      "title": "Add two ECDSA edge case tests",
-      "merged_at": "2014-12-01T21:42:00+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 120,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/120",
-      "title": "Optimize doubling: secp256k1 has no y=0 point",
-      "merged_at": "2014-12-01T11:38:19+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 117,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/117",
-      "title": "Switch all EC and ECDSA logic from num to scalar.",
-      "merged_at": "2014-12-01T11:32:23+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 122,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/122",
-      "title": "Do signature recovery/verification with 4 possible recid case",
-      "merged_at": "2014-11-30T18:51:49+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 121,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/121",
-      "title": "Correct typo in comment",
-      "merged_at": "2014-11-28T20:23:14+00:00",
-      "ack_count": 0,
-      "category": "Ninja Merge"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 114,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/114",
-      "title": "Add bounds checking to field element setters",
-      "merged_at": "2014-11-26T14:24:26+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 116,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/116",
-      "title": "Don't split the g factor when not using endomorphism",
-      "merged_at": "2014-11-26T14:20:06+00:00",
-      "ack_count": 1,
       "category": "Light Review"
     },
     {
@@ -21430,17 +20264,6 @@
       "category": "Light Review"
     },
     {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 110,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/110",
-      "title": "Add missing infinity checks",
-      "merged_at": "2014-11-18T17:02:03+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
       "maintainer_id": "can_jeff_garzik",
       "maintainer_name": "Jeff Garzik",
       "repository": "bitcoin/bitcoin",
@@ -21448,28 +20271,6 @@
       "url": "https://github.com/bitcoin/bitcoin/pull/2844",
       "title": "Add unauthenticated HTTP REST interface",
       "merged_at": "2014-11-18T15:18:13+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 107,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/107",
-      "title": "Add DETERMINISTIC to avoid line number/source dependent binaries",
-      "merged_at": "2014-11-18T10:42:11+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 108,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/108",
-      "title": "Update README.md",
-      "merged_at": "2014-11-18T08:56:30+00:00",
       "ack_count": 1,
       "category": "Light Review"
     },
@@ -21487,45 +20288,12 @@
     {
       "maintainer_id": "can_pieter_wuille",
       "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 103,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/103",
-      "title": "Extra validation on top of #73",
-      "merged_at": "2014-11-15T00:29:53+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
       "repository": "bitcoin/bitcoin",
       "pr_number": 5256,
       "url": "https://github.com/bitcoin/bitcoin/pull/5256",
       "title": "Do signature-s negation inside the tests",
       "merged_at": "2014-11-12T19:44:47+00:00",
       "ack_count": 2,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 99,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/99",
-      "title": "Document some preconditions",
-      "merged_at": "2014-11-12T19:23:26+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 98,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/98",
-      "title": "Branch-free point addition",
-      "merged_at": "2014-11-12T10:45:06+00:00",
-      "ack_count": 1,
       "category": "Light Review"
     },
     {
@@ -21573,61 +20341,6 @@
       "category": "Administrative Merge"
     },
     {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 77,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/77",
-      "title": "Implementations for scalar without data-dependent branches",
-      "merged_at": "2014-11-05T07:26:58+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 94,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/94",
-      "title": "Label variable-time functions correctly and don't use those in sign",
-      "merged_at": "2014-11-04T11:01:44+00:00",
-      "ack_count": 0,
-      "category": "Ninja Merge"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 93,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/93",
-      "title": "warnings: enable quiet builds",
-      "merged_at": "2014-11-04T07:35:41+00:00",
-      "ack_count": 0,
-      "category": "Ninja Merge"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 85,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/85",
-      "title": "Fix interaction between magnitudes and negation",
-      "merged_at": "2014-11-03T09:44:34+00:00",
-      "ack_count": 0,
-      "category": "Ninja Merge"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 89,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/89",
-      "title": "Get rid of {num,scalar,ecdsa_sig}_{init,free}",
-      "merged_at": "2014-11-03T09:42:01+00:00",
-      "ack_count": 0,
-      "category": "Ninja Merge"
-    },
-    {
       "maintainer_id": "can_wladimir_j_van_der_laan",
       "maintainer_name": "Wladimir J. van der Laan",
       "repository": "bitcoin/bitcoin",
@@ -21637,28 +20350,6 @@
       "merged_at": "2014-11-03T07:49:33+00:00",
       "ack_count": 2,
       "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 82,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/82",
-      "title": "Add bench_sign tool",
-      "merged_at": "2014-11-02T09:17:04+00:00",
-      "ack_count": 0,
-      "category": "Ninja Merge"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 80,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/80",
-      "title": "Make the bench tool deterministic and rename it to bench_verify",
-      "merged_at": "2014-10-31T15:10:20+00:00",
-      "ack_count": 0,
-      "category": "Ninja Merge"
     },
     {
       "maintainer_id": "can_wladimir_j_van_der_laan",
@@ -21672,50 +20363,6 @@
       "category": "Ninja Merge"
     },
     {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 79,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/79",
-      "title": "Add bench_inv tool",
-      "merged_at": "2014-10-31T09:19:22+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 78,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/78",
-      "title": "Remove OpenSSL bignum implementation",
-      "merged_at": "2014-10-31T09:17:37+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 76,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/76",
-      "title": "Unit tests for scalar",
-      "merged_at": "2014-10-30T13:09:35+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 75,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/75",
-      "title": "Introduce secp256k1_scalar_t for future constant-time mod order operations",
-      "merged_at": "2014-10-29T07:33:22+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
       "maintainer_id": "can_gavin_andresen",
       "maintainer_name": "Gavin Andresen",
       "repository": "bitcoin/bitcoin",
@@ -21727,17 +20374,6 @@
       "category": "Light Review"
     },
     {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 72,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/72",
-      "title": "Move all non-ECDSA EC logic to eckey",
-      "merged_at": "2014-10-27T12:18:36+00:00",
-      "ack_count": 0,
-      "category": "Ninja Merge"
-    },
-    {
       "maintainer_id": "can_wladimir_j_van_der_laan",
       "maintainer_name": "Wladimir J. van der Laan",
       "repository": "bitcoin/bitcoin",
@@ -21747,17 +20383,6 @@
       "merged_at": "2014-10-27T10:05:27+00:00",
       "ack_count": 2,
       "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 71,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/71",
-      "title": "Split up ecmult and ecmult_gen entirely",
-      "merged_at": "2014-10-26T10:55:51+00:00",
-      "ack_count": 0,
-      "category": "Ninja Merge"
     },
     {
       "maintainer_id": "can_pieter_wuille",
@@ -21791,17 +20416,6 @@
       "merged_at": "2014-10-22T08:47:28+00:00",
       "ack_count": 2,
       "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 68,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/68",
-      "title": "Better randomization for tests",
-      "merged_at": "2014-10-20T07:04:50+00:00",
-      "ack_count": 0,
-      "category": "Ninja Merge"
     },
     {
       "maintainer_id": "can_wladimir_j_van_der_laan",
@@ -21949,28 +20563,6 @@
     {
       "maintainer_id": "can_pieter_wuille",
       "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 67,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/67",
-      "title": "Make bench use external interface",
-      "merged_at": "2014-09-29T06:55:28+00:00",
-      "ack_count": 0,
-      "category": "Ninja Merge"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 60,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/60",
-      "title": "Split up signing and verification initialization",
-      "merged_at": "2014-09-28T04:00:38+00:00",
-      "ack_count": 0,
-      "category": "Ninja Merge"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
       "repository": "bitcoin/bitcoin",
       "pr_number": 4977,
       "url": "https://github.com/bitcoin/bitcoin/pull/4977",
@@ -22066,17 +20658,6 @@
       "merged_at": "2014-09-15T15:29:09+00:00",
       "ack_count": 3,
       "category": "Administrative Merge"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 62,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/62",
-      "title": "Make secp256k1_ge_set_gej work with the point at infinity",
-      "merged_at": "2014-09-13T14:26:35+00:00",
-      "ack_count": 0,
-      "category": "Ninja Merge"
     },
     {
       "maintainer_id": "can_pieter_wuille",
@@ -22178,28 +20759,6 @@
       "category": "Administrative Merge"
     },
     {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 57,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/57",
-      "title": "Nothing-up-my-sleeving blinding for a*G",
-      "merged_at": "2014-09-01T21:10:06+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 58,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/58",
-      "title": "Only use the libcrypto part of OpenSSL",
-      "merged_at": "2014-09-01T20:07:46+00:00",
-      "ack_count": 0,
-      "category": "Ninja Merge"
-    },
-    {
       "maintainer_id": "can_wladimir_j_van_der_laan",
       "maintainer_name": "Wladimir J. van der Laan",
       "repository": "bitcoin/bitcoin",
@@ -22235,34 +20794,12 @@
     {
       "maintainer_id": "can_pieter_wuille",
       "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 56,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/56",
-      "title": "Fix signedness mistakes in secp256k1_num_set_hex",
-      "merged_at": "2014-08-28T00:22:09+00:00",
-      "ack_count": 0,
-      "category": "Ninja Merge"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
       "repository": "bitcoin/bitcoin",
       "pr_number": 4764,
       "url": "https://github.com/bitcoin/bitcoin/pull/4764",
       "title": "Bypass reloading blocks from disk",
       "merged_at": "2014-08-27T20:21:53+00:00",
       "ack_count": 2,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 54,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/54",
-      "title": "Add VERIFY_CHECK and use CHECK macros more",
-      "merged_at": "2014-08-26T13:00:52+00:00",
-      "ack_count": 1,
       "category": "Light Review"
     },
     {
@@ -22286,17 +20823,6 @@
       "merged_at": "2014-08-24T03:33:59+00:00",
       "ack_count": 1,
       "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 55,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/55",
-      "title": "Make tests and bench just use asm directly instead of library",
-      "merged_at": "2014-08-24T00:16:14+00:00",
-      "ack_count": 0,
-      "category": "Ninja Merge"
     },
     {
       "maintainer_id": "can_pieter_wuille",
@@ -22398,17 +20924,6 @@
       "category": "Light Review"
     },
     {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 50,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/50",
-      "title": "Add secp256k1_num_eq and use it in tests",
-      "merged_at": "2014-08-17T13:47:52+00:00",
-      "ack_count": 0,
-      "category": "Ninja Merge"
-    },
-    {
       "maintainer_id": "can_wladimir_j_van_der_laan",
       "maintainer_name": "Wladimir J. van der Laan",
       "repository": "bitcoin/bitcoin",
@@ -22486,17 +21001,6 @@
       "category": "Light Review"
     },
     {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 49,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/49",
-      "title": "Add high-level secp256k1.c tests",
-      "merged_at": "2014-08-03T19:55:14+00:00",
-      "ack_count": 0,
-      "category": "Ninja Merge"
-    },
-    {
       "maintainer_id": "can_wladimir_j_van_der_laan",
       "maintainer_name": "Wladimir J. van der Laan",
       "repository": "bitcoin/bitcoin",
@@ -22537,17 +21041,6 @@
       "url": "https://github.com/bitcoin/bitcoin/pull/4556",
       "title": "qt: Use fixed-point arithmetic in amount spinbox",
       "merged_at": "2014-07-23T16:02:38+00:00",
-      "ack_count": 0,
-      "category": "Ninja Merge"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 44,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/44",
-      "title": "Add secp256k1_fe_verify in field_5x52_impl and use it everywhere",
-      "merged_at": "2014-07-23T00:27:43+00:00",
       "ack_count": 0,
       "category": "Ninja Merge"
     },
@@ -22759,39 +21252,6 @@
       "merged_at": "2014-06-21T20:53:02+00:00",
       "ack_count": 4,
       "category": "Administrative Merge"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 34,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/34",
-      "title": "No releases yet anyway",
-      "merged_at": "2014-06-20T22:09:58+00:00",
-      "ack_count": 0,
-      "category": "Ninja Merge"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 31,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/31",
-      "title": "Introduce CHECK() for tests that works with NDEBUG.",
-      "merged_at": "2014-06-20T21:25:53+00:00",
-      "ack_count": 0,
-      "category": "Ninja Merge"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 28,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/28",
-      "title": "Do not free endomorphism constants when disabled",
-      "merged_at": "2014-06-20T21:25:21+00:00",
-      "ack_count": 0,
-      "category": "Ninja Merge"
     },
     {
       "maintainer_id": "can_wladimir_j_van_der_laan",
@@ -23212,28 +21672,6 @@
       "category": "Light Review"
     },
     {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 5,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/5",
-      "title": "More details in README.md",
-      "merged_at": "2014-03-30T18:32:19+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 5,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/5",
-      "title": "More details in README.md",
-      "merged_at": "2014-03-30T18:32:19+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
       "maintainer_id": "can_wladimir_j_van_der_laan",
       "maintainer_name": "Wladimir J. van der Laan",
       "repository": "bitcoin/bitcoin",
@@ -23331,39 +21769,6 @@
       "merged_at": "2014-03-15T15:40:11+00:00",
       "ack_count": 1,
       "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 2,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/2",
-      "title": "Move implementations from impl/*.h to *_impl.h",
-      "merged_at": "2014-03-12T17:40:41+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 2,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/2",
-      "title": "Move implementations from impl/*.h to *_impl.h",
-      "merged_at": "2014-03-12T17:40:41+00:00",
-      "ack_count": 1,
-      "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_pieter_wuille",
-      "maintainer_name": "Pieter Wuille",
-      "repository": "bitcoin-core/secp256k1",
-      "pr_number": 1,
-      "url": "https://github.com/bitcoin-core/secp256k1/pull/1",
-      "title": "Slice bytes of G multiples to avoid cache timings.",
-      "merged_at": "2014-03-12T17:35:57+00:00",
-      "ack_count": 0,
-      "category": "Ninja Merge"
     },
     {
       "maintainer_id": "can_wladimir_j_van_der_laan",
@@ -28314,149 +26719,6 @@
       "merged_at": null,
       "ack_count": 2,
       "category": "Light Review"
-    },
-    {
-      "maintainer_id": "can_michael_ford",
-      "maintainer_name": "Michael Ford",
-      "repository": "bitcoin-core/gui",
-      "pr_number": 36218,
-      "url": "https://github.com/bitcoin-core/gui/pull/36218",
-      "title": null,
-      "merged_at": null,
-      "ack_count": 0,
-      "category": "Ninja Merge"
-    },
-    {
-      "maintainer_id": "can_hennadii_stepanov",
-      "maintainer_name": "Hennadii Stepanov",
-      "repository": "bitcoin-core/gui",
-      "pr_number": 36107,
-      "url": "https://github.com/bitcoin-core/gui/pull/36107",
-      "title": null,
-      "merged_at": null,
-      "ack_count": 0,
-      "category": "Ninja Merge"
-    },
-    {
-      "maintainer_id": "can_michael_ford",
-      "maintainer_name": "Michael Ford",
-      "repository": "bitcoin-core/gui",
-      "pr_number": 36051,
-      "url": "https://github.com/bitcoin-core/gui/pull/36051",
-      "title": null,
-      "merged_at": null,
-      "ack_count": 0,
-      "category": "Ninja Merge"
-    },
-    {
-      "maintainer_id": "can_michael_ford",
-      "maintainer_name": "Michael Ford",
-      "repository": "bitcoin-core/gui",
-      "pr_number": 35982,
-      "url": "https://github.com/bitcoin-core/gui/pull/35982",
-      "title": null,
-      "merged_at": null,
-      "ack_count": 0,
-      "category": "Ninja Merge"
-    },
-    {
-      "maintainer_id": "can_michael_ford",
-      "maintainer_name": "Michael Ford",
-      "repository": "bitcoin-core/gui",
-      "pr_number": 35960,
-      "url": "https://github.com/bitcoin-core/gui/pull/35960",
-      "title": null,
-      "merged_at": null,
-      "ack_count": 0,
-      "category": "Ninja Merge"
-    },
-    {
-      "maintainer_id": "can_hennadii_stepanov",
-      "maintainer_name": "Hennadii Stepanov",
-      "repository": "bitcoin-core/gui",
-      "pr_number": 35931,
-      "url": "https://github.com/bitcoin-core/gui/pull/35931",
-      "title": null,
-      "merged_at": null,
-      "ack_count": 0,
-      "category": "Ninja Merge"
-    },
-    {
-      "maintainer_id": "can_michael_ford",
-      "maintainer_name": "Michael Ford",
-      "repository": "bitcoin-core/gui",
-      "pr_number": 35870,
-      "url": "https://github.com/bitcoin-core/gui/pull/35870",
-      "title": null,
-      "merged_at": null,
-      "ack_count": 0,
-      "category": "Ninja Merge"
-    },
-    {
-      "maintainer_id": "can_michael_ford",
-      "maintainer_name": "Michael Ford",
-      "repository": "bitcoin-core/gui",
-      "pr_number": 35869,
-      "url": "https://github.com/bitcoin-core/gui/pull/35869",
-      "title": null,
-      "merged_at": null,
-      "ack_count": 0,
-      "category": "Ninja Merge"
-    },
-    {
-      "maintainer_id": "can_hennadii_stepanov",
-      "maintainer_name": "Hennadii Stepanov",
-      "repository": "bitcoin-core/gui",
-      "pr_number": 35746,
-      "url": "https://github.com/bitcoin-core/gui/pull/35746",
-      "title": null,
-      "merged_at": null,
-      "ack_count": 0,
-      "category": "Ninja Merge"
-    },
-    {
-      "maintainer_id": "can_michael_ford",
-      "maintainer_name": "Michael Ford",
-      "repository": "bitcoin-core/gui",
-      "pr_number": 35412,
-      "url": "https://github.com/bitcoin-core/gui/pull/35412",
-      "title": null,
-      "merged_at": null,
-      "ack_count": 0,
-      "category": "Ninja Merge"
-    },
-    {
-      "maintainer_id": "can_michael_ford",
-      "maintainer_name": "Michael Ford",
-      "repository": "bitcoin-core/gui",
-      "pr_number": 35649,
-      "url": "https://github.com/bitcoin-core/gui/pull/35649",
-      "title": null,
-      "merged_at": null,
-      "ack_count": 0,
-      "category": "Ninja Merge"
-    },
-    {
-      "maintainer_id": "can_michael_ford",
-      "maintainer_name": "Michael Ford",
-      "repository": "bitcoin-core/gui",
-      "pr_number": 35669,
-      "url": "https://github.com/bitcoin-core/gui/pull/35669",
-      "title": null,
-      "merged_at": null,
-      "ack_count": 0,
-      "category": "Ninja Merge"
-    },
-    {
-      "maintainer_id": "can_michael_ford",
-      "maintainer_name": "Michael Ford",
-      "repository": "bitcoin-core/gui",
-      "pr_number": 35640,
-      "url": "https://github.com/bitcoin-core/gui/pull/35640",
-      "title": null,
-      "merged_at": null,
-      "ack_count": 0,
-      "category": "Ninja Merge"
     },
     {
       "maintainer_id": "can_michael_ford",

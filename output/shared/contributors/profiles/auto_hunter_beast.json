@@ -1,5 +1,5 @@
 {
-  "display_name": "hunter beast",
+  "display_name": "Hunter Beast",
   "github_login_final": "cryptoquick",
   "delving_username_final": "cryptoquick",
   "uuid": "auto_hunter_beast",
@@ -41,25 +41,25 @@
   "modern_bips_authored": 1.0,
   "first_bip_date": "2026-02-11T14:54:26",
   "last_bip_date": "2026-02-11T14:54:26",
-  "avg_review_latency_days": 2753.048895677529,
-  "reviews_count": 18.0,
-  "avg_approval_latency_days": 837.1627645502647,
-  "approvals_count": 5.0,
+  "avg_review_latency_days": 3045.89565960039,
+  "reviews_count": 19.0,
+  "avg_approval_latency_days": 1205.8744380144033,
+  "approvals_count": 6.0,
   "tier1_reviews_count": 4.0,
-  "tier2_reviews_count": 14.0,
-  "p2016_reviews_count": 18.0,
-  "modern_reviews_count": 15.0,
+  "tier2_reviews_count": 15.0,
+  "p2016_reviews_count": 19.0,
+  "modern_reviews_count": 16.0,
   "first_review_date": "2022-04-25T02:49:37",
-  "last_review_date": "2026-08-01T20:43:35",
+  "last_review_date": "2026-09-20T07:43:02",
   "prs_authored": 2.0,
   "tier1_prs_authored": 1.0,
   "tier2_prs_authored": 1.0,
   "avg_pr_ack_velocity_days": null,
   "avg_concept_lead_time_days": null,
-  "review_reciprocity": 9.0,
-  "hybrid_score": 0.5296,
-  "p2016_hybrid_score": 0.575,
-  "modern_hybrid_score": 0.8022,
+  "review_reciprocity": 9.5,
+  "hybrid_score": 0.5313,
+  "p2016_hybrid_score": 0.5767,
+  "modern_hybrid_score": 0.8042,
   "impact_score": 27.0,
   "p2016_impact_score": 29.0,
   "modern_impact_score": 38.0,
@@ -70,7 +70,7 @@
   "ml_responses": 17.0,
   "delving_responses": 3.0,
   "first_active": null,
-  "last_active": "2026-07-13T08:12:14.680000",
+  "last_active": null,
   "dev_type": "Reviewer",
   "expertise_domains": [
     "Consensus",
@@ -82,15 +82,15 @@
       "Consensus": 1.0
     },
     "discussion": {
-      "Consensus": 0.233,
-      "Cryptography": 0.685,
-      "Script": 0.082
+      "Consensus": 0.243,
+      "Cryptography": 0.676,
+      "Script": 0.081
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.7809,
-    "Cryptography": 0.1957,
-    "Script": 0.0234
+    "Consensus": 0.7837,
+    "Cryptography": 0.1931,
+    "Script": 0.0231
   },
   "p2016_posts": 39.0,
   "modern_posts": 39.0,
@@ -103,7 +103,7 @@
   "is_researcher": true,
   "is_bip_author": true,
   "global_first_active": "2022-04-25T02:49:37",
-  "global_last_active": "2026-08-01T20:43:35",
+  "global_last_active": "2026-09-20T07:43:02",
   "github_location": null,
   "github_company": null,
   "github_bio": "Rust and Bitcoin.\r\nBIP360 - EEXB4PETQL42SbnaqemwV1kiUbhHCw6rPYFpTX7fpump",
@@ -139,7 +139,8 @@
     "2024": {
       "covenants": 2,
       "l2-bridges": 2,
-      "other": 2,
+      "lightning": 1,
+      "other": 1,
       "quantum": 9,
       "script-opcodes": 1,
       "taproot": 1
@@ -147,7 +148,7 @@
     "2025": {
       "covenants": 1,
       "other": 6,
-      "multisig-threshold": 3,
+      "lightning": 1,
       "quantum": 19,
       "script-opcodes": 1,
       "security": 1,

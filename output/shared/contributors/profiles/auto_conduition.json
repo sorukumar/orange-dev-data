@@ -29,7 +29,7 @@
   "modern_bips_authored": 0.0,
   "first_bip_date": null,
   "last_bip_date": null,
-  "avg_review_latency_days": 1829.9075407407406,
+  "avg_review_latency_days": 2159.4990101410935,
   "reviews_count": 9.0,
   "avg_approval_latency_days": null,
   "approvals_count": 0.0,
@@ -45,20 +45,20 @@
   "avg_pr_ack_velocity_days": 0.09181712962962962,
   "avg_concept_lead_time_days": null,
   "review_reciprocity": 3.0,
-  "hybrid_score": 0.2369,
+  "hybrid_score": 0.2364,
   "p2016_hybrid_score": 0.3347,
   "modern_hybrid_score": 0.4381,
   "impact_score": 13.0,
   "p2016_impact_score": 18.0,
   "modern_impact_score": 23.0,
   "threads_started": 32.0,
-  "replies_sent": 128.0,
+  "replies_sent": 131.0,
   "ml_threads": 5.0,
   "delving_threads": 27.0,
-  "ml_responses": 100.0,
-  "delving_responses": 28.0,
+  "ml_responses": 101.0,
+  "delving_responses": 30.0,
   "first_active": null,
-  "last_active": "2026-09-14T04:49:01.612000",
+  "last_active": "2026-09-18T21:07:18",
   "dev_type": "Participant",
   "expertise_domains": [
     "Cryptography",
@@ -66,26 +66,26 @@
   ],
   "expertise_by_source": {
     "discussion": {
-      "Consensus": 0.234,
-      "Cryptography": 0.766
+      "Consensus": 0.239,
+      "Cryptography": 0.761
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.234,
-    "Cryptography": 0.766
+    "Consensus": 0.239,
+    "Cryptography": 0.761
   },
-  "p2016_posts": 160.0,
-  "modern_posts": 160.0,
-  "p2016_ml_posts": 105.0,
-  "p2016_delving_posts": 55.0,
-  "modern_ml_posts": 105.0,
-  "modern_delving_posts": 55.0,
+  "p2016_posts": 163.0,
+  "modern_posts": 163.0,
+  "p2016_ml_posts": 106.0,
+  "p2016_delving_posts": 57.0,
+  "modern_ml_posts": 106.0,
+  "modern_delving_posts": 57.0,
   "is_engineer": false,
   "is_reviewer": true,
   "is_researcher": true,
   "is_bip_author": false,
   "global_first_active": "2023-10-27T01:02:48",
-  "global_last_active": "2026-09-14T04:49:01.612000",
+  "global_last_active": "2026-09-18T21:07:18",
   "github_location": null,
   "github_company": null,
   "github_bio": "Pseudonymous freelance cypherpunk",
@@ -103,10 +103,10 @@
     "link": "https://delvingbitcoin.org/t/off-chain-dlc-ticketing-systems/214/1"
   },
   "last_message": {
-    "source": "delving",
-    "subject": "Re: PQC output type discussion",
-    "date": "2026-09-14",
-    "link": "https://delvingbitcoin.org/t/pqc-output-type-discussion/2749/27"
+    "source": "mailing_list",
+    "subject": "Re: [bitcoindev] Re: SHRINCS: an efficient hash-based signature\n scheme for Bitcoin (first draft)",
+    "date": "2026-09-18",
+    "link": "https://gnusha.org/pi/bitcoindev/tGemKORoxpaqKlU6SZ9gYoMAj3VVzWB7gDGr49qxd4gq1IACbTdUhJmf7T3gbrUmREluNMVVal12sftAeaRiJIAWKOH_1caL_Fit2gdVouo=@proton.me"
   },
   "social_history": {
     "2023": {
@@ -130,14 +130,14 @@
       "wallet-keys": 1
     },
     "2026": {
-      "other": 102,
-      "bitvm": 18,
-      "mempool-fees": 18,
-      "privacy": 16,
-      "quantum": 80,
-      "segwit": 17,
-      "signatures-sighash": 21,
-      "taproot": 41,
+      "other": 108,
+      "bitvm": 19,
+      "mempool-fees": 19,
+      "privacy": 17,
+      "quantum": 83,
+      "segwit": 18,
+      "signatures-sighash": 22,
+      "taproot": 42,
       "wallet-keys": 25
     }
   }

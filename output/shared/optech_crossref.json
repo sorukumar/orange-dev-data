@@ -1,28 +1,63 @@
 {
+  "35445": {
+    "optech_url": "https://bitcoinops.org/en/newsletters/2026/09/18/",
+    "date": "2026-09-18",
+    "snippet": "fixes a compatibility bug that prevented existing\n  [descriptor][topic descriptors] wallets with [miniscript][topic miniscript]\n  expressions using `h`-style hardened derivation markers from loading after\n  upgrading to version 31.0. An earlier change, [#31734][bitcoin core #31734],\n  altered how Bitcoin Core represented hardened derivation paths when\n  calculating internal descriptor identifiers, causing the newer software to\n  incorrectly report that the existing wallet was corrupted. Stored identifiers\n  are now treated as links between related wallet records rather than as values\n  to recompute and validate. The `importdescriptors` and\n  `createwalletdescriptor` RPCs now compare canonical descriptor strings when\n  checking whether a descriptor is already present."
+  },
+  "36076": {
+    "optech_url": "https://bitcoinops.org/en/newsletters/2026/09/18/",
+    "date": "2026-09-18",
+    "snippet": "fixes a bug where `combinepsbt` could discard an\n  input's requested signature hash (sighash) type when combining [PSBTs][topic\n  psbt]. If the first PSBT omitted `PSBT_IN_SIGHASH_TYPE`, signatures from\n  another PSBT were copied without that field, potentially causing finalization\n  to reject valid signatures using a non-default sighash type, such as\n  `ALL|ANYONECANPAY`. The field is now copied when absent from the first PSBT,\n  allowing finalization regardless of argument order."
+  },
+  "36150": {
+    "optech_url": "https://bitcoinops.org/en/newsletters/2026/09/18/",
+    "date": "2026-09-18",
+    "snippet": "fixes a bug where enabling pruning together with a\n  new [compact block filter index][topic compact block filters]\n  (`-blockfilterindex`) or UTXO set statistics index (`-coinstatsindex`) (see\n  [Newsletter #198][news198 coinstats]) could prevent the index from\n  synchronizing. When an unpruned node was restarted with both settings\n  enabled, the block files could be pruned before the new index determined\n  which blocks were needed. Now, the index installs a pruning lock at height\n  zero, even before processing its first block."
+  },
+  "36174": {
+    "optech_url": "https://bitcoinops.org/en/newsletters/2026/09/18/",
+    "date": "2026-09-18",
+    "snippet": "adds send-side backpressure to the replacement HTTP\n  server (see [Newsletter #411][news411 http]), complementing the receive-side\n  protection described in [Newsletter #422][news422 http]. Previously, clients\n  could send many requests without reading the responses, causing queued\n  response data to grow indefinitely. Now, the server pauses processing of\n  further requests for a connection when its send buffer exceeds 32 MiB,\n  resuming when the client drains the responses. The earlier fix prevented\n  incoming requests from accumulating faster than they could be processed."
+  },
+  "34743": {
+    "optech_url": "https://bitcoinops.org/en/newsletters/2026/09/18/",
+    "date": "2026-09-18",
+    "snippet": "changes how manually selected peers are handled when\n  they stall block downloading during IBD (see [Newsletter #237][news237\n  stall]). Previously, if a peer failed to deliver a block and the download\n  could not advance without it, the node would disconnect the peer. Now, for\n  peers selected using `-addnode`, `-connect`, or the `addnode` RPC, the node\n  makes their outstanding blocks available to be requested from other peers and\n  pauses new block requests to the stalling peer for two minutes. Manual peers\n  remain subject to separate block download and header sync timeouts."
+  },
+  "36081": {
+    "optech_url": "https://bitcoinops.org/en/newsletters/2026/09/18/",
+    "date": "2026-09-18",
+    "snippet": "adds a `bestblockhash` field to the `getmininginfo`\n  RPC response. Together with the existing `next` object (see [Newsletter\n  #339][news339 mininginfo]), this lets mining software obtain the current tip\n  hash and the next block's difficulty target from a single RPC call.\n  Previously, obtaining the hash and mining information through separate RPC\n  calls could race with a tip change, producing values referring to different\n  tips."
+  },
+  "35975": {
+    "optech_url": "https://bitcoinops.org/en/newsletters/2026/09/18/",
+    "date": "2026-09-18",
+    "snippet": "fixes a wallet crash that occurred when calling\n  `bumpfee` on two malleated versions of the same transaction. Previously,\n  bumping one version did not immediately mark the other as replaced.\n  Attempting to bump the other version could then trigger an assertion failure\n  and crash the node. Now, bumping either version marks all its malleated\n  variants as replaced. Attempting to bump a variant that has already been\n  replaced results in an error. The PR also ensures that comments and\n  [replacement][topic rbf] metadata are copied to malleated transactions,\n  including malleated fee-bump replacements, and persist after reloading the\n  wallet."
+  },
   "35949": {
     "optech_url": "https://bitcoinops.org/en/newsletters/2026/09/11/",
     "date": "2026-09-11",
-    "snippet": "updates block template creation to follow [BIP54][]'s\n  proposed mitigation for the Murch\u2013Zawy [time warp][topic time warp] attack\n  (see [Newsletter #316][news316 timewarp]). For the last block of each\n  2,016-block difficulty period, the minimum timestamp must be at least that of\n  the period's first block. Previously, if the node's clock was behind the\n  period's first block, the proposed timestamp could also be earlier, provided\n  it exceeded the median timestamp of the previous 11 blocks. The\n  `getblocktemplate` RPC now adjusts both `mintime` and the proposed `curtime`\n  when necessary, including when the node's clock is behind this minimum. This\n  applies to all networks in preparation for the possible activation of the\n  [consensus cleanup][topic consensus cleanup] soft fork, without changing\n  consensus validation."
+    "snippet": "updates block template creation to follow [BIP54][]'s\n  proposed mitigation for the Murch\u2013Zawy [time warp][topic time warp] attack\n  (see [Newsletter #316][news316 timewarp]). For the last block of each\n  2,016-block difficulty period, the minimum timestamp must be at least that of\n  the period's first block. Previously, if the node's clock was behind the\n  period's first block, the proposed timestamp could also be earlier, provided\n  it exceeded the median timestamp of the previous 11 blocks. The\n  `getblocktemplate` RPC now adjusts both `mintime` and the proposed `curtime`\n  when necessary, including when the node's clock is behind this minimum. This\n  applies to all networks in preparation for the possible activation of the\n  [consensus cleanup][topic consensus cleanup] soft fork, without changing\n  consensus validation. {% assign timestamp=\"1:13:04\" %}"
   },
   "34931": {
     "optech_url": "https://bitcoinops.org/en/newsletters/2026/09/11/",
     "date": "2026-09-11",
-    "snippet": "fixes a bug where a UTXO database entry that could\n  not be deserialized was treated as a missing coin. Consequently, a valid\n  block spending the unreadable coin could be permanently marked as invalid,\n  which would leave the affected node unable to follow the network's best\n  chain. Bitcoin Core now distinguishes between these outcomes and aborts with\n  a database error when deserialization fails. An additional coin serialization\n  bug or memory corruption before storage would be required for this bug to\n  occur, since LevelDB's checksums already detect ordinary disk corruption."
+    "snippet": "fixes a bug where a UTXO database entry that could\n  not be deserialized was treated as a missing coin. Consequently, a valid\n  block spending the unreadable coin could be permanently marked as invalid,\n  which would leave the affected node unable to follow the network's best\n  chain. Bitcoin Core now distinguishes between these outcomes and aborts with\n  a database error when deserialization fails. An additional coin serialization\n  bug or memory corruption before storage would be required for this bug to\n  occur, since LevelDB's checksums already detect ordinary disk corruption. {% assign timestamp=\"1:15:11\" %}"
   },
   "36048": {
     "optech_url": "https://bitcoinops.org/en/newsletters/2026/09/11/",
     "date": "2026-09-11",
-    "snippet": "fixes command injection through the `-walletnotify`\n  configuration option (see [Newsletter #86][news86 walletnotify]) on\n  non-Windows systems. An authenticated RPC caller could create a wallet with a\n  crafted name using the `createwallet` command. If the operator configured the\n  `-walletnotify` option with the wallet name placeholder, `%w`, subsequent\n  transaction notifications for that wallet could execute commands embedded in\n  the wallet name on the node's operating system. Although the wallet name was\n  shell escaped, the substitution function interpreted the regular expression\n  replacement characters within it, breaking the shell quoting. Placeholder\n  substitution now treats wallet names literally, preserving the shell\n  escaping. This behavior was introduced in Bitcoin Core 24.0."
+    "snippet": "fixes command injection through the `-walletnotify`\n  configuration option (see [Newsletter #86][news86 walletnotify]) on\n  non-Windows systems. An authenticated RPC caller could create a wallet with a\n  crafted name using the `createwallet` command. If the operator configured the\n  `-walletnotify` option with the wallet name placeholder, `%w`, subsequent\n  transaction notifications for that wallet could execute commands embedded in\n  the wallet name on the node's operating system. Although the wallet name was\n  shell escaped, the substitution function interpreted the regular expression\n  replacement characters within it, breaking the shell quoting. Placeholder\n  substitution now treats wallet names literally, preserving the shell\n  escaping. This behavior was introduced in Bitcoin Core 24.0. {% assign timestamp=\"1:18:14\" %}"
   },
   "36123": {
     "optech_url": "https://bitcoinops.org/en/newsletters/2026/09/11/",
     "date": "2026-09-11",
-    "snippet": "and [#36169][bitcoin core #36169] fix unbounded\n  memory growth and Windows port sharing in the replacement HTTP server (see\n  Newsletters [#411][news411 http] and [#420][news420 http]). The first\n  prevents a client from growing the server's per-connection receive buffer\n  indefinitely by sending requests faster than the server can process them.\n  Socket reads now pause when\n  buffered requests await processing, allowing TCP backpressure to slow the\n  sender. The second PR reserves the address and port exclusively for Windows\n  listening sockets. Previously, another local process could bind the same\n  endpoint and potentially receive connections containing RPC credentials. In\n  one reviewer's test, sixteen REST connections increased memory usage by 3.2\n  GB before the buffering fix and only 3 MB afterward over 90 seconds."
+    "snippet": "and [#36169][bitcoin core #36169] fix unbounded\n  memory growth and Windows port sharing in the replacement HTTP server (see\n  Newsletters [#411][news411 http] and [#420][news420 http]). The first\n  prevents a client from growing the server's per-connection receive buffer\n  indefinitely by sending requests faster than the server can process them.\n  Socket reads now pause when\n  buffered requests await processing, allowing TCP backpressure to slow the\n  sender. The second PR reserves the address and port exclusively for Windows\n  listening sockets. Previously, another local process could bind the same\n  endpoint and potentially receive connections containing RPC credentials. In\n  one reviewer's test, sixteen REST connections increased memory usage by 3.2\n  GB before the buffering fix and only 3 MB afterward over 90 seconds. {% assign timestamp=\"1:21:12\" %}"
   },
   "36176": {
     "optech_url": "https://bitcoinops.org/en/newsletters/2026/09/11/",
     "date": "2026-09-11",
-    "snippet": "fixes an error that occurs when a wallet operation\n  attempts to save its load-on-startup preference while the dynamic settings\n  file is disabled with the `-nosettings` option. When creating, loading, or\n  unloading a wallet, users can also specify whether it should be loaded\n  automatically at the next startup (see [Newsletter #111][news111 load]).\n  Previously, attempting to save this preference with settings disabled\n  produced an RPC error or caused Bitcoin-Qt to crash with an uncaught\n  exception after the wallet state had already changed. Now, the operation\n  completes with a warning that the preference could not be saved."
+    "snippet": "fixes an error that occurs when a wallet operation\n  attempts to save its load-on-startup preference while the dynamic settings\n  file is disabled with the `-nosettings` option. When creating, loading, or\n  unloading a wallet, users can also specify whether it should be loaded\n  automatically at the next startup (see [Newsletter #111][news111 load]).\n  Previously, attempting to save this preference with settings disabled\n  produced an RPC error or caused Bitcoin-Qt to crash with an uncaught\n  exception after the wallet state had already changed. Now, the operation\n  completes with a warning that the preference could not be saved. {% assign timestamp=\"1:22:32\" %}"
   },
   "36111": {
     "optech_url": "https://bitcoinops.org/en/newsletters/2026/09/04/",
@@ -817,7 +852,7 @@
   "31283": {
     "optech_url": "https://bitcoinops.org/en/newsletters/2025/03/21/",
     "date": "2025-03-21",
-    "snippet": "introduces a new `waitNext()` method to the\n  `BlockTemplate` interface, which will only return a new template if the chain\n  tip changes or the mempool fees increase above the `MAX_MONEY` threshold.\n  Previously, miners would receive a new template with every request, resulting\n  in unnecessary template generation. This change aligns with the [Stratum\n  V2][topic pooled mining] protocol specification. {% assign timestamp=\"37:27\" %}"
+    "snippet": "introduces a new `waitNext()` method to the\n  `BlockTemplate` interface, which returns a new template once the chain\n  tip changes or the fees in the latest block template rise by at least a caller-specified `fee_threshold`.\n  If no `fee_threshold` is supplied, a new template is generated only after a tip change.\n  Previously, miners would receive a new template on every request.\n  This change aligns with the [Stratum\n  V2][topic pooled mining] protocol specification. {% assign timestamp=\"37:27\" %}"
   },
   "31407": {
     "optech_url": "https://bitcoinops.org/en/newsletters/2025/03/14/",

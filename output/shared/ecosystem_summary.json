@@ -1,73 +1,68 @@
 {
-  "generated_at": "2026-09-13T11:14:52.125888",
+  "generated_at": "2026-09-20T10:32:23.943453",
   "groups": {
-    "committers": 1267,
-    "reviewers": 5233,
-    "research": 1696,
-    "standards": 159,
-    "total_active": 6632,
-    "total_registry": 7804
+    "committers": 1181,
+    "reviewers": 5131,
+    "research": 1697,
+    "standards": 158,
+    "total_active": 6494,
+    "total_registry": 7632
   },
   "venn_4": {
-    "0001": 12,
-    "0010": 1207,
-    "0011": 26,
-    "0100": 3938,
+    "0001": 13,
+    "0010": 1212,
+    "0011": 24,
+    "0100": 3875,
     "0101": 6,
-    "0110": 141,
-    "0111": 35,
-    "1000": 141,
+    "0110": 145,
+    "0111": 38,
+    "1000": 103,
     "1001": 1,
-    "1010": 11,
+    "1010": 9,
     "1011": 1,
-    "1100": 836,
+    "1100": 797,
     "1101": 2,
-    "1110": 199,
-    "1111": 76
+    "1110": 195,
+    "1111": 73
   },
   "venn_summary": {
-    "code_only": 141,
-    "review_only": 3938,
-    "research_only": 1207,
-    "standards_only": 12,
-    "all_four": 76,
-    "code_review": 836,
-    "review_research": 141,
-    "research_standards": 26
+    "code_only": 103,
+    "review_only": 3875,
+    "research_only": 1212,
+    "standards_only": 13,
+    "all_four": 73,
+    "code_review": 797,
+    "review_research": 145,
+    "research_standards": 24
   },
   "rd_focus": {},
   "hotspot": {
     "title": "Trending BIP Discussions",
     "value": "BIP 70"
   },
-  "spotlight": {
-    "name": "Shuvam Pandey",
-    "uuid": "auto_shuvam_pandey",
-    "github_login": "shuv-amp",
-    "description": "First-time core contributor recently merged 4 commits."
-  },
+  "spotlight": null,
   "onboarding": {
-    "new_coders_90d": 28,
-    "new_coders_7d": 8,
-    "new_discussants_90d": 54,
-    "new_discussants_7d": 2,
+    "new_coders_90d": 0,
+    "new_coders_7d": 0,
+    "new_discussants_90d": 51,
+    "new_discussants_7d": 3,
     "window_days": 90
   },
   "prs": {
-    "total_merged": 18235,
-    "merged_30d": 172,
-    "merged_prev_30d": 139,
-    "merged_7d": 59,
-    "merged_prev_7d": 25
+    "total_merged": 17306,
+    "merged_30d": 134,
+    "merged_prev_30d": 151,
+    "merged_7d": 35,
+    "merged_prev_7d": 42
   },
   "commits": {
-    "commits_30d": 820,
-    "commits_prev_30d": 998,
-    "commits_7d": 213,
-    "commits_prev_7d": 127
+    "commits_30d": 34,
+    "commits_prev_30d": 2,
+    "commits_7d": 34,
+    "commits_prev_7d": 0
   },
   "bips": {
-    "total": 211,
+    "total": 209,
     "active_recently": 100
   },
   "discussion_pulse": {
@@ -75,20 +70,20 @@
       {
         "category": "quantum",
         "label": "Quantum",
-        "count": 91,
-        "share": 15.0
+        "count": 108,
+        "share": 17.4
       },
       {
         "category": "mining",
         "label": "Mining",
-        "count": 88,
-        "share": 14.5
+        "count": 76,
+        "share": 12.3
       },
       {
         "category": "utxo-sync",
         "label": "Utxo Sync",
         "count": 67,
-        "share": 11.0
+        "share": 10.8
       }
     ],
     "top_bips": [

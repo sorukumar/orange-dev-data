@@ -1,29 +1,29 @@
 {
   "display_name": "Jean Pablo",
   "github_login_final": "jeanpablojp",
-  "delving_username_final": "jeanpablojp",
+  "delving_username_final": null,
   "uuid": "auto_jean_pablo",
   "badges": null,
   "roles": null,
-  "total_commits": 8.0,
-  "authored_commits": 8.0,
-  "tier1_authored_commits": 8.0,
+  "total_commits": 0.0,
+  "authored_commits": 0.0,
+  "tier1_authored_commits": 0.0,
   "tier2_authored_commits": 0.0,
   "merge_commits": 0.0,
-  "tier1_merge_commits": 0.0,
-  "tier2_merge_commits": 0.0,
+  "tier1_merge_commits": null,
+  "tier2_merge_commits": null,
   "self_merges": 0.0,
-  "total_additions": 128.0,
-  "total_deletions": 142.0,
-  "first_core_commit": "2026-08-04T11:28:38+00:00",
-  "last_core_commit": "2026-09-07T13:12:18+00:00",
+  "total_additions": null,
+  "total_deletions": null,
+  "first_core_commit": null,
+  "last_core_commit": null,
   "first_ecosystem_commit": null,
   "last_ecosystem_commit": null,
-  "first_commit": "2026-08-04T11:28:38",
-  "last_commit": "2026-09-07T13:12:18",
-  "p2016_authored_commits": 8.0,
-  "modern_authored_commits": 8.0,
-  "co_authored_commits": 2.0,
+  "first_commit": null,
+  "last_commit": null,
+  "p2016_authored_commits": 0.0,
+  "modern_authored_commits": 0.0,
+  "co_authored_commits": 0.0,
   "bips_authored": 0.0,
   "p2016_bips_authored": 0.0,
   "modern_bips_authored": 0.0,
@@ -42,52 +42,42 @@
   "prs_authored": 12.0,
   "tier1_prs_authored": 7.0,
   "tier2_prs_authored": 5.0,
-  "avg_pr_ack_velocity_days": 2.482650462962963,
+  "avg_pr_ack_velocity_days": 12.76458912037037,
   "avg_concept_lead_time_days": 5.2366319444444445,
   "review_reciprocity": 8.0,
-  "hybrid_score": 0.3234,
-  "p2016_hybrid_score": 0.3234,
-  "modern_hybrid_score": 0.3234,
-  "impact_score": 18.0,
-  "p2016_impact_score": 18.0,
-  "modern_impact_score": 18.0,
-  "threads_started": 5.0,
-  "replies_sent": 1.0,
+  "hybrid_score": 0.1672,
+  "p2016_hybrid_score": 0.1672,
+  "modern_hybrid_score": 0.1672,
+  "impact_score": 10.0,
+  "p2016_impact_score": 10.0,
+  "modern_impact_score": 10.0,
+  "threads_started": 1.0,
+  "replies_sent": 0.0,
   "ml_threads": 1.0,
-  "delving_threads": 4.0,
+  "delving_threads": 0.0,
   "ml_responses": 0.0,
-  "delving_responses": 1.0,
-  "first_active": null,
-  "last_active": null,
-  "dev_type": "Builder",
+  "delving_responses": 0.0,
+  "first_active": "2026-08-06T08:51:55",
+  "last_active": "2026-08-06T08:51:55",
+  "dev_type": "Reviewer",
   "expertise_domains": [
-    "Wallet",
-    "Cryptography",
-    "Infrastructure"
+    "Wallet"
   ],
   "expertise_by_source": {
-    "code": {
-      "Infrastructure": 0.286,
-      "Wallet": 0.714
-    },
     "discussion": {
-      "Consensus": 0.38,
-      "Cryptography": 0.62
+      "Wallet": 1.0
     }
   },
   "expertise_domain_scores": {
-    "Consensus": 0.152,
-    "Cryptography": 0.248,
-    "Infrastructure": 0.1716,
-    "Wallet": 0.4284
+    "Wallet": 1.0
   },
-  "p2016_posts": 6.0,
-  "modern_posts": 6.0,
+  "p2016_posts": 1.0,
+  "modern_posts": 1.0,
   "p2016_ml_posts": 1.0,
-  "p2016_delving_posts": 5.0,
+  "p2016_delving_posts": 0.0,
   "modern_ml_posts": 1.0,
-  "modern_delving_posts": 5.0,
-  "is_engineer": true,
+  "modern_delving_posts": 0.0,
+  "is_engineer": false,
   "is_reviewer": true,
   "is_researcher": false,
   "is_bip_author": false,
@@ -102,18 +92,11 @@
   "activity_status": "New",
   "is_top_50": false,
   "github_url": "https://github.com/jeanpablojp",
-  "delving_url": "https://delvingbitcoin.org/u/jeanpablojp",
-  "commit_history": {
-    "2026": {
-      "Tests": 4.0,
-      "Wallet": 10.0
-    }
-  },
   "first_message": {
-    "source": "delving",
-    "subject": "BIP 360 (P2MR) implemented in Bitcoin Core on regtest: vector results, measurements, spec feedback",
-    "date": "2026-07-28",
-    "link": "https://delvingbitcoin.org/t/bip-360-p2mr-implemented-in-bitcoin-core-on-regtest-vector-results-measurements-spec-feedback/2751/1"
+    "source": "mailing_list",
+    "subject": "[bitcoindev] [BIP Proposal] rawtr() Output Script Descriptors",
+    "date": "2026-08-06",
+    "link": "https://gnusha.org/pi/bitcoindev/DD9687EA-368C-482F-91B6-C5E2E230830C@hotmail.com"
   },
   "last_message": {
     "source": "mailing_list",
@@ -123,15 +106,7 @@
   },
   "social_history": {
     "2026": {
-      "mempool-fees": 3,
-      "multisig-threshold": 1,
-      "privacy": 1,
-      "quantum": 5,
-      "scaling": 1,
-      "segwit": 1,
-      "taproot": 3,
-      "testing-devtools": 3,
-      "other": 2
+      "wallet-keys": 1
     }
   }
 }

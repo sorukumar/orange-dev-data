@@ -47,48 +47,48 @@
   "review_reciprocity": null,
   "hybrid_score": 0.0051,
   "p2016_hybrid_score": 0.0077,
-  "modern_hybrid_score": 0.021,
+  "modern_hybrid_score": 0.0212,
   "impact_score": 0.0,
   "p2016_impact_score": 0.0,
   "modern_impact_score": 1.0,
-  "threads_started": 2.0,
-  "replies_sent": 17.0,
+  "threads_started": 5.0,
+  "replies_sent": 20.0,
   "ml_threads": 0.0,
-  "delving_threads": 2.0,
+  "delving_threads": 5.0,
   "ml_responses": 0.0,
-  "delving_responses": 17.0,
+  "delving_responses": 20.0,
   "first_active": null,
-  "last_active": "2025-07-26T19:36:06.826000",
+  "last_active": null,
   "dev_type": "Participant",
   "expertise_domains": [
     "L2",
-    "Mempool",
-    "Ecosystem"
+    "Wallet",
+    "Mempool"
   ],
   "expertise_by_source": {
     "discussion": {
-      "Ecosystem": 0.14,
-      "L2": 0.67,
-      "Mempool": 0.19
+      "L2": 0.618,
+      "Mempool": 0.184,
+      "Wallet": 0.197
     }
   },
   "expertise_domain_scores": {
-    "Ecosystem": 0.14,
-    "L2": 0.67,
-    "Mempool": 0.19
+    "L2": 0.6186,
+    "Mempool": 0.1842,
+    "Wallet": 0.1972
   },
-  "p2016_posts": 19.0,
-  "modern_posts": 19.0,
+  "p2016_posts": 25.0,
+  "modern_posts": 25.0,
   "p2016_ml_posts": 0.0,
-  "p2016_delving_posts": 19.0,
+  "p2016_delving_posts": 25.0,
   "modern_ml_posts": 0.0,
-  "modern_delving_posts": 19.0,
+  "modern_delving_posts": 25.0,
   "is_engineer": false,
   "is_reviewer": false,
   "is_researcher": true,
   "is_bip_author": false,
   "global_first_active": null,
-  "global_last_active": "2025-07-26T19:36:06.825999872",
+  "global_last_active": null,
   "github_location": null,
   "github_company": null,
   "github_bio": null,
@@ -106,9 +106,9 @@
   },
   "last_message": {
     "source": "delving",
-    "subject": "Re: Fee-Based Spam Prevention For Lightning",
-    "date": "2025-07-26",
-    "link": "https://delvingbitcoin.org/t/fee-based-spam-prevention-for-lightning/1524/18"
+    "subject": "Re: Depots: Theft-Proof, Self-Custodial Bitcoin For Billions Of Users",
+    "date": "2026-09-18",
+    "link": "https://delvingbitcoin.org/t/depots-theft-proof-self-custodial-bitcoin-for-billions-of-users/2892/10"
   },
   "social_history": {
     "2024": {
@@ -118,6 +118,11 @@
     "2025": {
       "lightning": 11,
       "spam-filtering": 11
+    },
+    "2026": {
+      "l2-bridges": 6,
+      "scaling": 6,
+      "wallet-keys": 6
     }
   }
 }
