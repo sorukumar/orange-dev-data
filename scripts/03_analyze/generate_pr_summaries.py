@@ -2,27 +2,24 @@ import os
 import json
 import pandas as pd
 import time
+import urllib.request
+import urllib.error
 from dotenv import load_dotenv
 
 import sys
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+sys.path.append(ROOT_DIR)
 from scripts.utils.pr_utils import is_high_signal
 
-try:
-    from google import genai
-    from google.genai.errors import APIError
-    HAS_GENAI = True
-except ImportError:
-    HAS_GENAI = False
+INPUT_PR_PARQUET = os.path.join(ROOT_DIR, "data", "raw", "github_pr_metadata.parquet")
+CACHE_FILE = os.path.join(ROOT_DIR, "data", "raw", "pr_summaries_cache.json")
 
-INPUT_PR_PARQUET = "data/raw/github_pr_metadata.parquet"
-CACHE_FILE = "data/raw/pr_summaries_cache.json"
-
-# Load multiple API keys from .env
-load_dotenv("/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/.env")
+# Load multiple API keys from .env dynamically
+env_path = os.path.join(ROOT_DIR, ".env")
+load_dotenv(env_path)
 
 api_keys = []
-for k, v in os.environ.items():
+for k, v in sorted(os.environ.items()):
     if k.startswith("GEMINI_API_KEY") and v.strip():
         api_keys.append(v.strip())
 
@@ -30,7 +27,7 @@ if not api_keys:
     print("Warning: No GEMINI_API_KEY found in .env")
 
 # The BEST model available for the free tier constraints
-TARGET_MODEL = os.environ.get('GEMINI_TARGET_MODEL', 'gemini-1.5-flash')
+TARGET_MODEL = os.environ.get('GEMINI_TARGET_MODEL', 'gemini-2.5-flash')
 
 def load_cache(path):
     if os.path.exists(path):
@@ -48,9 +45,9 @@ def save_cache(path, data):
 def get_bulk_llm_summaries_with_rotation(pr_dict):
     """
     Takes a dictionary {pr_num: title}
-    Rotates through API keys to bypass rate limits.
+    Rotates through API keys to bypass rate limits using standard library urllib.
     """
-    if not HAS_GENAI or not api_keys or not pr_dict:
+    if not api_keys or not pr_dict:
         return {}
 
     prompt = f"""You are a Bitcoin Core developer acting as a technical writer.
@@ -73,36 +70,42 @@ You MUST return a valid JSON object where the keys are the exact PR numbers, and
 Do NOT wrap in markdown blocks, just raw JSON.
 """
 
+    models_to_try = [TARGET_MODEL]
+    if "gemini-2.5-flash-lite" not in models_to_try:
+        models_to_try.append("gemini-2.5-flash-lite")
+
     for key_index, current_key in enumerate(api_keys):
-        client = genai.Client(api_key=current_key)
-        
-        for attempt in range(2):
-            try:
-                response = client.models.generate_content(
-                    model=TARGET_MODEL,
-                    contents=prompt,
-                )
-                text = response.text.strip()
-                if text.startswith('```json'):
-                    text = text[7:-3]
-                elif text.startswith('```'):
-                    text = text[3:-3]
-                
-                parsed = json.loads(text.strip())
-                return parsed
+        for model in models_to_try:
+            url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={current_key}"
+            payload = json.dumps({
+                "contents": [{"parts": [{"text": prompt}]}],
+                "generationConfig": {"temperature": 0.2}
+            }).encode('utf-8')
             
-            except APIError as e:
-                # If we hit a quota or model not found error, break out of the attempt loop and try the NEXT API key.
-                if e.code == 429 or e.code == 404:
-                    print(f"Key {key_index + 1} hit {e.code}. Rotating to next key...")
-                    break # Break inner loop, go to next key
-                else:
-                    print(f"Error on Key {key_index + 1} (attempt {attempt+1}): {e}")
+            for attempt in range(2):
+                try:
+                    req = urllib.request.Request(url, data=payload, headers={'Content-Type': 'application/json'})
+                    with urllib.request.urlopen(req, timeout=30) as response:
+                        result = json.loads(response.read().decode('utf-8'))
+                        text = result['candidates'][0]['content']['parts'][0]['text'].strip()
+                        if text.startswith('```json'):
+                            text = text[7:-3]
+                        elif text.startswith('```'):
+                            text = text[3:-3]
+                        
+                        parsed = json.loads(text.strip())
+                        return parsed
+                except urllib.error.HTTPError as e:
+                    if e.code in (429, 404, 503):
+                        print(f"Key {key_index + 1} ({model}) HTTP {e.code}. Rotating...")
+                        break
+                    else:
+                        print(f"Key {key_index + 1} ({model}) HTTP error {e.code}: {e}")
+                        time.sleep(2)
+                except Exception as e:
+                    print(f"Key {key_index + 1} ({model}) error: {e}")
                     time.sleep(2)
-            except Exception as e:
-                print(f"Unexpected Error on Key {key_index + 1} (attempt {attempt+1}): {e}")
-                time.sleep(2)
-                
+                    
     # If we exhausted all keys
     print("All API keys exhausted or rate limited.")
     return {}
@@ -130,8 +133,9 @@ def run_summarizer():
     df = df[(df['repository_name'] == 'bitcoin/bitcoin')].copy() # removed merged_at.notna() to include open PRs
     
     # Load review counts to fuel the tier-based logic
-    if os.path.exists("data/raw/github_review_events.parquet"):
-        df_rev = pd.read_parquet("data/raw/github_review_events.parquet")
+    events_path = os.path.join(ROOT_DIR, "data", "raw", "github_review_events.parquet")
+    if os.path.exists(events_path):
+        df_rev = pd.read_parquet(events_path)
         review_counts = df_rev.groupby('pr_number').size().to_dict()
         df['review_count'] = df['pr_number'].map(review_counts).fillna(0)
     else:
@@ -185,7 +189,7 @@ def run_summarizer():
     except Exception as e:
         print(f"Failed to load TWIB PRs: {e}")
 
-    twib_cache_path = "data/cache/twib_summaries.json"
+    twib_cache_path = os.path.join(ROOT_DIR, "data", "cache", "twib_summaries.json")
     twib_cache = load_cache(twib_cache_path)
     if "prs" not in twib_cache:
         twib_cache["prs"] = {}

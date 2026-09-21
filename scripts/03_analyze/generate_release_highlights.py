@@ -3,39 +3,41 @@ import json
 import pandas as pd
 import time
 import re
+import urllib.request
+import urllib.error
 from dotenv import load_dotenv
 
 import sys
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
+try:
+    sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+except Exception:
+    pass
+
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+sys.path.append(ROOT_DIR)
 from scripts.utils.pr_utils import is_high_signal
 
-try:
-    from google import genai
-    from google.genai.errors import APIError
-    HAS_GENAI = True
-except ImportError:
-    HAS_GENAI = False
+INPUT_PR_PARQUET = os.path.join(ROOT_DIR, "data", "raw", "github_pr_metadata.parquet")
+PR_CACHE_FILE = os.path.join(ROOT_DIR, "data", "raw", "pr_summaries_cache.json")
+HIGHLIGHTS_CACHE_FILE = os.path.join(ROOT_DIR, "data", "raw", "release_highlights_cache.json")
 
-INPUT_PR_PARQUET = "data/raw/github_pr_metadata.parquet"
-PR_CACHE_FILE = "data/raw/pr_summaries_cache.json"
-HIGHLIGHTS_CACHE_FILE = "data/raw/release_highlights_cache.json"
-
-# Load multiple API keys from .env
-load_dotenv("/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/.env")
+# Load multiple API keys from .env dynamically
+env_path = os.path.join(ROOT_DIR, ".env")
+load_dotenv(env_path)
 
 api_keys = []
-for k, v in os.environ.items():
+for k, v in sorted(os.environ.items()):
     if k.startswith("GEMINI_API_KEY") and v.strip():
         api_keys.append(v.strip())
 
 if not api_keys:
     print("Warning: No GEMINI_API_KEY found in .env")
 
-TARGET_MODEL = os.environ.get('GEMINI_TARGET_MODEL', 'gemini-1.5-flash')
+TARGET_MODEL = os.environ.get('GEMINI_TARGET_MODEL', 'gemini-2.5-flash')
 
 def load_cache(path):
     if os.path.exists(path):
-        with open(path, 'r') as f:
+        with open(path, 'r', encoding='utf-8') as f:
             try:
                 return json.load(f)
             except:
@@ -43,11 +45,12 @@ def load_cache(path):
     return {}
 
 def save_cache(path, data):
-    with open(path, 'w') as f:
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, 'w', encoding='utf-8') as f:
         json.dump(data, f, indent=2)
 
 def generate_version_highlight(version, pr_subset, official_notes=None):
-    if not HAS_GENAI or not api_keys or not pr_subset:
+    if not api_keys or not pr_subset:
         return None
 
     notes_section = ""
@@ -78,35 +81,43 @@ You MUST return a valid JSON object with exactly these two keys:
 Do NOT wrap the output in markdown blocks, return raw JSON only.
 """
 
+    models_to_try = [TARGET_MODEL]
+    if "gemini-2.5-flash-lite" not in models_to_try:
+        models_to_try.append("gemini-2.5-flash-lite")
+
     for key_index, current_key in enumerate(api_keys):
-        client = genai.Client(api_key=current_key)
-        
-        for attempt in range(2):
-            try:
-                response = client.models.generate_content(
-                    model=TARGET_MODEL,
-                    contents=prompt,
-                )
-                text = response.text.strip()
-                if text.startswith('```json'):
-                    text = text[7:-3]
-                elif text.startswith('```'):
-                    text = text[3:-3]
-                
-                parsed = json.loads(text.strip())
-                return parsed
+        for model in models_to_try:
+            url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={current_key}"
+            payload = json.dumps({
+                "contents": [{"parts": [{"text": prompt}]}],
+                "generationConfig": {"temperature": 0.2}
+            }).encode('utf-8')
             
-            except APIError as e:
-                if e.code == 429 or e.code == 404:
-                    print(f"Key {key_index + 1} hit {e.code}. Rotating to next key...")
-                    break 
-                else:
-                    print(f"Error on Key {key_index + 1} (attempt {attempt+1}): {e}")
-                    time.sleep(2)
-            except Exception as e:
-                print(f"Unexpected Error on Key {key_index + 1} (attempt {attempt+1}): {e}")
-                time.sleep(2)
+            for attempt in range(2):
+                try:
+                    req = urllib.request.Request(url, data=payload, headers={'Content-Type': 'application/json'})
+                    with urllib.request.urlopen(req, timeout=30) as response:
+                        result = json.loads(response.read().decode('utf-8'))
+                        text = result['candidates'][0]['content']['parts'][0]['text'].strip()
+                        if text.startswith('```json'):
+                            text = text[7:-3]
+                        elif text.startswith('```'):
+                            text = text[3:-3]
+                        
+                        parsed = json.loads(text.strip())
+                        return parsed
                 
+                except urllib.error.HTTPError as e:
+                    if e.code in (429, 404, 503):
+                        print(f"Key {key_index + 1} ({model}) HTTP {e.code}. Rotating...")
+                        break 
+                    else:
+                        print(f"Key {key_index + 1} ({model}) HTTP error {e.code}: {e}")
+                        time.sleep(2)
+                except Exception as e:
+                    print(f"Key {key_index + 1} ({model}) error: {e}")
+                    time.sleep(2)
+                    
     print(f"Failed to generate highlights for {version}. All API keys exhausted or rate limited.")
     return None
 
@@ -130,8 +141,9 @@ def run_highlights_generator():
     df = df[(df['repository_name'] == 'bitcoin/bitcoin') & (df['merged_at'].notna())].copy()
     
     # NEW STEP: Load review counts
-    if os.path.exists("data/raw/github_review_events.parquet"):
-        df_rev = pd.read_parquet("data/raw/github_review_events.parquet")
+    events_path = os.path.join(ROOT_DIR, "data", "raw", "github_review_events.parquet")
+    if os.path.exists(events_path):
+        df_rev = pd.read_parquet(events_path)
         review_counts = df_rev.groupby('pr_number').size().to_dict()
         df['review_count'] = df['pr_number'].map(review_counts).fillna(0)
     else:
@@ -237,9 +249,9 @@ def run_highlights_generator():
         
         # Possible locations in the bitcoin/bitcoin repository
         possible_files = [
-            f"data/sources/bitcoin/doc/release-notes/release-notes-{clean_ms}.md",
-            f"data/sources/bitcoin/doc/release-notes/release-notes-{clean_ms}.0.md",
-            "data/sources/bitcoin/doc/release-notes.md" # Fallback for active/unreleased
+            os.path.join(ROOT_DIR, "data", "sources", "bitcoin", "doc", "release-notes", f"release-notes-{clean_ms}.md"),
+            os.path.join(ROOT_DIR, "data", "sources", "bitcoin", "doc", "release-notes", f"release-notes-{clean_ms}.0.md"),
+            os.path.join(ROOT_DIR, "data", "sources", "bitcoin", "doc", "release-notes.md") # Fallback for active/unreleased
         ]
         
         for pfile_path in possible_files:

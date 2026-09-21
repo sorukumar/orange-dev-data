@@ -7,10 +7,18 @@ from datetime import datetime
 # Strip "'NAME' via Bitcoin Development Mailing List" delivery-address artifacts
 _via_pat = re.compile(r"^'(.+)'\s+via\s+", re.IGNORECASE)
 
+import sys
+try:
+    sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+except Exception:
+    pass
+
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+
 # --- Configuration ---
-SOCIAL_THREADS_INPUT = "data/enriched/social_threads.parquet"
-BIPS_INPUT = "output/tracker/bips_ui.json"
-OUTPUT_FILE = "output/shared/discussions_pulse.json"
+SOCIAL_THREADS_INPUT = os.path.join(ROOT_DIR, "data", "enriched", "social_threads.parquet")
+BIPS_INPUT = os.path.join(ROOT_DIR, "output", "tracker", "bips_ui.json")
+OUTPUT_FILE = os.path.join(ROOT_DIR, "output", "shared", "discussions_pulse.json")
 
 CATEGORY_LABELS = {
     'quantum':              'Quantum Resistance',
@@ -61,7 +69,7 @@ IDENTITY_MAP = {}
 
 
 try:
-    with open("data/cache/thread_summaries_cache.json", "r") as f:
+    with open(os.path.join(ROOT_DIR, "data", "cache", "thread_summaries_cache.json"), "r", encoding="utf-8") as f:
         THREAD_SUMMARIES = json.load(f)
 except Exception:
     THREAD_SUMMARIES = {}
@@ -327,9 +335,10 @@ def generate_discussions_pulse():
 
     # Load LLM editorial if available
     pulse_editorial = None
-    if os.path.exists("data/raw/pulse_summary.json"):
+    pulse_path = os.path.join(ROOT_DIR, "data", "raw", "pulse_summary.json")
+    if os.path.exists(pulse_path):
         try:
-            with open("data/raw/pulse_summary.json") as f:
+            with open(pulse_path, encoding='utf-8') as f:
                 pulse_editorial = json.load(f)
         except Exception as e:
             print(f"  Warning: Could not load pulse summary: {e}")
@@ -342,18 +351,20 @@ def generate_discussions_pulse():
         
     # Load meeting summaries if available
     meeting_summaries = []
-    if os.path.exists("data/raw/meeting_summaries.json"):
+    meeting_path = os.path.join(ROOT_DIR, "data", "raw", "meeting_summaries.json")
+    if os.path.exists(meeting_path):
         try:
-            with open("data/raw/meeting_summaries.json") as f:
+            with open(meeting_path, encoding='utf-8') as f:
                 meeting_summaries = json.load(f)[:4] # get latest 4
         except Exception as e:
             print(f"  Warning: Could not load meeting summaries: {e}")
         
     # Enrich hot threads with insights from unified thread summaries
     thread_cache = {}
-    if os.path.exists("data/cache/thread_summaries_cache.json"):
+    thread_cache_path = os.path.join(ROOT_DIR, "data", "cache", "thread_summaries_cache.json")
+    if os.path.exists(thread_cache_path):
         try:
-            with open("data/cache/thread_summaries_cache.json") as f:
+            with open(thread_cache_path, encoding='utf-8') as f:
                 thread_cache = json.load(f)
         except Exception as e:
             print(f"  Warning: Could not load thread summaries cache: {e}")
@@ -391,7 +402,7 @@ def generate_discussions_pulse():
     }
 
     os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
-    with open(OUTPUT_FILE, 'w') as f:
+    with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
         json.dump(output, f, indent=2, default=str)
 
     print(f"  ✅ Written: {OUTPUT_FILE}")

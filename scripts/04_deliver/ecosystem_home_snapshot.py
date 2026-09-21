@@ -6,19 +6,26 @@ from datetime import datetime
 
 import pandas as pd
 
-sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..'))
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+if ROOT_DIR not in sys.path:
+    sys.path.append(ROOT_DIR)
 from scripts.utils.identity import resolver
 
-REGISTRY_PATH = 'output/shared/contributors/registry_index.json'
-BIPS_UI_PATH = 'output/tracker/bips_ui.json'
+try:
+    sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+except Exception:
+    pass
+
+REGISTRY_PATH = os.path.join(ROOT_DIR, 'output', 'shared', 'contributors', 'registry_index.json')
+BIPS_UI_PATH = os.path.join(ROOT_DIR, 'output', 'tracker', 'bips_ui.json')
 REVIEW_EVENTS_PATHS = [
-    'data/raw/github_review_events.parquet',
-    'data/raw/bips_review_events.parquet',
+    os.path.join(ROOT_DIR, 'data', 'raw', 'github_review_events.parquet'),
+    os.path.join(ROOT_DIR, 'data', 'raw', 'bips_review_events.parquet'),
 ]
-SOCIAL_COMBINED_PATH = 'data/raw/social_combined.parquet'
-SOCIAL_THREADS_PATH = 'data/enriched/social_threads.parquet'
-RELEASES_PATH = 'output/tracker/releases.json'
-OUTPUT_PATH = 'output/shared/ecosystem_home_snapshot.json'
+SOCIAL_COMBINED_PATH = os.path.join(ROOT_DIR, 'data', 'raw', 'social_combined.parquet')
+SOCIAL_THREADS_PATH = os.path.join(ROOT_DIR, 'data', 'enriched', 'social_threads.parquet')
+RELEASES_PATH = os.path.join(ROOT_DIR, 'output', 'tracker', 'releases.json')
+OUTPUT_PATH = os.path.join(ROOT_DIR, 'output', 'shared', 'ecosystem_home_snapshot.json')
 
 WINDOW_DAYS = 30
 BOT_PATTERNS = (
@@ -33,7 +40,7 @@ ACTIVE_REVIEW_TYPES = {'commented', 'reviewed'}
 def read_json(path, default):
     if not os.path.exists(path):
         return default
-    with open(path, 'r') as f:
+    with open(path, 'r', encoding='utf-8') as f:
         return json.load(f)
 
 
@@ -613,7 +620,7 @@ def generate_snapshot():
     }
 
     os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
-    with open(OUTPUT_PATH, 'w') as f:
+    with open(OUTPUT_PATH, 'w', encoding='utf-8') as f:
         json.dump(snapshot, f, indent=2)
 
     print(f'Wrote {OUTPUT_PATH}')

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-20T10:32:23.943453",
+  "generated_at": "2026-09-20T12:04:46.243614",
   "groups": {
     "committers": 1181,
     "reviewers": 5131,
@@ -40,18 +40,23 @@
     "title": "Trending BIP Discussions",
     "value": "BIP 70"
   },
-  "spotlight": null,
+  "spotlight": {
+    "name": "lucasdbr05",
+    "uuid": "auto_lucasdbr05",
+    "github_login": "lucasdbr05",
+    "description": "First-time core contributor recently merged PR #36194 (kernel: expose block header Merkle root)."
+  },
   "onboarding": {
-    "new_coders_90d": 0,
-    "new_coders_7d": 0,
+    "new_coders_90d": 25,
+    "new_coders_7d": 4,
     "new_discussants_90d": 51,
     "new_discussants_7d": 3,
     "window_days": 90
   },
   "prs": {
-    "total_merged": 17306,
+    "total_merged": 16974,
     "merged_30d": 134,
-    "merged_prev_30d": 151,
+    "merged_prev_30d": 145,
     "merged_7d": 35,
     "merged_prev_7d": 42
   },

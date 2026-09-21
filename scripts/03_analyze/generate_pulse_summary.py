@@ -4,38 +4,30 @@ import hashlib
 import time
 import pandas as pd
 from datetime import datetime
-from datetime import datetime
+import urllib.request
+import urllib.error
+from dotenv import load_dotenv
 
 import sys
-sys.path.append(os.path.join(os.path.dirname(__file__), '..', '04_deliver'))
-from discussions_pulse import _compute_window, _add_trends, SOCIAL_THREADS_INPUT
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+sys.path.append(ROOT_DIR)
+sys.path.append(os.path.join(ROOT_DIR, 'scripts', '04_deliver'))
+from discussions_pulse import _compute_window, _add_trends
+SOCIAL_THREADS_INPUT = os.path.join(ROOT_DIR, "data", "enriched", "social_threads.parquet")
+PULSE_SUMMARY_FILE = os.path.join(ROOT_DIR, "data", "raw", "pulse_summary.json")
 
-try:
-    from google import genai
-    from google.genai.errors import APIError
-    HAS_GENAI = True
-except ImportError:
-    HAS_GENAI = False
+# Load API keys dynamically
+env_path = os.path.join(ROOT_DIR, ".env")
+load_dotenv(env_path)
 
-PULSE_SUMMARY_FILE = "data/raw/pulse_summary.json"
-
-# Load API keys
-env_path = "/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/.env"
-if os.path.exists(env_path):
-    with open(env_path, "r") as f:
-        for line in f:
-            if "=" in line and not line.strip().startswith("#"):
-                key, val = line.strip().split("=", 1)
-                os.environ[key.strip()] = val.strip().strip("'").strip('"')
-
-TARGET_MODEL = os.environ.get('GEMINI_TARGET_MODEL', 'gemini-1.5-flash')
+TARGET_MODEL = os.environ.get('GEMINI_TARGET_MODEL', 'gemini-2.5-flash')
 api_keys = []
-for k, v in os.environ.items():
+for k, v in sorted(os.environ.items()):
     if k.startswith("GEMINI_API_KEY") and v.strip():
         api_keys.append(v.strip())
 
 def generate_pulse_summary():
-    if not HAS_GENAI or not api_keys:
+    if not api_keys:
         print("Warning: Gemini API not configured. Skipping pulse summary.")
         return
 
@@ -140,40 +132,45 @@ Output format (JSON):
 """
 
     for key_index, current_key in enumerate(api_keys):
-        client = genai.Client(api_key=current_key)
-        for attempt in range(2):
-            try:
-                print(f"Calling LLM for pulse summary (Key {key_index + 1})...")
-                response = client.models.generate_content(
-                    model=TARGET_MODEL,
-                    contents=prompt,
-                )
-                text = response.text.strip()
-                if text.startswith('```json'):
-                    text = text[7:-3]
-                elif text.startswith('```'):
-                    text = text[3:-3]
+        for model in [TARGET_MODEL, "gemini-2.5-flash-lite"]:
+            url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={current_key}"
+            payload = json.dumps({
+                "contents": [{"parts": [{"text": prompt}]}],
+                "generationConfig": {"temperature": 0.2}
+            }).encode('utf-8')
+
+            for attempt in range(2):
+                try:
+                    print(f"Calling LLM for pulse summary (Key {key_index + 1}, {model})...")
+                    req = urllib.request.Request(url, data=payload, headers={'Content-Type': 'application/json'})
+                    with urllib.request.urlopen(req, timeout=30) as response:
+                        result = json.loads(response.read().decode('utf-8'))
+                        text = result['candidates'][0]['content']['parts'][0]['text'].strip()
+                        if text.startswith('```json'):
+                            text = text[7:-3]
+                        elif text.startswith('```'):
+                            text = text[3:-3]
+                        
+                        parsed = json.loads(text.strip())
+                        parsed["_threads_hash"] = threads_hash
+                        
+                        os.makedirs(os.path.dirname(PULSE_SUMMARY_FILE), exist_ok=True)
+                        with open(PULSE_SUMMARY_FILE, 'w') as f:
+                            json.dump(parsed, f, indent=2)
+                        
+                        print(f"Successfully generated and saved pulse summary to {PULSE_SUMMARY_FILE}")
+                        return
                 
-                parsed = json.loads(text.strip())
-                parsed["_threads_hash"] = threads_hash
-                
-                os.makedirs(os.path.dirname(PULSE_SUMMARY_FILE), exist_ok=True)
-                with open(PULSE_SUMMARY_FILE, 'w') as f:
-                    json.dump(parsed, f, indent=2)
-                
-                print(f"Successfully generated and saved pulse summary to {PULSE_SUMMARY_FILE}")
-                return
-            
-            except APIError as e:
-                if e.code == 429 or e.code == 404:
-                    print(f"Key {key_index + 1} hit {e.code}. Rotating to next key...")
-                    break 
-                else:
-                    print(f"Error on Key {key_index + 1} (attempt {attempt+1}): {e}")
+                except urllib.error.HTTPError as e:
+                    if e.code in (429, 404, 503):
+                        print(f"Key {key_index + 1} ({model}) HTTP {e.code}. Rotating...")
+                        break 
+                    else:
+                        print(f"Error on Key {key_index + 1} ({model}, attempt {attempt+1}): {e}")
+                        time.sleep(2)
+                except Exception as e:
+                    print(f"Error on Key {key_index + 1} ({model}, attempt {attempt+1}): {e}")
                     time.sleep(2)
-            except Exception as e:
-                print(f"Unexpected Error on Key {key_index + 1} (attempt {attempt+1}): {e}")
-                time.sleep(2)
                 
     print("Failed to generate pulse summary. All API keys exhausted or rate limited.")
 

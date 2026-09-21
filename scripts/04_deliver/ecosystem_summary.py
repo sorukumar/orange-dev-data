@@ -1,14 +1,26 @@
 import json
 import os
+import sys
 from datetime import datetime, timedelta, timezone
 
+try:
+    sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+except Exception:
+    pass
+
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+
 # --- Configuration ---
-REGISTRY_INPUT = "output/shared/contributors/registry_index.json"
-BIPS_INPUT = "output/tracker/bips_ui.json"
-SOCIAL_THREADS_INPUT = "data/enriched/social_threads.parquet"
-CONTRIBUTORS_UNIFIED_INPUT = "data/enriched/contributors_unified.parquet"
-OUTPUT_FILE = "output/shared/ecosystem_summary.json"
-SUBSYSTEMS_INPUT = "metadata/subsystems.json"
+REGISTRY_INPUT = os.path.join(ROOT_DIR, "output", "shared", "contributors", "registry_index.json")
+BIPS_INPUT = os.path.join(ROOT_DIR, "output", "tracker", "bips_ui.json")
+SOCIAL_THREADS_INPUT = os.path.join(ROOT_DIR, "data", "enriched", "social_threads.parquet")
+CONTRIBUTORS_UNIFIED_INPUT = os.path.join(ROOT_DIR, "data", "enriched", "contributors_unified.parquet")
+ENRICHED_PRS_INPUT = os.path.join(ROOT_DIR, "data", "enriched", "enriched_prs.parquet")
+PR_METADATA_INPUT = os.path.join(ROOT_DIR, "data", "raw", "github_pr_metadata.parquet")
+COMMITS_INPUT = os.path.join(ROOT_DIR, "data", "enriched", "commits_resolved.parquet")
+OUTPUT_FILE = os.path.join(ROOT_DIR, "output", "shared", "ecosystem_summary.json")
+SUBSYSTEMS_INPUT = os.path.join(ROOT_DIR, "metadata", "subsystems.json")
+IDENTITIES_INPUT = os.path.join(ROOT_DIR, "metadata", "identities.json")
 
 def _load_category_labels() -> dict:
     """Load human-readable labels from subsystems.json (single source of truth).
@@ -16,7 +28,7 @@ def _load_category_labels() -> dict:
     """
     if not os.path.exists(SUBSYSTEMS_INPUT):
         return {}
-    with open(SUBSYSTEMS_INPUT) as f:
+    with open(SUBSYSTEMS_INPUT, 'r', encoding='utf-8') as f:
         subsystems = json.load(f)
     return {slug: data.get("name", slug) for slug, data in subsystems.items()}
 
@@ -29,7 +41,7 @@ def generate_ecosystem_summary():
         print(f"Error: {REGISTRY_INPUT} not found.")
         return
         
-    with open(REGISTRY_INPUT, 'r') as f:
+    with open(REGISTRY_INPUT, 'r', encoding='utf-8') as f:
         data = json.load(f)
     
     contributors = data['contributors']
@@ -129,11 +141,15 @@ def generate_ecosystem_summary():
 
     try:
         import pandas as pd
-        enriched_prs_path = "data/enriched/enriched_prs.parquet"
-        if os.path.exists(enriched_prs_path):
-            pr_df = pd.read_parquet(enriched_prs_path, columns=['merged_at'])
+        pr_source_path = PR_METADATA_INPUT if os.path.exists(PR_METADATA_INPUT) else ENRICHED_PRS_INPUT
+        if os.path.exists(pr_source_path):
+            pr_df = pd.read_parquet(pr_source_path)
+            # Filter to Bitcoin Core PRs
+            if 'repository_name' in pr_df.columns:
+                pr_df = pr_df[pr_df['repository_name'] == 'bitcoin/bitcoin'].copy()
             pr_df_merged = pr_df[pr_df['merged_at'].notna()].copy()
             pr_df_merged['merged_at'] = pd.to_datetime(pr_df_merged['merged_at'], errors='coerce', utc=True)
+            pr_df_merged = pr_df_merged[pr_df_merged['merged_at'].notna()]
             
             # Overall PRs
             total_prs_merged = len(pr_df_merged)
@@ -142,11 +158,18 @@ def generate_ecosystem_summary():
             cutoff_60 = pd.Timestamp(cutoff_90 + timedelta(days=30), tz='UTC')
             cutoff_7 = pd.Timestamp(now - timedelta(days=7), tz='UTC')
             cutoff_14 = pd.Timestamp(now - timedelta(days=14), tz='UTC')
+            cutoff_90_ts = pd.Timestamp(cutoff_90, tz='UTC')
 
             prs_merged_30d = int((pr_df_merged['merged_at'] >= cutoff_30).sum())
             prs_merged_prev_30d = int(((pr_df_merged['merged_at'] >= cutoff_60) & (pr_df_merged['merged_at'] < cutoff_30)).sum())
             prs_merged_7d = int((pr_df_merged['merged_at'] >= cutoff_7).sum())
             prs_merged_prev_7d = int(((pr_df_merged['merged_at'] >= cutoff_14) & (pr_df_merged['merged_at'] < cutoff_7)).sum())
+
+            # First-ever merged PR per author (for real-time new coder tracking)
+            first_prs = pr_df_merged.groupby('author')['merged_at'].min().reset_index()
+            first_prs.columns = ['author', 'first_merged_at']
+            new_coders_90d = int((first_prs['first_merged_at'] >= cutoff_90_ts).sum())
+            new_coders_7d = int((first_prs['first_merged_at'] >= cutoff_7).sum())
     except Exception as e:
         print(f"  Warning: Could not compute PRs merged: {e}")
 
@@ -154,9 +177,8 @@ def generate_ecosystem_summary():
     commits_prev_30d = 0
     try:
         import pandas as pd
-        commits_path = "data/enriched/commits_resolved.parquet"
-        if os.path.exists(commits_path):
-            df_commits = pd.read_parquet(commits_path, columns=['date_utc'])
+        if os.path.exists(COMMITS_INPUT):
+            df_commits = pd.read_parquet(COMMITS_INPUT, columns=['date_utc'])
             df_commits['date_utc'] = pd.to_datetime(df_commits['date_utc'], utc=True)
             cutoff_30_ts = pd.Timestamp(cutoff_90 + timedelta(days=60), tz='UTC')
             cutoff_60_ts = pd.Timestamp(cutoff_90 + timedelta(days=30), tz='UTC')
@@ -172,10 +194,9 @@ def generate_ecosystem_summary():
 
     try:
         if os.path.exists(BIPS_INPUT):
-            with open(BIPS_INPUT, 'r') as f:
+            with open(BIPS_INPUT, 'r', encoding='utf-8') as f:
                 bips_data = json.load(f)
                 total_bips = len(bips_data)
-                # Count BIPs with social mentions as active/discussed
                 active_bips = len([b for b in bips_data if b.get('social_mention_count', 0) > 0])
     except Exception as e:
         print(f"  Warning: Could not compute active BIPs: {e}")
@@ -183,36 +204,72 @@ def generate_ecosystem_summary():
     spotlight_data = None
     try:
         import pandas as pd
-        if os.path.exists(CONTRIBUTORS_UNIFIED_INPUT):
+        
+        # Load identities lookup map
+        github_to_identity = {}
+        if os.path.exists(IDENTITIES_INPUT):
+            try:
+                with open(IDENTITIES_INPUT, 'r', encoding='utf-8') as f:
+                    for ident in json.load(f).get('identities', []):
+                        gh = ident.get('platforms', {}).get('github', [])
+                        if isinstance(gh, str): gh = [gh]
+                        for g in gh:
+                            github_to_identity[g.lower()] = ident
+            except Exception as e:
+                print(f"  Warning: Could not load identities: {e}")
+
+        # Primary source for spotlight: real-time PR metadata
+        if 'first_prs' in locals() and not first_prs.empty and not pr_df_merged.empty:
+            cutoff_30_ts = pd.Timestamp(cutoff_90 + timedelta(days=60), tz='UTC')
+            cutoff_90_ts = pd.Timestamp(cutoff_90, tz='UTC')
+            
+            # Check 30d window first, fallback to 90d, then latest first-time author
+            newbies = first_prs[first_prs['first_merged_at'] >= cutoff_30_ts].sort_values('first_merged_at', ascending=False)
+            if newbies.empty:
+                newbies = first_prs[first_prs['first_merged_at'] >= cutoff_90_ts].sort_values('first_merged_at', ascending=False)
+            if newbies.empty:
+                newbies = first_prs.sort_values('first_merged_at', ascending=False)
+
+            if not newbies.empty:
+                top_author = str(newbies.iloc[0]['author'])
+                author_prs = pr_df_merged[pr_df_merged['author'] == top_author].sort_values('merged_at', ascending=False)
+                latest_pr = author_prs.iloc[0]
+                
+                ident = github_to_identity.get(top_author.lower(), {})
+                display_name = ident.get('display_name') or top_author
+                uuid_val = ident.get('uuid') or f'auto_{top_author}'
+                pr_num = latest_pr.get('pr_number', '')
+                pr_title = latest_pr.get('title', '')
+                
+                desc = f"First-time core contributor recently merged PR #{pr_num} ({pr_title})." if pr_num else "First-time core contributor."
+                spotlight_data = {
+                    "name": str(display_name),
+                    "uuid": str(uuid_val),
+                    "github_login": str(top_author),
+                    "description": desc
+                }
+        elif os.path.exists(CONTRIBUTORS_UNIFIED_INPUT):
             _df_u = pd.read_parquet(CONTRIBUTORS_UNIFIED_INPUT, columns=['first_commit', 'first_core_commit', 'tier1_authored_commits', 'display_name', 'github_login_final', 'uuid'])
             _fc = pd.to_datetime(_df_u['first_commit'], errors='coerce', utc=True)
             _cutoff_ts = pd.Timestamp(cutoff_90, tz='UTC')
             _cutoff_7_ts = pd.Timestamp(now - timedelta(days=7), tz='UTC')
-            newbies_mask = _fc >= _cutoff_ts
-            new_coders_90d = int(newbies_mask.sum())
-            new_coders_7d = int((_fc >= _cutoff_7_ts).sum())
+            if new_coders_90d == 0:
+                new_coders_90d = int((_fc >= _cutoff_ts).sum())
+                new_coders_7d = int((_fc >= _cutoff_7_ts).sum())
             
-            # Use 30-day window for the spotlight specifically, targeting Core (Tier 1)
             _fc_core = pd.to_datetime(_df_u['first_core_commit'], errors='coerce', utc=True)
             _cutoff_30 = pd.Timestamp(cutoff_90 + timedelta(days=60), tz='UTC')
-            spotlight_mask = _fc_core >= _cutoff_30
-            newbies_30 = _df_u[spotlight_mask].copy()
-            
+            newbies_30 = _df_u[_fc_core >= _cutoff_30].copy()
+            if newbies_30.empty:
+                newbies_30 = _df_u[_fc_core.notna()].sort_values('first_core_commit', ascending=False).head(1)
             if not newbies_30.empty:
-                newbies_30 = newbies_30.sort_values(by='tier1_authored_commits', ascending=False)
                 top_newbie = newbies_30.iloc[0]
-                name = top_newbie.get('display_name')
-                if pd.isna(name) or not name:
-                    name = top_newbie.get('github_login_final') or 'New Contributor'
+                name = top_newbie.get('display_name') or top_newbie.get('github_login_final') or 'New Contributor'
                 commits = int(top_newbie.get('tier1_authored_commits', 1))
-                uuid_val = top_newbie.get('uuid', '')
-                gh_login = top_newbie.get('github_login_final', '')
-                if pd.isna(gh_login): gh_login = ''
-                
                 spotlight_data = {
                     "name": str(name),
-                    "uuid": str(uuid_val),
-                    "github_login": str(gh_login),
+                    "uuid": str(top_newbie.get('uuid', '')),
+                    "github_login": str(top_newbie.get('github_login_final', '')),
                     "description": f"First-time core contributor recently merged {commits} commit{'s' if commits != 1 else ''}."
                 }
     except Exception as e:
@@ -293,7 +350,7 @@ def generate_ecosystem_summary():
     }
     
     os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
-    with open(OUTPUT_FILE, 'w') as f:
+    with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
         json.dump(summary, f, indent=2)
     
     print(f"Ecosystem summary saved to {OUTPUT_FILE}")

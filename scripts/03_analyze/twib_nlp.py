@@ -1,40 +1,49 @@
 import os
 import json
 import time
-from google import genai
-from google.genai.errors import APIError
+import urllib.request
+import urllib.error
 import sys
+
+try:
+    sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+except Exception:
+    pass
 
 # Add parent directory to path so we can import utils
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
 from scripts.utils.twib_data import get_weekly_activity
 
 def _call_gemini(api_keys, prompt, is_json=False):
+    target_model = os.environ.get('GEMINI_TARGET_MODEL', 'gemini-2.5-flash')
     for key_index, current_key in enumerate(api_keys):
-        client = genai.Client(api_key=current_key)
-        for attempt in range(2):
-            try:
-                target_model = os.environ.get('GEMINI_TARGET_MODEL', 'gemini-1.5-flash')
-                response = client.models.generate_content(model=target_model, contents=prompt)
-                text = response.text.strip()
-                if is_json:
-                    if text.startswith("```json"): text = text[7:]
-                    if text.endswith("```"): text = text[:-3]
-                    return json.loads(text.strip())
-                return text
-            except APIError as e:
-                if e.code == 429 or e.code == 404 or e.code == 403:
-                    print(f"Key {key_index + 1} hit {e.code}. Rotating...")
-                    break # try next key
-                print(f"APIError on Key {key_index + 1}: {e}")
-                time.sleep(3)
-            except Exception as e:
-                err_str = str(e)
-                if '429' in err_str or 'RESOURCE_EXHAUSTED' in err_str:
-                    print(f"Key {key_index + 1} hit rate limit. Rotating...")
-                    break
-                print(f"Error on Key {key_index + 1}: {e}")
-                time.sleep(3)
+        for model in [target_model, "gemini-2.5-flash-lite"]:
+            url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={current_key}"
+            payload = json.dumps({
+                "contents": [{"parts": [{"text": prompt}]}],
+                "generationConfig": {"temperature": 0.2}
+            }).encode('utf-8')
+            for attempt in range(2):
+                try:
+                    req = urllib.request.Request(url, data=payload, headers={'Content-Type': 'application/json'})
+                    with urllib.request.urlopen(req, timeout=30) as response:
+                        result = json.loads(response.read().decode('utf-8'))
+                        text = result['candidates'][0]['content']['parts'][0]['text'].strip()
+                        if is_json:
+                            if text.startswith("```json"): text = text[7:]
+                            if text.endswith("```"): text = text[:-3]
+                            return json.loads(text.strip())
+                        return text
+                except urllib.error.HTTPError as e:
+                    if e.code in (429, 404, 503):
+                        print(f"Key {key_index + 1} ({model}) HTTP {e.code}. Rotating...")
+                        break
+                    else:
+                        print(f"Key {key_index + 1} ({model}) HTTP error {e.code}: {e}")
+                        time.sleep(2)
+                except Exception as e:
+                    print(f"Key {key_index + 1} ({model}) error: {e}")
+                    time.sleep(2)
     return {} if is_json else None
 
 def get_llm_summary(api_keys, text, instruction):

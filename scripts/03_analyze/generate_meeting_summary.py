@@ -12,7 +12,7 @@ OUTPUT_FILE = "data/raw/meeting_summaries.json"
 HAS_GENAI = True
 
 # Load API keys
-env_path = "/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/.env"
+env_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".env"))
 if os.path.exists(env_path):
     with open(env_path, "r") as f:
         for line in f:
@@ -20,7 +20,7 @@ if os.path.exists(env_path):
                 key, val = line.strip().split("=", 1)
                 os.environ[key.strip()] = val.strip().strip("'").strip('"')
 
-TARGET_MODEL = os.environ.get('GEMINI_TARGET_MODEL', 'gemini-1.5-flash')
+TARGET_MODEL = os.environ.get('GEMINI_TARGET_MODEL', 'gemini-2.5-flash')
 api_keys = []
 for k, v in os.environ.items():
     if k.startswith("GEMINI_API_KEY") and v.strip():

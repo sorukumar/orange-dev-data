@@ -2,9 +2,9 @@
   "generated_at": "2026-09-20",
   "contributors_tracked": 7632,
   "window_reference": {
-    "anchor_timestamp": "2026-09-20T23:59:59.374850+00:00",
-    "current_window_start": "2026-08-21T23:59:59.374850+00:00",
-    "previous_window_start": "2026-07-22T23:59:59.374850+00:00",
+    "anchor_timestamp": "2026-09-20T23:59:59.889150+00:00",
+    "current_window_start": "2026-08-21T23:59:59.889150+00:00",
+    "previous_window_start": "2026-07-22T23:59:59.889150+00:00",
     "window_days": 30
   },
   "widgets": {
@@ -300,19 +300,29 @@
       "definition": "Random selection of top retired contributors by impact score to feature as ecosystem veterans.",
       "items": [
         {
-          "uuid": "can_gavin_andresen",
-          "display_name": "Gavin Andresen",
-          "impact_score": 87.0
+          "uuid": "can_omar_shibli",
+          "display_name": "Omar Shibli",
+          "impact_score": 23.0
         },
         {
-          "uuid": "auto_manuel_ar_oz",
-          "display_name": "Manuel Ar\u00e1oz",
-          "impact_score": 30.0
+          "uuid": "auto_thomas_kerin",
+          "display_name": "Thomas Kerin",
+          "impact_score": 41.0
         },
         {
-          "uuid": "can_marek_palatinus",
-          "display_name": "Marek Palatinus",
-          "impact_score": 39.0
+          "uuid": "auto_dagur_valberg_johannsson",
+          "display_name": "dagur valberg johannsson",
+          "impact_score": 23.0
+        },
+        {
+          "uuid": "auto_chun_kuan_lee",
+          "display_name": "Chun Kuan Lee",
+          "impact_score": 27.0
+        },
+        {
+          "uuid": "can_shaolin_fry",
+          "display_name": "Shaolin Fry",
+          "impact_score": 42.0
         }
       ]
     }
@@ -331,13 +341,13 @@
     ]
   },
   "sources": {
-    "registry_index": "output/shared/contributors/registry_index.json",
+    "registry_index": "C:\\Users\\Saurabh\\Desktop\\work-windows\\github\\orange-dev-data\\output\\shared\\contributors\\registry_index.json",
     "review_events": [
-      "data/raw/github_review_events.parquet",
-      "data/raw/bips_review_events.parquet"
+      "C:\\Users\\Saurabh\\Desktop\\work-windows\\github\\orange-dev-data\\data\\raw\\github_review_events.parquet",
+      "C:\\Users\\Saurabh\\Desktop\\work-windows\\github\\orange-dev-data\\data\\raw\\bips_review_events.parquet"
     ],
-    "social_combined": "data/raw/social_combined.parquet",
-    "social_threads": "data/enriched/social_threads.parquet",
-    "bips_ui": "output/tracker/bips_ui.json"
+    "social_combined": "C:\\Users\\Saurabh\\Desktop\\work-windows\\github\\orange-dev-data\\data\\raw\\social_combined.parquet",
+    "social_threads": "C:\\Users\\Saurabh\\Desktop\\work-windows\\github\\orange-dev-data\\data\\enriched\\social_threads.parquet",
+    "bips_ui": "C:\\Users\\Saurabh\\Desktop\\work-windows\\github\\orange-dev-data\\output\\tracker\\bips_ui.json"
   }
 }

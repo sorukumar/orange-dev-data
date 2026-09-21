@@ -3,10 +3,14 @@ import json
 import pandas as pd
 import re
 
-INPUT_PR_PARQUET = "data/raw/github_pr_metadata.parquet"
-OUTPUT_JSON = "output/tracker/releases.json"
-CACHE_FILE = "data/raw/pr_summaries_cache.json"
-HIGHLIGHTS_CACHE_FILE = "data/raw/release_highlights_cache.json"
+import sys
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+
+INPUT_PR_PARQUET = os.path.join(ROOT_DIR, "data", "raw", "github_pr_metadata.parquet")
+OUTPUT_JSON = os.path.join(ROOT_DIR, "output", "tracker", "releases.json")
+CACHE_FILE = os.path.join(ROOT_DIR, "data", "raw", "pr_summaries_cache.json")
+HIGHLIGHTS_CACHE_FILE = os.path.join(ROOT_DIR, "data", "raw", "release_highlights_cache.json")
+BITCOIN_SRC_DIR = os.path.join(ROOT_DIR, "data", "sources", "bitcoin")
 
 def parse_version(v_str):
     matches = re.findall(r'\d+', str(v_str))
@@ -86,8 +90,9 @@ def process_releases():
     df = df[(df['repository_name'] == 'bitcoin/bitcoin') & (df['merged_at'].notna())].copy()
     
     # NEW STEP: Load review counts
-    if os.path.exists("data/raw/github_review_events.parquet"):
-        df_rev = pd.read_parquet("data/raw/github_review_events.parquet")
+    events_path = os.path.join(ROOT_DIR, "data", "raw", "github_review_events.parquet")
+    if os.path.exists(events_path):
+        df_rev = pd.read_parquet(events_path)
         review_counts = df_rev.groupby('pr_number').size().to_dict()
         df['review_count'] = df['pr_number'].map(review_counts).fillna(0)
     else:
@@ -95,7 +100,7 @@ def process_releases():
     
     # NEW STEP: Override milestones from official release notes
     pr_to_milestone = {}
-    release_notes_dir = "data/sources/bitcoin/doc/release-notes"
+    release_notes_dir = os.path.join(BITCOIN_SRC_DIR, "doc", "release-notes")
     if os.path.exists(release_notes_dir):
         for filename in os.listdir(release_notes_dir):
             if filename.startswith("release-notes-") and filename.endswith(".md"):
@@ -180,8 +185,9 @@ def process_releases():
     # Load identities to map author to UUID and real name
     github_to_uuid = {}
     github_to_name = {}
-    if os.path.exists("metadata/identities.json"):
-        with open("metadata/identities.json", "r") as f:
+    identities_path = os.path.join(ROOT_DIR, "metadata", "identities.json")
+    if os.path.exists(identities_path):
+        with open(identities_path, "r", encoding="utf-8") as f:
             identities_data = json.load(f).get('identities', [])
             for identity in identities_data:
                 gh_logins = identity.get('platforms', {}).get('github')
@@ -197,8 +203,9 @@ def process_releases():
                         
     # Load expertise domains for canonical mapping
     expertise_domains = {}
-    if os.path.exists("metadata/expertise_domains.json"):
-        with open("metadata/expertise_domains.json", "r") as f:
+    domains_path = os.path.join(ROOT_DIR, "metadata", "expertise_domains.json")
+    if os.path.exists(domains_path):
+        with open(domains_path, "r", encoding="utf-8") as f:
             domains_data = json.load(f).get('domains', [])
             for d in domains_data:
                 expertise_domains[d['id']] = d['name']
@@ -232,8 +239,8 @@ def process_releases():
         
         # Check if official release notes exist for this milestone in the source repo
         clean_ms = str(milestone).lstrip('v')
-        notes_path_1 = f"data/sources/bitcoin/doc/release-notes/release-notes-{clean_ms}.md"
-        notes_path_2 = f"data/sources/bitcoin/doc/release-notes/release-notes-{clean_ms}.0.md"
+        notes_path_1 = os.path.join(BITCOIN_SRC_DIR, "doc", "release-notes", f"release-notes-{clean_ms}.md")
+        notes_path_2 = os.path.join(BITCOIN_SRC_DIR, "doc", "release-notes", f"release-notes-{clean_ms}.0.md")
         is_released = os.path.exists(notes_path_1) or os.path.exists(notes_path_2)
         
         prs_in_notes = 0
@@ -249,8 +256,8 @@ def process_releases():
             except Exception:
                 pass
                 
-            rel_path = os.path.relpath(actual_notes_path, "data/sources/bitcoin")
-            git_date = get_git_commit_date("data/sources/bitcoin", rel_path)
+            rel_path = os.path.relpath(actual_notes_path, BITCOIN_SRC_DIR)
+            git_date = get_git_commit_date(BITCOIN_SRC_DIR, rel_path)
             
             if pd.notna(git_date):
                 last_active_date = git_date.strftime("%b %d, %Y")
@@ -342,7 +349,7 @@ def process_releases():
     releases_data.sort(key=lambda x: parse_version(x["version"]), reverse=True)
 
     os.makedirs(os.path.dirname(OUTPUT_JSON), exist_ok=True)
-    with open(OUTPUT_JSON, 'w') as f:
+    with open(OUTPUT_JSON, 'w', encoding='utf-8') as f:
         json.dump(releases_data, f, indent=2)
         
     print(f"Exported {len(releases_data)} releases to {OUTPUT_JSON}")

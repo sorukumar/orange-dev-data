@@ -3,6 +3,11 @@ import json
 import pandas as pd
 import sys
 
+try:
+    sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+except Exception:
+    pass
+
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
 from scripts.utils.twib_data import get_weekly_activity
 
@@ -158,17 +163,17 @@ def main():
     pr_cache = {}
     
     if os.path.exists(cache_path):
-        with open(cache_path, "r") as f:
+        with open(cache_path, "r", encoding="utf-8") as f:
             try: twib_cache = json.load(f)
             except: pass
             
     if os.path.exists(thread_cache_path):
-        with open(thread_cache_path, "r") as f:
+        with open(thread_cache_path, "r", encoding="utf-8") as f:
             try: thread_cache = json.load(f)
             except: pass
             
     if os.path.exists(pr_cache_path):
-        with open(pr_cache_path, "r") as f:
+        with open(pr_cache_path, "r", encoding="utf-8") as f:
             try: pr_cache = json.load(f)
             except: pass
 
@@ -177,7 +182,7 @@ def main():
     meeting_path = os.path.join(root_dir, "data", "raw", "meeting_summaries.json")
     if os.path.exists(meeting_path):
         try:
-            with open(meeting_path, "r") as f:
+            with open(meeting_path, "r", encoding="utf-8") as f:
                 meeting_summaries = json.load(f)
         except: pass
         
@@ -399,16 +404,16 @@ def main():
     archive_index_file = os.path.join(output_dir, "archive_index.json")
     meetings_json_file = os.path.join(output_dir, "meetings.json")
     
-    with open(json_filename, "w") as f: json.dump(newsletter_data, f, indent=2)
-    with open(latest_json, "w") as f: json.dump(newsletter_data, f, indent=2)
+    with open(json_filename, "w", encoding="utf-8") as f: json.dump(newsletter_data, f, indent=2)
+    with open(latest_json, "w", encoding="utf-8") as f: json.dump(newsletter_data, f, indent=2)
 
     # Export historical meeting summaries for meetings.html
     sorted_meetings = sorted(meeting_summaries, key=lambda x: x.get("date", ""), reverse=True)
-    with open(meetings_json_file, "w") as f: json.dump(sorted_meetings, f, indent=2)
+    with open(meetings_json_file, "w", encoding="utf-8") as f: json.dump(sorted_meetings, f, indent=2)
         
     archive_index = []
     if os.path.exists(archive_index_file):
-        with open(archive_index_file, "r") as f:
+        with open(archive_index_file, "r", encoding="utf-8") as f:
             try: archive_index = json.load(f)
             except: pass
             
@@ -417,11 +422,11 @@ def main():
         archive_index.insert(0, entry)
         
     archive_index = sorted(archive_index, key=lambda x: x["date"], reverse=True)
-    with open(archive_index_file, "w") as f: json.dump(archive_index, f, indent=2)
+    with open(archive_index_file, "w", encoding="utf-8") as f: json.dump(archive_index, f, indent=2)
         
     md_filename = os.path.join(archive_dir, f"newsletter_{today_str}.md")
     markdown_report = build_markdown_from_json(newsletter_data)
-    with open(md_filename, "w") as f: f.write(markdown_report)
+    with open(md_filename, "w", encoding="utf-8") as f: f.write(markdown_report)
 
     print(f"✅ Generated TWIB Artifacts (including meetings.json) to output/twib/ for {today_str}")
 

@@ -42,6 +42,52 @@
   "categories": {
     "merged": [
       {
+        "name": "Security & Consensus",
+        "prs": [
+          {
+            "number": 36286,
+            "title": "crypto: Fix MuHash3072 division by itself",
+            "author": {
+              "username": "fjahr",
+              "uuid": "can_fabian_jahr"
+            },
+            "summary": "This PR fixes a bug in the MuHash3072 cryptographic algorithm where a division by itself could occur. Correcting this ensures the integrity and reliability of the MuHash implementation, which is critical for certain internal data structures.",
+            "technical_summary": "The fix addresses a specific edge case in the MuHash3072 implementation where a division operation might incorrectly use the divisor as the dividend. This correction ensures the mathematical correctness of the hash function, preventing potential miscalculations or vulnerabilities that could arise from incorrect hash outputs. While MuHash3072 is not currently part of the consensus rules, its correctness is vital for features like assumeutxo, where it's used for UTXO set commitments.",
+            "importance": 6,
+            "review_count": 6
+          }
+        ]
+      },
+      {
+        "name": "Strategic Initiatives",
+        "prs": [
+          {
+            "number": 36207,
+            "title": "kernel: add wtxid accessor",
+            "author": {
+              "username": "KY-U",
+              "uuid": "auto_ky_u"
+            },
+            "summary": "This PR adds an accessor for the wtxid (witness transaction ID) within the Bitcoin Core kernel. This provides a standardized way for kernel components to retrieve this identifier, which is crucial for SegWit-enabled transactions.",
+            "technical_summary": "A new method is introduced to a relevant kernel structure (e.g., `CTransaction` or `CTransactionRef`) to compute and return the wtxid. This accessor encapsulates the logic for calculating the wtxid, which differs from the traditional txid for SegWit transactions, making it readily available for internal kernel use without redundant computation. This is a key step in formalizing the kernel's transaction interface.",
+            "importance": 16,
+            "review_count": 16
+          },
+          {
+            "number": 36194,
+            "title": "kernel: expose block header Merkle root",
+            "author": {
+              "username": "lucasdbr05",
+              "uuid": "auto_lucasdbr05"
+            },
+            "summary": "This PR exposes the Merkle root from the block header within the Bitcoin Core kernel interface. This allows other components or future extensions to easily access this fundamental block identifier without re-parsing the header.",
+            "technical_summary": "A new accessor method is added to the `CBlockHeader` or a related kernel structure, specifically to retrieve the Merkle root hash. This change provides a direct programmatic interface to this critical piece of block data, simplifying its use in other kernel modules or higher-level components that interact with block headers. This is a step towards a more modular and well-defined kernel API.",
+            "importance": 14,
+            "review_count": 14
+          }
+        ]
+      },
+      {
         "name": "Performance & Optimization",
         "prs": [
           {
@@ -72,6 +118,30 @@
             "technical_summary": "This PR adjusts the P2P connection management logic. It introduces an exception to the block-stalling disconnection rule specifically for \"manual peers\" (peers connected via `addnode` or `-connect`). Previously, these peers could be disconnected if they failed to provide blocks within a certain timeframe, similar to automatically discovered peers. This change exempts manual peers from this specific disconnection trigger, prioritizing user-configured connections over strict block-relay performance checks.",
             "importance": 25,
             "review_count": 25
+          },
+          {
+            "number": 36260,
+            "title": "torcontrol: Use reconnect backoff after dropped connections",
+            "author": {
+              "username": "fjahr",
+              "uuid": "can_fabian_jahr"
+            },
+            "summary": "This PR enhances Bitcoin Core's Tor control connection stability by implementing a reconnect backoff mechanism. This prevents rapid, repeated connection attempts that could overload the Tor control port after a dropped connection.",
+            "technical_summary": "The `torcontrol` module is modified to introduce an exponential backoff strategy for reconnecting to the Tor control port after a connection failure or drop. Instead of immediately retrying, the client will wait for increasing intervals, reducing resource consumption and potential rate-limiting issues with the Tor daemon. This improves the robustness of Tor service management and overall network reliability.",
+            "importance": 9,
+            "review_count": 9
+          },
+          {
+            "number": 36249,
+            "title": "net, rpc: Asmap version improvements/follow-ups",
+            "author": {
+              "username": "fjahr",
+              "uuid": "can_fabian_jahr"
+            },
+            "summary": "This PR introduces improvements and follow-ups related to the Asmap versioning, enhancing how Bitcoin Core understands and utilizes network topology. These changes contribute to more robust peer selection and network resilience.",
+            "technical_summary": "The changes likely involve refining the handling and interpretation of Asmap (Autonomous System map) data, potentially including updates to the versioning scheme or the logic for applying Asmap-based peer selection rules. This affects both the network layer (net) for peer management and potentially RPC interfaces for querying or configuring Asmap behavior. Improved Asmap handling helps nodes connect to a more diverse set of peers, reducing the risk of eclipse attacks and improving network decentralization.",
+            "importance": 8,
+            "review_count": 8
           }
         ]
       },
@@ -121,8 +191,8 @@
               "username": "willcl-ark",
               "uuid": "auto_will_clark"
             },
-            "summary": "",
-            "technical_summary": "",
+            "summary": "This PR corrects inaccuracies in the OpenRPC schema definitions for various RPC methods. Accurate OpenRPC documentation improves the usability and discoverability of Bitcoin Core's RPC interface for developers.",
+            "technical_summary": "The change involves updating the OpenRPC schema, which provides a machine-readable description of the RPC API, to reflect the correct default values for parameters in several RPC calls. This ensures that tools consuming the OpenRPC specification, such as client generators or documentation viewers, receive accurate information. It's a documentation-level fix that improves API consistency and developer experience.",
             "importance": 13,
             "review_count": 13
           },
@@ -145,22 +215,22 @@
               "username": "0xB10C",
               "uuid": "can_0xb10c"
             },
-            "summary": "",
-            "technical_summary": "",
+            "summary": "This PR enhances the `spenttxouts` REST endpoint by adding `generated` and `height` fields to its JSON output. This provides more comprehensive information about spent transaction outputs, which is valuable for block explorers and other applications.",
+            "technical_summary": "The `spenttxouts` REST handler is modified to include two new fields, `generated` (boolean indicating coinbase) and `height` (block height), in the JSON response for each spent transaction output. This involves querying the UTXO set or block index for this additional data and serializing it into the existing REST API structure, providing richer context for spent outputs without requiring additional lookups by the client.",
             "importance": 5,
             "review_count": 5
           },
           {
-            "number": 36198,
-            "title": "http: Add missing LIFETIMEBOUND annotations",
+            "number": 35849,
+            "title": "init: don't suggest -reindex-chainstate for recovery on a pruned node",
             "author": {
-              "username": "hodlinator",
-              "uuid": "can_hodlinator"
+              "username": "kwsantiago",
+              "uuid": "auto_kyle"
             },
-            "summary": "",
-            "technical_summary": "",
-            "importance": 3,
-            "review_count": 3
+            "summary": "This PR refines the node initialization process to avoid suggesting `-reindex-chainstate` for recovery on pruned nodes. This prevents user confusion and guides them towards relevant recovery options for their specific node configuration.",
+            "technical_summary": "The change modifies the startup and error handling logic within the `init` module. Before suggesting `-reindex-chainstate` as a recovery option, the code now checks if the node is operating in pruned mode. If pruning is enabled, the suggestion for `-reindex-chainstate` is suppressed, as it is not applicable or effective for a pruned blockchain state, thereby improving user guidance.",
+            "importance": 4,
+            "review_count": 4
           }
         ]
       },
@@ -210,8 +280,8 @@
               "username": "sedited",
               "uuid": "auto_sebastian_kung"
             },
-            "summary": "",
-            "technical_summary": "",
+            "summary": "This PR updates the Bitcoin Core version to 32.0rc1, signifying the release candidate phase of the upcoming major version. This marks a crucial step towards the official release, indicating the software is stable for broader testing.",
+            "technical_summary": "The change primarily involves modifying the version definition files, such as `src/version.h`, to update the `CLIENT_VERSION_MAJOR`, `CLIENT_VERSION_MINOR`, `CLIENT_VERSION_REVISION`, and `CLIENT_VERSION_BUILD` constants, along with the `CLIENT_VERSION_IS_RELEASE` flag. This ensures that all compiled binaries and user interfaces correctly reflect the '32.0rc1' version string, aligning with the project's release cycle.",
             "importance": 18,
             "review_count": 18
           },
@@ -222,34 +292,10 @@
               "username": "achow101",
               "uuid": "can_ava_chow"
             },
-            "summary": "",
-            "technical_summary": "",
+            "summary": "This PR updates the `osslsigncode` dependency within the Guix build system to version 2.14. This ensures that the reproducible builds for Windows binaries use the latest signing tool, potentially incorporating security fixes or compatibility improvements.",
+            "technical_summary": "The Guix manifest for reproducible builds is updated to specify `osslsigncode` version 2.14. This change affects the build environment used to create signed Windows executables, ensuring that the signing process benefits from the latest features or bug fixes in the `osslsigncode` utility. It's a dependency update specific to the build system, maintaining build tool currency.",
             "importance": 16,
             "review_count": 16
-          },
-          {
-            "number": 36207,
-            "title": "kernel: add wtxid accessor",
-            "author": {
-              "username": "KY-U",
-              "uuid": "auto_ky_u"
-            },
-            "summary": "",
-            "technical_summary": "",
-            "importance": 16,
-            "review_count": 16
-          },
-          {
-            "number": 36194,
-            "title": "kernel: expose block header Merkle root",
-            "author": {
-              "username": "lucasdbr05",
-              "uuid": "auto_lucasdbr05"
-            },
-            "summary": "",
-            "technical_summary": "",
-            "importance": 14,
-            "review_count": 14
           },
           {
             "number": 36083,
@@ -258,8 +304,8 @@
               "username": "arejula27",
               "uuid": "auto_igo_ar_jula_a_sa"
             },
-            "summary": "",
-            "technical_summary": "",
+            "summary": "This PR adds a test to verify that the `getrawtransaction` RPC can correctly retrieve transactions from stale blocks when `txindex` is enabled. This ensures reliable transaction lookups even during chain reorganizations.",
+            "technical_summary": "The PR introduces a new functional test that simulates a chain reorganization scenario. It first mines a transaction into a block, then creates a fork to make that block stale. With `txindex` enabled, the test then calls `getrawtransaction` for the transaction in the now-stale block. The test asserts that the RPC successfully retrieves the transaction data, confirming `txindex`'s ability to track transactions across different chain branches.",
             "importance": 13,
             "review_count": 13
           },
@@ -270,8 +316,8 @@
               "username": "azuchi",
               "uuid": "auto_shigeyuki_azuchi"
             },
-            "summary": "",
-            "technical_summary": "",
+            "summary": "This PR expands test coverage for previously untested error paths in descriptor parsing. By ensuring these error conditions are properly handled and tested, it improves the robustness and reliability of descriptor functionality.",
+            "technical_summary": "New unit tests are added to specifically target various invalid or malformed descriptor strings that previously lacked explicit test coverage. These tests verify that the descriptor parsing logic correctly identifies and reports errors for these edge cases, preventing unexpected behavior or crashes when encountering invalid inputs. This enhances the overall quality and resilience of descriptor handling.",
             "importance": 11,
             "review_count": 11
           },
@@ -282,20 +328,8 @@
               "username": "maflcko",
               "uuid": "can_marcofalke"
             },
-            "summary": "",
-            "technical_summary": "",
-            "importance": 9,
-            "review_count": 9
-          },
-          {
-            "number": 36260,
-            "title": "torcontrol: Use reconnect backoff after dropped connections",
-            "author": {
-              "username": "fjahr",
-              "uuid": "can_fabian_jahr"
-            },
-            "summary": "",
-            "technical_summary": "",
+            "summary": "This PR refactors code to use `static const` instead of `inline const` to work around a specific bug in the `ld64` linker. This ensures compatibility with certain build environments and prevents compilation issues.",
+            "technical_summary": "The change modifies variable declarations from `inline const` to `static const` in specific contexts. This refactoring is a workaround for a known bug in the `ld64` linker, which can misinterpret `inline const` variables in certain scenarios, leading to linker errors. By using `static const`, the linker's behavior is normalized, ensuring successful compilation and linking on affected platforms without altering the program's runtime semantics.",
             "importance": 9,
             "review_count": 9
           },
@@ -306,8 +340,8 @@
               "username": "hebasto",
               "uuid": "can_hennadii_stepanov"
             },
-            "summary": "",
-            "technical_summary": "",
+            "summary": "This PR updates the Boost C++ libraries dependency to version 1.92.0. This ensures Bitcoin Core benefits from the latest bug fixes, performance enhancements, and security updates provided by this fundamental library.",
+            "technical_summary": "The `depends` system configuration is updated to fetch and build Boost version 1.92.0. This involves modifying the build scripts and potentially adjusting any code that relies on specific Boost features or APIs if there were breaking changes (though typically minor for patch versions). This is a standard dependency upgrade, keeping the project current with its foundational libraries.",
             "importance": 9,
             "review_count": 9
           },
@@ -318,22 +352,10 @@
               "username": "Sjors",
               "uuid": "can_sjors_provoost"
             },
-            "summary": "",
-            "technical_summary": "",
+            "summary": "This PR adds a test to confirm that the Inter-Process Communication (IPC) interface properly rejects invalid JSON inputs. This ensures the IPC system is robust against malformed requests and handles errors gracefully.",
+            "technical_summary": "The PR introduces a new functional test within the IPC test suite. This test specifically crafts and sends malformed JSON strings to the IPC server. It then asserts that the IPC interface responds with an appropriate error message or status, indicating that the invalid JSON was correctly identified and rejected, preventing potential parsing issues or unexpected behavior.",
             "importance": 9,
             "review_count": 9
-          },
-          {
-            "number": 36249,
-            "title": "net, rpc: Asmap version improvements/follow-ups",
-            "author": {
-              "username": "fjahr",
-              "uuid": "can_fabian_jahr"
-            },
-            "summary": "",
-            "technical_summary": "",
-            "importance": 8,
-            "review_count": 8
           },
           {
             "number": 35472,
@@ -342,8 +364,8 @@
               "username": "151henry151",
               "uuid": "auto_henry_romp"
             },
-            "summary": "",
-            "technical_summary": "",
+            "summary": "This PR adds test coverage for an error path in the feebumper logic where a transaction cluster's feerate cannot be computed. This improves the robustness of the feebumper by ensuring it handles complex and uncomputable scenarios gracefully.",
+            "technical_summary": "The PR introduces a new functional test case that specifically constructs a mempool state designed to trigger the 'uncomputable cluster feerate' error path within the feebumper. The test then invokes the feebumper and asserts that it correctly identifies this error condition, returning an expected error code or message, rather than crashing or producing an incorrect feerate calculation. This validates the error handling for complex transaction graph scenarios.",
             "importance": 8,
             "review_count": 8
           },
@@ -354,8 +376,8 @@
               "username": "fanquake",
               "uuid": "can_michael_ford"
             },
-            "summary": "",
-            "technical_summary": "",
+            "summary": "This PR bundles a set of backported changes intended for the second release candidate of the 32.x branch. It prepares the upcoming release by integrating important fixes and improvements from the main development branch.",
+            "technical_summary": "This is a meta-PR that aggregates multiple individual commits from the master branch into the 32.x release branch, specifically targeting the `rc2` milestone. The backporting process involves carefully cherry-picking or rebasing relevant changes, resolving any conflicts, and ensuring compatibility with the target branch's codebase. This is a standard procedure in release management to stabilize a release candidate with necessary updates.",
             "importance": 7,
             "review_count": 7
           },
@@ -366,8 +388,8 @@
               "username": "hodlinator",
               "uuid": "can_hodlinator"
             },
-            "summary": "",
-            "technical_summary": "",
+            "summary": "This PR introduces minor refactoring and improvements to the HTTP unit tests. These changes enhance the clarity and robustness of existing tests, making them easier to maintain and more effective at catching regressions.",
+            "technical_summary": "The HTTP unit test suite is refactored to improve readability and maintainability. This likely involves consolidating common test patterns, clarifying assertions, or restructuring test cases to better isolate specific functionalities. The changes are purely within the test code and do not alter any production logic, focusing on code quality within the testing framework.",
             "importance": 7,
             "review_count": 7
           },
@@ -378,20 +400,8 @@
               "username": "fanquake",
               "uuid": "can_michael_ford"
             },
-            "summary": "",
-            "technical_summary": "",
-            "importance": 6,
-            "review_count": 6
-          },
-          {
-            "number": 36286,
-            "title": "crypto: Fix MuHash3072 division by itself",
-            "author": {
-              "username": "fjahr",
-              "uuid": "can_fabian_jahr"
-            },
-            "summary": "",
-            "technical_summary": "",
+            "summary": "This PR removes an outdated Objective-C compiler flag from the build system. This cleanup modernizes the build process and removes compatibility cruft that is no longer necessary.",
+            "technical_summary": "The change specifically targets the `OBJC_OLD_DISPATCH_PROTOTYPES` preprocessor definition, which was historically used for compatibility with older Objective-C runtimes. Modern compilers and SDKs no longer require this flag, so its removal simplifies the build configuration. This is a minor build system refactoring that improves maintainability without altering runtime behavior.",
             "importance": 6,
             "review_count": 6
           },
@@ -402,8 +412,8 @@
               "username": "fametrano",
               "uuid": "auto_ferdinando_m_ametrano"
             },
-            "summary": "",
-            "technical_summary": "",
+            "summary": "This PR adds a test to ensure that ECDSA signature validation correctly returns `False` for signatures that are too short. This improves the robustness of signature processing by verifying early rejection of malformed inputs.",
+            "technical_summary": "The change introduces a new unit test case specifically designed to provide an ECDSA signature byte array that is shorter than the minimum required length. The test asserts that the signature verification function, when presented with such an input, correctly returns `False`, confirming the expected behavior of rejecting invalidly sized signatures without attempting further cryptographic operations. This validates the early exit condition for malformed signature data.",
             "importance": 5,
             "review_count": 5
           },
@@ -414,8 +424,8 @@
               "username": "sedited",
               "uuid": "auto_sebastian_kung"
             },
-            "summary": "",
-            "technical_summary": "",
+            "summary": "This PR reverts a previous change that removed a CMake script related to coverage and fuzzing. Reinstating this script ensures that important testing infrastructure remains available for development and quality assurance.",
+            "technical_summary": "The PR specifically reverts the removal of `cmake/script/CoverageFuzz.cmake`, which likely contains CMake logic for configuring code coverage analysis and fuzzing targets. By bringing this file back, the build system can properly integrate and execute these testing methodologies. This ensures that the project's continuous integration and testing pipelines remain fully functional for identifying bugs and vulnerabilities.",
             "importance": 4,
             "review_count": 4
           },
@@ -426,8 +436,8 @@
               "username": "fanquake",
               "uuid": "can_michael_ford"
             },
-            "summary": "",
-            "technical_summary": "",
+            "summary": "This PR updates the embedded LevelDB library to its latest master version. This ensures Bitcoin Core benefits from the most recent bug fixes and performance improvements in its UTXO database.",
+            "technical_summary": "The `src/leveldb` subtree is updated to the latest upstream master branch. This involves pulling changes from the LevelDB repository, potentially resolving any known issues or incorporating optimizations made to the key-value store used for the UTXO set. This is a routine dependency update that maintains the currency of a critical internal component.",
             "importance": 4,
             "review_count": 4
           },
@@ -438,22 +448,22 @@
               "username": "marcofleon",
               "uuid": "auto_crackercracked"
             },
-            "summary": "",
-            "technical_summary": "",
+            "summary": "This PR enhances the `connect_block` fuzzer by utilizing `LIMITED_WHILE`. This change improves the efficiency and effectiveness of fuzz testing for block connection logic, helping to uncover edge cases and potential vulnerabilities more thoroughly.",
+            "technical_summary": "The `connect_block` fuzzer is updated to incorporate the `LIMITED_WHILE` macro. This macro provides a bounded loop mechanism for fuzzing inputs, preventing infinite loops or excessive execution times during fuzzing runs while still exploring a wide range of inputs. This makes the fuzzer more robust and performant, improving the quality of automated testing.",
             "importance": 4,
             "review_count": 4
           },
           {
-            "number": 35849,
-            "title": "init: don't suggest -reindex-chainstate for recovery on a pruned node",
+            "number": 36198,
+            "title": "http: Add missing LIFETIMEBOUND annotations",
             "author": {
-              "username": "kwsantiago",
-              "uuid": "auto_kyle"
+              "username": "hodlinator",
+              "uuid": "can_hodlinator"
             },
-            "summary": "",
-            "technical_summary": "",
-            "importance": 4,
-            "review_count": 4
+            "summary": "This PR adds `LIFETIMEBOUND` annotations to HTTP-related code, which helps static analysis tools detect potential lifetime issues. This improves code quality and reduces the risk of subtle memory-related bugs.",
+            "technical_summary": "The `LIFETIMEBOUND` attribute is a Clang-specific annotation used to inform the static analyzer about the lifetime relationship between function arguments and return values. By adding these annotations to HTTP-related functions, the compiler can more effectively identify potential use-after-free or dangling pointer issues. This is a code quality improvement that aids in compile-time bug detection.",
+            "importance": 3,
+            "review_count": 3
           },
           {
             "number": 36247,
@@ -462,8 +472,8 @@
               "username": "hebasto",
               "uuid": "can_hennadii_stepanov"
             },
-            "summary": "",
-            "technical_summary": "",
+            "summary": "This PR adjusts the `include-what-you-use` (IWYU) configuration to always retain the `bitcoin-build-info.h` header. This ensures that essential build-time information is consistently included across the codebase, improving build system reliability.",
+            "technical_summary": "The change involves adding a specific rule to the IWYU configuration files, typically via a `.iwyu` mapping file or command-line argument. This rule explicitly marks `bitcoin-build-info.h` as a 'keep' header, preventing IWYU from suggesting its removal even if its direct symbols are not explicitly used in a translation unit. This guarantees the presence of build-specific metadata in all relevant compilation units.",
             "importance": 2,
             "review_count": 2
           }
@@ -493,8 +503,8 @@
               "uuid": "auto_mrhodlx"
             },
             "event_count": 15,
-            "summary": "",
-            "technical_summary": ""
+            "summary": "This PR improves the error message for the `sendrawtransaction` RPC when a transaction fails to decode. It provides clearer feedback to users, making it easier to diagnose issues with malformed transactions.",
+            "technical_summary": "The change modifies the `sendrawtransaction` RPC handler to return a more specific error message when the provided raw transaction string cannot be decoded into a valid CTransaction object. Instead of a generic error, it now indicates a 'decode error,' helping developers pinpoint issues with transaction serialization or format. This enhances the usability of the RPC interface for transaction submission."
           }
         ]
       },
@@ -509,8 +519,8 @@
               "uuid": "can_hennadii_stepanov"
             },
             "event_count": 20,
-            "summary": "",
-            "technical_summary": ""
+            "summary": "This PR updates the Guix build system's time-machine reference, ensuring that reproducible builds use the latest specified environment. This helps maintain the integrity and consistency of Bitcoin Core's deterministic build process.",
+            "technical_summary": "The update involves bumping the Git commit hash for the Guix time-machine, which pins the exact state of the Guix channel used for reproducible builds. This ensures that all dependencies and build tools are consistent across different build environments, preventing non-determinism. It's a routine update to keep the Guix environment current and stable."
           },
           {
             "number": 36246,
@@ -520,8 +530,8 @@
               "uuid": "auto_sebastian_kung"
             },
             "event_count": 18,
-            "summary": "",
-            "technical_summary": ""
+            "summary": "This PR updates the Bitcoin Core version to 32.0rc1, signifying the release candidate phase of the upcoming major version. This marks a crucial step towards the official release, indicating the software is stable for broader testing.",
+            "technical_summary": "The change primarily involves modifying the version definition files, such as `src/version.h`, to update the `CLIENT_VERSION_MAJOR`, `CLIENT_VERSION_MINOR`, `CLIENT_VERSION_REVISION`, and `CLIENT_VERSION_BUILD` constants, along with the `CLIENT_VERSION_IS_RELEASE` flag. This ensures that all compiled binaries and user interfaces correctly reflect the '32.0rc1' version string, aligning with the project's release cycle."
           },
           {
             "number": 36256,
@@ -531,8 +541,8 @@
               "uuid": "can_ava_chow"
             },
             "event_count": 16,
-            "summary": "",
-            "technical_summary": ""
+            "summary": "This PR updates the `osslsigncode` dependency within the Guix build system to version 2.14. This ensures that the reproducible builds for Windows binaries use the latest signing tool, potentially incorporating security fixes or compatibility improvements.",
+            "technical_summary": "The Guix manifest for reproducible builds is updated to specify `osslsigncode` version 2.14. This change affects the build environment used to create signed Windows executables, ensuring that the signing process benefits from the latest features or bug fixes in the `osslsigncode` utility. It's a dependency update specific to the build system, maintaining build tool currency."
           }
         ]
       }
@@ -548,8 +558,8 @@
       },
       "link": "https://delvingbitcoin.org/t/bounds-on-chain-length-with-bip-54-timewarp-fixes/2899/19",
       "message_count": 18,
-      "summary": "",
-      "technical_summary": ""
+      "summary": "Developers are actively working on new rules to prevent manipulation of block timestamps, which is crucial for maintaining the Bitcoin network's security and predictable operation. This effort aims to make the network more resilient against specific timestamp-related vulnerabilities.",
+      "technical_summary": "The discussion focuses on BIP-54's proposed rules to mitigate timewarp vulnerabilities by restricting block header timestamps, particularly for retarget periods. Pieter Wuille recently provided a 'Lean proof' demonstrating the safety of these rules under specific conditions related to block count, timestamp bounds, and work limits. This formal analysis contributes to the architectural debate on the robustness of the proposed fixes, with Zawy's recent retraction indicating a potential shift in understanding or consensus regarding the technical implications."
     },
     {
       "source": "Delving",
@@ -560,8 +570,8 @@
       },
       "link": "https://delvingbitcoin.org/t/depots-theft-proof-self-custodial-bitcoin-for-billions-of-users/2892/11",
       "message_count": 10,
-      "summary": "",
-      "technical_summary": ""
+      "summary": "Bitcoin developers are exploring advanced scaling solutions to enable billions of users to transact with extremely low on-chain costs and effortless, automated fund management.",
+      "technical_summary": "The thread discusses scaling Bitcoin for billions of users, emphasizing a minimal on-chain footprint (1-2 vbytes/user/year). A key architectural challenge is enabling automated fund rollover between 'depots' without requiring user interaction. JohnLaw introduced a 'timeout trees' protocol as a potential solution to allow operators to perform these rollovers non-interactively, addressing the need for seamless, low-cost scaling."
     },
     {
       "source": "Delving",
@@ -572,8 +582,8 @@
       },
       "link": "https://delvingbitcoin.org/t/pqc-output-type-discussion/2749/36",
       "message_count": 10,
-      "summary": "Bitcoin developers are actively discussing how to integrate quantum-resistant transaction types to future-proof the network against potential quantum computer threats. This crucial work aims to secure Bitcoin transactions for decades to come by adopting advanced cryptography.",
-      "technical_summary": "The discussion revolves around the architectural approach for introducing Post-Quantum Cryptography (PQC) transaction output types within Bitcoin. Key debate points include whether new PQC constructions should be considered entirely separate output types or deployed as 'segwit subversions' sharing an existing witness version, such as within a potential P2TRv2. While sharing a witness version, such additions would functionally act as distinct output types, highlighting the core decision on how to modularly extend Bitcoin's transaction capabilities."
+      "summary": "Bitcoin developers are exploring ways to integrate quantum-resistant cryptography, ensuring your funds remain secure against future quantum computer threats. The focus is on practical designs that work well with how people use Bitcoin today.",
+      "technical_summary": "The ongoing discussion on Post-Quantum Cryptography (PQC) transaction output types in Bitcoin is grappling with the practical implications of user behavior. A key architectural debate centers on designing PQC schemes that remain secure despite common address reuse, a behavior difficult to change. Participants are evaluating the utility of PQC spending paths under specific threat models, like the 'orange threat model,' to determine their actual security benefits and necessary design considerations, given the challenge of enforcing ideal user practices."
     },
     {
       "source": "Delving",
@@ -584,8 +594,8 @@
       },
       "link": "https://delvingbitcoin.org/t/standardizing-an-exposure-classification-for-existing-outputs-pre-bip/2866/11",
       "message_count": 7,
-      "summary": "Developers are discussing foundational improvements to Bitcoin's security and efficiency, specifically new transaction types and phasing out old signature methods. The current conversation clarifies how risk assessments are being factored into these critical upgrades.",
-      "technical_summary": "Discussion continues on foundational assumptions for BIP 360 (off-chain key output) and BIP 361 (legacy signature sunset). A key clarification emerged regarding an intentionally excluded 'risk scoring' mechanism, which was previously identified as a missing presupposition for both BIPs. The debate centers on whether such a risk assessment framework is implicitly required for these security and efficiency enhancements, or if its exclusion can be justified, requiring a careful re-evaluation of the BIPs' architectural dependencies."
+      "summary": "To enable future Bitcoin upgrades that enhance privacy and security, a new informational standard is being developed. This standard will classify how public a key is, paving the way for advanced output types and improved signature schemes.",
+      "technical_summary": "BIP 360 and BIP 361, which propose advanced output types with off-chain keys and a phased sunset for legacy signatures, respectively, both require a foundational specification for classifying output public key exposure. Murch confirmed the value of an informational BIP for this purpose, and Duncan0k has now submitted a draft, 'Output Public Key Exposure Classification' (PR #2294). This informational BIP aims to provide the architectural prerequisite for future proposals relying on nuanced key exposure levels, and now requires community review and refinement."
     },
     {
       "source": "Delving",
@@ -596,8 +606,8 @@
       },
       "link": "https://delvingbitcoin.org/t/block-wide-signature-aggregation-via-snarks/2875/10",
       "message_count": 4,
-      "summary": "Developers are exploring ways to handle larger next-generation cryptographic signatures to keep Bitcoin fast and affordable to run, ensuring its long-term resilience.",
-      "technical_summary": "Discussions on integrating Post-Quantum (PQ) signatures address their large size impacting block propagation and archival costs. The focus has shifted to designing these implementations to be DoS-resistant, specifically by using simpler, narrowly focused 'prover' mechanisms for transaction sets. A key architectural debate centers on whether to integrate this prover functionality directly into Bitcoin Core\u2014rather than relying on external miner software\u2014to leverage Bitcoin Core's extensive review for enhanced security and vulnerability mitigation. This approach is seen as crucial for preventing DoS vectors."
+      "summary": "Developers are discussing how to integrate quantum-resistant signatures into Bitcoin efficiently. The focus is on minimizing the impact of larger signature sizes on network performance and storage, ensuring Bitcoin remains secure and accessible in the quantum era.",
+      "technical_summary": "The central technical challenge revolves around mitigating the large size of post-quantum (PQ) signatures to prevent adverse effects on block propagation and archival node resource requirements. A significant architectural debate has arisen concerning whether the PQ signature *prover* should be integrated directly into Bitcoin Core, alongside the verifier, to benefit from Core's rigorous review process. Initial performance benchmarks for provers are being considered, with preliminary data from the Flock paper indicating CPU-based proving capabilities. Further work is required to establish concrete CPU/GPU requirements and finalize the integration strategy for prover logic."
     }
   ],
   "shoutouts": {

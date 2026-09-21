@@ -6,7 +6,7 @@ from pathlib import Path
 try:
     from src.core.paths import METADATA_DIR
 except ImportError:
-    METADATA_DIR = Path("metadata")
+    METADATA_DIR = Path(__file__).resolve().parent.parent.parent / "metadata"
 
 _NOREPLY_EMAIL_RE = re.compile(r'^(?:\d+)\+([^@]+)@users\.noreply\.github\.com$', re.I)
 
@@ -24,7 +24,7 @@ class IdentityResolver:
             print("Warning: identities.json not found! Identity tracking will be fully degraded.")
             return
             
-        with open(IDENTITIES_FILE, "r") as f:
+        with open(IDENTITIES_FILE, "r", encoding="utf-8") as f:
             data = json.load(f)
             self._identities = data.get("identities", [])
             

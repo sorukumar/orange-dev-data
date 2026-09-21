@@ -5,8 +5,12 @@ import sys
 import json
 import pandas as pd
 
-# Force unbuffered stdout so tee/pipe sees output in real time
-sys.stdout.reconfigure(line_buffering=True)
+# Force UTF-8 and unbuffered stdout so tee/pipe sees output in real time without Windows cp1252 crashes
+try:
+    sys.stdout.reconfigure(encoding='utf-8', errors='replace', line_buffering=True)
+    sys.stderr.reconfigure(encoding='utf-8', errors='replace', line_buffering=True)
+except Exception:
+    pass
 
 def load_env():
     """Load environment variables from .env file"""

@@ -3,26 +3,23 @@ import json
 import time
 import pandas as pd
 from datetime import datetime
+import urllib.request
+import urllib.error
 from dotenv import load_dotenv
 
 import sys
-sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..'))
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+sys.path.append(ROOT_DIR)
 from scripts.utils.thread_context import build_thread_context
 
-try:
-    from google import genai
-    from google.genai.errors import APIError
-    HAS_GENAI = True
-except ImportError:
-    HAS_GENAI = False
+SOCIAL_THREADS_INPUT = os.path.join(ROOT_DIR, "data", "enriched", "social_threads.parquet")
+CACHE_FILE = os.path.join(ROOT_DIR, "data", "cache", "thread_summaries_cache.json")
 
-SOCIAL_THREADS_INPUT = "data/enriched/social_threads.parquet"
-CACHE_FILE = "data/cache/thread_summaries_cache.json"
-
-load_dotenv("/Users/saurabhkumar/Desktop/Work/github/orange-dev-data/.env")
-TARGET_MODEL = os.environ.get('GEMINI_TARGET_MODEL', 'gemini-1.5-flash')
+env_path = os.path.join(ROOT_DIR, ".env")
+load_dotenv(env_path)
+TARGET_MODEL = os.environ.get('GEMINI_TARGET_MODEL', 'gemini-2.5-flash')
 api_keys = []
-for k, v in os.environ.items():
+for k, v in sorted(os.environ.items()):
     if k.startswith("GEMINI_API_KEY") and v.strip():
         api_keys.append(v.strip())
 
@@ -38,7 +35,7 @@ def save_cache(path, data):
     with open(path, 'w') as f:
         json.dump(data, f, indent=2)
 
-def generate_llm_summary(client, context):
+def generate_llm_summary(api_key, context, model=TARGET_MODEL):
     prompt = f"""You are a Bitcoin Core developer writing a newsletter and pulse report.
 Below is the original context of a discussion thread and the latest replies.
 
@@ -52,28 +49,21 @@ You MUST return a valid JSON object with exactly three keys:
 
 Do NOT wrap in markdown blocks, just raw JSON.
 """
-    for attempt in range(2):
-        try:
-            response = client.models.generate_content(
-                model=TARGET_MODEL,
-                contents=prompt,
-            )
-            text = response.text.strip()
-            if text.startswith('```json'): text = text[7:-3]
-            elif text.startswith('```'): text = text[3:-3]
-            
-            parsed = json.loads(text.strip())
-            return parsed
-        except APIError as e:
-            if e.code == 429 or e.code == 404:
-                raise e # Throw to outer loop to rotate key
-            time.sleep(2)
-        except Exception as e:
-            time.sleep(2)
-    return None
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={api_key}"
+    payload = json.dumps({
+        "contents": [{"parts": [{"text": prompt}]}],
+        "generationConfig": {"temperature": 0.2}
+    }).encode('utf-8')
+    req = urllib.request.Request(url, data=payload, headers={'Content-Type': 'application/json'})
+    with urllib.request.urlopen(req, timeout=30) as response:
+        result = json.loads(response.read().decode('utf-8'))
+        text = result['candidates'][0]['content']['parts'][0]['text'].strip()
+        if text.startswith('```json'): text = text[7:-3]
+        elif text.startswith('```'): text = text[3:-3]
+        return json.loads(text.strip())
 
 def run_thread_summarizer():
-    if not HAS_GENAI or not api_keys:
+    if not api_keys:
         print("Warning: Gemini API not configured. Skipping thread summaries.")
         return
 
@@ -100,7 +90,6 @@ def run_thread_summarizer():
     updates_made = 0
     
     api_key_idx = 0
-    client = genai.Client(api_key=api_keys[api_key_idx])
 
     for tid in active_thread_ids:
         # We need the thread subject to construct the legacy cache key for backward compatibility
@@ -109,8 +98,6 @@ def run_thread_summarizer():
             continue
             
         subject = thread_rows.iloc[0]['subject']
-        # Same cache key logic used in older twib_nlp.py
-        # Clean subject like in twib_data? In twib_data, subject is just 'subject' column.
         cache_key = f"thread_{subject[:20]}"
         
         context, context_hash = build_thread_context(df, tid, window_start, t1_end)
@@ -124,25 +111,25 @@ def run_thread_summarizer():
             
         print(f"Generating summary for thread: {subject[:40]}...")
         
-        # Call LLM
+        # Call LLM with key and model rotation
         result = None
         while api_key_idx < len(api_keys) and not result:
-            try:
-                result = generate_llm_summary(client, context)
-                if result is None:
-                    print(f"Key {api_key_idx + 1} returned None (likely 503). Rotating...")
-                    api_key_idx += 1
-                    if api_key_idx < len(api_keys):
-                        client = genai.Client(api_key=api_keys[api_key_idx])
-            except APIError as e:
-                if e.code == 429 or e.code == 404:
-                    print(f"Key {api_key_idx + 1} hit {e.code}. Rotating...")
-                    api_key_idx += 1
-                    if api_key_idx < len(api_keys):
-                        client = genai.Client(api_key=api_keys[api_key_idx])
-                else:
-                    print(f"API Error: {e}")
-                    break
+            curr_key = api_keys[api_key_idx]
+            for m in [TARGET_MODEL, "gemini-2.5-flash-lite"]:
+                try:
+                    result = generate_llm_summary(curr_key, context, model=m)
+                    if result:
+                        break
+                except urllib.error.HTTPError as e:
+                    if e.code in (429, 404, 503):
+                        print(f"Key {api_key_idx + 1} ({m}) HTTP {e.code}. Rotating...")
+                        break
+                    else:
+                        print(f"Key {api_key_idx + 1} ({m}) HTTP {e.code}: {e}")
+                except Exception as e:
+                    print(f"Key {api_key_idx + 1} ({m}) error: {e}")
+            if not result:
+                api_key_idx += 1
         
         if result:
             result['context_hash'] = context_hash
