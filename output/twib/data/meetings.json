@@ -45,20 +45,27 @@
       "sipa"
     ],
     "topics_discussed": [
-      "Working Group Updates (QA, QML GUI, Benchmarking)",
-      "QML GUI progress, including a new contributor and the opening of tracking issue #36289",
-      "Release testing status and remaining review items for milestone 84",
-      "Discussion around PR #36284 for potential inclusion in v32"
+      "QA Working Group Update: brunoerg reported no update this week, with a significant update planned for next week.",
+      "QML GUI Working Group Update: johnny9dev opened issue #36289 to track the QML staging branch, outlining its use for planning the `gui-qml` merge and prioritizing remaining issues. A new contributor, Andrea, fixed a high-priority issue.",
+      "Benchmarking Working Group Update: andrewtoth reported no update this week.",
+      "Release Testing & Review: fjahr highlighted remaining items for review in milestone 84 and suggested considering PR #36284 (wallet: don't double discard output groups with avoidpartialspends by fjahr) for inclusion in v32."
     ],
     "decisions_made": [],
     "action_items": [
-      "johnny9dev to use issue #36289 to share the plan for merging gui-qml and help organize/prioritize remaining issues",
-      "Review items in milestone 84",
-      "Consider PR #36284 for inclusion in v32"
+      "Review remaining items in milestone 84 for release testing.",
+      "Consider PR #36284 for inclusion in v32.",
+      "johnny9dev to use issue #36289 to outline the `gui-qml` merge plan and prioritize related issues."
     ],
     "mentioned_prs": [
+      36289,
       36284
     ],
+    "x_priority_takeaway": "Review milestone 84 items; consider #36284 for v32.",
+    "x_bullet_points": [
+      "QML GUI: #36289 tracks merge plan.",
+      "New QML contributor fixed high-prio bug."
+    ],
+    "linkedin_context": "Release testing for milestone 84 continues, with PR #36284 suggested for v32 inclusion.\n\nThe QML GUI WG opened #36289 to track the `gui-qml` merge plan and welcomed a new contributor.",
     "_text_hash": "320919a11a602daaea4c1121ff39fb36"
   },
   {
@@ -104,27 +111,33 @@
       "pinheadmz"
     ],
     "topics_discussed": [
-      "Updates from the QA, QML GUI, Benchmarking, and Kernel Working Groups.",
-      "Progress on performance improvements, including IBD and reindex-chainstate.",
-      "Discussion on release readiness, remaining milestone items, and pre-branch-off tasks.",
-      "Efforts in script evaluation tracing and differential fuzzing."
+      "QA Working Group Update (brunoerg): `brunoerg` reported Silent Payments mutation analysis achieved 100% score on master, with a full analysis planned. `src/script/interpreter.cpp` mutation analysis yielded 80 survivors from over 1000 mutants, with PRs expected to improve coverage. `Naiyoma` is assisting with parallelizing analysis. `brunoerg` requested feedback on `bitcoinfuzz/bitcoinfuzz/pull/647` for differential fuzzing between the kernel and Core internals.",
+      "QML GUI Working Group Update (johnny9dev): `johnny9dev` stated continued work on the staging branch and issue resolution.",
+      "Benchmarking Working Group Update (l0rinc, andrewtoth): `l0rinc` noted several quadratic iteration fixes merged and requested review for `#36096` (rpc: avoid quadratic JSON construction). `#36000` (validation: prefetch blocks while connecting) was tuned, resulting in reindex-chainstate often >50% faster. `l0rinc` plans to experiment with parallel undo/block flushes for IBD and profile neutered validation-less/UTXO-less nodes to identify remaining bottlenecks.",
+      "Kernel Working Group Update (sedited): `sedited` reported good review for `#35641` (kernel: Add script evaluation tracer) and external project interest. `sedited` will address requests related to `brunoerg`'s linked differential fuzzing PR.",
+      "Release Discussion: `sedited` highlighted remaining items in milestone `84` that require review before branch-off. `pinheadmz` is triaging agent findings in the new HTTP code ahead of the branch-off."
     ],
     "decisions_made": [],
     "action_items": [
-      "Provide feedback on the differential fuzzing PR (bitcoinfuzz/bitcoinfuzz/pull/647).",
-      "Review PR #36096 (rpc: avoid quadratic JSON construction).",
-      "Experiment with parallel undo/block flushes to improve IBD performance.",
-      "Profile a neutered validation-less and UTXO-less node to identify remaining bottlenecks.",
-      "Review remaining items in milestone 84 before branch-off.",
-      "Pinheadmz to triage agent findings in the new HTTP implementation.",
-      "Sedited to address requests in the differential fuzzing PR (bitcoinfuzz/bitcoinfuzz/pull/647)."
+      "Provide feedback on `bitcoinfuzz/bitcoinfuzz/pull/647` for differential fuzzing between the kernel and Core internals.",
+      "Review `#36096` (rpc: avoid quadratic JSON construction).",
+      "Review remaining items in milestone `84` before branch-off.",
+      "Continue triaging agent findings in the new HTTP code before branch-off."
     ],
     "mentioned_prs": [
+      647,
       36096,
       36000,
       35641,
-      647
+      84
     ],
+    "x_priority_takeaway": "Review milestone 84 items and new HTTP findings before branch-off.",
+    "x_bullet_points": [
+      "Silent Payments code: 100% mutation score",
+      "Reindex-chainstate >50% faster with #36000",
+      "Kernel script tracer #35641 gaining interest"
+    ],
+    "linkedin_context": "Review milestone 84 items and new HTTP agent findings for the upcoming branch-off.\n\nSilent Payments code achieved 100% mutation score; #36000 improved reindex-chainstate speed.",
     "_text_hash": "6c6c73865aff38008e86b56f69d876e1"
   },
   {
@@ -139,17 +152,17 @@
       "stickies-v"
     ],
     "topics_discussed": [
-      "Fuzzing Working Group Update",
-      "Kernel Working Group Update",
-      "Benchmarking Working Group Update",
-      "QML GUI Working Group Update, including progress on the staging branch for integration into Bitcoin Core",
-      "Bitcoin Core and AI usage, perception, and reality, covering individual AI tool adoption, security scanning, and public communication"
+      "Fuzzing WG Update: dergoegge noted no update but highlighted PR #36098.",
+      "Kernel WG Update: sedited reported no updates.",
+      "Benchmarking WG Update: l0rinc focused on identifying quadratic algorithms, citing findings from #35889, and is rebasing/reviewing similar issues. andrewtoth had no updates.",
+      "QML GUI WG Update: johnny9dev reported new contributor uqlidi fixing bugs, pseudoramdom improving design, and epicleafies addressing Activity page feedback. johnny9dev updated the initial staging branch PR (bitcoin-core/gui-qml#871) and plans to integrate a QtTest-based integration suite for functional regression tests. hebasto requested review for qml#871. Murch suggested a future testing party.",
+      "Bitcoin Core and AI usage, perception and reality: Moneyball initiated discussion on donor concerns about Core's AI preparedness and leveraging AI tools for triage, code review, and test case development. Individual developers (stickies-v, pinheadmz, achow101, eugenesiegel, Murch, andrewtoth, lightlike, jonatack, l0rinc, maxedw, BlueMatt, Rob1Ham) shared diverse views on AI use, from heavy personal assistance to concerns about 'slop' contributions. Project Loupe and red team efforts were mentioned, with l0rinc receiving an OpenSats mini-grant for systematic scanning. A debate occurred regarding the utility and desirability of automated AI review bots versus human-driven AI assistance. Moneyball will follow up to gather specific information for public communication to address external perceptions."
     ],
     "decisions_made": [],
     "action_items": [
-      "Moneyball to summarize the AI discussion and formulate more detailed questions for Core developers to answer publicly or privately.",
-      "Moneyball to engage with interested developers on strategies for handling AI-generated 'noise' in contributions.",
-      "A group, including Moneyball, l0rinc, and Justin from Localhost, will meet to discuss learnings from Project Loupe and red team efforts, and publish best practices for handling AI reports and triage."
+      "hebasto requested more eyes on bitcoin-core/gui-qml#871.",
+      "johnny9dev requested feedback and opinions on the QML GUI staging PR (bitcoin-core/gui-qml#871).",
+      "Moneyball will summarize the AI discussion, formulate detailed questions, and share them with Core developers for potential public communication."
     ],
     "mentioned_prs": [
       36098,
@@ -157,6 +170,13 @@
       871,
       36055
     ],
+    "x_priority_takeaway": "QML GUI staging PR #871 needs review for integration.",
+    "x_bullet_points": [
+      "Benchmarking: Quadratic algo hunt.",
+      "AI use: Individual dev workflows.",
+      "Fuzzing: PR #36098 highlighted."
+    ],
+    "linkedin_context": "QML GUI staging branch PR #871 is ready for feedback, integrating QtTest for functional regression.\n\nIndividual developers use AI for review and security; project plans public communication on usage.",
     "_text_hash": "8b5f8bb239ad1f058c24cf2666e3f034"
   },
   {

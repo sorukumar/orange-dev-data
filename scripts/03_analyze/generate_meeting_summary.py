@@ -63,8 +63,16 @@ def generate_meeting_summary():
         
         today_str = datetime.now().strftime("%Y-%m-%d")
         existing = existing_dict.get(date)
+        
+        target_dates = []
+        for i, arg in enumerate(sys.argv):
+            if arg in ["--date", "-d"] and i + 1 < len(sys.argv):
+                target_dates.append(sys.argv[i + 1])
+                
+        is_target = date in target_dates
         force_today = ("--force-today" in sys.argv or "--force" in sys.argv) and (date == today_str)
-        if force_today:
+        
+        if is_target or force_today:
             needs_update = True
         elif date == today_str:
             needs_update = not (existing and existing.get('_text_hash') == text_hash and existing.get('linkedin_context'))
