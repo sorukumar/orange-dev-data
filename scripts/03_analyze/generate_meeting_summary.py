@@ -1,4 +1,5 @@
 import os
+import sys
 import json
 import hashlib
 import time
@@ -60,8 +61,17 @@ def generate_meeting_summary():
         # Calculate hash to detect changes
         text_hash = hashlib.md5(json.dumps(messages, sort_keys=True).encode('utf-8')).hexdigest()
         
+        today_str = datetime.now().strftime("%Y-%m-%d")
         existing = existing_dict.get(date)
-        if existing and existing.get('_text_hash') == text_hash:
+        force_today = ("--force-today" in sys.argv or "--force" in sys.argv) and (date == today_str)
+        if force_today:
+            needs_update = True
+        elif date == today_str:
+            needs_update = not (existing and existing.get('_text_hash') == text_hash and existing.get('linkedin_context'))
+        else:
+            needs_update = not (existing and existing.get('_text_hash') == text_hash)
+
+        if not needs_update:
             new_summaries.append(existing)
             continue
             
@@ -91,24 +101,37 @@ def generate_meeting_summary():
         if len(log_text) > 30000:
             log_text = log_text[-30000:]
             
-        prompt = f"""You are a senior Bitcoin Core developer summarizing an IRC meeting log.
+        prompt = f"""You are a senior Bitcoin Core developer summarizing an IRC meeting log for technical Bitcoiners and developers.
 The meeting took place on {date}.
 
 IRC Log Transcript:
 {log_text}
 
-Extract the following information from the meeting log.
-1. topics_discussed: An array of 3-5 bullet point strings summarizing the main topics. Keep them concise.
-2. decisions_made: An array of strings describing any decisions made. If none, return an empty array.
-3. action_items: An array of strings describing next steps or action items. If none, return an empty array.
-4. mentioned_prs: An array of integers for any PR numbers (e.g. 12345) explicitly mentioned and discussed during the meeting. Do NOT include PR numbers that were just spammed by the `bitcoin-git` bot, only PRs that people talked about.
+Extract and generate two distinct layers of summary:
+
+LAYER 1 (For the website meeting archive card & visual screenshot):
+1. topics_discussed: An array of 3-6 concise, factual bullet point strings covering all distinct discussion topics from the meeting. Ensure every major agenda item, Working Group update, or protocol topic discussed is covered so nothing significant is omitted from the archive. Zero corporate fluff, no filler words.
+2. decisions_made: Technical decisions reached during the meeting (empty array if none).
+3. action_items: Concrete next steps or testing calls with PR/issue numbers (empty array if none).
+4. mentioned_prs: Array of integers for PR or issue numbers explicitly discussed (no bot spam).
+
+LAYER 2 (For Social Broadcasts — X & LinkedIn):
+5. x_priority_takeaway: A single, super-precise engineering takeaway or call to action (under 70 characters, active voice, zero fluff). E.g. "v32.0rc2 binaries are ready for community testing (#36315)."
+6. x_bullet_points: 2-3 concise bullet points (under 45 characters each) covering the secondary technical updates.
+7. linkedin_context: Exactly 2 single-sentence takeaways separated by a blank line (\n\n). Maximum 35 words total.
+   - Sentence 1: Primary release or protocol takeaway explaining why active testing/review is needed right now.
+   - Sentence 2: Secondary Working Group or architectural takeaway (e.g. fuzzing leadership transition).
+   - Strict style: Zero corporate speak, zero platitudes (no 'vital for security', 'crucial milestone', etc.). Short, punchy, direct facts.
 
 Output strictly valid JSON matching this schema:
 {{
-    "topics_discussed": ["topic 1...", "topic 2..."],
+    "topics_discussed": ["..."],
     "decisions_made": [],
-    "action_items": [],
-    "mentioned_prs": [1234, 5678]
+    "action_items": ["..."],
+    "mentioned_prs": [1234],
+    "x_priority_takeaway": "...",
+    "x_bullet_points": ["...", "..."],
+    "linkedin_context": "..."
 }}
 Do NOT use markdown wrappers. Output only JSON.
 """
@@ -148,6 +171,9 @@ Do NOT use markdown wrappers. Output only JSON.
                             "decisions_made": parsed.get("decisions_made", []),
                             "action_items": parsed.get("action_items", []),
                             "mentioned_prs": parsed.get("mentioned_prs", []),
+                            "x_priority_takeaway": parsed.get("x_priority_takeaway", ""),
+                            "x_bullet_points": parsed.get("x_bullet_points", []),
+                            "linkedin_context": parsed.get("linkedin_context", ""),
                             "_text_hash": text_hash
                         }
                         
