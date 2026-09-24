@@ -11,28 +11,26 @@
       "johnny9dev"
     ],
     "topics_discussed": [
-      "Fuzzing Working Group update",
-      "QML GUI Working Group update",
-      "Bitcoin Core 32.0 release candidate testing"
+      "Fuzzing Working Group: dergoegge announced his departure from full-time contribution, with his projects and security contact responsibilities transitioning to Brink's Marco (marcofleon) and Eugene (eugenesiegel). dergoegge will open PRs to update security contacts.",
+      "QML GUI Working Group: johnny9dev reported ongoing work on design, issue resolution, and staging, with no significant updates this week.",
+      "32.0 Release Candidate Testing: sedited announced the availability of 32.0rc2 binaries for community testing. The umbrella issue #36315 provides links to the proposed release notes and testing guide. Additional pull requests are being backported for milestone 84."
     ],
     "decisions_made": [],
     "action_items": [
-      "dergoegge to open PRs to remove self as security contact",
-      "Test Bitcoin Core 32.0rc2 binaries",
-      "Report 32.0rc2 testing findings via issue #36315",
-      "Review pull requests in milestone 84 for 32.0 backporting"
+      "Community members are requested to test the 32.0rc2 binaries, using issue #36315 for tracking feedback and referring to the linked release notes and testing guide.",
+      "dergoegge will open PRs to remove himself as a security contact by the end of the week."
     ],
     "mentioned_prs": [
       36315,
       84
     ],
-    "x_priority_takeaway": "v32.0rc2 binaries are ready for community testing (#36315).",
+    "x_priority_takeaway": "32.0rc2 binaries are ready for community testing (#36315).",
     "x_bullet_points": [
       "Fuzzing WG leadership transition.",
-      "QML GUI design work continues.",
-      "Milestone 84 PRs for backporting."
+      "QML GUI WG: design, issues, staging.",
+      "Milestone 84 backports ongoing."
     ],
-    "linkedin_context": "Bitcoin Core 32.0rc2 binaries are available for testing; use #36315 for feedback.\n\nFuzzing WG leadership transitions to Marco and Eugene.",
+    "linkedin_context": "Bitcoin Core 32.0rc2 binaries are available; community testing is requested via issue #36315.\n\nFuzzing WG leadership transitions from dergoegge to Brink's Marco and Eugene.",
     "_text_hash": "8a0c486df1c29221e8345c066e1ab191"
   },
   {

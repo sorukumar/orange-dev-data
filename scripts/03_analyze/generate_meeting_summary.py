@@ -110,7 +110,11 @@ IRC Log Transcript:
 Extract and generate two distinct layers of summary:
 
 LAYER 1 (For the website meeting archive card & visual screenshot):
-1. topics_discussed: An array of 3-6 concise, factual bullet point strings covering all distinct discussion topics from the meeting. Ensure every major agenda item, Working Group update, or protocol topic discussed is covered so nothing significant is omitted from the archive. Zero corporate fluff, no filler words.
+1. topics_discussed: An array of 3-6 substantive, factual bullet point strings covering every distinct discussion topic from the meeting.
+   - Do NOT just write generic topic titles (e.g. avoid empty headers like "Fuzzing Working Group update").
+   - Follow the format: "[Topic / Working Group]: [Substantive record of what was discussed, who was involved, and what technical outcomes/status were shared]".
+   - Retain all developer names, contributor handoffs, milestone numbers, and PR numbers.
+   - Zero corporate fluff, no passive filler words, but high technical information density.
 2. decisions_made: Technical decisions reached during the meeting (empty array if none).
 3. action_items: Concrete next steps or testing calls with PR/issue numbers (empty array if none).
 4. mentioned_prs: Array of integers for PR or issue numbers explicitly discussed (no bot spam).
